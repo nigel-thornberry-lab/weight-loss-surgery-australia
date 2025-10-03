@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import { seoMeta } from '../data/seo-meta';
+
+const meta = seoMeta.procedures;
 ---
 
 <html lang="en">
@@ -8,8 +11,27 @@ import '../styles/global.css';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Weight Loss Surgery Procedures in Australia | Compare All Options 2025</title>
-		<meta name="description" content="Compare gastric sleeve, gastric bypass, gastric band and other weight loss surgery procedures in Australia. Transparent pricing, eligibility criteria, and expert guidance." />
+
+		<!-- SEO Meta Tags -->
+		<title>{meta.title}</title>
+		<meta name="description" content={meta.description} />
+		<meta name="keywords" content={meta.keywords?.join(', ')} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures" />
+		<meta property="og:title" content={meta.title} />
+		<meta property="og:description" content={meta.description} />
+		<meta property="og:locale" content="en_AU" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures" />
+		<meta property="twitter:title" content={meta.title} />
+		<meta property="twitter:description" content={meta.description} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures" />
 
 		<!-- Comprehensive Medical Procedure Schema Markup -->
 		<script type="application/ld+json">
