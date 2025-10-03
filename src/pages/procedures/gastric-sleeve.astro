@@ -1,0 +1,1285 @@
+---
+import '../../styles/global.css';
+import { seoMeta } from '../../data/seo-meta';
+
+const meta = seoMeta.gastricSleeve;
+const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/gastric-sleeve";
+---
+
+<html lang="en-AU">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO Meta Tags -->
+		<title>{meta.title}</title>
+		<meta name="description" content={meta.description} />
+		<meta name="keywords" content={meta.keywords?.join(', ')} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content={pageUrl} />
+		<meta property="og:title" content={meta.title} />
+		<meta property="og:description" content={meta.description} />
+		<meta property="og:locale" content="en_AU" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={pageUrl} />
+		<meta property="twitter:title" content={meta.title} />
+		<meta property="twitter:description" content={meta.description} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={pageUrl} />
+
+		<!-- Medical Procedure Schema -->
+		<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "MedicalWebPage",
+					"@id": "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/gastric-sleeve#webpage",
+					"url": "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/gastric-sleeve",
+					"name": "Gastric Sleeve Surgery Australia - Complete Guide",
+					"description": "Comprehensive guide to gastric sleeve surgery in Australia including costs, recovery, eligibility and finding qualified surgeons.",
+					"inLanguage": "en-AU",
+					"datePublished": "2025-01-03",
+					"dateModified": "2025-01-03",
+					"specialty": {
+						"@type": "MedicalSpecialty",
+						"name": "Bariatric Surgery"
+					}
+				},
+				{
+					"@type": "MedicalProcedure",
+					"name": "Gastric Sleeve Surgery",
+					"alternateName": ["Sleeve Gastrectomy", "Vertical Sleeve Gastrectomy", "VSG"],
+					"description": "Gastric sleeve surgery removes approximately 80% of the stomach, creating a sleeve-shaped stomach about the size of a banana.",
+					"procedureType": "Surgical",
+					"bodyLocation": {
+						"@type": "BodyStructure",
+						"name": "Stomach"
+					},
+					"expectedPrognosis": "60-70% excess weight loss within 12-18 months"
+				},
+				{
+					"@type": "FAQPage",
+					"mainEntity": [
+						{
+							"@type": "Question",
+							"name": "How much does gastric sleeve surgery cost in Australia?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Gastric sleeve surgery in Australia typically costs between $15,000 and $25,000 for self-funded patients. With private health insurance, out-of-pocket costs range from $5,000 to $12,000. Medicare rebates are available for eligible patients. Final costs vary based on surgeon fees, hospital choice, and location."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Is gastric sleeve surgery safe?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Gastric sleeve surgery is generally safe when performed by experienced, AHPRA-registered surgeons. Serious complications occur in less than 1-2% of cases. Common risks include staple line leak (less than 1%), bleeding, infection, and blood clots. The procedure has been performed successfully thousands of times in Australia with high safety standards."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "How long does gastric sleeve recovery take?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Most gastric sleeve patients stay in hospital for 1-2 nights and can return to light activities within 1-2 weeks. Return to work typically occurs at 2-3 weeks for desk jobs, 4-6 weeks for physical work. Full recovery takes approximately 6 weeks. Diet progresses from liquid to solid foods over 6-8 weeks."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Will private health insurance cover gastric sleeve surgery?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Most Australian private health insurers cover gastric sleeve surgery with appropriate hospital and extras cover (typically Gold level or higher). A 12-month waiting period applies for bariatric surgery. Medicare provides rebates for eligible patients. Out-of-pocket gap fees typically range from $5,000 to $12,000 depending on your insurer and surgeon."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "How much weight will I lose after gastric sleeve?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Most gastric sleeve patients lose 60-70% of their excess body weight within 12-18 months. For example, someone 50kg overweight may lose 30-35kg. Weight loss is most rapid in the first 3-6 months. Individual results vary based on adherence to diet, exercise, and lifestyle changes. Long-term success requires permanent lifestyle modifications."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "What can I eat after gastric sleeve surgery?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "After gastric sleeve surgery, you'll progress through diet stages: Week 1-2: Clear liquids only. Week 3-4: Full liquids and protein shakes. Week 5-6: Pureed and soft foods. Week 7+: Gradual introduction of solid foods. Long-term, focus on protein-rich foods, vegetables, and small portions. Avoid high-sugar foods, carbonated drinks, and eating too quickly."
+							}
+						}
+					]
+				},
+				{
+					"@type": "BreadcrumbList",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "Home",
+							"item": "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"name": "Procedures",
+							"item": "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures"
+						},
+						{
+							"@type": "ListItem",
+							"position": 3,
+							"name": "Gastric Sleeve Surgery",
+							"item": "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/gastric-sleeve"
+						}
+					]
+				}
+			]
+		}
+		</script>
+	</head>
+
+	<body class="antialiased">
+		<!-- Header -->
+		<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between items-center py-4">
+					<div class="flex items-center">
+						<a href="/" class="text-xl font-bold text-blue-600">Weight Loss Surgery Australia</a>
+					</div>
+					<nav class="hidden md:flex space-x-8">
+						<a href="/procedures" class="text-blue-600 font-semibold">Procedures</a>
+						<a href="/#costs" class="text-gray-700 hover:text-blue-600">Costs</a>
+						<a href="/#locations" class="text-gray-700 hover:text-blue-600">Locations</a>
+						<a href="/#faq" class="text-gray-700 hover:text-blue-600">FAQ</a>
+					</nav>
+					<div class="flex items-center space-x-4">
+						<a href="tel:1300000000" class="hidden sm:block text-blue-600 font-semibold">1300 000 000</a>
+						<a href="#consultation" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Free Consultation</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Breadcrumbs -->
+		<div class="bg-gray-50 border-b border-gray-200">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+				<div class="flex items-center space-x-2 text-sm">
+					<a href="/" class="text-gray-600 hover:text-blue-600">Home</a>
+					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+					</svg>
+					<a href="/procedures" class="text-gray-600 hover:text-blue-600">Procedures</a>
+					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+					</svg>
+					<span class="text-gray-900 font-medium">Gastric Sleeve Surgery</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Hero Section -->
+		<section class="bg-gradient-to-br from-blue-50 to-white py-12 md:py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl">
+					<div class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">
+						Most Popular Procedure in Australia
+					</div>
+					<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+						Gastric Sleeve Surgery in Australia
+					</h1>
+					<p class="text-xl text-gray-600 mb-8">
+						Gastric sleeve surgery is Australia's most commonly performed weight loss procedure, helping thousands achieve sustainable weight loss and improved health. Find qualified AHPRA-registered surgeons, transparent pricing, and expert guidance.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 mb-8">
+						<a href="#consultation" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-center text-lg font-semibold">
+							Book Free Consultation
+						</a>
+						<a href="#cost" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-center text-lg font-semibold">
+							Calculate Your Cost
+						</a>
+					</div>
+					<div class="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+						<div class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							AHPRA-Registered Surgeons
+						</div>
+						<div class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							Medicare Rebates Available
+						</div>
+						<div class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							Nationwide Surgeon Network
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- What is Gastric Sleeve -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid md:grid-cols-2 gap-12">
+					<div>
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">What is Gastric Sleeve Surgery?</h2>
+						<p class="text-lg text-gray-700 mb-4">
+							Gastric sleeve surgery, also known as sleeve gastrectomy or vertical sleeve gastrectomy (VSG), is a bariatric procedure that removes approximately 80% of the stomach, leaving a narrow, tube-shaped "sleeve" about the size of a banana.
+						</p>
+						<p class="text-lg text-gray-700 mb-4">
+							The procedure permanently reduces stomach size, limiting the amount of food you can eat at one time. It also removes the part of the stomach that produces ghrelin, the hunger hormone, which significantly reduces appetite.
+						</p>
+						<p class="text-lg text-gray-700 mb-6">
+							Unlike gastric bypass, the sleeve procedure doesn't involve rerouting the intestines, making it less complex whilst still delivering excellent weight loss results.
+						</p>
+
+						<div class="bg-green-50 border-l-4 border-green-500 p-6 mb-6">
+							<h3 class="font-bold text-gray-900 mb-2">Expected Weight Loss Results</h3>
+							<p class="text-gray-700 mb-2">
+								Most gastric sleeve patients lose <strong>60-70% of their excess body weight</strong> within 12-18 months following surgery.
+							</p>
+							<p class="text-sm text-gray-600 italic">
+								Individual results vary based on adherence to post-surgery diet, exercise recommendations, and lifestyle changes. Weight loss surgery is a tool, not a cure, and requires lifelong commitment.
+							</p>
+						</div>
+
+						<a href="/procedures" class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center">
+							Compare with other procedures
+							<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+							</svg>
+						</a>
+					</div>
+
+					<div>
+						<div class="bg-blue-50 rounded-2xl p-8 h-full flex items-center justify-center">
+							<div class="text-center">
+								<div class="text-6xl mb-4">💊</div>
+								<p class="text-gray-600 mb-4">Diagram: Stomach Before and After Gastric Sleeve</p>
+								<div class="bg-white rounded-lg p-6 shadow-sm">
+									<div class="text-left space-y-3">
+										<div class="flex items-center justify-between">
+											<span class="text-gray-700">Normal Stomach:</span>
+											<span class="font-semibold">~1,500ml capacity</span>
+										</div>
+										<div class="flex items-center justify-between">
+											<span class="text-gray-700">After Sleeve:</span>
+											<span class="font-semibold text-blue-600">~150-200ml capacity</span>
+										</div>
+										<div class="flex items-center justify-between">
+											<span class="text-gray-700">Reduction:</span>
+											<span class="font-semibold text-green-600">~80%</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- What's Involved -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">What's Involved in the Gastric Sleeve Procedure</h2>
+
+					<div class="bg-white rounded-xl p-8 shadow-sm mb-8">
+						<h3 class="text-xl font-bold text-gray-900 mb-6">Step-by-Step Surgical Process</h3>
+						<div class="space-y-6">
+							<div class="flex gap-4">
+								<div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Anaesthesia</h4>
+									<p class="text-gray-700">General anaesthesia is administered. You'll be completely asleep and pain-free throughout the 2-3 hour procedure.</p>
+								</div>
+							</div>
+							<div class="flex gap-4">
+								<div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Laparoscopic Incisions</h4>
+									<p class="text-gray-700">Your surgeon makes 4-5 small incisions (5-12mm) in your abdomen to insert specialised laparoscopic instruments and a camera.</p>
+								</div>
+							</div>
+							<div class="flex gap-4">
+								<div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Stomach Division</h4>
+									<p class="text-gray-700">Using a surgical stapler, approximately 80% of the stomach is divided vertically and removed from the body. This includes the section that produces the hunger hormone ghrelin.</p>
+								</div>
+							</div>
+							<div class="flex gap-4">
+								<div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Sleeve Formation</h4>
+									<p class="text-gray-700">The remaining stomach is formed into a narrow, tube-shaped sleeve about the size and shape of a banana. The staple line is reinforced.</p>
+								</div>
+							</div>
+							<div class="flex gap-4">
+								<div class="flex-shrink-0 w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">5</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Completion</h4>
+									<p class="text-gray-700">The surgeon inspects the staple line for leaks, removes instruments, and closes the small incisions with dissolvable sutures.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="grid md:grid-cols-2 gap-6 mb-8">
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<h3 class="text-lg font-bold text-gray-900 mb-4">Hospital Stay & Recovery</h3>
+							<ul class="space-y-3">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Hospital:</strong> 1-2 nights typically</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Return to light activity:</strong> 1-2 weeks</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Return to work:</strong> 2-3 weeks (desk), 4-6 weeks (physical)</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Full recovery:</strong> 6 weeks</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<h3 class="text-lg font-bold text-gray-900 mb-4">Surgery Duration & Type</h3>
+							<ul class="space-y-3">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Procedure time:</strong> 2-3 hours</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Surgical approach:</strong> Laparoscopic (keyhole)</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Incisions:</strong> 4-5 small cuts (5-12mm)</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Reversibility:</strong> Permanent procedure</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Benefits and Risks -->
+					<div class="grid md:grid-cols-2 gap-6">
+						<div class="bg-green-50 rounded-xl p-6">
+							<h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+								<svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								Benefits & Advantages
+							</h3>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Significant long-term weight loss (60-70% excess weight)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Improves type 2 diabetes, high blood pressure, sleep apnoea</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">No foreign objects left in body</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">No intestinal rerouting required</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Reduces hunger hormone (ghrelin)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Shorter procedure than gastric bypass</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Faster recovery compared to bypass</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bg-orange-50 rounded-xl p-6">
+							<h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+								<svg class="w-5 h-5 text-orange-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+								</svg>
+								Risks & Considerations
+							</h3>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Permanent and irreversible procedure</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Staple line leak (rare, less than 1%)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Bleeding, infection, blood clots</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Vitamin and mineral deficiencies possible</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Acid reflux may worsen in some patients</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Nausea and vomiting (especially early on)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Requires lifelong dietary and lifestyle changes</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<p class="text-sm text-gray-600 mt-6 italic">
+						Your surgeon will discuss all potential risks and benefits during your consultation. Evidence shows gastric sleeve has a high safety profile when performed by experienced, AHPRA-registered surgeons.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Eligibility -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Am I Eligible for Gastric Sleeve Surgery?</h2>
+
+					<div class="bg-blue-50 rounded-xl p-8 mb-8">
+						<h3 class="text-xl font-bold text-gray-900 mb-4">General Eligibility Criteria</h3>
+						<div class="space-y-3">
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<p class="text-gray-700"><strong>BMI over 40</strong> (any circumstances)</p>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<p class="text-gray-700"><strong>BMI 35-40</strong> with obesity-related health conditions (type 2 diabetes, high blood pressure, sleep apnoea, joint problems, or heart disease)</p>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<p class="text-gray-700"><strong>Age 18-65</strong> (some surgeons consider younger or older patients on a case-by-case basis)</p>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<p class="text-gray-700"><strong>Previous weight loss attempts</strong> unsuccessful (documented diet and exercise programmes)</p>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-blue-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<p class="text-gray-700"><strong>Commitment to lifestyle changes:</strong> Willing and able to follow post-surgery diet, exercise, and medical follow-up</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="grid md:grid-cols-2 gap-6 mb-8">
+						<div class="bg-white border-2 border-green-200 rounded-xl p-6">
+							<h3 class="text-lg font-bold text-gray-900 mb-4">Who Gastric Sleeve is For</h3>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">People with BMI 40+ or BMI 35+ with health conditions</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Those who prefer no intestinal rerouting</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Patients committed to long-term lifestyle changes</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Those seeking significant weight loss</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Individuals with obesity-related conditions</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bg-white border-2 border-red-200 rounded-xl p-6">
+							<h3 class="text-lg font-bold text-gray-900 mb-4">Who Gastric Sleeve May Not Be For</h3>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">People with severe untreated mental health conditions</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">Those with active substance abuse issues</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">Patients with severe acid reflux or GORD</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">Pregnant women or those planning pregnancy soon</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">Individuals unable to commit to dietary changes</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="bg-gray-100 rounded-xl p-6 mb-6">
+						<h3 class="text-lg font-bold text-gray-900 mb-3">Common Reasons Patients Choose Gastric Sleeve</h3>
+						<ul class="grid md:grid-cols-2 gap-3">
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">→</span>
+								<span class="text-gray-700">Type 2 diabetes management</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">→</span>
+								<span class="text-gray-700">High blood pressure (hypertension)</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">→</span>
+								<span class="text-gray-700">Obstructive sleep apnoea</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">→</span>
+								<span class="text-gray-700">Joint pain and mobility issues</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">→</span>
+								<span class="text-gray-700">Heart disease risk reduction</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">→</span>
+								<span class="text-gray-700">Fatty liver disease (NAFLD)</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">→</span>
+								<span class="text-gray-700">Polycystic ovary syndrome (PCOS)</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">→</span>
+								<span class="text-gray-700">Improved quality of life and mobility</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="text-center">
+						<a href="#consultation" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
+							Check Your Eligibility - Free Quiz
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cost Section -->
+		<section id="cost" class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Cost of Gastric Sleeve Surgery in Australia</h2>
+
+					<p class="text-lg text-gray-700 mb-8">
+						Gastric sleeve surgery costs vary depending on your location, surgeon experience, hospital choice, and insurance coverage. Below is a comprehensive breakdown of what to expect.
+					</p>
+
+					<div class="grid md:grid-cols-2 gap-6 mb-8">
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Self-Funded (No Insurance)</h3>
+							<div class="text-3xl font-bold text-blue-600 mb-2">$15,000 - $25,000</div>
+							<p class="text-gray-600 mb-4">Total out-of-pocket cost</p>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">No waiting period</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">Payment plans available</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">Faster booking available</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">With Private Health Insurance</h3>
+							<div class="text-3xl font-bold text-green-600 mb-2">$5,000 - $12,000</div>
+							<p class="text-gray-600 mb-4">Out-of-pocket gap payment</p>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-green-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">Medicare rebate included</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-green-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">12-month waiting period applies</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-green-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">Gold level cover typically required</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="bg-blue-50 rounded-xl p-6 mb-8">
+						<h3 class="text-lg font-bold text-gray-900 mb-4">What's Included in the Cost?</h3>
+						<div class="grid md:grid-cols-2 gap-4">
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-blue-600 mr-2">•</span>
+									<span class="text-gray-700">Surgeon's fees</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-blue-600 mr-2">•</span>
+									<span class="text-gray-700">Anaesthetist fees</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-blue-600 mr-2">•</span>
+									<span class="text-gray-700">Hospital theatre and stay</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-blue-600 mr-2">•</span>
+									<span class="text-gray-700">Surgical assistant</span>
+								</li>
+							</ul>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-blue-600 mr-2">•</span>
+									<span class="text-gray-700">Pre-operative assessments</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-blue-600 mr-2">•</span>
+									<span class="text-gray-700">Post-operative care</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-blue-600 mr-2">•</span>
+									<span class="text-gray-700">Follow-up appointments</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-blue-600 mr-2">•</span>
+									<span class="text-gray-700">Nutritional counselling</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="bg-orange-50 border-l-4 border-orange-500 p-6 mb-8">
+						<h3 class="font-bold text-gray-900 mb-2">Factors That Affect Pricing</h3>
+						<ul class="space-y-1 text-gray-700">
+							<li><strong>Location:</strong> Sydney and Melbourne typically cost more than regional areas</li>
+							<li><strong>Surgeon experience:</strong> Highly experienced surgeons may charge higher fees</li>
+							<li><strong>Hospital choice:</strong> Private hospital vs day surgery centre</li>
+							<li><strong>Complexity:</strong> Revision surgery or high BMI may increase costs</li>
+							<li><strong>Insurance coverage:</strong> Your fund and level of cover significantly impact out-of-pocket costs</li>
+						</ul>
+					</div>
+
+					<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white text-center">
+						<h3 class="text-2xl font-bold mb-3">Get Your Personalised Cost Estimate</h3>
+						<p class="text-blue-100 mb-6">Calculate your gastric sleeve surgery cost based on your location, insurance, and circumstances in 60 seconds</p>
+						<a href="#calculator" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition font-semibold text-lg">
+							Use Free Cost Calculator
+						</a>
+					</div>
+
+					<p class="text-sm text-gray-600 mt-6">
+						<strong>Note:</strong> For detailed information about Medicare rebates and private health insurance coverage, visit <a href="https://www.servicesaustralia.gov.au/medicare" class="text-blue-600 hover:underline" target="_blank" rel="noopener">Services Australia</a> or speak with your insurance provider.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Choose Us -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Why Choose Weight Loss Surgery Australia</h2>
+					<p class="text-xl text-gray-600 mb-12">
+						We're committed to providing transparent, unbiased information and connecting you with qualified bariatric surgeons across Australia.
+					</p>
+
+					<div class="grid md:grid-cols-3 gap-8 mb-12">
+						<div class="text-center">
+							<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Transparent Pricing</h3>
+							<p class="text-gray-600">No hidden fees or surprises. We provide honest cost estimates and help you understand all options.</p>
+						</div>
+
+						<div class="text-center">
+							<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">AHPRA-Registered Surgeons</h3>
+							<p class="text-gray-600">We only work with qualified, experienced bariatric surgeons registered with AHPRA.</p>
+						</div>
+
+						<div class="text-center">
+							<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Nationwide Coverage</h3>
+							<p class="text-gray-600">Find qualified surgeons in Sydney, Melbourne, Brisbane, Perth, Adelaide, and regional areas.</p>
+						</div>
+					</div>
+
+					<div class="bg-gray-100 rounded-xl p-8">
+						<h3 class="text-xl font-bold text-gray-900 mb-4">Our Patient-First Approach</h3>
+						<p class="text-gray-700 mb-4">
+							We understand that choosing weight loss surgery is a significant decision. Our platform provides comprehensive, evidence-based information to help you make informed choices. We're not here to sell you surgery—we're here to educate and connect you with the right professionals for your needs.
+						</p>
+						<p class="text-gray-700">
+							Every surgeon in our network meets strict criteria for experience, qualifications, and patient outcomes. Your safety and success are our top priorities.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Recovery Timeline -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Gastric Sleeve Recovery Timeline</h2>
+					<p class="text-lg text-gray-700 mb-8">
+						Recovery from gastric sleeve surgery is progressive. Here's what to expect at each stage, including diet progression, activity levels, and key milestones.
+					</p>
+
+					<div class="space-y-6">
+						<!-- Week 1 -->
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+									<span class="text-2xl font-bold text-blue-600">Week 1</span>
+								</div>
+								<div class="flex-1">
+									<h3 class="text-xl font-bold text-gray-900 mb-3">Hospital Stay & Initial Recovery</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">What to Expect:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Hospital stay: 1-2 nights</li>
+												<li>• Pain and discomfort managed with medication</li>
+												<li>• Nausea possible</li>
+												<li>• Walking encouraged from day 1</li>
+												<li>• Fatigue and tiredness normal</li>
+											</ul>
+										</div>
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">Diet:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Clear liquids only</li>
+												<li>• Water, broth, sugar-free jelly</li>
+												<li>• Sip slowly (30ml at a time)</li>
+												<li>• Aim for 1-1.5L fluids daily</li>
+												<li>• No straws or carbonated drinks</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Week 2-3 -->
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
+									<span class="text-xl font-bold text-green-600">Week 2-3</span>
+								</div>
+								<div class="flex-1">
+									<h3 class="text-xl font-bold text-gray-900 mb-3">Full Liquids Phase</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">What to Expect:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Increasing energy levels</li>
+												<li>• Return to light activities</li>
+												<li>• Incisions healing well</li>
+												<li>• May return to desk work</li>
+												<li>• Walking 20-30 minutes daily</li>
+											</ul>
+										</div>
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">Diet:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Protein shakes (3-4 per day)</li>
+												<li>• Smooth soups</li>
+												<li>• Skim milk</li>
+												<li>• Sugar-free yoghurt</li>
+												<li>• Target: 60-80g protein daily</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Week 4-6 -->
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center">
+									<span class="text-xl font-bold text-orange-600">Week 4-6</span>
+								</div>
+								<div class="flex-1">
+									<h3 class="text-xl font-bold text-gray-900 mb-3">Pureed & Soft Foods</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">What to Expect:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Noticeable weight loss</li>
+												<li>• Increased stamina</li>
+												<li>• Return to most normal activities</li>
+												<li>• Light exercise introduced</li>
+												<li>• Follow-up with surgeon</li>
+											</ul>
+										</div>
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">Diet:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Pureed lean meats</li>
+												<li>• Mashed vegetables</li>
+												<li>• Soft fish and eggs</li>
+												<li>• Cottage cheese, ricotta</li>
+												<li>• Eat slowly, chew thoroughly</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Month 2-3 -->
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center">
+									<span class="text-lg font-bold text-purple-600">Month 2-3</span>
+								</div>
+								<div class="flex-1">
+									<h3 class="text-xl font-bold text-gray-900 mb-3">Solid Foods Introduction</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">What to Expect:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Rapid weight loss continues</li>
+												<li>• Regular exercise routine established</li>
+												<li>• Adaptation to new eating habits</li>
+												<li>• Energy levels normalising</li>
+												<li>• Return to physical work possible</li>
+											</ul>
+										</div>
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">Diet:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Gradual introduction of solid foods</li>
+												<li>• Lean proteins priority</li>
+												<li>• Vegetables and fruits</li>
+												<li>• Small portions (3-6 small meals)</li>
+												<li>• Avoid high-sugar, high-fat foods</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Month 6+ -->
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-20 h-20 bg-indigo-100 rounded-full flex items-center justify-center">
+									<span class="text-lg font-bold text-indigo-600">Month 6+</span>
+								</div>
+								<div class="flex-1">
+									<h3 class="text-xl font-bold text-gray-900 mb-3">Long-Term Success</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">What to Expect:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• 50-70% of excess weight lost</li>
+												<li>• Significant health improvements</li>
+												<li>• New lifestyle habits established</li>
+												<li>• Regular exercise part of routine</li>
+												<li>• Ongoing medical monitoring</li>
+											</ul>
+										</div>
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">Diet & Lifestyle:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Regular, balanced meals</li>
+												<li>• Protein-focused eating</li>
+												<li>• Daily multivitamin essential</li>
+												<li>• Regular blood tests</li>
+												<li>• Lifelong commitment required</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-orange-50 border-l-4 border-orange-500 p-6 mt-8">
+						<h3 class="font-bold text-gray-900 mb-2">Managing Potential Complications</h3>
+						<p class="text-gray-700 mb-3">Contact your surgeon immediately if you experience:</p>
+						<ul class="space-y-1 text-gray-700">
+							<li>• Severe, persistent pain</li>
+							<li>• Fever above 38°C</li>
+							<li>• Persistent vomiting or inability to keep fluids down</li>
+							<li>• Signs of infection at incision sites (redness, swelling, discharge)</li>
+							<li>• Chest pain or difficulty breathing</li>
+							<li>• Unusual swelling in legs</li>
+						</ul>
+					</div>
+
+					<p class="text-sm text-gray-600 mt-6">
+						<strong>Note:</strong> Recovery timelines vary between individuals. Always follow your surgeon's specific instructions and attend all follow-up appointments.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQs -->
+		<section class="py-16 bg-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Frequently Asked Questions</h2>
+				<p class="text-lg text-gray-600 mb-12 text-center">Get answers to the most common questions about gastric sleeve surgery in Australia</p>
+
+				<div class="space-y-4">
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							How much does gastric sleeve surgery cost in Australia?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							Gastric sleeve surgery in Australia typically costs between <strong>$15,000 and $25,000</strong> for self-funded patients. With private health insurance, out-of-pocket costs range from $5,000 to $12,000. Medicare rebates are available for eligible patients. Final costs vary based on surgeon fees, hospital choice, and location. Use our <a href="#cost" class="text-blue-600 hover:underline">cost calculator</a> for a personalised estimate.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							Is gastric sleeve surgery safe?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							Gastric sleeve surgery is generally safe when performed by experienced, AHPRA-registered surgeons. Serious complications occur in less than 1-2% of cases. Common risks include staple line leak (less than 1%), bleeding, infection, and blood clots. The procedure has been performed successfully thousands of times in Australia with high safety standards. Your surgeon will discuss all risks during consultation.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							How long does gastric sleeve recovery take?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							Most gastric sleeve patients stay in hospital for 1-2 nights and can return to light activities within 1-2 weeks. Return to work typically occurs at 2-3 weeks for desk jobs, 4-6 weeks for physical work. <strong>Full recovery takes approximately 6 weeks.</strong> Diet progresses from liquid to solid foods over 6-8 weeks. See our detailed <a href="#recovery" class="text-blue-600 hover:underline">recovery timeline</a> above.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							Will private health insurance cover gastric sleeve surgery?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							Most Australian private health insurers cover gastric sleeve surgery with appropriate hospital and extras cover (typically Gold level or higher). A <strong>12-month waiting period</strong> applies for bariatric surgery. Medicare provides rebates for eligible patients. Out-of-pocket gap fees typically range from $5,000 to $12,000 depending on your insurer and surgeon. Check with your fund for specific coverage details.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							How much weight will I lose after gastric sleeve?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							Most gastric sleeve patients lose <strong>60-70% of their excess body weight</strong> within 12-18 months. For example, someone 50kg overweight may lose 30-35kg. Weight loss is most rapid in the first 3-6 months. Individual results vary based on adherence to diet, exercise, and lifestyle changes. Long-term success requires permanent lifestyle modifications and ongoing medical support.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							What can I eat after gastric sleeve surgery?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							After gastric sleeve surgery, you'll progress through diet stages: <strong>Week 1-2:</strong> Clear liquids only. <strong>Week 3-4:</strong> Full liquids and protein shakes. <strong>Week 5-6:</strong> Pureed and soft foods. <strong>Week 7+:</strong> Gradual introduction of solid foods. Long-term, focus on protein-rich foods, vegetables, and small portions (3-6 small meals daily). Avoid high-sugar foods, carbonated drinks, and eating too quickly.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							Can gastric sleeve be reversed?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							<strong>No, gastric sleeve surgery is permanent and cannot be reversed.</strong> Approximately 80% of your stomach is permanently removed during the procedure. However, if complications occur or additional weight loss is needed, revision surgery to gastric bypass is possible. It's crucial to be certain about your decision before proceeding with gastric sleeve surgery.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							What's the difference between gastric sleeve and gastric bypass?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							<strong>Gastric sleeve</strong> removes 80% of the stomach, creating a tube-shaped stomach. It's simpler, with faster recovery, achieving 60-70% excess weight loss. <strong>Gastric bypass</strong> creates a small stomach pouch and reroutes the intestine, achieving 70-80% weight loss and better results for diabetes. Bypass has longer recovery and higher complication risk. See our detailed <a href="/compare/gastric-sleeve-vs-gastric-bypass" class="text-blue-600 hover:underline">comparison guide</a>.
+						</p>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<!-- Find a Surgeon -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Find a Gastric Sleeve Surgeon Near You</h2>
+					<p class="text-xl text-gray-600 mb-12">
+						Connect with experienced, AHPRA-registered bariatric surgeons in your area. All surgeons in our network meet strict criteria for qualifications, experience, and patient outcomes.
+					</p>
+
+					<div class="grid md:grid-cols-3 gap-6 mb-12">
+						<a href="/locations/sydney" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
+							<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Sydney</h3>
+							<p class="text-gray-600 mb-3">Find gastric sleeve surgeons in Sydney</p>
+							<span class="text-blue-600 font-semibold">View Surgeons →</span>
+						</a>
+
+						<a href="/locations/melbourne" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
+							<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Melbourne</h3>
+							<p class="text-gray-600 mb-3">Find gastric sleeve surgeons in Melbourne</p>
+							<span class="text-blue-600 font-semibold">View Surgeons →</span>
+						</a>
+
+						<a href="/locations/brisbane" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
+							<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Brisbane</h3>
+							<p class="text-gray-600 mb-3">Find gastric sleeve surgeons in Brisbane</p>
+							<span class="text-blue-600 font-semibold">View Surgeons →</span>
+						</a>
+					</div>
+
+					<a href="/#locations" class="inline-block bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg font-semibold">
+						View All Locations
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Final CTA -->
+		<section id="consultation" class="py-16 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Take the First Step?</h2>
+				<p class="text-xl text-blue-100 mb-8">
+					Book a free, no-obligation consultation with a qualified bariatric surgeon to discuss gastric sleeve surgery and whether it's right for you. Your journey to better health starts here.
+				</p>
+
+				<div class="bg-white rounded-xl p-8 text-left max-w-md mx-auto mb-8">
+					<form class="space-y-4">
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+							<input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="John Smith" required />
+						</div>
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+							<input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="john@example.com" required />
+						</div>
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+							<input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="0400 000 000" required />
+						</div>
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Preferred Location</label>
+							<select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+								<option>Sydney</option>
+								<option>Melbourne</option>
+								<option>Brisbane</option>
+								<option>Perth</option>
+								<option>Adelaide</option>
+								<option>Other</option>
+							</select>
+						</div>
+						<button type="submit" class="w-full bg-blue-600 text-white px-6 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
+							Book Free Consultation
+						</button>
+						<p class="text-xs text-gray-500 text-center">By submitting, you agree to our privacy policy. Your information is confidential and secure.</p>
+					</form>
+				</div>
+
+				<div class="flex flex-col sm:flex-row gap-4 justify-center items-center text-blue-100">
+					<div class="flex items-center">
+						<svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+							<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+						</svg>
+						Or call: 1300 000 000
+					</div>
+					<div class="text-sm">Monday - Friday, 9am - 5pm AEST</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Medical Disclaimer -->
+		<section class="bg-gray-100 py-8 border-t border-gray-300">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<h3 class="text-sm font-bold text-gray-900 mb-2">Medical Disclaimer</h3>
+					<p class="text-xs text-gray-600 leading-relaxed">
+						<strong>Important:</strong> This content is for educational purposes only and does not constitute medical advice. Individual results from gastric sleeve surgery vary based on numerous factors including adherence to post-surgery protocols, pre-existing health conditions, and individual physiology. Weight loss figures and recovery timelines are based on clinical averages and may not reflect your experience. Gastric sleeve surgery carries risks including but not limited to bleeding, infection, staple line leak, nutritional deficiencies, and the need for revision surgery. This procedure is permanent and irreversible. Always consult with qualified, AHPRA-registered healthcare providers before making decisions about weight loss surgery. Information on this page is current as of January 2025 and should be verified with your surgeon. For official information about Medicare rebates and eligibility, visit <a href="https://www.servicesaustralia.gov.au/medicare" class="text-blue-600 hover:underline" target="_blank" rel="noopener">Services Australia</a>. For information about AHPRA-registered practitioners, visit <a href="https://www.ahpra.gov.au" class="text-blue-600 hover:underline" target="_blank" rel="noopener">AHPRA</a>.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white py-12">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid md:grid-cols-4 gap-8 mb-8">
+					<div>
+						<h3 class="font-bold text-lg mb-4">Procedures</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="/procedures/gastric-sleeve" class="hover:text-white">Gastric Sleeve</a></li>
+							<li><a href="/procedures/gastric-bypass" class="hover:text-white">Gastric Bypass</a></li>
+							<li><a href="/procedures/mini-gastric-bypass" class="hover:text-white">Mini Gastric Bypass</a></li>
+							<li><a href="/procedures/gastric-band" class="hover:text-white">Gastric Band</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-lg mb-4">Locations</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="/locations/sydney" class="hover:text-white">Sydney</a></li>
+							<li><a href="/locations/melbourne" class="hover:text-white">Melbourne</a></li>
+							<li><a href="/locations/brisbane" class="hover:text-white">Brisbane</a></li>
+							<li><a href="/locations/perth" class="hover:text-white">Perth</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-lg mb-4">Resources</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="#cost" class="hover:text-white">Cost Calculator</a></li>
+							<li><a href="#consultation" class="hover:text-white">Eligibility Quiz</a></li>
+							<li><a href="/#faq" class="hover:text-white">FAQ</a></li>
+							<li><a href="/compare/gastric-sleeve-vs-gastric-bypass" class="hover:text-white">Compare Procedures</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-lg mb-4">Contact</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li>Phone: 1300 000 000</li>
+							<li>Email: info@wlsaustralia.com.au</li>
+							<li class="pt-4">
+								<a href="#newsletter" class="text-blue-400 hover:text-blue-300">Subscribe to Newsletter</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8">
+					<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+						<p>&copy; 2025 Weight Loss Surgery Australia. All rights reserved.</p>
+						<div class="flex space-x-6 mt-4 md:mt-0">
+							<a href="#privacy" class="hover:text-white">Privacy Policy</a>
+							<a href="#terms" class="hover:text-white">Terms of Service</a>
+							<a href="#disclaimer" class="hover:text-white">Medical Disclaimer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
