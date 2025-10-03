@@ -1,3 +1,4 @@
+
 # Weight Loss Surgery Australia - Blueprint
 **Last Updated:** October 2, 2025  
 **Business Model:** Lead Generation Platform for Bariatric Surgery  
