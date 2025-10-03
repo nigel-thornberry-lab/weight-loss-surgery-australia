@@ -1,0 +1,1255 @@
+---
+import '../../styles/global.css';
+import { seoMeta } from '../../data/seo-meta';
+
+const meta = seoMeta.sydney;
+const pageUrl = "https://weight-loss-surgery-australia.vercel.app/locations/sydney";
+---
+
+<html lang="en-AU">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO Meta Tags -->
+		<title>{meta.title}</title>
+		<meta name="description" content={meta.description} />
+		<meta name="keywords" content={meta.keywords?.join(', ')} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={pageUrl} />
+		<meta property="og:title" content={meta.title} />
+		<meta property="og:description" content={meta.description} />
+		<meta property="og:locale" content="en_AU" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={pageUrl} />
+		<meta property="twitter:title" content={meta.title} />
+		<meta property="twitter:description" content={meta.description} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={pageUrl} />
+
+		<!-- Location Page Schema -->
+		<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "MedicalWebPage",
+					"@id": "https://weight-loss-surgery-australia.vercel.app/locations/sydney#webpage",
+					"url": "https://weight-loss-surgery-australia.vercel.app/locations/sydney",
+					"name": "Weight Loss Surgery Sydney - Top Surgeons & Costs",
+					"description": "Find AHPRA-registered bariatric surgeons in Sydney. Compare costs, read reviews, and book consultations across Sydney metro.",
+					"inLanguage": "en-AU",
+					"datePublished": "2025-01-03",
+					"dateModified": "2025-01-03",
+					"specialty": {
+						"@type": "MedicalSpecialty",
+						"name": "Bariatric Surgery"
+					}
+				},
+				{
+					"@type": "MedicalBusiness",
+					"name": "Weight Loss Surgery Sydney",
+					"url": "https://weight-loss-surgery-australia.vercel.app/locations/sydney",
+					"description": "Connect with qualified bariatric surgeons across Sydney and surrounding areas.",
+					"areaServed": {
+						"@type": "City",
+						"name": "Sydney",
+						"containedIn": {
+							"@type": "State",
+							"name": "New South Wales"
+						}
+					},
+					"medicalSpecialty": "Bariatric Surgery"
+				},
+				{
+					"@type": "FAQPage",
+					"mainEntity": [
+						{
+							"@type": "Question",
+							"name": "How much does weight loss surgery cost in Sydney?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Weight loss surgery in Sydney typically costs $15,000-$30,000 depending on the procedure. Gastric sleeve ranges from $15,000-$25,000, gastric bypass from $18,000-$30,000, and gastric band from $12,000-$20,000. Costs vary by surgeon, hospital, and whether you have private health insurance. Medicare rebates of up to $2,000 are available for eligible patients. With top-level private health insurance, out-of-pocket costs can be reduced to $5,000-$15,000."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "What is the average wait time for weight loss surgery in Sydney?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "In Sydney's private system, the average wait time is 4-8 weeks from consultation to surgery, depending on surgeon availability and insurance waiting periods (typically 12 months for new policies). Public hospital wait times through NSW Health can be 12-24 months or longer. Most patients choose private surgery for faster access. If you have existing health insurance with bariatric coverage, you can often schedule surgery within 6-8 weeks of your initial consultation."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Which Sydney hospitals perform weight loss surgery?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Major Sydney hospitals offering bariatric surgery include: North Shore Private Hospital (St Leonards), Sydney Adventist Hospital (Wahroonga), St George Private Hospital (Kogarah), Liverpool Private Hospital, Westmead Private Hospital, Norwest Private Hospital, and Sydney Southwest Private Hospital (Liverpool). Many AHPRA-registered bariatric surgeons also operate at The Mater Hospital (North Sydney), Strathfield Private Hospital, and Hurstville Private Hospital. All facilities meet Australian safety standards and are equipped for laparoscopic bariatric procedures."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Do Sydney bariatric surgeons bulk bill consultations?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Most Sydney bariatric surgeons do not bulk bill initial consultations. Consultation fees typically range from $150-$350, though Medicare rebates of $80-$150 may apply if you have a GP referral. Some surgeons offer free or reduced-cost initial consultations as part of comprehensive surgical packages. Always ask about consultation fees when booking. If cost is a barrier, some surgeons offer payment plans or sliding scale fees."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Which private health insurance is best for weight loss surgery in Sydney?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "For weight loss surgery in Sydney, top-level hospital cover is required from providers like Bupa, Medibank, HCF, NIB, or Australian Unity. Gold or Top hospital policies typically cover bariatric surgery after a 12-month waiting period. HCF and Bupa have the largest networks of participating Sydney surgeons. Compare policies for excess fees, gap payments, and whether they cover complications or revisions. Out-of-pocket costs with insurance typically range from $5,000-$15,000 depending on your surgeon's gap fees."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Can I travel from regional NSW to Sydney for weight loss surgery?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Yes, many regional NSW patients travel to Sydney for weight loss surgery due to the larger number of experienced surgeons and facilities. You'll typically need to stay in Sydney for 3-7 days post-surgery before returning home. Plan for pre-operative appointments (can sometimes be done via telehealth), surgery day, 1-2 nights hospital stay, and follow-up appointments. Many Sydney surgeons offer telehealth follow-ups for regional patients. Consider accommodation near your hospital and have a support person available for travel home."
+							}
+						}
+					]
+				},
+				{
+					"@type": "BreadcrumbList",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "Home",
+							"item": "https://weight-loss-surgery-australia.vercel.app"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"name": "Locations",
+							"item": "https://weight-loss-surgery-australia.vercel.app/locations"
+						},
+						{
+							"@type": "ListItem",
+							"position": 3,
+							"name": "Sydney",
+							"item": "https://weight-loss-surgery-australia.vercel.app/locations/sydney"
+						}
+					]
+				}
+			]
+		}
+		</script>
+	</head>
+	<body class="antialiased">
+		<!-- Header -->
+		<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between items-center py-4">
+					<div class="flex items-center">
+						<a href="/" class="text-xl font-bold text-blue-600">Weight Loss Surgery Australia</a>
+					</div>
+					<nav class="hidden md:flex space-x-8">
+						<div class="relative group">
+							<button class="text-gray-700 hover:text-blue-600 font-semibold flex items-center">
+								Procedures
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+								</svg>
+							</button>
+							<div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+								<div class="py-2">
+									<a href="/procedures/gastric-sleeve" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Sleeve</a>
+									<a href="/procedures/gastric-bypass" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Bypass</a>
+									<a href="/procedures/gastric-band" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Band</a>
+									<a href="/procedures/gastric-balloon" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Balloon</a>
+									<a href="/procedures/duodenal-switch" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Duodenal Switch</a>
+									<div class="border-t border-gray-200 my-2"></div>
+									<a href="/procedures" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Procedures</a>
+								</div>
+							</div>
+						</div>
+						<a href="/#costs" class="text-gray-700 hover:text-blue-600">Costs</a>
+						<a href="/#locations" class="text-blue-600 font-semibold">Locations</a>
+						<a href="/#faq" class="text-gray-700 hover:text-blue-600">FAQ</a>
+					</nav>
+					<div class="flex items-center space-x-4">
+						<a href="tel:1300000000" class="hidden sm:block text-blue-600 font-semibold">1300 000 000</a>
+						<a href="#consultation" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Free Consultation</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Breadcrumbs -->
+		<div class="bg-gray-50 border-b border-gray-200">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+				<div class="flex items-center space-x-2 text-sm">
+					<a href="/" class="text-gray-600 hover:text-blue-600">Home</a>
+					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+					</svg>
+					<a href="/locations" class="text-gray-600 hover:text-blue-600">Locations</a>
+					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+					</svg>
+					<span class="text-gray-900 font-medium">Sydney</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Hero Section -->
+		<section class="bg-gradient-to-br from-blue-50 to-white py-12 md:py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl">
+					<div class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">
+						Sydney, NSW
+					</div>
+					<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+						Weight Loss Surgery in Sydney
+					</h1>
+					<p class="text-xl text-gray-600 mb-8">
+						Connect with experienced, AHPRA-registered bariatric surgeons across Sydney and surrounding areas. Get transparent pricing, expert guidance, and comprehensive support for your weight loss journey.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 mb-8">
+						<a href="#consultation" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-center text-lg font-semibold">
+							Book Free Consultation
+						</a>
+						<a href="#cost" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-center text-lg font-semibold">
+							Calculate Your Cost
+						</a>
+					</div>
+					<div class="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+						<div class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							AHPRA-Registered Surgeons
+						</div>
+						<div class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							Medicare Rebates Available
+						</div>
+						<div class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							Multiple Hospital Locations
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Service Areas -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid md:grid-cols-2 gap-12">
+					<div>
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Sydney Metro Service Areas</h2>
+						<p class="text-lg text-gray-700 mb-6">
+							Our network of qualified bariatric surgeons operates across Greater Sydney, from the Northern Beaches to the Sutherland Shire, and from the Eastern Suburbs to Western Sydney. No matter where you live in Sydney, there's an experienced weight loss surgeon nearby.
+						</p>
+
+						<div class="space-y-6">
+							<div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Northern Sydney</h3>
+								<p class="text-gray-700 mb-2">
+									Major facilities include North Shore Private Hospital (St Leonards), Sydney Adventist Hospital (Wahroonga), and Norwest Private Hospital.
+								</p>
+								<p class="text-sm text-gray-600">
+									<strong>Suburbs served:</strong> St Leonards, Chatswood, Wahroonga, Hornsby, Castle Hill, Ryde, North Sydney, Crows Nest, Lane Cove, Macquarie Park
+								</p>
+							</div>
+
+							<div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Eastern Suburbs & Inner Sydney</h3>
+								<p class="text-gray-700 mb-2">
+									Convenient access to The Mater Hospital (North Sydney) and CBD-adjacent facilities with excellent public transport links.
+								</p>
+								<p class="text-sm text-gray-600">
+									<strong>Suburbs served:</strong> Bondi, Bondi Junction, Double Bay, Randwick, Coogee, Maroubra, Surry Hills, Paddington, Newtown, Marrickville
+								</p>
+							</div>
+
+							<div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Western Sydney</h3>
+								<p class="text-gray-700 mb-2">
+									Multiple facilities including Westmead Private Hospital, Norwest Private Hospital, and Liverpool Private Hospital serve Western Sydney residents.
+								</p>
+								<p class="text-sm text-gray-600">
+									<strong>Suburbs served:</strong> Parramatta, Liverpool, Campbelltown, Penrith, Blacktown, Castle Hill, Westmead, Mount Druitt, Fairfield, Bankstown
+								</p>
+							</div>
+
+							<div>
+								<h3 class="text-xl font-bold text-gray-900 mb-3">Southern Sydney</h3>
+								<p class="text-gray-700 mb-2">
+									St George Private Hospital (Kogarah), Hurstville Private Hospital, and Sydney Southwest Private Hospital offer comprehensive bariatric services.
+								</p>
+								<p class="text-sm text-gray-600">
+									<strong>Suburbs served:</strong> Kogarah, Hurstville, Miranda, Sutherland Shire, Cronulla, Rockdale, Brighton-Le-Sands, Sans Souci, Caringbah
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div>
+						<div class="bg-gray-100 rounded-xl p-8 h-full">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Major Hospital Locations</h3>
+							<div class="space-y-4">
+								<div class="bg-white rounded-lg p-4 shadow-sm">
+									<h4 class="font-bold text-gray-900">North Shore Private Hospital</h4>
+									<p class="text-sm text-gray-600">3 Westbourne Street, St Leonards NSW 2065</p>
+									<p class="text-xs text-gray-500 mt-1">Metro: St Leonards Station</p>
+								</div>
+								<div class="bg-white rounded-lg p-4 shadow-sm">
+									<h4 class="font-bold text-gray-900">Sydney Adventist Hospital</h4>
+									<p class="text-sm text-gray-600">185 Fox Valley Road, Wahroonga NSW 2076</p>
+									<p class="text-xs text-gray-500 mt-1">Ample parking available</p>
+								</div>
+								<div class="bg-white rounded-lg p-4 shadow-sm">
+									<h4 class="font-bold text-gray-900">Westmead Private Hospital</h4>
+									<p class="text-sm text-gray-600">16 Mons Road, Westmead NSW 2145</p>
+									<p class="text-xs text-gray-500 mt-1">Metro: Westmead Station</p>
+								</div>
+								<div class="bg-white rounded-lg p-4 shadow-sm">
+									<h4 class="font-bold text-gray-900">St George Private Hospital</h4>
+									<p class="text-sm text-gray-600">1 South Street, Kogarah NSW 2217</p>
+									<p class="text-xs text-gray-500 mt-1">Train: Kogarah Station (5 min walk)</p>
+								</div>
+								<div class="bg-white rounded-lg p-4 shadow-sm">
+									<h4 class="font-bold text-gray-900">Liverpool Private Hospital</h4>
+									<p class="text-sm text-gray-600">26-32 Copeland Street, Liverpool NSW 2170</p>
+									<p class="text-xs text-gray-500 mt-1">Train: Liverpool Station nearby</p>
+								</div>
+							</div>
+							<div class="mt-6 p-4 bg-blue-50 rounded-lg">
+								<p class="text-sm text-gray-700 flex items-start">
+									<svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+									</svg>
+									All facilities are accredited by the Australian Council on Healthcare Standards and equipped for laparoscopic bariatric surgery.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Patient Journey -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your Weight Loss Surgery Journey in Sydney</h2>
+					<p class="text-xl text-gray-600">From first consultation to long-term success</p>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<!-- Step 1 -->
+					<div class="bg-white rounded-xl p-8 shadow-sm">
+						<div class="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full font-bold text-xl mb-4">1</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Initial Consultation</h3>
+						<p class="text-gray-700 mb-4">
+							Meet with your bariatric surgeon at a Sydney location convenient to you. Discuss your weight loss goals, medical history, and which procedure suits your needs.
+						</p>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Comprehensive health assessment</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Procedure comparison and recommendations</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Cost breakdown and insurance discussion</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Q&A with your surgeon</span>
+							</li>
+						</ul>
+						<p class="text-sm text-gray-500 mt-4 italic">Duration: 45-60 minutes</p>
+					</div>
+
+					<!-- Step 2 -->
+					<div class="bg-white rounded-xl p-8 shadow-sm">
+						<div class="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full font-bold text-xl mb-4">2</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Pre-Surgery Preparation</h3>
+						<p class="text-gray-700 mb-4">
+							Complete required tests and attend pre-operative appointments. Many Sydney surgeons offer telehealth options for some appointments.
+						</p>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Blood tests and medical clearances</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Dietitian consultation (covered by Medicare)</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Pre-operative diet (typically 2 weeks)</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Hospital admission arrangements</span>
+							</li>
+						</ul>
+						<p class="text-sm text-gray-500 mt-4 italic">Timeline: 2-8 weeks</p>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="bg-white rounded-xl p-8 shadow-sm">
+						<div class="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full font-bold text-xl mb-4">3</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Surgery Day</h3>
+						<p class="text-gray-700 mb-4">
+							Your procedure is performed at a Sydney private hospital by your chosen bariatric surgeon using minimally invasive laparoscopic techniques.
+						</p>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Arrive at hospital 2 hours before surgery</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Surgery duration: 1-4 hours depending on procedure</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Hospital stay: 1-3 nights</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Pain management and monitoring</span>
+							</li>
+						</ul>
+						<p class="text-sm text-gray-500 mt-4 italic">Hospital stay: 1-3 nights</p>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="bg-white rounded-xl p-8 shadow-sm">
+						<div class="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full font-bold text-xl mb-4">4</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Early Recovery</h3>
+						<p class="text-gray-700 mb-4">
+							Return home with detailed post-operative instructions. Access Sydney-based support services including dietitians and support groups.
+						</p>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Follow liquid diet progression</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Attend post-op check at 1-2 weeks</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Light walking encouraged from day 1</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Return to work: 2-4 weeks</span>
+							</li>
+						</ul>
+						<p class="text-sm text-gray-500 mt-4 italic">Duration: 2-6 weeks</p>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="bg-white rounded-xl p-8 shadow-sm">
+						<div class="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-full font-bold text-xl mb-4">5</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Ongoing Support</h3>
+						<p class="text-gray-700 mb-4">
+							Regular follow-ups with your Sydney surgeon and support team. Join local support groups and access ongoing nutritional guidance.
+						</p>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Regular surgeon follow-ups (3, 6, 12 months)</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Ongoing dietitian support</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Sydney bariatric support group meetings</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Blood tests to monitor nutritional status</span>
+							</li>
+						</ul>
+						<p class="text-sm text-gray-500 mt-4 italic">Timeline: Lifelong</p>
+					</div>
+
+					<!-- Step 6 -->
+					<div class="bg-white rounded-xl p-8 shadow-sm">
+						<div class="flex items-center justify-center w-12 h-12 bg-green-100 text-green-600 rounded-full font-bold text-xl mb-4">✓</div>
+						<h3 class="text-xl font-bold text-gray-900 mb-3">Long-Term Success</h3>
+						<p class="text-gray-700 mb-4">
+							Achieve and maintain your weight loss goals with comprehensive support from Sydney's bariatric community.
+						</p>
+						<ul class="space-y-2 text-sm text-gray-600">
+							<li class="flex items-start">
+								<span class="text-green-600 mr-2">✓</span>
+								<span>60-80% excess weight loss achieved</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-green-600 mr-2">✓</span>
+								<span>Improved health conditions</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-green-600 mr-2">✓</span>
+								<span>Enhanced quality of life</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-green-600 mr-2">✓</span>
+								<span>Ongoing community support</span>
+							</li>
+						</ul>
+						<p class="text-sm text-gray-500 mt-4 italic">Goal: 12-18 months post-surgery</p>
+					</div>
+				</div>
+
+				<div class="mt-12 bg-blue-50 rounded-xl p-8 text-center">
+					<h3 class="text-2xl font-bold text-gray-900 mb-4">Sydney Support Resources</h3>
+					<div class="grid md:grid-cols-3 gap-6 text-left">
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2">Dietitians & Nutritionists</h4>
+							<p class="text-sm text-gray-700">Access Medicare-rebated dietitian appointments at locations across Sydney or via telehealth.</p>
+						</div>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2">Support Groups</h4>
+							<p class="text-sm text-gray-700">Join regular in-person and online support groups connecting Sydney bariatric patients.</p>
+						</div>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2">Exercise Physiologists</h4>
+							<p class="text-sm text-gray-700">Work with accredited exercise professionals familiar with post-bariatric surgery exercise protocols.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cost Section -->
+		<section id="cost" class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Cost of Weight Loss Surgery in Sydney</h2>
+					<p class="text-xl text-gray-600">Transparent pricing for all procedures</p>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-8 mb-12">
+					<div class="bg-gray-50 rounded-xl p-8">
+						<h3 class="text-2xl font-bold text-gray-900 mb-2">Gastric Sleeve</h3>
+						<div class="text-4xl font-bold text-blue-600 mb-4">$15,000 - $25,000</div>
+						<ul class="space-y-2 text-sm text-gray-700">
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Surgeon fees: $8,000 - $12,000</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Hospital fees: $5,000 - $9,000</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Anaesthetist fees: $2,000 - $4,000</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Medicare rebate: ~$1,500</span>
+							</li>
+						</ul>
+						<a href="/procedures/gastric-sleeve#cost" class="text-blue-600 hover:text-blue-700 font-semibold text-sm mt-4 inline-block">Learn more →</a>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-8">
+						<h3 class="text-2xl font-bold text-gray-900 mb-2">Gastric Bypass</h3>
+						<div class="text-4xl font-bold text-blue-600 mb-4">$18,000 - $30,000</div>
+						<ul class="space-y-2 text-sm text-gray-700">
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Surgeon fees: $10,000 - $15,000</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Hospital fees: $6,000 - $11,000</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Anaesthetist fees: $2,000 - $4,000</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Medicare rebate: ~$2,000</span>
+							</li>
+						</ul>
+						<a href="/procedures/gastric-bypass#cost" class="text-blue-600 hover:text-blue-700 font-semibold text-sm mt-4 inline-block">Learn more →</a>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-8">
+						<h3 class="text-2xl font-bold text-gray-900 mb-2">Gastric Band</h3>
+						<div class="text-4xl font-bold text-blue-600 mb-4">$12,000 - $20,000</div>
+						<ul class="space-y-2 text-sm text-gray-700">
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Surgeon fees: $6,000 - $10,000</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Hospital fees: $4,000 - $7,000</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Anaesthetist fees: $2,000 - $3,000</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-blue-600 mr-2">•</span>
+								<span>Medicare rebate: ~$1,200</span>
+							</li>
+						</ul>
+						<a href="/procedures/gastric-band#cost" class="text-blue-600 hover:text-blue-700 font-semibold text-sm mt-4 inline-block">Learn more →</a>
+					</div>
+				</div>
+
+				<div class="bg-blue-50 rounded-xl p-8 mb-8">
+					<h3 class="text-2xl font-bold text-gray-900 mb-4">Factors Affecting Sydney Surgery Costs</h3>
+					<div class="grid md:grid-cols-2 gap-6">
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2 flex items-center">
+								<svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+									<path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+								</svg>
+								Hospital Location
+							</h4>
+							<p class="text-gray-700 text-sm">Premium hospitals in North Sydney and Eastern Suburbs may charge higher facility fees than Western Sydney locations. All facilities maintain the same high standards.</p>
+						</div>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2 flex items-center">
+								<svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+								</svg>
+								Surgeon Experience
+							</h4>
+							<p class="text-gray-700 text-sm">Highly experienced surgeons with specialised fellowship training may charge higher fees. However, experience often correlates with better outcomes and fewer complications.</p>
+						</div>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2 flex items-center">
+								<svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+								</svg>
+								Insurance Coverage
+							</h4>
+							<p class="text-gray-700 text-sm">Gold-level private health insurance can reduce out-of-pocket costs to $5,000-$15,000. Your surgeon's gap fees and chosen hospital affect final costs.</p>
+						</div>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2 flex items-center">
+								<svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								Complexity
+							</h4>
+							<p class="text-gray-700 text-sm">Higher BMI, previous abdominal surgeries, or complex medical conditions may increase surgical time and costs. Your surgeon will provide a personalised quote.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="text-center">
+					<a href="#calculator" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
+						Calculate Your Sydney Surgery Cost
+					</a>
+					<p class="text-sm text-gray-600 mt-4">Get a personalised cost estimate in under 60 seconds</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Insurance & Medicare -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Insurance & Medicare Coverage in NSW</h2>
+					<p class="text-xl text-gray-600">Understanding your coverage options</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-8 mb-12">
+					<div class="bg-white rounded-xl p-8 shadow-sm">
+						<h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+							<svg class="w-8 h-8 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
+							</svg>
+							Medicare Rebates
+						</h3>
+						<p class="text-gray-700 mb-4">
+							Medicare provides rebates for eligible weight loss surgery patients in Australia. If you meet the eligibility criteria, you can claim:
+						</p>
+						<ul class="space-y-3 mb-6">
+							<li class="flex items-start">
+								<span class="text-green-600 mr-2">✓</span>
+								<div>
+									<strong class="text-gray-900">Surgeon fees:</strong>
+									<span class="text-gray-700"> Medicare rebate of approximately $1,500-$2,000</span>
+								</div>
+							</li>
+							<li class="flex items-start">
+								<span class="text-green-600 mr-2">✓</span>
+								<div>
+									<strong class="text-gray-900">Anaesthetist fees:</strong>
+									<span class="text-gray-700"> Medicare rebate of approximately $300-$600</span>
+								</div>
+							</li>
+							<li class="flex items-start">
+								<span class="text-green-600 mr-2">✓</span>
+								<div>
+									<strong class="text-gray-900">Pre-op dietitian:</strong>
+									<span class="text-gray-700"> Medicare covers 5-10 allied health visits per year with chronic disease management plan</span>
+								</div>
+							</li>
+						</ul>
+						<div class="bg-green-50 border-l-4 border-green-500 p-4">
+							<h4 class="font-bold text-gray-900 mb-2">Medicare Eligibility</h4>
+							<ul class="space-y-1 text-sm text-gray-700">
+								<li>• BMI over 40, OR</li>
+								<li>• BMI over 35 with obesity-related conditions (diabetes, sleep apnoea, hypertension)</li>
+								<li>• Failed previous weight loss attempts</li>
+								<li>• GP referral to specialist surgeon</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl p-8 shadow-sm">
+						<h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+							<svg class="w-8 h-8 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+								<path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"/>
+								<path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"/>
+							</svg>
+							Private Health Insurance
+						</h3>
+						<p class="text-gray-700 mb-4">
+							Private health insurance significantly reduces your out-of-pocket costs for weight loss surgery in Sydney. Top hospital cover is required.
+						</p>
+
+						<div class="space-y-4 mb-6">
+							<div>
+								<h4 class="font-bold text-gray-900 mb-2">Popular Sydney Insurers</h4>
+								<ul class="space-y-2 text-sm">
+									<li class="flex items-center">
+										<span class="text-blue-600 mr-2">•</span>
+										<strong class="mr-2">Bupa:</strong>
+										<span class="text-gray-700">Large network of participating Sydney surgeons</span>
+									</li>
+									<li class="flex items-center">
+										<span class="text-blue-600 mr-2">•</span>
+										<strong class="mr-2">HCF:</strong>
+										<span class="text-gray-700">Good coverage at major Sydney hospitals</span>
+									</li>
+									<li class="flex items-center">
+										<span class="text-blue-600 mr-2">•</span>
+										<strong class="mr-2">Medibank:</strong>
+										<span class="text-gray-700">Comprehensive bariatric surgery coverage</span>
+									</li>
+									<li class="flex items-center">
+										<span class="text-blue-600 mr-2">•</span>
+										<strong class="mr-2">NIB:</strong>
+										<span class="text-gray-700">Competitive premiums with good hospital network</span>
+									</li>
+								</ul>
+							</div>
+
+							<div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+								<h4 class="font-bold text-gray-900 mb-2">Insurance Coverage Details</h4>
+								<ul class="space-y-1 text-sm text-gray-700">
+									<li>• Requires Gold/Top hospital cover</li>
+									<li>• 12-month waiting period for new policies</li>
+									<li>• Covers hospital accommodation and theatre fees</li>
+									<li>• Gap payments vary by surgeon ($5,000-$15,000)</li>
+									<li>• Some insurers cover complications and revisions</li>
+								</ul>
+							</div>
+						</div>
+
+						<a href="https://www.privatehealth.gov.au/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 font-semibold text-sm">
+							Compare policies on privatehealth.gov.au →
+						</a>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-xl p-8 shadow-sm">
+					<h3 class="text-2xl font-bold text-gray-900 mb-4">Payment Plans Available in Sydney</h3>
+					<p class="text-gray-700 mb-6">
+						Many Sydney bariatric surgeons and clinics offer flexible payment options to make weight loss surgery more accessible:
+					</p>
+					<div class="grid md:grid-cols-3 gap-6">
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2">Medical Payment Plans</h4>
+							<p class="text-sm text-gray-700">Finance options like Mac Credit, Zip Money, or in-house payment plans allow you to spread costs over 12-60 months with interest.</p>
+						</div>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2">SuperCare</h4>
+							<p class="text-sm text-gray-700">Early release of superannuation for bariatric surgery may be possible on medical grounds. Requires specialist approval.</p>
+						</div>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2">Package Pricing</h4>
+							<p class="text-sm text-gray-700">Many Sydney surgeons offer all-inclusive packages covering surgeon, hospital, anaesthetist, and follow-up appointments.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Testimonials -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sydney Patient Success Stories</h2>
+					<p class="text-xl text-gray-600">Real results from patients across Sydney</p>
+				</div>
+
+				<div class="grid md:grid-cols-3 gap-8">
+					<div class="bg-gray-50 rounded-xl p-8">
+						<div class="flex items-center mb-4">
+							<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl mr-4">S</div>
+							<div>
+								<h4 class="font-bold text-gray-900">Sarah M.</h4>
+								<p class="text-sm text-gray-600">Parramatta, NSW</p>
+							</div>
+						</div>
+						<div class="mb-4">
+							<span class="text-sm font-semibold text-blue-600">Gastric Sleeve • Lost 45kg</span>
+						</div>
+						<p class="text-gray-700 italic mb-4">
+							"Having my surgery at Westmead Private Hospital was the best decision I ever made. My surgeon was incredibly experienced and the staff were so caring. I'm now 18 months post-op and have lost 45kg. I can finally play with my kids at the park without getting exhausted."
+						</p>
+						<div class="flex items-center text-sm text-gray-600">
+							<svg class="w-4 h-4 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							Type 2 diabetes in remission
+						</div>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-8">
+						<div class="flex items-center mb-4">
+							<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl mr-4">J</div>
+							<div>
+								<h4 class="font-bold text-gray-900">James T.</h4>
+								<p class="text-sm text-gray-600">Bondi Junction, NSW</p>
+							</div>
+						</div>
+						<div class="mb-4">
+							<span class="text-sm font-semibold text-blue-600">Gastric Bypass • Lost 62kg</span>
+						</div>
+						<p class="text-gray-700 italic mb-4">
+							"I chose gastric bypass because of my diabetes. The Mater Hospital team was fantastic from consultation through to recovery. My diabetes is now completely resolved and I've lost over 60kg. The support groups in Sydney have been invaluable for staying on track."
+						</p>
+						<div class="flex items-center text-sm text-gray-600">
+							<svg class="w-4 h-4 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							No longer needs sleep apnoea machine
+						</div>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-8">
+						<div class="flex items-center mb-4">
+							<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl mr-4">M</div>
+							<div>
+								<h4 class="font-bold text-gray-900">Michelle K.</h4>
+								<p class="text-sm text-gray-600">Miranda, NSW</p>
+							</div>
+						</div>
+						<div class="mb-4">
+							<span class="text-sm font-semibold text-blue-600">Gastric Sleeve • Lost 38kg</span>
+						</div>
+						<p class="text-gray-700 italic mb-4">
+							"I was nervous about surgery but my surgeon at St George Private Hospital explained everything so well. The recovery was easier than I expected. I'm 10 months post-op, down 38kg, and my blood pressure is back to normal. Best investment in my health I've ever made."
+						</p>
+						<div class="flex items-center text-sm text-gray-600">
+							<svg class="w-4 h-4 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							Blood pressure normalised
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-12 bg-blue-50 rounded-xl p-8 text-center">
+					<h3 class="text-2xl font-bold text-gray-900 mb-4">Join Thousands of Successful Sydney Patients</h3>
+					<p class="text-gray-700 mb-6">Take the first step towards a healthier future with support from Sydney's top bariatric surgeons</p>
+					<a href="#consultation" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
+						Book Your Free Consultation
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Travel & Accessibility -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Getting to Sydney Bariatric Hospitals</h2>
+					<p class="text-xl text-gray-600">Travel and accessibility information</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-8">
+					<div class="bg-white rounded-xl p-8 shadow-sm">
+						<h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+							<svg class="w-6 h-6 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+							</svg>
+							Public Transport
+						</h3>
+						<div class="space-y-4">
+							<div>
+								<h4 class="font-bold text-gray-900 mb-2">Train Access</h4>
+								<ul class="space-y-2 text-sm text-gray-700">
+									<li><strong>North Shore Private:</strong> St Leonards Station (5 min walk)</li>
+									<li><strong>Westmead Private:</strong> Westmead Metro Station (adjacent)</li>
+									<li><strong>St George Private:</strong> Kogarah Station (5 min walk)</li>
+									<li><strong>Liverpool Private:</strong> Liverpool Station (10 min walk)</li>
+								</ul>
+							</div>
+							<div>
+								<h4 class="font-bold text-gray-900 mb-2">Bus Services</h4>
+								<p class="text-sm text-gray-700">Most major Sydney hospitals are serviced by multiple bus routes. Check <a href="https://transportnsw.info" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700">transportnsw.info</a> for specific routes.</p>
+							</div>
+							<div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+								<p class="text-sm text-gray-700">
+									<strong>Tip:</strong> Use an Opal card for easy travel to your appointments. Seniors and pensioners receive concession fares.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-white rounded-xl p-8 shadow-sm">
+						<h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+							<svg class="w-6 h-6 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+								<path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+								<path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"/>
+							</svg>
+							Driving & Parking
+						</h3>
+						<div class="space-y-4">
+							<div>
+								<h4 class="font-bold text-gray-900 mb-2">Major Routes</h4>
+								<ul class="space-y-2 text-sm text-gray-700">
+									<li><strong>From M2/M7:</strong> Easy access to Westmead and Norwest hospitals</li>
+									<li><strong>From Eastern Distributor:</strong> Quick access to North Sydney hospitals</li>
+									<li><strong>From M5:</strong> Direct to Liverpool and Southern Sydney hospitals</li>
+									<li><strong>Pacific Highway:</strong> North Shore and Northern Beaches access</li>
+								</ul>
+							</div>
+							<div>
+								<h4 class="font-bold text-gray-900 mb-2">Parking</h4>
+								<p class="text-sm text-gray-700 mb-2">All major private hospitals offer:</p>
+								<ul class="space-y-1 text-sm text-gray-700">
+									<li>• Multi-storey car parks</li>
+									<li>• Disabled parking bays near entrances</li>
+									<li>• Patient drop-off zones</li>
+									<li>• Daily parking rates: $15-$30</li>
+								</ul>
+							</div>
+							<div class="bg-orange-50 border-l-4 border-orange-500 p-4">
+								<p class="text-sm text-gray-700">
+									<strong>Post-Surgery Note:</strong> You cannot drive for 24-48 hours after surgery. Arrange for someone to drive you home.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-8 bg-white rounded-xl p-8 shadow-sm">
+					<h3 class="text-2xl font-bold text-gray-900 mb-4">Accommodation for Regional Patients</h3>
+					<p class="text-gray-700 mb-4">
+						If you're travelling from regional NSW or interstate for surgery in Sydney, consider staying nearby for 3-7 days post-surgery:
+					</p>
+					<div class="grid md:grid-cols-3 gap-6">
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2">Hotels Near Hospitals</h4>
+							<p class="text-sm text-gray-700">Most major hospitals have hotels within walking distance, offering patient rates for recovery accommodation.</p>
+						</div>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2">Serviced Apartments</h4>
+							<p class="text-sm text-gray-700">Weekly rates available for serviced apartments with kitchen facilities near all major hospital hubs.</p>
+						</div>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-2">Ronald McDonald House</h4>
+							<p class="text-sm text-gray-700">Low-cost accommodation may be available for patients travelling long distances. Enquire through your hospital.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQ Section -->
+		<section class="py-16 bg-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+					<p class="text-xl text-gray-600">Sydney-specific weight loss surgery questions</p>
+				</div>
+
+				<div class="space-y-6">
+					<div class="bg-gray-50 rounded-xl p-6">
+						<h3 class="text-lg font-bold text-gray-900 mb-3">How much does weight loss surgery cost in Sydney?</h3>
+						<p class="text-gray-700">
+							Weight loss surgery in Sydney typically costs $15,000-$30,000 depending on the procedure. Gastric sleeve ranges from $15,000-$25,000, gastric bypass from $18,000-$30,000, and gastric band from $12,000-$20,000. Costs vary by surgeon, hospital, and whether you have private health insurance. Medicare rebates of up to $2,000 are available for eligible patients. With top-level private health insurance, out-of-pocket costs can be reduced to $5,000-$15,000.
+						</p>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-6">
+						<h3 class="text-lg font-bold text-gray-900 mb-3">What is the average wait time for weight loss surgery in Sydney?</h3>
+						<p class="text-gray-700">
+							In Sydney's private system, the average wait time is 4-8 weeks from consultation to surgery, depending on surgeon availability and insurance waiting periods (typically 12 months for new policies). Public hospital wait times through NSW Health can be 12-24 months or longer. Most patients choose private surgery for faster access. If you have existing health insurance with bariatric coverage, you can often schedule surgery within 6-8 weeks of your initial consultation.
+						</p>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-6">
+						<h3 class="text-lg font-bold text-gray-900 mb-3">Which Sydney hospitals perform weight loss surgery?</h3>
+						<p class="text-gray-700 mb-3">
+							Major Sydney hospitals offering bariatric surgery include:
+						</p>
+						<ul class="space-y-1 text-gray-700 ml-6">
+							<li>• North Shore Private Hospital (St Leonards)</li>
+							<li>• Sydney Adventist Hospital (Wahroonga)</li>
+							<li>• St George Private Hospital (Kogarah)</li>
+							<li>• Liverpool Private Hospital</li>
+							<li>• Westmead Private Hospital</li>
+							<li>• Norwest Private Hospital</li>
+							<li>• Sydney Southwest Private Hospital (Liverpool)</li>
+							<li>• The Mater Hospital (North Sydney)</li>
+							<li>• Strathfield Private Hospital</li>
+							<li>• Hurstville Private Hospital</li>
+						</ul>
+						<p class="text-gray-700 mt-3">
+							All facilities meet Australian safety standards and are equipped for laparoscopic bariatric procedures.
+						</p>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-6">
+						<h3 class="text-lg font-bold text-gray-900 mb-3">Do Sydney bariatric surgeons bulk bill consultations?</h3>
+						<p class="text-gray-700">
+							Most Sydney bariatric surgeons do not bulk bill initial consultations. Consultation fees typically range from $150-$350, though Medicare rebates of $80-$150 may apply if you have a GP referral. Some surgeons offer free or reduced-cost initial consultations as part of comprehensive surgical packages. Always ask about consultation fees when booking. If cost is a barrier, some surgeons offer payment plans or sliding scale fees.
+						</p>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-6">
+						<h3 class="text-lg font-bold text-gray-900 mb-3">Which private health insurance is best for weight loss surgery in Sydney?</h3>
+						<p class="text-gray-700">
+							For weight loss surgery in Sydney, top-level hospital cover is required from providers like Bupa, Medibank, HCF, NIB, or Australian Unity. Gold or Top hospital policies typically cover bariatric surgery after a 12-month waiting period. HCF and Bupa have the largest networks of participating Sydney surgeons. Compare policies for excess fees, gap payments, and whether they cover complications or revisions. Out-of-pocket costs with insurance typically range from $5,000-$15,000 depending on your surgeon's gap fees.
+						</p>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-6">
+						<h3 class="text-lg font-bold text-gray-900 mb-3">Can I travel from regional NSW to Sydney for weight loss surgery?</h3>
+						<p class="text-gray-700">
+							Yes, many regional NSW patients travel to Sydney for weight loss surgery due to the larger number of experienced surgeons and facilities. You'll typically need to stay in Sydney for 3-7 days post-surgery before returning home. Plan for pre-operative appointments (can sometimes be done via telehealth), surgery day, 1-2 nights hospital stay, and follow-up appointments. Many Sydney surgeons offer telehealth follow-ups for regional patients. Consider accommodation near your hospital and have a support person available for travel home.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Surgeon Directory CTA -->
+		<section class="py-16 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">Find Your Sydney Bariatric Surgeon</h2>
+				<p class="text-xl text-blue-100 mb-8">
+					Connect with experienced, AHPRA-registered bariatric surgeons across Sydney. Compare qualifications, read patient reviews, and book consultations at locations convenient to you.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+					<a href="#consultation" class="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg font-semibold">
+						Book Free Consultation
+					</a>
+					<a href="/procedures" class="bg-blue-800 text-white px-8 py-4 rounded-lg hover:bg-blue-900 transition text-lg font-semibold">
+						Compare Procedures
+					</a>
+				</div>
+				<p class="text-sm text-blue-200">
+					<svg class="w-4 h-4 inline mr-1" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+					</svg>
+					Your information is confidential and secure
+				</p>
+			</div>
+		</section>
+
+		<!-- Final CTA with Form -->
+		<section id="consultation" class="py-16 bg-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Take the First Step Today</h2>
+					<p class="text-xl text-gray-600">Book a free consultation with a trusted Sydney bariatric surgeon</p>
+				</div>
+
+				<div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 md:p-12">
+					<div class="grid md:grid-cols-2 gap-8 mb-8">
+						<div>
+							<h3 class="text-2xl font-bold text-gray-900 mb-4">What to Expect</h3>
+							<ul class="space-y-3 text-gray-700">
+								<li class="flex items-start">
+									<svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span>Connect with experienced Sydney surgeons within 24 hours</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span>Personalised procedure recommendations based on your health goals</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span>Transparent cost breakdown including Medicare and insurance</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span>No obligation - just expert advice from AHPRA-registered surgeons</span>
+								</li>
+							</ul>
+						</div>
+
+						<div>
+							<div class="bg-white rounded-xl p-6 shadow-lg">
+								<h3 class="text-xl font-bold text-gray-900 mb-4">Request Your Free Consultation</h3>
+								<form class="space-y-4">
+									<div>
+										<label class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+										<input type="text" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="Your name">
+									</div>
+									<div>
+										<label class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+										<input type="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="your@email.com">
+									</div>
+									<div>
+										<label class="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
+										<input type="tel" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="04XX XXX XXX">
+									</div>
+									<div>
+										<label class="block text-sm font-medium text-gray-700 mb-1">Suburb</label>
+										<input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent" placeholder="e.g., Parramatta">
+									</div>
+									<div>
+										<label class="block text-sm font-medium text-gray-700 mb-1">Procedure Interest</label>
+										<select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+											<option>Not sure yet</option>
+											<option>Gastric Sleeve</option>
+											<option>Gastric Bypass</option>
+											<option>Gastric Band</option>
+											<option>Gastric Balloon</option>
+											<option>Duodenal Switch</option>
+										</select>
+									</div>
+									<button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+										Book Free Consultation
+									</button>
+									<p class="text-xs text-gray-500 text-center">
+										By submitting, you agree to be contacted by qualified bariatric surgeons in Sydney. Your information is kept confidential.
+									</p>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="text-center">
+						<p class="text-gray-600 mb-4">Or call us directly:</p>
+						<a href="tel:1300000000" class="text-3xl font-bold text-blue-600 hover:text-blue-700">1300 000 000</a>
+						<p class="text-sm text-gray-500 mt-2">Monday - Friday: 8am - 6pm AEDT</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Medical Disclaimer -->
+		<section class="py-8 bg-gray-100">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center text-sm text-gray-600">
+					<p class="font-semibold text-gray-900 mb-2">Medical Disclaimer</p>
+					<p class="mb-2">
+						This content is for educational purposes only and is not medical advice. Individual results may vary. Weight loss surgery carries risks and benefits which should be discussed with qualified healthcare professionals.
+					</p>
+					<p>
+						All procedures should be performed by <a href="https://www.ahpra.gov.au/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700">AHPRA-registered surgeons</a>. For more information about bariatric surgery, visit the <a href="https://www.aihw.gov.au/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700">Australian Institute of Health and Welfare</a>.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white py-12">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid md:grid-cols-4 gap-8 mb-8">
+					<div>
+						<h3 class="font-bold text-lg mb-4">Procedures</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="/procedures/gastric-sleeve" class="hover:text-white">Gastric Sleeve</a></li>
+							<li><a href="/procedures/gastric-bypass" class="hover:text-white">Gastric Bypass</a></li>
+							<li><a href="/procedures/gastric-band" class="hover:text-white">Gastric Band</a></li>
+							<li><a href="/procedures/gastric-balloon" class="hover:text-white">Gastric Balloon</a></li>
+							<li><a href="/procedures/duodenal-switch" class="hover:text-white">Duodenal Switch</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-lg mb-4">Sydney Areas</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="#northern-sydney" class="hover:text-white">Northern Sydney</a></li>
+							<li><a href="#eastern-suburbs" class="hover:text-white">Eastern Suburbs</a></li>
+							<li><a href="#western-sydney" class="hover:text-white">Western Sydney</a></li>
+							<li><a href="#southern-sydney" class="hover:text-white">Southern Sydney</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-lg mb-4">Resources</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="#cost" class="hover:text-white">Cost Calculator</a></li>
+							<li><a href="/procedures" class="hover:text-white">Compare Procedures</a></li>
+							<li><a href="/#faq" class="hover:text-white">FAQ</a></li>
+							<li><a href="/#about" class="hover:text-white">About Us</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-lg mb-4">Contact</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li>Phone: 1300 000 000</li>
+							<li>Email: info@wlsaustralia.com.au</li>
+							<li class="pt-4">
+								<a href="#consultation" class="text-blue-400 hover:text-blue-300">Book Consultation</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8">
+					<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+						<p>&copy; 2025 Weight Loss Surgery Australia. All rights reserved.</p>
+						<div class="flex space-x-6 mt-4 md:mt-0">
+							<a href="#privacy" class="hover:text-white">Privacy Policy</a>
+							<a href="#terms" class="hover:text-white">Terms of Service</a>
+							<a href="#disclaimer" class="hover:text-white">Medical Disclaimer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
