@@ -353,9 +353,25 @@ const meta = seoMeta.procedures;
 						<a href="/" class="text-xl font-bold text-blue-600">Weight Loss Surgery Australia</a>
 					</div>
 					<nav class="hidden md:flex space-x-8">
-						<a href="/procedures" class="text-blue-600 font-semibold">Procedures</a>
-						<a href="#costs" class="text-gray-700 hover:text-blue-600">Costs</a>
-						<a href="#locations" class="text-gray-700 hover:text-blue-600">Locations</a>
+						<div class="relative group">
+							<button class="text-blue-600 font-semibold flex items-center">
+								Procedures
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+								</svg>
+							</button>
+							<div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+								<div class="py-2">
+									<a href="/procedures/gastric-sleeve" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Sleeve</a>
+									<a href="/procedures/gastric-bypass" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Bypass</a>
+									<a href="/procedures/gastric-band" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Band</a>
+									<div class="border-t border-gray-200 my-2"></div>
+									<a href="/procedures" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Procedures</a>
+								</div>
+							</div>
+						</div>
+						<a href="/#costs" class="text-gray-700 hover:text-blue-600">Costs</a>
+						<a href="/#locations" class="text-gray-700 hover:text-blue-600">Locations</a>
 						<a href="/#faq" class="text-gray-700 hover:text-blue-600">FAQ</a>
 					</nav>
 					<div class="flex items-center space-x-4">
@@ -536,10 +552,10 @@ const meta = seoMeta.procedures;
 									<span class="text-orange-600 mr-2">•</span>
 									<span class="text-gray-700">Permanent and irreversible procedure</span>
 								</li>
-								<li class="flex items-start">
-									<span class="text-orange-600 mr-2">•</span>
-									<span class="text-gray-700">Risk of leakage at staple line (rare, <1%)</span>
-								</li>
+							<li class="flex items-start">
+								<span class="text-orange-600 mr-2">•</span>
+								<span class="text-gray-700">Risk of leakage at staple line (rare, &lt;1%)</span>
+							</li>
 								<li class="flex items-start">
 									<span class="text-orange-600 mr-2">•</span>
 									<span class="text-gray-700">Possible vitamin and mineral deficiencies</span>
@@ -772,7 +788,7 @@ const meta = seoMeta.procedures;
 							<li class="text-gray-700"><strong>Surgery:</strong> 1 hour</li>
 							<li class="text-gray-700"><strong>Cost:</strong> $12,000 - $20,000</li>
 						</ul>
-						<a href="#gastric-band-page" class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center">
+						<a href="/procedures/gastric-band" class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center">
 							Learn More
 							<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
