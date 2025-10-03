@@ -1,0 +1,1333 @@
+---
+import '../../styles/global.css';
+import { seoMeta } from '../../data/seo-meta';
+
+const meta = seoMeta.gastricBalloon;
+const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-balloon";
+---
+
+<html lang="en-AU">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<!-- SEO Meta Tags -->
+		<title>{meta.title}</title>
+		<meta name="description" content={meta.description} />
+		<meta name="keywords" content={meta.keywords?.join(', ')} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content={pageUrl} />
+		<meta property="og:title" content={meta.title} />
+		<meta property="og:description" content={meta.description} />
+		<meta property="og:locale" content="en_AU" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={pageUrl} />
+		<meta property="twitter:title" content={meta.title} />
+		<meta property="twitter:description" content={meta.description} />
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href={pageUrl} />
+
+		<!-- Medical Procedure Schema -->
+		<script type="application/ld+json" is:inline>
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "MedicalWebPage",
+					"@id": "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-balloon#webpage",
+					"url": "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-balloon",
+					"name": "Gastric Balloon Australia - Complete Guide",
+					"description": "Comprehensive guide to gastric balloon in Australia including costs, recovery, eligibility and finding qualified specialists.",
+					"inLanguage": "en-AU",
+					"datePublished": "2025-01-03",
+					"dateModified": "2025-01-03",
+					"specialty": {
+						"@type": "MedicalSpecialty",
+						"name": "Bariatric Medicine"
+					}
+				},
+				{
+					"@type": "MedicalProcedure",
+					"name": "Gastric Balloon",
+					"alternateName": ["Intragastric Balloon", "Stomach Balloon", "Weight Loss Balloon", "Endoscopic Balloon"],
+					"description": "Gastric balloon is a non-surgical, temporary weight loss procedure where a soft silicone balloon is placed in the stomach for 6-12 months to promote portion control and weight loss.",
+					"procedureType": "Non-Surgical Endoscopic",
+					"bodyLocation": {
+						"@type": "BodyStructure",
+						"name": "Stomach"
+					},
+					"expectedPrognosis": "10-15% total body weight loss over 6-12 months"
+				},
+				{
+					"@type": "FAQPage",
+					"mainEntity": [
+						{
+							"@type": "Question",
+							"name": "How much does gastric balloon cost in Australia?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Gastric balloon in Australia typically costs between $8,000 and $12,000. This is significantly less than surgical options because it's a non-surgical procedure performed endoscopically. Most private health insurance funds do not cover gastric balloon as it's considered non-essential. The cost usually includes the balloon device, insertion procedure, removal procedure, and follow-up appointments."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Is gastric balloon safe?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Gastric balloon is generally safe when performed by experienced gastroenterologists. As a non-surgical procedure, it carries lower risks than surgical weight loss options. Common side effects include nausea, vomiting, and stomach discomfort for the first 3-7 days. Serious complications such as balloon deflation, gastric obstruction, or ulceration are rare (less than 1%). The procedure is temporary and fully reversible."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "How long does gastric balloon stay in?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Gastric balloons remain in place for 6-12 months depending on the type. Most modern balloons are designed for 6-month placement, though some newer models can stay for up to 12 months. The balloon must be removed at the end of this period through an endoscopic procedure. Extended placement beyond the recommended timeframe increases risks of balloon deflation and complications."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "How much weight will I lose with gastric balloon?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Most gastric balloon patients lose 10-15% of their total body weight over the 6-12 month placement period. For example, someone weighing 100kg may lose 10-15kg. Weight loss is typically greatest in the first 3 months. Results depend heavily on adherence to diet and lifestyle changes during and after balloon placement. The balloon is a tool to help establish healthy eating habits."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "What happens after gastric balloon is removed?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "After gastric balloon removal, your stomach returns to its normal size within days. Many patients experience weight regain if they don't maintain the healthy habits established during balloon placement. Studies show patients who commit to lifestyle changes maintain 50-70% of their weight loss long-term. Continued dietary modifications, exercise, and behavioral support are essential for maintaining results after removal."
+							}
+						},
+						{
+							"@type": "Question",
+							"name": "Who is gastric balloon suitable for?",
+							"acceptedAnswer": {
+								"@type": "Answer",
+								"text": "Gastric balloon is suitable for people with BMI 27-40 who want a non-surgical option or need to lose weight before surgery. It's ideal for those not ready for permanent surgery, people with lower BMI not eligible for surgery, or as a pre-surgery weight loss tool. It's not suitable for those with certain stomach conditions, previous gastric surgery, or those seeking permanent weight loss solutions."
+							}
+						}
+					]
+				},
+				{
+					"@type": "BreadcrumbList",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"position": 1,
+							"name": "Home",
+							"item": "https://weight-loss-surgery-australia.vercel.app"
+						},
+						{
+							"@type": "ListItem",
+							"position": 2,
+							"name": "Procedures",
+							"item": "https://weight-loss-surgery-australia.vercel.app/procedures"
+						},
+						{
+							"@type": "ListItem",
+							"position": 3,
+							"name": "Gastric Balloon",
+							"item": "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-balloon"
+						}
+					]
+				}
+			]
+		}
+		</script>
+	</head>
+
+	<body class="antialiased">
+		<!-- Header -->
+		<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex justify-between items-center py-4">
+					<div class="flex items-center">
+						<a href="/" class="text-xl font-bold text-blue-600">Weight Loss Surgery Australia</a>
+					</div>
+					<nav class="hidden md:flex space-x-8">
+						<div class="relative group">
+							<button class="text-blue-600 font-semibold flex items-center">
+								Procedures
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+								</svg>
+							</button>
+							<div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+								<div class="py-2">
+									<a href="/procedures/gastric-sleeve" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Sleeve</a>
+									<a href="/procedures/gastric-bypass" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Bypass</a>
+									<a href="/procedures/gastric-band" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Band</a>
+									<a href="/procedures/gastric-balloon" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Balloon</a>
+									<div class="border-t border-gray-200 my-2"></div>
+									<a href="/procedures" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Procedures</a>
+								</div>
+							</div>
+						</div>
+						<a href="/#costs" class="text-gray-700 hover:text-blue-600">Costs</a>
+						<a href="/#locations" class="text-gray-700 hover:text-blue-600">Locations</a>
+						<a href="/#faq" class="text-gray-700 hover:text-blue-600">FAQ</a>
+					</nav>
+					<div class="flex items-center space-x-4">
+						<a href="tel:1300000000" class="hidden sm:block text-blue-600 font-semibold">1300 000 000</a>
+						<a href="#consultation" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Free Consultation</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Breadcrumbs -->
+		<div class="bg-gray-50 border-b border-gray-200">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+				<div class="flex items-center space-x-2 text-sm">
+					<a href="/" class="text-gray-600 hover:text-blue-600">Home</a>
+					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+					</svg>
+					<a href="/procedures" class="text-gray-600 hover:text-blue-600">Procedures</a>
+					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+					</svg>
+					<span class="text-gray-900 font-medium">Gastric Balloon</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Hero Section -->
+		<section class="bg-gradient-to-br from-teal-50 to-white py-12 md:py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl">
+					<div class="inline-block px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm font-semibold mb-4">
+						Non-Surgical Weight Loss Option
+					</div>
+					<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+						Gastric Balloon in Australia
+					</h1>
+					<p class="text-xl text-gray-600 mb-8">
+						Gastric balloon is a temporary, non-surgical weight loss procedure that helps you lose 10-15% of your body weight over 6-12 months. Find qualified specialists, transparent pricing, and comprehensive guidance across Australia.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 mb-8">
+						<a href="#consultation" class="bg-teal-600 text-white px-8 py-4 rounded-lg hover:bg-teal-700 transition text-center text-lg font-semibold">
+							Book Free Consultation
+						</a>
+						<a href="#cost" class="bg-white text-teal-600 border-2 border-teal-600 px-8 py-4 rounded-lg hover:bg-teal-50 transition text-center text-lg font-semibold">
+							Calculate Your Cost
+						</a>
+					</div>
+					<div class="flex flex-wrap items-center gap-6 text-sm text-gray-600">
+						<div class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							Qualified Specialists
+						</div>
+						<div class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							No Surgery Required
+						</div>
+						<div class="flex items-center">
+							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							Temporary & Reversible
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- What is Gastric Balloon -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid md:grid-cols-2 gap-12">
+					<div>
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">What is Gastric Balloon?</h2>
+						<p class="text-lg text-gray-700 mb-4">
+							Gastric balloon, also known as an intragastric balloon, is a non-surgical weight loss procedure that involves placing a soft silicone balloon inside your stomach through an endoscopic procedure (no incisions required).
+						</p>
+						<p class="text-lg text-gray-700 mb-4">
+							Once in place, the balloon is filled with saline solution, taking up space in your stomach. This creates a feeling of fullness, helping you eat smaller portions and lose weight. The balloon remains in place for 6-12 months, then is removed using the same endoscopic technique.
+						</p>
+						<p class="text-lg text-gray-700 mb-6">
+							Unlike surgical weight loss procedures, gastric balloon is temporary and completely reversible. It's designed to help you establish healthier eating habits and kickstart weight loss, particularly for those not ready for or eligible for surgery.
+						</p>
+
+						<div class="bg-teal-50 border-l-4 border-teal-500 p-6 mb-6">
+							<h3 class="font-bold text-gray-900 mb-2">Expected Weight Loss Results</h3>
+							<p class="text-gray-700 mb-2">
+								Most gastric balloon patients lose <strong>10-15% of their total body weight</strong> over the 6-12 month placement period.
+							</p>
+							<p class="text-sm text-gray-600 italic">
+								Individual results vary based on adherence to diet and lifestyle changes during and after balloon placement. The balloon is a temporary tool to help establish lasting healthy habits. Long-term success requires maintaining these changes after balloon removal.
+							</p>
+						</div>
+
+						<a href="/procedures" class="text-teal-600 font-semibold hover:text-teal-700 inline-flex items-center">
+							Compare with other procedures
+							<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+							</svg>
+						</a>
+					</div>
+
+					<div>
+						<div class="bg-teal-50 rounded-2xl p-8 h-full flex items-center justify-center">
+							<div class="text-center">
+								<div class="text-6xl mb-4">🎈</div>
+								<p class="text-gray-600 mb-4">Diagram: Gastric Balloon Placement</p>
+								<div class="bg-white rounded-lg p-6 shadow-sm">
+									<div class="text-left space-y-3">
+										<div class="flex items-center justify-between">
+											<span class="text-gray-700">Balloon Volume:</span>
+											<span class="font-semibold">~400-700ml</span>
+										</div>
+										<div class="flex items-center justify-between">
+											<span class="text-gray-700">Placement Time:</span>
+											<span class="font-semibold text-teal-600">20-30 minutes</span>
+										</div>
+										<div class="flex items-center justify-between">
+											<span class="text-gray-700">Duration:</span>
+											<span class="font-semibold text-blue-600">6-12 months</span>
+										</div>
+										<div class="flex items-center justify-between">
+											<span class="text-gray-700">Anaesthesia:</span>
+											<span class="font-semibold text-green-600">Light Sedation</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- What's Involved -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">What's Involved in the Gastric Balloon Procedure</h2>
+
+					<div class="bg-white rounded-xl p-8 shadow-sm mb-8">
+						<h3 class="text-xl font-bold text-gray-900 mb-6">Step-by-Step Procedure Process</h3>
+						<div class="space-y-6">
+							<div class="flex gap-4">
+								<div class="flex-shrink-0 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">1</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Light Sedation</h4>
+									<p class="text-gray-700">You'll receive light sedation (conscious sedation) - you'll be drowsy but able to breathe on your own. The entire procedure takes only 20-30 minutes.</p>
+								</div>
+							</div>
+							<div class="flex gap-4">
+								<div class="flex-shrink-0 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">2</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Endoscope Insertion</h4>
+									<p class="text-gray-700">A thin, flexible endoscope (camera tube) is gently passed through your mouth and into your stomach. This allows the doctor to examine your stomach and ensure suitability for the balloon.</p>
+								</div>
+							</div>
+							<div class="flex gap-4">
+								<div class="flex-shrink-0 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">3</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Balloon Placement</h4>
+									<p class="text-gray-700">A deflated silicone balloon (attached to a thin tube) is passed through the endoscope into your stomach. The balloon is positioned in the stomach cavity.</p>
+								</div>
+							</div>
+							<div class="flex gap-4">
+								<div class="flex-shrink-0 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">4</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Balloon Inflation</h4>
+									<p class="text-gray-700">The balloon is filled with sterile saline solution (approximately 400-700ml) through the tube. Once filled, the filling tube is gently detached and removed, leaving the balloon sealed inside your stomach.</p>
+								</div>
+							</div>
+							<div class="flex gap-4">
+								<div class="flex-shrink-0 w-8 h-8 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">5</div>
+								<div>
+									<h4 class="font-semibold text-gray-900 mb-2">Completion & Recovery</h4>
+									<p class="text-gray-700">The endoscope is removed and you're taken to recovery. Most patients go home the same day, usually within 1-2 hours after the procedure.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="grid md:grid-cols-2 gap-6 mb-8">
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<h3 class="text-lg font-bold text-gray-900 mb-4">Procedure & Recovery</h3>
+							<ul class="space-y-3">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Procedure:</strong> 20-30 minutes</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Hospital:</strong> Same day (outpatient)</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Return to normal activities:</strong> 3-7 days</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Balloon duration:</strong> 6-12 months</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<h3 class="text-lg font-bold text-gray-900 mb-4">Procedure Details</h3>
+							<ul class="space-y-3">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Approach:</strong> Endoscopic (no incisions)</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Anaesthesia:</strong> Light sedation</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Scars:</strong> None (non-surgical)</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700"><strong>Reversibility:</strong> Fully reversible</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Benefits and Risks -->
+					<div class="grid md:grid-cols-2 gap-6">
+						<div class="bg-green-50 rounded-xl p-6">
+							<h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+								<svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								Benefits & Advantages
+							</h3>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Non-surgical (no incisions or scars)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Quick 20-30 minute procedure</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Same day procedure (outpatient)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Fully reversible and temporary</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Lower cost than surgical options</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Minimal recovery time (3-7 days)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Can help establish healthy eating habits</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Option for lower BMI patients (27-40)</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bg-orange-50 rounded-xl p-6">
+							<h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center">
+								<svg class="w-5 h-5 text-orange-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+								</svg>
+								Risks & Considerations
+							</h3>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Lower weight loss than surgical options (10-15%)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Nausea and vomiting (common first 3-7 days)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Stomach discomfort and cramping initially</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Balloon deflation possible (rare, <1%)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Gastric ulcers or erosion possible</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Must be removed after 6-12 months</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Weight regain common after removal</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-orange-600 mr-2">•</span>
+									<span class="text-gray-700">Not covered by most private health insurance</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<p class="text-sm text-gray-600 mt-6 italic">
+						Your specialist will discuss all potential risks and benefits during your consultation. Gastric balloon is considered safe with lower immediate risks than surgery, but requires commitment to diet and lifestyle changes for successful outcomes.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Eligibility -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Am I Eligible for Gastric Balloon?</h2>
+
+					<div class="bg-teal-50 rounded-xl p-8 mb-8">
+						<h3 class="text-xl font-bold text-gray-900 mb-4">General Eligibility Criteria</h3>
+						<div class="space-y-3">
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-teal-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<p class="text-gray-700"><strong>BMI 27-40</strong> (wider eligibility than surgical options)</p>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-teal-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<p class="text-gray-700"><strong>Age 18-65</strong> (ideal candidates)</p>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-teal-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<p class="text-gray-700"><strong>Previous weight loss attempts</strong> unsuccessful through diet and exercise</p>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-teal-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<p class="text-gray-700"><strong>Commitment to lifestyle changes:</strong> Willing to modify diet and exercise habits during and after balloon placement</p>
+							</div>
+							<div class="flex items-start">
+								<svg class="w-6 h-6 text-teal-600 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<p class="text-gray-700"><strong>No previous gastric surgery:</strong> Stomach must be intact and healthy</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="grid md:grid-cols-2 gap-6 mb-8">
+						<div class="bg-white border-2 border-green-200 rounded-xl p-6">
+							<h3 class="text-lg font-bold text-gray-900 mb-4">Who Gastric Balloon is For</h3>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">People with BMI 27-40 not eligible for surgery</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Those wanting a non-surgical option</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Patients not ready for permanent surgery</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">People needing to lose weight before surgery</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Those seeking temporary weight loss assistance</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-green-600 mr-2">✓</span>
+									<span class="text-gray-700">Patients wanting to establish healthy habits</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bg-white border-2 border-red-200 rounded-xl p-6">
+							<h3 class="text-lg font-bold text-gray-900 mb-4">Who Gastric Balloon May Not Be For</h3>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">People with BMI over 40 (surgery usually better)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">Those with previous gastric surgery</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">Patients with large hiatal hernia</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">Those with severe acid reflux or stomach ulcers</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">Pregnant women or those planning pregnancy soon</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-red-600 mr-2">✗</span>
+									<span class="text-gray-700">Those seeking permanent weight loss solution</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="bg-gray-100 rounded-xl p-6 mb-6">
+						<h3 class="text-lg font-bold text-gray-900 mb-3">Common Reasons Patients Choose Gastric Balloon</h3>
+						<ul class="grid md:grid-cols-2 gap-3">
+							<li class="flex items-start">
+								<span class="text-teal-600 mr-2">→</span>
+								<span class="text-gray-700">Avoid surgery and anaesthesia</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-teal-600 mr-2">→</span>
+								<span class="text-gray-700">Lower BMI (27-35) not eligible for surgery</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-teal-600 mr-2">→</span>
+								<span class="text-gray-700">Test weight loss before committing to surgery</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-teal-600 mr-2">→</span>
+								<span class="text-gray-700">Pre-surgery weight loss requirement</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-teal-600 mr-2">→</span>
+								<span class="text-gray-700">Kickstart weight loss and habit change</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-teal-600 mr-2">→</span>
+								<span class="text-gray-700">Want temporary, reversible option</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-teal-600 mr-2">→</span>
+								<span class="text-gray-700">Medical conditions prevent surgery</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-teal-600 mr-2">→</span>
+								<span class="text-gray-700">Faster recovery needed for work/family</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="text-center">
+						<a href="#consultation" class="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg hover:bg-teal-700 transition text-lg font-semibold">
+							Check Your Eligibility - Free Quiz
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cost Section -->
+		<section id="cost" class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Cost of Gastric Balloon in Australia</h2>
+
+					<p class="text-lg text-gray-700 mb-8">
+						Gastric balloon is the most affordable weight loss procedure in Australia. Costs vary depending on your location, specialist experience, and the type of balloon used.
+					</p>
+
+					<div class="grid md:grid-cols-2 gap-6 mb-8">
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Standard Cost (Self-Funded)</h3>
+							<div class="text-3xl font-bold text-teal-600 mb-2">$8,000 - $12,000</div>
+							<p class="text-gray-600 mb-4">Total out-of-pocket cost</p>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">No waiting period</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">Payment plans available</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-teal-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">Fastest booking available</span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<h3 class="text-xl font-bold text-gray-900 mb-4">Insurance Coverage</h3>
+							<div class="text-3xl font-bold text-orange-600 mb-2">Limited</div>
+							<p class="text-gray-600 mb-4">Most funds don't cover gastric balloon</p>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-orange-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">Not covered by most private health insurance</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-orange-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">No Medicare rebate available</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-5 h-5 text-orange-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span class="text-gray-700">Self-funding usually required</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="bg-teal-50 rounded-xl p-6 mb-8">
+						<h3 class="text-lg font-bold text-gray-900 mb-4">What's Included in the Cost?</h3>
+						<div class="grid md:grid-cols-2 gap-4">
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-teal-600 mr-2">•</span>
+									<span class="text-gray-700">Specialist consultation and assessment</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-teal-600 mr-2">•</span>
+									<span class="text-gray-700">Gastric balloon device</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-teal-600 mr-2">•</span>
+									<span class="text-gray-700">Balloon insertion procedure</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-teal-600 mr-2">•</span>
+									<span class="text-gray-700">Light sedation/anaesthesia</span>
+								</li>
+							</ul>
+							<ul class="space-y-2">
+								<li class="flex items-start">
+									<span class="text-teal-600 mr-2">•</span>
+									<span class="text-gray-700">Balloon removal procedure (6-12 months later)</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-teal-600 mr-2">•</span>
+									<span class="text-gray-700">Follow-up appointments</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-teal-600 mr-2">•</span>
+									<span class="text-gray-700">Nutritional counselling</span>
+								</li>
+								<li class="flex items-start">
+									<span class="text-teal-600 mr-2">•</span>
+									<span class="text-gray-700">Support programme access</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="bg-orange-50 border-l-4 border-orange-500 p-6 mb-8">
+						<h3 class="font-bold text-gray-900 mb-2">Factors That Affect Pricing</h3>
+						<ul class="space-y-1 text-gray-700">
+							<li><strong>Location:</strong> Sydney and Melbourne typically cost more than regional areas</li>
+							<li><strong>Balloon type:</strong> Different brands (Orbera, Spatz, Elipse) have different costs</li>
+							<li><strong>Specialist experience:</strong> Experienced gastroenterologists may charge higher fees</li>
+							<li><strong>Facility:</strong> Private hospital vs specialist clinic</li>
+							<li><strong>Duration:</strong> 6-month vs 12-month balloon options</li>
+							<li><strong>Support programme:</strong> Extent of dietary and lifestyle support included</li>
+						</ul>
+					</div>
+
+					<div class="bg-gradient-to-r from-teal-600 to-teal-700 rounded-xl p-8 text-white text-center">
+						<h3 class="text-2xl font-bold mb-3">Get Your Personalised Cost Estimate</h3>
+						<p class="text-teal-100 mb-6">Calculate your gastric balloon cost based on your location and circumstances in 60 seconds</p>
+						<a href="#calculator" class="inline-block bg-white text-teal-600 px-8 py-4 rounded-lg hover:bg-teal-50 transition font-semibold text-lg">
+							Use Free Cost Calculator
+						</a>
+					</div>
+
+					<p class="text-sm text-gray-600 mt-6">
+						<strong>Note:</strong> Gastric balloon is generally not covered by Medicare or private health insurance as it's considered a non-essential aesthetic procedure. Most patients self-fund. Check with your insurer for specific coverage details.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Why Choose Us -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Why Choose Weight Loss Surgery Australia</h2>
+					<p class="text-xl text-gray-600 mb-12">
+						We're committed to providing transparent, unbiased information and connecting you with qualified specialists across Australia.
+					</p>
+
+					<div class="grid md:grid-cols-3 gap-8 mb-12">
+						<div class="text-center">
+							<div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Transparent Pricing</h3>
+							<p class="text-gray-600">No hidden fees or surprises. We provide honest cost estimates and help you understand all options.</p>
+						</div>
+
+						<div class="text-center">
+							<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Qualified Specialists</h3>
+							<p class="text-gray-600">We only work with experienced gastroenterologists and weight loss specialists.</p>
+						</div>
+
+						<div class="text-center">
+							<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+								<svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+								</svg>
+							</div>
+							<h3 class="text-lg font-bold text-gray-900 mb-2">Nationwide Coverage</h3>
+							<p class="text-gray-600">Find qualified specialists in Sydney, Melbourne, Brisbane, Perth, Adelaide, and regional areas.</p>
+						</div>
+					</div>
+
+					<div class="bg-gray-100 rounded-xl p-8">
+						<h3 class="text-xl font-bold text-gray-900 mb-4">Our Patient-First Approach</h3>
+						<p class="text-gray-700 mb-4">
+							We understand that choosing a weight loss procedure is a significant decision. Our platform provides comprehensive, evidence-based information to help you make informed choices. We're not here to sell you a procedure—we're here to educate and connect you with the right professionals for your needs.
+						</p>
+						<p class="text-gray-700">
+							Every specialist in our network meets strict criteria for experience, qualifications, and patient outcomes. Your safety and success are our top priorities.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Recovery Timeline -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Gastric Balloon Timeline</h2>
+					<p class="text-lg text-gray-700 mb-8">
+						Here's what to expect during your 6-12 month gastric balloon journey, including initial adjustment, weight loss phase, and balloon removal.
+					</p>
+
+					<div class="space-y-6">
+						<!-- Day 1-3 -->
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-24 h-24 bg-teal-100 rounded-full flex items-center justify-center">
+									<span class="text-lg font-bold text-teal-600 text-center leading-tight">Day<br/>1-3</span>
+								</div>
+								<div class="flex-1">
+									<h3 class="text-xl font-bold text-gray-900 mb-3">Insertion & Adjustment Period</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">What to Expect:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Procedure takes 20-30 minutes</li>
+												<li>• Go home same day (1-2 hours after)</li>
+												<li>• Nausea and vomiting common</li>
+												<li>• Stomach cramping and discomfort</li>
+												<li>• Anti-nausea medication provided</li>
+												<li>• Rest at home recommended</li>
+											</ul>
+										</div>
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">Diet:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Clear liquids only</li>
+												<li>• Water, broth, sugar-free jelly</li>
+												<li>• Sip slowly and frequently</li>
+												<li>• Aim for 1.5-2L fluids daily</li>
+												<li>• Avoid carbonated drinks</li>
+												<li>• Take small sips (30ml at a time)</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Week 1-2 -->
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-24 h-24 bg-green-100 rounded-full flex items-center justify-center">
+									<span class="text-lg font-bold text-green-600 text-center leading-tight">Week<br/>1-2</span>
+								</div>
+								<div class="flex-1">
+									<h3 class="text-xl font-bold text-gray-900 mb-3">Adaptation Phase</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">What to Expect:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Discomfort gradually improving</li>
+												<li>• Nausea reducing</li>
+												<li>• Feeling of fullness from balloon</li>
+												<li>• Return to normal activities (days 3-7)</li>
+												<li>• Learning new portion sizes</li>
+												<li>• Initial weight loss beginning</li>
+											</ul>
+										</div>
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">Diet:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Progress to full liquids</li>
+												<li>• Protein shakes (2-3 per day)</li>
+												<li>• Smooth soups</li>
+												<li>• Milk, yoghurt</li>
+												<li>• Target: 60g+ protein daily</li>
+												<li>• Small, frequent sips</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Week 3-4 -->
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center">
+									<span class="text-lg font-bold text-blue-600 text-center leading-tight">Week<br/>3-4</span>
+								</div>
+								<div class="flex-1">
+									<h3 class="text-xl font-bold text-gray-900 mb-3">Soft Foods Introduction</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">What to Expect:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Adjusted to balloon presence</li>
+												<li>• Feel full with small portions</li>
+												<li>• Steady weight loss</li>
+												<li>• Increased energy</li>
+												<li>• Light exercise possible</li>
+												<li>• Regular check-in with specialist</li>
+											</ul>
+										</div>
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">Diet:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Soft, easily digestible foods</li>
+												<li>• Scrambled eggs, soft fish</li>
+												<li>• Mashed vegetables</li>
+												<li>• Cottage cheese, yoghurt</li>
+												<li>• Small portions (½-¾ cup)</li>
+												<li>• Eat slowly, chew thoroughly</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Month 2-6 -->
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-24 h-24 bg-purple-100 rounded-full flex items-center justify-center">
+									<span class="text-base font-bold text-purple-600 text-center leading-tight">Month<br/>2-6</span>
+								</div>
+								<div class="flex-1">
+									<h3 class="text-xl font-bold text-gray-900 mb-3">Active Weight Loss Phase</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">What to Expect:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Maximum weight loss period</li>
+												<li>• Established eating routine</li>
+												<li>• Feeling satisfied with small portions</li>
+												<li>• Regular exercise routine</li>
+												<li>• Monthly check-ins</li>
+												<li>• Building healthy habits</li>
+											</ul>
+										</div>
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">Diet & Lifestyle:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Regular solid foods</li>
+												<li>• Protein-focused meals</li>
+												<li>• Small portions (¾-1 cup)</li>
+												<li>• 3 meals + 1-2 snacks daily</li>
+												<li>• Avoid high-calorie drinks</li>
+												<li>• Regular physical activity</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Month 6-12 & Removal -->
+						<div class="bg-white rounded-xl p-6 shadow-sm">
+							<div class="flex items-start gap-4">
+								<div class="flex-shrink-0 w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center">
+									<span class="text-base font-bold text-orange-600 text-center leading-tight">Month<br/>6-12</span>
+								</div>
+								<div class="flex-1">
+									<h3 class="text-xl font-bold text-gray-900 mb-3">Maintenance & Balloon Removal</h3>
+									<div class="grid md:grid-cols-2 gap-4">
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">What to Expect:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Weight loss plateauing</li>
+												<li>• Balloon must be removed at 6-12 months</li>
+												<li>• Removal procedure (20-30 minutes)</li>
+												<li>• Same day procedure</li>
+												<li>• Transition to maintaining weight</li>
+												<li>• Continued lifestyle support</li>
+											</ul>
+										</div>
+										<div>
+											<h4 class="font-semibold text-gray-900 mb-2">After Removal:</h4>
+											<ul class="space-y-1 text-gray-700 text-sm">
+												<li>• Stomach returns to normal size</li>
+												<li>• Must maintain healthy habits</li>
+												<li>• Risk of weight regain if habits slip</li>
+												<li>• Continue small portions</li>
+												<li>• Regular exercise essential</li>
+												<li>• Follow-up support available</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-orange-50 border-l-4 border-orange-500 p-6 mt-8">
+						<h3 class="font-bold text-gray-900 mb-2">Contact Specialist If You Experience</h3>
+						<ul class="space-y-1 text-gray-700">
+							<li>• Severe, persistent vomiting (>24 hours)</li>
+							<li>• Severe abdominal pain</li>
+							<li>• Inability to keep any liquids down</li>
+							<li>• Fever or signs of infection</li>
+							<li>• Black or bloody stools/vomit</li>
+							<li>• Sudden change in urine colour (blue/green - indicates balloon deflation)</li>
+						</ul>
+					</div>
+
+					<p class="text-sm text-gray-600 mt-6">
+						<strong>Note:</strong> Individual experiences vary. The first 3-7 days are typically the most uncomfortable. Always follow your specialist's specific instructions and attend all follow-up appointments.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- FAQs -->
+		<section class="py-16 bg-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Frequently Asked Questions</h2>
+				<p class="text-lg text-gray-600 mb-12 text-center">Get answers to the most common questions about gastric balloon in Australia</p>
+
+				<div class="space-y-4">
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							How much does gastric balloon cost in Australia?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							Gastric balloon in Australia typically costs between <strong>$8,000 and $12,000</strong>. This includes the balloon device, insertion procedure, removal procedure, and follow-up appointments. Most private health insurance funds do not cover gastric balloon as it's considered non-essential. Payment plans are usually available.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							Is gastric balloon safe?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							Gastric balloon is generally safe when performed by experienced specialists. As a non-surgical procedure, it carries <strong>lower risks than surgical options</strong>. Common side effects include nausea, vomiting, and discomfort for the first 3-7 days. Serious complications such as balloon deflation, gastric obstruction, or ulceration are rare (less than 1%).
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							How long does gastric balloon stay in?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							Gastric balloons remain in place for <strong>6-12 months</strong> depending on the type. Most modern balloons are designed for 6-month placement. The balloon must be removed at the end of this period through an endoscopic procedure similar to the insertion. Extended placement beyond the recommended timeframe increases risks.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							How much weight will I lose with gastric balloon?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							Most gastric balloon patients lose <strong>10-15% of their total body weight</strong> over the 6-12 month placement period. For example, someone weighing 100kg may lose 10-15kg. Weight loss is typically greatest in the first 3 months. Results depend heavily on adherence to diet and lifestyle changes during and after balloon placement.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							What happens after gastric balloon is removed?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							After removal, your stomach returns to its normal size within days. <strong>Many patients experience weight regain</strong> if they don't maintain the healthy habits established during balloon placement. Studies show patients who commit to lifestyle changes maintain 50-70% of their weight loss long-term. Continued dietary modifications, exercise, and behavioral support are essential.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							Does the first week feel bad?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							The <strong>first 3-7 days are typically uncomfortable</strong> with nausea, vomiting, and stomach cramping being common. Most patients describe feeling like they have the flu. Anti-nausea medication helps manage symptoms. By day 7-10, most patients feel significantly better and can resume normal activities. The discomfort is temporary and improves daily.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							Can the balloon pop or leak?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							Balloon deflation is rare, occurring in <strong>less than 1% of cases</strong>. If the balloon deflates, the blue dye in the saline will color your urine blue or green - a clear warning sign. A deflated balloon can potentially pass into the intestine and cause obstruction. If you notice blue/green urine, contact your specialist immediately for balloon removal.
+						</p>
+					</details>
+
+					<details class="bg-gray-50 rounded-lg p-6 group">
+						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+							Is gastric balloon better than gastric sleeve?
+							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+							</svg>
+						</summary>
+						<p class="mt-4 text-gray-700">
+							They serve different purposes. <strong>Gastric balloon</strong> is non-surgical, temporary, lower cost, but achieves less weight loss (10-15%). <strong>Gastric sleeve</strong> is surgical, permanent, higher cost, but achieves greater weight loss (60-70%). Balloon is ideal for BMI 27-40, those wanting non-surgical options, or as pre-surgery preparation. Sleeve is better for BMI 40+ and permanent solutions.
+						</p>
+					</details>
+				</div>
+			</div>
+		</section>
+
+		<!-- Find a Specialist -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto text-center">
+					<h2 class="text-3xl font-bold text-gray-900 mb-6">Find a Gastric Balloon Specialist Near You</h2>
+					<p class="text-xl text-gray-600 mb-12">
+						Connect with experienced gastroenterologists and weight loss specialists in your area. All specialists in our network meet strict criteria for qualifications, experience, and patient outcomes.
+					</p>
+
+					<div class="grid md:grid-cols-3 gap-6 mb-12">
+						<a href="/locations/sydney" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
+							<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-teal-600">Sydney</h3>
+							<p class="text-gray-600 mb-3">Find gastric balloon specialists in Sydney</p>
+							<span class="text-teal-600 font-semibold">View Specialists →</span>
+						</a>
+
+						<a href="/locations/melbourne" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
+							<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-teal-600">Melbourne</h3>
+							<p class="text-gray-600 mb-3">Find gastric balloon specialists in Melbourne</p>
+							<span class="text-teal-600 font-semibold">View Specialists →</span>
+						</a>
+
+						<a href="/locations/brisbane" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
+							<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-teal-600">Brisbane</h3>
+							<p class="text-gray-600 mb-3">Find gastric balloon specialists in Brisbane</p>
+							<span class="text-teal-600 font-semibold">View Specialists →</span>
+						</a>
+					</div>
+
+					<a href="/#locations" class="inline-block bg-white text-teal-600 border-2 border-teal-600 px-8 py-4 rounded-lg hover:bg-teal-50 transition text-lg font-semibold">
+						View All Locations
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Final CTA -->
+		<section id="consultation" class="py-16 bg-gradient-to-br from-teal-600 to-teal-700 text-white">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Take the First Step?</h2>
+				<p class="text-xl text-teal-100 mb-8">
+					Book a free, no-obligation consultation with a qualified specialist to discuss gastric balloon and whether it's right for you. Your journey to better health starts here.
+				</p>
+
+				<div class="bg-white rounded-xl p-8 text-left max-w-md mx-auto mb-8">
+					<form class="space-y-4">
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+							<input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" placeholder="John Smith" required />
+						</div>
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+							<input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" placeholder="john@example.com" required />
+						</div>
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+							<input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500" placeholder="0400 000 000" required />
+						</div>
+						<div>
+							<label class="block text-sm font-medium text-gray-700 mb-2">Preferred Location</label>
+							<select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500">
+								<option>Sydney</option>
+								<option>Melbourne</option>
+								<option>Brisbane</option>
+								<option>Perth</option>
+								<option>Adelaide</option>
+								<option>Other</option>
+							</select>
+						</div>
+						<button type="submit" class="w-full bg-teal-600 text-white px-6 py-4 rounded-lg hover:bg-teal-700 transition text-lg font-semibold">
+							Book Free Consultation
+						</button>
+						<p class="text-xs text-gray-500 text-center">By submitting, you agree to our privacy policy. Your information is confidential and secure.</p>
+					</form>
+				</div>
+
+				<div class="flex flex-col sm:flex-row gap-4 justify-center items-center text-teal-100">
+					<div class="flex items-center">
+						<svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+							<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+						</svg>
+						Or call: 1300 000 000
+					</div>
+					<div class="text-sm">Monday - Friday, 9am - 5pm AEST</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Medical Disclaimer -->
+		<section class="bg-gray-100 py-8 border-t border-gray-300">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<h3 class="text-sm font-bold text-gray-900 mb-2">Medical Disclaimer</h3>
+					<p class="text-xs text-gray-600 leading-relaxed">
+						<strong>Important:</strong> This content is for educational purposes only and does not constitute medical advice. Individual results from gastric balloon vary based on numerous factors including adherence to dietary protocols, exercise, and individual physiology. Weight loss figures and timeline are based on clinical averages and may not reflect your experience. Gastric balloon carries risks including nausea, vomiting, balloon deflation, gastric ulceration, and gastric obstruction. Weight regain after balloon removal is common without lifestyle maintenance. The balloon is temporary and must be removed after 6-12 months. Always consult with qualified, experienced healthcare providers before making decisions about weight loss procedures. Information on this page is current as of January 2025 and should be verified with your specialist. Gastric balloon is generally not covered by Medicare or private health insurance in Australia.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer class="bg-gray-900 text-white py-12">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid md:grid-cols-4 gap-8 mb-8">
+					<div>
+						<h3 class="font-bold text-lg mb-4">Procedures</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="/procedures/gastric-sleeve" class="hover:text-white">Gastric Sleeve</a></li>
+							<li><a href="/procedures/gastric-bypass" class="hover:text-white">Gastric Bypass</a></li>
+							<li><a href="/procedures/mini-gastric-bypass" class="hover:text-white">Mini Gastric Bypass</a></li>
+							<li><a href="/procedures/gastric-band" class="hover:text-white">Gastric Band</a></li>
+							<li><a href="/procedures/gastric-balloon" class="hover:text-white">Gastric Balloon</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-lg mb-4">Locations</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="/locations/sydney" class="hover:text-white">Sydney</a></li>
+							<li><a href="/locations/melbourne" class="hover:text-white">Melbourne</a></li>
+							<li><a href="/locations/brisbane" class="hover:text-white">Brisbane</a></li>
+							<li><a href="/locations/perth" class="hover:text-white">Perth</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-lg mb-4">Resources</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li><a href="#cost" class="hover:text-white">Cost Calculator</a></li>
+							<li><a href="#consultation" class="hover:text-white">Eligibility Quiz</a></li>
+							<li><a href="/#faq" class="hover:text-white">FAQ</a></li>
+							<li><a href="/compare/gastric-sleeve-vs-gastric-bypass" class="hover:text-white">Compare Procedures</a></li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="font-bold text-lg mb-4">Contact</h3>
+						<ul class="space-y-2 text-gray-400">
+							<li>Phone: 1300 000 000</li>
+							<li>Email: info@wlsaustralia.com.au</li>
+							<li class="pt-4">
+								<a href="#newsletter" class="text-blue-400 hover:text-blue-300">Subscribe to Newsletter</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="border-t border-gray-800 pt-8">
+					<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+						<p>&copy; 2025 Weight Loss Surgery Australia. All rights reserved.</p>
+						<div class="flex space-x-6 mt-4 md:mt-0">
+							<a href="#privacy" class="hover:text-white">Privacy Policy</a>
+							<a href="#terms" class="hover:text-white">Terms of Service</a>
+							<a href="#disclaimer" class="hover:text-white">Medical Disclaimer</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
