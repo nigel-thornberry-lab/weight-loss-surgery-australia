@@ -1,0 +1,34 @@
+# Weight Loss Surgery Australia - Robots.txt
+# Allow all legitimate search engines to crawl
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/sitemap.xml
+
+# Disallow admin/config pages if they exist
+Disallow: /api/
+Disallow: /_admin/
+Disallow: /admin/
+
+# Allow all medical content
+Allow: /procedures/
+Allow: /costs/
+Allow: /locations/
+Allow: /insurance/
+Allow: /compare/
+Allow: /tools/
+
+# Crawl-delay for good citizenship
+Crawl-delay: 1
+
+# User-agent specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
