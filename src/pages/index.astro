@@ -61,7 +61,26 @@ const meta = seoMeta.home;
 							</div>
 						</div>
 						<a href="#costs" class="text-gray-700 hover:text-blue-600">Costs</a>
-						<a href="#locations" class="text-gray-700 hover:text-blue-600">Locations</a>
+						<div class="relative group">
+							<button class="text-gray-700 hover:text-blue-600 flex items-center">
+								Locations
+								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+								</svg>
+							</button>
+							<div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+								<div class="py-2">
+									<a href="/locations/sydney" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Sydney</a>
+									<a href="/locations/melbourne" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Melbourne</a>
+									<a href="#brisbane" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Brisbane</a>
+									<a href="#perth" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Perth</a>
+									<a href="#adelaide" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Adelaide</a>
+									<a href="#goldcoast" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gold Coast</a>
+									<div class="border-t border-gray-200 my-2"></div>
+									<a href="#locations" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Locations</a>
+								</div>
+							</div>
+						</div>
 						<a href="#faq" class="text-gray-700 hover:text-blue-600">FAQ</a>
 					</nav>
 					<div class="flex items-center space-x-4">
@@ -350,7 +369,7 @@ const meta = seoMeta.home;
 						<span class="text-blue-600 font-semibold">View Surgeons →</span>
 					</a>
 
-					<a href="#melbourne" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
+					<a href="/locations/melbourne" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
 						<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Melbourne</h3>
 						<p class="text-gray-600 mb-4">Connect with top-rated weight loss surgeons in Melbourne</p>
 						<span class="text-blue-600 font-semibold">View Surgeons →</span>
@@ -517,7 +536,7 @@ const meta = seoMeta.home;
 						<ul class="space-y-2 text-gray-400">
 							<li><a href="/locations/sydney" class="hover:text-white">Sydney</a></li>
 							<li><a href="/procedures/gastric-sleeve-sydney" class="hover:text-white">Gastric Sleeve Sydney</a></li>
-							<li><a href="#melbourne" class="hover:text-white">Melbourne</a></li>
+							<li><a href="/locations/melbourne" class="hover:text-white">Melbourne</a></li>
 							<li><a href="#brisbane" class="hover:text-white">Brisbane</a></li>
 							<li><a href="#perth" class="hover:text-white">Perth</a></li>
 						</ul>
