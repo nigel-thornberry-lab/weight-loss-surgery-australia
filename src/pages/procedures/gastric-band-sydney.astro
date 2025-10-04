@@ -1,6 +1,13 @@
 ---
 import '../../styles/global.css';
 
+const meta = {
+	title: "Gastric Band Sydney 2025 | $12k-20k, Adjustable & Reversible",
+	description: "Adjustable, reversible gastric band in Sydney. $12k-20k, lowest surgical risk, fully removable. Perfect for gradual weight loss. 500+ Sydney band patients. AHPRA surgeons. Book free consultation - Medicare rebates available.",
+	keywords: ["gastric band sydney", "lap band sydney", "gastric band removal sydney", "gastric band revision sydney", "adjustable gastric band sydney", "gastric banding sydney", "LAP-BAND removal sydney"],
+	ogImage: "/images/og/gastric-band-sydney.jpg"
+};
+
 const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-band-sydney";
 ---
 
@@ -10,13 +17,35 @@ const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/gas
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<meta name="viewport" content="width=device-width" />
 
-	<title>Gastric Band Sydney | Adjustable & Reversible $12k-20k 2025</title>
-	<meta name="description" content="Sydney gastric band: Adjustable, reversible, 40-50% weight loss. AHPRA surgeons, Medicare rebates. Band removal & revision options. Book free consultation." />
-	<meta name="keywords" content="gastric band sydney, lap band sydney, gastric band removal sydney, gastric band revision sydney, adjustable gastric band sydney" />
+	<!-- Performance Optimization -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+	<link rel="dns-prefetch" href="https://vercel.app" />
 
-	<meta property="og:title" content="Gastric Band Sydney | Adjustable & Reversible $12k-20k 2025" />
-	<meta property="og:description" content="Sydney gastric band: Adjustable, reversible, 40-50% weight loss. AHPRA surgeons, Medicare rebates. Band removal & revision options." />
+	<!-- SEO Meta Tags -->
+	<title>{meta.title}</title>
+	<meta name="description" content={meta.description} />
+	<meta name="keywords" content={meta.keywords.join(', ')} />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={pageUrl} />
+	<meta property="og:title" content={meta.title} />
+	<meta property="og:description" content={meta.description} />
+	<meta property="og:image" content={`https://weight-loss-surgery-australia.vercel.app${meta.ogImage}`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Gastric Band Sydney - Adjustable & Reversible Surgery" />
 	<meta property="og:locale" content="en_AU" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content={pageUrl} />
+	<meta property="twitter:title" content={meta.title} />
+	<meta property="twitter:description" content={meta.description} />
+	<meta property="twitter:image" content={`https://weight-loss-surgery-australia.vercel.app${meta.ogImage}`} />
+
+	<!-- Canonical URL -->
 	<link rel="canonical" href={pageUrl} />
 
 	<script type="application/ld+json" is:inline>

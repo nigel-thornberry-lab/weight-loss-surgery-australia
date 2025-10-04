@@ -1,6 +1,13 @@
 ---
 import '../../styles/global.css';
 
+const meta = {
+	title: "Duodenal Switch Sydney | Super-Obesity BMI 50+ $30k-45k 2025",
+	description: "Maximum weight loss with duodenal switch in Sydney. 80-85% weight loss (60-100kg), 95% diabetes remission. Most powerful surgery for BMI 50+, failed previous surgery. AHPRA surgeons specializing in super-obesity. Book free consultation - Medicare rebates available.",
+	keywords: ["duodenal switch sydney", "BPD-DS sydney", "super obesity surgery sydney", "biliopancreatic diversion sydney", "DS surgery sydney", "revision bariatric surgery sydney", "complex bariatric surgery sydney"],
+	ogImage: "/images/og/duodenal-switch-sydney.jpg"
+};
+
 const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/duodenal-switch-sydney";
 ---
 
@@ -10,13 +17,35 @@ const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/duo
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<meta name="viewport" content="width=device-width" />
 
-	<title>Duodenal Switch Sydney | Super-Obesity BMI 50+ $30k-45k 2025</title>
-	<meta name="description" content="Sydney duodenal switch: Most powerful surgery, 80-85% weight loss, BMI 50+. AHPRA surgeons, Medicare rebates. Maximum malabsorption. Book free consultation." />
-	<meta name="keywords" content="duodenal switch sydney, BPD-DS sydney, super obesity surgery sydney, biliopancreatic diversion sydney, DS surgery sydney" />
+	<!-- Performance Optimization -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+	<link rel="dns-prefetch" href="https://vercel.app" />
 
-	<meta property="og:title" content="Duodenal Switch Sydney | Super-Obesity BMI 50+ $30k-45k 2025" />
-	<meta property="og:description" content="Sydney duodenal switch: Most powerful surgery, 80-85% weight loss, BMI 50+. AHPRA surgeons, Medicare rebates. Maximum malabsorption." />
+	<!-- SEO Meta Tags -->
+	<title>{meta.title}</title>
+	<meta name="description" content={meta.description} />
+	<meta name="keywords" content={meta.keywords.join(', ')} />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={pageUrl} />
+	<meta property="og:title" content={meta.title} />
+	<meta property="og:description" content={meta.description} />
+	<meta property="og:image" content={`https://weight-loss-surgery-australia.vercel.app${meta.ogImage}`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Duodenal Switch Sydney - Super-Obesity Surgery" />
 	<meta property="og:locale" content="en_AU" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content={pageUrl} />
+	<meta property="twitter:title" content={meta.title} />
+	<meta property="twitter:description" content={meta.description} />
+	<meta property="twitter:image" content={`https://weight-loss-surgery-australia.vercel.app${meta.ogImage}`} />
+
+	<!-- Canonical URL -->
 	<link rel="canonical" href={pageUrl} />
 
 	<script type="application/ld+json" is:inline>

@@ -1,6 +1,13 @@
 ---
 import '../../styles/global.css';
 
+const meta = {
+	title: "Mini Gastric Bypass Sydney 2025 | $16k-28k, Omega Loop Fast Track",
+	description: "Fast-track weight loss with mini gastric bypass in Sydney. Single anastomosis, shorter surgery (2-3 hours), 70-80% weight loss. $16k-28k, faster recovery than traditional bypass. AHPRA surgeons. Book free consultation today.",
+	keywords: ["mini gastric bypass sydney", "omega loop sydney", "single anastomosis sydney", "MGB sydney", "mini bypass cost sydney", "one anastomosis gastric bypass sydney", "OAGB sydney"],
+	ogImage: "/images/og/mini-gastric-bypass-sydney.jpg"
+};
+
 const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/mini-gastric-bypass-sydney";
 ---
 
@@ -10,13 +17,35 @@ const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/min
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	<meta name="viewport" content="width=device-width" />
 
-	<title>Mini Gastric Bypass Sydney | $16k-26k & Faster Surgery 2025</title>
-	<meta name="description" content="Sydney mini gastric bypass: Simpler omega loop, 1-2hr surgery, 70-80% weight loss. AHPRA surgeons, Medicare rebates. Book free consultation." />
-	<meta name="keywords" content="mini gastric bypass sydney, omega loop sydney, single anastomosis sydney, MGB sydney, mini bypass cost sydney" />
+	<!-- Performance Optimization -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+	<link rel="dns-prefetch" href="https://vercel.app" />
 
-	<meta property="og:title" content="Mini Gastric Bypass Sydney | $16k-26k & Faster Surgery 2025" />
-	<meta property="og:description" content="Sydney mini gastric bypass: Simpler omega loop, 1-2hr surgery, 70-80% weight loss. AHPRA surgeons, Medicare rebates. Book free consultation." />
+	<!-- SEO Meta Tags -->
+	<title>{meta.title}</title>
+	<meta name="description" content={meta.description} />
+	<meta name="keywords" content={meta.keywords.join(', ')} />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={pageUrl} />
+	<meta property="og:title" content={meta.title} />
+	<meta property="og:description" content={meta.description} />
+	<meta property="og:image" content={`https://weight-loss-surgery-australia.vercel.app${meta.ogImage}`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Mini Gastric Bypass Sydney - Omega Loop Surgery" />
 	<meta property="og:locale" content="en_AU" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content={pageUrl} />
+	<meta property="twitter:title" content={meta.title} />
+	<meta property="twitter:description" content={meta.description} />
+	<meta property="twitter:image" content={`https://weight-loss-surgery-australia.vercel.app${meta.ogImage}`} />
+
+	<!-- Canonical URL -->
 	<link rel="canonical" href={pageUrl} />
 
 	<script type="application/ld+json" is:inline>
