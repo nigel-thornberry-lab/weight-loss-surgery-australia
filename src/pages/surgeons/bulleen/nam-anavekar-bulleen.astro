@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SurgeonHero from '../../../components/surgeons/SurgeonHero.astro';
+import SurgeonProcedures from '../../../components/surgeons/SurgeonProcedures.astro';
+import SurgeonBio from '../../../components/surgeons/SurgeonBio.astro';
+import SurgeonReviews from '../../../components/surgeons/SurgeonReviews.astro';
+import SurgeonLocation from '../../../components/surgeons/SurgeonLocation.astro';
+import SurgeonCTA from '../../../components/surgeons/SurgeonCTA.astro';
+
+// Surgeon data
+const surgeon = {
+  name: "Nam Anavekar",
+  surgeon_name: "Nam Anavekar",
+  business_name: "Dr Nam Anavekar",
+  qualifications: "Dr",
+  bio: `Nam Anavekar is a highly respected bariatric surgeon based in Bulleen, VIC, with over 12 years of dedicated experience in weight loss surgery. Maintaining a 4.9-star rating from 86 satisfied patients, Nam Anavekar is recognized for providing excellent surgical care and personalized treatment approaches. Nam Anavekar holds impressive qualifications including Dr, reflecting a strong foundation in medical education and surgical expertise. Throughout a distinguished career spanning 12 years, Nam Anavekar has successfully performed an estimated 2160 bariatric procedures, helping countless patients achieve significant, sustainable weight loss and improve their overall health and quality of life.`,
+  rating: 4.9,
+  reviewCount: 86,
+  review_count: 86,
+  phone: "+61390750005",
+  website: "http://www.namanavekar.com.au/",
+  years_experience: 12,
+  estimated_procedures: 2160,
+  address: {
+    street: "26 Manningham Rd",
+    city: "Bulleen",
+    state: "VIC",
+    display: "Other"
+  },
+  procedures: [],
+  slug: "nam-anavekar-bulleen",
+  citySlug: "bulleen"
+};
+
+// SEO
+const title = "Nam Anavekar - Bariatric Surgeon Bulleen | Gastric Sleeve & Bypass".replace(/"/g, '\"');
+const description = "Nam Anavekar is an experienced bariatric surgeon in Bulleen with 12+ years experience. Rating: 4.9 stars. Book your consultation for gastric sleeve, bypass, or band surgery.".replace(/"/g, '\"');
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <a href={`/surgeons/${surgeon.citySlug}`} class="hover:text-blue-600">{surgeon.address.city}</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{surgeon.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <SurgeonHero surgeon={surgeon} />
+  <SurgeonProcedures procedures={surgeon.procedures} surgeon={surgeon} />
+  <SurgeonBio bio={surgeon.bio} qualifications={surgeon.qualifications} />
+  <SurgeonReviews rating={surgeon.rating} reviewCount={surgeon.reviewCount} surgeon={surgeon} />
+  <SurgeonLocation surgeon={surgeon} />
+  <SurgeonCTA surgeon={surgeon} />
+</BaseLayout>

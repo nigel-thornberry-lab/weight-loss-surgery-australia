@@ -1,0 +1,113 @@
+
+> temp-astro@0.0.1 build
+> astro build
+
+13:44:49 [content] Syncing content
+13:44:49 [content] Synced content
+13:44:49 [types] Generated 15ms
+13:44:49 [build] output: "static"
+13:44:49 [build] mode: "static"
+13:44:49 [build] directory: /Users/Cameron/Desktop/weight-loss-surgery-australia/dist/
+13:44:49 [build] Collecting build info...
+13:44:49 [build] ✓ Completed in 52ms.
+13:44:49 [build] Building static entrypoints...
+13:44:51 [WARN] [vite] 
+/patterns/grid.svg referenced in /patterns/grid.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+13:44:53 [vite] ✓ built in 4.24s
+13:44:53 [build] ✓ Completed in 4.26s.
+
+ building client (vite) 
+13:44:53 [vite] transforming...
+13:44:53 [vite] ✓ 2 modules transformed.
+13:44:53 [vite] rendering chunks...
+13:44:53 [vite] ✓ built in 10ms
+
+ generating static routes 
+13:44:53 ▶ src/pages/locations/melbourne.astro
+13:44:53   └─ /locations/melbourne/index.html (+3ms) 
+13:44:53 ▶ src/pages/locations/sydney.astro
+13:44:53   └─ /locations/sydney/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/duodenal-switch.astro
+13:44:53   └─ /procedures/duodenal-switch/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/duodenal-switch-sydney.astro
+13:44:53   └─ /procedures/duodenal-switch-sydney/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/gastric-balloon.astro
+13:44:53   └─ /procedures/gastric-balloon/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/gastric-balloon-sydney.astro
+13:44:53   └─ /procedures/gastric-balloon-sydney/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/gastric-band.astro
+13:44:53   └─ /procedures/gastric-band/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/gastric-band-sydney.astro
+13:44:53   └─ /procedures/gastric-band-sydney/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/gastric-bypass.astro
+13:44:53   └─ /procedures/gastric-bypass/index.html (+2ms) 
+13:44:53 ▶ src/pages/procedures/gastric-bypass-melbourne.astro
+13:44:53   └─ /procedures/gastric-bypass-melbourne/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/gastric-bypass-sydney.astro
+13:44:53   └─ /procedures/gastric-bypass-sydney/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/gastric-sleeve.astro
+13:44:53   └─ /procedures/gastric-sleeve/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/gastric-sleeve-melbourne.astro
+13:44:53   └─ /procedures/gastric-sleeve-melbourne/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/gastric-sleeve-sydney.astro
+13:44:53   └─ /procedures/gastric-sleeve-sydney/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/mini-gastric-bypass.astro
+13:44:53   └─ /procedures/mini-gastric-bypass/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/mini-gastric-bypass-melbourne.astro
+13:44:53   └─ /procedures/mini-gastric-bypass-melbourne/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures/mini-gastric-bypass-sydney.astro
+13:44:53   └─ /procedures/mini-gastric-bypass-sydney/index.html (+1ms) 
+13:44:53 ▶ src/pages/procedures.astro
+13:44:53   └─ /procedures/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/abbotsford/core-hypnosis-melbourne-hypnotherapist-anxiety-depression-addiction-phobias-alcohol-counselling-abbotsford.astro
+13:44:53   └─ /surgeons/abbotsford/core-hypnosis-melbourne-hypnotherapist-anxiety-depression-addiction-phobias-alcohol-counselling-abbotsford/index.html (+2ms) 
+13:44:53 ▶ src/pages/surgeons/abbotsford/index.astro
+13:44:53   └─ /surgeons/abbotsford/index.html (+0ms) 
+13:44:53 ▶ src/pages/surgeons/albans/aa-sheriff-st-albans.astro
+13:44:53   └─ /surgeons/albans/aa-sheriff-st-albans/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/albans/index.astro
+13:44:53   └─ /surgeons/albans/index.html (+0ms) 
+13:44:53 ▶ src/pages/surgeons/alexandria/sydney-gut-clinic-alexandria.astro
+13:44:53   └─ /surgeons/alexandria/sydney-gut-clinic-alexandria/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/alexandria/index.astro
+13:44:53   └─ /surgeons/alexandria/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/bankstown/precision-upper-gi-surgery-dr-manjunath-siddaiah-subramanya-dr-manju-bankstown.astro
+13:44:53   └─ /surgeons/bankstown/precision-upper-gi-surgery-dr-manjunath-siddaiah-subramanya-dr-manju-bankstown/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/bankstown/index.astro
+13:44:53   └─ /surgeons/bankstown/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/barker/anthony-barker.astro
+13:44:53   └─ /surgeons/barker/anthony-barker/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/barker/index.astro
+13:44:53   └─ /surgeons/barker/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/bay/cosmos-clinic-sydney-liposuction-bbl-double-bay.astro
+13:44:53   └─ /surgeons/bay/cosmos-clinic-sydney-liposuction-bbl-double-bay/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/bay/kelly-thornbury-double-bay.astro
+13:44:53   └─ /surgeons/bay/kelly-thornbury-double-bay/index.html (+2ms) 
+13:44:53 ▶ src/pages/surgeons/bay/kourosh-tavakoli-double-bay.astro
+13:44:53   └─ /surgeons/bay/kourosh-tavakoli-double-bay/index.html (+3ms) 
+13:44:53 ▶ src/pages/surgeons/bay/michael-zacharia-facelift-sydney-double-bay.astro
+13:44:53   └─ /surgeons/bay/michael-zacharia-facelift-sydney-double-bay/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/bay/saras-co-double-bay.astro
+13:44:53   └─ /surgeons/bay/saras-co-double-bay/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/bay/index.astro
+13:44:53   └─ /surgeons/bay/index.html (+0ms) 
+13:44:53 ▶ src/pages/surgeons/belgrave/mmc-belgrave-belgrave.astro
+13:44:53   └─ /surgeons/belgrave/mmc-belgrave-belgrave/index.html (+2ms) 
+13:44:53 ▶ src/pages/surgeons/belgrave/index.astro
+13:44:53   └─ /surgeons/belgrave/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/belrose/northern-beaches-cosmetic-surgery-sydney-belrose.astro
+13:44:53   └─ /surgeons/belrose/northern-beaches-cosmetic-surgery-sydney-belrose/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/belrose/index.astro
+13:44:53   └─ /surgeons/belrose/index.html (+0ms) 
+13:44:53 ▶ src/pages/surgeons/berwick/berwick-colorectal-and-surgical-specialists-berwick.astro
+13:44:53   └─ /surgeons/berwick/berwick-colorectal-and-surgical-specialists-berwick/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/berwick/berwick-integrated-care-berwick.astro
+13:44:53   └─ /surgeons/berwick/berwick-integrated-care-berwick/index.html (+1ms) 
+13:44:53 ▶ src/pages/surgeons/berwick/elina-medical-clinc-berwick.astro
+13:44:53   └─ /surgeons/berwick/elina-medical-clinc-berwick/index.htmlCannot read properties of undefined (reading 'toLowerCase')
+  Stack trace:
+    at file:///Users/Cameron/Desktop/weight-loss-surgery-australia/dist/chunks/SurgeonCTA_BKirXnEX.mjs:86:1505
+    at file:///Users/Cameron/Desktop/weight-loss-surgery-australia/dist/chunks/SurgeonCTA_BKirXnEX.mjs:86:113
+    at AstroComponentInstance.init (file:///Users/Cameron/Desktop/weight-loss-surgery-australia/dist/chunks/astro/server_BeNKkUee.mjs:1446:29)
+    at Object.render (file:///Users/Cameron/Desktop/weight-loss-surgery-australia/dist/chunks/astro/server_BeNKkUee.mjs:1845:23)
+    at file:///Users/Cameron/Desktop/weight-loss-surgery-australia/dist/chunks/astro/server_BeNKkUee.mjs:969:18

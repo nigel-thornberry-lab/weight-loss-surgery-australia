@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SurgeonHero from '../../../components/surgeons/SurgeonHero.astro';
+import SurgeonProcedures from '../../../components/surgeons/SurgeonProcedures.astro';
+import SurgeonBio from '../../../components/surgeons/SurgeonBio.astro';
+import SurgeonReviews from '../../../components/surgeons/SurgeonReviews.astro';
+import SurgeonLocation from '../../../components/surgeons/SurgeonLocation.astro';
+import SurgeonCTA from '../../../components/surgeons/SurgeonCTA.astro';
+
+// Surgeon data
+const surgeon = {
+  name: "Mr.Niruben Rajasagaram | Victorian Specialist Surgery & Weight loss centre",
+  surgeon_name: "Mr.Niruben Rajasagaram | Victorian Specialist Surgery & Weight loss centre",
+  business_name: "Mr.Niruben Rajasagaram | Victorian Specialist Surgery & Weight loss centre",
+  qualifications: "Mr.",
+  bio: `Mr.Niruben Rajasagaram | Victorian Specialist Surgery & Weight loss centre is a highly respected bariatric surgeon based in Frankston, VIC, with over 8 years of dedicated experience in weight loss surgery. With a commitment to excellence and a 4.7-star rating, Mr.Niruben Rajasagaram | Victorian Specialist Surgery & Weight loss centre provides expert bariatric surgical services to patients seeking lasting weight loss solutions. Mr.Niruben Rajasagaram | Victorian Specialist Surgery & Weight loss centre holds impressive qualifications including Mr., reflecting a strong foundation in medical education and surgical expertise. Throughout a distinguished career spanning 8 years, Mr.Niruben Rajasagaram | Victorian Specialist Surgery & Weight loss centre has successfully performed an estimated 1200 bariatric procedures, helping countless patients achieve significant, sustainable weight loss and improve their overall health and quality of life.`,
+  rating: 4.7,
+  reviewCount: 38,
+  review_count: 38,
+  phone: "+61385480318",
+  website: "https://www.nirubenrajasagaram.au/",
+  years_experience: 8,
+  estimated_procedures: 1200,
+  address: {
+    street: "Peninsula Private Hospital Sessional Suites, Mezzanine Level/525 Mcclelland Dr",
+    city: "Frankston",
+    state: "VIC",
+    display: "Melbourne"
+  },
+  procedures: ["general-bariatric"],
+  slug: "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston",
+  citySlug: "frankston"
+};
+
+// SEO
+const title = "Mr.Niruben Rajasagaram | Victorian Specialist Surgery & Weight loss centre - Bariatric Surgeon Frankston | Gastric Sleeve & Bypass".replace(/"/g, '\"');
+const description = "Mr.Niruben Rajasagaram | Victorian Specialist Surgery & Weight loss centre is an experienced bariatric surgeon in Frankston with 8+ years experience. Rating: 4.7 stars. Book your consultation for gastric sleeve, bypass, or band surgery.".replace(/"/g, '\"');
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <a href={`/surgeons/${surgeon.citySlug}`} class="hover:text-blue-600">{surgeon.address.city}</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{surgeon.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <SurgeonHero surgeon={surgeon} />
+  <SurgeonProcedures procedures={surgeon.procedures} surgeon={surgeon} />
+  <SurgeonBio bio={surgeon.bio} qualifications={surgeon.qualifications} />
+  <SurgeonReviews rating={surgeon.rating} reviewCount={surgeon.reviewCount} surgeon={surgeon} />
+  <SurgeonLocation surgeon={surgeon} />
+  <SurgeonCTA surgeon={surgeon} />
+</BaseLayout>

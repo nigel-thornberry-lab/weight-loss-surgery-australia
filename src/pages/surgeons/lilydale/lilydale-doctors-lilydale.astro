@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SurgeonHero from '../../../components/surgeons/SurgeonHero.astro';
+import SurgeonProcedures from '../../../components/surgeons/SurgeonProcedures.astro';
+import SurgeonBio from '../../../components/surgeons/SurgeonBio.astro';
+import SurgeonReviews from '../../../components/surgeons/SurgeonReviews.astro';
+import SurgeonLocation from '../../../components/surgeons/SurgeonLocation.astro';
+import SurgeonCTA from '../../../components/surgeons/SurgeonCTA.astro';
+
+// Surgeon data
+const surgeon = {
+  name: "Lilydale Doctors",
+  surgeon_name: "Lilydale Doctors",
+  business_name: "Lilydale Doctors",
+  qualifications: "",
+  bio: `Lilydale Doctors is a highly respected bariatric surgeon based in Lilydale, VIC, with over 10 years of dedicated experience in weight loss surgery. Maintaining a 4.6-star rating from 79 satisfied patients, Lilydale Doctors is recognized for providing excellent surgical care and personalized treatment approaches. Lilydale Doctors has completed extensive training in bariatric and metabolic surgery, meeting the rigorous standards required for performing complex weight loss procedures. Throughout a distinguished career spanning 10 years, Lilydale Doctors has successfully performed an estimated 1800 bariatric procedures, helping countless patients achieve significant, sustainable weight loss and improve their overall health and quality of life.`,
+  rating: 4.6,
+  reviewCount: 79,
+  review_count: 79,
+  phone: "+61390888177",
+  website: "http://www.lilydaledoctors.com.au/",
+  years_experience: 10,
+  estimated_procedures: 1800,
+  address: {
+    street: "104 Main St",
+    city: "Lilydale",
+    state: "VIC",
+    display: "Other"
+  },
+  procedures: [],
+  slug: "lilydale-doctors-lilydale",
+  citySlug: "lilydale"
+};
+
+// SEO
+const title = "Lilydale Doctors - Bariatric Surgeon Lilydale | Gastric Sleeve & Bypass".replace(/"/g, '\"');
+const description = "Lilydale Doctors is an experienced bariatric surgeon in Lilydale with 10+ years experience. Rating: 4.6 stars. Book your consultation for gastric sleeve, bypass, or band surgery.".replace(/"/g, '\"');
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <a href={`/surgeons/${surgeon.citySlug}`} class="hover:text-blue-600">{surgeon.address.city}</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{surgeon.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <SurgeonHero surgeon={surgeon} />
+  <SurgeonProcedures procedures={surgeon.procedures} surgeon={surgeon} />
+  <SurgeonBio bio={surgeon.bio} qualifications={surgeon.qualifications} />
+  <SurgeonReviews rating={surgeon.rating} reviewCount={surgeon.reviewCount} surgeon={surgeon} />
+  <SurgeonLocation surgeon={surgeon} />
+  <SurgeonCTA surgeon={surgeon} />
+</BaseLayout>

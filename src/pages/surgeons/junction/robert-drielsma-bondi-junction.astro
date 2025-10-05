@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SurgeonHero from '../../../components/surgeons/SurgeonHero.astro';
+import SurgeonProcedures from '../../../components/surgeons/SurgeonProcedures.astro';
+import SurgeonBio from '../../../components/surgeons/SurgeonBio.astro';
+import SurgeonReviews from '../../../components/surgeons/SurgeonReviews.astro';
+import SurgeonLocation from '../../../components/surgeons/SurgeonLocation.astro';
+import SurgeonCTA from '../../../components/surgeons/SurgeonCTA.astro';
+
+// Surgeon data
+const surgeon = {
+  name: "Robert Drielsma",
+  surgeon_name: "Robert Drielsma",
+  business_name: "Dr Robert Drielsma",
+  qualifications: "Dr",
+  bio: `Robert Drielsma is a highly respected bariatric surgeon based in Bondi Junction, NSW, with over 8 years of dedicated experience in weight loss surgery. With a commitment to excellence and a 5-star rating, Robert Drielsma provides expert bariatric surgical services to patients seeking lasting weight loss solutions. Robert Drielsma holds impressive qualifications including Dr, reflecting a strong foundation in medical education and surgical expertise. Throughout a distinguished career spanning 8 years, Robert Drielsma has successfully performed an estimated 1200 bariatric procedures, helping countless patients achieve significant, sustainable weight loss and improve their overall health and quality of life.`,
+  rating: 5,
+  reviewCount: 36,
+  review_count: 36,
+  phone: "(018) 001 80777",
+  website: "https://drdrielsma.com.au/",
+  years_experience: 8,
+  estimated_procedures: 1200,
+  address: {
+    street: "Suite 1805, Office Tower One/520 Oxford St",
+    city: "Bondi Junction",
+    state: "NSW",
+    display: "Sydney"
+  },
+  procedures: [],
+  slug: "robert-drielsma-bondi-junction",
+  citySlug: "junction"
+};
+
+// SEO
+const title = "Robert Drielsma - Bariatric Surgeon Bondi Junction | Gastric Sleeve & Bypass".replace(/"/g, '\"');
+const description = "Robert Drielsma is an experienced bariatric surgeon in Bondi Junction with 8+ years experience. Rating: 5.0 stars. Book your consultation for gastric sleeve, bypass, or band surgery.".replace(/"/g, '\"');
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <a href={`/surgeons/${surgeon.citySlug}`} class="hover:text-blue-600">{surgeon.address.city}</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{surgeon.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <SurgeonHero surgeon={surgeon} />
+  <SurgeonProcedures procedures={surgeon.procedures} surgeon={surgeon} />
+  <SurgeonBio bio={surgeon.bio} qualifications={surgeon.qualifications} />
+  <SurgeonReviews rating={surgeon.rating} reviewCount={surgeon.reviewCount} surgeon={surgeon} />
+  <SurgeonLocation surgeon={surgeon} />
+  <SurgeonCTA surgeon={surgeon} />
+</BaseLayout>

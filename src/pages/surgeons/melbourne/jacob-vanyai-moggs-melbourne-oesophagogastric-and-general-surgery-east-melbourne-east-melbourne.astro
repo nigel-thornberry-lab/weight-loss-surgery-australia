@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SurgeonHero from '../../../components/surgeons/SurgeonHero.astro';
+import SurgeonProcedures from '../../../components/surgeons/SurgeonProcedures.astro';
+import SurgeonBio from '../../../components/surgeons/SurgeonBio.astro';
+import SurgeonReviews from '../../../components/surgeons/SurgeonReviews.astro';
+import SurgeonLocation from '../../../components/surgeons/SurgeonLocation.astro';
+import SurgeonCTA from '../../../components/surgeons/SurgeonCTA.astro';
+
+// Surgeon data
+const surgeon = {
+  name: "Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne",
+  surgeon_name: "Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne",
+  business_name: "Mr Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne",
+  qualifications: "Mr",
+  bio: `Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne is a highly respected bariatric surgeon based in East Melbourne, VIC, with over 5 years of dedicated experience in weight loss surgery. With a commitment to excellence and a 5-star rating, Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne provides expert bariatric surgical services to patients seeking lasting weight loss solutions. Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne holds impressive qualifications including Mr, reflecting a strong foundation in medical education and surgical expertise. Throughout a distinguished career spanning 5 years, Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne has successfully performed an estimated 525 bariatric procedures, helping countless patients achieve significant, sustainable weight loss and improve their overall health and quality of life.`,
+  rating: 5,
+  reviewCount: 1,
+  review_count: 1,
+  phone: "+61383703188",
+  website: "http://moggs.com.au/",
+  years_experience: 5,
+  estimated_procedures: 525,
+  address: {
+    street: "Epworth Freemasons, Level 1/124 Grey St",
+    city: "East Melbourne",
+    state: "VIC",
+    display: "Melbourne"
+  },
+  procedures: [],
+  slug: "jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne",
+  citySlug: "melbourne"
+};
+
+// SEO
+const title = "Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne - Bariatric Surgeon East Melbourne | Gastric Sleeve & Bypass".replace(/"/g, '\"');
+const description = "Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne is an experienced bariatric surgeon in East Melbourne with 5+ years experience. Rating: 5.0 stars. Book your consultation for gastric sleeve, bypass, or band surgery.".replace(/"/g, '\"');
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <a href={`/surgeons/${surgeon.citySlug}`} class="hover:text-blue-600">{surgeon.address.city}</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{surgeon.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <SurgeonHero surgeon={surgeon} />
+  <SurgeonProcedures procedures={surgeon.procedures} surgeon={surgeon} />
+  <SurgeonBio bio={surgeon.bio} qualifications={surgeon.qualifications} />
+  <SurgeonReviews rating={surgeon.rating} reviewCount={surgeon.reviewCount} surgeon={surgeon} />
+  <SurgeonLocation surgeon={surgeon} />
+  <SurgeonCTA surgeon={surgeon} />
+</BaseLayout>

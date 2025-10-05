@@ -1,0 +1,642 @@
+---
+/**
+ * Main Surgeon Directory Page
+ * 
+ * Features:
+ * - Hero section
+ * - Search and filters
+ * - Surgeon cards (grid/list view)
+ * - Map view
+ * - Pagination
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SurgeonMap from '../../components/surgeons/SurgeonMap.astro';
+import { 
+  getAllSurgeons, 
+  getAvailableCities, 
+  getAvailableProcedures,
+  formatRating,
+  getDisplayName
+} from '../../data/surgeons.ts';
+
+// Get all surgeons and available filters
+const allSurgeons = getAllSurgeons();
+const cities = getAvailableCities().slice(0, 30); // Top 30 cities
+const procedures = getAvailableProcedures();
+
+// Parse query parameters (for filtering)
+const url = new URL(Astro.request.url);
+const searchQuery = url.searchParams.get('search') || '';
+const cityFilter = url.searchParams.get('city') || '';
+const procedureFilter = url.searchParams.get('procedure') || '';
+const ratingFilter = url.searchParams.get('rating') || '';
+const experienceFilter = url.searchParams.get('experience') || '';
+const sortBy = url.searchParams.get('sort') || 'rating';
+const view = url.searchParams.get('view') || 'grid';
+const page = parseInt(url.searchParams.get('page') || '1');
+
+// Filter surgeons
+let filteredSurgeons = allSurgeons;
+
+// Apply search filter
+if (searchQuery) {
+  const query = searchQuery.toLowerCase();
+  filteredSurgeons = filteredSurgeons.filter(s => 
+    getDisplayName(s).toLowerCase().includes(query) ||
+    s.city.toLowerCase().includes(query) ||
+    s.procedures.toLowerCase().includes(query) ||
+    s.qualifications.toLowerCase().includes(query)
+  );
+}
+
+// Apply city filter
+if (cityFilter) {
+  filteredSurgeons = filteredSurgeons.filter(s => 
+    s.city === cityFilter || s.primary_location === cityFilter
+  );
+}
+
+// Apply procedure filter
+if (procedureFilter) {
+  filteredSurgeons = filteredSurgeons.filter(s => 
+    s.procedures.toLowerCase().includes(procedureFilter.toLowerCase())
+  );
+}
+
+// Apply rating filter
+if (ratingFilter) {
+  const minRating = parseFloat(ratingFilter);
+  filteredSurgeons = filteredSurgeons.filter(s => s.rating >= minRating);
+}
+
+// Apply experience filter
+if (experienceFilter) {
+  const minExperience = parseInt(experienceFilter);
+  filteredSurgeons = filteredSurgeons.filter(s => s.years_experience >= minExperience);
+}
+
+// Sort surgeons
+switch (sortBy) {
+  case 'rating':
+    filteredSurgeons.sort((a, b) => b.rating - a.rating || b.review_count - a.review_count);
+    break;
+  case 'experience':
+    filteredSurgeons.sort((a, b) => b.years_experience - a.years_experience);
+    break;
+  case 'name':
+    filteredSurgeons.sort((a, b) => getDisplayName(a).localeCompare(getDisplayName(b)));
+    break;
+  case 'newest':
+    filteredSurgeons.sort((a, b) => b.priority_score - a.priority_score);
+    break;
+}
+
+// Pagination
+const perPage = 20;
+const totalPages = Math.ceil(filteredSurgeons.length / perPage);
+const startIndex = (page - 1) * perPage;
+const endIndex = startIndex + perPage;
+const paginatedSurgeons = filteredSurgeons.slice(startIndex, endIndex);
+
+// Build filter URL
+const buildUrl = (params: Record<string, string>) => {
+  const newParams = new URLSearchParams(url.searchParams);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value) {
+      newParams.set(key, value);
+    } else {
+      newParams.delete(key);
+    }
+  });
+  return `/surgeons/?${newParams.toString()}`;
+};
+
+// Pre-calculate pagination page numbers
+const maxVisiblePages = Math.min(totalPages, 7);
+const paginationPages: number[] = [];
+for (let i = 0; i < maxVisiblePages; i++) {
+  let pageNum = i + 1;
+  const isLowTotal = totalPages <= 7;
+  const isNearStart = page <= 4;
+  const isNearEnd = page >= totalPages - 3;
+  
+  if (!isLowTotal && !isNearStart && isNearEnd) {
+    pageNum = totalPages - 6 + i;
+  } else if (!isLowTotal && !isNearStart) {
+    pageNum = page - 3 + i;
+  }
+  
+  paginationPages.push(pageNum);
+}
+---
+
+<BaseLayout 
+  title="Find a Bariatric Surgeon in Australia | Expert Weight Loss Surgery"
+  description={`Browse ${allSurgeons.length} verified bariatric surgeons across Australia. Find experienced weight loss surgery specialists near you with ratings, reviews, and qualifications.`}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+          Find Your Bariatric Surgeon
+        </h1>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+          Browse {allSurgeons.length} verified weight loss surgery specialists across Australia. 
+          Compare qualifications, experience, ratings, and procedures.
+        </p>
+      </div>
+      
+      <!-- Search Bar -->
+      <form method="GET" action="/surgeons/" class="max-w-4xl mx-auto">
+        <div class="relative">
+          <input
+            type="text"
+            name="search"
+            value={searchQuery}
+            placeholder="Search by surgeon name, city, or procedure..."
+            class="w-full px-6 py-4 pl-14 pr-32 text-lg text-gray-900 rounded-2xl shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300"
+          />
+          <svg class="absolute left-5 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+          </svg>
+          <button
+            type="submit"
+            class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl font-semibold transition-colors"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+      
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto">
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold">{allSurgeons.length}</div>
+          <div class="text-sm text-blue-200">Surgeons</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold">{cities.length}+</div>
+          <div class="text-sm text-blue-200">Cities</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold">4.5⭐</div>
+          <div class="text-sm text-blue-200">Avg Rating</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center">
+          <div class="text-3xl font-bold">100%</div>
+          <div class="text-sm text-blue-200">Verified</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Main Content -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col lg:flex-row gap-8">
+        
+        <!-- Filters Sidebar -->
+        <aside class="lg:w-80 flex-shrink-0">
+          <div class="bg-white rounded-2xl shadow-lg p-6 sticky top-4">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-gray-900">Filters</h2>
+              {(cityFilter || procedureFilter || ratingFilter || experienceFilter) && (
+                <a href="/surgeons/" class="text-sm text-blue-600 hover:text-blue-700 font-medium">
+                  Clear All
+                </a>
+              )}
+            </div>
+            
+            <form method="GET" action="/surgeons/" class="space-y-6">
+              {searchQuery && <input type="hidden" name="search" value={searchQuery} />}
+              {sortBy && <input type="hidden" name="sort" value={sortBy} />}
+              {view && <input type="hidden" name="view" value={view} />}
+              
+              <!-- City Filter -->
+              <div>
+                <label class="block text-sm font-bold text-gray-900 mb-2">
+                  City / Location
+                </label>
+                <select 
+                  name="city"
+                  class="w-full px-4 py-2 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none"
+                  onchange="this.form.submit()"
+                >
+                  <option value="">All Cities</option>
+                  {cities.map(c => (
+                    <option value={c.city} selected={cityFilter === c.city}>
+                      {c.city} ({c.count})
+                    </option>
+                  ))}
+                </select>
+              </div>
+              
+              <!-- Procedure Filter -->
+              <div>
+                <label class="block text-sm font-bold text-gray-900 mb-2">
+                  Procedure
+                </label>
+                <select 
+                  name="procedure"
+                  class="w-full px-4 py-2 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none"
+                  onchange="this.form.submit()"
+                >
+                  <option value="">All Procedures</option>
+                  {procedures.map(p => (
+                    <option value={p.procedure} selected={procedureFilter === p.procedure}>
+                      {p.procedure.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')} ({p.count})
+                    </option>
+                  ))}
+                </select>
+              </div>
+              
+              <!-- Rating Filter -->
+              <div>
+                <label class="block text-sm font-bold text-gray-900 mb-3">
+                  Minimum Rating
+                </label>
+                <div class="space-y-2">
+                  {['4.5', '4.0', '3.5', '3.0'].map(rating => (
+                    <label class="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="rating"
+                        value={rating}
+                        checked={ratingFilter === rating}
+                        onchange="this.form.submit()"
+                        class="w-4 h-4 text-blue-600"
+                      />
+                      <span class="text-gray-700">{rating}+ Stars</span>
+                    </label>
+                  ))}
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="rating"
+                      value=""
+                      checked={!ratingFilter}
+                      onchange="this.form.submit()"
+                      class="w-4 h-4 text-blue-600"
+                    />
+                    <span class="text-gray-700">Any Rating</span>
+                  </label>
+                </div>
+              </div>
+              
+              <!-- Experience Filter -->
+              <div>
+                <label class="block text-sm font-bold text-gray-900 mb-3">
+                  Years of Experience
+                </label>
+                <div class="space-y-2">
+                  {['15', '10', '5'].map(years => (
+                    <label class="flex items-center gap-2 cursor-pointer">
+                      <input
+                        type="radio"
+                        name="experience"
+                        value={years}
+                        checked={experienceFilter === years}
+                        onchange="this.form.submit()"
+                        class="w-4 h-4 text-blue-600"
+                      />
+                      <span class="text-gray-700">{years}+ Years</span>
+                    </label>
+                  ))}
+                  <label class="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="experience"
+                      value=""
+                      checked={!experienceFilter}
+                      onchange="this.form.submit()"
+                      class="w-4 h-4 text-blue-600"
+                    />
+                    <span class="text-gray-700">Any Experience</span>
+                  </label>
+                </div>
+              </div>
+              
+              <noscript>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-xl font-semibold">
+                  Apply Filters
+                </button>
+              </noscript>
+            </form>
+          </div>
+        </aside>
+        
+        <!-- Results Section -->
+        <main class="flex-1">
+          
+          <!-- Toolbar -->
+          <div class="bg-white rounded-2xl shadow-lg p-4 mb-6">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+              
+              <!-- Results Count -->
+              <div class="text-gray-700">
+                Showing <strong>{startIndex + 1}-{Math.min(endIndex, filteredSurgeons.length)}</strong> of <strong>{filteredSurgeons.length}</strong> surgeons
+              </div>
+              
+              <div class="flex items-center gap-4">
+                <!-- Sort -->
+                <select 
+                  name="sort"
+                  class="px-4 py-2 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none"
+                  onchange={`window.location.href='${buildUrl({ sort: '', page: '' })}'.replace('sort=', 'sort=' + this.value)`}
+                >
+                  <option value="rating" selected={sortBy === 'rating'}>Highest Rated</option>
+                  <option value="experience" selected={sortBy === 'experience'}>Most Experienced</option>
+                  <option value="name" selected={sortBy === 'name'}>Name (A-Z)</option>
+                  <option value="newest" selected={sortBy === 'newest'}>Featured First</option>
+                </select>
+                
+                <!-- View Toggle -->
+                <div class="flex items-center gap-2 bg-gray-100 rounded-xl p-1">
+                  <a
+                    href={buildUrl({ view: 'grid', page: '1' })}
+                    class={`px-4 py-2 rounded-lg transition-colors ${view === 'grid' ? 'bg-white shadow-sm text-blue-600' : 'text-gray-600 hover:text-gray-900'}`}
+                    title="Grid View"
+                  >
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                    </svg>
+                  </a>
+                  <a
+                    href={buildUrl({ view: 'list', page: '1' })}
+                    class={`px-4 py-2 rounded-lg transition-colors ${view === 'list' ? 'bg-white shadow-sm text-blue-600' : 'text-gray-600 hover:text-gray-900'}`}
+                    title="List View"
+                  >
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                    </svg>
+                  </a>
+                  <a
+                    href={buildUrl({ view: 'map', page: '1' })}
+                    class={`px-4 py-2 rounded-lg transition-colors ${view === 'map' ? 'bg-white shadow-sm text-blue-600' : 'text-gray-600 hover:text-gray-900'}`}
+                    title="Map View"
+                  >
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Map View -->
+          {view === 'map' && (
+            <SurgeonMap surgeons={filteredSurgeons} />
+          )}
+          
+          <!-- Grid View -->
+          {view === 'grid' && (
+            <div class="grid md:grid-cols-2 gap-6">
+              {paginatedSurgeons.map(surgeon => (
+                <article class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-200 overflow-hidden group hover:-translate-y-1">
+                  <div class="p-6">
+                    <div class="flex items-start gap-4 mb-4">
+                      <!-- Avatar -->
+                      <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center text-white text-2xl font-bold flex-shrink-0">
+                        {getDisplayName(surgeon).split(' ').map(w => w[0]).join('').slice(0, 2)}
+                      </div>
+                      
+                      <div class="flex-1 min-w-0">
+                        <h3 class="text-xl font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+                          <a href={`/surgeons/${surgeon.slug}`} class="hover:underline">
+                            {getDisplayName(surgeon)}
+                          </a>
+                        </h3>
+                        {surgeon.qualifications && (
+                          <p class="text-sm text-gray-600 mb-2">
+                            {surgeon.qualifications.split(',').slice(0, 3).join(', ')}
+                          </p>
+                        )}
+                        <div class="flex items-center gap-2 text-sm text-gray-600">
+                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                          </svg>
+                          {surgeon.location_display}
+                        </div>
+                      </div>
+                      
+                      <!-- Tier Badge -->
+                      {surgeon.tier === 1 && (
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-lg text-xs font-bold">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    
+                    <!-- Rating -->
+                    <div class="flex items-center gap-2 mb-4">
+                      <div class="flex items-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <svg class={`w-5 h-5 ${i < Math.floor(surgeon.rating) ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                          </svg>
+                        ))}
+                      </div>
+                      <span class="font-bold text-gray-900">{surgeon.rating}</span>
+                      <span class="text-gray-600">({surgeon.review_count} reviews)</span>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                      <div class="bg-gray-50 rounded-lg p-3">
+                        <div class="text-sm text-gray-600 mb-1">Experience</div>
+                        <div class="font-bold text-gray-900">{surgeon.years_experience}+ years</div>
+                      </div>
+                      <div class="bg-gray-50 rounded-lg p-3">
+                        <div class="text-sm text-gray-600 mb-1">Procedures</div>
+                        <div class="font-bold text-gray-900">~{surgeon.estimated_procedures.toLocaleString()}</div>
+                      </div>
+                    </div>
+                    
+                    <!-- Procedures -->
+                    {surgeon.procedures && (
+                      <div class="mb-4">
+                        <div class="text-sm text-gray-600 mb-2">Specializes in:</div>
+                        <div class="flex flex-wrap gap-2">
+                          {surgeon.procedures.split(/[,|]/).slice(0, 3).map(proc => (
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-xs font-medium">
+                              {proc.trim().split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    
+                    <!-- CTA -->
+                    <a 
+                      href={`/surgeons/${surgeon.slug}`}
+                      class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-colors"
+                    >
+                      View Profile
+                      <svg class="inline-block w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+          
+          <!-- List View -->
+          {view === 'list' && (
+            <div class="space-y-4">
+              {paginatedSurgeons.map(surgeon => (
+                <article class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-200 p-6 group hover:-translate-y-0.5">
+                  <div class="flex items-center gap-6">
+                    <!-- Avatar -->
+                    <div class="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center text-white text-3xl font-bold flex-shrink-0">
+                      {getDisplayName(surgeon).split(' ').map(w => w[0]).join('').slice(0, 2)}
+                    </div>
+                    
+                    <!-- Info -->
+                    <div class="flex-1">
+                      <div class="flex items-start justify-between mb-2">
+                        <div>
+                          <h3 class="text-2xl font-bold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors">
+                            <a href={`/surgeons/${surgeon.slug}`} class="hover:underline">
+                              {getDisplayName(surgeon)}
+                            </a>
+                          </h3>
+                          {surgeon.qualifications && (
+                            <p class="text-gray-600 mb-2">{surgeon.qualifications}</p>
+                          )}
+                          <div class="flex items-center gap-2 text-gray-600">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                            {surgeon.location_display}
+                          </div>
+                        </div>
+                        
+                        {surgeon.tier === 1 && (
+                          <span class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-xl text-sm font-bold">
+                            ⭐ Featured
+                          </span>
+                        )}
+                      </div>
+                      
+                      <div class="flex items-center gap-6 mb-4">
+                        <!-- Rating -->
+                        <div class="flex items-center gap-2">
+                          <div class="flex items-center gap-0.5">
+                            {[...Array(5)].map((_, i) => (
+                              <svg class={`w-5 h-5 ${i < Math.floor(surgeon.rating) ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                              </svg>
+                            ))}
+                          </div>
+                          <span class="font-bold">{surgeon.rating}</span>
+                          <span class="text-gray-600">({surgeon.review_count})</span>
+                        </div>
+                        
+                        <!-- Stats -->
+                        <div class="text-gray-700">
+                          <strong>{surgeon.years_experience}+</strong> years experience
+                        </div>
+                        <div class="text-gray-700">
+                          <strong>~{surgeon.estimated_procedures.toLocaleString()}</strong> procedures
+                        </div>
+                      </div>
+                      
+                      <!-- Procedures -->
+                      {surgeon.procedures && (
+                        <div class="flex flex-wrap gap-2">
+                          {surgeon.procedures.split(/[,|]/).slice(0, 4).map(proc => (
+                            <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-lg text-sm font-medium">
+                              {proc.trim().split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    
+                    <!-- CTA -->
+                    <a 
+                      href={`/surgeons/${surgeon.slug}`}
+                      class="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-colors"
+                    >
+                      View Profile
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+          
+          <!-- No Results -->
+          {paginatedSurgeons.length === 0 && (
+            <div class="bg-white rounded-2xl shadow-lg p-12 text-center">
+              <svg class="w-24 h-24 mx-auto text-gray-400 mb-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+              </svg>
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">No surgeons found</h3>
+              <p class="text-gray-600 mb-6">Try adjusting your filters or search terms</p>
+              <a href="/surgeons/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-xl transition-colors">
+                Clear All Filters
+              </a>
+            </div>
+          )}
+          
+          <!-- Pagination -->
+          {totalPages > 1 && view !== 'map' && (
+            <div class="mt-8 flex items-center justify-center gap-2">
+              {page > 1 && (
+                <a 
+                  href={buildUrl({ page: String(page - 1) })}
+                  class="px-4 py-2 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:text-blue-600 font-medium transition-colors"
+                >
+                  Previous
+                </a>
+              )}
+              
+              {paginationPages.map((pageNum) => (
+                <a
+                  href={buildUrl({ page: String(pageNum) })}
+                  class={`px-4 py-2 rounded-xl font-medium transition-colors ${
+                    page === pageNum
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-white border-2 border-gray-200 hover:border-blue-500 hover:text-blue-600'
+                  }`}
+                >
+                  {pageNum}
+                </a>
+              ))}
+              
+              {page < totalPages && (
+                <a 
+                  href={buildUrl({ page: String(page + 1) })}
+                  class="px-4 py-2 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:text-blue-600 font-medium transition-colors"
+                >
+                  Next
+                </a>
+              )}
+            </div>
+          )}
+        </main>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Enhance form with instant filtering (progressive enhancement)
+  if (window.history && window.history.pushState) {
+    document.querySelectorAll('select[name], input[type="radio"]').forEach(input => {
+      input.addEventListener('change', function(e) {
+        const form = (e.target as HTMLElement).closest('form');
+        if (form && !(e.target as HTMLInputElement).disabled) {
+          (e.target as HTMLInputElement).disabled = true;
+        }
+      });
+    });
+  }
+</script>

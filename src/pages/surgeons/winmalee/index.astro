@@ -1,0 +1,148 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+// Surgeons data
+const surgeons = [
+  {
+    "name": "Greencross Vets Winmalee",
+    "slug": "greencross-vets-winmalee-winmalee",
+    "qualifications": "",
+    "rating": 4.6,
+    "reviewCount": 119,
+    "procedures": [],
+    "phone": "+61247544333",
+    "address": "Other",
+    "tier": 1
+  }
+];
+
+const cityName = "Winmalee";
+const citySlug = "winmalee";
+const surgeonCount = 1;
+
+// SEO
+const title = `Weight Loss Surgeons in ${cityName} | Find Bariatric Surgeons`;
+const description = `Find ${surgeonCount} verified weight loss surgeons in ${cityName}. Compare qualifications, ratings, and procedures. Book your consultation today.`;
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{cityName}</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Weight Loss Surgeons in {cityName}
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          {surgeonCount} verified bariatric surgeons ready to help you
+        </p>
+        <div class="flex items-center justify-center space-x-8 text-sm text-gray-600">
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            AHPRA Registered
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Verified Reviews
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Expert Care
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Surgeons Grid -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {surgeons.map(surgeon => (
+          <a 
+            href={`/surgeons/${citySlug}/${surgeon.slug}`}
+            class="block p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition group"
+          >
+            <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">{surgeon.name}</h2>
+            {surgeon.qualifications && (
+              <p class="text-sm text-gray-600 mb-3">{surgeon.qualifications}</p>
+            )}
+            
+            <div class="flex items-center gap-2 mb-3">
+              <div class="flex">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <svg
+                    class={`w-4 h-4 ${i < Math.floor(surgeon.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span class="font-semibold text-gray-900">{surgeon.rating.toFixed(1)}</span>
+              <span class="text-gray-600 text-sm">({surgeon.reviewCount} reviews)</span>
+            </div>
+
+            <div class="mb-3">
+              <p class="text-sm text-gray-600">{surgeon.address}</p>
+            </div>
+
+            {surgeon.procedures.length > 0 && (
+              <div class="mb-4">
+                <div class="flex flex-wrap gap-1">
+                  {surgeon.procedures.slice(0, 3).map(proc => (
+                    <span class="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded font-medium">
+                      {proc}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div class="mt-4 flex items-center text-blue-600 font-semibold">
+              View Profile 
+              <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-700 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
+      <p class="text-lg text-blue-100 mb-6">Book a consultation with a qualified surgeon in {cityName}</p>
+      <a 
+        href="/#consultation" 
+        class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition"
+      >
+        Book Free Consultation
+      </a>
+    </div>
+  </section>
+</BaseLayout>

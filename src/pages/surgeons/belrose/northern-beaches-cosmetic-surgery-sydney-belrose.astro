@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SurgeonHero from '../../../components/surgeons/SurgeonHero.astro';
+import SurgeonProcedures from '../../../components/surgeons/SurgeonProcedures.astro';
+import SurgeonBio from '../../../components/surgeons/SurgeonBio.astro';
+import SurgeonReviews from '../../../components/surgeons/SurgeonReviews.astro';
+import SurgeonLocation from '../../../components/surgeons/SurgeonLocation.astro';
+import SurgeonCTA from '../../../components/surgeons/SurgeonCTA.astro';
+
+// Surgeon data
+const surgeon = {
+  name: "Northern Beaches Cosmetic Surgery, Sydney",
+  surgeon_name: "Northern Beaches Cosmetic Surgery, Sydney",
+  business_name: "Northern Beaches Cosmetic Surgery, Sydney",
+  qualifications: "",
+  bio: `Northern Beaches Cosmetic Surgery, Sydney is a highly respected bariatric surgeon based in Belrose, NSW, with over 15 years of dedicated experience in weight loss surgery. With an exceptional 4.7-star rating from over 131 patient reviews, Northern Beaches Cosmetic Surgery, Sydney has established a reputation for delivering outstanding surgical outcomes and compassionate patient care throughout Australia. Northern Beaches Cosmetic Surgery, Sydney has completed extensive training in bariatric and metabolic surgery, meeting the rigorous standards required for performing complex weight loss procedures. Throughout a distinguished career spanning 15 years, Northern Beaches Cosmetic Surgery, Sydney has successfully performed an estimated 3375 bariatric procedures, helping countless patients achieve significant, sustainable weight loss and improve their overall health and quality of life.`,
+  rating: 4.7,
+  reviewCount: 131,
+  review_count: 131,
+  phone: "+61299862552",
+  website: "http://www.northernbeachescosmetic.com.au/?utm_source=GMB&utm_medium=GMB&utm_campaign=GMB&utm_id=GMB",
+  years_experience: 15,
+  estimated_procedures: 3375,
+  address: {
+    street: "27/14-16 Narabang Way",
+    city: "Belrose",
+    state: "NSW",
+    display: "Other"
+  },
+  procedures: [],
+  slug: "northern-beaches-cosmetic-surgery-sydney-belrose",
+  citySlug: "belrose"
+};
+
+// SEO
+const title = "Northern Beaches Cosmetic Surgery, Sydney - Bariatric Surgeon Belrose | Gastric Sleeve & Bypass".replace(/"/g, '\"');
+const description = "Northern Beaches Cosmetic Surgery, Sydney is an experienced bariatric surgeon in Belrose with 15+ years experience. Rating: 4.7 stars. Book your consultation for gastric sleeve, bypass, or band surgery.".replace(/"/g, '\"');
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <a href={`/surgeons/${surgeon.citySlug}`} class="hover:text-blue-600">{surgeon.address.city}</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{surgeon.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <SurgeonHero surgeon={surgeon} />
+  <SurgeonProcedures procedures={surgeon.procedures} surgeon={surgeon} />
+  <SurgeonBio bio={surgeon.bio} qualifications={surgeon.qualifications} />
+  <SurgeonReviews rating={surgeon.rating} reviewCount={surgeon.reviewCount} surgeon={surgeon} />
+  <SurgeonLocation surgeon={surgeon} />
+  <SurgeonCTA surgeon={surgeon} />
+</BaseLayout>

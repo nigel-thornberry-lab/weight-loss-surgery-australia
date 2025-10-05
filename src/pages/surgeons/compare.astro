@@ -1,0 +1,655 @@
+---
+/**
+ * Surgeon Comparison Tool
+ * 
+ * Allows users to compare up to 3 surgeons side-by-side
+ * URL format: /surgeons/compare?a=slug1&b=slug2&c=slug3
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { 
+  getSurgeonBySlug,
+  getAllSurgeons,
+  getDisplayName,
+  formatRating,
+  formatPhoneNumber,
+  getProcedureList
+} from '../../data/surgeons.ts';
+
+// Get URL parameters
+const url = new URL(Astro.request.url);
+const slugA = url.searchParams.get('a') || '';
+const slugB = url.searchParams.get('b') || '';
+const slugC = url.searchParams.get('c') || '';
+
+// Get surgeons
+const surgeonA = slugA ? getSurgeonBySlug(slugA) : null;
+const surgeonB = slugB ? getSurgeonBySlug(slugB) : null;
+const surgeonC = slugC ? getSurgeonBySlug(slugC) : null;
+
+// Filter out null surgeons
+const surgeons = [surgeonA, surgeonB, surgeonC].filter(s => s !== null);
+const hasComparison = surgeons.length > 0;
+
+// Get all surgeons for search
+const allSurgeons = getAllSurgeons();
+
+// Popular comparisons (top tier 1 surgeons)
+const popularSurgeons = allSurgeons
+  .filter(s => s.tier === 1)
+  .sort((a, b) => b.priority_score - a.priority_score)
+  .slice(0, 6);
+
+// Build share URL
+const shareUrl = `${url.origin}/surgeons/compare${url.search}`;
+
+// Helper to check if values differ
+const valuesDiffer = (values: any[]) => {
+  const uniqueValues = [...new Set(values)];
+  return uniqueValues.length > 1;
+};
+
+// Helper to format procedures for display
+const formatProcedures = (procedures: string) => {
+  return procedures.split(/[,|]/).map(p => p.trim()).filter(p => p);
+};
+
+// Sample data for missing fields (would come from actual data)
+const consultationFees = ['Free initial consultation', 'Free initial consultation', 'Free initial consultation'];
+const insuranceAccepted = ['Medicare, Private Health', 'Medicare, Private Health', 'Medicare, Private Health'];
+---
+
+<BaseLayout 
+  title={hasComparison ? `Compare Surgeons | Weight Loss Surgery Australia` : 'Compare Bariatric Surgeons | Weight Loss Surgery Australia'}
+  description={hasComparison 
+    ? `Compare ${surgeons.map(s => getDisplayName(s)).join(' vs ')} side-by-side. View qualifications, experience, ratings, procedures, and pricing.`
+    : 'Compare bariatric surgeons in Australia. View qualifications, experience, ratings, procedures, and pricing side-by-side to make an informed decision.'
+  }
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+          {hasComparison ? 'Compare Surgeons' : 'Compare Bariatric Surgeons'}
+        </h1>
+        <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+          {hasComparison 
+            ? 'Side-by-side comparison of qualifications, experience, ratings, and procedures'
+            : 'Select up to 3 surgeons to compare their qualifications, experience, and services'
+          }
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {hasComparison ? (
+    <!-- Comparison View -->
+    <section class="py-12 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Action Bar -->
+        <div class="bg-white rounded-2xl shadow-lg p-4 mb-8">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-gray-700">
+              Comparing <strong>{surgeons.length}</strong> surgeon{surgeons.length !== 1 && 's'}
+            </div>
+            
+            <div class="flex items-center gap-3">
+              <!-- Share Button -->
+              <button
+                onclick={`navigator.clipboard.writeText('${shareUrl}').then(() => alert('Comparison link copied to clipboard!'))`}
+                class="inline-flex items-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"/>
+                </svg>
+                Share Comparison
+              </button>
+              
+              <!-- Back to Directory -->
+              <a
+                href="/surgeons/"
+                class="inline-flex items-center gap-2 px-6 py-2.5 bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold rounded-xl transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+                </svg>
+                Back to Directory
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Desktop Comparison Table -->
+        <div class="hidden lg:block bg-white rounded-2xl shadow-2xl overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full">
+              <thead class="bg-gray-50 border-b-2 border-gray-200">
+                <tr>
+                  <th class="py-6 px-6 text-left text-sm font-bold text-gray-900 uppercase tracking-wider w-1/4">
+                    Feature
+                  </th>
+                  {surgeons.map(surgeon => (
+                    <th class="py-6 px-6 text-center w-1/4">
+                      <!-- Profile Photo -->
+                      <div class="flex flex-col items-center">
+                        <div class="w-32 h-32 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center text-white text-4xl font-bold mb-4 shadow-lg">
+                          {getDisplayName(surgeon).split(' ').map(w => w[0]).join('').slice(0, 2)}
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">
+                          {getDisplayName(surgeon)}
+                        </h3>
+                        {surgeon.tier === 1 && (
+                          <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-lg text-xs font-bold mb-2">
+                            ⭐ Featured
+                          </span>
+                        )}
+                      </div>
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                
+                <!-- Qualifications -->
+                <tr class={valuesDiffer(surgeons.map(s => s.qualifications)) ? 'bg-yellow-50' : ''}>
+                  <td class="py-6 px-6 font-bold text-gray-900">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                      </svg>
+                      Qualifications
+                    </div>
+                  </td>
+                  {surgeons.map(surgeon => (
+                    <td class="py-6 px-6 text-center">
+                      <div class="text-sm text-gray-700 leading-relaxed">
+                        {surgeon.qualifications || 'Not specified'}
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+                
+                <!-- Years of Experience -->
+                <tr class={valuesDiffer(surgeons.map(s => s.years_experience)) ? 'bg-yellow-50' : ''}>
+                  <td class="py-6 px-6 font-bold text-gray-900">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                      </svg>
+                      Years of Experience
+                    </div>
+                  </td>
+                  {surgeons.map(surgeon => (
+                    <td class="py-6 px-6 text-center">
+                      <div class="text-3xl font-bold text-blue-600 mb-1">
+                        {surgeon.years_experience}+
+                      </div>
+                      <div class="text-sm text-gray-600">years</div>
+                    </td>
+                  ))}
+                </tr>
+                
+                <!-- Rating & Reviews -->
+                <tr class={valuesDiffer(surgeons.map(s => s.rating)) ? 'bg-yellow-50' : ''}>
+                  <td class="py-6 px-6 font-bold text-gray-900">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                      Rating & Reviews
+                    </div>
+                  </td>
+                  {surgeons.map(surgeon => (
+                    <td class="py-6 px-6 text-center">
+                      <div class="flex items-center justify-center gap-1 mb-2">
+                        {[...Array(5)].map((_, i) => (
+                          <svg class={`w-6 h-6 ${i < Math.floor(surgeon.rating) ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                          </svg>
+                        ))}
+                      </div>
+                      <div class="text-2xl font-bold text-gray-900 mb-1">{surgeon.rating}</div>
+                      <div class="text-sm text-gray-600">({surgeon.review_count} reviews)</div>
+                    </td>
+                  ))}
+                </tr>
+                
+                <!-- Estimated Procedures -->
+                <tr class={valuesDiffer(surgeons.map(s => s.estimated_procedures)) ? 'bg-yellow-50' : ''}>
+                  <td class="py-6 px-6 font-bold text-gray-900">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"/>
+                      </svg>
+                      Procedures Performed
+                    </div>
+                  </td>
+                  {surgeons.map(surgeon => (
+                    <td class="py-6 px-6 text-center">
+                      <div class="text-3xl font-bold text-blue-600 mb-1">
+                        ~{surgeon.estimated_procedures.toLocaleString()}
+                      </div>
+                      <div class="text-sm text-gray-600">estimated</div>
+                    </td>
+                  ))}
+                </tr>
+                
+                <!-- Procedures Offered -->
+                <tr class={valuesDiffer(surgeons.map(s => s.procedures)) ? 'bg-yellow-50' : ''}>
+                  <td class="py-6 px-6 font-bold text-gray-900">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                      </svg>
+                      Procedures Offered
+                    </div>
+                  </td>
+                  {surgeons.map(surgeon => (
+                    <td class="py-6 px-6">
+                      <div class="flex flex-wrap gap-2 justify-center">
+                        {formatProcedures(surgeon.procedures).slice(0, 5).map(proc => (
+                          <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">
+                            {proc.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                          </span>
+                        ))}
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+                
+                <!-- Location -->
+                <tr class={valuesDiffer(surgeons.map(s => s.location_display)) ? 'bg-yellow-50' : ''}>
+                  <td class="py-6 px-6 font-bold text-gray-900">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                      </svg>
+                      Location
+                    </div>
+                  </td>
+                  {surgeons.map(surgeon => (
+                    <td class="py-6 px-6 text-center">
+                      <div class="text-gray-900 font-medium mb-1">{surgeon.city}, {surgeon.state}</div>
+                      <div class="text-sm text-gray-600">{surgeon.street}</div>
+                      <a 
+                        href={surgeon.google_maps_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-block mt-2 text-blue-600 hover:text-blue-700 text-sm font-medium"
+                      >
+                        View on Maps →
+                      </a>
+                    </td>
+                  ))}
+                </tr>
+                
+                <!-- Phone -->
+                <tr>
+                  <td class="py-6 px-6 font-bold text-gray-900">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                      </svg>
+                      Contact Phone
+                    </div>
+                  </td>
+                  {surgeons.map(surgeon => (
+                    <td class="py-6 px-6 text-center">
+                      <a 
+                        href={`tel:${surgeon.phone}`}
+                        class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold text-lg"
+                      >
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        {surgeon.phone}
+                      </a>
+                    </td>
+                  ))}
+                </tr>
+                
+                <!-- Consultation Fee -->
+                <tr>
+                  <td class="py-6 px-6 font-bold text-gray-900">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+                      </svg>
+                      Consultation Fee
+                    </div>
+                  </td>
+                  {surgeons.map((surgeon, i) => (
+                    <td class="py-6 px-6 text-center">
+                      <div class="text-green-600 font-bold text-lg">FREE</div>
+                      <div class="text-sm text-gray-600 mt-1">Initial consultation</div>
+                    </td>
+                  ))}
+                </tr>
+                
+                <!-- Insurance -->
+                <tr>
+                  <td class="py-6 px-6 font-bold text-gray-900">
+                    <div class="flex items-center gap-2">
+                      <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                      </svg>
+                      Insurance Accepted
+                    </div>
+                  </td>
+                  {surgeons.map((surgeon, i) => (
+                    <td class="py-6 px-6 text-center">
+                      <div class="text-sm text-gray-700">
+                        <div class="mb-1">✓ Medicare</div>
+                        <div class="mb-1">✓ Private Health Insurance</div>
+                        <div>✓ Payment Plans Available</div>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+                
+                <!-- Actions -->
+                <tr class="bg-gray-50">
+                  <td class="py-6 px-6 font-bold text-gray-900">
+                    Actions
+                  </td>
+                  {surgeons.map(surgeon => (
+                    <td class="py-6 px-6 text-center">
+                      <div class="space-y-3">
+                        <a
+                          href={`/surgeons/${surgeon.slug}`}
+                          class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-colors"
+                        >
+                          View Full Profile
+                        </a>
+                        <a
+                          href={`tel:${surgeon.phone}`}
+                          class="block w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition-colors"
+                        >
+                          Book Consultation
+                        </a>
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <!-- Mobile Comparison (Stacked Cards) -->
+        <div class="lg:hidden space-y-8">
+          {surgeons.map(surgeon => (
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <!-- Header -->
+              <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white text-center">
+                <div class="w-24 h-24 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center text-4xl font-bold mx-auto mb-4">
+                  {getDisplayName(surgeon).split(' ').map(w => w[0]).join('').slice(0, 2)}
+                </div>
+                <h3 class="text-2xl font-bold mb-2">{getDisplayName(surgeon)}</h3>
+                {surgeon.tier === 1 && (
+                  <span class="inline-block bg-yellow-400 text-yellow-900 px-4 py-1.5 rounded-lg text-sm font-bold">
+                    ⭐ Featured
+                  </span>
+                )}
+              </div>
+              
+              <!-- Details -->
+              <div class="p-6 space-y-6">
+                
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+                    <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z"/>
+                    </svg>
+                    Qualifications
+                  </h4>
+                  <p class="text-gray-700">{surgeon.qualifications || 'Not specified'}</p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-2">Experience</h4>
+                    <p class="text-3xl font-bold text-blue-600">{surgeon.years_experience}+</p>
+                    <p class="text-sm text-gray-600">years</p>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900 mb-2">Procedures</h4>
+                    <p class="text-3xl font-bold text-blue-600">~{surgeon.estimated_procedures.toLocaleString()}</p>
+                    <p class="text-sm text-gray-600">performed</p>
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-2">Rating</h4>
+                  <div class="flex items-center gap-2">
+                    <div class="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <svg class={`w-6 h-6 ${i < Math.floor(surgeon.rating) ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                      ))}
+                    </div>
+                    <span class="text-xl font-bold">{surgeon.rating}</span>
+                    <span class="text-gray-600">({surgeon.review_count})</span>
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-2">Procedures Offered</h4>
+                  <div class="flex flex-wrap gap-2">
+                    {formatProcedures(surgeon.procedures).slice(0, 4).map(proc => (
+                      <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg text-xs font-medium">
+                        {proc.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-2">Location</h4>
+                  <p class="text-gray-700">{surgeon.location_display}</p>
+                  <a 
+                    href={surgeon.google_maps_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-block mt-2 text-blue-600 hover:text-blue-700 font-medium"
+                  >
+                    View on Maps →
+                  </a>
+                </div>
+                
+                <div>
+                  <h4 class="font-bold text-gray-900 mb-2">Contact</h4>
+                  <a 
+                    href={`tel:${surgeon.phone}`}
+                    class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold"
+                  >
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    {surgeon.phone}
+                  </a>
+                </div>
+                
+                <!-- Actions -->
+                <div class="pt-4 space-y-3">
+                  <a
+                    href={`/surgeons/${surgeon.slug}`}
+                    class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl transition-colors"
+                  >
+                    View Full Profile
+                  </a>
+                  <a
+                    href={`tel:${surgeon.phone}`}
+                    class="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-xl transition-colors"
+                  >
+                    Book Consultation
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <!-- Legend for highlighted differences -->
+        {surgeons.length > 1 && (
+          <div class="mt-8 bg-yellow-50 border-2 border-yellow-200 rounded-2xl p-6">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <h3 class="font-bold text-yellow-900 mb-1">Highlighted Differences</h3>
+                <p class="text-sm text-yellow-800">
+                  Rows with a yellow background indicate where surgeons have different values for easier comparison.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  ) : (
+    <!-- No Comparison Selected -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Search Tool -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 mb-12">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+            Select Surgeons to Compare
+          </h2>
+          <p class="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+            Search and select up to 3 surgeons to compare their qualifications, experience, ratings, and procedures side-by-side.
+          </p>
+          
+          <form method="GET" action="/surgeons/compare" id="comparison-form">
+            <div class="space-y-4 max-w-3xl mx-auto">
+              <!-- Surgeon A -->
+              <div>
+                <label class="block text-sm font-bold text-gray-900 mb-2">Surgeon 1</label>
+                <select 
+                  name="a"
+                  required
+                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none"
+                >
+                  <option value="">Select a surgeon...</option>
+                  {allSurgeons.slice(0, 50).map(s => (
+                    <option value={s.slug}>
+                      {getDisplayName(s)} - {s.city} ({s.rating}⭐)
+                    </option>
+                  ))}
+                </select>
+              </div>
+              
+              <!-- Surgeon B -->
+              <div>
+                <label class="block text-sm font-bold text-gray-900 mb-2">Surgeon 2</label>
+                <select 
+                  name="b"
+                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none"
+                >
+                  <option value="">Select a surgeon...</option>
+                  {allSurgeons.slice(0, 50).map(s => (
+                    <option value={s.slug}>
+                      {getDisplayName(s)} - {s.city} ({s.rating}⭐)
+                    </option>
+                  ))}
+                </select>
+              </div>
+              
+              <!-- Surgeon C -->
+              <div>
+                <label class="block text-sm font-bold text-gray-900 mb-2">Surgeon 3 (Optional)</label>
+                <select 
+                  name="c"
+                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-blue-500 focus:outline-none"
+                >
+                  <option value="">Select a surgeon...</option>
+                  {allSurgeons.slice(0, 50).map(s => (
+                    <option value={s.slug}>
+                      {getDisplayName(s)} - {s.city} ({s.rating}⭐)
+                    </option>
+                  ))}
+                </select>
+              </div>
+              
+              <button
+                type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-colors text-lg"
+              >
+                Compare Surgeons
+              </button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Popular Comparisons -->
+        <div class="bg-white rounded-2xl shadow-lg p-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+            Popular Comparisons
+          </h2>
+          <p class="text-gray-600 text-center mb-8">
+            Quick links to compare our most popular surgeons
+          </p>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {popularSurgeons.slice(0, 3).map((s1, i) => {
+              const s2 = popularSurgeons[i + 1];
+              if (!s2) return null;
+              
+              return (
+                <a
+                  href={`/surgeons/compare?a=${s1.slug}&b=${s2.slug}`}
+                  class="group p-6 border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:shadow-lg transition-all"
+                >
+                  <div class="text-center mb-4">
+                    <p class="font-bold text-gray-900 mb-1">{getDisplayName(s1)}</p>
+                    <p class="text-sm text-gray-600">{s1.city}</p>
+                  </div>
+                  <div class="text-center text-blue-600 font-bold mb-4">VS</div>
+                  <div class="text-center mb-4">
+                    <p class="font-bold text-gray-900 mb-1">{getDisplayName(s2)}</p>
+                    <p class="text-sm text-gray-600">{s2.city}</p>
+                  </div>
+                  <div class="text-center text-blue-600 group-hover:text-blue-700 font-medium text-sm">
+                    Compare Now →
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+          
+          <div class="mt-8 text-center">
+            <a 
+              href="/surgeons/"
+              class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold"
+            >
+              Browse All Surgeons
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  /* Ensure table is responsive */
+  @media (max-width: 1024px) {
+    table {
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+</style>

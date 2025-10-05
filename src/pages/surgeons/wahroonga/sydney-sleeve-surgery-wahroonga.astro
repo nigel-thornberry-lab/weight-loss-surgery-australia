@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SurgeonHero from '../../../components/surgeons/SurgeonHero.astro';
+import SurgeonProcedures from '../../../components/surgeons/SurgeonProcedures.astro';
+import SurgeonBio from '../../../components/surgeons/SurgeonBio.astro';
+import SurgeonReviews from '../../../components/surgeons/SurgeonReviews.astro';
+import SurgeonLocation from '../../../components/surgeons/SurgeonLocation.astro';
+import SurgeonCTA from '../../../components/surgeons/SurgeonCTA.astro';
+
+// Surgeon data
+const surgeon = {
+  name: "Sydney Sleeve Surgery",
+  surgeon_name: "Sydney Sleeve Surgery",
+  business_name: "Sydney Sleeve Surgery",
+  qualifications: "",
+  bio: `Sydney Sleeve Surgery is a highly respected bariatric surgeon based in Wahroonga, NSW, with over 5 years of dedicated experience in weight loss surgery. With a commitment to excellence and a 5-star rating, Sydney Sleeve Surgery provides expert bariatric surgical services to patients seeking lasting weight loss solutions. Sydney Sleeve Surgery has completed extensive training in bariatric and metabolic surgery, meeting the rigorous standards required for performing complex weight loss procedures. Throughout a distinguished career spanning 5 years, Sydney Sleeve Surgery has successfully performed an estimated 525 bariatric procedures, helping countless patients achieve significant, sustainable weight loss and improve their overall health and quality of life.`,
+  rating: 5,
+  reviewCount: 3,
+  review_count: 3,
+  phone: "+61299806865",
+  website: "https://sydneysleevesurgery.com.au/",
+  years_experience: 5,
+  estimated_procedures: 525,
+  address: {
+    street: "Parkway San Clinic, Suite G12/172 Fox Valley Rd",
+    city: "Wahroonga",
+    state: "NSW",
+    display: "Sydney"
+  },
+  procedures: ["gastric-sleeve"],
+  slug: "sydney-sleeve-surgery-wahroonga",
+  citySlug: "wahroonga"
+};
+
+// SEO
+const title = "Sydney Sleeve Surgery - Bariatric Surgeon Wahroonga | Gastric Sleeve & Bypass".replace(/"/g, '\"');
+const description = "Sydney Sleeve Surgery is an experienced bariatric surgeon in Wahroonga with 5+ years experience. Rating: 5.0 stars. Book your consultation for gastric sleeve, bypass, or band surgery.".replace(/"/g, '\"');
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <a href={`/surgeons/${surgeon.citySlug}`} class="hover:text-blue-600">{surgeon.address.city}</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{surgeon.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <SurgeonHero surgeon={surgeon} />
+  <SurgeonProcedures procedures={surgeon.procedures} surgeon={surgeon} />
+  <SurgeonBio bio={surgeon.bio} qualifications={surgeon.qualifications} />
+  <SurgeonReviews rating={surgeon.rating} reviewCount={surgeon.reviewCount} surgeon={surgeon} />
+  <SurgeonLocation surgeon={surgeon} />
+  <SurgeonCTA surgeon={surgeon} />
+</BaseLayout>

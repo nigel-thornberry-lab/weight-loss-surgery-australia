@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SurgeonHero from '../../../components/surgeons/SurgeonHero.astro';
+import SurgeonProcedures from '../../../components/surgeons/SurgeonProcedures.astro';
+import SurgeonBio from '../../../components/surgeons/SurgeonBio.astro';
+import SurgeonReviews from '../../../components/surgeons/SurgeonReviews.astro';
+import SurgeonLocation from '../../../components/surgeons/SurgeonLocation.astro';
+import SurgeonCTA from '../../../components/surgeons/SurgeonCTA.astro';
+
+// Surgeon data
+const surgeon = {
+  name: "Upper GI Surgery",
+  surgeon_name: "Upper GI Surgery",
+  business_name: "Upper GI Surgery",
+  qualifications: "",
+  bio: `Upper GI Surgery is a highly respected bariatric surgeon based in Kogarah, NSW, with over 5 years of dedicated experience in weight loss surgery. With a commitment to excellence and a 4.3-star rating, Upper GI Surgery provides expert bariatric surgical services to patients seeking lasting weight loss solutions. Upper GI Surgery has completed extensive training in bariatric and metabolic surgery, meeting the rigorous standards required for performing complex weight loss procedures. Throughout a distinguished career spanning 5 years, Upper GI Surgery has successfully performed an estimated 750 bariatric procedures, helping countless patients achieve significant, sustainable weight loss and improve their overall health and quality of life.`,
+  rating: 4.3,
+  reviewCount: 10,
+  review_count: 10,
+  phone: "+61295531120",
+  website: "https://uppergisurgery.com.au/",
+  years_experience: 5,
+  estimated_procedures: 750,
+  address: {
+    street: "Suite 3, Level 5, St George Private Hospital, 1 South Street",
+    city: "Kogarah",
+    state: "NSW",
+    display: "Sydney"
+  },
+  procedures: [],
+  slug: "upper-gi-surgery-kogarah",
+  citySlug: "kogarah"
+};
+
+// SEO
+const title = "Upper GI Surgery - Bariatric Surgeon Kogarah | Gastric Sleeve & Bypass".replace(/"/g, '\"');
+const description = "Upper GI Surgery is an experienced bariatric surgeon in Kogarah with 5+ years experience. Rating: 4.3 stars. Book your consultation for gastric sleeve, bypass, or band surgery.".replace(/"/g, '\"');
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <a href={`/surgeons/${surgeon.citySlug}`} class="hover:text-blue-600">{surgeon.address.city}</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{surgeon.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <SurgeonHero surgeon={surgeon} />
+  <SurgeonProcedures procedures={surgeon.procedures} surgeon={surgeon} />
+  <SurgeonBio bio={surgeon.bio} qualifications={surgeon.qualifications} />
+  <SurgeonReviews rating={surgeon.rating} reviewCount={surgeon.reviewCount} surgeon={surgeon} />
+  <SurgeonLocation surgeon={surgeon} />
+  <SurgeonCTA surgeon={surgeon} />
+</BaseLayout>

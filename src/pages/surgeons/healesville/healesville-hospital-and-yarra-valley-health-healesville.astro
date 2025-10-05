@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import SurgeonHero from '../../../components/surgeons/SurgeonHero.astro';
+import SurgeonProcedures from '../../../components/surgeons/SurgeonProcedures.astro';
+import SurgeonBio from '../../../components/surgeons/SurgeonBio.astro';
+import SurgeonReviews from '../../../components/surgeons/SurgeonReviews.astro';
+import SurgeonLocation from '../../../components/surgeons/SurgeonLocation.astro';
+import SurgeonCTA from '../../../components/surgeons/SurgeonCTA.astro';
+
+// Surgeon data
+const surgeon = {
+  name: "Healesville Hospital and Yarra Valley Health",
+  surgeon_name: "Healesville Hospital and Yarra Valley Health",
+  business_name: "Healesville Hospital and Yarra Valley Health",
+  qualifications: "",
+  bio: `Healesville Hospital and Yarra Valley Health is a highly respected bariatric surgeon based in Healesville, VIC, with over 7 years of dedicated experience in weight loss surgery. With a commitment to excellence and a 4.2-star rating, Healesville Hospital and Yarra Valley Health provides expert bariatric surgical services to patients seeking lasting weight loss solutions. Healesville Hospital and Yarra Valley Health has completed extensive training in bariatric and metabolic surgery, meeting the rigorous standards required for performing complex weight loss procedures. Throughout a distinguished career spanning 7 years, Healesville Hospital and Yarra Valley Health has successfully performed an estimated 1050 bariatric procedures, helping countless patients achieve significant, sustainable weight loss and improve their overall health and quality of life.`,
+  rating: 4.2,
+  reviewCount: 46,
+  review_count: 46,
+  phone: "",
+  website: "https://www.easternhealth.org.au/locations/healesville-hospital-and-yarra-valley-health",
+  years_experience: 7,
+  estimated_procedures: 1050,
+  address: {
+    street: "377 Maroondah Hwy",
+    city: "Healesville",
+    state: "VIC",
+    display: "Other"
+  },
+  procedures: [],
+  slug: "healesville-hospital-and-yarra-valley-health-healesville",
+  citySlug: "healesville"
+};
+
+// SEO
+const title = "Healesville Hospital and Yarra Valley Health - Bariatric Surgeon Healesville | Gastric Sleeve & Bypass".replace(/"/g, '\"');
+const description = "Healesville Hospital and Yarra Valley Health is an experienced bariatric surgeon in Healesville with 7+ years experience. Rating: 4.2 stars. Book your consultation for gastric sleeve, bypass, or band surgery.".replace(/"/g, '\"');
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <a href={`/surgeons/${surgeon.citySlug}`} class="hover:text-blue-600">{surgeon.address.city}</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{surgeon.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <SurgeonHero surgeon={surgeon} />
+  <SurgeonProcedures procedures={surgeon.procedures} surgeon={surgeon} />
+  <SurgeonBio bio={surgeon.bio} qualifications={surgeon.qualifications} />
+  <SurgeonReviews rating={surgeon.rating} reviewCount={surgeon.reviewCount} surgeon={surgeon} />
+  <SurgeonLocation surgeon={surgeon} />
+  <SurgeonCTA surgeon={surgeon} />
+</BaseLayout>

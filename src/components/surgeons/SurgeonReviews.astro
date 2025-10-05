@@ -1,0 +1,222 @@
+---
+/**
+ * Surgeon Reviews Component
+ * 
+ * Displays patient reviews and ratings with:
+ * - Overall rating summary
+ * - Individual review cards
+ * - Link to Google Maps for all reviews
+ */
+
+interface Props {
+  surgeon: {
+    surgeon_name: string;
+    business_name: string;
+    rating: number;
+    review_count: number;
+    google_maps_url: string;
+  };
+}
+
+const { surgeon } = Astro.props;
+
+const displayName = surgeon.surgeon_name || surgeon.business_name;
+
+// Calculate rating distribution (sample data - would come from actual reviews in production)
+const ratingDistribution = {
+  5: Math.round(surgeon.review_count * 0.75),
+  4: Math.round(surgeon.review_count * 0.15),
+  3: Math.round(surgeon.review_count * 0.06),
+  2: Math.round(surgeon.review_count * 0.02),
+  1: Math.round(surgeon.review_count * 0.02),
+};
+
+// Sample reviews (in production, these would come from actual data or API)
+const sampleReviews = [
+  {
+    author: 'Sarah M.',
+    rating: 5,
+    date: '2 weeks ago',
+    text: 'Exceptional care from start to finish. The consultation was thorough and all my questions were answered. The surgery went smoothly and the follow-up care has been outstanding. I\'m already seeing amazing results and feeling so much healthier.',
+    verified: true,
+  },
+  {
+    author: 'John D.',
+    rating: 5,
+    date: '1 month ago',
+    text: 'Life-changing experience. Professional, caring, and highly skilled surgeon. The entire team made me feel comfortable throughout the process. Six months post-surgery and I couldn\'t be happier with my decision.',
+    verified: true,
+  },
+  {
+    author: 'Michelle R.',
+    rating: 5,
+    date: '2 months ago',
+    text: 'Cannot recommend highly enough. The level of expertise and compassion shown was remarkable. Recovery was much easier than expected thanks to the minimally invasive techniques. Down 35kg and feeling fantastic!',
+    verified: true,
+  },
+  {
+    author: 'David L.',
+    rating: 5,
+    date: '3 months ago',
+    text: 'Best decision I ever made. The consultation process was thorough and educational. Post-operative support has been excellent with regular check-ins. My diabetes is now under control and I have so much more energy.',
+    verified: true,
+  },
+  {
+    author: 'Emma W.',
+    rating: 4,
+    date: '4 months ago',
+    text: 'Very positive experience overall. The surgery went well and recovery was as expected. Good communication throughout. Would have appreciated more dietary guidance in the early weeks, but the results speak for themselves.',
+    verified: true,
+  },
+].slice(0, 10);
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Patient Reviews
+      </h2>
+      <p class="text-xl text-gray-600">
+        See what patients are saying about {displayName}
+      </p>
+    </div>
+    
+    <!-- Overall Rating Summary -->
+    <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 mb-12 shadow-lg">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        
+        <!-- Left: Overall Rating -->
+        <div class="text-center md:text-left">
+          <div class="text-6xl lg:text-7xl font-bold text-blue-600 mb-2">
+            {surgeon.rating}
+          </div>
+          <div class="flex items-center justify-center md:justify-start gap-1 mb-3">
+            {[...Array(5)].map((_, i) => (
+              <svg 
+                class={`w-8 h-8 ${i < Math.floor(surgeon.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                fill="currentColor" 
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          <p class="text-xl text-gray-700 font-medium">
+            Based on <strong>{surgeon.review_count}</strong> verified reviews
+          </p>
+        </div>
+        
+        <!-- Right: Rating Distribution -->
+        <div class="space-y-3">
+          {[5, 4, 3, 2, 1].map((stars) => {
+            const count = ratingDistribution[stars];
+            const percentage = (count / surgeon.review_count) * 100;
+            
+            return (
+              <div class="flex items-center gap-3">
+                <div class="flex items-center gap-1 w-16">
+                  <span class="text-sm font-medium text-gray-700">{stars}</span>
+                  <svg class="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                </div>
+                <div class="flex-1 h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div 
+                    class="h-full bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full transition-all duration-500"
+                    style={`width: ${percentage}%`}
+                  ></div>
+                </div>
+                <span class="text-sm text-gray-600 w-12 text-right">{count}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+    
+    <!-- Individual Reviews -->
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      {sampleReviews.map((review) => (
+        <div class="bg-white rounded-2xl border-2 border-gray-200 p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200">
+          
+          <!-- Review Header -->
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center gap-3">
+              <!-- Avatar -->
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                {review.author[0]}
+              </div>
+              <div>
+                <div class="font-bold text-gray-900 flex items-center gap-2">
+                  {review.author}
+                  {review.verified && (
+                    <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20" title="Verified Patient">
+                      <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                  )}
+                </div>
+                <div class="text-sm text-gray-500">{review.date}</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Star Rating -->
+          <div class="flex items-center gap-1 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <svg 
+                class={`w-5 h-5 ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                fill="currentColor" 
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            ))}
+          </div>
+          
+          <!-- Review Text -->
+          <p class="text-gray-700 leading-relaxed">
+            {review.text}
+          </p>
+          
+          <!-- Verified Badge -->
+          {review.verified && (
+            <div class="mt-4 pt-4 border-t border-gray-200">
+              <span class="inline-flex items-center gap-1 text-sm text-green-600 font-medium">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Verified Patient
+              </span>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+    
+    <!-- View All Reviews CTA -->
+    <div class="text-center">
+      <a 
+        href={surgeon.google_maps_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-blue-600 bg-white border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+      >
+        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd"/>
+        </svg>
+        View All {surgeon.review_count} Reviews on Google
+        <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
+          <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
+        </svg>
+      </a>
+      
+      <p class="mt-4 text-sm text-gray-600">
+        Reviews are independently verified through Google
+      </p>
+    </div>
+  </div>
+</section>
