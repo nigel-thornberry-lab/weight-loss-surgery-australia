@@ -13,6 +13,7 @@ const surgeon = {
   "phone": "+61 2 7906 8312",
   "website": "https://drdeveshkaushal.com.au/",
   "category": "Gastrointestinal surgeon",
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dr%20Devesh%20Kaushal%20%7C%20Upper-GI%20%26%20Weight%20Loss%20Surgeon&query_place_id=ChIJEcZY9-nvEmsRFOqdM8993Sw",
   "years_experience": "10",
   "estimated_procedures": "2000",
   "slug": "dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills",
@@ -220,17 +221,100 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${sl
       </div>
     </section>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
-      <div class="bg-white rounded-xl p-6 shadow-lg">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">About {surgeon.name}</h2>
-        <p class="text-gray-700 leading-relaxed">{surgeon.bio_long}</p>
-      </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid lg:grid-cols-4 gap-8">
+        
+        <!-- Sidebar -->
+        <div class="lg:col-span-1 space-y-6">
+          <!-- Quick Stats Card -->
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <div class="space-y-4">
+              <div class="pb-4 border-b border-gray-200">
+                <p class="text-sm text-gray-600 mb-1">Rating</p>
+                {surgeon.rating > 0 ? (
+                  <div class="flex items-center gap-2">
+                    <span class="text-2xl">⭐</span>
+                    <span class="text-lg font-bold text-gray-900">{surgeon.rating}</span>
+                  </div>
+                ) : (
+                  <div class="flex items-center gap-2">
+                    <span class="text-2xl">⭐</span>
+                    <span class="text-lg font-bold text-gray-900">N/A</span>
+                  </div>
+                )}
+              </div>
+              
+              <div class="pb-4 border-b border-gray-200">
+                <p class="text-sm text-gray-600 mb-1">Reviews</p>
+                <p class="text-lg font-bold text-gray-900">{surgeon.review_count} reviews</p>
+              </div>
+              
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Experience</p>
+                <p class="text-lg font-bold text-gray-900">{surgeon.years_experience}+ years</p>
+              </div>
+            </div>
+          </div>
 
-      {seo.credentials && <CredentialsSection credentials={seo.credentials} />}
-      {enhanced.team && <TeamSection team={enhanced.team} />}
-      {enhanced.hospitals && <HospitalsSection hospitals={enhanced.hospitals} />}
-      {enhanced.pricing && <PricingSection pricing={enhanced.pricing} />}
-      {seo.faqs && <FAQSection faqs={seo.faqs} />}
+          <!-- CTA Buttons -->
+          <div class="space-y-3">
+            {surgeon.website && (
+              <a href={surgeon.website} target="_blank" rel="noopener" class="block w-full bg-blue-600 text-white text-center px-6 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+                Visit Website
+              </a>
+            )}
+            {surgeon.google_maps_url && (
+              <a href={surgeon.google_maps_url} target="_blank" rel="noopener" class="block w-full bg-green-600 text-white text-center px-6 py-4 rounded-xl font-semibold hover:bg-green-700 transition-colors shadow-lg">
+                View on Google Maps
+              </a>
+            )}
+            {surgeon.phone && (
+              <a href={`tel:${surgeon.phone}`} class="block w-full bg-gray-800 text-white text-center px-6 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-colors shadow-lg">
+                📞 Call Now
+              </a>
+            )}
+          </div>
+
+          <!-- Procedures Card -->
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg font-bold text-gray-900 mb-4">Procedures Offered</h3>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2 text-gray-700">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Gastric Sleeve</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-700">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Gastric Bypass</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-700">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Gastric Band</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-3 space-y-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">About {surgeon.name}</h2>
+            <p class="text-gray-700 leading-relaxed text-lg">{surgeon.bio_long}</p>
+          </div>
+
+          {seo.credentials && <CredentialsSection credentials={seo.credentials} />}
+          {enhanced.team && <TeamSection team={enhanced.team} />}
+          {enhanced.hospitals && <HospitalsSection hospitals={enhanced.hospitals} />}
+          {enhanced.pricing && <PricingSection pricing={enhanced.pricing} />}
+          {seo.faqs && <FAQSection faqs={seo.faqs} />}
+        </div>
+      </div>
     </div>
   </main>
 </BaseLayout>
