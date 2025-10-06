@@ -1,0 +1,232 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+// Surgeon data
+const surgeon = {
+  name: "Dr Mani Niazi",
+  title: "Dr Mani Niazi",
+  city: "Wantirna",
+  state: "VIC",
+  street: "Suite 9A/Knox Private Hospital, 262 Mountain Hwy",
+  rating: 4.9,
+  reviewCount: 127,
+  phone: "+61 3 9013 0865",
+  website: "https://www.loseweightsurgery.com.au/",
+  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Dr%20Mani%20Niazi%20-%20Wantirna%20-%20MBSA&query_place_id=ChIJVVVVoQE81moRnEnQ7D6KkAg",
+  surgeonPhoto: "",
+  yearsExperience: 22,
+  estimatedProcedures: 4950,
+  slug: "dr-mani-niazi-wantirna",
+  citySlug: "wantirna",
+  category: "Surgeon"
+};
+
+// SEO
+const title = "Dr Mani Niazi - Bariatric Surgeon Wantirna | Gastric Sleeve & Bypass";
+const description = "Dr Mani Niazi is an experienced bariatric surgeon in Wantirna with 22+ years experience. Rating: 4.9 stars. Book your consultation for gastric sleeve, bypass, or band surgery.";
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumbs -->
+  <div class="bg-gray-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+      <nav class="flex text-sm text-gray-600">
+        <a href="/" class="hover:text-blue-600">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/surgeons" class="hover:text-blue-600">Surgeons</a>
+        <span class="mx-2">/</span>
+        <a href={`/surgeons/${surgeon.citySlug}`} class="hover:text-blue-600">{surgeon.city}</a>
+        <span class="mx-2">/</span>
+        <span class="text-gray-900">{surgeon.name}</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        
+        <!-- Left: Photo -->
+        <div class="md:col-span-1">
+          {surgeon.surgeonPhoto ? (
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <img 
+                src={surgeon.surgeonPhoto} 
+                alt={surgeon.name}
+                class="w-full h-auto object-cover"
+                loading="eager"
+              />
+            </div>
+          ) : (
+            <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-lg p-12 flex items-center justify-center">
+              <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+          )}
+        </div>
+
+        <!-- Right: Info -->
+        <div class="md:col-span-2">
+          <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            {surgeon.name}
+          </h1>
+          
+          <p class="text-xl text-gray-600 mb-6">
+            {surgeon.category} in {surgeon.city}, {surgeon.state}
+          </p>
+
+          <!-- Rating -->
+          {surgeon.rating > 0 && (
+            <div class="flex items-center gap-3 mb-6">
+              <div class="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <svg 
+                    class={`w-6 h-6 ${i < Math.floor(surgeon.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                    fill="currentColor" 
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                ))}
+              </div>
+              <span class="text-2xl font-bold text-gray-900">{surgeon.rating}</span>
+              <span class="text-gray-600">({surgeon.reviewCount} reviews)</span>
+            </div>
+          )}
+
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white rounded-xl p-4 shadow-md">
+              <div class="text-3xl font-bold text-blue-600 mb-1">{surgeon.yearsExperience}+</div>
+              <div class="text-sm text-gray-600">Years Experience</div>
+            </div>
+            {surgeon.estimatedProcedures > 0 && (
+              <div class="bg-white rounded-xl p-4 shadow-md">
+                <div class="text-3xl font-bold text-blue-600 mb-1">{surgeon.estimatedProcedures.toLocaleString()}+</div>
+                <div class="text-sm text-gray-600">Procedures</div>
+              </div>
+            )}
+            {surgeon.reviewCount > 0 && (
+              <div class="bg-white rounded-xl p-4 shadow-md">
+                <div class="text-3xl font-bold text-blue-600 mb-1">{surgeon.reviewCount}</div>
+                <div class="text-sm text-gray-600">Patient Reviews</div>
+              </div>
+            )}
+            <div class="bg-white rounded-xl p-4 shadow-md">
+              <div class="text-3xl font-bold text-blue-600 mb-1">★</div>
+              <div class="text-sm text-gray-600">Top Rated</div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4">
+            {surgeon.phone && (
+              <a 
+                href={`tel:${surgeon.phone}`}
+                class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-colors shadow-lg hover:shadow-xl"
+              >
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+                Call {surgeon.phone}
+              </a>
+            )}
+            {surgeon.website && (
+              <a 
+                href={surgeon.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-blue-600 bg-white border-2 border-blue-600 hover:bg-blue-50 rounded-xl transition-colors shadow-lg"
+              >
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"/>
+                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"/>
+                </svg>
+                Visit Website
+              </a>
+            )}
+            {surgeon.googleMapsUrl && (
+              <a 
+                href={surgeon.googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-gray-700 bg-white border-2 border-gray-300 hover:border-gray-400 rounded-xl transition-colors shadow-lg"
+              >
+                <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+                View on Google Maps
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bio Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="prose prose-lg max-w-none">
+    <p class="text-gray-700 leading-relaxed mb-4">Dr Mani Niazi is a highly respected bariatric surgeon based in Wantirna, VIC, with over 22 years of distinguished career in weight loss surgery. With an exceptional 4.9-star rating from over 127 patient reviews, Dr Mani Niazi has established a reputation for delivering outstanding surgical outcomes and compassionate patient care throughout Australia.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">Dr Mani Niazi has completed extensive training in bariatric and metabolic surgery, meeting the rigorous standards required for performing complex weight loss procedures. Throughout a distinguished career spanning 22 years, Dr Mani Niazi has successfully performed an estimated 4,950 bariatric procedures, helping countless patients achieve significant, sustainable weight loss and improve their overall health and quality of life.</p>
+    <p class="text-gray-700 leading-relaxed mb-4"><strong>Comprehensive Bariatric Surgery Services</strong></p>
+    <p class="text-gray-700 leading-relaxed mb-4">Dr Mani Niazi offers a full range of bariatric surgery procedures tailored to each patient's unique needs and health goals:</p>
+    <p class="text-gray-700 leading-relaxed mb-4"><strong>Gastric Sleeve Surgery</strong> (Sleeve Gastrectomy) is a highly effective procedure that reduces stomach size by approximately 80%, helping patients achieve significant weight loss through portion control and hormonal changes that reduce hunger. This procedure has become one of the most popular bariatric options due to its excellent long-term results and relatively straightforward recovery.</p>
+    <p class="text-gray-700 leading-relaxed mb-4"><strong>Gastric Bypass Surgery</strong> (Roux-en-Y) combines stomach size reduction with intestinal rerouting to limit both food intake and calorie absorption. This proven procedure is particularly effective for patients with Type 2 Diabetes, often leading to diabetes remission along with substantial weight loss.</p>
+    <p class="text-gray-700 leading-relaxed mb-4"><strong>Gastric Band Surgery</strong> (Lap-Band) involves placing an adjustable silicone band around the upper stomach to create a small pouch, promoting early satiety and controlled eating. The band can be adjusted over time to optimize weight loss while maintaining nutritional health.</p>
+    <p class="text-gray-700 leading-relaxed mb-4"><strong>Mini Gastric Bypass</strong> offers similar benefits to traditional gastric bypass with a simpler surgical technique, shorter operating time, and comparable weight loss results. This procedure has gained popularity for its effectiveness and lower complication rates.</p>
+    <p class="text-gray-700 leading-relaxed mb-4"><strong>Revision Bariatric Surgery</strong> addresses complications or insufficient weight loss from previous bariatric procedures, helping patients get back on track with their weight loss goals through corrective or alternative surgical approaches.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">At the heart of Dr Mani Niazi's practice is a deep commitment to patient-centered care. Understanding that weight loss surgery is a life-changing decision, Dr Mani Niazi takes time to thoroughly educate patients about their options, set realistic expectations, and develop personalized treatment plans that align with individual health goals and lifestyles.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">The practice provides comprehensive pre-operative evaluation to ensure patients are well-prepared physically and mentally for surgery. This includes nutritional counseling, psychological assessment, and medical optimization to maximize surgical safety and long-term success. Post-operative care includes regular follow-up appointments, nutritional guidance, and ongoing support to help patients maintain their weight loss and adjust to their new lifestyle.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">Dr Mani Niazi utilizes the latest minimally invasive laparoscopic and robotic surgical techniques to perform bariatric procedures with precision and safety. These advanced approaches result in smaller incisions, reduced post-operative pain, faster recovery times, and minimal scarring compared to traditional open surgery.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">All procedures are performed in accredited hospital facilities equipped with state-of-the-art surgical technology and staffed by experienced bariatric care teams. Dr Mani Niazi adheres to the highest safety standards and protocols, ensuring that each patient receives world-class surgical care in a secure, supportive environment.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">Beyond achieving weight loss, Dr Mani Niazi helps patients address numerous obesity-related health conditions including <strong>Type 2 Diabetes</strong>, high blood pressure, sleep apnea, high cholesterol, joint pain, fatty liver disease, and cardiovascular disease. Many patients experience significant improvement or complete resolution of these conditions following successful bariatric surgery, leading to improved quality of life and reduced dependence on medications.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">Bariatric surgery is typically recommended for patients with a Body Mass Index (BMI) over 35 with obesity-related health conditions, or a BMI over 40 without comorbidities. During your consultation, Dr Mani Niazi will evaluate your medical history, current health status, and weight loss goals to determine if bariatric surgery is the right choice for you.</p>
+    <p class="text-gray-700 leading-relaxed mb-4"><strong>Schedule Your Consultation</strong></p>
+    <p class="text-gray-700 leading-relaxed mb-4">Dr Mani Niazi welcomes new patients from across VIC and surrounding regions who are considering bariatric surgery as a solution for significant, lasting weight loss. Initial consultations provide an opportunity to discuss your medical history, weight loss goals, and the various surgical options available.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">During your consultation, Dr Mani Niazi will answer all your questions, explain the benefits and risks of each procedure, and help you determine the best path forward for your health and wellness journey.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">To schedule your consultation, please call <strong>+61 3 9013 0865</strong> or visit www.loseweightsurgery.com.au for more information.</p>
+    <p class="text-gray-700 leading-relaxed mb-4">Take the first step toward a healthier future with the expert guidance and support of Dr Mani Niazi in Wantirna, VIC.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+        Ready to Start Your Weight Loss Journey?
+      </h2>
+      <p class="text-xl text-gray-600 mb-8">
+        Contact {surgeon.name} today to schedule your consultation
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        {surgeon.phone && (
+          <a 
+            href={`tel:${surgeon.phone}`}
+            class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-colors shadow-lg hover:shadow-xl"
+          >
+            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            Call Now
+          </a>
+        )}
+        {surgeon.website && (
+          <a 
+            href={surgeon.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-blue-600 bg-white border-2 border-blue-600 hover:bg-blue-50 rounded-xl transition-colors shadow-lg"
+          >
+            Visit Website
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

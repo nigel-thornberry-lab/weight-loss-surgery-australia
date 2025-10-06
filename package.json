@@ -12,11 +12,17 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "generate:pages": "tsx scripts/generate-surgeon-pages.ts",
-    "generate:pages:dry": "tsx scripts/generate-surgeon-pages.ts --dry-run"
+    "generate:pages:dry": "tsx scripts/generate-surgeon-pages.ts --dry-run",
+    "scrape:surgeons": "node scripts/scrape-surgeon-data.js"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
     "astro": "^5.14.1",
+    "axios": "^1.12.2",
+    "cheerio": "^1.1.2",
+    "csv-parser": "^3.2.0",
+    "csv-writer": "^1.6.0",
+    "puppeteer": "^21.6.1",
     "tailwindcss": "^4.1.14"
   }
 }
