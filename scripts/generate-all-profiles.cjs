@@ -48,8 +48,11 @@ const slug = "${slug}";
 const enhanced = ${JSON.stringify(enhanced || {}, null, 2)};
 const seo = ${JSON.stringify(seo || {}, null, 2)};
 
-const title = \`\${surgeon.name} - Bariatric Surgeon \${surgeon.city} | Weight Loss Surgery\`;
-const description = \`\${surgeon.name} is a leading bariatric surgeon in \${surgeon.city} with \${surgeon.years_experience}+ years experience. Rating: \${surgeon.rating}/5. Specialist in gastric sleeve, bypass & revision surgery.\`;
+// Extract clean name (remove title/role if present)
+const cleanName = surgeon.name.split('|')[0].split('-')[0].trim();
+
+const title = \`\${cleanName} - Bariatric Surgeon \${surgeon.city}, \${surgeon.state}\`;
+const description = \`Top-rated bariatric surgeon in \${surgeon.city} (\${surgeon.rating}★, \${surgeon.review_count} reviews). Gastric sleeve, bypass & revision. Serving \${surgeon.state}. Book consultation today.\`;
 const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/\${citySlug}/\${slug}\`;
 ---
 
@@ -85,8 +88,8 @@ const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/\${citySlug}/\$
           </div>
           
           <div class="md:col-span-2">
-            <h1 class="text-4xl font-bold text-gray-900 mb-3">{surgeon.name}</h1>
-            <p class="text-xl text-gray-600 mb-4">{surgeon.category} • {surgeon.city}, {surgeon.state}</p>
+            <h1 class="text-4xl font-bold text-gray-900 mb-3">{cleanName} - Bariatric Surgeon in {surgeon.city}, {surgeon.state}</h1>
+            <p class="text-xl text-gray-600 mb-4">{surgeon.category}</p>
             
             <div class="flex items-center gap-4 mb-6">
               {surgeon.rating > 0 && (
@@ -207,8 +210,50 @@ const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/\${citySlug}/\$
         <!-- Main Content -->
         <div class="lg:col-span-3 space-y-8">
           <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">About {surgeon.name}</h2>
-            <p class="text-gray-700 leading-relaxed text-lg">{surgeon.bio_long}</p>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">About {cleanName}</h2>
+            <p class="text-gray-700 leading-relaxed text-lg">{surgeon.bio_long.replace(surgeon.name, cleanName)}</p>
+          </div>
+
+          <!-- Location & Consultation Info -->
+          <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Location & Consultation</h2>
+            
+            {surgeon.phone && (
+              <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Contact Information</h3>
+                <p class="text-gray-700">
+                  <strong>Phone:</strong> <a href={\`tel:\${surgeon.phone}\`} class="text-blue-600 hover:text-blue-800 font-semibold">{surgeon.phone}</a>
+                </p>
+                {surgeon.website && (
+                  <p class="text-gray-700 mt-1">
+                    <strong>Website:</strong> <a href={surgeon.website} target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">{surgeon.website.replace('https://', '').replace('http://', '')}</a>
+                  </p>
+                )}
+              </div>
+            )}
+
+            <div class="mb-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Serving Areas</h3>
+              <p class="text-gray-700 leading-relaxed">
+                {cleanName} proudly serves patients in <strong>{surgeon.city}</strong> and throughout <strong>{surgeon.state}</strong>. 
+                Specializing in <a href="/procedures/gastric-sleeve" class="text-blue-600 hover:text-blue-800 font-semibold">gastric sleeve surgery</a>, 
+                <a href="/procedures/gastric-bypass" class="text-blue-600 hover:text-blue-800 font-semibold">gastric bypass</a>, and 
+                <a href="/procedures/gastric-band" class="text-blue-600 hover:text-blue-800 font-semibold">gastric band procedures</a> for patients 
+                seeking effective weight loss solutions in the region.
+              </p>
+            </div>
+
+            {surgeon.google_maps_url && (
+              <div>
+                <a href={surgeon.google_maps_url} target="_blank" rel="noopener" 
+                   class="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  View Location on Google Maps
+                </a>
+              </div>
+            )}
           </div>
 
           {seo.credentials && <CredentialsSection credentials={seo.credentials} />}
