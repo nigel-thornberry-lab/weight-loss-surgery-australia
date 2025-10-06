@@ -125,8 +125,8 @@ async function processSurgeons() {
     if (state === 'VIC') state = 'Victoria';
     
     const street = surgeon['street'] || '';
-    const rating = parseFloat(surgeon['rating']) || 0;
-    const reviewCount = parseInt(surgeon['reviewCount']) || 0;
+    const rating = parseFloat(surgeon['totalScore']) || 0;
+    const reviewCount = parseInt(surgeon['reviewsCount']) || 0;
     const phone = surgeon['phone'] || '';
     const website = surgeon['website'] || '';
     const googleMapsUrl = surgeon['url'] || '';
