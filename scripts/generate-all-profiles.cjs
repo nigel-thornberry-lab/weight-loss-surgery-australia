@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const BASE_CSV = 'surgeons-with-bios.csv';
-const ENHANCED_DATA = 'surgeon-enhanced-data-fixed.json';
-const SEO_DATA = 'surgeon-complete-seo-data-clean.json';
+const ENHANCED_DATA = 'surgeon-enhanced-data.json';
+const SEO_DATA = 'surgeon-seo-enhancement-data.json';
 const OUTPUT_DIR = 'src/pages/surgeons';
 
 const enhancedData = fs.existsSync(ENHANCED_DATA) ? JSON.parse(fs.readFileSync(ENHANCED_DATA, 'utf-8')) : {};
@@ -495,7 +495,7 @@ function main() {
 
     const slug = surgeon.slug;
     const citySlug = surgeon.city.toLowerCase().replace(/\s+/g, '-');
-    const hasEnhanced = enhancedData[slug] && seoData[slug];
+    const hasEnhanced = !!(enhancedData[slug] && seoData[slug]);
 
     const content = hasEnhanced 
       ? generateEnhancedProfile(surgeon, enhancedData[slug], seoData[slug])

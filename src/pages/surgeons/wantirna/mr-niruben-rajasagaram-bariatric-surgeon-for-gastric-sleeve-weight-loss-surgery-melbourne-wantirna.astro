@@ -1,5 +1,10 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CredentialsSection from '../../../components/surgeons/CredentialsSection.astro';
+import FAQSection from '../../../components/surgeons/FAQSection.astro';
+import TeamSection from '../../../components/surgeons/TeamSection.astro';
+import HospitalsSection from '../../../components/surgeons/HospitalsSection.astro';
+import PricingSection from '../../../components/surgeons/PricingSection.astro';
 
 const surgeon = {
   "name": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne",
@@ -17,10 +22,142 @@ const surgeon = {
   "rating": 4.9,
   "review_count": 92
 };
+const citySlug = "wantirna";
+const slug = "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna";
+const enhanced = {
+  "surgeon_name": "Mr. Niruben Rajasagaram",
+  "city": "Wantirna",
+  "state": "Victoria",
+  "credentials": {
+    "medical_school": "Royal College of Surgeons in Ireland",
+    "fellowships": [
+      "4 years of fellowship in bariatric, upper gastrointestinal, and advanced biliary surgery at Melbourne hospitals",
+      "Australian and New Zealand Gastro-Oesophageal Surgery Association (ANZGOSA) training program"
+    ],
+    "professional_memberships": [
+      "Fellow of the Royal Australasian College of Surgeons (FRACS)",
+      "Member, Royal College of Surgeons Ireland (MRCS)",
+      "Australian and New Zealand Gastric and Oesophageal Surgery Association",
+      "Obesity Surgery Society of Australia and New Zealand",
+      "European Hernia Society",
+      "International Bariatric Club",
+      "International Federation for the Surgery of Obesity and Metabolic Disorders"
+    ],
+    "special_training": [
+      "Gastroscopy and colonoscopy as per Gastroenterological Society of Australia standards"
+    ],
+    "years_practicing": 20
+  },
+  "team": {
+    "surgeons": [
+      {
+        "name": "Mr. Niruben Rajasagaram",
+        "role": "Director, Consultant Bariatric, Oesophagogastric & General Surgeon"
+      }
+    ],
+    "team_size": "Multidisciplinary team",
+    "has_dietitian": true,
+    "has_psychologist": true,
+    "has_nurses": true
+  },
+  "services": {
+    "procedures": [
+      "Gastric sleeve (vertical sleeve gastrectomy)",
+      "Gastric bypass",
+      "Mini gastric bypass",
+      "Gastric band",
+      "Gastric balloon",
+      "Revisional bariatric surgery",
+      "Laparoscopic gall bladder surgery",
+      "Laparoscopic groin hernia surgery"
+    ],
+    "pre_op_program": "Multidisciplinary approach, including dietitian and psychologist support",
+    "post_op_program": "Comprehensive post-surgical care with dietitian and psychologist follow-up",
+    "follow_up_duration": "Long-term follow-up",
+    "telehealth": false,
+    "support_groups": false
+  },
+  "hospitals": [
+    {
+      "name": "Knox Private Hospital",
+      "address": "Suite 11A, 262 Mountain Highway, Wantirna, VIC 3152"
+    },
+    {
+      "name": "Mulgrave Private Hospital",
+      "address": "389 Police Road, Mulgrave, VIC 3170"
+    }
+  ],
+  "pricing": {
+    "available": false,
+    "gastric_sleeve": "Contact for pricing",
+    "gastric_bypass": "Contact for pricing",
+    "consultation": "Contact for pricing"
+  },
+  "unique_features": [
+    "Extensive 4-year fellowship training at multiple Melbourne hospitals",
+    "Reviewer for Obesity Surgery Journal (official journal of IFSO)",
+    "Comprehensive, multidisciplinary care team",
+    "Expertise in complex revision bariatric surgeries",
+    "Member of 7 professional surgical organizations"
+  ],
+  "faqs": [
+    {
+      "question": "What procedures does Mr Niruben Rajasagaram specialize in?",
+      "answer": "Mr Rajasagaram specializes in gastric sleeve, gastric bypass (including mini gastric bypass and revisional procedures), gastric band, gastric balloon, laparoscopic bariatric, gall bladder, and hernia surgeries."
+    },
+    {
+      "question": "What are Mr Niruben Rajasagaram's qualifications?",
+      "answer": "He graduated from the Royal College of Surgeons in Ireland, holds the MRCS and FRACS, and has completed 4-year fellowships in bariatric, upper gastrointestinal, and advanced biliary surgery as well as specialized training with ANZGOSA."
+    },
+    {
+      "question": "Where does Mr Niruben Rajasagaram perform surgery?",
+      "answer": "He operates primarily at Knox Private Hospital in Wantirna and Mulgrave Private Hospital in Melbourne, Victoria."
+    }
+  ]
+};
+const seo = {
+  "credentials": {
+    "medical_school": "Royal College of Surgeons in Ireland",
+    "fellowships": [
+      "4 years of fellowship in bariatric, upper gastrointestinal, and advanced biliary surgery",
+      "Australian and New Zealand Gastro-Oesophageal Surgery Association (ANZGOSA) training program"
+    ],
+    "professional_memberships": [
+      "Fellow of the Royal Australasian College of Surgeons (FRACS)",
+      "Member, Royal College of Surgeons Ireland (MRCS)",
+      "Australian and New Zealand Gastric and Oesophageal Surgery Association",
+      "Obesity Surgery Society of Australia and New Zealand",
+      "European Hernia Society",
+      "International Bariatric Club",
+      "International Federation for the Surgery of Obesity and Metabolic Disorders"
+    ],
+    "special_training": [
+      "Gastroscopy and colonoscopy as per Gastroenterological Society of Australia standards"
+    ],
+    "years_practicing": 20
+  },
+  "faqs": [
+    {
+      "question": "What procedures does Mr Niruben Rajasagaram specialize in?",
+      "answer": "Mr Rajasagaram specializes in gastric sleeve, gastric bypass (including mini gastric bypass and revisional procedures), gastric band, gastric balloon, laparoscopic bariatric, gall bladder, and hernia surgeries."
+    },
+    {
+      "question": "What are Mr Niruben Rajasagaram's qualifications?",
+      "answer": "He graduated from the Royal College of Surgeons in Ireland, holds the MRCS and FRACS, and has completed 4-year fellowships in bariatric, upper gastrointestinal, and advanced biliary surgery as well as specialized training with ANZGOSA."
+    },
+    {
+      "question": "Where does Mr Niruben Rajasagaram perform surgery?",
+      "answer": "He operates primarily at Knox Private Hospital in Wantirna and Mulgrave Private Hospital in Melbourne, Victoria."
+    }
+  ]
+};
 
-const title = `${surgeon.name} - Bariatric Surgeon ${surgeon.city} | Weight Loss Surgery`;
-const description = `${surgeon.name} is an experienced bariatric surgeon in ${surgeon.city} with ${surgeon.years_experience}+ years experience. Rating: ${surgeon.rating}/5 (${surgeon.review_count} reviews). Specialist in gastric sleeve, bypass & band surgery.`;
-const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/wantirna/mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna`;
+// Extract clean name (remove title/role if present)
+const cleanName = surgeon.name.split('|')[0].split('-')[0].trim();
+
+const title = `${cleanName} - Bariatric Surgeon ${surgeon.city}, ${surgeon.state}`;
+const description = `Top-rated bariatric surgeon in ${surgeon.city} (${surgeon.rating}★, ${surgeon.review_count} reviews). Gastric sleeve, bypass & revision. Serving ${surgeon.state}. Book consultation today.`;
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${slug}`;
 ---
 
 <BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
@@ -32,7 +169,7 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/wantirna/mr-niru
           <span class="text-gray-400">/</span>
           <a href="/surgeons" class="text-blue-600 hover:text-blue-800">Surgeons</a>
           <span class="text-gray-400">/</span>
-          <a href="/surgeons/wantirna" class="text-blue-600 hover:text-blue-800">{surgeon.city}</a>
+          <a href={`/surgeons/${citySlug}`} class="text-blue-600 hover:text-blue-800">{surgeon.city}</a>
           <span class="text-gray-400">/</span>
           <span class="text-gray-700">{surgeon.name}</span>
         </div>
@@ -55,11 +192,11 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/wantirna/mr-niru
           </div>
           
           <div class="md:col-span-2">
-            <h1 class="text-4xl font-bold text-gray-900 mb-3">{surgeon.name}</h1>
-            <p class="text-xl text-gray-600 mb-4">{surgeon.category} • {surgeon.city}, {surgeon.state}</p>
+            <h1 class="text-4xl font-bold text-gray-900 mb-3">{cleanName} - Bariatric Surgeon in {surgeon.city}, {surgeon.state}</h1>
+            <p class="text-xl text-gray-600 mb-4">{surgeon.category}</p>
             
-            {surgeon.rating > 0 && (
-              <div class="flex items-center gap-4 mb-6">
+            <div class="flex items-center gap-4 mb-6">
+              {surgeon.rating > 0 && (
                 <div class="flex items-center gap-2">
                   <div class="flex">
                     {Array(5).fill(0).map((_, i) => (
@@ -71,16 +208,16 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/wantirna/mr-niru
                   <span class="font-semibold text-gray-900">{surgeon.rating}</span>
                   <span class="text-gray-600">({surgeon.review_count} reviews)</span>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
 
-            <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
               <div class="bg-white rounded-lg p-4 shadow">
                 <p class="text-sm text-gray-600">Experience</p>
                 <p class="text-2xl font-bold text-blue-600">{surgeon.years_experience}+ years</p>
               </div>
               <div class="bg-white rounded-lg p-4 shadow">
-                <p class="text-sm text-gray-600">Est. Procedures</p>
+                <p class="text-sm text-gray-600">Procedures</p>
                 <p class="text-2xl font-bold text-blue-600">{surgeon.estimated_procedures}+</p>
               </div>
             </div>
@@ -95,9 +232,140 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/wantirna/mr-niru
     </section>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="bg-white rounded-xl p-6 shadow-lg">
-        <h2 class="text-2xl font-bold text-gray-900 mb-4">About {surgeon.name}</h2>
-        <p class="text-gray-700 leading-relaxed">{surgeon.bio_long}</p>
+      <div class="grid lg:grid-cols-4 gap-8">
+        
+        <!-- Sidebar -->
+        <div class="lg:col-span-1 space-y-6">
+          <!-- Quick Stats Card -->
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <div class="space-y-4">
+              <div class="pb-4 border-b border-gray-200">
+                <p class="text-sm text-gray-600 mb-1">Rating</p>
+                {surgeon.rating > 0 ? (
+                  <div class="flex items-center gap-2">
+                    <span class="text-2xl">⭐</span>
+                    <span class="text-lg font-bold text-gray-900">{surgeon.rating}</span>
+                  </div>
+                ) : (
+                  <div class="flex items-center gap-2">
+                    <span class="text-2xl">⭐</span>
+                    <span class="text-lg font-bold text-gray-900">N/A</span>
+                  </div>
+                )}
+              </div>
+              
+              <div class="pb-4 border-b border-gray-200">
+                <p class="text-sm text-gray-600 mb-1">Reviews</p>
+                <p class="text-lg font-bold text-gray-900">{surgeon.review_count} reviews</p>
+              </div>
+              
+              <div>
+                <p class="text-sm text-gray-600 mb-1">Experience</p>
+                <p class="text-lg font-bold text-gray-900">{surgeon.years_experience}+ years</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="space-y-3">
+            {surgeon.website && (
+              <a href={surgeon.website} target="_blank" rel="noopener" class="block w-full bg-blue-600 text-white text-center px-6 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+                Visit Website
+              </a>
+            )}
+            {surgeon.google_maps_url && (
+              <a href={surgeon.google_maps_url} target="_blank" rel="noopener" class="block w-full bg-green-600 text-white text-center px-6 py-4 rounded-xl font-semibold hover:bg-green-700 transition-colors shadow-lg">
+                View on Google Maps
+              </a>
+            )}
+            {surgeon.phone && (
+              <a href={`tel:${surgeon.phone}`} class="block w-full bg-gray-800 text-white text-center px-6 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-colors shadow-lg">
+                📞 Call Now
+              </a>
+            )}
+          </div>
+
+          <!-- Procedures Card -->
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+            <h3 class="text-lg font-bold text-gray-900 mb-4">Procedures Offered</h3>
+            <div class="space-y-2">
+              <div class="flex items-center gap-2 text-gray-700">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Gastric Sleeve</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-700">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Gastric Bypass</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-700">
+                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>Gastric Band</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="lg:col-span-3 space-y-8">
+          <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">About {cleanName}</h2>
+            <p class="text-gray-700 leading-relaxed text-lg">{surgeon.bio_long.replace(surgeon.name, cleanName)}</p>
+          </div>
+
+          <!-- Location & Consultation Info -->
+          <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 shadow-lg border border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Location & Consultation</h2>
+            
+            {surgeon.phone && (
+              <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Contact Information</h3>
+                <p class="text-gray-700">
+                  <strong>Phone:</strong> <a href={`tel:${surgeon.phone}`} class="text-blue-600 hover:text-blue-800 font-semibold">{surgeon.phone}</a>
+                </p>
+                {surgeon.website && (
+                  <p class="text-gray-700 mt-1">
+                    <strong>Website:</strong> <a href={surgeon.website} target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">{surgeon.website.replace('https://', '').replace('http://', '')}</a>
+                  </p>
+                )}
+              </div>
+            )}
+
+            <div class="mb-6">
+              <h3 class="text-xl font-semibold text-gray-900 mb-3">Serving Areas</h3>
+              <p class="text-gray-700 leading-relaxed">
+                {cleanName} proudly serves patients in <strong>{surgeon.city}</strong> and throughout <strong>{surgeon.state}</strong>. 
+                Specializing in <a href="/procedures/gastric-sleeve" class="text-blue-600 hover:text-blue-800 font-semibold">gastric sleeve surgery</a>, 
+                <a href="/procedures/gastric-bypass" class="text-blue-600 hover:text-blue-800 font-semibold">gastric bypass</a>, and 
+                <a href="/procedures/gastric-band" class="text-blue-600 hover:text-blue-800 font-semibold">gastric band procedures</a> for patients 
+                seeking effective weight loss solutions in the region.
+              </p>
+            </div>
+
+            {surgeon.google_maps_url && (
+              <div>
+                <a href={surgeon.google_maps_url} target="_blank" rel="noopener" 
+                   class="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  View Location on Google Maps
+                </a>
+              </div>
+            )}
+          </div>
+
+          {seo.credentials && <CredentialsSection credentials={seo.credentials} />}
+          {enhanced.team && <TeamSection team={enhanced.team} />}
+          {enhanced.hospitals && <HospitalsSection hospitals={enhanced.hospitals} />}
+          {enhanced.pricing && <PricingSection pricing={enhanced.pricing} />}
+          {seo.faqs && <FAQSection faqs={seo.faqs} />}
+        </div>
       </div>
     </div>
   </main>

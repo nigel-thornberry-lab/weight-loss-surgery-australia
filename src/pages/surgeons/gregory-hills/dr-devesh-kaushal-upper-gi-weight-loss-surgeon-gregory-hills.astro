@@ -1,10 +1,5 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import CredentialsSection from '../../../components/surgeons/CredentialsSection.astro';
-import FAQSection from '../../../components/surgeons/FAQSection.astro';
-import TeamSection from '../../../components/surgeons/TeamSection.astro';
-import HospitalsSection from '../../../components/surgeons/HospitalsSection.astro';
-import PricingSection from '../../../components/surgeons/PricingSection.astro';
 
 const surgeon = {
   "name": "Dr Devesh Kaushal | Upper-GI & Weight Loss Surgeon",
@@ -22,135 +17,10 @@ const surgeon = {
   "rating": 4.9,
   "review_count": 50
 };
-const citySlug = "gregory-hills";
-const slug = "dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills";
-const enhanced = {
-  "surgeon_name": "Dr Devesh Kaushal | Upper-GI & Weight Loss Surgeon",
-  "city": "Gregory Hills",
-  "state": "NSW",
-  "team": {
-    "surgeons": [
-      {
-        "name": "Dr Devesh Kaushal",
-        "role": "Bariatric & Upper GI Surgeon",
-        "experience": "15+ years"
-      }
-    ],
-    "team_size": "Multidisciplinary team including dietitian, psychologist, and exercise physiologist",
-    "has_dietitian": true,
-    "has_psychologist": true,
-    "has_exercise_physiologist": true,
-    "has_nurses": true
-  },
-  "services": {
-    "procedures": [
-      "Gastric Sleeve",
-      "Gastric Bypass",
-      "Upper GI Surgery",
-      "Colorectal Surgery",
-      "Advanced Endoscopy"
-    ],
-    "pre_op_program": "Yes - comprehensive assessment",
-    "post_op_program": "Yes - structured follow-up with multidisciplinary team",
-    "approach": "Empathic, patient-focused, state-of-the-art diagnostics"
-  },
-  "hospitals": [
-    {
-      "name": "Campbelltown Private Hospital",
-      "address": "Campbelltown, NSW"
-    },
-    {
-      "name": "Sydney Southwest Private Hospital",
-      "address": "Liverpool, NSW"
-    }
-  ],
-  "pricing": {
-    "available": false
-  },
-  "unique_features": [
-    "15+ years experience with Master of Surgery degree",
-    "International expertise from UK subspecialized training",
-    "Multidisciplinary team approach (Dietitian Claudia, psychologist, exercise physiologist)",
-    "Empathic, patient-centered care",
-    "Telehealth consultations available",
-    "Complex case expertise"
-  ]
-};
-const seo = {
-  "credentials": {
-    "medical_school": "Not publicly listed",
-    "graduation_year": "Unknown",
-    "surgical_training": "NSW, QLD, NT; Subspecialised upper-GI in UK",
-    "fellowships": [
-      {
-        "specialty": "Upper Gastrointestinal Surgery",
-        "institution": "High-volume oesophageal and gastric surgery centre, United Kingdom",
-        "year": "After Australian registrar training"
-      }
-    ],
-    "certifications": [
-      "FRACS (Fellow, Royal Australasian College of Surgeons) - General Surgery",
-      "GESA Endoscopy Accreditation (Gastroscopy and Colonoscopy)"
-    ],
-    "years_in_practice": "15+",
-    "procedures_performed": "1500+"
-  },
-  "achievements": [
-    "Subspecialised training in high-volume oesophageal and gastric surgery centre in UK",
-    "Trained under internationally prominent general surgeons",
-    "Master of Surgery degree holder"
-  ],
-  "teaching": [],
-  "faqs": [
-    {
-      "q": "What is the process for my first consultation with Dr Devesh Kaushal?",
-      "a": "Your initial consultation involves a detailed medical assessment, review of any relevant test results (please bring these), and discussion of your surgical and non-surgical options. Arrive 10 minutes early for paperwork, and you are welcome to bring a support person. Telehealth consultations are also available if needed."
-    },
-    {
-      "q": "Who is part of the multidisciplinary team, and what are their roles?",
-      "a": "The team includes Dietitian Claudia for nutritional support, a psychologist for mental health and readiness, and an exercise physiologist for tailored physical activity plans. They work collaboratively with Dr Kaushal to optimize your outcomes before and after surgery."
-    },
-    {
-      "q": "What types of bariatric surgery does Dr Kaushal perform?",
-      "a": "Dr Kaushal specializes in gastric sleeve surgery and other minimally invasive (laparoscopic) weight loss procedures. He also has expertise in upper-GI and colorectal surgery, as well as advanced endoscopic procedures."
-    },
-    {
-      "q": "How long does it take to recover from bariatric surgery?",
-      "a": "Most patients stay in hospital for a few days post-surgery and can resume light activities within 1-2 weeks, with a gradual return to normal activities over several weeks. Comprehensive follow-up care is provided to support your recovery and monitor for complications."
-    },
-    {
-      "q": "What follow-up care will I receive after surgery?",
-      "a": "Scheduled post-operative appointments are arranged to monitor healing and progress. Ongoing care includes consultations with the dietitian, psychologist, and exercise physiologist as needed. Regular check-ins allow for any adjustments to your care plan and long-term support."
-    },
-    {
-      "q": "What are the costs, and is surgery covered by insurance?",
-      "a": "Dr Kaushal's clinic is a private practice; there are reasonable out-of-pocket costs for consultations and procedures. Private health insurance may cover substantial hospital fees, but self-funded options are available. Medicare rebates are possible for some follow-up services but not for the first consultation."
-    },
-    {
-      "q": "Where does Dr Kaushal operate?",
-      "a": "Dr Kaushal operates at Campbelltown Private Hospital and Sydney Southwest Private Hospital, both in South-Western Sydney."
-    },
-    {
-      "q": "What makes Dr Kaushal's practice unique?",
-      "a": "He offers over 15 years' experience, advanced training (including a Master of Surgery), international expertise, and a multidisciplinary, empathic approach. Patients benefit from specialized care tailored to complex cases, with state-of-the-art diagnostics and a patient-focused ethos."
-    },
-    {
-      "q": "How long are the waiting times for appointments and surgery?",
-      "a": "While every effort is made to run on time, occasional delays may occur due to complex case needs. You will be informed if there are scheduling delays. Same-day cancellations may incur a fee. Exact waiting times for surgery depend on medical urgency and hospital availability."
-    },
-    {
-      "q": "What does the typical patient journey look like?",
-      "a": "The process involves initial consultation and assessments (with relevant specialists), pre-operative planning, surgery at one of the partnered hospitals, and structured follow-up appointments with Dr Kaushal and the multidisciplinary team to ensure long-term success and support."
-    }
-  ]
-};
 
-// Extract clean name (remove title/role if present)
-const cleanName = surgeon.name.split('|')[0].split('-')[0].trim();
-
-const title = `${cleanName} - Bariatric Surgeon ${surgeon.city}, ${surgeon.state}`;
-const description = `Top-rated bariatric surgeon in ${surgeon.city} (${surgeon.rating}★, ${surgeon.review_count} reviews). Gastric sleeve, bypass & revision. Serving ${surgeon.state}. Book consultation today.`;
-const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${slug}`;
+const title = `${surgeon.name} - Bariatric Surgeon ${surgeon.city} | Weight Loss Surgery`;
+const description = `${surgeon.name} is an experienced bariatric surgeon in ${surgeon.city} with ${surgeon.years_experience}+ years experience. Rating: ${surgeon.rating}/5 (${surgeon.review_count} reviews). Specialist in gastric sleeve, bypass & band surgery.`;
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/gregory-hills/dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills`;
 ---
 
 <BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
@@ -162,7 +32,7 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${sl
           <span class="text-gray-400">/</span>
           <a href="/surgeons" class="text-blue-600 hover:text-blue-800">Surgeons</a>
           <span class="text-gray-400">/</span>
-          <a href={`/surgeons/${citySlug}`} class="text-blue-600 hover:text-blue-800">{surgeon.city}</a>
+          <a href="/surgeons/gregory-hills" class="text-blue-600 hover:text-blue-800">{surgeon.city}</a>
           <span class="text-gray-400">/</span>
           <span class="text-gray-700">{surgeon.name}</span>
         </div>
@@ -185,11 +55,11 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${sl
           </div>
           
           <div class="md:col-span-2">
-            <h1 class="text-4xl font-bold text-gray-900 mb-3">{cleanName} - Bariatric Surgeon in {surgeon.city}, {surgeon.state}</h1>
-            <p class="text-xl text-gray-600 mb-4">{surgeon.category}</p>
+            <h1 class="text-4xl font-bold text-gray-900 mb-3">{surgeon.name}</h1>
+            <p class="text-xl text-gray-600 mb-4">{surgeon.category} • {surgeon.city}, {surgeon.state}</p>
             
-            <div class="flex items-center gap-4 mb-6">
-              {surgeon.rating > 0 && (
+            {surgeon.rating > 0 && (
+              <div class="flex items-center gap-4 mb-6">
                 <div class="flex items-center gap-2">
                   <div class="flex">
                     {Array(5).fill(0).map((_, i) => (
@@ -201,16 +71,16 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${sl
                   <span class="font-semibold text-gray-900">{surgeon.rating}</span>
                   <span class="text-gray-600">({surgeon.review_count} reviews)</span>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
 
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+            <div class="grid grid-cols-2 gap-4 mb-6">
               <div class="bg-white rounded-lg p-4 shadow">
                 <p class="text-sm text-gray-600">Experience</p>
                 <p class="text-2xl font-bold text-blue-600">{surgeon.years_experience}+ years</p>
               </div>
               <div class="bg-white rounded-lg p-4 shadow">
-                <p class="text-sm text-gray-600">Procedures</p>
+                <p class="text-sm text-gray-600">Est. Procedures</p>
                 <p class="text-2xl font-bold text-blue-600">{surgeon.estimated_procedures}+</p>
               </div>
             </div>
@@ -225,140 +95,9 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${sl
     </section>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid lg:grid-cols-4 gap-8">
-        
-        <!-- Sidebar -->
-        <div class="lg:col-span-1 space-y-6">
-          <!-- Quick Stats Card -->
-          <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-            <div class="space-y-4">
-              <div class="pb-4 border-b border-gray-200">
-                <p class="text-sm text-gray-600 mb-1">Rating</p>
-                {surgeon.rating > 0 ? (
-                  <div class="flex items-center gap-2">
-                    <span class="text-2xl">⭐</span>
-                    <span class="text-lg font-bold text-gray-900">{surgeon.rating}</span>
-                  </div>
-                ) : (
-                  <div class="flex items-center gap-2">
-                    <span class="text-2xl">⭐</span>
-                    <span class="text-lg font-bold text-gray-900">N/A</span>
-                  </div>
-                )}
-              </div>
-              
-              <div class="pb-4 border-b border-gray-200">
-                <p class="text-sm text-gray-600 mb-1">Reviews</p>
-                <p class="text-lg font-bold text-gray-900">{surgeon.review_count} reviews</p>
-              </div>
-              
-              <div>
-                <p class="text-sm text-gray-600 mb-1">Experience</p>
-                <p class="text-lg font-bold text-gray-900">{surgeon.years_experience}+ years</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- CTA Buttons -->
-          <div class="space-y-3">
-            {surgeon.website && (
-              <a href={surgeon.website} target="_blank" rel="noopener" class="block w-full bg-blue-600 text-white text-center px-6 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-lg">
-                Visit Website
-              </a>
-            )}
-            {surgeon.google_maps_url && (
-              <a href={surgeon.google_maps_url} target="_blank" rel="noopener" class="block w-full bg-green-600 text-white text-center px-6 py-4 rounded-xl font-semibold hover:bg-green-700 transition-colors shadow-lg">
-                View on Google Maps
-              </a>
-            )}
-            {surgeon.phone && (
-              <a href={`tel:${surgeon.phone}`} class="block w-full bg-gray-800 text-white text-center px-6 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-colors shadow-lg">
-                📞 Call Now
-              </a>
-            )}
-          </div>
-
-          <!-- Procedures Card -->
-          <div class="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
-            <h3 class="text-lg font-bold text-gray-900 mb-4">Procedures Offered</h3>
-            <div class="space-y-2">
-              <div class="flex items-center gap-2 text-gray-700">
-                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>Gastric Sleeve</span>
-              </div>
-              <div class="flex items-center gap-2 text-gray-700">
-                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>Gastric Bypass</span>
-              </div>
-              <div class="flex items-center gap-2 text-gray-700">
-                <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                </svg>
-                <span>Gastric Band</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="lg:col-span-3 space-y-8">
-          <div class="bg-white rounded-xl p-8 shadow-lg border border-gray-100">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">About {cleanName}</h2>
-            <p class="text-gray-700 leading-relaxed text-lg">{surgeon.bio_long.replace(surgeon.name, cleanName)}</p>
-          </div>
-
-          <!-- Location & Consultation Info -->
-          <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-8 shadow-lg border border-gray-100">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">Location & Consultation</h2>
-            
-            {surgeon.phone && (
-              <div class="mb-6">
-                <h3 class="text-xl font-semibold text-gray-900 mb-2">Contact Information</h3>
-                <p class="text-gray-700">
-                  <strong>Phone:</strong> <a href={`tel:${surgeon.phone}`} class="text-blue-600 hover:text-blue-800 font-semibold">{surgeon.phone}</a>
-                </p>
-                {surgeon.website && (
-                  <p class="text-gray-700 mt-1">
-                    <strong>Website:</strong> <a href={surgeon.website} target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-800">{surgeon.website.replace('https://', '').replace('http://', '')}</a>
-                  </p>
-                )}
-              </div>
-            )}
-
-            <div class="mb-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-3">Serving Areas</h3>
-              <p class="text-gray-700 leading-relaxed">
-                {cleanName} proudly serves patients in <strong>{surgeon.city}</strong> and throughout <strong>{surgeon.state}</strong>. 
-                Specializing in <a href="/procedures/gastric-sleeve" class="text-blue-600 hover:text-blue-800 font-semibold">gastric sleeve surgery</a>, 
-                <a href="/procedures/gastric-bypass" class="text-blue-600 hover:text-blue-800 font-semibold">gastric bypass</a>, and 
-                <a href="/procedures/gastric-band" class="text-blue-600 hover:text-blue-800 font-semibold">gastric band procedures</a> for patients 
-                seeking effective weight loss solutions in the region.
-              </p>
-            </div>
-
-            {surgeon.google_maps_url && (
-              <div>
-                <a href={surgeon.google_maps_url} target="_blank" rel="noopener" 
-                   class="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-                  </svg>
-                  View Location on Google Maps
-                </a>
-              </div>
-            )}
-          </div>
-
-          {seo.credentials && <CredentialsSection credentials={seo.credentials} />}
-          {enhanced.team && <TeamSection team={enhanced.team} />}
-          {enhanced.hospitals && <HospitalsSection hospitals={enhanced.hospitals} />}
-          {enhanced.pricing && <PricingSection pricing={enhanced.pricing} />}
-          {seo.faqs && <FAQSection faqs={seo.faqs} />}
-        </div>
+      <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">About {surgeon.name}</h2>
+        <p class="text-gray-700 leading-relaxed">{surgeon.bio_long}</p>
       </div>
     </div>
   </main>
