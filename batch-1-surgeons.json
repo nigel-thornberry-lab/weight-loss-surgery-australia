@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Dr. Mark Magdy",
+    "city": "Miranda",
+    "state": "NSW",
+    "rating": 5,
+    "reviews": 109,
+    "slug": "dr-mark-magdy-miranda",
+    "website": "http://drmarkmagdy.com.au/",
+    "score": 60.9
+  },
+  {
+    "name": "Dr Robert Gandy",
+    "city": "Randwick",
+    "state": "NSW",
+    "rating": 5,
+    "reviews": 83,
+    "slug": "dr-robert-gandy-randwick",
+    "website": "http://www.keyholesurgeon.com.au/",
+    "score": 58.3
+  },
+  {
+    "name": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne",
+    "city": "Wantirna",
+    "state": "Victoria",
+    "rating": 4.9,
+    "reviews": 92,
+    "slug": "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna",
+    "website": "https://www.nirubenrajasagaram.au/",
+    "score": 58.2
+  },
+  {
+    "name": "Dr. Yuan Cheng",
+    "city": "Richmond",
+    "state": "Victoria",
+    "rating": 5,
+    "reviews": 72,
+    "slug": "dr-yuan-cheng-richmond",
+    "website": "http://www.obesity.com.au/",
+    "score": 57.2
+  },
+  {
+    "name": "Dr Faizur Reza",
+    "city": "Bella Vista",
+    "state": "NSW",
+    "rating": 5,
+    "reviews": 70,
+    "slug": "dr-faizur-reza-bella-vista",
+    "website": "https://yhmo.xyz/business/dr-faizur-reza-b0bqgj",
+    "score": 57
+  },
+  {
+    "name": "A/Prof. Christos Apostolou - Surgeon",
+    "city": "Wahroonga",
+    "state": "NSW",
+    "rating": 4.9,
+    "reviews": 79,
+    "slug": "aprof-christos-apostolou-surgeon-wahroonga",
+    "website": "http://www.christosapostolou.com.au/",
+    "score": 56.9
+  },
+  {
+    "name": "Dr Michael Yunaev",
+    "city": "Potts Point",
+    "state": "NSW",
+    "rating": 5,
+    "reviews": 59,
+    "slug": "dr-michael-yunaev-potts-point",
+    "website": "https://www.bbclinic.com.au/",
+    "score": 55.9
+  }
+]

@@ -1,254 +1,4 @@
 {
-  "dr-mani-niazi-wantirna": {
-    "surgeon_name": "Dr Mani Niazi",
-    "city": "Wantirna",
-    "state": "Victoria",
-    "team": {
-      "surgeons": [
-        {
-          "name": "Dr Mani Niazi",
-          "role": "Principal Surgeon - Upper GI & Bariatric",
-          "experience": "18+ years",
-          "qualifications": "Dual fellowships in Upper GI & Bariatric Surgery and Breast/Endocrine/Surgical Oncology"
-        },
-        {
-          "name": "Dr Ramin Mehdipour",
-          "role": "Bariatric Surgeon",
-          "specialization": "Upper GI and bariatric procedures"
-        }
-      ],
-      "team_size": "Multidisciplinary team (specific numbers not disclosed)",
-      "has_dietitian": true,
-      "has_psychologist": false,
-      "has_nurses": true,
-      "has_exercise_physiologist": false
-    },
-    "services": {
-      "procedures": [
-        "Sleeve Gastrectomy",
-        "Gastric Bypass",
-        "Bariatric Revision Surgery",
-        "Lap Band Removal",
-        "Advanced Laparoscopic Surgeries",
-        "Hernia Repair",
-        "Gallbladder Surgery",
-        "Thyroid/Parathyroid Surgery",
-        "Abdominoplasty"
-      ],
-      "pre_op_program": "Yes - personalized consultation",
-      "post_op_program": "Yes - After Care Program",
-      "follow_up_duration": "Not specified",
-      "telehealth": false,
-      "support_groups": false,
-      "approach": "Personalized, evidence-based, team-based care"
-    },
-    "hospitals": [
-      {
-        "name": "Ringwood Private Hospital",
-        "address": "36-42 Mt Dandenong Rd, Ringwood East, VIC 3135"
-      },
-      {
-        "name": "Knox Private Hospital",
-        "address": "262 Mountain Hwy, Wantirna, VIC 3152"
-      },
-      {
-        "name": "Peninsula Private Hospital",
-        "address": "525 McClelland Dr, Langwarrin, VIC 3910"
-      },
-      {
-        "name": "Holmesglen Private Hospital",
-        "address": "490 South Rd, Moorabbin, VIC 3189"
-      },
-      {
-        "name": "195 Specialist Centre",
-        "address": "195 Thompsons Rd, Bulleen, VIC 3105"
-      }
-    ],
-    "pricing": {
-      "available": false,
-      "gastric_sleeve": "Contact for pricing",
-      "gastric_bypass": "Contact for pricing",
-      "consultation": "Contact for pricing"
-    },
-    "unique_features": [
-      "Dual fellowship-trained (Upper GI & Bariatric + Breast/Endocrine/Oncology)",
-      "Pioneer in Laparoscopic Gastric Plication - instrumental in global development",
-      "Direct RACS fellowship registration (international expertise recognized)",
-      "Multilingual services (Farsi, Persian, Turkish)",
-      "5 hospital locations across Melbourne and regional Victoria",
-      "Accessible, affordable, evidence-based care focus",
-      "Advanced minimally invasive techniques pioneer"
-    ]
-  },
-  "dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills": {
-    "surgeon_name": "Dr Devesh Kaushal | Upper-GI & Weight Loss Surgeon",
-    "city": "Gregory Hills",
-    "state": "NSW",
-    "team": {
-      "surgeons": [
-        {
-          "name": "Dr Devesh Kaushal",
-          "role": "Bariatric & Upper GI Surgeon",
-          "experience": "15+ years"
-        }
-      ],
-      "team_size": "Multidisciplinary team including dietitian, psychologist, and exercise physiologist",
-      "has_dietitian": true,
-      "has_psychologist": true,
-      "has_exercise_physiologist": true,
-      "has_nurses": true
-    },
-    "services": {
-      "procedures": [
-        "Gastric Sleeve",
-        "Gastric Bypass",
-        "Upper GI Surgery",
-        "Colorectal Surgery",
-        "Advanced Endoscopy"
-      ],
-      "pre_op_program": "Yes - comprehensive assessment",
-      "post_op_program": "Yes - structured follow-up with multidisciplinary team",
-      "approach": "Empathic, patient-focused, state-of-the-art diagnostics"
-    },
-    "hospitals": [
-      {
-        "name": "Campbelltown Private Hospital",
-        "address": "Campbelltown, NSW"
-      },
-      {
-        "name": "Sydney Southwest Private Hospital",
-        "address": "Liverpool, NSW"
-      }
-    ],
-    "pricing": {
-      "available": false
-    },
-    "unique_features": [
-      "15+ years experience with Master of Surgery degree",
-      "International expertise from UK subspecialized training",
-      "Multidisciplinary team approach (Dietitian Claudia, psychologist, exercise physiologist)",
-      "Empathic, patient-centered care",
-      "Telehealth consultations available",
-      "Complex case expertise"
-    ]
-  },
-  "dr-jason-maani-kogarah": {
-    "surgeon_name": "Dr Jason Maani",
-    "city": "Kogarah",
-    "state": "NSW",
-    "team": {
-      "surgeons": [
-        {
-          "name": "Dr Jason Maani",
-          "role": "Bariatric & Upper GI Surgeon",
-          "experience": "19+ years"
-        }
-      ],
-      "team_size": "Multidisciplinary team",
-      "has_dietitian": true,
-      "has_psychologist": false,
-      "has_nurses": true,
-      "has_exercise_physiologist": false
-    },
-    "services": {
-      "procedures": [
-        "Sleeve Gastrectomy",
-        "Gastric Bypass",
-        "Revision Surgery",
-        "Hernia Repair"
-      ],
-      "pre_op_program": "Yes",
-      "post_op_program": "Yes - Comprehensive aftercare",
-      "approach": "Minimally invasive laparoscopic techniques"
-    },
-    "hospitals": [
-      {
-        "name": "St George Private Hospital",
-        "address": "1 South St, Kogarah, NSW"
-      },
-      {
-        "name": "Kareena Private Hospital",
-        "address": "Caringbah, NSW"
-      },
-      {
-        "name": "Sydney Southwest Private Hospital",
-        "address": "Liverpool, NSW"
-      },
-      {
-        "name": "Wollongong Private Hospital",
-        "address": "Wollongong, NSW"
-      }
-    ],
-    "pricing": {
-      "available": false
-    },
-    "unique_features": [
-      "Over 3,000 surgeries performed",
-      "1,000+ laparoscopic procedures",
-      "Certified Bariatric Surgeon of Excellence",
-      "Research involvement through UNSW",
-      "Warm, patient-centered care approach"
-    ]
-  },
-  "dr-jason-maani-bariatric-surgery-liverpool": {
-    "surgeon_name": "Dr Jason Maani Bariatric Surgery",
-    "city": "Liverpool",
-    "state": "NSW",
-    "team": {
-      "surgeons": [
-        {
-          "name": "Dr Jason Maani",
-          "role": "Bariatric & Upper GI Surgeon",
-          "experience": "19+ years"
-        }
-      ],
-      "team_size": "Multidisciplinary team",
-      "has_dietitian": true,
-      "has_psychologist": false,
-      "has_nurses": true,
-      "has_exercise_physiologist": false
-    },
-    "services": {
-      "procedures": [
-        "Sleeve Gastrectomy",
-        "Gastric Bypass",
-        "Revision Surgery",
-        "Hernia Repair"
-      ],
-      "pre_op_program": "Yes",
-      "post_op_program": "Yes - Comprehensive aftercare",
-      "approach": "Minimally invasive laparoscopic techniques"
-    },
-    "hospitals": [
-      {
-        "name": "Sydney Southwest Private Hospital",
-        "address": "Level 3, Suite 3.02, 24/40 Bigge St, Liverpool, NSW"
-      },
-      {
-        "name": "St George Private Hospital",
-        "address": "1 South St, Kogarah, NSW"
-      },
-      {
-        "name": "Kareena Private Hospital",
-        "address": "Caringbah, NSW"
-      },
-      {
-        "name": "Wollongong Private Hospital",
-        "address": "Wollongong, NSW"
-      }
-    ],
-    "pricing": {
-      "available": false
-    },
-    "unique_features": [
-      "Over 3,000 surgeries performed",
-      "1,000+ laparoscopic procedures",
-      "Certified Bariatric Surgeon of Excellence",
-      "Research involvement through UNSW",
-      "Warm, patient-centered care approach",
-      "Highest rated practice (5.0 stars, 83 reviews)"
-    ]
-  },
   "dr-mark-magdy-miranda": {
     "surgeon_name": "Dr. Mark Magdy",
     "city": "Miranda",
@@ -269,10 +19,7 @@
     },
     "team": {
       "surgeons": [
-        {
-          "name": "Dr Mark Magdy",
-          "role": "Principal bariatric surgeon"
-        }
+        {"name": "Dr Mark Magdy", "role": "Principal bariatric surgeon"}
       ],
       "team_size": "Multidisciplinary team",
       "has_dietitian": true,
@@ -295,14 +42,8 @@
       "support_groups": true
     },
     "hospitals": [
-      {
-        "name": "St George Private Hospital",
-        "address": "1 South Street, Kogarah, NSW, 2228"
-      },
-      {
-        "name": "Kareena Private Hospital",
-        "address": "Caringbah, NSW"
-      }
+      {"name": "St George Private Hospital", "address": "1 South Street, Kogarah, NSW, 2228"},
+      {"name": "Kareena Private Hospital", "address": "Caringbah, NSW"}
     ],
     "pricing": {
       "available": false,
@@ -354,10 +95,7 @@
     },
     "team": {
       "surgeons": [
-        {
-          "name": "Dr Robert Gandy",
-          "role": "Principal Upper GI & Bariatric Surgeon"
-        }
+        {"name": "Dr Robert Gandy", "role": "Principal Upper GI & Bariatric Surgeon"}
       ],
       "team_size": "Solo practice with support staff",
       "has_dietitian": false,
@@ -381,22 +119,10 @@
       "support_groups": false
     },
     "hospitals": [
-      {
-        "name": "Prince of Wales Private Hospital",
-        "address": "Barker Street, Randwick NSW 2031"
-      },
-      {
-        "name": "Prince of Wales Public Hospital",
-        "address": "Barker Street, Randwick NSW 2031"
-      },
-      {
-        "name": "East Sydney Private Hospital",
-        "address": "Sydney, NSW"
-      },
-      {
-        "name": "Chris O'Brien Lifehouse",
-        "address": "Missenden Road, Camperdown NSW 2050"
-      }
+      {"name": "Prince of Wales Private Hospital", "address": "Barker Street, Randwick NSW 2031"},
+      {"name": "Prince of Wales Public Hospital", "address": "Barker Street, Randwick NSW 2031"},
+      {"name": "East Sydney Private Hospital", "address": "Sydney, NSW"},
+      {"name": "Chris O'Brien Lifehouse", "address": "Missenden Road, Camperdown NSW 2050"}
     ],
     "pricing": {
       "available": false,
@@ -452,10 +178,7 @@
     },
     "team": {
       "surgeons": [
-        {
-          "name": "Mr. Niruben Rajasagaram",
-          "role": "Director, Consultant Bariatric, Oesophagogastric & General Surgeon"
-        }
+        {"name": "Mr. Niruben Rajasagaram", "role": "Director, Consultant Bariatric, Oesophagogastric & General Surgeon"}
       ],
       "team_size": "Multidisciplinary team",
       "has_dietitian": true,
@@ -480,14 +203,8 @@
       "support_groups": false
     },
     "hospitals": [
-      {
-        "name": "Knox Private Hospital",
-        "address": "Suite 11A, 262 Mountain Highway, Wantirna, VIC 3152"
-      },
-      {
-        "name": "Mulgrave Private Hospital",
-        "address": "389 Police Road, Mulgrave, VIC 3170"
-      }
+      {"name": "Knox Private Hospital", "address": "Suite 11A, 262 Mountain Highway, Wantirna, VIC 3152"},
+      {"name": "Mulgrave Private Hospital", "address": "389 Police Road, Mulgrave, VIC 3170"}
     ],
     "pricing": {
       "available": false,
@@ -541,10 +258,7 @@
     },
     "team": {
       "surgeons": [
-        {
-          "name": "Dr. Yuan Cheng",
-          "role": "Principal Bariatric and General Surgeon"
-        }
+        {"name": "Dr. Yuan Cheng", "role": "Principal Bariatric and General Surgeon"}
       ],
       "team_size": "Multidisciplinary allied health team",
       "has_dietitian": true,
@@ -569,30 +283,12 @@
       "support_groups": true
     },
     "hospitals": [
-      {
-        "name": "Epworth Eastern Hospital",
-        "address": "Suite 62, Level 6, 1 Arnold Street, Box Hill, VIC 3128"
-      },
-      {
-        "name": "Epworth Freemasons Hospital",
-        "address": "Level 1, 124 Grey Street, East Melbourne, VIC 3002"
-      },
-      {
-        "name": "Knox Private Hospital",
-        "address": "221 Scoresby Road, Wantirna, VIC 3152"
-      },
-      {
-        "name": "Holmesglen Private Hospital",
-        "address": "490 South Road, Moorabbin, VIC 3189"
-      },
-      {
-        "name": "St Vincent's Private Hospital",
-        "address": "41 Victoria Parade, Fitzroy, VIC 3065"
-      },
-      {
-        "name": "Box Hill Hospital",
-        "address": "Arnold Street, Box Hill, VIC 3128"
-      }
+      {"name": "Epworth Eastern Hospital", "address": "Suite 62, Level 6, 1 Arnold Street, Box Hill, VIC 3128"},
+      {"name": "Epworth Freemasons Hospital", "address": "Level 1, 124 Grey Street, East Melbourne, VIC 3002"},
+      {"name": "Knox Private Hospital", "address": "221 Scoresby Road, Wantirna, VIC 3152"},
+      {"name": "Holmesglen Private Hospital", "address": "490 South Road, Moorabbin, VIC 3189"},
+      {"name": "St Vincent's Private Hospital", "address": "41 Victoria Parade, Fitzroy, VIC 3065"},
+      {"name": "Box Hill Hospital", "address": "Arnold Street, Box Hill, VIC 3128"}
     ],
     "pricing": {
       "available": false,
@@ -650,10 +346,7 @@
     },
     "team": {
       "surgeons": [
-        {
-          "name": "A/Prof. Christos Apostolou",
-          "role": "Lead Surgeon, Specialist Upper GI/Bariatric Surgeon"
-        }
+        {"name": "A/Prof. Christos Apostolou", "role": "Lead Surgeon, Specialist Upper GI/Bariatric Surgeon"}
       ],
       "team_size": "Multidisciplinary team",
       "has_dietitian": true,
@@ -677,26 +370,11 @@
       "support_groups": true
     },
     "hospitals": [
-      {
-        "name": "Sydney Adventist Hospital",
-        "address": "185 Fox Valley Road, Wahroonga, NSW 2076"
-      },
-      {
-        "name": "Macquarie University Hospital",
-        "address": "75 Talavera Rd, Macquarie Park NSW 2113"
-      },
-      {
-        "name": "Northern Beaches Hospital",
-        "address": "105 Frenchs Forest Rd W, Frenchs Forest NSW 2086"
-      },
-      {
-        "name": "Bankstown-Lidcombe Hospital",
-        "address": "Bankstown, NSW 2200"
-      },
-      {
-        "name": "Norwest Private Hospital",
-        "address": "11 Norbrik Dr, Bella Vista NSW 2153"
-      }
+      {"name": "Sydney Adventist Hospital", "address": "185 Fox Valley Road, Wahroonga, NSW 2076"},
+      {"name": "Macquarie University Hospital", "address": "75 Talavera Rd, Macquarie Park NSW 2113"},
+      {"name": "Northern Beaches Hospital", "address": "105 Frenchs Forest Rd W, Frenchs Forest NSW 2086"},
+      {"name": "Bankstown-Lidcombe Hospital", "address": "Bankstown, NSW 2200"},
+      {"name": "Norwest Private Hospital", "address": "11 Norbrik Dr, Bella Vista NSW 2153"}
     ],
     "pricing": {
       "available": false,
@@ -728,3 +406,4 @@
     ]
   }
 }
+
