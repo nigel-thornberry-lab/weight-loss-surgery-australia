@@ -1,0 +1,174 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllSurgeons } from '../../data/surgeons';
+
+// Get all surgeons in NSW (Sydney area)
+const allSurgeons = getAllSurgeons();
+const sydneySurgeons = allSurgeons.filter(s => s.state === 'NSW');
+
+// Group by city
+const citiesMap = new Map();
+sydneySurgeons.forEach(surgeon => {
+  const city = surgeon.city;
+  if (!citiesMap.has(city)) {
+    citiesMap.set(city, []);
+  }
+  citiesMap.get(city).push(surgeon);
+});
+
+const cities = Array.from(citiesMap.entries())
+  .map(([city, surgeons]) => ({
+    name: city,
+    slug: city.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+    count: surgeons.length,
+    surgeons: surgeons.sort((a, b) => b.rating - a.rating)
+  }))
+  .sort((a, b) => b.count - a.count);
+
+const title = "Bariatric Surgeons in Sydney, NSW | Weight Loss Surgery Specialists";
+const description = `Find experienced bariatric surgeons across Sydney and NSW. Compare ${sydneySurgeons.length} qualified specialists offering gastric sleeve, bypass, and band procedures.`;
+const canonicalUrl = "https://weightlosssurgery.com.au/surgeons/sydney";
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <!-- Breadcrumb -->
+  <nav class="bg-gray-50 border-b border-gray-200" aria-label="Breadcrumb">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <ol class="flex items-center space-x-2 text-sm">
+        <li><a href="/" class="text-blue-600 hover:text-blue-800">Home</a></li>
+        <li class="text-gray-500">/</li>
+        <li><a href="/surgeons" class="text-blue-600 hover:text-blue-800">Surgeons</a></li>
+        <li class="text-gray-500">/</li>
+        <li class="text-gray-900 font-medium">Sydney</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="bg-gradient-to-br from-blue-50 to-white py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Bariatric Surgeons in Sydney
+      </h1>
+      <p class="text-xl text-gray-600 mb-6">
+        {sydneySurgeons.length} experienced weight loss surgery specialists across {cities.length} locations in Sydney and NSW
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+          🏥 {cities.length} Locations
+        </span>
+        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-100 text-green-800">
+          ⭐ Top-Rated Surgeons
+        </span>
+        <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
+          ✓ All Procedures Available
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cities Grid -->
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Browse by Location</h2>
+      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {cities.map((city) => (
+          <a 
+            href={`/surgeons/${city.slug}`}
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 border border-gray-200 hover:border-blue-300"
+          >
+            <h3 class="text-lg font-bold text-gray-900 mb-2">{city.name}</h3>
+            <p class="text-gray-600 mb-3">{city.count} {city.count === 1 ? 'surgeon' : 'surgeons'}</p>
+            <div class="flex items-center text-blue-600 text-sm font-medium">
+              View surgeons →
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Surgeons -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Top-Rated Sydney Surgeons</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {sydneySurgeons
+          .filter(s => s.rating >= 4.5 && s.review_count >= 10)
+          .sort((a, b) => b.rating - a.rating)
+          .slice(0, 6)
+          .map((surgeon) => (
+            <article class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+              <a href={`/surgeons/${surgeon.city.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/${surgeon.slug}`} class="block">
+                {surgeon.surgeon_photo ? (
+                  <img 
+                    src={surgeon.surgeon_photo} 
+                    alt={surgeon.surgeon_name}
+                    class="w-full h-64 object-cover"
+                    loading="lazy"
+                    width="400"
+                    height="256"
+                  />
+                ) : (
+                  <div class="w-full h-64 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                    <svg class="w-24 h-24 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                    </svg>
+                  </div>
+                )}
+              </a>
+              
+              <div class="p-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                  <a href={`/surgeons/${surgeon.city.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/${surgeon.slug}`} class="hover:text-blue-600">
+                    {surgeon.surgeon_name}
+                  </a>
+                </h3>
+                
+                <div class="flex items-center space-x-4 text-sm text-gray-600 mb-4">
+                  <span class="flex items-center">
+                    ⭐ {surgeon.rating > 0 ? surgeon.rating.toFixed(1) : 'New'}
+                  </span>
+                  <span>{surgeon.review_count} reviews</span>
+                  <span>{surgeon.years_experience}+ years</span>
+                </div>
+                
+                <p class="text-gray-600 text-sm mb-2">📍 {surgeon.city}, NSW</p>
+                
+                <a 
+                  href={`/surgeons/${surgeon.city.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/${surgeon.slug}`}
+                  class="mt-4 block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg text-center transition-colors"
+                >
+                  View Profile
+                </a>
+              </div>
+            </article>
+          ))}
+      </div>
+      <div class="text-center mt-8">
+        <a href="/surgeons" class="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+          View All Surgeons
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-blue-600 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Ready to Start Your Weight Loss Journey?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8">
+        Find the right bariatric surgeon for you in Sydney
+      </p>
+      <a 
+        href="/surgeons"
+        class="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
+      >
+        Browse All Sydney Surgeons →
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
