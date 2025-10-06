@@ -1,0 +1,20 @@
+---
+const { pricing } = Astro.props;
+const { available, gastric_sleeve, gastric_bypass, consultation } = pricing || {};
+---
+
+{pricing && (
+  <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl p-6 shadow-lg">
+    <h2 class="text-2xl font-bold text-gray-900 mb-4">Pricing & Insurance</h2>
+    {available ? (
+      <div class="space-y-3">
+        {gastric_sleeve && <div class="flex justify-between"><span class="text-gray-700">Gastric Sleeve:</span><span class="font-semibold">{gastric_sleeve}</span></div>}
+        {gastric_bypass && <div class="flex justify-between"><span class="text-gray-700">Gastric Bypass:</span><span class="font-semibold">{gastric_bypass}</span></div>}
+        {consultation && <div class="flex justify-between"><span class="text-gray-700">Consultation:</span><span class="font-semibold">{consultation}</span></div>}
+      </div>
+    ) : (
+      <p class="text-gray-700">Pricing available upon consultation. Private health insurance may provide coverage. Contact the practice for detailed cost information.</p>
+    )}
+  </div>
+)}
+

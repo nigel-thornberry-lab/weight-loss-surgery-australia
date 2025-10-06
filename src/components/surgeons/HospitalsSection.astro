@@ -1,0 +1,18 @@
+---
+const { hospitals } = Astro.props;
+---
+
+{hospitals && hospitals.length > 0 && (
+  <div class="bg-white rounded-xl p-6 shadow-lg">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Hospital Locations</h2>
+    <div class="grid md:grid-cols-2 gap-4">
+      {hospitals.map(h => (
+        <div class="border border-gray-200 rounded-lg p-4 hover:border-blue-500 transition-colors">
+          <h3 class="font-semibold text-gray-900">{h.name}</h3>
+          {h.address && <p class="text-sm text-gray-600 mt-1">{h.address}</p>}
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+

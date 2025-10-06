@@ -1,0 +1,276 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CredentialsSection from '../../../components/surgeons/CredentialsSection.astro';
+import FAQSection from '../../../components/surgeons/FAQSection.astro';
+import TeamSection from '../../../components/surgeons/TeamSection.astro';
+import HospitalsSection from '../../../components/surgeons/HospitalsSection.astro';
+import PricingSection from '../../../components/surgeons/PricingSection.astro';
+
+const surgeon = {
+  "name": "Dr Mani Niazi",
+  "city": "Wantirna",
+  "state": "Victoria",
+  "phone": "+61 3 9013 0865",
+  "website": "https://www.loseweightsurgery.com.au/",
+  "category": "Surgeon",
+  "years_experience": "12",
+  "estimated_procedures": "2400",
+  "slug": "dr-mani-niazi-wantirna",
+  "bio_long": "Dr Mani Niazi is a leading bariatric surgeon in Wantirna; Victoria; known for significant expertise in weight loss surgery. With a 4.9-star rating from 127+ patient reviews; they've built a reputation for exceptional patient outcomes and comprehensive surgical care. Specializing in gastric sleeve; bypass; and band procedures; Dr Mani Niazi offers personalized treatment plans backed by 12+ years of surgical experience.",
+  "surgeon_photo": "",
+  "rating": 4.9,
+  "review_count": 127
+};
+const citySlug = "wantirna";
+const slug = "dr-mani-niazi-wantirna";
+const enhanced = {
+  "surgeon_name": "Dr Mani Niazi",
+  "city": "Wantirna",
+  "state": "Victoria",
+  "team": {
+    "surgeons": [
+      {
+        "name": "Dr Mani Niazi",
+        "role": "Principal Surgeon - Upper GI & Bariatric",
+        "experience": "18+ years",
+        "qualifications": "Dual fellowships in Upper GI & Bariatric Surgery and Breast/Endocrine/Surgical Oncology"
+      },
+      {
+        "name": "Dr Ramin Mehdipour",
+        "role": "Bariatric Surgeon",
+        "specialization": "Upper GI and bariatric procedures"
+      }
+    ],
+    "team_size": "Multidisciplinary team (specific numbers not disclosed)",
+    "has_dietitian": true,
+    "has_psychologist": false,
+    "has_nurses": true,
+    "has_exercise_physiologist": false
+  },
+  "services": {
+    "procedures": [
+      "Sleeve Gastrectomy",
+      "Gastric Bypass",
+      "Bariatric Revision Surgery",
+      "Lap Band Removal",
+      "Advanced Laparoscopic Surgeries",
+      "Hernia Repair",
+      "Gallbladder Surgery",
+      "Thyroid/Parathyroid Surgery",
+      "Abdominoplasty"
+    ],
+    "pre_op_program": "Yes - personalized consultation",
+    "post_op_program": "Yes - After Care Program",
+    "follow_up_duration": "Not specified",
+    "telehealth": false,
+    "support_groups": false,
+    "approach": "Personalized, evidence-based, team-based care"
+  },
+  "hospitals": [
+    {
+      "name": "Ringwood Private Hospital",
+      "address": "36-42 Mt Dandenong Rd, Ringwood East, VIC 3135"
+    },
+    {
+      "name": "Knox Private Hospital",
+      "address": "262 Mountain Hwy, Wantirna, VIC 3152"
+    },
+    {
+      "name": "Peninsula Private Hospital",
+      "address": "525 McClelland Dr, Langwarrin, VIC 3910"
+    },
+    {
+      "name": "Holmesglen Private Hospital",
+      "address": "490 South Rd, Moorabbin, VIC 3189"
+    },
+    {
+      "name": "195 Specialist Centre",
+      "address": "195 Thompsons Rd, Bulleen, VIC 3105"
+    }
+  ],
+  "pricing": {
+    "available": false,
+    "gastric_sleeve": "Contact for pricing",
+    "gastric_bypass": "Contact for pricing",
+    "consultation": "Contact for pricing"
+  },
+  "unique_features": [
+    "Dual fellowship-trained (Upper GI & Bariatric + Breast/Endocrine/Oncology)",
+    "Pioneer in Laparoscopic Gastric Plication - instrumental in global development",
+    "Direct RACS fellowship registration (international expertise recognized)",
+    "Multilingual services (Farsi, Persian, Turkish)",
+    "5 hospital locations across Melbourne and regional Victoria",
+    "Accessible, affordable, evidence-based care focus",
+    "Advanced minimally invasive techniques pioneer"
+  ]
+};
+const seo = {
+  "credentials": {
+    "medical_school": "Tehran University of Medical Science, Tehran, Iran",
+    "graduation_year": "~2000s",
+    "surgical_training": "Tehran University of Medical Science (General Surgery, completed 2006)",
+    "fellowships": [
+      {
+        "specialty": "Upper GI and Bariatric Surgery",
+        "institution": "St George Hospital, Sydney (Centre of Excellence in Bariatric Surgery)",
+        "year": "Post-2013"
+      },
+      {
+        "specialty": "Breast, Endocrine & Surgical Oncology",
+        "institution": "Tweed Heads Hospital & John Flynn Hospital, Gold Coast",
+        "year": "Post-2013"
+      }
+    ],
+    "certifications": [
+      "FRACS (Fellow, Royal Australasian College of Surgeons) - March 2013",
+      "Registered Consultant Surgeon - Eastern Health, Melbourne"
+    ],
+    "years_in_practice": "18+",
+    "procedures_performed": "2000+"
+  },
+  "achievements": [
+    "Pioneered Laparoscopic Gastric Plication technique",
+    "Presented at First International Summit of Gastric Plication, Barcelona (2011)",
+    "Supervised Australia's first laparoscopic gastric plication (Royal Brisbane Hospital, 2010)",
+    "Only cited paper on gastric plication in Schwartz's Principles of Surgery (10th edition)",
+    "Travelling fellowship from Royal Brisbane Hospital Bariatric Department (2010)"
+  ],
+  "teaching": [
+    "Lecturer: Bond University, Griffith University, UNSW, Monash University",
+    "International lecturer: Tehran and Gorgan Universities of Medical Science",
+    "Mentor for RACS surgical trainees"
+  ],
+  "faqs": [
+    {
+      "q": "What is the consultation process like with Dr Mani Niazi?",
+      "a": "Dr Niazi's consultation process is highly personalised, starting with an assessment of your medical history, weight loss goals, and suitability for surgery. He provides detailed explanations of surgical options and guides you through evidence-based choices tailored to your unique needs. The initial consult includes an overview of benefits, risks, and expected outcomes for each procedure."
+    },
+    {
+      "q": "Which weight loss surgeries does Dr Niazi perform?",
+      "a": "Dr Niazi offers Sleeve Gastrectomy, Gastric Bypass, and Bariatric Revision Surgery, among other metabolic procedures. Selection is based on individual factors such as your medical profile, previous interventions, and weight loss history. He is noted for his expertise in advanced laparoscopic (keyhole) techniques."
+    },
+    {
+      "q": "What can I expect during the recovery period?",
+      "a": "Most patients can expect a hospital stay of 2-4 days for major bariatric surgeries. Initial recovery is typically 2-3 weeks for daily activities, with full recovery and return to vigorous physical activity within 6-8 weeks. Dr Niazi's practice emphasizes careful monitoring and aftercare throughout this period."
+    },
+    {
+      "q": "What follow-up care does Dr Niazi's team provide?",
+      "a": "Dr Niazi's team delivers comprehensive aftercare, including regular follow-up appointments, nutritional counseling, and support groups to help patients adjust to lifestyle changes. His aftercare program is specifically tailored to support sustained weight loss and includes access to allied health professionals."
+    },
+    {
+      "q": "Does insurance cover bariatric surgery? How much will it cost?",
+      "a": "Cost and insurance coverage depend on your policy and procedure chosen. Dr Niazi's practice focuses on accessibility and affordability and can assist with insurance queries during consultation. Out-of-pocket costs will be clearly discussed, and financing options may be available."
+    },
+    {
+      "q": "Does Dr Niazi perform revision surgery?",
+      "a": "Yes, Dr Niazi is experienced in bariatric revision surgery, which addresses earlier procedures that have failed or caused complications. He provides expert evaluation of your surgical history and customises revision strategies to correct issues or improve outcomes."
+    },
+    {
+      "q": "How long are the waiting times for surgery?",
+      "a": "Waiting times vary by hospital and urgency, but Dr Niazi operates across several major private hospitals, often allowing for shorter wait periods. The initial consultation is usually scheduled within a few weeks, while surgery dates depend on your preparation and hospital scheduling."
+    },
+    {
+      "q": "What makes Dr Niazi's practice unique?",
+      "a": "Dr Niazi brings 18+ years of surgical experience and dual fellowships in Upper GI and Bariatric Surgery. He pioneered gastric plication in Australia and uses minimally invasive, laparoscopic methods for most surgeries. His commitment to research, patient advocacy, and teaching differentiates his practice. Multilingual support is also available (Farsi, Persian, Turkish)."
+    },
+    {
+      "q": "What risks are associated with bariatric surgery?",
+      "a": "Risks can include bleeding, infection, leaks from staple lines, acid reflux, or nutritional deficiencies. Dr Niazi provides thorough risk assessment and manages complications with evidence-based protocols and access to a multidisciplinary team."
+    },
+    {
+      "q": "What lifestyle changes are required post-surgery?",
+      "a": "Patients are educated about essential lifestyle modifications, including dietary adjustments, regular physical activity, and ongoing follow-up to ensure long-term weight management success. Dr Niazi's aftercare program provides ongoing support for these changes."
+    }
+  ]
+};
+
+const title = `${surgeon.name} - Bariatric Surgeon ${surgeon.city} | Weight Loss Surgery`;
+const description = `${surgeon.name} is a leading bariatric surgeon in ${surgeon.city} with ${surgeon.years_experience}+ years experience. Rating: ${surgeon.rating}/5. Specialist in gastric sleeve, bypass & revision surgery.`;
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <main class="min-h-screen bg-gray-50">
+    <nav class="bg-white border-b border-gray-200 py-3">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center space-x-2 text-sm">
+          <a href="/" class="text-blue-600 hover:text-blue-800">Home</a>
+          <span class="text-gray-400">/</span>
+          <a href="/surgeons" class="text-blue-600 hover:text-blue-800">Surgeons</a>
+          <span class="text-gray-400">/</span>
+          <a href={`/surgeons/${citySlug}`} class="text-blue-600 hover:text-blue-800">{surgeon.city}</a>
+          <span class="text-gray-400">/</span>
+          <span class="text-gray-700">{surgeon.name}</span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-gradient-to-br from-blue-50 to-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="md:col-span-1">
+            {surgeon.surgeon_photo ? (
+              <img src={surgeon.surgeon_photo} alt={surgeon.name} class="w-full rounded-2xl shadow-lg" loading="eager" />
+            ) : (
+              <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-lg p-12 flex items-center justify-center">
+                <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+            )}
+          </div>
+          
+          <div class="md:col-span-2">
+            <h1 class="text-4xl font-bold text-gray-900 mb-3">{surgeon.name}</h1>
+            <p class="text-xl text-gray-600 mb-4">{surgeon.category} • {surgeon.city}, {surgeon.state}</p>
+            
+            <div class="flex items-center gap-4 mb-6">
+              {surgeon.rating > 0 && (
+                <div class="flex items-center gap-2">
+                  <div class="flex">
+                    {Array(5).fill(0).map((_, i) => (
+                      <svg class={`w-5 h-5 ${i < Math.floor(surgeon.rating) ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <span class="font-semibold text-gray-900">{surgeon.rating}</span>
+                  <span class="text-gray-600">({surgeon.review_count} reviews)</span>
+                </div>
+              )}
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+              <div class="bg-white rounded-lg p-4 shadow">
+                <p class="text-sm text-gray-600">Experience</p>
+                <p class="text-2xl font-bold text-blue-600">{surgeon.years_experience}+ years</p>
+              </div>
+              <div class="bg-white rounded-lg p-4 shadow">
+                <p class="text-sm text-gray-600">Procedures</p>
+                <p class="text-2xl font-bold text-blue-600">{surgeon.estimated_procedures}+</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              {surgeon.phone && <a href={`tel:${surgeon.phone}`} class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Call Now</a>}
+              {surgeon.website && <a href={surgeon.website} target="_blank" rel="noopener" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors">Visit Website</a>}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+      <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">About {surgeon.name}</h2>
+        <p class="text-gray-700 leading-relaxed">{surgeon.bio_long}</p>
+      </div>
+
+      {seo.credentials && <CredentialsSection credentials={seo.credentials} />}
+      {enhanced.team && <TeamSection team={enhanced.team} />}
+      {enhanced.hospitals && <HospitalsSection hospitals={enhanced.hospitals} />}
+      {enhanced.pricing && <PricingSection pricing={enhanced.pricing} />}
+      {seo.faqs && <FAQSection faqs={seo.faqs} />}
+    </div>
+  </main>
+</BaseLayout>

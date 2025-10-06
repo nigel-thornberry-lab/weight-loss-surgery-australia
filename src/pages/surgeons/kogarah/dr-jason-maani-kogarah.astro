@@ -1,0 +1,262 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CredentialsSection from '../../../components/surgeons/CredentialsSection.astro';
+import FAQSection from '../../../components/surgeons/FAQSection.astro';
+import TeamSection from '../../../components/surgeons/TeamSection.astro';
+import HospitalsSection from '../../../components/surgeons/HospitalsSection.astro';
+import PricingSection from '../../../components/surgeons/PricingSection.astro';
+
+const surgeon = {
+  "name": "Dr Jason Maani",
+  "city": "Kogarah",
+  "state": "NSW",
+  "phone": "+61 1300 849 118",
+  "website": "https://www.drjasonmaani.com.au/",
+  "category": "Bariatric surgeon",
+  "years_experience": "10",
+  "estimated_procedures": "2000",
+  "slug": "dr-jason-maani-kogarah",
+  "bio_long": "Based in Kogarah; NSW; Dr Jason Maani brings 10+ years of bariatric surgery experience to patients seeking weight loss solutions. Their 4.9-star rating across 23 verified reviews reflects a commitment to quality care and positive surgical outcomes. Dr Jason Maani specializes in modern bariatric procedures including gastric sleeve; bypass; and adjustable band surgery.",
+  "surgeon_photo": "",
+  "rating": 4.9,
+  "review_count": 23
+};
+const citySlug = "kogarah";
+const slug = "dr-jason-maani-kogarah";
+const enhanced = {
+  "surgeon_name": "Dr Jason Maani",
+  "city": "Kogarah",
+  "state": "NSW",
+  "team": {
+    "surgeons": [
+      {
+        "name": "Dr Jason Maani",
+        "role": "Bariatric & Upper GI Surgeon",
+        "experience": "19+ years"
+      }
+    ],
+    "team_size": "Multidisciplinary team",
+    "has_dietitian": true,
+    "has_psychologist": false,
+    "has_nurses": true,
+    "has_exercise_physiologist": false
+  },
+  "services": {
+    "procedures": [
+      "Sleeve Gastrectomy",
+      "Gastric Bypass",
+      "Revision Surgery",
+      "Hernia Repair"
+    ],
+    "pre_op_program": "Yes",
+    "post_op_program": "Yes - Comprehensive aftercare",
+    "approach": "Minimally invasive laparoscopic techniques"
+  },
+  "hospitals": [
+    {
+      "name": "St George Private Hospital",
+      "address": "1 South St, Kogarah, NSW"
+    },
+    {
+      "name": "Kareena Private Hospital",
+      "address": "Caringbah, NSW"
+    },
+    {
+      "name": "Sydney Southwest Private Hospital",
+      "address": "Liverpool, NSW"
+    },
+    {
+      "name": "Wollongong Private Hospital",
+      "address": "Wollongong, NSW"
+    }
+  ],
+  "pricing": {
+    "available": false
+  },
+  "unique_features": [
+    "Over 3,000 surgeries performed",
+    "1,000+ laparoscopic procedures",
+    "Certified Bariatric Surgeon of Excellence",
+    "Research involvement through UNSW",
+    "Warm, patient-centered care approach"
+  ]
+};
+const seo = {
+  "credentials": {
+    "medical_school": "University of Auckland, New Zealand",
+    "graduation_year": "2001",
+    "surgical_training": "Bachelor of Human Biology (1998), MBChB (2001), Basic Surgical Trainee Auckland (2004), General Surgical Registrar The Alfred Hospital Melbourne (2007), Advanced Surgical Training completed (2013)",
+    "fellowships": [
+      {
+        "specialty": "Upper GI & Melanoma/Sarcoma",
+        "institution": "Peter MacCallum Cancer Institute, Melbourne",
+        "year": "2013"
+      },
+      {
+        "specialty": "Upper GI & Hepato-Pancreato-Biliary Surgery",
+        "institution": "Sir Charles Gairdner Hospital, Perth",
+        "year": "2014"
+      },
+      {
+        "specialty": "Upper GI Surgery",
+        "institution": "St. George Hospital, Kogarah (Sydney)",
+        "year": "2015"
+      },
+      {
+        "specialty": "Advanced Laparoscopic Upper GI and Bariatric Surgery",
+        "institution": "St George Public & Private Hospitals, Sydney",
+        "year": "2014-2015"
+      }
+    ],
+    "certifications": [
+      "FRACS (Fellow, Royal Australasian College of Surgeons) - 2016",
+      "Bariatric Surgeon of Excellence (Surgical Review Corporation)",
+      "Member: ANZGOSA (Australian and New Zealand Gastro Oesophageal Surgery Association)",
+      "Member: OSSANZ (Obesity Surgery Society of Australia and New Zealand)"
+    ],
+    "years_in_practice": "19+",
+    "procedures_performed": "3000+"
+  },
+  "achievements": [
+    "Over 3,000 surgeries performed",
+    "More than 1,000 laparoscopic procedures",
+    "Certified Bariatric Surgeon of Excellence",
+    "Research involvement through UNSW"
+  ],
+  "teaching": [
+    "Research involvement through University of New South Wales (UNSW)"
+  ],
+  "faqs": [
+    {
+      "q": "What is the consultation process with Dr Jason Maani?",
+      "a": "Your first consultation involves an in-depth review of your medical history, discussion of your weight loss journey, and a physical assessment. Dr Maani and his team take time to understand each patient's personal concerns and goals, ensuring a tailored approach to your care. You will learn about available surgical and non-surgical options, the risks and benefits, and any necessary pre-operative investigations."
+    },
+    {
+      "q": "Which bariatric procedures does Dr Maani offer?",
+      "a": "Dr Maani is highly trained in laparoscopic sleeve gastrectomy, gastric bypass, and other advanced bariatric surgeries, along with revisional (redo) bariatric procedures. He also consults on general and upper gastrointestinal surgery and provides access to weight loss medications when appropriate."
+    },
+    {
+      "q": "What is the typical recovery time after bariatric surgery?",
+      "a": "Most patients spend 2-3 days in hospital following surgery. You can expect to return to light activities within 1-2 weeks, depending on individual progress and procedure type. Full recovery, including a return to normal physical activity, may take 4-6 weeks."
+    },
+    {
+      "q": "What does the follow-up care involve?",
+      "a": "Comprehensive follow-up is core to Dr Maani's practice. This includes scheduled post-operative reviews, dietary guidance, and ongoing support from his multidisciplinary team to help you achieve and sustain your weight loss goals. Long-term monitoring is encouraged for best results."
+    },
+    {
+      "q": "How are costs and insurance handled?",
+      "a": "Costs depend on the procedure and your level of private health insurance coverage. Many bariatric surgeries may receive partial or full coverage via private health funds; patients without insurance will be advised about self-funding options and out-of-pocket expenses during their initial consult. Dr Maani's staff can help clarify coverage details relevant to your circumstances."
+    },
+    {
+      "q": "Is revision (redo) bariatric surgery available?",
+      "a": "Yes, Dr Maani has advanced expertise in revisional bariatric surgery for patients with previous weight loss operations who have experienced complications or insufficient weight loss. Each case is individually assessed to determine the safest and most effective revision option."
+    },
+    {
+      "q": "What is the waiting time for bariatric surgery?",
+      "a": "Waiting periods vary based on health fund approvals, necessary pre-operative investigations, and hospital scheduling. Typically, once preparatory steps are completed, surgery can be booked within several weeks to a couple of months. Exact timelines are provided after your initial consultation."
+    },
+    {
+      "q": "What makes Dr Maani's practice unique?",
+      "a": "Unhurried, personalized care, comprehensive follow-up, and a focus on holistic, long-term weight loss distinguish Dr Maani's approach. He is noted for his warm and understanding manner, strong patient relationships, and commitment to the latest minimally invasive surgical techniques. His team's ongoing support is a key feature."
+    },
+    {
+      "q": "What are the risks of bariatric surgery?",
+      "a": "Risks depend on the procedure but may include bleeding, infection, leaks, blood clots, reflux, and nutritional deficiencies. Dr Maani provides a detailed discussion of risks and benefits tailored to each patient, and all procedures are carried out according to the highest standards of safety."
+    },
+    {
+      "q": "What lifestyle changes are required after surgery?",
+      "a": "Successful, long-term weight loss depends on committing to major lifestyle changes. You will need to follow a specialized diet, increase physical activity, take recommended vitamin supplements, and attend ongoing follow-up appointments. Dr Maani and his team provide extensive education and support to help you adapt to these changes and achieve lasting results."
+    }
+  ]
+};
+
+const title = `${surgeon.name} - Bariatric Surgeon ${surgeon.city} | Weight Loss Surgery`;
+const description = `${surgeon.name} is a leading bariatric surgeon in ${surgeon.city} with ${surgeon.years_experience}+ years experience. Rating: ${surgeon.rating}/5. Specialist in gastric sleeve, bypass & revision surgery.`;
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${slug}`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <main class="min-h-screen bg-gray-50">
+    <nav class="bg-white border-b border-gray-200 py-3">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center space-x-2 text-sm">
+          <a href="/" class="text-blue-600 hover:text-blue-800">Home</a>
+          <span class="text-gray-400">/</span>
+          <a href="/surgeons" class="text-blue-600 hover:text-blue-800">Surgeons</a>
+          <span class="text-gray-400">/</span>
+          <a href={`/surgeons/${citySlug}`} class="text-blue-600 hover:text-blue-800">{surgeon.city}</a>
+          <span class="text-gray-400">/</span>
+          <span class="text-gray-700">{surgeon.name}</span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-gradient-to-br from-blue-50 to-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="md:col-span-1">
+            {surgeon.surgeon_photo ? (
+              <img src={surgeon.surgeon_photo} alt={surgeon.name} class="w-full rounded-2xl shadow-lg" loading="eager" />
+            ) : (
+              <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-lg p-12 flex items-center justify-center">
+                <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+            )}
+          </div>
+          
+          <div class="md:col-span-2">
+            <h1 class="text-4xl font-bold text-gray-900 mb-3">{surgeon.name}</h1>
+            <p class="text-xl text-gray-600 mb-4">{surgeon.category} • {surgeon.city}, {surgeon.state}</p>
+            
+            <div class="flex items-center gap-4 mb-6">
+              {surgeon.rating > 0 && (
+                <div class="flex items-center gap-2">
+                  <div class="flex">
+                    {Array(5).fill(0).map((_, i) => (
+                      <svg class={`w-5 h-5 ${i < Math.floor(surgeon.rating) ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <span class="font-semibold text-gray-900">{surgeon.rating}</span>
+                  <span class="text-gray-600">({surgeon.review_count} reviews)</span>
+                </div>
+              )}
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+              <div class="bg-white rounded-lg p-4 shadow">
+                <p class="text-sm text-gray-600">Experience</p>
+                <p class="text-2xl font-bold text-blue-600">{surgeon.years_experience}+ years</p>
+              </div>
+              <div class="bg-white rounded-lg p-4 shadow">
+                <p class="text-sm text-gray-600">Procedures</p>
+                <p class="text-2xl font-bold text-blue-600">{surgeon.estimated_procedures}+</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              {surgeon.phone && <a href={`tel:${surgeon.phone}`} class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Call Now</a>}
+              {surgeon.website && <a href={surgeon.website} target="_blank" rel="noopener" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors">Visit Website</a>}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+      <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">About {surgeon.name}</h2>
+        <p class="text-gray-700 leading-relaxed">{surgeon.bio_long}</p>
+      </div>
+
+      {seo.credentials && <CredentialsSection credentials={seo.credentials} />}
+      {enhanced.team && <TeamSection team={enhanced.team} />}
+      {enhanced.hospitals && <HospitalsSection hospitals={enhanced.hospitals} />}
+      {enhanced.pricing && <PricingSection pricing={enhanced.pricing} />}
+      {seo.faqs && <FAQSection faqs={seo.faqs} />}
+    </div>
+  </main>
+</BaseLayout>

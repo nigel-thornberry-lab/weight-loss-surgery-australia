@@ -1,0 +1,41 @@
+---
+const { team } = Astro.props;
+const { surgeons, team_size, has_dietitian, has_psychologist } = team || {};
+---
+
+{team && (
+  <div class="bg-white rounded-xl p-6 shadow-lg">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Multidisciplinary Team</h2>
+    
+    {surgeons && surgeons.length > 0 && (
+      <div class="space-y-4 mb-6">
+        {surgeons.map(s => (
+          <div class="border-l-4 border-blue-500 pl-4">
+            <h3 class="font-semibold text-gray-900">{s.name}</h3>
+            <p class="text-sm text-gray-700">{s.role}</p>
+            {s.experience && <p class="text-xs text-gray-600">{s.experience}</p>}
+          </div>
+        ))}
+      </div>
+    )}
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+      {has_dietitian && (
+        <div class="bg-green-50 rounded-lg p-3 text-center">
+          <p class="text-sm font-semibold text-green-700">✓ Dietitian</p>
+        </div>
+      )}
+      {has_psychologist && (
+        <div class="bg-green-50 rounded-lg p-3 text-center">
+          <p class="text-sm font-semibold text-green-700">✓ Psychologist</p>
+        </div>
+      )}
+      {team_size && (
+        <div class="bg-blue-50 rounded-lg p-3 text-center">
+          <p class="text-sm font-semibold text-blue-700">{team_size}</p>
+        </div>
+      )}
+    </div>
+  </div>
+)}
+
