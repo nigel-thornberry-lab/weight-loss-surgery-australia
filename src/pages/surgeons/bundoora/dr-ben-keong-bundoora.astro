@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const surgeon = {
+  "name": "Dr Ben Keong",
+  "city": "Bundoora",
+  "state": "Victoria",
+  "phone": "+61 3 9466 7799",
+  "website": "http://drbenkeong.com.au/",
+  "category": "Surgeon",
+  "years_experience": "10",
+  "estimated_procedures": "2000",
+  "slug": "dr-ben-keong-bundoora",
+  "bio_long": "Dr Ben Keong practices bariatric surgery in Bundoora; Victoria; offering gastric sleeve; bypass; and band procedures to patients seeking effective weight loss solutions. With 10+ years of surgical experience; Dr Ben Keong provides thorough consultations and personalized treatment approaches tailored to each patient's needs.",
+  "surgeon_photo": "https://drbenkeong.com.au/wp-content/uploads/2017/09/edited-hernia.jpg",
+  "rating": 0,
+  "review_count": 0
+};
+
+const title = `${surgeon.name} - Bariatric Surgeon ${surgeon.city} | Weight Loss Surgery`;
+const description = `${surgeon.name} is an experienced bariatric surgeon in ${surgeon.city} with ${surgeon.years_experience}+ years experience. Rating: ${surgeon.rating}/5 (${surgeon.review_count} reviews). Specialist in gastric sleeve, bypass & band surgery.`;
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/bundoora/dr-ben-keong-bundoora`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <main class="min-h-screen bg-gray-50">
+    <nav class="bg-white border-b border-gray-200 py-3">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center space-x-2 text-sm">
+          <a href="/" class="text-blue-600 hover:text-blue-800">Home</a>
+          <span class="text-gray-400">/</span>
+          <a href="/surgeons" class="text-blue-600 hover:text-blue-800">Surgeons</a>
+          <span class="text-gray-400">/</span>
+          <a href="/surgeons/bundoora" class="text-blue-600 hover:text-blue-800">{surgeon.city}</a>
+          <span class="text-gray-400">/</span>
+          <span class="text-gray-700">{surgeon.name}</span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-gradient-to-br from-blue-50 to-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="md:col-span-1">
+            {surgeon.surgeon_photo ? (
+              <img src={surgeon.surgeon_photo} alt={surgeon.name} class="w-full rounded-2xl shadow-lg" loading="lazy" />
+            ) : (
+              <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-lg p-12 flex items-center justify-center">
+                <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+            )}
+          </div>
+          
+          <div class="md:col-span-2">
+            <h1 class="text-4xl font-bold text-gray-900 mb-3">{surgeon.name}</h1>
+            <p class="text-xl text-gray-600 mb-4">{surgeon.category} • {surgeon.city}, {surgeon.state}</p>
+            
+            {surgeon.rating > 0 && (
+              <div class="flex items-center gap-4 mb-6">
+                <div class="flex items-center gap-2">
+                  <div class="flex">
+                    {Array(5).fill(0).map((_, i) => (
+                      <svg class={`w-5 h-5 ${i < Math.floor(surgeon.rating) ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                      </svg>
+                    ))}
+                  </div>
+                  <span class="font-semibold text-gray-900">{surgeon.rating}</span>
+                  <span class="text-gray-600">({surgeon.review_count} reviews)</span>
+                </div>
+              </div>
+            )}
+
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="bg-white rounded-lg p-4 shadow">
+                <p class="text-sm text-gray-600">Experience</p>
+                <p class="text-2xl font-bold text-blue-600">{surgeon.years_experience}+ years</p>
+              </div>
+              <div class="bg-white rounded-lg p-4 shadow">
+                <p class="text-sm text-gray-600">Est. Procedures</p>
+                <p class="text-2xl font-bold text-blue-600">{surgeon.estimated_procedures}+</p>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-3">
+              {surgeon.phone && <a href={`tel:${surgeon.phone}`} class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Call Now</a>}
+              {surgeon.website && <a href={surgeon.website} target="_blank" rel="noopener" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors">Visit Website</a>}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="bg-white rounded-xl p-6 shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-900 mb-4">About {surgeon.name}</h2>
+        <p class="text-gray-700 leading-relaxed">{surgeon.bio_long}</p>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
