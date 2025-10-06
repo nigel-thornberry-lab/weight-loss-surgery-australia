@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const surgeons = [
+  {
+    "name": "Dr Mani Niazi - Langwarrin - MBSA",
+    "slug": "dr-mani-niazi-langwarrin-mbsa-langwarrin",
+    "category": "Bariatric surgeon",
+    "rating": 5,
+    "review_count": 3,
+    "years_experience": "10"
+  }
+];
+const cityName = "Langwarrin";
+
+const title = `Bariatric Surgeons in ${cityName} | Weight Loss Surgery`;
+const description = `Find top-rated bariatric surgeons in ${cityName}. Compare ${surgeons.length} specialists for gastric sleeve, bypass, and band surgery.`;
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/langwarrin`;
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+  <main class="min-h-screen bg-gray-50">
+    <nav class="bg-white border-b border-gray-200 py-3">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center space-x-2 text-sm">
+          <a href="/" class="text-blue-600 hover:text-blue-800">Home</a>
+          <span class="text-gray-400">/</span>
+          <a href="/surgeons" class="text-blue-600 hover:text-blue-800">Surgeons</a>
+          <span class="text-gray-400">/</span>
+          <span class="text-gray-700">{cityName}</span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-gradient-to-br from-blue-50 to-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Bariatric Surgeons in {cityName}</h1>
+        <p class="text-xl text-gray-600">Find and compare {surgeons.length} weight loss surgeon{surgeons.length !== 1 ? 's' : ''} in {cityName}</p>
+      </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {surgeons.map(s => (
+          <a href={`/surgeons/langwarrin/${s.slug}`} class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+            <h2 class="text-xl font-bold text-gray-900 mb-2">{s.name}</h2>
+            <p class="text-gray-600 mb-3">{s.category}</p>
+            {s.rating > 0 && (
+              <div class="flex items-center gap-2 mb-3">
+                <div class="flex">
+                  {Array(5).fill(0).map((_, i) => (
+                    <svg class={`w-4 h-4 ${i < Math.floor(s.rating) ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span class="text-sm font-semibold text-gray-900">{s.rating}</span>
+                <span class="text-sm text-gray-600">({s.review_count})</span>
+              </div>
+            )}
+            <div class="flex gap-2 text-sm text-gray-600">
+              <span>{s.years_experience}+ years</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+</BaseLayout>
