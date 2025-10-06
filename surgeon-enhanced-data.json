@@ -1,0 +1,601 @@
+{
+  "dr-mani-niazi-wantirna": {
+    "surgeon_name": "Dr Mani Niazi",
+    "city": "Wantirna",
+    "state": "Victoria",
+    "team": {
+      "surgeons": [
+        {
+          "name": "Dr Mani Niazi",
+          "role": "Principal Surgeon - Upper GI & Bariatric",
+          "experience": "18+ years",
+          "qualifications": "Dual fellowships in Upper GI & Bariatric Surgery and Breast/Endocrine/Surgical Oncology"
+        },
+        {
+          "name": "Dr Ramin Mehdipour",
+          "role": "Bariatric Surgeon",
+          "specialization": "Upper GI and bariatric procedures"
+        }
+      ],
+      "team_size": "Multidisciplinary team (specific numbers not disclosed)",
+      "has_dietitian": "Yes (not named)",
+      "has_psychologist": "Not specified",
+      "has_nurses": "Yes (not specified)"
+    },
+    "services": {
+      "procedures": [
+        "Sleeve Gastrectomy",
+        "Gastric Bypass",
+        "Bariatric Revision Surgery",
+        "Lap Band Removal",
+        "Advanced Laparoscopic Surgeries",
+        "Hernia Repair",
+        "Gallbladder Surgery",
+        "Thyroid/Parathyroid Surgery",
+        "Abdominoplasty"
+      ],
+      "pre_op_program": "Yes - personalized consultation",
+      "post_op_program": "Yes - After Care Program",
+      "follow_up_duration": "Not specified",
+      "telehealth": false,
+      "support_groups": false,
+      "approach": "Personalized, evidence-based, team-based care"
+    },
+    "hospitals": [
+      {
+        "name": "Ringwood Private Hospital",
+        "address": "36-42 Mt Dandenong Rd, Ringwood East, VIC 3135"
+      },
+      {
+        "name": "Knox Private Hospital",
+        "address": "262 Mountain Hwy, Wantirna, VIC 3152"
+      },
+      {
+        "name": "Peninsula Private Hospital",
+        "address": "525 McClelland Dr, Langwarrin, VIC 3910"
+      },
+      {
+        "name": "Holmesglen Private Hospital",
+        "address": "490 South Rd, Moorabbin, VIC 3189"
+      },
+      {
+        "name": "195 Specialist Centre",
+        "address": "195 Thompsons Rd, Bulleen, VIC 3105"
+      }
+    ],
+    "pricing": {
+      "available": false,
+      "gastric_sleeve": "Contact for pricing",
+      "gastric_bypass": "Contact for pricing",
+      "consultation": "Contact for pricing"
+    },
+    "unique_features": [
+      "Dual fellowship-trained (Upper GI & Bariatric + Breast/Endocrine/Oncology)",
+      "Pioneer in Laparoscopic Gastric Plication - instrumental in global development",
+      "Direct RACS fellowship registration (international expertise recognized)",
+      "Multilingual services (Farsi, Persian, Turkish)",
+      "5 hospital locations across Melbourne and regional Victoria",
+      "Accessible, affordable, evidence-based care focus",
+      "Advanced minimally invasive techniques pioneer"
+    ]
+  },
+  "dr-mark-magdy-miranda": {
+    "surgeon_name": "Dr Mark Magdy",
+    "city": "Miranda",
+    "state": "NSW",
+    "team": {
+      "surgeons": [
+        {
+          "name": "Dr Mark Magdy",
+          "role": "Bariatric & Gastrointestinal Surgeon",
+          "qualifications": "FRACS, IFSO member, Australian-trained"
+        }
+      ],
+      "team_members": [
+        {
+          "name": "Shannon Lavery",
+          "role": "Consultant Dietitian-Nutritionist"
+        },
+        {
+          "name": "Fiona McGahey",
+          "role": "Practice Manager"
+        }
+      ],
+      "team_size": "Small, specialized team (3 core members)",
+      "has_dietitian": true,
+      "has_psychologist": false,
+      "has_nurses": "Not specified"
+    },
+    "services": {
+      "procedures": [
+        "Laparoscopic Sleeve Gastrectomy",
+        "Intragastric Balloon",
+        "Laparoscopic Gastric Bypass",
+        "Laparoscopic Mini-bypass",
+        "Laparoscopic SADI",
+        "Laparoscopic Hiatus Hernia Repair"
+      ],
+      "pre_op_program": "Yes - comprehensive evaluation",
+      "post_op_program": "Yes - long-term care model",
+      "follow_up_duration": "Long-term relationships emphasized",
+      "telehealth": "Not specified",
+      "support_groups": "Not specified",
+      "approach": "Holistic care focusing on mental & physical health, not just symptoms"
+    },
+    "hospitals": [
+      {
+        "name": "St George Private Hospital"
+      },
+      {
+        "name": "Kareena Private Hospital"
+      }
+    ],
+    "pricing": {
+      "available": false,
+      "gastric_sleeve": "Contact for pricing",
+      "gastric_bypass": "Contact for pricing",
+      "consultation": "Contact for pricing"
+    },
+    "unique_features": [
+      "Personalized small-team model for trusting, long-term relationships",
+      "Holistic approach - transforming lives, not just managing symptoms",
+      "Internationally trained under world-leading bariatric surgeons in North America",
+      "Active research and innovation - regular conference presentations",
+      "Focus on both mental and physical health transformation",
+      "Fully accredited Australian-trained surgeon (FRACS, IFSO)",
+      "Integrated dietetic care as core team member"
+    ]
+  },
+  "dr-jason-maani-bariatric-surgery-liverpool": {
+    "surgeon_name": "Dr Jason Maani",
+    "city": "Liverpool",
+    "state": "NSW",
+    "team": {
+      "surgeons": [
+        {
+          "name": "Dr Jason Maani",
+          "role": "Principal Surgeon - Bariatric & Upper GI",
+          "qualifications": "BHB, MBChB, FRACS",
+          "procedures_performed": "3,000+"
+        }
+      ],
+      "team_members": [
+        {
+          "role": "Registered Dietitian",
+          "description": "Provides pre and post-surgical support for up to 3 years"
+        }
+      ],
+      "team_size": "Multidisciplinary team",
+      "has_dietitian": true,
+      "has_psychologist": "Not specified",
+      "has_nurses": "Not specified"
+    },
+    "services": {
+      "procedures": [
+        "Bariatric (Weight Loss) Surgery",
+        "Bariatric Revision Surgery",
+        "Anti-Reflux Surgery",
+        "Gallbladder Surgery",
+        "Hernia Surgery"
+      ],
+      "pre_op_program": "Yes - registered dietitian provides pre-surgical dietary guidance",
+      "post_op_program": "Yes - comprehensive 3-year program",
+      "follow_up_duration": "Minimum 3 years with dietitian",
+      "telehealth": "Not specified",
+      "support_groups": "Not specified",
+      "approach": "Multidisciplinary with sustained dietary and lifestyle support"
+    },
+    "hospitals": [
+      {
+        "name": "St George Private Hospital"
+      },
+      {
+        "name": "Kareena Private Hospital"
+      },
+      {
+        "name": "Sydney Southwest Private Hospital"
+      },
+      {
+        "name": "Wollongong Private Hospital"
+      }
+    ],
+    "pricing": {
+      "available": false,
+      "gastric_sleeve": "Contact for pricing",
+      "gastric_bypass": "Contact for pricing",
+      "consultation": "Contact for pricing"
+    },
+    "unique_features": [
+      "3-year long-term dietary and lifestyle support program",
+      "Over 3,000 procedures performed",
+      "Minimally invasive (laparoscopic/keyhole) surgery focus",
+      "Direct patient-surgeon communication",
+      "4 hospital affiliations across Sydney and Wollongong",
+      "Member of ANZGOSA and OSSANZ",
+      "Active in research and attends national/international conferences",
+      "Personalized, holistic multidisciplinary approach"
+    ]
+  },
+  "dr-robert-gandy-randwick": {
+    "surgeon_name": "Dr Robert Gandy",
+    "city": "Randwick",
+    "state": "NSW",
+    "team": {
+      "surgeons": [
+        {
+          "name": "Dr Robert Gandy",
+          "role": "Upper GI, HPB & Bariatric Surgeon",
+          "specialization": "Minimally invasive & robotic surgery"
+        },
+        {
+          "name": "Dr Neil Pillinger",
+          "role": "Surgical Specialist"
+        },
+        {
+          "name": "Dr Chris Lehane",
+          "role": "Surgical Specialist"
+        },
+        {
+          "name": "Dr Samantha Chen",
+          "role": "Surgical Specialist"
+        },
+        {
+          "name": "Dr Richard Savdie",
+          "role": "Surgical Specialist"
+        }
+      ],
+      "team_members": [
+        {
+          "role": "Perioperative Physician",
+          "description": "Comprehensive medical management before, during, and after surgery"
+        }
+      ],
+      "team_size": "Multidisciplinary team with 5 surgical specialists + physician",
+      "has_dietitian": "Not specified",
+      "has_psychologist": "Not specified",
+      "has_physician": true
+    },
+    "services": {
+      "procedures": [
+        "Laparoscopic Sleeve Gastrectomy",
+        "Gastric Bypass",
+        "Gallbladder Surgery (Laparoscopic & Robotic)",
+        "Hernia Surgery (including mesh-free repair)",
+        "Anti-Reflux Surgery",
+        "HPB Surgery (liver, pancreas, adrenal)",
+        "Upper GI Endoscopy & Colonoscopy",
+        "Cancer Surgery (including pancreatic cancer)",
+        "General Abdominal Surgery"
+      ],
+      "pre_op_program": "Yes - perioperative physician support",
+      "post_op_program": "Yes - coordinated team care",
+      "follow_up_duration": "Not specified",
+      "telehealth": "Not specified",
+      "support_groups": "Not specified",
+      "approach": "Multidisciplinary, professional, personalized care"
+    },
+    "hospitals": [
+      {
+        "name": "Prince of Wales Public Hospital",
+        "location": "Randwick"
+      },
+      {
+        "name": "Prince of Wales Private Hospital",
+        "location": "Randwick"
+      },
+      {
+        "name": "East Sydney Private Hospital"
+      },
+      {
+        "name": "Eastern Suburbs Surgical Specialists",
+        "location": "Randwick (consulting rooms)"
+      },
+      {
+        "name": "BodyFree Weight Loss Clinic",
+        "description": "For obesity surgery consultations"
+      }
+    ],
+    "pricing": {
+      "available": false,
+      "contact": "02-8599-4360",
+      "note": "Public and private options available - costs vary"
+    },
+    "unique_features": [
+      "90%+ procedures use laparoscopic or robotic techniques",
+      "Micro-laparoscopy and gas-free anaesthetic options",
+      "Less pain and faster recovery focus",
+      "Rapid access - aims to see new patients within 1 week",
+      "Both public and private patient options",
+      "Cutting-edge cancer care - advanced pancreatic and liver surgery",
+      "Novel techniques like venous resection and irreversible electroporation",
+      "Perioperative physician for complex/high-risk patients",
+      "Mesh-free hernia repair for suitable patients",
+      "Eastern Suburbs Surgical Specialists - multi-surgeon practice"
+    ]
+  },
+  "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna": {
+    "surgeon_name": "Mr Niruben Rajasagaram",
+    "city": "Wantirna",
+    "state": "Victoria",
+    "team": {
+      "surgeons": [
+        {
+          "name": "Mr Niruben Rajasagaram",
+          "role": "Consultant Bariatric, Oesophago-gastric, and General Surgeon",
+          "qualifications": "Adjunct Lecturer at Monash University, Reviewer for Obesity Surgery Journal"
+        }
+      ],
+      "team_size": "Principal surgeon practice",
+      "has_dietitian": "Not specified",
+      "has_psychologist": "Not specified"
+    },
+    "services": {
+      "procedures": [
+        "Gastric Sleeve (Sleeve Gastrectomy)",
+        "Gastric Bypass",
+        "Mini Gastric Bypass",
+        "Gastric Band",
+        "Gastric Balloon",
+        "Revisional Bariatric Surgery",
+        "Laparoscopic Gallbladder Surgery",
+        "Groin Hernia Surgery",
+        "Upper GI & Advanced Interventional Endoscopy"
+      ],
+      "pre_op_program": "Yes - comprehensive consultation",
+      "post_op_program": "Yes - post-operative support",
+      "follow_up_duration": "Not specified",
+      "telehealth": "Not specified",
+      "support_groups": "Not specified",
+      "approach": "Comprehensive patient care from consultation to post-op"
+    },
+    "hospitals": [
+      {
+        "name": "Mulgrave Private Hospital"
+      },
+      {
+        "name": "St John of God Specialist Centre, Berwick"
+      }
+    ],
+    "pricing": {
+      "available": false,
+      "gastric_sleeve": "Contact for pricing",
+      "gastric_bypass": "Contact for pricing"
+    },
+    "unique_features": [
+      "Specialist in complex revisional bariatric surgery",
+      "Single-stage conversions (sleeve to bypass, band to bypass)",
+      "Both surgical and non-surgical options (gastric balloon)",
+      "Academic engagement - Monash University Adjunct Lecturer",
+      "Reviewer for Obesity Surgery Journal",
+      "Advanced laparoendoscopic surgery expertise",
+      "Patient-centered compassionate care focus"
+    ]
+  },
+  "dr-yuan-cheng-richmond": {
+    "surgeon_name": "Dr Yuan Cheng",
+    "city": "Richmond",
+    "state": "Victoria",
+    "team": {
+      "surgeons": [
+        {
+          "name": "Mr Yuan Cheng",
+          "qualifications": "M.B.B.S., F.R.A.C.S., PGDipSurgAnat"
+        },
+        {
+          "name": "Mr Harry Frydenberg AM",
+          "qualifications": "M.B.B.S., F.R.A.C.S."
+        },
+        {
+          "name": "Mr Ernest Kah-Seong Lim",
+          "qualifications": "M.B.B.S., F.R.A.C.S."
+        },
+        {
+          "name": "Dr Chiu Kang",
+          "qualifications": "FRACS MBBS BMedSc MSurgicalEd"
+        }
+      ],
+      "team_size": "4-surgeon team with allied health support",
+      "has_dietitian": "Yes (allied health support)",
+      "has_psychologist": "Not specified"
+    },
+    "services": {
+      "procedures": [
+        "Sleeve Gastrectomy",
+        "Roux-en-Y Gastric Bypass",
+        "One Anastomosis Gastric Bypass",
+        "Mini Bypass",
+        "Adjustable Gastric Band (Lapband)",
+        "Revision Bariatric Surgery",
+        "Intragastric Balloon (Orbera)",
+        "Laparoscopic Cholecystectomy (Gallbladder)",
+        "Hernia Repairs"
+      ],
+      "pre_op_program": "Yes - free information seminars",
+      "post_op_program": "Yes - long-term follow-up",
+      "follow_up_duration": "Not specified",
+      "telehealth": true,
+      "support_groups": "Free information seminars for prospective patients",
+      "approach": "Evidence-based multidisciplinary approach"
+    },
+    "hospitals": [
+      {
+        "name": "Epworth Centre for Bariatric Surgery",
+        "location": "East Melbourne"
+      },
+      {
+        "name": "Box Hill Hospital",
+        "type": "Public appointment"
+      },
+      {
+        "name": "Mulgrave Private Hospital"
+      },
+      {
+        "name": "St Vincent's Private Hospital"
+      }
+    ],
+    "pricing": {
+      "available": false,
+      "gastric_sleeve": "Contact for pricing",
+      "note": "Discussed during consultation"
+    },
+    "unique_features": [
+      "4-surgeon bariatric team at Epworth Centre",
+      "Extensive revision surgery expertise",
+      "Belgian fellowship training (Dr. B. Dillemans) - advanced laparoscopic techniques",
+      "Free patient information seminars",
+      "Telehealth consultations available",
+      "Multilingual services (Mandarin, English)",
+      "Multidisciplinary collaboration with allied health",
+      "Evidence-based approach with long-term support"
+    ]
+  },
+  "dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills": {
+    "surgeon_name": "Dr Devesh Kaushal",
+    "city": "Gregory Hills",
+    "state": "NSW",
+    "team": {
+      "surgeons": [
+        {
+          "name": "Dr Devesh Kaushal",
+          "role": "Specialist General Surgeon",
+          "qualifications": "FRACS, Master of Surgery",
+          "experience": "15+ years"
+        }
+      ],
+      "team_members": [
+        {
+          "name": "Claudia",
+          "role": "Dietitian and Nutritionist",
+          "qualifications": "Master of Nutrition and Dietetics, University of Sydney"
+        },
+        {
+          "role": "Psychologist",
+          "description": "Specialized psychologist for weight loss surgery support"
+        },
+        {
+          "role": "Exercise Physiologist",
+          "description": "Multidisciplinary support for weight loss patients"
+        }
+      ],
+      "team_size": "Full multidisciplinary team (4+)",
+      "has_dietitian": true,
+      "has_psychologist": true,
+      "has_exercise_physiologist": true
+    },
+    "services": {
+      "procedures": [
+        "Gastric Sleeve",
+        "Gastric Bypass",
+        "Upper Gastrointestinal Surgery",
+        "Gastroscopy & Colonoscopy",
+        "Endoscopic Mucosal Resection (EMR)",
+        "Balloon Dilatation & Stent Insertion",
+        "Hernia Surgery (Abdominal & Groin)",
+        "Acid Reflux Surgery (Fundoplication)",
+        "Gallbladder Surgery",
+        "Colorectal Surgery",
+        "General Surgery"
+      ],
+      "pre_op_program": "Yes - comprehensive multidisciplinary assessment",
+      "post_op_program": "Yes - ongoing support with dietitian, psychologist, exercise physiologist",
+      "follow_up_duration": "Long-term multidisciplinary support",
+      "telehealth": "Not specified",
+      "support_groups": "Not specified",
+      "approach": "Comprehensive multidisciplinary care with dietitian, psychologist, and exercise physiologist"
+    },
+    "hospitals": [
+      {
+        "name": "Campbelltown Private Hospital"
+      },
+      {
+        "name": "Sydney Southwest Private Hospital"
+      }
+    ],
+    "pricing": {
+      "available": "Website has pricing section",
+      "gastric_sleeve": "Contact for specific pricing",
+      "note": "Pricing page available, contact for details"
+    },
+    "unique_features": [
+      "FULL MULTIDISCIPLINARY TEAM - Dietitian, Psychologist, Exercise Physiologist",
+      "One of few practices with complete support team",
+      "Advanced endoscopic procedures (EMR for early-stage disease)",
+      "15+ years surgical experience",
+      "UK training at leading centre",
+      "Clinical awards and research involvement",
+      "Minimally invasive laparoscopic focus",
+      "Personalized, empathetic, continuous care",
+      "Patient registration form online for streamlined process"
+    ]
+  },
+  "dr-john-ozmen-general-upper-gi-surgeon-bella-vista": {
+    "surgeon_name": "Dr John Ozmen",
+    "city": "Bella Vista",
+    "state": "NSW",
+    "team": {
+      "surgeons": [
+        {
+          "name": "Dr John Ozmen",
+          "role": "General, Upper-GI & Bariatric Surgeon",
+          "qualifications": "Australian-trained, Sub-specialty accreditation in Upper-GI & Bariatric",
+          "procedures_performed": "5,000+ laparoscopic surgeries"
+        }
+      ],
+      "team_size": "Principal surgeon with professional support team",
+      "has_dietitian": "Not specified",
+      "has_psychologist": "Not specified"
+    },
+    "services": {
+      "procedures": [
+        "Weight Loss (Bariatric) Surgery",
+        "Hernia Surgery",
+        "Acid Reflux Surgery",
+        "Gallbladder Surgery",
+        "Endoscopy (Gastroscopy & Colonoscopy)",
+        "Laparoscopic General Surgery"
+      ],
+      "pre_op_program": "Yes - comprehensive consultation",
+      "post_op_program": "Yes - personal post-operative attention",
+      "follow_up_duration": "In-person reviews after surgery",
+      "telehealth": "Not specified",
+      "support_groups": "Not specified",
+      "approach": "Personalized care with exemplary bedside manner"
+    },
+    "hospitals": [
+      {
+        "name": "Norwest Private Hospital"
+      },
+      {
+        "name": "Westmead Private Hospital"
+      },
+      {
+        "name": "Prince of Wales Private Hospital"
+      },
+      {
+        "name": "Lakeview Private Hospital"
+      },
+      {
+        "name": "Campbelltown Private Hospital"
+      },
+      {
+        "name": "Sydney South West Private Hospital"
+      }
+    ],
+    "pricing": {
+      "available": "Pricing page on website",
+      "gastric_sleeve": "Contact for specific pricing",
+      "note": "Dedicated pricing page available"
+    },
+    "unique_features": [
+      "5,000+ laparoscopic surgeries performed",
+      "Sub-specialty accreditation in Upper-GI and Bariatric surgery",
+      "6 hospital affiliations across Sydney",
+      "Exemplary bedside manner (noted in reviews)",
+      "Personal post-operative attention",
+      "Takes complex or emergency cases",
+      "Thorough communication and genuine patient care",
+      "Minimally invasive (keyhole) procedure focus",
+      "Multiple consulting locations (Bella Vista, Dural)"
+    ]
+  }
+}

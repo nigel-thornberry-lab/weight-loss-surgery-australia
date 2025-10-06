@@ -1,13 +1,11 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 
-// Surgeon data
 const surgeon = {
   name: "Dr John Ozmen | General & Upper-GI Surgeon",
   title: "Dr John Ozmen | General & Upper-GI Surgeon",
   city: "Bella Vista",
   state: "NSW",
-  street: "Unit 101/9 Norbrik Dr",
   rating: 5,
   reviewCount: 46,
   phone: "+61 2 8039 4548",
@@ -17,36 +15,32 @@ const surgeon = {
   yearsExperience: 10,
   estimatedProcedures: 2000,
   slug: "dr-john-ozmen-general-upper-gi-surgeon-bella-vista",
-  citySlug: "bella-vista",
-  category: "Gastrointestinal surgeon",
-  qualifications: "MBBS, FRACS",
-  procedures: "gastric-sleeve,gastric-bypass,gastric-band"
+  citySlug: "bella-vista"
 };
 
-// SEO
-const title = "Dr John Ozmen | General & Upper-GI Surgeon - Bariatric Surgeon Bella Vista | Gastric Sleeve & Bypass";
-const description = "Dr John Ozmen | General & Upper-GI Surgeon is an experienced bariatric surgeon in Bella Vista with 10+ years experience. Rating: 5 stars (46 reviews). Book your consultation today.";
+const title = "Dr John Ozmen | General & Upper-GI Surgeon - Bella Vista Bariatric Surgeon | Enhanced Profile";
+const description = "Dr John Ozmen | General & Upper-GI Surgeon is an experienced bariatric surgeon in Bella Vista, NSW. 5 stars (46 reviews). Comprehensive team support, 6 hospital affiliations.  Book your consultation today.";
 const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
 ---
 
 <BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
-  <!-- Breadcrumb -->
-  <nav class="bg-gray-50 border-b border-gray-200" aria-label="Breadcrumb">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+  <!-- Breadcrumbs -->
+  <nav class="bg-gray-50 py-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <ol class="flex items-center space-x-2 text-sm">
         <li><a href="/" class="text-blue-600 hover:text-blue-800">Home</a></li>
-        <li class="text-gray-500">/</li>
+        <li class="text-gray-400">/</li>
         <li><a href="/surgeons" class="text-blue-600 hover:text-blue-800">Surgeons</a></li>
-        <li class="text-gray-500">/</li>
+        <li class="text-gray-400">/</li>
         <li><a href={`/surgeons/${surgeon.citySlug}`} class="text-blue-600 hover:text-blue-800">{surgeon.city}</a></li>
-        <li class="text-gray-500">/</li>
-        <li class="text-gray-900 font-medium">{surgeon.name}</li>
+        <li class="text-gray-400">/</li>
+        <li class="text-gray-900">{surgeon.name}</li>
       </ol>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-blue-50 to-white py-12 md:py-16">
+  <section class="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 md:py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-3 gap-8 items-start">
         
@@ -59,183 +53,308 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySl
                 alt={surgeon.name}
                 class="w-full h-auto object-cover"
                 loading="eager"
-                width="400"
-                height="400"
               />
             </div>
           ) : (
-            <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-lg p-12 flex items-center justify-center aspect-square">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-lg p-12 flex items-center justify-center">
               <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
               </svg>
             </div>
           )}
           
-          <!-- Quick Stats -->
-          <div class="mt-6 bg-white rounded-xl shadow-md p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <span class="text-gray-600">Rating</span>
-              <span class="font-semibold text-lg">⭐ {surgeon.rating > 0 ? surgeon.rating.toFixed(1) : 'N/A'}</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-gray-600">Reviews</span>
-              <span class="font-semibold">{surgeon.reviewCount} reviews</span>
-            </div>
-            <div class="flex items-center justify-between">
-              <span class="text-gray-600">Experience</span>
-              <span class="font-semibold">{surgeon.yearsExperience}+ years</span>
-            </div>
-          </div>
-
-          <!-- CTA Buttons -->
+          <!-- Quick Actions -->
           <div class="mt-6 space-y-3">
+            {surgeon.phone && (
+              <a 
+                href={`tel:${surgeon.phone}`}
+                class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-colors"
+              >
+                📞 Call Now
+              </a>
+            )}
             {surgeon.website && (
               <a 
                 href={surgeon.website}
                 target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors"
+                rel="noopener noreferrer"
+                class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-colors"
               >
-                Visit Website
+                🌐 Visit Website
               </a>
             )}
             {surgeon.googleMapsUrl && (
               <a 
                 href={surgeon.googleMapsUrl}
                 target="_blank"
-                rel="noopener noreferrer nofollow"
-                class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors"
+                rel="noopener noreferrer"
+                class="block w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-colors"
               >
-                View on Google Maps
-              </a>
-            )}
-            {surgeon.phone && (
-              <a 
-                href={`tel:${surgeon.phone}`}
-                class="block w-full bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-6 rounded-lg text-center transition-colors"
-              >
-                📞 Call Now
+                📍 Get Directions
               </a>
             )}
           </div>
         </div>
-
-        <!-- Right: Main Content -->
-        <div class="md:col-span-2 space-y-8">
+        
+        <!-- Right: Info -->
+        <div class="md:col-span-2">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+                {surgeon.name}
+              </h1>
+              <p class="text-xl text-gray-600">
+                Bariatric & Upper GI Surgeon
+              </p>
+              <p class="text-lg text-gray-500">
+                {surgeon.city}, {surgeon.state}
+              </p>
+            </div>
+          </div>
           
-          <!-- Header -->
-          <div>
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-              {surgeon.name}
-            </h1>
-            <p class="text-xl text-gray-600 mb-4">{surgeon.category}</p>
-            <div class="flex flex-wrap gap-2">
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
-                📍 {surgeon.city}, {surgeon.state}
-              </span>
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-green-100 text-green-800">
-                ⭐ {surgeon.rating > 0 ? surgeon.rating.toFixed(1) : 'New'} ({surgeon.reviewCount} reviews)
-              </span>
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
-                🎓 {surgeon.qualifications}
-              </span>
-            </div>
-          </div>
-
-          <!-- About Section -->
-          <div class="bg-white rounded-xl shadow-md p-6">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">About {surgeon.name}</h2>
-            <div class="prose prose-lg max-w-none text-gray-700">
-              <p>Dr John Ozmen | General & Upper-GI Surgeon is a leading bariatric surgeon in Bella Vista; NSW; known for significant expertise in weight loss surgery. With a 5.0-star rating from 46 verified reviews; they've built a reputation for exceptional patient outcomes and comprehensive surgical care. Specializing in gastric sleeve; bypass; and band procedures; Dr John Ozmen | General & Upper-GI Surgeon offers personalized treatment plans backed by 10+ years of surgical experience.</p>
-            </div>
-          </div>
-
-          <!-- Procedures Offered -->
-          <div class="bg-white rounded-xl shadow-md p-6">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">Procedures Offered</h2>
-            <div class="grid sm:grid-cols-2 gap-3">
-              {surgeon.procedures.split(',').map((proc) => (
-                <div class="flex items-center space-x-2 p-3 bg-blue-50 rounded-lg">
-                  <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                  </svg>
-                  <span class="font-medium text-gray-900">{proc.trim().split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <!-- Contact Information -->
-          <div class="bg-white rounded-xl shadow-md p-6">
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">Contact Information</h2>
-            <div class="space-y-3">
-              <div class="flex items-start space-x-3">
-                <svg class="w-6 h-6 text-gray-400 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-                <div>
-                  <p class="font-medium text-gray-900">{surgeon.street}</p>
-                  <p class="text-gray-600">{surgeon.city}, {surgeon.state}</p>
-                </div>
+          <!-- Quick Stats -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-yellow-500">
+              <div class="text-3xl font-bold text-gray-900">
+                ⭐ {surgeon.rating}
               </div>
-              {surgeon.phone && (
-                <div class="flex items-center space-x-3">
-                  <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                  </svg>
-                  <a href={`tel:${surgeon.phone}`} class="text-blue-600 hover:text-blue-800 font-medium">
-                    {surgeon.phone}
-                  </a>
-                </div>
-              )}
-              {surgeon.website && (
-                <div class="flex items-center space-x-3">
-                  <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-                  </svg>
-                  <a href={surgeon.website} target="_blank" rel="noopener noreferrer nofollow" class="text-blue-600 hover:text-blue-800 font-medium">
-                    Visit Website
-                  </a>
-                </div>
-              )}
+              <div class="text-sm text-gray-600">
+                {surgeon.reviewCount} reviews
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-blue-500">
+              <div class="text-3xl font-bold text-gray-900">
+                {surgeon.yearsExperience}+
+              </div>
+              <div class="text-sm text-gray-600">
+                Years Experience
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-green-500">
+              <div class="text-3xl font-bold text-gray-900">
+                6
+              </div>
+              <div class="text-sm text-gray-600">
+                Hospital Affiliations
+              </div>
+            </div>
+            
+            <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-purple-500">
+              <div class="text-3xl font-bold text-gray-900">
+                {surgeon.estimatedProcedures.toLocaleString()}+
+              </div>
+              <div class="text-sm text-gray-600">
+                Procedures
+              </div>
             </div>
           </div>
-
+          
+          <!-- Bio -->
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">About {surgeon.name}</h2>
+            <p class="text-gray-700 leading-relaxed">
+              Dr John Ozmen | General & Upper-GI Surgeon is a leading bariatric surgeon in Bella Vista; NSW; known for significant expertise in weight loss surgery. With a 5.0-star rating from 46 verified reviews; they've built a reputation for exceptional patient outcomes and comprehensive surgical care. Specializing in gastric sleeve; bypass; and band procedures; Dr John Ozmen | General & Upper-GI Surgeon offers personalized treatment plans backed by 10+ years of surgical experience.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Bottom CTA -->
-  <section class="bg-blue-600 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-3xl font-bold text-white mb-4">
-        Ready to Start Your Weight Loss Journey?
-      </h2>
-      <p class="text-xl text-blue-100 mb-8">
-        Contact {surgeon.name} today to schedule your consultation
-      </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        {surgeon.phone && (
-          <a 
-            href={`tel:${surgeon.phone}`}
-            class="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-gray-100 transition-colors"
-          >
-            📞 Call Now
-          </a>
-        )}
-        {surgeon.website && (
-          <a 
-            href={surgeon.website}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            class="inline-flex items-center justify-center px-8 py-4 bg-blue-700 text-white font-bold rounded-lg hover:bg-blue-800 transition-colors"
-          >
-            Visit Website →
-          </a>
-        )}
+  <!-- Enhanced Content Sections -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
+    
+    
+    
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">🔬 Procedures & Services</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+        
+        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+          <span class="text-sm font-medium text-gray-800">Weight Loss (Bariatric) Surgery</span>
+        </div>
+        
+        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+          <span class="text-sm font-medium text-gray-800">Hernia Surgery</span>
+        </div>
+        
+        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+          <span class="text-sm font-medium text-gray-800">Acid Reflux Surgery</span>
+        </div>
+        
+        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+          <span class="text-sm font-medium text-gray-800">Gallbladder Surgery</span>
+        </div>
+        
+        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+          <span class="text-sm font-medium text-gray-800">Endoscopy (Gastroscopy & Colonoscopy)</span>
+        </div>
+        
+        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
+          <span class="text-sm font-medium text-gray-800">Laparoscopic General Surgery</span>
+        </div>
+        
       </div>
-    </div>
-  </section>
+    </section>
+  
+    
+    
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">🏥 Hospital Affiliations</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        
+        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
+          <h3 class="font-semibold text-gray-900">Norwest Private Hospital</h3>
+          
+          
+          
+        </div>
+        
+        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
+          <h3 class="font-semibold text-gray-900">Westmead Private Hospital</h3>
+          
+          
+          
+        </div>
+        
+        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
+          <h3 class="font-semibold text-gray-900">Prince of Wales Private Hospital</h3>
+          
+          
+          
+        </div>
+        
+        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
+          <h3 class="font-semibold text-gray-900">Lakeview Private Hospital</h3>
+          
+          
+          
+        </div>
+        
+        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
+          <h3 class="font-semibold text-gray-900">Campbelltown Private Hospital</h3>
+          
+          
+          
+        </div>
+        
+        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
+          <h3 class="font-semibold text-gray-900">Sydney South West Private Hospital</h3>
+          
+          
+          
+        </div>
+        
+      </div>
+    </section>
+  
+    
+    
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">🌟 What Makes This Practice Unique</h2>
+      <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border-2 border-yellow-200">
+        <ul class="space-y-3">
+          
+          <li class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-gray-700">5,000+ laparoscopic surgeries performed</span>
+          </li>
+          
+          <li class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-gray-700">Sub-specialty accreditation in Upper-GI and Bariatric surgery</span>
+          </li>
+          
+          <li class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-gray-700">6 hospital affiliations across Sydney</span>
+          </li>
+          
+          <li class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-gray-700">Exemplary bedside manner (noted in reviews)</span>
+          </li>
+          
+          <li class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-gray-700">Personal post-operative attention</span>
+          </li>
+          
+          <li class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-gray-700">Takes complex or emergency cases</span>
+          </li>
+          
+          <li class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-gray-700">Thorough communication and genuine patient care</span>
+          </li>
+          
+          <li class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-gray-700">Minimally invasive (keyhole) procedure focus</span>
+          </li>
+          
+          <li class="flex items-start space-x-3">
+            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span class="text-gray-700">Multiple consulting locations (Bella Vista, Dural)</span>
+          </li>
+          
+        </ul>
+      </div>
+    </section>
+  
+    
+    <!-- Contact Section -->
+    <section class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
+        <p class="text-xl mb-6 text-blue-100">
+          Book a consultation with {surgeon.name} today to discuss your weight loss surgery options.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          {surgeon.phone && (
+            <a 
+              href={`tel:${surgeon.phone}`}
+              class="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors inline-block"
+            >
+              📞 {surgeon.phone}
+            </a>
+          )}
+          {surgeon.website && (
+            <a 
+              href={surgeon.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition-colors inline-block border-2 border-white"
+            >
+              Visit Website →
+            </a>
+          )}
+        </div>
+      </div>
+    </section>
+    
+  </div>
 </BaseLayout>

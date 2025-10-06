@@ -1,0 +1,842 @@
+[
+  {
+    "id": "dr-mani-niazi-wantirna",
+    "name": "Dr Mani Niazi",
+    "website": "https://www.loseweightsurgery.com.au/",
+    "city": "Wantirna",
+    "state": "Victoria",
+    "rating": "4.9",
+    "reviewCount": "127",
+    "priority": 161.7
+  },
+  {
+    "id": "dr-mark-magdy-miranda",
+    "name": "Dr. Mark Magdy",
+    "website": "http://drmarkmagdy.com.au/",
+    "city": "Miranda",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "109",
+    "priority": 160.9
+  },
+  {
+    "id": "dr-jason-maani-bariatric-surgery-liverpool",
+    "name": "Dr Jason Maani Bariatric Surgery",
+    "website": "https://www.drjasonmaani.com.au/",
+    "city": "Liverpool",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "83",
+    "priority": 158.3
+  },
+  {
+    "id": "dr-robert-gandy-randwick",
+    "name": "Dr Robert Gandy",
+    "website": "http://www.keyholesurgeon.com.au/",
+    "city": "Randwick",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "83",
+    "priority": 158.3
+  },
+  {
+    "id": "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna",
+    "name": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne",
+    "website": "https://www.nirubenrajasagaram.au/",
+    "city": "Wantirna",
+    "state": "Victoria",
+    "rating": "4.9",
+    "reviewCount": "92",
+    "priority": 158.2
+  },
+  {
+    "id": "dr-yuan-cheng-richmond",
+    "name": "Dr. Yuan Cheng",
+    "website": "http://www.obesity.com.au/",
+    "city": "Richmond",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "72",
+    "priority": 157.2
+  },
+  {
+    "id": "dr-faizur-reza-bella-vista",
+    "name": "Dr Faizur Reza",
+    "website": "https://yhmo.xyz/business/dr-faizur-reza-b0bqgj",
+    "city": "Bella Vista",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "70",
+    "priority": 157
+  },
+  {
+    "id": "aprof-christos-apostolou-surgeon-wahroonga",
+    "name": "A/Prof. Christos Apostolou - Surgeon",
+    "website": "http://www.christosapostolou.com.au/",
+    "city": "Wahroonga",
+    "state": "NSW",
+    "rating": "4.9",
+    "reviewCount": "79",
+    "priority": 156.9
+  },
+  {
+    "id": "dr-michael-yunaev-potts-point",
+    "name": "Dr Michael Yunaev",
+    "website": "https://www.bbclinic.com.au/",
+    "city": "Potts Point",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "59",
+    "priority": 155.9
+  },
+  {
+    "id": "prof-charbel-sandr-oussi-innerwest-ugit-surgery-camperdown",
+    "name": "Prof. Charbel Sandroussi - Innerwest UGIT Surgery",
+    "website": "https://drcharbelsandroussi.com/",
+    "city": "Camperdown",
+    "state": "NSW",
+    "rating": "4.9",
+    "reviewCount": "66",
+    "priority": 155.6
+  },
+  {
+    "id": "dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills",
+    "name": "Dr Devesh Kaushal | Upper-GI & Weight Loss Surgeon",
+    "website": "https://drdeveshkaushal.com.au/",
+    "city": "Gregory Hills",
+    "state": "NSW",
+    "rating": "4.9",
+    "reviewCount": "50",
+    "priority": 154
+  },
+  {
+    "id": "dr-john-ozmen-general-upper-gi-surgeon-bella-vista",
+    "name": "Dr John Ozmen | General & Upper-GI Surgeon",
+    "website": "https://drozmen.com.au/",
+    "city": "Bella Vista",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "46",
+    "priority": 104.6
+  },
+  {
+    "id": "daniel-foley-richmond",
+    "name": "Daniel Foley",
+    "website": "https://uppergi.com.au/",
+    "city": "Richmond",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "37",
+    "priority": 103.7
+  },
+  {
+    "id": "dr-qiuye-cheng-kogarah",
+    "name": "Dr. Qiuye Cheng",
+    "website": "https://drqiuyecheng.com.au/",
+    "city": "Kogarah",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "28",
+    "priority": 102.8
+  },
+  {
+    "id": "mr-hai-t-bui-ascot-vale",
+    "name": "Mr Hai T. Bui",
+    "website": "http://www.northwestsurgeons.com.au/",
+    "city": "Ascot Vale",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "28",
+    "priority": 102.8
+  },
+  {
+    "id": "aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah",
+    "name": "A/Prof. Oliver Fisher | Specialist Upper GI, Bariatric, & Hernia Surgeon",
+    "website": "http://www.droliverfisher.com.au/",
+    "city": "Kogarah",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "26",
+    "priority": 102.6
+  },
+  {
+    "id": "dr-philip-le-page-surgeon-frenchs-forest",
+    "name": "Dr Philip Le Page - Surgeon",
+    "website": "http://www.drlepage.com.au/",
+    "city": "Frenchs Forest",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "26",
+    "priority": 102.6
+  },
+  {
+    "id": "professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield",
+    "name": "Professor Gregory Falk - Lindfield General Surgery / Sydney Heartburn Clinic",
+    "website": "https://www.gregoryfalk.com.au/",
+    "city": "Lindfield",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "20",
+    "priority": 102
+  },
+  {
+    "id": "aprof-michael-hii-east-melbourne",
+    "name": "A/Prof. Michael Hii",
+    "website": "http://www.mwls.com.au/",
+    "city": "East Melbourne",
+    "state": "Victoria",
+    "rating": "4.9",
+    "reviewCount": "28",
+    "priority": 101.8
+  },
+  {
+    "id": "dr-david-yeo-camperdown",
+    "name": "Dr David Yeo",
+    "website": "http://www.drdavidyeo.com.au/",
+    "city": "Camperdown",
+    "state": "NSW",
+    "rating": "4.7",
+    "reviewCount": "45",
+    "priority": 101.5
+  },
+  {
+    "id": "dr-david-joseph-newtown",
+    "name": "Dr David Joseph",
+    "website": "https://www.drdavidjoseph.com.au/",
+    "city": "Newtown",
+    "state": "NSW",
+    "rating": "4.8",
+    "reviewCount": "34",
+    "priority": 101.4
+  },
+  {
+    "id": "dr-jason-maani-kogarah",
+    "name": "Dr Jason Maani",
+    "website": "https://www.drjasonmaani.com.au/",
+    "city": "Kogarah",
+    "state": "NSW",
+    "rating": "4.9",
+    "reviewCount": "23",
+    "priority": 101.3
+  },
+  {
+    "id": "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston",
+    "name": "Mr.Niruben Rajasagaram | Victorian Specialist Surgery & Weight loss centre",
+    "website": "https://www.nirubenrajasagaram.au/",
+    "city": "Frankston",
+    "state": "Victoria",
+    "rating": "4.7",
+    "reviewCount": "38",
+    "priority": 100.8
+  },
+  {
+    "id": "dr-john-jorgensen-kogarah",
+    "name": "Dr John Jorgensen",
+    "website": "http://www.drjohnjorgensen.com.au/",
+    "city": "Kogarah",
+    "state": "NSW",
+    "rating": "4.8",
+    "reviewCount": "24",
+    "priority": 100.4
+  },
+  {
+    "id": "dr-clement-tsang-hurstville",
+    "name": "Dr Clement Tsang",
+    "website": "https://obesitycentre.com.au/",
+    "city": "Hurstville",
+    "state": "NSW",
+    "rating": "4.6",
+    "reviewCount": "34",
+    "priority": 99.4
+  },
+  {
+    "id": "dr-ali-zarrouk-campbelltown",
+    "name": "Dr Ali Zarrouk",
+    "website": "https://www.southwestsurgery.com.au/",
+    "city": "Campbelltown",
+    "state": "NSW",
+    "rating": "4.6",
+    "reviewCount": "30",
+    "priority": 99
+  },
+  {
+    "id": "dr-stuart-pincott-frenchs-forest",
+    "name": "Dr Stuart Pincott",
+    "website": "http://www.nbcr.com.au/",
+    "city": "Frenchs Forest",
+    "state": "NSW",
+    "rating": "4.6",
+    "reviewCount": "24",
+    "priority": 98.4
+  },
+  {
+    "id": "dr-michael-crawford-newtown",
+    "name": "Dr Michael Crawford",
+    "website": "https://drmichaelcrawford.com.au/",
+    "city": "Newtown",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "19",
+    "priority": 51.9
+  },
+  {
+    "id": "dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah",
+    "name": "Dr Roy Hopkins - Upper GI & Bariatric Surgeon",
+    "website": "https://www.sydneyuppergi.com.au/",
+    "city": "Kogarah",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "18",
+    "priority": 51.8
+  },
+  {
+    "id": "dr-chris-nahm-bella-vista",
+    "name": "Dr. Chris Nahm",
+    "website": "http://drchrisnahm.com.au/",
+    "city": "Bella Vista",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "14",
+    "priority": 51.4
+  },
+  {
+    "id": "dr-suhirdan-vivekanandarajah-darlinghurst",
+    "name": "Dr Suhirdan Vivekanandarajah",
+    "website": "http://sydneygastroenterologist.com.au/",
+    "city": "Darlinghurst",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "13",
+    "priority": 51.3
+  },
+  {
+    "id": "aprof-carlo-pulitano-camperdown",
+    "name": "A/Prof Carlo Pulitano",
+    "website": "http://www.drpulitano.com.au/",
+    "city": "Camperdown",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "12",
+    "priority": 51.2
+  },
+  {
+    "id": "dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen",
+    "name": "Dr Alex Craven - Bariatric, Upper Gastrointestinal and General Surgeon",
+    "website": "https://dralexcraven.com.au/",
+    "city": "Bulleen",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "12",
+    "priority": 51.2
+  },
+  {
+    "id": "dr-amitabha-das-liverpool",
+    "name": "Dr Amitabha Das",
+    "website": "https://www.reshapeweightloss.com.au/",
+    "city": "Liverpool",
+    "state": "NSW",
+    "rating": "4.4",
+    "reviewCount": "69",
+    "priority": 50.9
+  },
+  {
+    "id": "dr-ina-takkar-glen-waverley",
+    "name": "Dr. Ina Takkar",
+    "website": "https://www.elinaweightloss.com.au/",
+    "city": "Glen Waverley",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "9",
+    "priority": 50.9
+  },
+  {
+    "id": "dr-james-chau-kogarah",
+    "name": "Dr James Chau",
+    "website": "http://weightlossandkeyholesurgery.com.au/",
+    "city": "Kogarah",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "7",
+    "priority": 50.7
+  },
+  {
+    "id": "dr-nicole-winter-east-melbourne",
+    "name": "Dr Nicole Winter",
+    "website": "https://mwls.com.au/our-team",
+    "city": "East Melbourne",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "7",
+    "priority": 50.7
+  },
+  {
+    "id": "dr-philip-le-page-surgeon-concord",
+    "name": "Dr Philip Le Page - Surgeon",
+    "website": "https://drlepage.com.au/",
+    "city": "Concord",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "7",
+    "priority": 50.7
+  },
+  {
+    "id": "dr-jason-maani-gallbladder-surgery-liverpool",
+    "name": "Dr Jason Maani Gallbladder Surgery",
+    "website": "https://www.drjasonmaani.com.au/gallbladder-surgery",
+    "city": "Liverpool",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "6",
+    "priority": 50.6
+  },
+  {
+    "id": "dr-ahmad-aly-bulleen",
+    "name": "Dr. Ahmad Aly",
+    "website": "https://darebinweightlosssurgery.com.au/",
+    "city": "Bulleen",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "6",
+    "priority": 50.6
+  },
+  {
+    "id": "dr-paul-j-ah-tye-dandenong",
+    "name": "Dr. Paul J. Ah Tye",
+    "website": "https://cleelandspecialists.com.au/",
+    "city": "Dandenong",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "5",
+    "priority": 50.5
+  },
+  {
+    "id": "dr-khalid-ahmed-smithfield",
+    "name": "Dr. Khalid Ahmed",
+    "website": "http://dr-khalidahmed.online/",
+    "city": "Smithfield",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "4",
+    "priority": 50.4
+  },
+  {
+    "id": "dr-roy-brancatisano-norwest",
+    "name": "Dr. Roy Brancatisano",
+    "website": "http://www.circleofcare.com.au/",
+    "city": "Norwest",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "4",
+    "priority": 50.4
+  },
+  {
+    "id": "mr-ahmed-naqeeb-mount-waverley",
+    "name": "Mr Ahmed Naqeeb",
+    "website": "https://www.doctify.com/au/specialist/ahmed-naqeeb",
+    "city": "Mount Waverley",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "4",
+    "priority": 50.4
+  },
+  {
+    "id": "mr-anthony-clough-box-hill",
+    "name": "Mr Anthony Clough",
+    "website": "http://www.anthonyclough.com.au/",
+    "city": "Box Hill",
+    "state": "Victoria",
+    "rating": "4.9",
+    "reviewCount": "14",
+    "priority": 50.4
+  },
+  {
+    "id": "dr-david-links-randwick",
+    "name": "Dr David Links",
+    "website": "http://www.drdavidlinks.com/",
+    "city": "Randwick",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "3",
+    "priority": 50.3
+  },
+  {
+    "id": "dr-mani-niazi-langwarrin-mbsa-langwarrin",
+    "name": "Dr Mani Niazi - Langwarrin - MBSA",
+    "website": "https://www.loseweightsurgery.com.au/",
+    "city": "Langwarrin",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "3",
+    "priority": 50.3
+  },
+  {
+    "id": "mr-ian-michell-essendon",
+    "name": "Mr. Ian Michell",
+    "website": "https://www.surgicalweightlosssolutions.com.au/",
+    "city": "Essendon",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "3",
+    "priority": 50.3
+  },
+  {
+    "id": "dr-clare-bouffler-kingswood",
+    "name": "Dr Clare Bouffler",
+    "website": "https://www.drclarebouffler.com.au/",
+    "city": "Kingswood",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "2",
+    "priority": 50.2
+  },
+  {
+    "id": "dr-ernest-lim-bundoora",
+    "name": "Dr Ernest Lim",
+    "website": "http://www.unihillsc.com.au/",
+    "city": "Bundoora",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "2",
+    "priority": 50.2
+  },
+  {
+    "id": "dr-james-gallagher-newtown",
+    "name": "Dr James Gallagher",
+    "website": "https://oyri.xyz/business/dr-james-gallagher-t8hx8q",
+    "city": "Newtown",
+    "state": "NSW",
+    "rating": "5",
+    "reviewCount": "2",
+    "priority": 50.2
+  },
+  {
+    "id": "mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne",
+    "name": "Mr Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne",
+    "website": "http://moggs.com.au/",
+    "city": "East Melbourne",
+    "state": "Victoria",
+    "rating": "5",
+    "reviewCount": "1",
+    "priority": 50.1
+  },
+  {
+    "id": "dr-umed-cosmetics-laser-skin-treatment-cosmetic-body-clinic-five-dock",
+    "name": "Dr. Umed Cosmetics - Laser Skin Treatment, Cosmetic & Body Clinic",
+    "website": "https://www.drumedcosmetics.com.au/",
+    "city": "Five Dock",
+    "state": "NSW",
+    "rating": "4.4",
+    "reviewCount": "59",
+    "priority": 49.9
+  },
+  {
+    "id": "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick",
+    "name": "Mr.Niruben Rajasagaram - Victorian Specialist Surgery & Weight Loss Centre",
+    "website": "https://www.nirubenrajasagaram.au/",
+    "city": "Berwick",
+    "state": "Victoria",
+    "rating": "4.8",
+    "reviewCount": "18",
+    "priority": 49.8
+  },
+  {
+    "id": "associate-professor-michael-talbot-kogarah",
+    "name": "Associate Professor Michael Talbot",
+    "website": "http://www.uppergisurgery.com.au/",
+    "city": "Kogarah",
+    "state": "NSW",
+    "rating": "4.7",
+    "reviewCount": "12",
+    "priority": 48.2
+  },
+  {
+    "id": "dr-michael-devadas-baulkham-hills",
+    "name": "Dr Michael Devadas",
+    "website": "http://drmichaeldevadas.com/",
+    "city": "Baulkham Hills",
+    "state": "NSW",
+    "rating": "4.6",
+    "reviewCount": "19",
+    "priority": 47.9
+  },
+  {
+    "id": "dr-fadil-khaleal-penrith",
+    "name": "Dr Fadil Khaleal",
+    "website": "http://sydneymetabolicsurgery.com.au/",
+    "city": "Penrith",
+    "state": "NSW",
+    "rating": "4.6",
+    "reviewCount": "16",
+    "priority": 47.6
+  },
+  {
+    "id": "dr-govind-krishna-weight-loss-general-surgeon-wetherill-park",
+    "name": "Dr Govind Krishna | Weight Loss & General Surgeon",
+    "website": "https://drgovindkrishna.com.au/",
+    "city": "Wetherill Park",
+    "state": "NSW",
+    "rating": "4.3",
+    "reviewCount": "45",
+    "priority": 47.5
+  },
+  {
+    "id": "mr-geoffrey-dr-aper-frankston",
+    "name": "Mr Geoffrey Draper",
+    "website": "https://www.geoffreydraper.com.au/",
+    "city": "Frankston",
+    "state": "Victoria",
+    "rating": "4.5",
+    "reviewCount": "8",
+    "priority": 45.8
+  },
+  {
+    "id": "mr-richard-chen-malvern",
+    "name": "Mr Richard Chen",
+    "website": "https://www.drrichardchen.com.au/",
+    "city": "Malvern",
+    "state": "Victoria",
+    "rating": "4.5",
+    "reviewCount": "8",
+    "priority": 45.8
+  },
+  {
+    "id": "mr-mark-cullinan-richmond",
+    "name": "Mr Mark Cullinan",
+    "website": "http://markcullinan.com.au/",
+    "city": "Richmond",
+    "state": "Victoria",
+    "rating": "4.5",
+    "reviewCount": "6",
+    "priority": 45.6
+  },
+  {
+    "id": "dr-ken-loi-kogarah",
+    "name": "Dr Ken Loi",
+    "website": "https://www.stgeorgeobesitysurgery.com.au/",
+    "city": "Kogarah",
+    "state": "NSW",
+    "rating": "4.4",
+    "reviewCount": "14",
+    "priority": 45.4
+  },
+  {
+    "id": "dr-ertugrul-durmush-liverpool",
+    "name": "Dr Ertugrul Durmush",
+    "website": "http://lifeweightloss.com.au/",
+    "city": "Liverpool",
+    "state": "NSW",
+    "rating": "4.2",
+    "reviewCount": "26",
+    "priority": 44.6
+  },
+  {
+    "id": "dr-saras-co-double-bay",
+    "name": "Dr Saras & Co",
+    "website": "https://drsarasandco.com.au/?utm_source=google&utm_medium=organic&utm_id=gmb-double-bay",
+    "city": "Double Bay",
+    "state": "NSW",
+    "rating": "4.3",
+    "reviewCount": "3",
+    "priority": 43.3
+  },
+  {
+    "id": "dr-philip-le-page-campbelltown",
+    "name": "Dr Philip Le Page",
+    "website": "http://www.drlepage.com.au/",
+    "city": "Campbelltown",
+    "state": "NSW",
+    "rating": "4.2",
+    "reviewCount": "10",
+    "priority": 43
+  },
+  {
+    "id": "dr-ramez-bassari-richmond",
+    "name": "Dr Ramez Bassari",
+    "website": "http://www.surgerymelbourne.com.au/",
+    "city": "Richmond",
+    "state": "Victoria",
+    "rating": "4.2",
+    "reviewCount": "5",
+    "priority": 42.5
+  },
+  {
+    "id": "dr-sean-mackay-box-hill",
+    "name": "Dr Sean Mackay",
+    "website": "http://seanmackay.com.au/",
+    "city": "Box Hill",
+    "state": "Victoria",
+    "rating": "4",
+    "reviewCount": "8",
+    "priority": 40.8
+  },
+  {
+    "id": "reginald-v-n-lord-darlinghurst",
+    "name": "Reginald V N Lord",
+    "website": "http://lordsurgery.com.au/",
+    "city": "Darlinghurst",
+    "state": "NSW",
+    "rating": "3.9",
+    "reviewCount": "14",
+    "priority": 40.4
+  },
+  {
+    "id": "dr-michael-yunaev-potts-point",
+    "name": "Dr Michael Yunaev",
+    "website": "https://ghka.xyz/business/dr-michael-yunaev-aqblsg",
+    "city": "Potts Point",
+    "state": "NSW",
+    "rating": "3",
+    "reviewCount": "2",
+    "priority": 30.2
+  },
+  {
+    "id": "dr-lp-cheah-coburg",
+    "name": "Dr LP Cheah",
+    "website": "http://www.melbournesurgery.com/",
+    "city": "Coburg",
+    "state": "Victoria",
+    "rating": "2",
+    "reviewCount": "5",
+    "priority": 20.5
+  },
+  {
+    "id": "dr-edward-tong-campbelltown-campbelltown",
+    "name": "Dr Edward Tong | Campbelltown",
+    "website": "https://dredwardtong.com/",
+    "city": "Campbelltown",
+    "state": "NSW",
+    "rating": "1",
+    "reviewCount": "1",
+    "priority": 10.1
+  },
+  {
+    "id": "dr-ben-keong-bundoora",
+    "name": "Dr Ben Keong",
+    "website": "http://drbenkeong.com.au/",
+    "city": "Bundoora",
+    "state": "Victoria",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "dr-gary-yee-kogarah",
+    "name": "Dr Gary Yee",
+    "website": "http://www.uppergisurgery.com.au/",
+    "city": "Kogarah",
+    "state": "NSW",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "dr-jan-parker-glen-waverley",
+    "name": "Dr Jan Parker",
+    "website": "https://www.elinaweightloss.com.au/dr-jan-parker/",
+    "city": "Glen Waverley",
+    "state": "Victoria",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "dr-michael-hii-werribee",
+    "name": "Dr Michael Hii",
+    "website": "http://www.mgos.com.au/",
+    "city": "Werribee",
+    "state": "Victoria",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "dr-nicholas-cocco-norwest",
+    "name": "Dr Nicholas Cocco",
+    "website": "https://www.drnicholascocco.com/",
+    "city": "Norwest",
+    "state": "NSW",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "dr-nicholas-cocco-westmead",
+    "name": "Dr Nicholas Cocco",
+    "website": "https://www.drnicholascocco.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=9979462947372617426",
+    "city": "Westmead",
+    "state": "NSW",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "dr-paul-burton-brighton",
+    "name": "Dr Paul Burton",
+    "website": "http://www.surgicalconsultinggroup.com.au/",
+    "city": "Brighton",
+    "state": "Victoria",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "dr-rachel-kirby-campbelltown",
+    "name": "Dr Rachel Kirby",
+    "website": "https://www.southwestsurgery.com.au/",
+    "city": "Campbelltown",
+    "state": "NSW",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "dr-khalid-ahmed-penrith",
+    "name": "Dr. Khalid Ahmed",
+    "website": "http://dr-khalidahmed.online/",
+    "city": "Penrith",
+    "state": "NSW",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "dr-khalid-ahmed-gledswood-hills",
+    "name": "Dr. Khalid Ahmed",
+    "website": "http://dr-khalidahmed.online/",
+    "city": "Gledswood Hills",
+    "state": "NSW",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "mr-kiron-bhatia-bundoora",
+    "name": "Mr Kiron Bhatia",
+    "website": "http://www.kironbhatia.com.au/",
+    "city": "Bundoora",
+    "state": "Victoria",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "mr-zeev-duieb-berwick",
+    "name": "Mr Zeev Duieb",
+    "website": "http://www.drzeevsurgery.com/",
+    "city": "Berwick",
+    "state": "Victoria",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  },
+  {
+    "id": "mr-jacob-vanyai-surrey-hills",
+    "name": "Mr. Jacob Vanyai",
+    "website": "https://www.moggs.com.au/",
+    "city": "Surrey Hills",
+    "state": "Victoria",
+    "rating": "0",
+    "reviewCount": "0",
+    "priority": 0
+  }
+]
