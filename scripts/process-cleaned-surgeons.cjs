@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const INPUT_CSV = 'Copy of Surgeons Master - Working Copy - dataset_crawler-google-places_2025-10-04_06-45-50-735 (1).csv';
+const INPUT_CSV = 'surgeons-with-photos.csv';
 const OUTPUT_CSV = 'surgeons-with-bios.csv';
 
 // Slug generation helper
@@ -120,6 +120,7 @@ async function processSurgeons() {
     const website = surgeon['website'] || '';
     const googleMapsUrl = surgeon['url'] || '';
     const category = surgeon['categoryName'] || 'Bariatric Surgeon';
+    const surgeonPhoto = surgeon['surgeon_photo'] || ''; // Preserve scraped photo
     
     // Generate computed fields
     const slug = generateSlug(name, city);
@@ -142,12 +143,24 @@ async function processSurgeons() {
     const metaTitle = `${name} - Bariatric Surgeon ${city} | Gastric Sleeve & Bypass`;
     const metaDescription = `${name} is an experienced bariatric surgeon in ${city} with ${yearsExperience}+ years experience. Rating: ${rating} stars (${reviewCount} reviews). Book your consultation today.`;
     
-    // Generate basic bio (will be enhanced later)
-    const bioLong = `${name} is a highly experienced bariatric surgeon based in ${city}, ${state}. With over ${yearsExperience} years of experience in weight loss surgery, ${name} has helped hundreds of patients achieve their health goals through surgical interventions.
-
-Specializing in gastric sleeve, gastric bypass, and other bariatric procedures, ${name} combines clinical excellence with compassionate patient care. Their practice is known for thorough pre-operative consultations and comprehensive post-operative support.
-
-${name} maintains a ${rating}-star rating based on ${reviewCount} patient reviews, reflecting their commitment to quality care and positive outcomes. Patients appreciate their professional approach, clear communication, and dedication to long-term success.`;
+    // Generate unique, concise bio based on surgeon's data
+    const ratingText = rating > 0 ? `${rating.toFixed(1)}-star rating` : 'new practice';
+    const experienceText = yearsExperience >= 15 ? 'extensive' : yearsExperience >= 10 ? 'significant' : 'solid';
+    const reviewText = reviewCount >= 50 ? `${reviewCount}+ patient reviews` : 
+                       reviewCount >= 20 ? `${reviewCount} verified reviews` : 
+                       reviewCount > 0 ? `${reviewCount} reviews` : 'growing patient base';
+    
+    // Vary bio structure based on surgeon characteristics
+    let bioLong;
+    if (rating >= 4.8 && reviewCount >= 30) {
+      bioLong = `${name} is a leading bariatric surgeon in ${city}, ${state}, known for ${experienceText} expertise in weight loss surgery. With a ${ratingText} from ${reviewText}, they've built a reputation for exceptional patient outcomes and comprehensive surgical care. Specializing in gastric sleeve, bypass, and band procedures, ${name} offers personalized treatment plans backed by ${yearsExperience}+ years of surgical experience.`;
+    } else if (rating >= 4.5 && reviewCount >= 15) {
+      bioLong = `Based in ${city}, ${state}, ${name} brings ${yearsExperience}+ years of bariatric surgery experience to patients seeking weight loss solutions. Their ${ratingText} across ${reviewText} reflects a commitment to quality care and positive surgical outcomes. ${name} specializes in modern bariatric procedures including gastric sleeve, bypass, and adjustable band surgery.`;
+    } else if (reviewCount >= 10) {
+      bioLong = `${name} is an experienced bariatric surgeon serving ${city}, ${state}. With ${experienceText} experience in weight loss surgery and a ${ratingText} from ${reviewText}, they provide comprehensive bariatric care including gastric sleeve, bypass, and band procedures. ${name} focuses on individualized patient care and long-term weight management support.`;
+    } else {
+      bioLong = `${name} practices bariatric surgery in ${city}, ${state}, offering gastric sleeve, bypass, and band procedures to patients seeking effective weight loss solutions. With ${yearsExperience}+ years of surgical experience, ${name} provides thorough consultations and personalized treatment approaches tailored to each patient's needs.`;
+    }
     
     // Build output row
     const outputRow = [
@@ -176,7 +189,7 @@ ${name} maintains a ${rating}-star rating based on ${reviewCount} patient review
       tier,
       `${city}, ${state}`,
       bioLong.replace(/\n/g, ' ').replace(/,/g, ';'), // Escape newlines and commas for CSV
-      '' // surgeon_photo (will be added later)
+      surgeonPhoto // surgeon_photo from scraped data
     ];
     
     outputLines.push(outputRow.map(val => `"${val}"`).join(','));
