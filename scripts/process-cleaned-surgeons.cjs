@@ -112,7 +112,18 @@ async function processSurgeons() {
     // Extract key fields
     const name = surgeon['title'] || surgeon['name'] || '';
     const city = surgeon['city'] || '';
-    const state = surgeon['state'] || '';
+    let state = surgeon['state'] || '';
+    
+    // Normalize state names
+    if (state === 'New South Wales') state = 'NSW';
+    if (state === 'Australian Capital Territory') state = 'ACT';
+    if (state === 'Queensland') state = 'QLD';
+    if (state === 'South Australia') state = 'SA';
+    if (state === 'Western Australia') state = 'WA';
+    if (state === 'Northern Territory') state = 'NT';
+    if (state === 'Tasmania') state = 'TAS';
+    if (state === 'VIC') state = 'Victoria';
+    
     const street = surgeon['street'] || '';
     const rating = parseFloat(surgeon['rating']) || 0;
     const reviewCount = parseInt(surgeon['reviewCount']) || 0;
