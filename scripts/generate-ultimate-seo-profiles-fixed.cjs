@@ -135,10 +135,22 @@ const surgeon = ${JSON.stringify({
 const title = \`\${surgeon.name} - Bariatric Surgeon \${surgeon.city} | Weight Loss Surgery\`;
 const description = \`\${surgeon.name} is a leading bariatric surgeon in \${surgeon.city}, \${surgeon.state} with \${surgeon.yearsExperience}+ years experience. Rating: \${surgeon.rating}/5 (\${surgeon.reviewCount} reviews). Specialist in gastric sleeve, bypass & revision surgery.\`;
 const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/\${surgeon.citySlug}/\${surgeon.slug}\`;
+
+// Schema objects (will be stringified in template)
+const physicianSchema = {...physicianSchema};
+const breadcrumbSchema = {...breadcrumbSchema};
+{faqSchema ? 'const faqSchema = {...faqSchema};' : ''}
 ---
 
 <BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
-  <!-- TODO: Schema markup will be added in follow-up deployment -->
+  <!-- Structured Data: Physician Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(physicianSchema)} />
+  
+  ${faqSchema ? `<!-- Structured Data: FAQ Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />` : ''}
+  
+  <!-- Structured Data: Breadcrumb Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
   <main class="min-h-screen bg-gray-50">
     <!-- Breadcrumbs -->
