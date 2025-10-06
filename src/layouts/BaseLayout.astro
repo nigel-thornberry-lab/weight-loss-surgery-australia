@@ -5,42 +5,91 @@ interface Props {
   title: string;
   description: string;
   canonicalUrl?: string;
+  image?: string;
+  type?: string;
 }
 
-const { title, description, canonicalUrl } = Astro.props;
+const { title, description, canonicalUrl, image, type = 'website' } = Astro.props;
 const currentUrl = canonicalUrl || Astro.url.href;
+const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
 ---
 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-AU">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-
-    <!-- Performance Optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Preconnect to external domains for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- DNS Prefetch for performance -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    
+    <!-- Favicon with all sizes -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+    
+    <!-- Critical inline CSS for above-fold content -->
+    <style>
+      /* Critical CSS - Above the fold */
+      body{margin:0;font-family:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+      header{background:#fff;border-bottom:1px solid #e5e7eb;position:sticky;top:0;z-index:50}
+      .max-w-7xl{max-width:80rem;margin:0 auto;padding:0 1rem}
+      @media(min-width:640px){.max-w-7xl{padding:0 1.5rem}}
+      @media(min-width:1024px){.max-w-7xl{padding:0 2rem}}
+    </style>
 
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Weight Loss Surgery Australia" />
+    <meta name="geo.region" content="AU" />
+    <meta name="geo.placename" content="Australia" />
+    <meta name="language" content="English" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={type} />
     <meta property="og:url" content={currentUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:locale" content="en_AU" />
+    <meta property="og:site_name" content="Weight Loss Surgery Australia" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={currentUrl} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={currentUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
 
-    <!-- Canonical URL -->
+    <!-- Canonical URL - Critical for SEO -->
     <link rel="canonical" href={currentUrl} />
+    
+    <!-- Additional SEO -->
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Structured Data - Medical Website -->
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "name": title,
+        "description": description,
+        "url": currentUrl,
+        "inLanguage": "en-AU",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Weight Loss Surgery Australia",
+          "url": "https://weightlosssurgery.com.au"
+        }
+      })}
+    </script>
   </head>
   <body class="antialiased">
     <!-- Header -->
