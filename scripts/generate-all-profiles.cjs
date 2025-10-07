@@ -602,7 +602,8 @@ function main() {
       category: surgeon.category,
       rating: surgeon.rating,
       review_count: surgeon.review_count,
-      years_experience: surgeon.years_experience
+      years_experience: surgeon.years_experience,
+      surgeon_photo: surgeon.surgeon_photo
     });
     
     if (hasEnhanced) {
