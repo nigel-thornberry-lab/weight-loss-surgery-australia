@@ -1,8 +1,17 @@
 ---
-const { placeId, surgeonName, rating, reviewCount } = Astro.props;
+const { placeId, surgeonName, surgeonSlug, rating, reviewCount } = Astro.props;
 
-// This component will display Google Reviews
-// Reviews data will be fetched client-side or passed as props after API integration
+// Load cached reviews from static JSON file
+let cachedReviews = null;
+try {
+  const reviewsData = await import('../../data/cached-reviews.json');
+  cachedReviews = reviewsData.default[surgeonSlug];
+} catch (err) {
+  console.log('No cached reviews found');
+}
+
+const reviews = cachedReviews?.reviews || [];
+const hasReviews = reviews.length > 0;
 ---
 
 <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200">
@@ -25,23 +34,41 @@ const { placeId, surgeonName, rating, reviewCount } = Astro.props;
     </div>
   </div>
 
-  <!-- Reviews will be loaded here -->
-  <div id="google-reviews-container" data-place-id={placeId}>
-    <!-- Loading state -->
-    <div class="space-y-4">
-      {[...Array(3)].map(() => (
-        <div class="animate-pulse">
+  <!-- Display cached reviews -->
+  <div class="space-y-4">
+    {hasReviews ? (
+      reviews.map(review => (
+        <div class="border-b border-gray-200 pb-4 mb-4 last:border-0">
           <div class="flex items-start gap-4">
-            <div class="w-12 h-12 bg-gray-200 rounded-full"></div>
-            <div class="flex-1 space-y-2">
-              <div class="h-4 bg-gray-200 rounded w-1/4"></div>
-              <div class="h-3 bg-gray-200 rounded w-full"></div>
-              <div class="h-3 bg-gray-200 rounded w-3/4"></div>
+            <img 
+              src={review.profile_photo_url || '/default-avatar.jpg'} 
+              alt={review.author_name}
+              class="w-12 h-12 rounded-full object-cover"
+              loading="lazy"
+            />
+            <div class="flex-1">
+              <div class="flex items-center justify-between mb-2">
+                <h3 class="font-semibold text-gray-900">{review.author_name}</h3>
+                <span class="text-xs text-gray-500">{review.relative_time_description}</span>
+              </div>
+              <div class="flex items-center gap-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <svg class={`w-4 h-4 ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}`} fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                ))}
+              </div>
+              <p class="text-gray-700 text-sm leading-relaxed">{review.text}</p>
             </div>
           </div>
         </div>
-      ))}
-    </div>
+      ))
+    ) : (
+      <div class="text-center py-8 text-gray-500">
+        <p class="mb-2">No reviews available yet.</p>
+        <p class="text-sm">Check back soon or visit Google Maps for the latest reviews.</p>
+      </div>
+    )}
   </div>
 
   <!-- Link to all reviews -->
@@ -59,73 +86,12 @@ const { placeId, surgeonName, rating, reviewCount } = Astro.props;
       See all {reviewCount} reviews on Google
     </a>
   </div>
+  
+  {cachedReviews && (
+    <div class="mt-4 pt-4 border-t border-gray-200">
+      <p class="text-xs text-gray-500 text-center">
+        Reviews last updated: {new Date(cachedReviews.lastUpdated).toLocaleDateString()}
+      </p>
+    </div>
+  )}
 </div>
-
-<script>
-  // Client-side Google Reviews loader
-  // This will be populated after you set up the Google Places API
-  
-  async function loadGoogleReviews() {
-    const container = document.getElementById('google-reviews-container');
-    if (!container) return;
-    
-    const placeId = container.dataset.placeId;
-    if (!placeId) return;
-    
-    try {
-      // TODO: Replace with your actual API endpoint
-      const response = await fetch(`/api/google-reviews?placeId=${placeId}`);
-      const data = await response.json();
-      
-      if (data.reviews && data.reviews.length > 0) {
-        // Render reviews
-        container.innerHTML = data.reviews.slice(0, 5).map(review => `
-          <div class="border-b border-gray-200 pb-4 mb-4 last:border-0">
-            <div class="flex items-start gap-4">
-              <img 
-                src="${review.profile_photo_url || '/default-avatar.jpg'}" 
-                alt="${review.author_name}"
-                class="w-12 h-12 rounded-full object-cover"
-              />
-              <div class="flex-1">
-                <div class="flex items-center justify-between mb-2">
-                  <h3 class="font-semibold text-gray-900">${review.author_name}</h3>
-                  <span class="text-xs text-gray-500">${review.relative_time_description}</span>
-                </div>
-                <div class="flex items-center gap-1 mb-2">
-                  ${[...Array(5)].map((_, i) => `
-                    <svg class="w-4 h-4 ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                  `).join('')}
-                </div>
-                <p class="text-gray-700 text-sm leading-relaxed">${review.text}</p>
-              </div>
-            </div>
-          </div>
-        `).join('');
-      } else {
-        // No reviews available
-        container.innerHTML = `
-          <div class="text-center py-8 text-gray-500">
-            <p>Reviews will be displayed here once API is configured.</p>
-          </div>
-        `;
-      }
-    } catch (error) {
-      console.error('Error loading reviews:', error);
-      container.innerHTML = `
-        <div class="text-center py-8 text-gray-500">
-          <p>Unable to load reviews at this time.</p>
-        </div>
-      `;
-    }
-  }
-  
-  // Load reviews when page loads
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadGoogleReviews);
-  } else {
-    loadGoogleReviews();
-  }
-</script>

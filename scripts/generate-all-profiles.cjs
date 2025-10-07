@@ -345,6 +345,7 @@ const breadcrumbSchema = {
           <GoogleReviews 
             placeId={surgeon.place_id}
             surgeonName={cleanName}
+            surgeonSlug={slug}
             rating={surgeon.rating}
             reviewCount={surgeon.review_count}
           />
