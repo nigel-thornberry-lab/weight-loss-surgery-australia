@@ -10,9 +10,19 @@ try {
   console.log('No cached reviews found');
 }
 
+// Load slug-to-placeId mapping as fallback
+let slugToPlaceIdMapping = {};
+try {
+  const mappingData = await import('../../data/slug-to-placeid.json');
+  slugToPlaceIdMapping = mappingData.default;
+} catch (err) {
+  console.log('No slug-to-placeId mapping found');
+}
+
 const reviews = cachedReviews?.reviews || [];
 const hasReviews = reviews.length > 0;
-const placeId = cachedReviews?.placeId; // Get placeId from cached data
+// Get placeId from cached data, or fallback to mapping
+const placeId = cachedReviews?.placeId || slugToPlaceIdMapping[surgeonSlug];
 ---
 
 <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200">
@@ -73,20 +83,22 @@ const placeId = cachedReviews?.placeId; // Get placeId from cached data
   </div>
 
   <!-- Link to all reviews -->
-  <div class="mt-6 pt-6 border-t border-gray-200 text-center">
-    <a 
-      href={`https://search.google.com/local/reviews?placeid=${placeId}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-sm"
-    >
-      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-        <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-      </svg>
-      See all {reviewCount} reviews on Google
-    </a>
-  </div>
+  {placeId && (
+    <div class="mt-6 pt-6 border-t border-gray-200 text-center">
+      <a 
+        href={`https://search.google.com/local/reviews?placeid=${placeId}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-sm"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+          <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+        </svg>
+        See all {reviewCount} reviews on Google
+      </a>
+    </div>
+  )}
   
   {cachedReviews && (
     <div class="mt-4 pt-4 border-t border-gray-200">
