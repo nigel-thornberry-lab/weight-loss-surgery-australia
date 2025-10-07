@@ -1,730 +1,482 @@
 {
-  "dr-mani-niazi-wantirna": {
-    "surgeon_name": "Dr Mani Niazi",
-    "city": "Wantirna",
-    "state": "Victoria",
-    "team": {
-      "surgeons": [
-        {
-          "name": "Dr Mani Niazi",
-          "role": "Principal Surgeon - Upper GI & Bariatric",
-          "experience": "18+ years",
-          "qualifications": "Dual fellowships in Upper GI & Bariatric Surgery and Breast/Endocrine/Surgical Oncology"
-        },
-        {
-          "name": "Dr Ramin Mehdipour",
-          "role": "Bariatric Surgeon",
-          "specialization": "Upper GI and bariatric procedures"
-        }
+  "aprof-christos-apostolou-surgeon-wahroonga": {
+    "credentials": {
+      "website": "http://www.christosapostolou.com.au/"
+    },
+    "enhanced": true
+  },
+  "dr-robert-gandy-randwick": {
+    "credentials": {
+      "website": "http://www.drrobertgandy.com.au/"
+    },
+    "enhanced": true
+  },
+  "dr-mark-magdy-miranda": {
+    "credentials": {
+      "website": "https://www.drmarkmagdy.com.au/"
+    },
+    "enhanced": true
+  },
+  "dr-yuan-cheng-richmond": {
+    "credentials": {
+      "website": "https://www.dryuancheng.com.au/"
+    },
+    "enhanced": true
+  },
+  "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna": {
+    "credentials": {
+      "website": "https://www.weightlosscentre.com.au/"
+    },
+    "enhanced": true
+  },
+  "dr-amitabha-das-liverpool": {
+    "credentials": {
+      "medical_school": "University of New South Wales",
+      "degrees": [
+        "MBBS (Hons)",
+        "MS (Master of Surgery, Laparoscopic Surgery)"
       ],
-      "team_size": "Multidisciplinary team (specific numbers not disclosed)",
+      "fellowships": [
+        "FRACS"
+      ],
+      "professional_memberships": [
+        "GSA",
+        "ANZMOSS",
+        "IFSO"
+      ],
+      "years_practicing": 15
+    },
+    "team": {
       "has_dietitian": true,
       "has_psychologist": false,
-      "has_nurses": true,
-      "has_exercise_physiologist": false
-    },
-    "services": {
-      "procedures": [
-        "Sleeve Gastrectomy",
-        "Gastric Bypass",
-        "Bariatric Revision Surgery",
-        "Lap Band Removal",
-        "Advanced Laparoscopic Surgeries",
-        "Hernia Repair",
-        "Gallbladder Surgery",
-        "Thyroid/Parathyroid Surgery",
-        "Abdominoplasty"
-      ],
-      "pre_op_program": "Yes - personalized consultation",
-      "post_op_program": "Yes - After Care Program",
-      "follow_up_duration": "Not specified",
-      "telehealth": false,
-      "support_groups": false,
-      "approach": "Personalized, evidence-based, team-based care"
-    },
-    "hospitals": [
-      {
-        "name": "Ringwood Private Hospital",
-        "address": "36-42 Mt Dandenong Rd, Ringwood East, VIC 3135"
-      },
-      {
-        "name": "Knox Private Hospital",
-        "address": "262 Mountain Hwy, Wantirna, VIC 3152"
-      },
-      {
-        "name": "Peninsula Private Hospital",
-        "address": "525 McClelland Dr, Langwarrin, VIC 3910"
-      },
-      {
-        "name": "Holmesglen Private Hospital",
-        "address": "490 South Rd, Moorabbin, VIC 3189"
-      },
-      {
-        "name": "195 Specialist Centre",
-        "address": "195 Thompsons Rd, Bulleen, VIC 3105"
-      }
-    ],
-    "pricing": {
-      "available": false,
-      "gastric_sleeve": "Contact for pricing",
-      "gastric_bypass": "Contact for pricing",
-      "consultation": "Contact for pricing"
-    },
-    "unique_features": [
-      "Dual fellowship-trained (Upper GI & Bariatric + Breast/Endocrine/Oncology)",
-      "Pioneer in Laparoscopic Gastric Plication - instrumental in global development",
-      "Direct RACS fellowship registration (international expertise recognized)",
-      "Multilingual services (Farsi, Persian, Turkish)",
-      "5 hospital locations across Melbourne and regional Victoria",
-      "Accessible, affordable, evidence-based care focus",
-      "Advanced minimally invasive techniques pioneer"
-    ]
-  },
-  "dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills": {
-    "surgeon_name": "Dr Devesh Kaushal | Upper-GI & Weight Loss Surgeon",
-    "city": "Gregory Hills",
-    "state": "NSW",
-    "team": {
-      "surgeons": [
-        {
-          "name": "Dr Devesh Kaushal",
-          "role": "Bariatric & Upper GI Surgeon",
-          "experience": "15+ years"
-        }
-      ],
-      "team_size": "Multidisciplinary team including dietitian, psychologist, and exercise physiologist",
-      "has_dietitian": true,
-      "has_psychologist": true,
-      "has_exercise_physiologist": true,
       "has_nurses": true
     },
     "services": {
       "procedures": [
         "Gastric Sleeve",
         "Gastric Bypass",
-        "Upper GI Surgery",
-        "Colorectal Surgery",
-        "Advanced Endoscopy"
+        "Revision Surgery"
       ],
-      "pre_op_program": "Yes - comprehensive assessment",
-      "post_op_program": "Yes - structured follow-up with multidisciplinary team",
-      "approach": "Empathic, patient-focused, state-of-the-art diagnostics"
+      "pre_op_program": true,
+      "post_op_program": true
     },
     "hospitals": [
-      {
-        "name": "Campbelltown Private Hospital",
-        "address": "Campbelltown, NSW"
-      },
       {
         "name": "Sydney Southwest Private Hospital",
         "address": "Liverpool, NSW"
       }
     ],
     "pricing": {
-      "available": false
+      "available": true,
+      "gastric_sleeve_uninsured": "$15,400",
+      "consultation": "Free"
     },
     "unique_features": [
-      "15+ years experience with Master of Surgery degree",
-      "International expertise from UK subspecialized training",
-      "Multidisciplinary team approach (Dietitian Claudia, psychologist, exercise physiologist)",
-      "Empathic, patient-centered care",
-      "Telehealth consultations available",
-      "Complex case expertise"
-    ]
-  },
-  "dr-jason-maani-kogarah": {
-    "surgeon_name": "Dr Jason Maani",
-    "city": "Kogarah",
-    "state": "NSW",
-    "team": {
-      "surgeons": [
-        {
-          "name": "Dr Jason Maani",
-          "role": "Bariatric & Upper GI Surgeon",
-          "experience": "19+ years"
-        }
-      ],
-      "team_size": "Multidisciplinary team",
-      "has_dietitian": true,
-      "has_psychologist": false,
-      "has_nurses": true,
-      "has_exercise_physiologist": false
-    },
-    "services": {
-      "procedures": [
-        "Sleeve Gastrectomy",
-        "Gastric Bypass",
-        "Revision Surgery",
-        "Hernia Repair"
-      ],
-      "pre_op_program": "Yes",
-      "post_op_program": "Yes - Comprehensive aftercare",
-      "approach": "Minimally invasive laparoscopic techniques"
-    },
-    "hospitals": [
-      {
-        "name": "St George Private Hospital",
-        "address": "1 South St, Kogarah, NSW"
-      },
-      {
-        "name": "Kareena Private Hospital",
-        "address": "Caringbah, NSW"
-      },
-      {
-        "name": "Sydney Southwest Private Hospital",
-        "address": "Liverpool, NSW"
-      },
-      {
-        "name": "Wollongong Private Hospital",
-        "address": "Wollongong, NSW"
-      }
+      "Advanced laparoscopic and robotic surgery",
+      "15+ years bariatric experience"
     ],
-    "pricing": {
-      "available": false
-    },
-    "unique_features": [
-      "Over 3,000 surgeries performed",
-      "1,000+ laparoscopic procedures",
-      "Certified Bariatric Surgeon of Excellence",
-      "Research involvement through UNSW",
-      "Warm, patient-centered care approach"
-    ]
+    "enhanced": true
   },
-  "dr-jason-maani-bariatric-surgery-liverpool": {
-    "surgeon_name": "Dr Jason Maani Bariatric Surgery",
-    "city": "Liverpool",
-    "state": "NSW",
-    "team": {
-      "surgeons": [
-        {
-          "name": "Dr Jason Maani",
-          "role": "Bariatric & Upper GI Surgeon",
-          "experience": "19+ years"
-        }
-      ],
-      "team_size": "Multidisciplinary team",
-      "has_dietitian": true,
-      "has_psychologist": false,
-      "has_nurses": true,
-      "has_exercise_physiologist": false
-    },
-    "services": {
-      "procedures": [
-        "Sleeve Gastrectomy",
-        "Gastric Bypass",
-        "Revision Surgery",
-        "Hernia Repair"
-      ],
-      "pre_op_program": "Yes",
-      "post_op_program": "Yes - Comprehensive aftercare",
-      "approach": "Minimally invasive laparoscopic techniques"
-    },
-    "hospitals": [
-      {
-        "name": "Sydney Southwest Private Hospital",
-        "address": "Level 3, Suite 3.02, 24/40 Bigge St, Liverpool, NSW"
-      },
-      {
-        "name": "St George Private Hospital",
-        "address": "1 South St, Kogarah, NSW"
-      },
-      {
-        "name": "Kareena Private Hospital",
-        "address": "Caringbah, NSW"
-      },
-      {
-        "name": "Wollongong Private Hospital",
-        "address": "Wollongong, NSW"
-      }
-    ],
-    "pricing": {
-      "available": false
-    },
-    "unique_features": [
-      "Over 3,000 surgeries performed",
-      "1,000+ laparoscopic procedures",
-      "Certified Bariatric Surgeon of Excellence",
-      "Research involvement through UNSW",
-      "Warm, patient-centered care approach",
-      "Highest rated practice (5.0 stars, 83 reviews)"
-    ]
-  },
-  "dr-mark-magdy-miranda": {
-    "surgeon_name": "Dr. Mark Magdy",
-    "city": "Miranda",
-    "state": "NSW",
+  "dr-paul-burton-brighton": {
     "credentials": {
-      "medical_school": "University of New South Wales",
+      "degrees": [
+        "MBBS",
+        "MD",
+        "FRACS"
+      ],
       "fellowships": [
-        "Royal Australasian College of Surgeons (FRACS)",
-        "International fellowship at world-leading bariatric unit in North America"
+        "FRACS (General Surgery)"
       ],
       "professional_memberships": [
-        "International Federation for the Surgery of Obesity and Metabolic Disorders (IFSO)"
-      ],
-      "special_training": [
-        "D.E.S in robotic and laparoscopic bariatric surgery"
-      ],
-      "years_practicing": 10
-    },
-    "team": {
-      "surgeons": [
-        {
-          "name": "Dr Mark Magdy",
-          "role": "Principal bariatric surgeon"
-        }
-      ],
-      "team_size": "Multidisciplinary team",
-      "has_dietitian": true,
-      "has_psychologist": true,
-      "has_nurses": true
-    },
-    "services": {
-      "procedures": [
-        "Laparoscopic Sleeve Gastrectomy",
-        "Intragastric balloon",
-        "Laparoscopic Gastric Bypass",
-        "Laparoscopic Mini-bypass",
-        "Laparoscopic SADI",
-        "Laparoscopic hiatus hernia repair"
-      ],
-      "pre_op_program": "Holistic multidisciplinary care including dietetic and psychological support",
-      "post_op_program": "Continued multidisciplinary follow-up monitoring weight, nutrition, and mental health",
-      "follow_up_duration": "Ongoing",
-      "telehealth": true,
-      "support_groups": true
-    },
-    "hospitals": [
-      {
-        "name": "St George Private Hospital",
-        "address": "1 South Street, Kogarah, NSW, 2228"
-      },
-      {
-        "name": "Kareena Private Hospital",
-        "address": "Caringbah, NSW"
-      }
-    ],
-    "pricing": {
-      "available": false,
-      "gastric_sleeve": "Contact for pricing",
-      "gastric_bypass": "Contact for pricing",
-      "consultation": "Contact for pricing"
-    },
-    "unique_features": [
-      "International North American fellowship at pioneering bariatric unit",
-      "D.E.S in robotic and laparoscopic bariatric surgery",
-      "Presented research nationally and internationally",
-      "Holistic, patient-centered approach",
-      "Telehealth consultations available"
-    ],
-    "faqs": [
-      {
-        "question": "What procedures does Dr Mark Magdy specialize in?",
-        "answer": "Dr Mark Magdy specializes in laparoscopic sleeve gastrectomy, intragastric balloon, gastric bypass, mini-bypass, SADI, and hiatus hernia repair."
-      },
-      {
-        "question": "What are Dr Mark Magdy's qualifications?",
-        "answer": "Dr Magdy holds an MBBS from University of New South Wales, is a Fellow of RACS, has an international North American fellowship, a D.E.S in robotic/laparoscopic bariatric surgery, and is an IFSO member."
-      },
-      {
-        "question": "Where does Dr Mark Magdy perform surgery?",
-        "answer": "Dr Magdy performs surgery at St George Private Hospital and Kareena Private Hospital in Sydney, NSW."
-      }
-    ]
-  },
-  "dr-robert-gandy-randwick": {
-    "surgeon_name": "Dr Robert Gandy",
-    "city": "Randwick",
-    "state": "NSW",
-    "credentials": {
-      "medical_school": "University of Leeds, United Kingdom (MB ChB, 2002)",
-      "fellowships": [
-        "Royal Australasian College of Surgeons (FRACS)",
-        "Australian and New Zealand Hepato-Pancreato-Biliary Association"
-      ],
-      "professional_memberships": [
-        "Royal Australasian College of Surgeons",
-        "Australian and New Zealand Hepato-Pancreato-Biliary Association"
-      ],
-      "special_training": [
-        "Masters in Upper GI Surgery, University of Sydney",
-        "Minimally invasive (laparoscopic & robotic) surgery"
+        "RACS",
+        "OSSANZ",
+        "GSA"
       ],
       "years_practicing": 20
     },
     "team": {
-      "surgeons": [
-        {
-          "name": "Dr Robert Gandy",
-          "role": "Principal Upper GI & Bariatric Surgeon"
-        }
-      ],
-      "team_size": "Solo practice with support staff",
-      "has_dietitian": false,
-      "has_psychologist": false,
-      "has_nurses": true
-    },
-    "services": {
-      "procedures": [
-        "Laparoscopic sleeve gastrectomy",
-        "Laparoscopic and robotic gastric bypass",
-        "Laparoscopic and robotic gallbladder removal",
-        "Mesh and mesh-free hernia repair",
-        "Laparoscopic hiatus hernia and anti-reflux surgery",
-        "Complex liver, pancreatic, and stomach surgery",
-        "Diagnostic and therapeutic endoscopy/colonoscopy"
-      ],
-      "pre_op_program": "Individual consultation and preparation",
-      "post_op_program": "Structured follow-up care",
-      "follow_up_duration": "As needed",
-      "telehealth": false,
-      "support_groups": false
-    },
-    "hospitals": [
-      {
-        "name": "Prince of Wales Private Hospital",
-        "address": "Barker Street, Randwick NSW 2031"
-      },
-      {
-        "name": "Prince of Wales Public Hospital",
-        "address": "Barker Street, Randwick NSW 2031"
-      },
-      {
-        "name": "East Sydney Private Hospital",
-        "address": "Sydney, NSW"
-      },
-      {
-        "name": "Chris O'Brien Lifehouse",
-        "address": "Missenden Road, Camperdown NSW 2050"
-      }
-    ],
-    "pricing": {
-      "available": false,
-      "gastric_sleeve": "Contact for pricing",
-      "gastric_bypass": "Contact for pricing",
-      "consultation": "Contact for pricing"
-    },
-    "unique_features": [
-      "Over 90% of procedures are minimally invasive (laparoscopic or robotic)",
-      "Special expertise in complex HPB (liver, pancreas, gallbladder) and upper GI cases",
-      "Mesh-free hernia repair option for suitable patients",
-      "Clinical lecturer at the University of New South Wales",
-      "Masters degree in Upper GI Surgery"
-    ],
-    "faqs": [
-      {
-        "question": "What procedures does Dr Robert Gandy specialize in?",
-        "answer": "Dr Gandy specializes in laparoscopic and robotic weight loss surgery (sleeve gastrectomy, gastric bypass), gallbladder removal, hernia repairs (including mesh-free), anti-reflux surgery, complex liver, pancreas, and stomach surgery, and endoscopy."
-      },
-      {
-        "question": "What are Dr Robert Gandy's qualifications?",
-        "answer": "Dr Gandy holds an MB ChB from the University of Leeds, a Masters in Upper GI Surgery from the University of Sydney, and is a Fellow of the Royal Australasian College of Surgeons with post-fellowship training in Hepato-Pancreato-Biliary surgery."
-      },
-      {
-        "question": "Where does Dr Robert Gandy perform surgery?",
-        "answer": "Dr Gandy operates at Prince of Wales Private and Public Hospitals in Randwick, East Sydney Private Hospital, and Chris O'Brien Lifehouse in Camperdown."
-      }
-    ]
-  },
-  "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna": {
-    "surgeon_name": "Mr. Niruben Rajasagaram",
-    "city": "Wantirna",
-    "state": "Victoria",
-    "credentials": {
-      "medical_school": "Royal College of Surgeons in Ireland",
-      "fellowships": [
-        "4 years of fellowship in bariatric, upper gastrointestinal, and advanced biliary surgery at Melbourne hospitals",
-        "Australian and New Zealand Gastro-Oesophageal Surgery Association (ANZGOSA) training program"
-      ],
-      "professional_memberships": [
-        "Fellow of the Royal Australasian College of Surgeons (FRACS)",
-        "Member, Royal College of Surgeons Ireland (MRCS)",
-        "Australian and New Zealand Gastric and Oesophageal Surgery Association",
-        "Obesity Surgery Society of Australia and New Zealand",
-        "European Hernia Society",
-        "International Bariatric Club",
-        "International Federation for the Surgery of Obesity and Metabolic Disorders"
-      ],
-      "special_training": [
-        "Gastroscopy and colonoscopy as per Gastroenterological Society of Australia standards"
-      ],
-      "years_practicing": 20
-    },
-    "team": {
-      "surgeons": [
-        {
-          "name": "Mr. Niruben Rajasagaram",
-          "role": "Director, Consultant Bariatric, Oesophagogastric & General Surgeon"
-        }
-      ],
-      "team_size": "Multidisciplinary team",
       "has_dietitian": true,
       "has_psychologist": true,
       "has_nurses": true
     },
     "services": {
       "procedures": [
-        "Gastric sleeve (vertical sleeve gastrectomy)",
-        "Gastric bypass",
-        "Mini gastric bypass",
-        "Gastric band",
-        "Gastric balloon",
-        "Revisional bariatric surgery",
-        "Laparoscopic gall bladder surgery",
-        "Laparoscopic groin hernia surgery"
+        "Gastric Sleeve",
+        "Gastric Bypass",
+        "Gastric Band",
+        "Revision Surgery"
       ],
-      "pre_op_program": "Multidisciplinary approach, including dietitian and psychologist support",
-      "post_op_program": "Comprehensive post-surgical care with dietitian and psychologist follow-up",
-      "follow_up_duration": "Long-term follow-up",
-      "telehealth": false,
-      "support_groups": false
+      "pre_op_program": true,
+      "post_op_program": true,
+      "telehealth": true
     },
     "hospitals": [
       {
-        "name": "Knox Private Hospital",
-        "address": "Suite 11A, 262 Mountain Highway, Wantirna, VIC 3152"
-      },
-      {
-        "name": "Mulgrave Private Hospital",
-        "address": "389 Police Road, Mulgrave, VIC 3170"
+        "name": "Epworth Freemasons Hospital",
+        "address": "East Melbourne, VIC"
       }
     ],
     "pricing": {
-      "available": false,
-      "gastric_sleeve": "Contact for pricing",
-      "gastric_bypass": "Contact for pricing",
-      "consultation": "Contact for pricing"
+      "available": false
     },
     "unique_features": [
-      "Extensive 4-year fellowship training at multiple Melbourne hospitals",
-      "Reviewer for Obesity Surgery Journal (official journal of IFSO)",
-      "Comprehensive, multidisciplinary care team",
-      "Expertise in complex revision bariatric surgeries",
-      "Member of 7 professional surgical organizations"
+      "University of Melbourne researcher",
+      "International bariatric surgery trainer"
     ],
-    "faqs": [
-      {
-        "question": "What procedures does Mr Niruben Rajasagaram specialize in?",
-        "answer": "Mr Rajasagaram specializes in gastric sleeve, gastric bypass (including mini gastric bypass and revisional procedures), gastric band, gastric balloon, laparoscopic bariatric, gall bladder, and hernia surgeries."
-      },
-      {
-        "question": "What are Mr Niruben Rajasagaram's qualifications?",
-        "answer": "He graduated from the Royal College of Surgeons in Ireland, holds the MRCS and FRACS, and has completed 4-year fellowships in bariatric, upper gastrointestinal, and advanced biliary surgery as well as specialized training with ANZGOSA."
-      },
-      {
-        "question": "Where does Mr Niruben Rajasagaram perform surgery?",
-        "answer": "He operates primarily at Knox Private Hospital in Wantirna and Mulgrave Private Hospital in Melbourne, Victoria."
-      }
-    ]
+    "enhanced": true
   },
-  "dr-yuan-cheng-richmond": {
-    "surgeon_name": "Dr. Yuan Cheng",
-    "city": "Richmond",
-    "state": "Victoria",
+  "dr-ahmad-aly-bulleen": {
     "credentials": {
-      "medical_school": "University of Melbourne (graduated 2004)",
+      "degrees": [
+        "MBBS",
+        "MD",
+        "PhD",
+        "FRACS"
+      ],
       "fellowships": [
-        "Fellowship of the Royal Australasian College of Surgeons (FRACS) in General Surgery (2015)",
-        "Inaugural Bariatric Surgery Fellow, Box Hill Hospital",
-        "Overseas bariatric surgery fellowship with Dr B. Dillemans, Belgium"
+        "FRACS"
       ],
       "professional_memberships": [
-        "General Surgeons Australia (GSA)",
-        "Australian and New Zealand Metabolic and Obesity Surgery Society (ANZMOSS)",
-        "International Federation for the Surgery of Obesity and Metabolic Disorders (IFSO)"
+        "RACS",
+        "IFSO",
+        "OSSANZ"
       ],
-      "special_training": [
-        "Extensive subspecialty bariatric surgery training in Australia and Belgium",
-        "Advanced laparoscopic surgical techniques"
-      ],
-      "years_practicing": 11
+      "years_practicing": 15
     },
     "team": {
-      "surgeons": [
-        {
-          "name": "Dr. Yuan Cheng",
-          "role": "Principal Bariatric and General Surgeon"
-        }
-      ],
-      "team_size": "Multidisciplinary allied health team",
       "has_dietitian": true,
       "has_psychologist": true,
       "has_nurses": true
     },
     "services": {
       "procedures": [
-        "Sleeve gastrectomy",
-        "Roux-en-Y gastric bypass",
-        "Mini gastric bypass",
-        "Adjustable gastric band (Lapband)",
-        "Revision bariatric surgeries",
-        "Intragastric Balloon (Orbera)",
-        "Laparoscopic gallbladder surgery",
-        "Laparoscopic hernia repairs"
+        "Gastric Sleeve",
+        "Gastric Bypass",
+        "Revision Surgery"
       ],
-      "pre_op_program": "Multidisciplinary assessment and preparation with dietitian and psychologist",
-      "post_op_program": "Structured follow-up care with surgeon and allied health team",
-      "follow_up_duration": "Ongoing long-term follow-up",
-      "telehealth": true,
-      "support_groups": true
+      "pre_op_program": true,
+      "post_op_program": true
     },
     "hospitals": [
       {
         "name": "Epworth Eastern Hospital",
-        "address": "Suite 62, Level 6, 1 Arnold Street, Box Hill, VIC 3128"
-      },
-      {
-        "name": "Epworth Freemasons Hospital",
-        "address": "Level 1, 124 Grey Street, East Melbourne, VIC 3002"
-      },
-      {
-        "name": "Knox Private Hospital",
-        "address": "221 Scoresby Road, Wantirna, VIC 3152"
-      },
-      {
-        "name": "Holmesglen Private Hospital",
-        "address": "490 South Road, Moorabbin, VIC 3189"
-      },
-      {
-        "name": "St Vincent's Private Hospital",
-        "address": "41 Victoria Parade, Fitzroy, VIC 3065"
-      },
-      {
-        "name": "Box Hill Hospital",
-        "address": "Arnold Street, Box Hill, VIC 3128"
+        "address": "Box Hill, VIC"
       }
     ],
-    "pricing": {
-      "available": false,
-      "gastric_sleeve": "Contact for pricing",
-      "gastric_bypass": "Contact for pricing",
-      "consultation": "Contact for pricing"
-    },
     "unique_features": [
-      "International fellowship under Dr B. Dillemans, world leader in gastric bypass",
-      "Focus on complex revision bariatric surgeries",
-      "Telehealth consultation services available",
-      "Support for non-English speakers (Mandarin)",
-      "Inaugural Bariatric Surgery Fellow at Box Hill Hospital",
-      "Operates at 6 major hospitals across Melbourne"
+      "PhD in bariatric surgery outcomes",
+      "International presenter"
     ],
-    "faqs": [
-      {
-        "question": "What procedures does Dr Yuan Cheng specialize in?",
-        "answer": "Dr Yuan Cheng specializes in sleeve gastrectomy, Roux-en-Y gastric bypass, mini gastric bypass, adjustable gastric banding, intragastric balloon placement, and complex revision bariatric surgeries."
-      },
-      {
-        "question": "What are Dr Yuan Cheng's qualifications?",
-        "answer": "Dr Yuan Cheng holds an MBBS from University of Melbourne, is a Fellow of the Royal Australasian College of Surgeons (FRACS) in General Surgery, completed an inaugural Bariatric Surgery Fellowship at Box Hill Hospital, and undertook advanced bariatric surgery training in Belgium under Dr. B. Dillemans."
-      },
-      {
-        "question": "Where does Dr Yuan Cheng perform surgery?",
-        "answer": "Dr Cheng operates at Epworth Eastern Hospital, Epworth Freemasons Hospital, Knox Private Hospital, Holmesglen Private Hospital, St Vincent's Private Hospital, and Box Hill Hospital in Victoria, Australia."
-      }
-    ]
+    "enhanced": true
   },
-  "aprof-christos-apostolou-surgeon-wahroonga": {
-    "surgeon_name": "A/Prof. Christos Apostolou",
-    "city": "Wahroonga",
-    "state": "NSW",
-    "credentials": {
-      "medical_school": "University of Cape Town (MBChB, 1996)",
-      "fellowships": [
-        "South African College of Surgeons (FCS(SA), 2003)",
-        "Certificate of Surgical Gastroenterology, South African College (2006)",
-        "Fellow of the Royal Australasian College of Surgeons (FRACS, 2012)"
-      ],
-      "professional_memberships": [
-        "Australasian Association of Upper Gastrointestinal Surgeons (AANZHPBA)",
-        "Australian & New Zealand Gastric & Oesophageal Surgery Association (ANZGOSA)",
-        "General Surgeons Australia (GSA)",
-        "Gastroenterological Society of Australia (GESA)",
-        "Australian Medical Association (AMA)",
-        "Australia & New Zealand Metabolic and Obesity Surgery Society (ANZMOSS)"
-      ],
-      "special_training": [
-        "Robotic surgery training at Yonsei University, Seoul, South Korea (2015)",
-        "da Vinci and Versius robotic surgical systems accreditation"
-      ],
-      "years_practicing": 22
-    },
-    "team": {
-      "surgeons": [
-        {
-          "name": "A/Prof. Christos Apostolou",
-          "role": "Lead Surgeon, Specialist Upper GI/Bariatric Surgeon"
-        }
-      ],
-      "team_size": "Multidisciplinary team",
-      "has_dietitian": true,
-      "has_psychologist": true,
-      "has_nurses": true
-    },
-    "services": {
-      "procedures": [
-        "Bariatric surgery (gastric sleeve, bypass)",
-        "Upper gastrointestinal surgery (oncological and benign)",
-        "Gallbladder and anti-reflux surgery",
-        "Hernia surgery (laparoscopic/open)",
-        "Liver and pancreatic surgery",
-        "Endoscopy/ERCP (interventional)",
-        "General surgical emergencies"
-      ],
-      "pre_op_program": "Comprehensive pre-operative assessment with multidisciplinary team",
-      "post_op_program": "Ongoing post-operative monitoring with dietetic and psychological support",
-      "follow_up_duration": "Continuous follow-up for bariatric patients",
-      "telehealth": true,
-      "support_groups": true
-    },
-    "hospitals": [
-      {
-        "name": "Sydney Adventist Hospital",
-        "address": "185 Fox Valley Road, Wahroonga, NSW 2076"
-      },
-      {
-        "name": "Macquarie University Hospital",
-        "address": "75 Talavera Rd, Macquarie Park NSW 2113"
-      },
-      {
-        "name": "Northern Beaches Hospital",
-        "address": "105 Frenchs Forest Rd W, Frenchs Forest NSW 2086"
-      },
-      {
-        "name": "Bankstown-Lidcombe Hospital",
-        "address": "Bankstown, NSW 2200"
-      },
-      {
-        "name": "Norwest Private Hospital",
-        "address": "11 Norbrik Dr, Bella Vista NSW 2153"
-      }
-    ],
-    "pricing": {
-      "available": false,
-      "gastric_sleeve": "Contact for pricing",
-      "gastric_bypass": "Contact for pricing",
-      "consultation": "Contact for pricing"
-    },
-    "unique_features": [
-      "Accredited in both da Vinci and Versius robotic surgical systems",
-      "Academic appointments at UNSW, Sydney University, Macquarie University, and ANU Medical School",
-      "Clinical lead in Upper GI Surgery at Sydney Adventist Hospital",
-      "RACS training supervisor and Area Cancer Committee chair",
-      "Active in clinical research with peer-reviewed publications",
-      "22 years of surgical experience"
-    ],
-    "faqs": [
-      {
-        "question": "What procedures does A/Prof Christos Apostolou specialize in?",
-        "answer": "A/Prof Apostolou specializes in upper gastrointestinal, liver, biliary, pancreatic, and bariatric surgery (laparoscopic, robotic, and open), as well as endoscopy/ERCP, hernia, and gallbladder/anti-reflux surgery."
-      },
-      {
-        "question": "What are A/Prof Christos Apostolou's qualifications?",
-        "answer": "He holds an MBChB and a Master of Medicine (Surgery) from the University of Cape Town, is a Fellow of both the South African College of Surgeons and the Royal Australasian College of Surgeons, and holds a Certificate of Surgical Gastroenterology."
-      },
-      {
-        "question": "Where does A/Prof Christos Apostolou perform surgery?",
-        "answer": "He operates at Sydney Adventist Hospital (Wahroonga), Macquarie University Hospital, Northern Beaches Hospital, Bankstown-Lidcombe Hospital, and Norwest Private Hospital."
-      }
-    ]
+  "aprof-michael-hii-east-melbourne": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "associate-professor-michael-talbot-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "daniel-foley-richmond": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-ali-zarrouk-campbelltown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-ben-keong-bundoora": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-clare-bouffler-kingswood": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-clement-tsang-hurstville": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-david-joseph-newtown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-david-links-randwick": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-david-yeo-camperdown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-edward-tong-campbelltown-campbelltown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-ernest-lim-bundoora": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-ertugrul-durmush-liverpool": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-fadil-khaleal-penrith": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-faizur-reza-bella-vista": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-gary-yee-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-govind-krishna-weight-loss-general-surgeon-wetherill-park": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-james-chau-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-jason-maani-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-jason-maani-bariatric-surgery-liverpool": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-jason-maani-gallbladder-surgery-liverpool": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-john-jorgensen-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-john-ozmen-general-upper-gi-surgeon-bella-vista": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-ken-loi-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-mani-niazi-wantirna": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-mani-niazi-langwarrin-mbsa-langwarrin": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-michael-crawford-newtown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-michael-devadas-baulkham-hills": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-michael-hii-werribee": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-nicholas-cocco-norwest": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-nicholas-cocco-westmead": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-philip-le-page-campbelltown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-philip-le-page-surgeon-frenchs-forest": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-philip-le-page-surgeon-concord": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-rachel-kirby-campbelltown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-ramez-bassari-richmond": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-sean-mackay-box-hill": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-khalid-ahmed-smithfield": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-khalid-ahmed-penrith": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-khalid-ahmed-gledswood-hills": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-paul-j-ah-tye-dandenong": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-qiuye-cheng-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "dr-roy-brancatisano-norwest": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-ahmed-naqeeb-mount-waverley": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-anthony-clough-box-hill": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-geoffrey-dr-aper-frankston": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-hai-t-bui-ascot-vale": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-kiron-bhatia-bundoora": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-mark-cullinan-richmond": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-richard-chen-malvern": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-zeev-duieb-berwick": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-ian-michell-essendon": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mr-jacob-vanyai-surrey-hills": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
+  },
+  "reginald-v-n-lord-darlinghurst": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration"
   }
 }

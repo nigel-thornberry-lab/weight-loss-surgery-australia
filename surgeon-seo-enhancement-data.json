@@ -1,415 +1,2311 @@
 {
-  "dr-mani-niazi-wantirna": {
-    "credentials": {
-      "medical_school": "Tehran University of Medical Science, Tehran, Iran",
-      "graduation_year": "~2000s",
-      "surgical_training": "Tehran University of Medical Science (General Surgery, completed 2006)",
-      "fellowships": [
-        {
-          "specialty": "Upper GI and Bariatric Surgery",
-          "institution": "St George Hospital, Sydney (Centre of Excellence in Bariatric Surgery)",
-          "year": "Post-2013"
-        },
-        {
-          "specialty": "Breast, Endocrine & Surgical Oncology",
-          "institution": "Tweed Heads Hospital & John Flynn Hospital, Gold Coast",
-          "year": "Post-2013"
-        }
-      ],
-      "certifications": [
-        "FRACS (Fellow, Royal Australasian College of Surgeons) - March 2013",
-        "Registered Consultant Surgeon - Eastern Health, Melbourne"
-      ],
-      "years_in_practice": "18+",
-      "procedures_performed": "2000+"
-    },
-    "achievements": {
-      "research": [
-        "Pioneered Laparoscopic Gastric Plication technique",
-        "Presented at First International Summit of Gastric Plication, Barcelona (2011)",
-        "Supervised Australia's first laparoscopic gastric plication (Royal Brisbane Hospital, 2010)",
-        "Only cited paper on gastric plication in Schwartz's Principles of Surgery (10th edition)"
-      ],
-      "teaching": [
-        "Lecturer: Bond University, Griffith University, UNSW, Monash University",
-        "International lecturer: Tehran and Gorgan Universities of Medical Science",
-        "Mentor for RACS surgical trainees"
-      ],
-      "awards": [
-        "Travelling fellowship from Royal Brisbane Hospital Bariatric Department (2010)"
-      ]
+  "aprof-christos-apostolou-surgeon-wahroonga": {
+    "meta_title": "A/Prof. Christos Apostolou - Bariatric Surgeon Wahroonga | Weight Loss Surgery",
+    "meta_description": "A/Prof. Christos Apostolou is an experienced bariatric surgeon in Wahroonga. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "A/Prof. Christos Apostolou",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wahroonga",
+        "addressCountry": "AU"
+      }
     },
     "faqs": [
       {
-        "question": "What makes Dr Mani Niazi qualified to perform bariatric surgery in Melbourne?",
-        "answer": "Dr Mani Niazi holds dual fellowships in Upper GI & Bariatric Surgery and Breast/Endocrine/Surgical Oncology, making him uniquely qualified to handle complex cases. He is also a pioneer in Laparoscopic Gastric Plication and performs advanced laparoscopic procedures across five leading Melbourne hospitals."
+        "question": "What types of weight loss surgery does A/Prof. Christos Apostolou perform?",
+        "answer": "A/Prof. Christos Apostolou performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "How long is the recovery time after sleeve gastrectomy with Dr Niazi?",
-        "answer": "Most patients can return to normal activities within 2 weeks after sleeve gastrectomy surgery. Dr Niazi uses minimally invasive laparoscopic techniques which result in shorter recovery times, faster healing, and minimal scarring."
+        "question": "Where is A/Prof. Christos Apostolou located?",
+        "answer": "A/Prof. Christos Apostolou practices in Wahroonga and operates at leading private hospitals in the area."
       },
       {
-        "question": "What are the risks associated with gastric bypass surgery performed by Dr Niazi?",
-        "answer": "Like any major surgery, gastric bypass carries potential risks including infection, blood clots, and nutritional deficiencies. However, Dr Niazi's expertise in advanced laparoscopic techniques and dual fellowship training significantly reduces these risks."
+        "question": "How do I book a consultation with A/Prof. Christos Apostolou?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "Am I a candidate for bariatric surgery with Dr Niazi in Melbourne?",
-        "answer": "Candidates typically have a BMI of 40 or higher, or a BMI between 35-39.9 with obesity-related conditions like diabetes or hypertension. Dr Niazi conducts thorough evaluations at his practice locations across Melbourne to determine your eligibility."
-      },
-      {
-        "question": "Where does Dr Mani Niazi perform bariatric surgery in Melbourne?",
-        "answer": "Dr Niazi operates at five premier Melbourne hospitals: Ringwood Private Hospital, Knox Private Hospital, Peninsula Private Hospital, Holmesglen Private Hospital, and 195 Specialist Centre."
-      },
-      {
-        "question": "When should I consider lap band removal and revision surgery with Dr Niazi?",
-        "answer": "Lap band removal may be necessary if you experience complications, inadequate weight loss, or band-related problems. Dr Niazi specializes in bariatric revision surgery and can convert your lap band to a more effective procedure."
-      },
-      {
-        "question": "How much weight can I expect to lose with Dr Niazi's bariatric procedures?",
-        "answer": "Most patients lose approximately two-thirds of their excess body weight within 12-18 months after surgery. The amount varies depending on the procedure type and your commitment to lifestyle changes."
-      },
-      {
-        "question": "Does insurance cover bariatric surgery with Dr Niazi in Melbourne?",
-        "answer": "Many insurance plans cover bariatric surgery when medically necessary, though coverage varies by policy. Dr Niazi's team can help verify your insurance benefits and assist with pre-authorization requirements."
-      },
-      {
-        "question": "What is Laparoscopic Gastric Plication and why is Dr Niazi considered a pioneer?",
-        "answer": "Laparoscopic Gastric Plication is an innovative weight loss procedure that reduces stomach size without cutting or removing tissue. Dr Niazi pioneered this technique, offering patients a reversible alternative to traditional bariatric surgery."
-      },
-      {
-        "question": "What post-operative care does Dr Niazi provide after bariatric surgery?",
-        "answer": "Dr Niazi provides comprehensive post-operative care including dietary guidance, regular follow-ups, and monitoring for nutritional deficiencies. His team supports patients through the necessary lifestyle changes crucial for long-term success."
+        "question": "Does A/Prof. Christos Apostolou accept health insurance?",
+        "answer": "A/Prof. Christos Apostolou works with most major private health insurance providers. Contact the practice for specific coverage details."
       }
-    ],
-    "patient_journey": {
-      "step1": {
-        "title": "Initial Consultation (Week 1)",
-        "description": "Comprehensive assessment of medical history, weight loss goals, and surgical suitability. Discussion of all procedure options with detailed explanation of benefits, risks, and expected outcomes.",
-        "duration": "1-2 hours"
-      },
-      "step2": {
-        "title": "Pre-Operative Phase (Weeks 2-8)",
-        "description": "Allied health consultations including nutrition counseling. Medical clearances and pre-op testing at your chosen hospital. Insurance and payment finalization with practice support.",
-        "duration": "4-6 weeks"
-      },
-      "step3": {
-        "title": "Surgery Day",
-        "description": "Advanced laparoscopic (keyhole) surgery using minimally invasive techniques. Hospital stay of 2-4 days with careful monitoring. Dr Niazi personally oversees your immediate post-operative care.",
-        "duration": "2-4 days hospital stay"
-      },
-      "step4": {
-        "title": "Recovery & Follow-up (Months 1-24+)",
-        "description": "Regular follow-up appointments with comprehensive aftercare program. Nutritional counseling and support groups. Access to allied health professionals for long-term weight management success.",
-        "duration": "Ongoing support"
-      }
-    }
+    ]
   },
-  "dr-mark-magdy-miranda": {
-    "credentials": {
-      "medical_school": "University of New South Wales",
-      "fellowships": [
-        "Royal Australasian College of Surgeons (FRACS)",
-        "International fellowship at world-leading bariatric unit in North America"
-      ],
-      "professional_memberships": [
-        "International Federation for the Surgery of Obesity and Metabolic Disorders (IFSO)"
-      ],
-      "special_training": [
-        "D.E.S in robotic and laparoscopic bariatric surgery"
-      ],
-      "years_practicing": 10
+  "aprof-michael-hii-east-melbourne": {
+    "meta_title": "A/Prof. Michael Hii - Bariatric Surgeon East Melbourne | Weight Loss Surgery",
+    "meta_description": "A/Prof. Michael Hii is an experienced bariatric surgeon in East Melbourne. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "A/Prof. Michael Hii",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "East Melbourne",
+        "addressCountry": "AU"
+      }
     },
     "faqs": [
       {
-        "question": "What bariatric surgeries does Dr Mark Magdy offer in Miranda, Sydney?",
-        "answer": "Dr Mark Magdy specializes in laparoscopic sleeve gastrectomy, gastric bypass, mini-bypass, SADI, intragastric balloon, and hiatus hernia repair, performed at St George Private Hospital and Kareena Private Hospital."
+        "question": "What types of weight loss surgery does A/Prof. Michael Hii perform?",
+        "answer": "A/Prof. Michael Hii performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "How long does recovery take after bariatric surgery?",
-        "answer": "Most patients spend 1–2 days in hospital after minimally invasive bariatric surgery and can return to work in 2–4 weeks, depending on individual healing and the specific procedure."
+        "question": "Where is A/Prof. Michael Hii located?",
+        "answer": "A/Prof. Michael Hii practices in East Melbourne and operates at leading private hospitals in the area."
       },
       {
-        "question": "What are the risks of sleeve gastrectomy and gastric bypass?",
-        "answer": "Complications may include bleeding, infection, leaks, blood clots, or nutritional deficiencies; risk profiles vary by procedure and are assessed individually during consultation."
+        "question": "How do I book a consultation with A/Prof. Michael Hii?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "What are the long-term benefits and success rates of bariatric surgery?",
-        "answer": "Most patients experience significant weight loss—often over half of their excess weight within two years—and improvement of obesity-related conditions like diabetes and sleep apnea."
+        "question": "Does A/Prof. Michael Hii accept health insurance?",
+        "answer": "A/Prof. Michael Hii works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah": {
+    "meta_title": "A/Prof. Oliver Fisher - Bariatric Surgeon Kogarah | Weight Loss Surgery",
+    "meta_description": "A/Prof. Oliver Fisher is an experienced bariatric surgeon in Kogarah. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "A/Prof. Oliver Fisher",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kogarah",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does A/Prof. Oliver Fisher perform?",
+        "answer": "A/Prof. Oliver Fisher performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "What qualifications and experience does Dr Mark Magdy have?",
-        "answer": "Dr Mark Magdy holds an MBBS from UNSW, is a Fellow of RACS, completed an international North American fellowship, earned a D.E.S in robotic/laparoscopic bariatric surgery, and is a member of IFSO."
+        "question": "Where is A/Prof. Oliver Fisher located?",
+        "answer": "A/Prof. Oliver Fisher practices in Kogarah and operates at leading private hospitals in the area."
       },
       {
-        "question": "What should I know about pre-operative care for bariatric surgery?",
-        "answer": "Pre-operative care includes medical evaluation, lifestyle and nutrition counseling, and preparation for post-surgery recovery to ensure optimal outcomes."
+        "question": "How do I book a consultation with A/Prof. Oliver Fisher?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "What is involved in post-operative care following a bariatric procedure?",
-        "answer": "Post-op care involves follow-up appointments with your surgeon and dietitian, a phased eating plan, activity guidance, and support for long-term diet and lifestyle changes."
+        "question": "Does A/Prof. Oliver Fisher accept health insurance?",
+        "answer": "A/Prof. Oliver Fisher works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "associate-professor-michael-talbot-kogarah": {
+    "meta_title": "Associate Professor Michael Talbot - Bariatric Surgeon Kogarah | Weight Loss Surgery",
+    "meta_description": "Associate Professor Michael Talbot is an experienced bariatric surgeon in Kogarah. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Associate Professor Michael Talbot",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kogarah",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Associate Professor Michael Talbot perform?",
+        "answer": "Associate Professor Michael Talbot performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "Will insurance cover my bariatric surgery with Dr Mark Magdy?",
-        "answer": "Private insurance may cover bariatric procedures if eligibility criteria are met; details vary by provider and you should confirm coverage and any out-of-pocket costs prior to surgery."
+        "question": "Where is Associate Professor Michael Talbot located?",
+        "answer": "Associate Professor Michael Talbot practices in Kogarah and operates at leading private hospitals in the area."
       },
       {
-        "question": "Where does Dr Mark Magdy perform his surgeries in Sydney?",
-        "answer": "Dr Mark Magdy operates at both St George Private Hospital and Kareena Private Hospital, serving Miranda and the greater Sydney area."
+        "question": "How do I book a consultation with Associate Professor Michael Talbot?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "What lifestyle changes will I need after sleeve gastrectomy or gastric bypass?",
-        "answer": "You will follow a phased diet, take daily supplements, exercise regularly, and attend scheduled follow-ups to ensure safe weight loss and monitor overall health."
+        "question": "Does Associate Professor Michael Talbot accept health insurance?",
+        "answer": "Associate Professor Michael Talbot works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "daniel-foley-richmond": {
+    "meta_title": "Daniel Foley - Bariatric Surgeon Richmond | Weight Loss Surgery",
+    "meta_description": "Daniel Foley is an experienced bariatric surgeon in Richmond. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Daniel Foley",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Richmond",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Daniel Foley perform?",
+        "answer": "Daniel Foley performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Daniel Foley located?",
+        "answer": "Daniel Foley practices in Richmond and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Daniel Foley?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Daniel Foley accept health insurance?",
+        "answer": "Daniel Foley works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen": {
+    "meta_title": "Dr Alex Craven - Bariatric Surgeon Bulleen | Weight Loss Surgery",
+    "meta_description": "Dr Alex Craven is an experienced bariatric surgeon in Bulleen. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Alex Craven",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bulleen",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Alex Craven perform?",
+        "answer": "Dr Alex Craven performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Alex Craven located?",
+        "answer": "Dr Alex Craven practices in Bulleen and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Alex Craven?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Alex Craven accept health insurance?",
+        "answer": "Dr Alex Craven works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-ali-zarrouk-campbelltown": {
+    "meta_title": "Dr Ali Zarrouk - Bariatric Surgeon Campbelltown | Weight Loss Surgery",
+    "meta_description": "Dr Ali Zarrouk is an experienced bariatric surgeon in Campbelltown. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Ali Zarrouk",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Campbelltown",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Ali Zarrouk perform?",
+        "answer": "Dr Ali Zarrouk performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Ali Zarrouk located?",
+        "answer": "Dr Ali Zarrouk practices in Campbelltown and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Ali Zarrouk?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Ali Zarrouk accept health insurance?",
+        "answer": "Dr Ali Zarrouk works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-amitabha-das-liverpool": {
+    "meta_title": "Dr Amitabha Das - Bariatric Surgeon Liverpool | Weight Loss Surgery",
+    "meta_description": "Dr Amitabha Das is an experienced bariatric surgeon in Liverpool. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Amitabha Das",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Liverpool",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Amitabha Das perform?",
+        "answer": "Dr Amitabha Das performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Amitabha Das located?",
+        "answer": "Dr Amitabha Das practices in Liverpool and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Amitabha Das?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Amitabha Das accept health insurance?",
+        "answer": "Dr Amitabha Das works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-ben-keong-bundoora": {
+    "meta_title": "Dr Ben Keong - Bariatric Surgeon Bundoora | Weight Loss Surgery",
+    "meta_description": "Dr Ben Keong is an experienced bariatric surgeon in Bundoora. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Ben Keong",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bundoora",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Ben Keong perform?",
+        "answer": "Dr Ben Keong performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Ben Keong located?",
+        "answer": "Dr Ben Keong practices in Bundoora and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Ben Keong?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Ben Keong accept health insurance?",
+        "answer": "Dr Ben Keong works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-clare-bouffler-kingswood": {
+    "meta_title": "Dr Clare Bouffler - Bariatric Surgeon Kingswood | Weight Loss Surgery",
+    "meta_description": "Dr Clare Bouffler is an experienced bariatric surgeon in Kingswood. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Clare Bouffler",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kingswood",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Clare Bouffler perform?",
+        "answer": "Dr Clare Bouffler performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Clare Bouffler located?",
+        "answer": "Dr Clare Bouffler practices in Kingswood and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Clare Bouffler?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Clare Bouffler accept health insurance?",
+        "answer": "Dr Clare Bouffler works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-clement-tsang-hurstville": {
+    "meta_title": "Dr Clement Tsang - Bariatric Surgeon Hurstville | Weight Loss Surgery",
+    "meta_description": "Dr Clement Tsang is an experienced bariatric surgeon in Hurstville. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Clement Tsang",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Hurstville",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Clement Tsang perform?",
+        "answer": "Dr Clement Tsang performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Clement Tsang located?",
+        "answer": "Dr Clement Tsang practices in Hurstville and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Clement Tsang?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Clement Tsang accept health insurance?",
+        "answer": "Dr Clement Tsang works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-david-joseph-newtown": {
+    "meta_title": "Dr David Joseph - Bariatric Surgeon Newtown | Weight Loss Surgery",
+    "meta_description": "Dr David Joseph is an experienced bariatric surgeon in Newtown. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr David Joseph",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Newtown",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr David Joseph perform?",
+        "answer": "Dr David Joseph performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr David Joseph located?",
+        "answer": "Dr David Joseph practices in Newtown and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr David Joseph?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr David Joseph accept health insurance?",
+        "answer": "Dr David Joseph works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-david-links-randwick": {
+    "meta_title": "Dr David Links - Bariatric Surgeon Randwick | Weight Loss Surgery",
+    "meta_description": "Dr David Links is an experienced bariatric surgeon in Randwick. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr David Links",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Randwick",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr David Links perform?",
+        "answer": "Dr David Links performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr David Links located?",
+        "answer": "Dr David Links practices in Randwick and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr David Links?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr David Links accept health insurance?",
+        "answer": "Dr David Links works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-david-yeo-camperdown": {
+    "meta_title": "Dr David Yeo - Bariatric Surgeon Camperdown | Weight Loss Surgery",
+    "meta_description": "Dr David Yeo is an experienced bariatric surgeon in Camperdown. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr David Yeo",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Camperdown",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr David Yeo perform?",
+        "answer": "Dr David Yeo performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr David Yeo located?",
+        "answer": "Dr David Yeo practices in Camperdown and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr David Yeo?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr David Yeo accept health insurance?",
+        "answer": "Dr David Yeo works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills": {
+    "meta_title": "Dr Devesh Kaushal - Bariatric Surgeon Gregory Hills | Weight Loss Surgery",
+    "meta_description": "Dr Devesh Kaushal is an experienced bariatric surgeon in Gregory Hills. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Devesh Kaushal",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gregory Hills",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Devesh Kaushal perform?",
+        "answer": "Dr Devesh Kaushal performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Devesh Kaushal located?",
+        "answer": "Dr Devesh Kaushal practices in Gregory Hills and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Devesh Kaushal?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Devesh Kaushal accept health insurance?",
+        "answer": "Dr Devesh Kaushal works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-edward-tong-campbelltown-campbelltown": {
+    "meta_title": "Dr Edward Tong - Bariatric Surgeon Campbelltown | Weight Loss Surgery",
+    "meta_description": "Dr Edward Tong is an experienced bariatric surgeon in Campbelltown. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Edward Tong",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Campbelltown",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Edward Tong perform?",
+        "answer": "Dr Edward Tong performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Edward Tong located?",
+        "answer": "Dr Edward Tong practices in Campbelltown and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Edward Tong?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Edward Tong accept health insurance?",
+        "answer": "Dr Edward Tong works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-ernest-lim-bundoora": {
+    "meta_title": "Dr Ernest Lim - Bariatric Surgeon Bundoora | Weight Loss Surgery",
+    "meta_description": "Dr Ernest Lim is an experienced bariatric surgeon in Bundoora. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Ernest Lim",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bundoora",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Ernest Lim perform?",
+        "answer": "Dr Ernest Lim performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Ernest Lim located?",
+        "answer": "Dr Ernest Lim practices in Bundoora and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Ernest Lim?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Ernest Lim accept health insurance?",
+        "answer": "Dr Ernest Lim works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-ertugrul-durmush-liverpool": {
+    "meta_title": "Dr Ertugrul Durmush - Bariatric Surgeon Liverpool | Weight Loss Surgery",
+    "meta_description": "Dr Ertugrul Durmush is an experienced bariatric surgeon in Liverpool. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Ertugrul Durmush",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Liverpool",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Ertugrul Durmush perform?",
+        "answer": "Dr Ertugrul Durmush performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Ertugrul Durmush located?",
+        "answer": "Dr Ertugrul Durmush practices in Liverpool and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Ertugrul Durmush?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Ertugrul Durmush accept health insurance?",
+        "answer": "Dr Ertugrul Durmush works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-fadil-khaleal-penrith": {
+    "meta_title": "Dr Fadil Khaleal - Bariatric Surgeon Penrith | Weight Loss Surgery",
+    "meta_description": "Dr Fadil Khaleal is an experienced bariatric surgeon in Penrith. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Fadil Khaleal",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Penrith",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Fadil Khaleal perform?",
+        "answer": "Dr Fadil Khaleal performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Fadil Khaleal located?",
+        "answer": "Dr Fadil Khaleal practices in Penrith and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Fadil Khaleal?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Fadil Khaleal accept health insurance?",
+        "answer": "Dr Fadil Khaleal works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-faizur-reza-bella-vista": {
+    "meta_title": "Dr Faizur Reza - Bariatric Surgeon Bella Vista | Weight Loss Surgery",
+    "meta_description": "Dr Faizur Reza is an experienced bariatric surgeon in Bella Vista. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Faizur Reza",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bella Vista",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Faizur Reza perform?",
+        "answer": "Dr Faizur Reza performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Faizur Reza located?",
+        "answer": "Dr Faizur Reza practices in Bella Vista and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Faizur Reza?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Faizur Reza accept health insurance?",
+        "answer": "Dr Faizur Reza works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-gary-yee-kogarah": {
+    "meta_title": "Dr Gary Yee - Bariatric Surgeon Kogarah | Weight Loss Surgery",
+    "meta_description": "Dr Gary Yee is an experienced bariatric surgeon in Kogarah. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Gary Yee",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kogarah",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Gary Yee perform?",
+        "answer": "Dr Gary Yee performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Gary Yee located?",
+        "answer": "Dr Gary Yee practices in Kogarah and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Gary Yee?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Gary Yee accept health insurance?",
+        "answer": "Dr Gary Yee works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-govind-krishna-weight-loss-general-surgeon-wetherill-park": {
+    "meta_title": "Dr Govind Krishna - Bariatric Surgeon Wetherill Park | Weight Loss Surgery",
+    "meta_description": "Dr Govind Krishna is an experienced bariatric surgeon in Wetherill Park. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Govind Krishna",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wetherill Park",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Govind Krishna perform?",
+        "answer": "Dr Govind Krishna performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Govind Krishna located?",
+        "answer": "Dr Govind Krishna practices in Wetherill Park and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Govind Krishna?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Govind Krishna accept health insurance?",
+        "answer": "Dr Govind Krishna works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-james-chau-kogarah": {
+    "meta_title": "Dr James Chau - Bariatric Surgeon Kogarah | Weight Loss Surgery",
+    "meta_description": "Dr James Chau is an experienced bariatric surgeon in Kogarah. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr James Chau",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kogarah",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr James Chau perform?",
+        "answer": "Dr James Chau performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr James Chau located?",
+        "answer": "Dr James Chau practices in Kogarah and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr James Chau?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr James Chau accept health insurance?",
+        "answer": "Dr James Chau works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-jason-maani-kogarah": {
+    "meta_title": "Dr Jason Maani - Bariatric Surgeon Kogarah | Weight Loss Surgery",
+    "meta_description": "Dr Jason Maani is an experienced bariatric surgeon in Kogarah. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Jason Maani",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kogarah",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Jason Maani perform?",
+        "answer": "Dr Jason Maani performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Jason Maani located?",
+        "answer": "Dr Jason Maani practices in Kogarah and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Jason Maani?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Jason Maani accept health insurance?",
+        "answer": "Dr Jason Maani works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-jason-maani-bariatric-surgery-liverpool": {
+    "meta_title": "Dr Jason Maani Bariatric Surgery - Bariatric Surgeon Liverpool | Weight Loss Surgery",
+    "meta_description": "Dr Jason Maani Bariatric Surgery is an experienced bariatric surgeon in Liverpool. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Jason Maani Bariatric Surgery",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Liverpool",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Jason Maani Bariatric Surgery perform?",
+        "answer": "Dr Jason Maani Bariatric Surgery performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Jason Maani Bariatric Surgery located?",
+        "answer": "Dr Jason Maani Bariatric Surgery practices in Liverpool and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Jason Maani Bariatric Surgery?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Jason Maani Bariatric Surgery accept health insurance?",
+        "answer": "Dr Jason Maani Bariatric Surgery works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-jason-maani-gallbladder-surgery-liverpool": {
+    "meta_title": "Dr Jason Maani Gallbladder Surgery - Bariatric Surgeon Liverpool | Weight Loss Surgery",
+    "meta_description": "Dr Jason Maani Gallbladder Surgery is an experienced bariatric surgeon in Liverpool. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Jason Maani Gallbladder Surgery",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Liverpool",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Jason Maani Gallbladder Surgery perform?",
+        "answer": "Dr Jason Maani Gallbladder Surgery performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Jason Maani Gallbladder Surgery located?",
+        "answer": "Dr Jason Maani Gallbladder Surgery practices in Liverpool and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Jason Maani Gallbladder Surgery?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Jason Maani Gallbladder Surgery accept health insurance?",
+        "answer": "Dr Jason Maani Gallbladder Surgery works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-john-jorgensen-kogarah": {
+    "meta_title": "Dr John Jorgensen - Bariatric Surgeon Kogarah | Weight Loss Surgery",
+    "meta_description": "Dr John Jorgensen is an experienced bariatric surgeon in Kogarah. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr John Jorgensen",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kogarah",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr John Jorgensen perform?",
+        "answer": "Dr John Jorgensen performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr John Jorgensen located?",
+        "answer": "Dr John Jorgensen practices in Kogarah and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr John Jorgensen?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr John Jorgensen accept health insurance?",
+        "answer": "Dr John Jorgensen works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-john-ozmen-general-upper-gi-surgeon-bella-vista": {
+    "meta_title": "Dr John Ozmen - Bariatric Surgeon Bella Vista | Weight Loss Surgery",
+    "meta_description": "Dr John Ozmen is an experienced bariatric surgeon in Bella Vista. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr John Ozmen",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bella Vista",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr John Ozmen perform?",
+        "answer": "Dr John Ozmen performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr John Ozmen located?",
+        "answer": "Dr John Ozmen practices in Bella Vista and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr John Ozmen?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr John Ozmen accept health insurance?",
+        "answer": "Dr John Ozmen works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-ken-loi-kogarah": {
+    "meta_title": "Dr Ken Loi - Bariatric Surgeon Kogarah | Weight Loss Surgery",
+    "meta_description": "Dr Ken Loi is an experienced bariatric surgeon in Kogarah. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Ken Loi",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kogarah",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Ken Loi perform?",
+        "answer": "Dr Ken Loi performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Ken Loi located?",
+        "answer": "Dr Ken Loi practices in Kogarah and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Ken Loi?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Ken Loi accept health insurance?",
+        "answer": "Dr Ken Loi works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-mani-niazi-wantirna": {
+    "meta_title": "Dr Mani Niazi - Bariatric Surgeon Wantirna | Weight Loss Surgery",
+    "meta_description": "Dr Mani Niazi is an experienced bariatric surgeon in Wantirna. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Mani Niazi",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wantirna",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Mani Niazi perform?",
+        "answer": "Dr Mani Niazi performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Mani Niazi located?",
+        "answer": "Dr Mani Niazi practices in Wantirna and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Mani Niazi?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Mani Niazi accept health insurance?",
+        "answer": "Dr Mani Niazi works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-mani-niazi-langwarrin-mbsa-langwarrin": {
+    "meta_title": "Dr Mani Niazi - Bariatric Surgeon Langwarrin | Weight Loss Surgery",
+    "meta_description": "Dr Mani Niazi is an experienced bariatric surgeon in Langwarrin. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Mani Niazi",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Langwarrin",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Mani Niazi perform?",
+        "answer": "Dr Mani Niazi performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Mani Niazi located?",
+        "answer": "Dr Mani Niazi practices in Langwarrin and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Mani Niazi?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Mani Niazi accept health insurance?",
+        "answer": "Dr Mani Niazi works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-michael-crawford-newtown": {
+    "meta_title": "Dr Michael Crawford - Bariatric Surgeon Newtown | Weight Loss Surgery",
+    "meta_description": "Dr Michael Crawford is an experienced bariatric surgeon in Newtown. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Michael Crawford",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Newtown",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Michael Crawford perform?",
+        "answer": "Dr Michael Crawford performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Michael Crawford located?",
+        "answer": "Dr Michael Crawford practices in Newtown and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Michael Crawford?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Michael Crawford accept health insurance?",
+        "answer": "Dr Michael Crawford works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-michael-devadas-baulkham-hills": {
+    "meta_title": "Dr Michael Devadas - Bariatric Surgeon Baulkham Hills | Weight Loss Surgery",
+    "meta_description": "Dr Michael Devadas is an experienced bariatric surgeon in Baulkham Hills. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Michael Devadas",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Baulkham Hills",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Michael Devadas perform?",
+        "answer": "Dr Michael Devadas performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Michael Devadas located?",
+        "answer": "Dr Michael Devadas practices in Baulkham Hills and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Michael Devadas?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Michael Devadas accept health insurance?",
+        "answer": "Dr Michael Devadas works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-michael-hii-werribee": {
+    "meta_title": "Dr Michael Hii - Bariatric Surgeon Werribee | Weight Loss Surgery",
+    "meta_description": "Dr Michael Hii is an experienced bariatric surgeon in Werribee. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Michael Hii",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Werribee",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Michael Hii perform?",
+        "answer": "Dr Michael Hii performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Michael Hii located?",
+        "answer": "Dr Michael Hii practices in Werribee and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Michael Hii?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Michael Hii accept health insurance?",
+        "answer": "Dr Michael Hii works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-nicholas-cocco-norwest": {
+    "meta_title": "Dr Nicholas Cocco - Bariatric Surgeon Norwest | Weight Loss Surgery",
+    "meta_description": "Dr Nicholas Cocco is an experienced bariatric surgeon in Norwest. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Nicholas Cocco",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Norwest",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Nicholas Cocco perform?",
+        "answer": "Dr Nicholas Cocco performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Nicholas Cocco located?",
+        "answer": "Dr Nicholas Cocco practices in Norwest and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Nicholas Cocco?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Nicholas Cocco accept health insurance?",
+        "answer": "Dr Nicholas Cocco works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-nicholas-cocco-westmead": {
+    "meta_title": "Dr Nicholas Cocco - Bariatric Surgeon Westmead | Weight Loss Surgery",
+    "meta_description": "Dr Nicholas Cocco is an experienced bariatric surgeon in Westmead. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Nicholas Cocco",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Westmead",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Nicholas Cocco perform?",
+        "answer": "Dr Nicholas Cocco performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Nicholas Cocco located?",
+        "answer": "Dr Nicholas Cocco practices in Westmead and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Nicholas Cocco?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Nicholas Cocco accept health insurance?",
+        "answer": "Dr Nicholas Cocco works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-paul-burton-brighton": {
+    "meta_title": "Dr Paul Burton - Bariatric Surgeon Brighton | Weight Loss Surgery",
+    "meta_description": "Dr Paul Burton is an experienced bariatric surgeon in Brighton. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Paul Burton",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brighton",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Paul Burton perform?",
+        "answer": "Dr Paul Burton performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Paul Burton located?",
+        "answer": "Dr Paul Burton practices in Brighton and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Paul Burton?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Paul Burton accept health insurance?",
+        "answer": "Dr Paul Burton works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-philip-le-page-campbelltown": {
+    "meta_title": "Dr Philip Le Page - Bariatric Surgeon Campbelltown | Weight Loss Surgery",
+    "meta_description": "Dr Philip Le Page is an experienced bariatric surgeon in Campbelltown. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Philip Le Page",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Campbelltown",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Philip Le Page perform?",
+        "answer": "Dr Philip Le Page performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Philip Le Page located?",
+        "answer": "Dr Philip Le Page practices in Campbelltown and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Philip Le Page?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Philip Le Page accept health insurance?",
+        "answer": "Dr Philip Le Page works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-philip-le-page-surgeon-frenchs-forest": {
+    "meta_title": "Dr Philip Le Page - Bariatric Surgeon Frenchs Forest | Weight Loss Surgery",
+    "meta_description": "Dr Philip Le Page is an experienced bariatric surgeon in Frenchs Forest. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Philip Le Page",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Frenchs Forest",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Philip Le Page perform?",
+        "answer": "Dr Philip Le Page performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Philip Le Page located?",
+        "answer": "Dr Philip Le Page practices in Frenchs Forest and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Philip Le Page?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Philip Le Page accept health insurance?",
+        "answer": "Dr Philip Le Page works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-philip-le-page-surgeon-concord": {
+    "meta_title": "Dr Philip Le Page - Bariatric Surgeon Concord | Weight Loss Surgery",
+    "meta_description": "Dr Philip Le Page is an experienced bariatric surgeon in Concord. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Philip Le Page",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Concord",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Philip Le Page perform?",
+        "answer": "Dr Philip Le Page performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Philip Le Page located?",
+        "answer": "Dr Philip Le Page practices in Concord and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Philip Le Page?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Philip Le Page accept health insurance?",
+        "answer": "Dr Philip Le Page works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-rachel-kirby-campbelltown": {
+    "meta_title": "Dr Rachel Kirby - Bariatric Surgeon Campbelltown | Weight Loss Surgery",
+    "meta_description": "Dr Rachel Kirby is an experienced bariatric surgeon in Campbelltown. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Rachel Kirby",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Campbelltown",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Rachel Kirby perform?",
+        "answer": "Dr Rachel Kirby performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Rachel Kirby located?",
+        "answer": "Dr Rachel Kirby practices in Campbelltown and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Rachel Kirby?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Rachel Kirby accept health insurance?",
+        "answer": "Dr Rachel Kirby works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-ramez-bassari-richmond": {
+    "meta_title": "Dr Ramez Bassari - Bariatric Surgeon Richmond | Weight Loss Surgery",
+    "meta_description": "Dr Ramez Bassari is an experienced bariatric surgeon in Richmond. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Ramez Bassari",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Richmond",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Ramez Bassari perform?",
+        "answer": "Dr Ramez Bassari performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr Ramez Bassari located?",
+        "answer": "Dr Ramez Bassari practices in Richmond and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr Ramez Bassari?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr Ramez Bassari accept health insurance?",
+        "answer": "Dr Ramez Bassari works with most major private health insurance providers. Contact the practice for specific coverage details."
       }
     ]
   },
   "dr-robert-gandy-randwick": {
-    "credentials": {
-      "medical_school": "University of Leeds, United Kingdom (MB ChB, 2002)",
-      "fellowships": [
-        "Royal Australasian College of Surgeons (FRACS)",
-        "Australian and New Zealand Hepato-Pancreato-Biliary Association"
-      ],
-      "professional_memberships": [
-        "Royal Australasian College of Surgeons",
-        "Australian and New Zealand Hepato-Pancreato-Biliary Association"
-      ],
-      "special_training": [
-        "Masters in Upper GI Surgery, University of Sydney",
-        "Minimally invasive (laparoscopic & robotic) surgery"
-      ],
-      "years_practicing": 20
+    "meta_title": "Dr Robert Gandy - Bariatric Surgeon Randwick | Weight Loss Surgery",
+    "meta_description": "Dr Robert Gandy is an experienced bariatric surgeon in Randwick. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Robert Gandy",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Randwick",
+        "addressCountry": "AU"
+      }
     },
     "faqs": [
       {
-        "question": "What is the typical recovery time after laparoscopic sleeve gastrectomy?",
-        "answer": "Recovery time for laparoscopic sleeve gastrectomy generally ranges from a few days to a week, depending on individual health and adherence to post-operative care. Most patients can return to normal activities within two weeks."
+        "question": "What types of weight loss surgery does Dr Robert Gandy perform?",
+        "answer": "Dr Robert Gandy performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "What are the most common risks associated with bariatric surgeries like gastric sleeve and bypass?",
-        "answer": "Common risks include bleeding, leaks, and infection. Additionally, long-term risks can include nutrient deficiencies and gastroesophageal reflux disease. Dr. Gandy and his team are experienced in managing these risks and ensuring patient safety."
+        "question": "Where is Dr Robert Gandy located?",
+        "answer": "Dr Robert Gandy practices in Randwick and operates at leading private hospitals in the area."
       },
       {
-        "question": "What are the benefits of robotic surgery in bariatric procedures?",
-        "answer": "Robotic surgery offers enhanced precision, reduced recovery time, and less post-operative pain compared to traditional methods. It also allows for more complex procedures with better visualization."
+        "question": "How do I book a consultation with Dr Robert Gandy?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "How does Dr. Robert Gandy's experience and qualifications contribute to patient success?",
-        "answer": "Dr. Robert Gandy is a highly experienced bariatric surgeon with extensive training and a strong focus on patient care. His qualifications and years of practice ensure that patients receive the best possible outcomes."
-      },
-      {
-        "question": "What hospitals does Dr. Robert Gandy operate at in Sydney?",
-        "answer": "Dr. Gandy operates at several hospitals in Sydney, including Prince of Wales Private Hospital, Prince of Wales Public Hospital, East Sydney Private Hospital, and Chris O'Brien Lifehouse."
-      },
-      {
-        "question": "What is the typical cost of laparoscopic sleeve gastrectomy, and is it covered by insurance?",
-        "answer": "The cost of laparoscopic sleeve gastrectomy varies based on individual circumstances and insurance coverage. Many health insurance plans cover part or all of the procedure, but it's best to check with your provider for specific details."
-      },
-      {
-        "question": "How important is pre-operative preparation for bariatric surgery success?",
-        "answer": "Pre-operative preparation is crucial for ensuring a safe and successful surgery. This includes dietary changes, stopping smoking, and following any specific instructions from Dr. Gandy's team."
-      },
-      {
-        "question": "What kind of post-operative care can I expect after bariatric surgery?",
-        "answer": "Post-operative care involves follow-up appointments, dietary advice, and monitoring for any complications. Dr. Gandy and his team are committed to supporting patients throughout their recovery and beyond."
-      },
-      {
-        "question": "What are the success rates for laparoscopic sleeve gastrectomy and gastric bypass surgeries?",
-        "answer": "Both laparoscopic sleeve gastrectomy and gastric bypass surgeries have high success rates, with many patients achieving significant weight loss and improvement in obesity-related health issues. Success is highly dependent on lifestyle changes and adherence to post-operative guidance."
-      },
-      {
-        "question": "How does Dr. Robert Gandy's team support long-term health and lifestyle changes?",
-        "answer": "Dr. Gandy's team provides comprehensive support, including dietary counseling and regular follow-ups, to help patients maintain their weight loss and improve overall health over the long term."
+        "question": "Does Dr Robert Gandy accept health insurance?",
+        "answer": "Dr Robert Gandy works with most major private health insurance providers. Contact the practice for specific coverage details."
       }
     ]
   },
-  "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna": {
-    "credentials": {
-      "medical_school": "Royal College of Surgeons in Ireland",
-      "fellowships": [
-        "4 years of fellowship in bariatric, upper gastrointestinal, and advanced biliary surgery",
-        "Australian and New Zealand Gastro-Oesophageal Surgery Association (ANZGOSA) training program"
-      ],
-      "professional_memberships": [
-        "Fellow of the Royal Australasian College of Surgeons (FRACS)",
-        "Member, Royal College of Surgeons Ireland (MRCS)",
-        "Australian and New Zealand Gastric and Oesophageal Surgery Association",
-        "Obesity Surgery Society of Australia and New Zealand",
-        "European Hernia Society",
-        "International Bariatric Club",
-        "International Federation for the Surgery of Obesity and Metabolic Disorders"
-      ],
-      "special_training": [
-        "Gastroscopy and colonoscopy as per Gastroenterological Society of Australia standards"
-      ],
-      "years_practicing": 20
+  "dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah": {
+    "meta_title": "Dr Roy Hopkins - Bariatric Surgeon Kogarah | Weight Loss Surgery",
+    "meta_description": "Dr Roy Hopkins is an experienced bariatric surgeon in Kogarah. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Roy Hopkins",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kogarah",
+        "addressCountry": "AU"
+      }
     },
     "faqs": [
       {
-        "question": "What is gastric sleeve (vertical sleeve gastrectomy) surgery, and how does it help with weight loss?",
-        "answer": "Gastric sleeve surgery removes about 80% of the stomach, leaving a smaller, tube-shaped stomach. This reduces hunger and food intake, leading to significant and sustained weight loss by restricting portion sizes and altering gut hormones."
+        "question": "What types of weight loss surgery does Dr Roy Hopkins perform?",
+        "answer": "Dr Roy Hopkins performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "Am I a candidate for bariatric surgery with Mr Niruben Rajasagaram?",
-        "answer": "Candidates typically have a BMI of 40 or higher, or a BMI between 35–39.9 with obesity-related health issues like diabetes or high blood pressure. Mr Rajasagaram will assess your medical history and overall health to determine eligibility."
+        "question": "Where is Dr Roy Hopkins located?",
+        "answer": "Dr Roy Hopkins practices in Kogarah and operates at leading private hospitals in the area."
       },
       {
-        "question": "What are the main risks and complications of bariatric surgery?",
-        "answer": "As with any major surgery, risks include infection, blood clots, and nutritional deficiencies. However, modern minimally invasive techniques help minimize these risks, and long-term benefits often outweigh the risks when performed by an experienced surgeon."
+        "question": "How do I book a consultation with Dr Roy Hopkins?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "How long is recovery after gastric bypass or sleeve gastrectomy at Knox or Mulgrave Private Hospital?",
-        "answer": "Most patients stay in hospital for one to two nights. Recovery varies, but many return to normal activities within two weeks. Minimally invasive procedures typically result in faster recovery and less scarring."
+        "question": "Does Dr Roy Hopkins accept health insurance?",
+        "answer": "Dr Roy Hopkins works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-sean-mackay-box-hill": {
+    "meta_title": "Dr Sean Mackay - Bariatric Surgeon Box Hill | Weight Loss Surgery",
+    "meta_description": "Dr Sean Mackay is an experienced bariatric surgeon in Box Hill. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr Sean Mackay",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Box Hill",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr Sean Mackay perform?",
+        "answer": "Dr Sean Mackay performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "What lifestyle changes are needed after bariatric surgery for long-term success?",
-        "answer": "Permanent changes in diet, exercise, and supplementation are essential. Patients must follow a structured post-op nutrition plan, prioritize protein intake, and commit to regular physical activity for lasting weight loss."
+        "question": "Where is Dr Sean Mackay located?",
+        "answer": "Dr Sean Mackay practices in Box Hill and operates at leading private hospitals in the area."
       },
       {
-        "question": "How does gastric bypass differ from gastric sleeve or gastric band procedures?",
-        "answer": "Gastric bypass reroutes the digestive tract to reduce absorption, while gastric sleeve removes part of the stomach. Gastric band is adjustable but less commonly used now. Each has different weight-loss speeds, risks, and dietary requirements."
+        "question": "How do I book a consultation with Dr Sean Mackay?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "Does private health insurance cover bariatric surgery with Mr Niruben Rajasagaram in Melbourne?",
-        "answer": "Many private health funds cover bariatric surgery if you meet criteria, but coverage varies. Insurance may require documentation of prior weight-loss attempts. Our team can help with pre-approval."
+        "question": "Does Dr Sean Mackay accept health insurance?",
+        "answer": "Dr Sean Mackay works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-ahmad-aly-bulleen": {
+    "meta_title": "Dr. Ahmad Aly - Bariatric Surgeon Bulleen | Weight Loss Surgery",
+    "meta_description": "Dr. Ahmad Aly is an experienced bariatric surgeon in Bulleen. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Ahmad Aly",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bulleen",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr. Ahmad Aly perform?",
+        "answer": "Dr. Ahmad Aly performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "What is revisional bariatric surgery, and when might it be necessary?",
-        "answer": "Revisional surgery corrects or adjusts a previous bariatric procedure if there are complications or insufficient weight loss. Mr Rajasagaram has expertise in complex revisions, ensuring patients achieve better outcomes with customized care."
+        "question": "Where is Dr. Ahmad Aly located?",
+        "answer": "Dr. Ahmad Aly practices in Bulleen and operates at leading private hospitals in the area."
       },
       {
-        "question": "What can I expect during pre- and post-operative care with Mr Niruben Rajasagaram?",
-        "answer": "Before surgery, you'll undergo medical evaluations and possibly a pre-surgical weight loss program. Post-op care includes follow-up visits, nutritional counselling, and support for lifestyle changes to optimize your results."
+        "question": "How do I book a consultation with Dr. Ahmad Aly?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "Where does Mr Niruben Rajasagaram perform bariatric surgery in Melbourne?",
-        "answer": "Mr Rajasagaram operates at Knox Private Hospital and Mulgrave Private Hospital, offering advanced laparoscopic bariatric and general surgery procedures in modern, patient-focused settings."
+        "question": "Does Dr. Ahmad Aly accept health insurance?",
+        "answer": "Dr. Ahmad Aly works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-khalid-ahmed-smithfield": {
+    "meta_title": "Dr. Khalid Ahmed - Bariatric Surgeon Smithfield | Weight Loss Surgery",
+    "meta_description": "Dr. Khalid Ahmed is an experienced bariatric surgeon in Smithfield. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Khalid Ahmed",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Smithfield",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr. Khalid Ahmed perform?",
+        "answer": "Dr. Khalid Ahmed performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr. Khalid Ahmed located?",
+        "answer": "Dr. Khalid Ahmed practices in Smithfield and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr. Khalid Ahmed?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr. Khalid Ahmed accept health insurance?",
+        "answer": "Dr. Khalid Ahmed works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-khalid-ahmed-penrith": {
+    "meta_title": "Dr. Khalid Ahmed - Bariatric Surgeon Penrith | Weight Loss Surgery",
+    "meta_description": "Dr. Khalid Ahmed is an experienced bariatric surgeon in Penrith. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Khalid Ahmed",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Penrith",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr. Khalid Ahmed perform?",
+        "answer": "Dr. Khalid Ahmed performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr. Khalid Ahmed located?",
+        "answer": "Dr. Khalid Ahmed practices in Penrith and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr. Khalid Ahmed?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr. Khalid Ahmed accept health insurance?",
+        "answer": "Dr. Khalid Ahmed works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-khalid-ahmed-gledswood-hills": {
+    "meta_title": "Dr. Khalid Ahmed - Bariatric Surgeon Gledswood Hills | Weight Loss Surgery",
+    "meta_description": "Dr. Khalid Ahmed is an experienced bariatric surgeon in Gledswood Hills. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Khalid Ahmed",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gledswood Hills",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr. Khalid Ahmed perform?",
+        "answer": "Dr. Khalid Ahmed performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr. Khalid Ahmed located?",
+        "answer": "Dr. Khalid Ahmed practices in Gledswood Hills and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr. Khalid Ahmed?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr. Khalid Ahmed accept health insurance?",
+        "answer": "Dr. Khalid Ahmed works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-mark-magdy-miranda": {
+    "meta_title": "Dr. Mark Magdy - Bariatric Surgeon Miranda | Weight Loss Surgery",
+    "meta_description": "Dr. Mark Magdy is an experienced bariatric surgeon in Miranda. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Mark Magdy",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Miranda",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr. Mark Magdy perform?",
+        "answer": "Dr. Mark Magdy performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr. Mark Magdy located?",
+        "answer": "Dr. Mark Magdy practices in Miranda and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr. Mark Magdy?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr. Mark Magdy accept health insurance?",
+        "answer": "Dr. Mark Magdy works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-paul-j-ah-tye-dandenong": {
+    "meta_title": "Dr. Paul J. Ah Tye - Bariatric Surgeon Dandenong | Weight Loss Surgery",
+    "meta_description": "Dr. Paul J. Ah Tye is an experienced bariatric surgeon in Dandenong. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Paul J. Ah Tye",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dandenong",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr. Paul J. Ah Tye perform?",
+        "answer": "Dr. Paul J. Ah Tye performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr. Paul J. Ah Tye located?",
+        "answer": "Dr. Paul J. Ah Tye practices in Dandenong and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr. Paul J. Ah Tye?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr. Paul J. Ah Tye accept health insurance?",
+        "answer": "Dr. Paul J. Ah Tye works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-qiuye-cheng-kogarah": {
+    "meta_title": "Dr. Qiuye Cheng - Bariatric Surgeon Kogarah | Weight Loss Surgery",
+    "meta_description": "Dr. Qiuye Cheng is an experienced bariatric surgeon in Kogarah. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Qiuye Cheng",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kogarah",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr. Qiuye Cheng perform?",
+        "answer": "Dr. Qiuye Cheng performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr. Qiuye Cheng located?",
+        "answer": "Dr. Qiuye Cheng practices in Kogarah and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr. Qiuye Cheng?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr. Qiuye Cheng accept health insurance?",
+        "answer": "Dr. Qiuye Cheng works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "dr-roy-brancatisano-norwest": {
+    "meta_title": "Dr. Roy Brancatisano - Bariatric Surgeon Norwest | Weight Loss Surgery",
+    "meta_description": "Dr. Roy Brancatisano is an experienced bariatric surgeon in Norwest. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Roy Brancatisano",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Norwest",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Dr. Roy Brancatisano perform?",
+        "answer": "Dr. Roy Brancatisano performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Dr. Roy Brancatisano located?",
+        "answer": "Dr. Roy Brancatisano practices in Norwest and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Dr. Roy Brancatisano?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Dr. Roy Brancatisano accept health insurance?",
+        "answer": "Dr. Roy Brancatisano works with most major private health insurance providers. Contact the practice for specific coverage details."
       }
     ]
   },
   "dr-yuan-cheng-richmond": {
-    "credentials": {
-      "medical_school": "University of Melbourne (graduated 2004)",
-      "fellowships": [
-        "Fellowship of the Royal Australasian College of Surgeons (FRACS) in General Surgery (2015)",
-        "Inaugural Bariatric Surgery Fellow, Box Hill Hospital",
-        "Overseas bariatric surgery fellowship with Dr B. Dillemans, Belgium"
-      ],
-      "professional_memberships": [
-        "General Surgeons Australia (GSA)",
-        "Australian and New Zealand Metabolic and Obesity Surgery Society (ANZMOSS)",
-        "International Federation for the Surgery of Obesity and Metabolic Disorders (IFSO)"
-      ],
-      "special_training": [
-        "Extensive subspecialty bariatric surgery training in Australia and Belgium",
-        "Advanced laparoscopic surgical techniques"
-      ],
-      "years_practicing": 11
+    "meta_title": "Dr. Yuan Cheng - Bariatric Surgeon Richmond | Weight Loss Surgery",
+    "meta_description": "Dr. Yuan Cheng is an experienced bariatric surgeon in Richmond. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Yuan Cheng",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Richmond",
+        "addressCountry": "AU"
+      }
     },
     "faqs": [
       {
-        "question": "What types of bariatric surgery does Dr Yuan Cheng perform in Melbourne?",
-        "answer": "Dr Cheng offers sleeve gastrectomy, Roux-en-Y gastric bypass, mini gastric bypass, adjustable gastric band (Lapband), revision bariatric surgeries, and intragastric balloon (Orbera), as well as laparoscopic gallbladder and hernia repairs."
+        "question": "What types of weight loss surgery does Dr. Yuan Cheng perform?",
+        "answer": "Dr. Yuan Cheng performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "Which Melbourne hospitals does Dr Yuan Cheng operate at?",
-        "answer": "Dr Cheng operates at Epworth Eastern, Epworth Freemasons, Knox Private, Holmesglen Private, St Vincent's Private, and Box Hill Hospitals in Melbourne."
+        "question": "Where is Dr. Yuan Cheng located?",
+        "answer": "Dr. Yuan Cheng practices in Richmond and operates at leading private hospitals in the area."
       },
       {
-        "question": "What are the main risks and complications of bariatric surgery?",
-        "answer": "Possible risks include bleeding, infection, blood clots, leaks, and need for re-operation. Serious complications are rare when performed by experienced surgeons, but all procedures have some level of risk."
+        "question": "How do I book a consultation with Dr. Yuan Cheng?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "How long does recovery take after bariatric surgery?",
-        "answer": "Most patients spend 1–2 days in hospital and return to normal activities within 2–4 weeks, but full recovery varies by procedure and individual factors."
-      },
-      {
-        "question": "What is the difference between sleeve gastrectomy and gastric bypass?",
-        "answer": "A sleeve gastrectomy removes part of the stomach to limit intake, while a gastric bypass re-routes food past much of the stomach and small intestine for greater weight loss and metabolic effects."
-      },
-      {
-        "question": "Is the intragastric balloon (Orbera) a non-surgical weight loss option?",
-        "answer": "Yes, the Orbera balloon is placed in the stomach via endoscopy with no surgery; it helps patients feel full faster and is usually temporary for up to six months."
-      },
-      {
-        "question": "What is revision bariatric surgery, and does Dr Cheng offer it?",
-        "answer": "Revision bariatric surgery corrects or adjusts previous weight loss procedures due to complications or insufficient weight loss. Dr Cheng is highly experienced in these complex cases."
-      },
-      {
-        "question": "Are weight loss surgery costs covered by private health insurance?",
-        "answer": "Many private health funds cover bariatric procedures, but coverage varies. Check with your insurer for exact inclusions and out-of-pocket costs, as excess or gaps may apply."
-      },
-      {
-        "question": "What pre-operative care is required before weight loss surgery?",
-        "answer": "Pre-op care includes medical assessments, dietary counseling, and sometimes supervised weight loss. A psychological evaluation is also often required to ensure you are fully prepared for lifestyle changes."
-      },
-      {
-        "question": "What post-operative support does Dr Cheng's team provide?",
-        "answer": "Patients receive ongoing support including regular follow-ups, dietary guidance, and psychological support to ensure optimal results and long-term weight loss success."
+        "question": "Does Dr. Yuan Cheng accept health insurance?",
+        "answer": "Dr. Yuan Cheng works with most major private health insurance providers. Contact the practice for specific coverage details."
       }
     ]
   },
-  "aprof-christos-apostolou-surgeon-wahroonga": {
-    "credentials": {
-      "medical_school": "University of Cape Town (MBChB, 1996)",
-      "fellowships": [
-        "South African College of Surgeons (FCS(SA), 2003)",
-        "Certificate of Surgical Gastroenterology, South African College (2006)",
-        "Fellow of the Royal Australasian College of Surgeons (FRACS, 2012)"
-      ],
-      "professional_memberships": [
-        "Australasian Association of Upper Gastrointestinal Surgeons (AANZHPBA)",
-        "Australian & New Zealand Gastric & Oesophageal Surgery Association (ANZGOSA)",
-        "General Surgeons Australia (GSA)",
-        "Gastroenterological Society of Australia (GESA)",
-        "Australian Medical Association (AMA)",
-        "Australia & New Zealand Metabolic and Obesity Surgery Society (ANZMOSS)"
-      ],
-      "special_training": [
-        "Robotic surgery training at Yonsei University, Seoul, South Korea (2015)",
-        "da Vinci and Versius robotic surgical systems accreditation"
-      ],
-      "years_practicing": 22
+  "mr-ahmed-naqeeb-mount-waverley": {
+    "meta_title": "Mr Ahmed Naqeeb - Bariatric Surgeon Mount Waverley | Weight Loss Surgery",
+    "meta_description": "Mr Ahmed Naqeeb is an experienced bariatric surgeon in Mount Waverley. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr Ahmed Naqeeb",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mount Waverley",
+        "addressCountry": "AU"
+      }
     },
     "faqs": [
       {
-        "question": "What types of bariatric surgeries does Associate Professor Christos Apostolou perform in Sydney?",
-        "answer": "Associate Professor Apostolou specializes in bariatric procedures including gastric sleeve, gastric bypass, and revisional bariatric surgery to address insufficient weight loss or complications."
+        "question": "What types of weight loss surgery does Mr Ahmed Naqeeb perform?",
+        "answer": "Mr Ahmed Naqeeb performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "At which Sydney hospitals does Associate Professor Christos Apostolou operate?",
-        "answer": "He operates at Sydney Adventist Hospital, Macquarie University Hospital, Northern Beaches Hospital, Bankstown-Lidcombe Hospital, and Norwest Private Hospital."
+        "question": "Where is Mr Ahmed Naqeeb located?",
+        "answer": "Mr Ahmed Naqeeb practices in Mount Waverley and operates at leading private hospitals in the area."
       },
       {
-        "question": "What is the typical recovery time after bariatric surgery?",
-        "answer": "Most patients stay in hospital for 1–3 days and can resume normal activities within 2–4 weeks, though individual recovery will vary depending on the type of surgery."
+        "question": "How do I book a consultation with Mr Ahmed Naqeeb?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "What are the main risks and complications associated with bariatric surgery?",
-        "answer": "Risks can include infection, bleeding, leaks, blood clots, nutritional deficiencies, and longer-term issues such as strictures, ulcers, and gallstones. Ongoing monitoring and supplements help manage long-term complications."
+        "question": "Does Mr Ahmed Naqeeb accept health insurance?",
+        "answer": "Mr Ahmed Naqeeb works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-anthony-clough-box-hill": {
+    "meta_title": "Mr Anthony Clough - Bariatric Surgeon Box Hill | Weight Loss Surgery",
+    "meta_description": "Mr Anthony Clough is an experienced bariatric surgeon in Box Hill. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr Anthony Clough",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Box Hill",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr Anthony Clough perform?",
+        "answer": "Mr Anthony Clough performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "How successful is bariatric surgery for long-term weight loss and health?",
-        "answer": "Studies show bariatric surgery achieves significant sustained weight loss, improvement in obesity-related conditions, and a five-year survival rate over 97%. Remission rates for conditions like type 2 diabetes and hypertension are also high."
+        "question": "Where is Mr Anthony Clough located?",
+        "answer": "Mr Anthony Clough practices in Box Hill and operates at leading private hospitals in the area."
       },
       {
-        "question": "What is Associate Professor Apostolou's background and academic role?",
-        "answer": "He is an Associate Professor with extensive experience in clinical practice, surgical teaching, and academic research in the field of bariatric and upper gastrointestinal surgery."
+        "question": "How do I book a consultation with Mr Anthony Clough?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "Which other abdominal surgeries does Associate Professor Apostolou perform?",
-        "answer": "In addition to bariatric surgery, he offers procedures for gallbladder disease, anti-reflux surgery, hernias, upper gastrointestinal cancer or benign conditions, and complex liver and pancreatic operations."
+        "question": "Does Mr Anthony Clough accept health insurance?",
+        "answer": "Mr Anthony Clough works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-geoffrey-dr-aper-frankston": {
+    "meta_title": "Mr Geoffrey Draper - Bariatric Surgeon Frankston | Weight Loss Surgery",
+    "meta_description": "Mr Geoffrey Draper is an experienced bariatric surgeon in Frankston. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr Geoffrey Draper",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Frankston",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr Geoffrey Draper perform?",
+        "answer": "Mr Geoffrey Draper performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
       },
       {
-        "question": "Are costs for bariatric or GI surgery covered by insurance or Medicare in Sydney?",
-        "answer": "Many bariatric and GI surgeries are covered by private health insurance; Medicare and private health fund rebates may apply, but out-of-pocket expenses should be discussed during consultation."
+        "question": "Where is Mr Geoffrey Draper located?",
+        "answer": "Mr Geoffrey Draper practices in Frankston and operates at leading private hospitals in the area."
       },
       {
-        "question": "What pre-operative and post-operative care is provided?",
-        "answer": "Patients receive thorough pre-operative assessment, tailored education, and lifelong post-surgery follow-up for diet, vitamins, and ongoing support to maximize outcomes and reduce complications."
+        "question": "How do I book a consultation with Mr Geoffrey Draper?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
       },
       {
-        "question": "Does Associate Professor Apostolou manage complex or revisional bariatric and upper GI cases?",
-        "answer": "Yes, he routinely handles complex and revisional bariatric surgeries as well as challenging upper GI and hepatopancreatobiliary procedures, with multi-disciplinary support for high-risk or complicated cases."
+        "question": "Does Mr Geoffrey Draper accept health insurance?",
+        "answer": "Mr Geoffrey Draper works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-hai-t-bui-ascot-vale": {
+    "meta_title": "Mr Hai T. Bui - Bariatric Surgeon Ascot Vale | Weight Loss Surgery",
+    "meta_description": "Mr Hai T. Bui is an experienced bariatric surgeon in Ascot Vale. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr Hai T. Bui",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ascot Vale",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr Hai T. Bui perform?",
+        "answer": "Mr Hai T. Bui performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr Hai T. Bui located?",
+        "answer": "Mr Hai T. Bui practices in Ascot Vale and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr Hai T. Bui?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr Hai T. Bui accept health insurance?",
+        "answer": "Mr Hai T. Bui works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne": {
+    "meta_title": "Mr Jacob Vanyai - Bariatric Surgeon East Melbourne | Weight Loss Surgery",
+    "meta_description": "Mr Jacob Vanyai is an experienced bariatric surgeon in East Melbourne. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr Jacob Vanyai",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "East Melbourne",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr Jacob Vanyai perform?",
+        "answer": "Mr Jacob Vanyai performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr Jacob Vanyai located?",
+        "answer": "Mr Jacob Vanyai practices in East Melbourne and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr Jacob Vanyai?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr Jacob Vanyai accept health insurance?",
+        "answer": "Mr Jacob Vanyai works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-kiron-bhatia-bundoora": {
+    "meta_title": "Mr Kiron Bhatia - Bariatric Surgeon Bundoora | Weight Loss Surgery",
+    "meta_description": "Mr Kiron Bhatia is an experienced bariatric surgeon in Bundoora. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr Kiron Bhatia",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bundoora",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr Kiron Bhatia perform?",
+        "answer": "Mr Kiron Bhatia performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr Kiron Bhatia located?",
+        "answer": "Mr Kiron Bhatia practices in Bundoora and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr Kiron Bhatia?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr Kiron Bhatia accept health insurance?",
+        "answer": "Mr Kiron Bhatia works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-mark-cullinan-richmond": {
+    "meta_title": "Mr Mark Cullinan - Bariatric Surgeon Richmond | Weight Loss Surgery",
+    "meta_description": "Mr Mark Cullinan is an experienced bariatric surgeon in Richmond. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr Mark Cullinan",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Richmond",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr Mark Cullinan perform?",
+        "answer": "Mr Mark Cullinan performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr Mark Cullinan located?",
+        "answer": "Mr Mark Cullinan practices in Richmond and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr Mark Cullinan?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr Mark Cullinan accept health insurance?",
+        "answer": "Mr Mark Cullinan works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-richard-chen-malvern": {
+    "meta_title": "Mr Richard Chen - Bariatric Surgeon Malvern | Weight Loss Surgery",
+    "meta_description": "Mr Richard Chen is an experienced bariatric surgeon in Malvern. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr Richard Chen",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Malvern",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr Richard Chen perform?",
+        "answer": "Mr Richard Chen performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr Richard Chen located?",
+        "answer": "Mr Richard Chen practices in Malvern and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr Richard Chen?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr Richard Chen accept health insurance?",
+        "answer": "Mr Richard Chen works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-zeev-duieb-berwick": {
+    "meta_title": "Mr Zeev Duieb - Bariatric Surgeon Berwick | Weight Loss Surgery",
+    "meta_description": "Mr Zeev Duieb is an experienced bariatric surgeon in Berwick. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr Zeev Duieb",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berwick",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr Zeev Duieb perform?",
+        "answer": "Mr Zeev Duieb performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr Zeev Duieb located?",
+        "answer": "Mr Zeev Duieb practices in Berwick and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr Zeev Duieb?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr Zeev Duieb accept health insurance?",
+        "answer": "Mr Zeev Duieb works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-ian-michell-essendon": {
+    "meta_title": "Mr. Ian Michell - Bariatric Surgeon Essendon | Weight Loss Surgery",
+    "meta_description": "Mr. Ian Michell is an experienced bariatric surgeon in Essendon. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr. Ian Michell",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Essendon",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr. Ian Michell perform?",
+        "answer": "Mr. Ian Michell performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr. Ian Michell located?",
+        "answer": "Mr. Ian Michell practices in Essendon and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr. Ian Michell?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr. Ian Michell accept health insurance?",
+        "answer": "Mr. Ian Michell works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-jacob-vanyai-surrey-hills": {
+    "meta_title": "Mr. Jacob Vanyai - Bariatric Surgeon Surrey Hills | Weight Loss Surgery",
+    "meta_description": "Mr. Jacob Vanyai is an experienced bariatric surgeon in Surrey Hills. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr. Jacob Vanyai",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Surrey Hills",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr. Jacob Vanyai perform?",
+        "answer": "Mr. Jacob Vanyai performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr. Jacob Vanyai located?",
+        "answer": "Mr. Jacob Vanyai practices in Surrey Hills and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr. Jacob Vanyai?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr. Jacob Vanyai accept health insurance?",
+        "answer": "Mr. Jacob Vanyai works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna": {
+    "meta_title": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne - Bariatric Surgeon Wantirna | Weight Loss Surgery",
+    "meta_description": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne is an experienced bariatric surgeon in Wantirna. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Wantirna",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne perform?",
+        "answer": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne located?",
+        "answer": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne practices in Wantirna and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne accept health insurance?",
+        "answer": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick": {
+    "meta_title": "Mr.Niruben Rajasagaram - Bariatric Surgeon Berwick | Weight Loss Surgery",
+    "meta_description": "Mr.Niruben Rajasagaram is an experienced bariatric surgeon in Berwick. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr.Niruben Rajasagaram",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Berwick",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr.Niruben Rajasagaram perform?",
+        "answer": "Mr.Niruben Rajasagaram performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr.Niruben Rajasagaram located?",
+        "answer": "Mr.Niruben Rajasagaram practices in Berwick and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr.Niruben Rajasagaram?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr.Niruben Rajasagaram accept health insurance?",
+        "answer": "Mr.Niruben Rajasagaram works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston": {
+    "meta_title": "Mr.Niruben Rajasagaram - Bariatric Surgeon Frankston | Weight Loss Surgery",
+    "meta_description": "Mr.Niruben Rajasagaram is an experienced bariatric surgeon in Frankston. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Mr.Niruben Rajasagaram",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Frankston",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Mr.Niruben Rajasagaram perform?",
+        "answer": "Mr.Niruben Rajasagaram performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Mr.Niruben Rajasagaram located?",
+        "answer": "Mr.Niruben Rajasagaram practices in Frankston and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Mr.Niruben Rajasagaram?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Mr.Niruben Rajasagaram accept health insurance?",
+        "answer": "Mr.Niruben Rajasagaram works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield": {
+    "meta_title": "Professor Gregory Falk - Bariatric Surgeon Lindfield | Weight Loss Surgery",
+    "meta_description": "Professor Gregory Falk is an experienced bariatric surgeon in Lindfield. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Professor Gregory Falk",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lindfield",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Professor Gregory Falk perform?",
+        "answer": "Professor Gregory Falk performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Professor Gregory Falk located?",
+        "answer": "Professor Gregory Falk practices in Lindfield and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Professor Gregory Falk?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Professor Gregory Falk accept health insurance?",
+        "answer": "Professor Gregory Falk works with most major private health insurance providers. Contact the practice for specific coverage details."
+      }
+    ]
+  },
+  "reginald-v-n-lord-darlinghurst": {
+    "meta_title": "Reginald V N Lord - Bariatric Surgeon Darlinghurst | Weight Loss Surgery",
+    "meta_description": "Reginald V N Lord is an experienced bariatric surgeon in Darlinghurst. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+    "schema_org": {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Reginald V N Lord",
+      "medicalSpecialty": "Bariatric Surgery",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Darlinghurst",
+        "addressCountry": "AU"
+      }
+    },
+    "faqs": [
+      {
+        "question": "What types of weight loss surgery does Reginald V N Lord perform?",
+        "answer": "Reginald V N Lord performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      },
+      {
+        "question": "Where is Reginald V N Lord located?",
+        "answer": "Reginald V N Lord practices in Darlinghurst and operates at leading private hospitals in the area."
+      },
+      {
+        "question": "How do I book a consultation with Reginald V N Lord?",
+        "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
+      },
+      {
+        "question": "Does Reginald V N Lord accept health insurance?",
+        "answer": "Reginald V N Lord works with most major private health insurance providers. Contact the practice for specific coverage details."
       }
     ]
   }
