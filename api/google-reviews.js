@@ -1,27 +1,37 @@
-import type { APIRoute } from 'astro';
-
-export const GET: APIRoute = async ({ request }) => {
-  const url = new URL(request.url);
-  const placeId = url.searchParams.get('placeId');
+// Vercel Serverless Function for Google Reviews
+export default async function handler(req, res) {
+  // Enable CORS
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  
+  // Handle preflight
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+  
+  // Only allow GET requests
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+  
+  const { placeId } = req.query;
   
   if (!placeId) {
-    return new Response(JSON.stringify({ error: 'Missing placeId parameter' }), {
-      status: 400,
-      headers: { 'Content-Type': 'application/json' }
+    return res.status(400).json({ 
+      error: 'Missing placeId parameter',
+      message: 'Please provide a placeId query parameter'
     });
   }
   
   // Get API key from environment variable
-  const API_KEY = import.meta.env.GOOGLE_PLACES_API_KEY;
+  const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
   
   if (!API_KEY) {
     console.error('GOOGLE_PLACES_API_KEY not configured');
-    return new Response(JSON.stringify({ 
+    return res.status(500).json({ 
       error: 'API key not configured',
       message: 'Please add GOOGLE_PLACES_API_KEY to your environment variables'
-    }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' }
     });
   }
   
@@ -33,74 +43,55 @@ export const GET: APIRoute = async ({ request }) => {
     const data = await response.json();
     
     if (data.status === 'OK' && data.result) {
-      return new Response(JSON.stringify({
+      return res.status(200).json({
         success: true,
         reviews: data.result.reviews || [],
         rating: data.result.rating || 0,
         total_ratings: data.result.user_ratings_total || 0,
         name: data.result.name || ''
-      }), {
-        status: 200,
-        headers: { 
-          'Content-Type': 'application/json',
-          'Cache-Control': 'public, max-age=3600, s-maxage=3600' // Cache for 1 hour
-        }
       });
     } else if (data.status === 'ZERO_RESULTS') {
-      return new Response(JSON.stringify({
+      return res.status(200).json({
         success: false,
         error: 'No results found for this Place ID',
         reviews: [],
         rating: 0,
         total_ratings: 0
-      }), {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' }
       });
     } else if (data.status === 'INVALID_REQUEST') {
-      return new Response(JSON.stringify({
+      return res.status(400).json({
         success: false,
         error: 'Invalid Place ID format',
+        message: 'Please check that the Place ID is correct',
         reviews: [],
         rating: 0,
         total_ratings: 0
-      }), {
-        status: 400,
-        headers: { 'Content-Type': 'application/json' }
       });
     } else if (data.status === 'OVER_QUERY_LIMIT') {
-      return new Response(JSON.stringify({
+      return res.status(429).json({
         success: false,
         error: 'API quota exceeded',
         message: 'Please check your Google Cloud billing settings'
-      }), {
-        status: 429,
-        headers: { 'Content-Type': 'application/json' }
       });
     } else if (data.status === 'REQUEST_DENIED') {
-      return new Response(JSON.stringify({
+      return res.status(403).json({
         success: false,
         error: 'API request denied',
-        message: 'Please check your API key restrictions and ensure Places API is enabled'
-      }), {
-        status: 403,
-        headers: { 'Content-Type': 'application/json' }
+        message: 'Please check your API key restrictions and ensure Places API is enabled',
+        details: data.error_message || 'No additional details'
       });
     } else {
-      throw new Error(`Google Places API error: ${data.status}`);
+      throw new Error(`Google Places API error: ${data.status} - ${data.error_message || 'Unknown error'}`);
     }
   } catch (error) {
     console.error('Error fetching Google reviews:', error);
-    return new Response(JSON.stringify({ 
+    return res.status(500).json({ 
       success: false,
       error: 'Failed to fetch reviews',
-      message: error instanceof Error ? error.message : 'Unknown error',
+      message: error.message || 'Unknown error',
       reviews: [],
       rating: 0,
       total_ratings: 0
-    }), {
-      status: 500,
-      headers: { 'Content-Type': 'application/json' }
     });
   }
-};
+}
