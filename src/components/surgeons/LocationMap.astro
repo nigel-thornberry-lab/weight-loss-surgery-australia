@@ -1,13 +1,12 @@
 ---
 const { surgeonName, placeId, address, city, state } = Astro.props;
 
-// Generate Google Maps embed URL
-// Using the Google Maps search URL format which shows a marker on the location
+// Generate Google Maps embed URL - NO API KEY REQUIRED
+// Using direct embed URL with place_id for accurate location with marker
+const fullAddress = `${address}, ${city}, ${state}, Australia`;
 const mapEmbedUrl = placeId 
-  ? `https://maps.google.com/maps?q=place_id:${placeId}&t=&z=15&ie=UTF8&iwloc=&output=embed`
-  : address 
-    ? `https://maps.google.com/maps?q=${encodeURIComponent(address + ', ' + city + ', ' + state)}&t=&z=15&ie=UTF8&iwloc=&output=embed`
-    : null;
+  ? `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12000!2d0!3d0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s${placeId}!2s${encodeURIComponent(surgeonName)}!5e0!3m2!1sen!2sau!4v1609459200000!5m2!1sen!2sau`
+  : `https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`;
 
 // Generate directions URL for "Get Directions" button
 const directionsUrl = placeId
