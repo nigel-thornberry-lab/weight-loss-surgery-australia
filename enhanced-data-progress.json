@@ -1,0 +1,32 @@
+{
+  "completed": 24,
+  "total": 79,
+  "remaining": 55,
+  "notes": "Perplexity enhancement in progress. Some surgeons researched are not bariatric specialists (gastroenterology, hepatobiliary, colorectal). Consider filtering surgeon list to only true bariatric surgeons.",
+  "surgeons_researched": [
+    "A/Prof Carlo Pulitano (hepatobiliary focus, some bariatric)",
+    "Dr Amitabha Das",
+    "Dr Devesh Kaushal",
+    "Dr Michael Crawford",
+    "Dr Philip Le Page",
+    "Dr Paul Burton",
+    "Dr Ahmad Aly",
+    "Dr Sean Mackay",
+    "Dr John Jorgensen",
+    "Dr Roy Brancatisano",
+    "Dr Stuart Pincott (colorectal, NOT bariatric)",
+    "Dr Khalid Ahmed",
+    "Dr Faizur Reza",
+    "Dr Govind Krishna",
+    "Dr James Chau",
+    "Dr Jan Parker (GP weight loss, NOT surgeon)",
+    "Dr Clement Tsang",
+    "Mr Jacob Vanyai",
+    "Dr Ken Loi (deceased, clinic continuing)",
+    "Dr Michael Devadas",
+    "Dr Nicholas Cocco",
+    "Dr Nicole Winter",
+    "Dr Suhirdan Vivekanandarajah (gastroenterologist, NOT bariatric)",
+    "Dr Chris Nahm (hepatobiliary, NOT bariatric)"
+  ]
+}
