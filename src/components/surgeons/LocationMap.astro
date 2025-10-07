@@ -1,12 +1,12 @@
 ---
 const { surgeonName, placeId, address, city, state } = Astro.props;
 
-// Generate Google Maps embed URL using search with place_id
-// This properly centers the map on the location
+// Generate Google Maps embed URL
+// Using the Google Maps search URL format which shows a marker on the location
 const mapEmbedUrl = placeId 
-  ? `https://www.google.com/maps?q=place_id:${placeId}&output=embed`
+  ? `https://maps.google.com/maps?q=place_id:${placeId}&t=&z=15&ie=UTF8&iwloc=&output=embed`
   : address 
-    ? `https://www.google.com/maps?q=${encodeURIComponent(address + ', ' + city + ', ' + state)}&output=embed`
+    ? `https://maps.google.com/maps?q=${encodeURIComponent(address + ', ' + city + ', ' + state)}&t=&z=15&ie=UTF8&iwloc=&output=embed`
     : null;
 
 // Generate directions URL for "Get Directions" button
