@@ -62,7 +62,14 @@ const physicianSchema = {
   "@context": "https://schema.org",
   "@type": "Physician",
   "name": cleanName,
-  "image": surgeon.surgeon_photo || "https://weightlosssurgery.com.au/default-surgeon.jpg",
+  "image": surgeon.surgeon_photo ? {
+    "@type": "ImageObject",
+    "url": \`https://weightlosssurgery.com.au\${surgeon.surgeon_photo}\`,
+    "width": "800",
+    "height": "1000",
+    "caption": \`\${cleanName} - Bariatric Surgeon in \${surgeon.city}, \${surgeon.state}\`,
+    "description": \`Professional photo of \${cleanName}, expert bariatric surgeon specializing in weight loss surgery\`
+  } : "https://weightlosssurgery.com.au/default-surgeon.jpg",
   "url": canonicalUrl,
   "telephone": surgeon.phone,
   "address": {
@@ -147,7 +154,13 @@ const breadcrumbSchema = {
 };
 ---
 
-<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+<BaseLayout 
+  title={title} 
+  description={description} 
+  canonicalUrl={canonicalUrl}
+  image={surgeon.surgeon_photo ? \`https://weightlosssurgery.com.au\${surgeon.surgeon_photo}\` : undefined}
+  type="profile"
+>
   <!-- Comprehensive Schema.org Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(physicianSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
@@ -177,7 +190,16 @@ const breadcrumbSchema = {
           <div class="space-y-4 sticky top-4 self-start">
             <!-- Surgeon Photo -->
             {surgeon.surgeon_photo ? (
-              <img src={surgeon.surgeon_photo} alt={surgeon.name} class="w-full rounded-xl shadow-lg" loading="eager" />
+              <img 
+                src={surgeon.surgeon_photo} 
+                alt={\`\${cleanName} - Bariatric Surgeon in \${surgeon.city}, \${surgeon.state} | Weight Loss Surgery Specialist\`}
+                title={\`\${cleanName} - Expert Bariatric Surgeon\`}
+                width="800"
+                height="1000"
+                class="w-full rounded-xl shadow-lg" 
+                loading="eager"
+                fetchpriority="high"
+              />
             ) : (
               <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl shadow-lg aspect-[3/4] flex items-center justify-center">
                 <div class="text-center text-white p-6">
@@ -369,7 +391,13 @@ const description = \`\${surgeon.name} is an experienced bariatric surgeon in \$
 const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/${citySlug}/${slug}\`;
 ---
 
-<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+<BaseLayout 
+  title={title} 
+  description={description} 
+  canonicalUrl={canonicalUrl}
+  image={surgeon.surgeon_photo ? \`https://weightlosssurgery.com.au\${surgeon.surgeon_photo}\` : undefined}
+  type="profile"
+>
   <main class="min-h-screen bg-gray-50">
     <nav class="bg-white border-b border-gray-200 py-3">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -390,7 +418,15 @@ const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/${citySlug}/${s
         <div class="grid md:grid-cols-3 gap-8">
           <div class="md:col-span-1">
             {surgeon.surgeon_photo ? (
-              <img src={surgeon.surgeon_photo} alt={surgeon.name} class="w-full rounded-2xl shadow-lg" loading="lazy" />
+              <img 
+                src={surgeon.surgeon_photo} 
+                alt={\`\${cleanName} - Bariatric Surgeon in \${surgeon.city}, \${surgeon.state}\`}
+                title={\`\${cleanName} - Bariatric Surgery Specialist\`}
+                width="800"
+                height="1000"
+                class="w-full rounded-2xl shadow-lg" 
+                loading="lazy" 
+              />
             ) : (
               <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-lg p-12 flex items-center justify-center">
                 <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -493,7 +529,10 @@ const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/${citySlug}\`;
               {s.surgeon_photo ? (
                 <img 
                   src={s.surgeon_photo} 
-                  alt={s.name}
+                  alt={\`\${s.name} - Bariatric Surgeon in \${cityName} | Weight Loss Surgery Expert\`}
+                  title={\`\${s.name} - Bariatric Surgery Specialist\`}
+                  width="800"
+                  height="1000"
                   class="w-full h-full object-cover"
                   loading="lazy"
                 />

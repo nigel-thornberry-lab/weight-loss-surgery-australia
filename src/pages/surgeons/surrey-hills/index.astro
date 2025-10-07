@@ -49,7 +49,10 @@ const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/surrey-hills`;
               {s.surgeon_photo ? (
                 <img 
                   src={s.surgeon_photo} 
-                  alt={s.name}
+                  alt={`${s.name} - Bariatric Surgeon in ${cityName} | Weight Loss Surgery Expert`}
+                  title={`${s.name} - Bariatric Surgery Specialist`}
+                  width="800"
+                  height="1000"
                   class="w-full h-full object-cover"
                   loading="lazy"
                 />
