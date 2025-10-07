@@ -1,18 +1,20 @@
 ---
 const { surgeonName, placeId, address, city, state } = Astro.props;
 
-// Generate Google Maps embed URL (using standard iframe embed - no API key needed)
-// This uses the place_id to embed the map directly
+// Generate Google Maps embed URL using search with place_id
+// This properly centers the map on the location
 const mapEmbedUrl = placeId 
-  ? `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s${placeId}!2s${encodeURIComponent(surgeonName)}!5e0!3m2!1sen!2sau!4v1609459200000!5m2!1sen!2sau`
-  : null;
+  ? `https://www.google.com/maps?q=place_id:${placeId}&output=embed`
+  : address 
+    ? `https://www.google.com/maps?q=${encodeURIComponent(address + ', ' + city + ', ' + state)}&output=embed`
+    : null;
 
-// Fallback: Generate directions URL for "Get Directions" button
+// Generate directions URL for "Get Directions" button
 const directionsUrl = placeId
   ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address + ', ' + city + ', ' + state)}&destination_place_id=${placeId}`
   : `https://www.google.com/maps/search/${encodeURIComponent(address + ', ' + city + ', ' + state)}`;
 
-// Generate Google Maps view URL for the map link
+// Generate Google Maps view URL for clicking the map
 const mapViewUrl = placeId
   ? `https://www.google.com/maps/place/?q=place_id:${placeId}`
   : `https://www.google.com/maps/search/${encodeURIComponent(address + ', ' + city + ', ' + state)}`;
