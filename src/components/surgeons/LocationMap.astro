@@ -1,12 +1,17 @@
 ---
 const { surgeonName, placeId, address, city, state } = Astro.props;
 
-// Generate Google Maps embed URL - NO API KEY REQUIRED
-// Using direct embed URL with place_id for accurate location with marker
+// Get API key from environment (stored securely in Vercel, not in git)
+const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY;
+
+// Generate Google Maps embed URL using official Embed API
+// This shows proper marker, zoom, and info card on the location
 const fullAddress = `${address}, ${city}, ${state}, Australia`;
-const mapEmbedUrl = placeId 
-  ? `https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12000!2d0!3d0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s${placeId}!2s${encodeURIComponent(surgeonName)}!5e0!3m2!1sen!2sau!4v1609459200000!5m2!1sen!2sau`
-  : `https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`;
+const mapEmbedUrl = apiKey && placeId 
+  ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=place_id:${placeId}&zoom=15`
+  : apiKey
+    ? `https://www.google.com/maps/embed/v1/search?key=${apiKey}&q=${encodeURIComponent(fullAddress)}&zoom=15`
+    : null;
 
 // Generate directions URL for "Get Directions" button
 const directionsUrl = placeId
