@@ -1,0 +1,62 @@
+{
+  "dr-mark-magdy-miranda": {
+    "credentials": {
+      "medical_school": "MBBS, University of New South Wales",
+      "fellowships": [
+        "Fellow of the Royal Australasian College of Surgeons (FRACS)",
+        "International North American Fellowship in Bariatric Surgery",
+        "D.E.S in Robotic/Laparoscopic Bariatric Surgery"
+      ],
+      "professional_memberships": [
+        "International Federation for the Surgery of Obesity and Metabolic Disorders (IFSO)",
+        "Royal Australasian College of Surgeons"
+      ],
+      "special_training": [
+        "Advanced Laparoscopic Techniques",
+        "Robotic Bariatric Surgery"
+      ]
+    },
+    "faqs": [
+      {
+        "question": "What bariatric surgeries does Dr Mark Magdy offer in Miranda, Sydney?",
+        "answer": "Dr Mark Magdy specializes in laparoscopic sleeve gastrectomy, gastric bypass, mini-bypass, SADI, intragastric balloon, and hiatus hernia repair, performed at St George Private Hospital and Kareena Private Hospital."
+      },
+      {
+        "question": "How long does recovery take after bariatric surgery?",
+        "answer": "Most patients spend 1–2 days in hospital after minimally invasive bariatric surgery and can return to work in 2–4 weeks, depending on individual healing and the specific procedure."
+      },
+      {
+        "question": "What are the risks of sleeve gastrectomy and gastric bypass?",
+        "answer": "Complications may include bleeding, infection, leaks, blood clots, or nutritional deficiencies; risk profiles vary by procedure and are assessed individually during consultation."
+      },
+      {
+        "question": "What are the long-term benefits and success rates of bariatric surgery?",
+        "answer": "Most patients experience significant weight loss—often over half of their excess weight within two years—and improvement of obesity-related conditions like diabetes and sleep apnea."
+      },
+      {
+        "question": "What qualifications and experience does Dr Mark Magdy have?",
+        "answer": "Dr Mark Magdy holds an MBBS from UNSW, is a Fellow of RACS, completed an international North American fellowship, earned a D.E.S in robotic/laparoscopic bariatric surgery, and is a member of IFSO."
+      },
+      {
+        "question": "What should I know about pre-operative care for bariatric surgery?",
+        "answer": "Pre-operative care includes medical evaluation, lifestyle and nutrition counseling, and preparation for post-surgery recovery to ensure optimal outcomes."
+      },
+      {
+        "question": "What is involved in post-operative care following a bariatric procedure?",
+        "answer": "Post-op care involves follow-up appointments with your surgeon and dietitian, a phased eating plan, activity guidance, and support for long-term diet and lifestyle changes."
+      },
+      {
+        "question": "Will insurance cover my bariatric surgery with Dr Mark Magdy?",
+        "answer": "Private insurance may cover bariatric procedures if eligibility criteria are met; details vary by provider and you should confirm coverage and any out-of-pocket costs prior to surgery."
+      },
+      {
+        "question": "Where does Dr Mark Magdy perform his surgeries in Sydney?",
+        "answer": "Dr Mark Magdy operates at both St George Private Hospital and Kareena Private Hospital, serving Miranda and the greater Sydney area."
+      },
+      {
+        "question": "What lifestyle changes will I need after sleeve gastrectomy or gastric bypass?",
+        "answer": "You'll follow a phased diet, take daily supplements, exercise regularly, and attend scheduled follow-ups to ensure safe weight loss and monitor overall health."
+      }
+    ]
+  }
+}
