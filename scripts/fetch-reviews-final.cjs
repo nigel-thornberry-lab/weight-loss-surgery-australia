@@ -62,7 +62,8 @@ async function main() {
       console.log(`   Fetching: ${data.name}...`);
       const result = await fetchReviews(placeId);
       
-      if (result.success && result.reviews.length > 0) {
+      if (result.success) {
+        // Save even if 0 reviews - we need the placeId for the Google link
         reviewsCache[data.slug] = {
           placeId,
           surgeonName: data.name,

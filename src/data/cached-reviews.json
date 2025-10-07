@@ -66,7 +66,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:19.984Z"
+    "lastUpdated": "2025-10-07T05:30:02.298Z"
   },
   "aprof-christos-apostolou-surgeon-wahroonga": {
     "placeId": "ChIJc4Gz_q6nEmsRrW3yx_wiqzU",
@@ -135,7 +135,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:20.320Z"
+    "lastUpdated": "2025-10-07T05:30:02.596Z"
   },
   "b552f5ec-b008-4eff-9e4a-8c1ebb133e37": {
     "placeId": "ChIJ_6rD1cRC1moRbZXzqKoNazA",
@@ -204,7 +204,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:20.571Z"
+    "lastUpdated": "2025-10-07T05:30:02.887Z"
   },
   "aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah": {
     "placeId": "ChIJqVPfHou5EmsRDZ4LB78lVlQ",
@@ -273,7 +273,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:20.840Z"
+    "lastUpdated": "2025-10-07T05:30:03.159Z"
   },
   "associate-professor-michael-talbot-kogarah": {
     "placeId": "ChIJEf4EBOS5EmsRICnnrvFERBs",
@@ -342,7 +342,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:21.100Z"
+    "lastUpdated": "2025-10-07T05:30:03.432Z"
   },
   "dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen": {
     "placeId": "ChIJv591IPVH1moRhKX7xBbTunU",
@@ -411,7 +411,76 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:21.374Z"
+    "lastUpdated": "2025-10-07T05:30:03.674Z"
+  },
+  "dr-ali-zarrouk-campbelltown": {
+    "placeId": "ChIJH-TrxK3vEmsR9cApwZJVVHM",
+    "surgeonName": "Dr Ali Zarrouk",
+    "rating": 4.6,
+    "totalRatings": 30,
+    "reviews": [
+      {
+        "author_name": "Teressa Obrien",
+        "author_url": "https://www.google.com/maps/contrib/106381789351073757510/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVl-YoFDbX_qmHvRKm_x7V8V-oiLUyGTAKFcm2LBQTC27QxGzYRrw=s128-c0x00000000-cc-rp-mo-ba3",
+        "rating": 4,
+        "relative_time_description": "a week ago",
+        "text": "After few months of planning , I had to reschedule several times due to other emergency surgery and healing the team was supportive .in the end I was cancelled as it was recommended in consultation with my diabetic team it wasn't right for me  .\nBut admin was so quick and responsive straight away .",
+        "time": 1758871327,
+        "translated": false
+      },
+      {
+        "author_name": "Karen Clarke",
+        "author_url": "https://www.google.com/maps/contrib/110717678700620118877/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJcfDsTWDZsuEuJ_U_8IymGp77rk2Vp0-nNWBOBCBexJ14WgQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a week ago",
+        "text": "I cannot thank Dr Zarrouk enough for the exceptional care I have received. He always takes the time to explain everything clearly and answer my questions. I would highly recommend Dr Zarrouk.",
+        "time": 1758875524,
+        "translated": false
+      },
+      {
+        "author_name": "Ron Ashton",
+        "author_url": "https://www.google.com/maps/contrib/102689918780395292315/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJuqn99U9RoXYK_mQ8zTbcMJJgzhrOoruwrb1D1ILiZ-rnGP9I=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "4 months ago",
+        "text": "I'm so glad I choose Dr Ali Zarrouk for my surgery. I would highly recommend him. I couldn't be happier!",
+        "time": 1749108202,
+        "translated": false
+      },
+      {
+        "author_name": "Jeanette Ralph",
+        "author_url": "https://www.google.com/maps/contrib/111498644221447916038/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJLbZGJ0m6CiQZtD8_oso6L1Xv3pqFtJwRXPMQdj_vDbYGkWQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 1,
+        "relative_time_description": "3 months ago",
+        "text": "I was talking to a nice receptionist with dark hair then this other one starts talking over her and me I was just asking a question about the fees then got attitude, I then got weighed and yes I was embarrassed as I'd put on weight I tried to make small talk but got more attitude,  then specialist tells me my hernia is unrepairable but still insists on writing on paperwork he can do it both times I've had someone with me to validate what was said not a good experience when you go to try to fix yourself and you end up very upset and feeling hopeless",
+        "time": 1751332574,
+        "translated": false
+      },
+      {
+        "author_name": "Julie Hayes-Simek",
+        "author_url": "https://www.google.com/maps/contrib/106563229001650041698/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWDzrIWsJm0PYfL7aG3YXCd-IacFMxS_BSlao9FI7YvDF_OSz_9=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Four and a bit years on (sleeve) and still pleased with the results. I have stayed at my goal weight (lost 55kg).  Dr Zarrouk gave me the “tool” to live a healthy and non-obese life. I highly recommend Dr Zarrouk for your weight loss surgery.",
+        "time": 1719486938,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:03.978Z"
   },
   "dr-amitabha-das-liverpool": {
     "placeId": "ChIJoxcI6r6VEmsRmjhuuyw8Lcs",
@@ -480,7 +549,15 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:21.847Z"
+    "lastUpdated": "2025-10-07T05:30:04.252Z"
+  },
+  "dr-ben-keong-bundoora": {
+    "placeId": "ChIJT-BEBzJJ1moRn8ev00_vWco",
+    "surgeonName": "Dr Ben Keong",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:04.478Z"
   },
   "dr-clare-bouffler-kingswood": {
     "placeId": "ChIJC-78w-mFEmsRkPyQgSiav04",
@@ -513,7 +590,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:22.341Z"
+    "lastUpdated": "2025-10-07T05:30:05.046Z"
   },
   "dr-clement-tsang-hurstville": {
     "placeId": "ChIJLWTNEaK5EmsRwVLI4OFolhA",
@@ -582,7 +659,76 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:22.660Z"
+    "lastUpdated": "2025-10-07T05:30:05.304Z"
+  },
+  "dr-david-joseph-newtown": {
+    "placeId": "ChIJJwF0oi2wEmsRQN4U7p-MXV0",
+    "surgeonName": "Dr David Joseph",
+    "rating": 4.8,
+    "totalRatings": 34,
+    "reviews": [
+      {
+        "author_name": "Lynn Kenworthy",
+        "author_url": "https://www.google.com/maps/contrib/105041959804847772083/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJiBqYwnvKoWOcZjj9lnCPLK0QsEdOhZJiCbThKS1HY3FYTz8e_=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "My results after surgery with Dr Joseph have been life changing.  I'm 59 and have struggled with my weight my entire life. Diets always worked but then the weight would come back on. It was a revolving door of weight. After surgery i feel like i will never have to stress about my weight ever again. I feel strong and healthy. Been working out at gym which i thought i would never do.  So pleased i made the decision and staff at Bodyfree made the whole process stress free.",
+        "time": 1753058173,
+        "translated": false
+      },
+      {
+        "author_name": "Cam G",
+        "author_url": "https://www.google.com/maps/contrib/115170976757810916549/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocInQVLhf6z7YkhmjnWN--Q9e8elpJiDa7LMNO3rkZUpMYgAYA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "9 months ago",
+        "text": "I would like to extend my heartfelt thanks to the team, Dr Joseph, and the anaesthetist, Mark. After more than 20 surgeries in the past 7 year, I have never encountered professionals who care so deeply for their patients. I would certainly recommend this team to anyone considering surgery. You are in the hands of amazing professionals who are not only highly skilled but also empathic and caring. The entire team, from the dietitian and front desk staff to the surgical team, made the process far less daunting than I had anticipated, all thanks to their support. Kind regards, Cameron",
+        "time": 1734261862,
+        "translated": false
+      },
+      {
+        "author_name": "sheila graupera",
+        "author_url": "https://www.google.com/maps/contrib/103786702453746178162/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKW8WCMd5mM3N5Tx_PlfUlJHXzbxdp9QkQT2aGy44uhYjLIhQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "8 months ago",
+        "text": "I had surgery in August 2024 and my experience with the Dr D Joseph from they one has been amazing. Operating when well. Hospital stay and care was excellent. Anytime I had a concern he or his team has been able to help me and follow it up.",
+        "time": 1736814849,
+        "translated": false
+      },
+      {
+        "author_name": "lingus bingus",
+        "author_url": "https://www.google.com/maps/contrib/112257193738606962453/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocI2MDWa30LJyy9IMK7vRuDa69XMAJoFq4N6qFfK6_-Cmc7G2A=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 weeks ago",
+        "text": "dear david joseph, i don't know much about this practice but you are operating on my father. be a kind kind citizen and let him be joyous after his surgery. have a wonderful week.\n- lingus bingus",
+        "time": 1758250483,
+        "translated": false
+      },
+      {
+        "author_name": "Suzanne Curtis",
+        "author_url": "https://www.google.com/maps/contrib/110042655275996399893/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXiJDfayzGdWN70ekEP7brlShHBrnSm_B7OP4PPr4sVabag68M=s128-c0x00000000-cc-rp-mo-ba2",
+        "rating": 5,
+        "relative_time_description": "4 months ago",
+        "text": "I know it’s been quite a few years but I just wanted to thank Dr Joseph for all that he did for my late husband Simon Curtis in 2013. He performed a Whipples procedure on him and while it was successful and Simon recovered really well unfortunately the pancreatic cancer had spread and I lost him in December 2014. But if it hadn’t been for Dr Joseph then Simon may not have got the extra time he did.",
+        "time": 1748145951,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:05.556Z"
   },
   "dr-david-links-randwick": {
     "placeId": "ChIJg5ENau-zEmsRhVo6jfuRx4A",
@@ -627,7 +773,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:23.103Z"
+    "lastUpdated": "2025-10-07T05:30:05.814Z"
   },
   "dr-david-yeo-camperdown": {
     "placeId": "ChIJOcV7xy6wEmsRhGugyrVZSu0",
@@ -696,7 +842,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:23.354Z"
+    "lastUpdated": "2025-10-07T05:30:06.071Z"
   },
   "dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills": {
     "placeId": "ChIJEcZY9-nvEmsRFOqdM8993Sw",
@@ -765,7 +911,15 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:23.613Z"
+    "lastUpdated": "2025-10-07T05:30:06.348Z"
+  },
+  "dr-edward-tong-campbelltown-campbelltown": {
+    "placeId": "ChIJSzKX8ybvEmsRe3yhiFwmJtU",
+    "surgeonName": "Dr Edward Tong",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:07.056Z"
   },
   "dr-ernest-lim-bundoora": {
     "placeId": "ChIJKathaN5I1moRjGzzRUxKAok",
@@ -798,7 +952,76 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:24.050Z"
+    "lastUpdated": "2025-10-07T05:30:07.303Z"
+  },
+  "dr-ertugrul-durmush-liverpool": {
+    "placeId": "ChIJf9DpHb-VEmsRmx1pM-C6mbg",
+    "surgeonName": "Dr Ertugrul Durmush",
+    "rating": 4.2,
+    "totalRatings": 26,
+    "reviews": [
+      {
+        "author_name": "B",
+        "author_url": "https://www.google.com/maps/contrib/111093760808094424330/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocI6pML7jCQUZY8jrxk-XEHMoB6SHLscfELvDV0jE3fylDvG7lw=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 years ago",
+        "text": "Where do I start with my experience with gallstones and gallbladder surgery.\n\nI got screwed around for months by a number of different surgeons.\nThen I found this saint Dr Durmush.\nThe moment I met him I knew I was in safe hands, I highly recommend him and his team. They seen the seriousness of my condition and he operated on me 4 days later. He actually cares about his patients. Forever great full for the experience. Wouldn’t go to anyone else.\n\nThank you",
+        "time": 1686378927,
+        "translated": false
+      },
+      {
+        "author_name": "James Stanley",
+        "author_url": "https://www.google.com/maps/contrib/108639570552662476418/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLNNrafvmGMLQm8Y-19PVqn6d2bXbcNW5AR13rGL_YNWmIomA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Dr Durmush is a fantastic doctor/surgeon  and has been great pre surgery and post surgery in supporting my wife. He responds to emergency calls and  takes action if needing medical care or surgery. Highly recommend him and so greatful for his care and support. Great guidance and support around eating well and maintaining good physical health. Thanks so much  Shay and Joclyn\nHave reclaimed my life and doing the city2surf this year when a year ago could not even walk for 5 minutes.",
+        "time": 1707875606,
+        "translated": false
+      },
+      {
+        "author_name": "Madison Sullivan",
+        "author_url": "https://www.google.com/maps/contrib/110653758293622950000/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIb4crUB8W9dsbJpuI26OEXyd4wbh7OwtCCLulXOWir7n7dPQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "my journey with Dr Durmush has only just begun and I can honestly say , when you make such a major life change , when you need a honest specialist who will not just operate for the sake of it , who will make sure mentally , physically and healthy you need to be. There is no one I would recommend more. When I first met Dr Durmush 3 months ago to the person I am today , I can well and truly say that I am looking at two different people in the mirror , so although my weight loss journey has only just begun , the strength , guidance and support already provided , has truly already made me change so much about my life and value it to the very fullest and now with the second chance Dr Durmush has given me , I will never look back :)",
+        "time": 1702342855,
+        "translated": false
+      },
+      {
+        "author_name": "Danijel Lukic",
+        "author_url": "https://www.google.com/maps/contrib/109953944255688352427/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIcbKo9cEYeAdkBYsCIIPoTp4UJRmp2vAwSWysR-qSM0FHNyg=s128-c0x00000000-cc-rp-mo-ba2",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Dr. Durmush is truly an extraordinary individual, embodying not only profound medical expertise but also a remarkable capacity to empathise and provide practical advice drawn from his extensive experience.\n\nRather than hurriedly navigating through limited time or diagnoses, he takes the time to attentively listen and present potential solutions. Leaving his office, you're left with the comforting feeling of having conversed with a trusted friend who understands you on a deep level.\n\nCredit is equally due to his assistant, Ebru, whose warm welcome and wealth of knowledge seamlessly address any inquiries you may have. The presence of such dedicated individuals enhances the overall experience, making it truly invaluable to have them as part of your healthcare journey.",
+        "time": 1702877486,
+        "translated": false
+      },
+      {
+        "author_name": "sinem arslan",
+        "author_url": "https://www.google.com/maps/contrib/114041751955690995611/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJWnwIEMuKwYyPsyKuuro3zEkoXoh-FvuaFukDt0vhWKRVMdQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "5 years ago",
+        "text": "Dr E K Durmush and his team are AMAZING. His professionalism, character and nature is undoubtable.\nHe actually treats his patients with respect, dignity and pride in all aspects. He treats all his patients as a “ being” and not just another “number”.  After having my procedure done now at even 10 years on l still recommend and highly regard him for his professionalism. Not only have l trusted myself but also my family, friends and colleagues have trusted him over the past 10 years and am happily able to say not a negative experience with either one off them.\nThank you for all your ongoing hard work and dedication Dr Durmush and all your team. 🌟",
+        "time": 1592910432,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:07.595Z"
   },
   "dr-fadil-khaleal-penrith": {
     "placeId": "ChIJWeLu14qFEmsRFatTfV5QTtU",
@@ -867,7 +1090,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:24.503Z"
+    "lastUpdated": "2025-10-07T05:30:07.850Z"
   },
   "dr-faizur-reza-bella-vista": {
     "placeId": "ChIJedtdzhmZEmsR2j889dQuLMg",
@@ -936,7 +1159,84 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:24.752Z"
+    "lastUpdated": "2025-10-07T05:30:08.177Z"
+  },
+  "dr-gary-yee-kogarah": {
+    "placeId": "ChIJUb4w9ji5EmsRJcJVq70djHU",
+    "surgeonName": "Dr Gary Yee",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:08.406Z"
+  },
+  "dr-govind-krishna-weight-loss-general-surgeon-wetherill-park": {
+    "placeId": "ChIJi0H1kYC9EmsRaq0kg1Hz0Ec",
+    "surgeonName": "Dr Govind Krishna",
+    "rating": 4.3,
+    "totalRatings": 45,
+    "reviews": [
+      {
+        "author_name": "Jessica Murad",
+        "author_url": "https://www.google.com/maps/contrib/112613755371725397931/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVlfJ04wgflZMv1HcYnzIx2nayMFH4hzC-GHthU1k7h_4lhS92g=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a month ago",
+        "text": "I had a wonderful experience with Dr. Govind Krishna and his team. Dr. Krishna was extremely friendly, caring, and attentive throughout the entire process. He truly listens to his patients, explains everything clearly, and takes great care to ensure the best results. His professionalism and respect made me feel completely comfortable and confident.\n\nThe secretary and staff were also amazing – very friendly, respectful, and always ready to help. From start to finish, the whole experience was smooth and reassuring. I’m very happy with my results and grateful for the excellent care I received. If I could, I would rate him more than 5 stars — he truly deserves it! Highly recommend Dr. Krishna and his team! ⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️⭐️",
+        "time": 1754986543,
+        "translated": false
+      },
+      {
+        "author_name": "Emma Mccubben",
+        "author_url": "https://www.google.com/maps/contrib/111269679649570614880/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKF6mvlQWF4sQQVHpGh62FAl8_ZDUMGHxEAjkYZ1iMRFdfvUg=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Had my gastric sleeve done by Dr Krishna! Can hands down say it was the best thing I ever did, he made the process so easy and explained every step of the way. No issues or complications with the surgery, and post surgery has been so helpful with the follow up appointments. Could not recommend him more! Mary and the staff have been amazing to deal with 😊",
+        "time": 1697010780,
+        "translated": false
+      },
+      {
+        "author_name": "K Dobe",
+        "author_url": "https://www.google.com/maps/contrib/115208569527281940916/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWBdDnMz3E_MK3QkJ_14pcciSvngxszlQxYCr3kAGsuh6WaZOlf=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 years ago",
+        "text": "In 2022, I met with Dr Govind Krishna to discuss getting a gastric sleeve. Dr Krishna and his team at Fairfield were absolutely amazing and made the process so easy. The team assisted me with documents to ensure I was able to finance my operation with ease. I found the information I received and support from the dietitian , counsellors and other health physicians very supportive and felt I was more than just a number. I would highly recommend Dr Krishna for anybody considering bariatric surgery! Dr Krishna and his team have changed my life!",
+        "time": 1696413508,
+        "translated": false
+      },
+      {
+        "author_name": "Moana Kolesi",
+        "author_url": "https://www.google.com/maps/contrib/115028912274212230871/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJQRcd6gzxufDsnTAryG0QjtYohk0nW3edbKSRX7y47PcMTow=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Brilliant Doctor and staff. Highly recommend. I am officially 1 week post gastric bypass op. The follow up has been great too. Not only did he visit me the day after surgery in hospital, he also phone me a day after. I have a face to face with him today. I’m so glad I went with him.",
+        "time": 1702953719,
+        "translated": false
+      },
+      {
+        "author_name": "Maja Popovic",
+        "author_url": "https://www.google.com/maps/contrib/113146941254495258432/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUqGov0nbVkzDbRmQpa5EZ0lOeMO4r7WIhekgFKslb158Kk3_yj=s128-c0x00000000-cc-rp-mo-ba3",
+        "rating": 1,
+        "relative_time_description": "a year ago",
+        "text": "Dr Krishna performed simple surgery on me last April, he did not listen why i came and what was my issues. He did what he did and told me that i need to come back to re do it and that i should specify on day of surgery that i want that part of haemorrhoid removed. I am looking for new surgent as he made my condition worse. My rating for job done on me is below 0. Save yourself a time",
+        "time": 1710199012,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:08.660Z"
   },
   "weightlossandkeyholesurgery": {
     "placeId": "ChIJvZOyGasfE2sRxhWKBqxm3uE",
@@ -1005,7 +1305,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:25.458Z"
+    "lastUpdated": "2025-10-07T05:30:08.913Z"
   },
   "dr-james-gallagher-newtown": {
     "placeId": "ChIJJwF0oi2wEmsROQsfp6zkOnA",
@@ -1034,7 +1334,15 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:25.727Z"
+    "lastUpdated": "2025-10-07T05:30:09.172Z"
+  },
+  "dr-jan-parker-glen-waverley": {
+    "placeId": "ChIJHSdIaX4_1moRPVmLJ-tldvo",
+    "surgeonName": "Dr Jan Parker",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:09.412Z"
   },
   "dr-jason-maani-kogarah": {
     "placeId": "ChIJ8RvQAOS5EmsRVcXt4aog-OA",
@@ -1103,7 +1411,145 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:26.223Z"
+    "lastUpdated": "2025-10-07T05:30:09.672Z"
+  },
+  "dr-jason-maani-bariatric-surgery-liverpool": {
+    "placeId": "ChIJ256UdTWVEmsRj7FBSF1qHDU",
+    "surgeonName": "Dr Jason Maani Bariatric Surgery",
+    "rating": 5,
+    "totalRatings": 83,
+    "reviews": [
+      {
+        "author_name": "Victoria Gee",
+        "author_url": "https://www.google.com/maps/contrib/105318001295809574180/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIgSuwLhz_XupQzEQXJDJuuJ7AsZDahonXqgggE167I_MM6mA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "4 months ago",
+        "text": "LETS GO! 2 years post opp!!!\n\nyes the struggle was hard but worth it, I have the best energy for my children and husband.\nIt has been a wild ride as you all can imagine, I hope I can tighten up my body and maintain.\n\nDr Jason Maani, Leading Bariatric Surgeon has been amazing, every step of the way with so much support from him and his team. Thank you guys 🩷\n\nSTART WEIGHT : 109KG\nCURRENTLY: 54.5KG\nTOTAL LOSS OF : 54.5KG! exactly half my body weight 💪",
+        "time": 1749295413,
+        "translated": false
+      },
+      {
+        "author_name": "Staci Navrozoglou",
+        "author_url": "https://www.google.com/maps/contrib/102381097634766125305/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUN5iU5Rhxu2b9HeaKENtEJyoustrOGZpVyYDa2LQfp31cUnRA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "3 months ago",
+        "text": "Having bariatric surgery is one of the best decisions I have ever made. I am now 10 weeks post surgery and it has already been life changing, 25 kilos down.\nDr Maani was supportive from the very beginning, he took the time to explain all my options, was happy to answer all my questions and help me decide which path to take to begin my weight loss journey. Pre-surgery, Dr Maani and his team made sure I was informed about the procedure and that I felt comfortable. The post surgery care has been great, I have felt very supported. I cannot recommend Dr Maani highly enough!",
+        "time": 1750599545,
+        "translated": false
+      },
+      {
+        "author_name": "Raman Kang",
+        "author_url": "https://www.google.com/maps/contrib/104063140446027057442/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJYj5l7gTiA0rYkkMP4ub-UtfrgLT7cXcNGfNKrQA9hTfLI2w=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "4 months ago",
+        "text": "Dr Maani is nothing short of amazing, from my initial consultation, leading up to the surgery, surgery and post surgery care. His team are very helpful and always there to respond to comms. I am now 1 year post op loosing over 60kgs, Dr Maani keeps it real - holds you accountable throughout the process. So glad I made this life changing decision it’s one of the best things I’ve done, highly recommend Dr Maani and his team.",
+        "time": 1747625881,
+        "translated": false
+      },
+      {
+        "author_name": "Faye Wraidi",
+        "author_url": "https://www.google.com/maps/contrib/105742599240011862442/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKLteMncChDM0Z2D_LvAai74YV6pVJ7hjEWZxs5O1Rby4I0iQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "7 months ago",
+        "text": "I can't express enough how grateful I am for Dr Maanis expertise and care throughout the entire process. From the initial consultation to the post-operative follow-ups, he was incredibly supportive and informative, making sure I understood every step of the journey. The surgery itself went smoothly, and I experienced minimal discomfort during recovery. I was very scared as it was my first surgery Dr Maani and his team were incredible.\n\nHe took the time to address all my concerns and tailored a plan that suited my needs perfectly. Thanks to their guidance, I have already started seeing significant results and feel more energised than ever. No more heart medication I have lost 60kg. I highly recommend  Dr Maani to anyone considering gastric sleeve surgery; him and his teams professionalism and dedication truly make a difference! If your on the fence go for it best decision I ever made.",
+        "time": 1739339141,
+        "translated": false
+      },
+      {
+        "author_name": "Nifemi Olumide",
+        "author_url": "https://www.google.com/maps/contrib/102073392124714090855/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWdvgGXntzdvTy7m6iuzuwVEfUY9lr0--nsTq9RfQuNuqTlyifTdA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Deciding to get sleeve gastrectomy with Dr Maani and his team, is one of the best decisions I’ve made. At my initial consultation, I was around 123kgs and even though I knew I needed this surgery, I was scared. He calmly explained the process to me, and encouraged me to take the time I needed to be mentally and emotionally prepared. I knew I was in safe hands, and 5 months after that consultation, I had surgery. The care I received while in hospital was amazing. Its been 7 months post op, and as at this morning (22/03/24) I’m 73.6kg.",
+        "time": 1711052708,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:09.968Z"
+  },
+  "dr-jason-maani-gallbladder-surgery-liverpool": {
+    "placeId": "ChIJc8c7fu6VEmsR_k80OcBuL0Y",
+    "surgeonName": "Dr Jason Maani Gallbladder Surgery",
+    "rating": 5,
+    "totalRatings": 6,
+    "reviews": [
+      {
+        "author_name": "john Qiu",
+        "author_url": "https://www.google.com/maps/contrib/100811988754879226472/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLYSr7BSDFK6ZeG5o_eM1SlIldH3ndke_HtSLoRmR-Qr-LX1Q=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Dr.Maani did an operation for me on September this year. The operation was quite successful. Also post operation care was thorough and I feel much better and happy with Dr. Maani' skill and service.",
+        "time": 1700120360,
+        "translated": false
+      },
+      {
+        "author_name": "Emma Freestone",
+        "author_url": "https://www.google.com/maps/contrib/117864094174244191935/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJJFNwQmRbzMTffUUp7vm-eZaGrzzw_H9RhdGmNWXXLCZvezA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "I felt very comfortable with Dr Maani as my surgeon, he was very detailed in explaining what to expect & was attentive pre and post operation. I highly recommend Dr Manni.",
+        "time": 1701050586,
+        "translated": false
+      },
+      {
+        "author_name": "Dollys Bakery",
+        "author_url": "https://www.google.com/maps/contrib/107318788920236793164/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLSvPiscCfr4tVQCPnSf9dHKquhHr9j3LhvmvvCEvVeHFaB3Q=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "One of the best surgeons, has hands if gold. Did my cholecystectomy and my procedure and recovery time was wonderful. Many years on I am glad he was my surgeon.",
+        "time": 1700027545,
+        "translated": false
+      },
+      {
+        "author_name": "Michael Whitehouse",
+        "author_url": "https://www.google.com/maps/contrib/113247857021895527458/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjU4jDhp25BcGSSXeBsLDm2Ld_Qqz95TWsJ0cVnWjYbJQ72Mar4=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Awesome surgeon. After my surgery I am back surfing and kickboxing with my son. This has really changed my life for the better and I am forever grateful.",
+        "time": 1700091661,
+        "translated": false
+      },
+      {
+        "author_name": "Sean Xiong",
+        "author_url": "https://www.google.com/maps/contrib/111021111028697104058/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIT7WCYXUionNWYLX9QpRiXZHrz9GalheuenAlFoWEW7xefpQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Dr Jason and his team were great- very informative and had very little post operative discomfort.",
+        "time": 1709685899,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:10.219Z"
   },
   "dr-john-jorgensen-kogarah": {
     "placeId": "ChIJEf4EBOS5EmsRxpeEOL6lKtI",
@@ -1172,7 +1618,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:26.865Z"
+    "lastUpdated": "2025-10-07T05:30:10.466Z"
   },
   "dr-john-ozmen-general-upper-gi-surgeon-bella-vista": {
     "placeId": "ChIJIfX7mwCiEmsRbBmM_SbmK2M",
@@ -1241,7 +1687,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:27.146Z"
+    "lastUpdated": "2025-10-07T05:30:10.712Z"
   },
   "stgeorgeobesitysurgery": {
     "placeId": "ChIJEf4EBOS5EmsRhJ0_VhElfu0",
@@ -1310,7 +1756,72 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:27.488Z"
+    "lastUpdated": "2025-10-07T05:30:10.965Z"
+  },
+  "dr-lp-cheah-coburg": {
+    "placeId": "ChIJk9D8cVVb1moRfkdInYfPXTw",
+    "surgeonName": "Dr LP Cheah",
+    "rating": 2,
+    "totalRatings": 5,
+    "reviews": [
+      {
+        "author_name": "JunByum AN",
+        "author_url": "https://www.google.com/maps/contrib/100109244141142605733/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocL0DXXE5GFX7SCqVBBBbr6ZSp-WhGLToWd_02HI1SVGgw-iBA=s128-c0x00000000-cc-rp-mo",
+        "rating": 1,
+        "relative_time_description": "2 months ago",
+        "text": "I had a deeply concerning experience after my ganglion cyst removal surgery with Mr. Cheah. I attended three post-surgery appointments and raised concerns about the middle of my foot turning black. I requested antibiotics, but he dismissed the need, stating that in Australia, antibiotics are not commonly used and that “time is the only medicine.”\n\nUnfortunately, my foot remained in pain and discoloured for weeks. I later sought a second opinion, and it was confirmed that I had a serious infection and a developing ulcer that now requires further surgery. I believe this issue could have been prevented with more attentive post-operative care.\n\nBased on my experience, I cannot recommend this doctor, especially for post-operative follow-up.",
+        "time": 1754393798,
+        "translated": false
+      },
+      {
+        "author_name": "David Flint",
+        "author_url": "https://www.google.com/maps/contrib/114128056427423490080/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJBk8fhu_NYOjo9qIs0-S4ZaJpyOO_iHPVMEWm_l7lAURodGA=s128-c0x00000000-cc-rp-mo",
+        "rating": 1,
+        "relative_time_description": "2 years ago",
+        "text": "No post surgery visit in hospital. Went for checkup due to wound being infected and Cheah was very dismissive of questions being asked. He then tried to charge $300 for out of pocket expenses for surgery 4 weeks prior. Cheah had an eftpos machine on his desk to collect but would not provide an invoice for services rendered, becoming quite rude and argumentative. Medical certificate stated that I only attended for 10 minutes but failed to mention that I had to wait for an hour before being seen.. Worst post surgery service I have ever received. I would not recommend Dr Cheah to anyone. Be warned.",
+        "time": 1684927779,
+        "translated": false
+      },
+      {
+        "author_name": "Esther Ndukwe",
+        "author_url": "https://www.google.com/maps/contrib/114222815766781220685/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIbnoSVIYdk8ukdzHz5cxJwUHmVoSg8CEjT0UmR94gfGbmkMw=s128-c0x00000000-cc-rp-mo",
+        "rating": 2,
+        "relative_time_description": "6 years ago",
+        "text": "Would have liked more empathy and better communication.",
+        "time": 1551797249,
+        "translated": false
+      },
+      {
+        "author_name": "Ángel Abad",
+        "author_url": "https://www.google.com/maps/contrib/110302849147295117994/reviews",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIcqeHyKrWiyvtDxcmY7k92TD6Afe04Sek3xQetm4wWb6sriw=s128-c0x00000000-cc-rp-mo-ba3",
+        "rating": 5,
+        "relative_time_description": "6 years ago",
+        "text": "",
+        "time": 1543297798,
+        "translated": false
+      },
+      {
+        "author_name": "SIRI CTR",
+        "author_url": "https://www.google.com/maps/contrib/107403967162677905819/reviews",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUMderwHyZjtgb7x--VlPPPe87s6enWRd4TVoWTafDb5SUCsHVV6g=s128-c0x00000000-cc-rp-mo-ba4",
+        "rating": 1,
+        "relative_time_description": "7 years ago",
+        "text": "",
+        "time": 1510981158,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:11.216Z"
   },
   "dr-mani-niazi-wantirna": {
     "placeId": "ChIJVVVVoQE81moRnEnQ7D6KkAg",
@@ -1379,7 +1890,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:27.942Z"
+    "lastUpdated": "2025-10-07T05:30:11.485Z"
   },
   "dr-mani-niazi-langwarrin-mbsa-langwarrin": {
     "placeId": "ChIJt7JwXQUL1moRHe4P03qnkAI",
@@ -1424,7 +1935,76 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:28.179Z"
+    "lastUpdated": "2025-10-07T05:30:11.724Z"
+  },
+  "dr-michael-crawford-newtown": {
+    "placeId": "ChIJJwF0oi2wEmsRp9ufCG3d1rg",
+    "surgeonName": "Dr Michael Crawford",
+    "rating": 5,
+    "totalRatings": 19,
+    "reviews": [
+      {
+        "author_name": "Larissa Lockrey",
+        "author_url": "https://www.google.com/maps/contrib/101833120221455233910/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUCmu2ytZgO5pNTEDAu7L95p_eD0p4-E1a52XjI-GSqFOKtXbXb=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a week ago",
+        "text": "Dr. Michael Crawford is an outstanding surgeon. From the very first consultation, he was personable, kind, and immediately put me at ease. He explains everything clearly and takes the time to answer all your questions with patience and care. I felt completely supported throughout the entire process. I cannot recommend Dr. Crawford and his team highly enough!",
+        "time": 1758698300,
+        "translated": false
+      },
+      {
+        "author_name": "Ola Chaaban",
+        "author_url": "https://www.google.com/maps/contrib/101128682346376928788/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXzaMhl2nEvVwhCZ-YdHLat2RhR2nLoM910Uk1kOisaFoMu73kl=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a week ago",
+        "text": "Dr Michael Crawford was an amazing surgeon. Brought me a lot of peace and comfort during the whole process. He is very kind and explains everything in an easy to understand manner. Im glad he was the one who made me a new person and I’m glad I chose him to have this journey with. No regrets hands down best doctor",
+        "time": 1758633975,
+        "translated": false
+      },
+      {
+        "author_name": "Priscilla Prempeh",
+        "author_url": "https://www.google.com/maps/contrib/116347535773046789628/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUsU9IAPYxc3ZjaVuOYuatRhUpnFnV4Y4QrvvrMwLNesOvRZwy5=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "3 months ago",
+        "text": "I had a wonderful experience with Dr. Michael during my appointment. From the moment I walked in, I felt genuinely cared for. He took the time to explain everything clearly, answered all of my questions with patience, and made me feel at ease throughout the entire visit. It’s rare to find a specialist who is both highly knowledgeable and so compassionate. I truly felt like I was in good hands. Highly recommend!",
+        "time": 1749599004,
+        "translated": false
+      },
+      {
+        "author_name": "candice Saisoaa",
+        "author_url": "https://www.google.com/maps/contrib/104164533863041773882/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIZEzEg7QB-F-VcSGmI2Tr-uSbYEqGLGhfzVMWEStzAUhje0g=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a week ago",
+        "text": "Thanks, Dr Crawford and team!!!\nDr Crawford is an excellent surgeon who communicates well, listens, and explains everything!",
+        "time": 1758708050,
+        "translated": false
+      },
+      {
+        "author_name": "Sue Madden",
+        "author_url": "https://www.google.com/maps/contrib/111414112460206196199/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJBsbHntsSzmqO_Gm3tLGTTZNP6vgRJKEHFzusECBfi34_n3g=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a week ago",
+        "text": "Dr Michael Crawford is a very kind and caring doctor he explains everything to you from the beginning of your procedure to the end of your surgery",
+        "time": 1758748833,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:11.991Z"
   },
   "dr-michael-devadas-baulkham-hills": {
     "placeId": "ChIJ0cW2tuWhEmsR3QM1FLeRx7k",
@@ -1493,7 +2073,15 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:28.635Z"
+    "lastUpdated": "2025-10-07T05:30:12.266Z"
+  },
+  "dr-michael-hii-werribee": {
+    "placeId": "ChIJ16xO7JaJ1moRA9dJ5VCq384",
+    "surgeonName": "Dr Michael Hii",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:12.487Z"
   },
   "dr-michael-yunaev-potts-point": {
     "placeId": "ChIJocUl6gyuEmsRRlnWRZejzEw",
@@ -1562,7 +2150,15 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:29.342Z"
+    "lastUpdated": "2025-10-07T05:30:13.029Z"
+  },
+  "d8069235e89e4ade9b5aa06c51cd9848": {
+    "placeId": "ChIJ30Rq4X6jEmsR0kndIgeDHvY",
+    "surgeonName": "Dr Nicholas Cocco",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:13.508Z"
   },
   "dr-nicole-winter-east-melbourne": {
     "placeId": "ChIJ_88BV3JD1moRDxcx0SgnBrU",
@@ -1631,7 +2227,15 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:30.075Z"
+    "lastUpdated": "2025-10-07T05:30:13.769Z"
+  },
+  "surgicalconsultinggroup": {
+    "placeId": "ChIJszCeM8xo1moR6TMGXWlnrfQ",
+    "surgeonName": "Dr Paul Burton",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:13.998Z"
   },
   "dr-philip-le-page-campbelltown": {
     "placeId": "ChIJ6ZzsTarvEmsRlPNuHkom7VA",
@@ -1700,7 +2304,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:30.557Z"
+    "lastUpdated": "2025-10-07T05:30:14.293Z"
   },
   "dr-philip-le-page-surgeon-frenchs-forest": {
     "placeId": "ChIJe4UtZG2pEmsRvTHpfaaVTsU",
@@ -1769,7 +2373,84 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:30.902Z"
+    "lastUpdated": "2025-10-07T05:30:14.560Z"
+  },
+  "dr-philip-le-page-surgeon-concord": {
+    "placeId": "ChIJcyYyFj6lEmsRD1iQ36AgGxw",
+    "surgeonName": "Dr Philip Le Page",
+    "rating": 5,
+    "totalRatings": 7,
+    "reviews": [
+      {
+        "author_name": "Adrian Stott",
+        "author_url": "https://www.google.com/maps/contrib/114711125625742733822/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJTd-g3I5kYkkhlUerR3lYixvm1_AQWbxXAGyFMH9ioq3UurA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "6 years ago",
+        "text": "Dr LePage is an amazing surgeon.  I had revision weight loss surgery performed by De LePage and the quality of his work is fantastic.  Despite lengthy multiple procedures being performed I was out of bed in no time, and feeling fantastic.  Compared with earlier surgery performed by another surgeon, the recovery process was so much better.  NO infections.  NO pain medication needed.  NO heavy bruising.  Tidy incisions leaving barely any scars.  My weight loss progress has been incredible and the package deal of support has been valuable.  Dr LePage has very reasonable fees, especially considering his expertise and peer respect in his chosen field.  I feel so very grateful for the new life Dr LePage has given me.  Aside from being an amazing professional, he is very calming and a thoroughly nice gentleman, and I felt totally confident being under his care, despite medical matters normally freaking me the hell out.",
+        "time": 1565620253,
+        "translated": false
+      },
+      {
+        "author_name": "Fergus Hardingham",
+        "author_url": "https://www.google.com/maps/contrib/115433041844025660324/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjU9YM8ljaCOvXF_0_7yVQNeIcDG6LWm7tjHX3APs0S2jHnsaiY=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "8 months ago",
+        "text": "Dr Philip Le Page was personable and professional in his explanation of the procedure and the procedure was completed successfully with no complications.",
+        "time": 1738895258,
+        "translated": false
+      },
+      {
+        "author_name": "denise Hill",
+        "author_url": "https://www.google.com/maps/contrib/102693282440093814227/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIOmMitXHh9ha_5SjkrBJsSqc64z3K4YJ56E7spJlxeVMU7ig=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "4 years ago",
+        "text": "Dr Le Page  done WLS on me on th 18 jan 2021 i was expecting pain & gas problems etc all the stories you hear, my pain was minimal the gas in my body passed with in two day and was really a problem . the operating sites are perfect\nDr Le Page was awesome  cannot thank  him enough and would very highly recommend him for this type of procedure",
+        "time": 1612218280,
+        "translated": false
+      },
+      {
+        "author_name": "vickie quill",
+        "author_url": "https://www.google.com/maps/contrib/114143546888102623808/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLMkVDQtCpXUtf-K3l_GxacWswAe36a3Y4txF7xwFC34XdN3A=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "3 years ago",
+        "text": "I found Dr Le Page to be most welcoming. He answered all my questions before and after surgery I am 3 weeks post surgery and I’m feeling that it has been the best decision I have ever made.",
+        "time": 1650982680,
+        "translated": false
+      },
+      {
+        "author_name": "mark v",
+        "author_url": "https://www.google.com/maps/contrib/111337639309834447290/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJ0_VV0FSOzH6ae8I9DwWMdlpj67IzL9Vs6bO_ZRSC1xLNsPA=s128-c0x00000000-cc-rp-mo-ba3",
+        "rating": 5,
+        "relative_time_description": "4 years ago",
+        "text": "Cant say enough of Dr lepages professionalism and his great surgeon skills. His whole team from start to finish great! No ill after effects and I highly recommend his services to anyone thinking of getting surgery!",
+        "time": 1616591018,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:14.807Z"
+  },
+  "dr-rachel-kirby-campbelltown": {
+    "placeId": "ChIJ-bPGCy_vEmsR4PM32rRUOng",
+    "surgeonName": "Dr Rachel Kirby",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:15.105Z"
   },
   "dr-ramez-bassari-richmond": {
     "placeId": "ChIJRUdos6FD1moR8Itosin2opg",
@@ -1834,7 +2515,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:31.567Z"
+    "lastUpdated": "2025-10-07T05:30:15.354Z"
   },
   "dr-robert-candy-general-surgeon": {
     "placeId": "ChIJPf1u0RiyEmsRToAH5sYubG4",
@@ -1903,7 +2584,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:31.830Z"
+    "lastUpdated": "2025-10-07T05:30:15.625Z"
   },
   "dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah": {
     "placeId": "ChIJLeOeOZG5EmsRbQQUsKia43U",
@@ -1972,7 +2653,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:32.106Z"
+    "lastUpdated": "2025-10-07T05:30:15.899Z"
   },
   "dr-saras-and-co-team-qvm8ab2xhhv9x6ssxnjkzdg1tuuisa9ot4pbbzxpts": {
     "placeId": "ChIJUZnydOetEmsRgtrofzOX9S8",
@@ -2015,7 +2696,70 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:32.343Z"
+    "lastUpdated": "2025-10-07T05:30:16.153Z"
+  },
+  "dr-sean-mackay-box-hill": {
+    "placeId": "ChIJsYTrobZA1moRWYZpNvo5-qE",
+    "surgeonName": "Dr Sean Mackay",
+    "rating": 4,
+    "totalRatings": 8,
+    "reviews": [
+      {
+        "author_name": "Joe Monelli",
+        "author_url": "https://www.google.com/maps/contrib/113451545817931758781/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLY6f6jQPoNL2LwFGP4S98vP0wBhThYsjSSZQ-By_LAgFL1Nw=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Dr.Mackay is a very caring and professional surgeon who always displays sincere interest in his patients.",
+        "time": 1727219110,
+        "translated": false
+      },
+      {
+        "author_name": "Natalie Weeks",
+        "author_url": "https://www.google.com/maps/contrib/109924135760847087742/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWcnRGZidjZP5mNbcfbcnPjuzB4kqwxohjAgmLdsp0iZM29Yb_8uQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "Dr Sean Mackay and his team are wonderful. He shows a true interest in his patients",
+        "time": 1723889617,
+        "translated": false
+      },
+      {
+        "author_name": "Jawad svbuildingservices",
+        "author_url": "https://www.google.com/maps/contrib/106381357135962450615/reviews",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLdyovlYlS7qPBX4AGMqCDySz_Se-vhg8HgGhb9UV8pnCWPAg=s128-c0x00000000-cc-rp-mo",
+        "rating": 1,
+        "relative_time_description": "a year ago",
+        "text": "",
+        "time": 1718845954,
+        "translated": false
+      },
+      {
+        "author_name": "david rae",
+        "author_url": "https://www.google.com/maps/contrib/113940651697730316792/reviews",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWcsq7gEsK28zx1POo-gmZDegEfBG-VuQHIJCSmvBS6h2iIAA-IyQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 1,
+        "relative_time_description": "a year ago",
+        "text": "",
+        "time": 1710286381,
+        "translated": false
+      },
+      {
+        "author_name": "Glynis Galbraith",
+        "author_url": "https://www.google.com/maps/contrib/105328271489167757475/reviews",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocL9TPmm7KXySFudU6sl0Py_GRlMyJDd3NPx9_6q2RqmfQzcaw=s128-c0x00000000-cc-rp-mo-ba3",
+        "rating": 5,
+        "relative_time_description": "2 years ago",
+        "text": "",
+        "time": 1675068860,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:16.411Z"
   },
   "dr-stuart-pincott-frenchs-forest": {
     "placeId": "ChIJ9a95_IiqEmsR3s1O3YQ8rpg",
@@ -2084,7 +2828,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:32.796Z"
+    "lastUpdated": "2025-10-07T05:30:16.665Z"
   },
   "dr-suhirdan-vivekanandarajah-darlinghurst": {
     "placeId": "ChIJG6ZBaRCuEmsR9V81Ke2TZmY",
@@ -2153,7 +2897,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:33.043Z"
+    "lastUpdated": "2025-10-07T05:30:16.933Z"
   },
   "darebinweightlosssurgery": {
     "placeId": "ChIJAZZI9ANH1moRZy2HwWSszHk",
@@ -2220,7 +2964,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:33.379Z"
+    "lastUpdated": "2025-10-07T05:30:17.177Z"
   },
   "a76f4241ed0b4281877c5e832ce1a70b": {
     "placeId": "ChIJj1tSAIOZEmsRgU7IxMqRQvU",
@@ -2289,7 +3033,149 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:33.638Z"
+    "lastUpdated": "2025-10-07T05:30:17.480Z"
+  },
+  "dr-ina-takkar-glen-waverley": {
+    "placeId": "ChIJC3o7g_o_1moRJ0uP2Nxkhww",
+    "surgeonName": "Dr. Ina Takkar",
+    "rating": 5,
+    "totalRatings": 9,
+    "reviews": [
+      {
+        "author_name": "Damien Jones",
+        "author_url": "https://www.google.com/maps/contrib/105097938713523447209/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLI7xWw1Hne0Y1bItUo1a7Q3H2K9nIUAOwVcL_1h7aUodbVBw=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "7 years ago",
+        "text": "Dr. Ina Takkar is an excellent GP.  I've been going to Dr. Takkar from long time now and have found her to be a very caring doctor and always with a smile.  She is very knowledgeable, gives great advice, asks a lot of questions of her patients. She always listens and then gives thorough explanations. You never feel as though she's rushing you out the door. Will make recommendations for specialists as soon as she deems it necessary. I fully trust her advice. also I like that if she doesn't no what is wrong she doesn't hesitate to send you to a specialist. The staff is always friendly and work as hard as possible to squeeze you in if it is an emergency problem. She is easy to talk to about anything.",
+        "time": 1524698940,
+        "translated": false
+      },
+      {
+        "author_name": "Peter Murnane",
+        "author_url": "https://www.google.com/maps/contrib/104509692309034773269/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIw0t9MR0wMaeh5B1_aDOklxvbmqD7QGTpNPP2OGa5k9yQBcQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "9 years ago",
+        "text": "I found Doctor Takkar very thorough, very patient and very knowledgeable.\nShe explained what problems I had so I could understand the conditions and what needs to be done.\nI needs a referral to a specialist and the specialist she referred me to was excellent also.\nI am very happy to have been recently introduced to Doctor Takkar and will continue to use her as my GP.",
+        "time": 1466377274,
+        "translated": false
+      },
+      {
+        "author_name": "Shelly Kaur",
+        "author_url": "https://www.google.com/maps/contrib/103204497880958555326/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIvdjsOSA5QzXS_ce0xnV54ZvoGtdhQMkXuOjjugHlVrMgSxQ=s128-c0x00000000-cc-rp-mo-ba2",
+        "rating": 5,
+        "relative_time_description": "7 years ago",
+        "text": "Dr. Ina and Dr. Harpreet  both are absolutely amazing, very polite, helpful and approachable doctors. No long waiting queues. I have been going to them from last 3 years now and can't think of going anywhere else now. The whole team is great. Highly recommend.",
+        "time": 1524699976,
+        "translated": false
+      },
+      {
+        "author_name": "Pushpinder Bhullar",
+        "author_url": "https://www.google.com/maps/contrib/107738997405689273471/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjW61yDXLa8xMcKYHg9DSDPXgT3i-30MXu_mUdVgbn0UV27D7cw=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "7 years ago",
+        "text": "Great doctors specially Dr.Ina Takkar really friendly and is very thorough with her examinations. Nice clean reception area. Highly recommend.",
+        "time": 1524699340,
+        "translated": false
+      },
+      {
+        "author_name": "Sheena Bakshi",
+        "author_url": "https://www.google.com/maps/contrib/108687146700964410076/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJC0EOgZVqMtd0csavbyHh-prtNH_gwWqugG66CZlxlDqnJLQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "6 years ago",
+        "text": "Dr Ina Takkar is a very lively and knowledgeable doctor. I admire her positive approach to everything.",
+        "time": 1553644198,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:17.721Z"
+  },
+  "dr-khalid-ahmed-smithfield": {
+    "placeId": "ChIJA54XjaeXEmsR0LEnWYcYSAA",
+    "surgeonName": "Dr. Khalid Ahmed",
+    "rating": 5,
+    "totalRatings": 4,
+    "reviews": [
+      {
+        "author_name": "Rachel Dimitri",
+        "author_url": "https://www.google.com/maps/contrib/118062217722482807454/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUSNGV-km0RDMsSmIOoqyZfDY3CsBb-Nxoj7q2XkhP3wJ1TpvY=s128-c0x00000000-cc-rp-mo-ba3",
+        "rating": 5,
+        "relative_time_description": "5 months ago",
+        "text": "Saw Dr Khalid at Nowra as he comes here once a month.  Very nice man. My tummy tuck surgery next week in Sydney.\nHuda is very efficient",
+        "time": 1746614160,
+        "translated": false
+      },
+      {
+        "author_name": "Zayna Abdul",
+        "author_url": "https://www.google.com/maps/contrib/114735820193445061118/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJXJZFSO9mndw1ZVw1N2fhq3JcQPaiS7FIEjuTPzWn4cJLgEg=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "What a great experience it was navigating my surgery with Dr Khalid and his team. Very knowledgeable, kind & patient with all my concerns & questions! Surgery went smooth with minimal scarring & the right pre & post op care. Huda was always available with any question/s I needed to pass on to Dr Khalid & was also wonderful and efficient. A VERY underrated surgeon that needs more recognition, a hidden gem in my opinion! With all my stress and worries leading up to the surgery, last thing I needed was extra paperwork! He kindly  helped me with my SUPER withdrawal and allowed the process to be extra smooth. I'm writing this 5 weeks post-op and I feel absolutely incredible! All thanks to the care and support I have received. Thank you again Dr Khalid & Huda for showing professionalism & great duty of care.",
+        "time": 1702383852,
+        "translated": false
+      },
+      {
+        "author_name": "nada rawof",
+        "author_url": "https://www.google.com/maps/contrib/112266587367662800166/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWXNioEYctxAPLwfMwmxjUM6riOdlhxeBuOSKSi4F8l9pE-m1of=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 years ago",
+        "text": "Very good surgeon , highly recommend him.\nSaw him for family member was very thorough and ethical.",
+        "time": 1685275217,
+        "translated": false
+      },
+      {
+        "author_name": "Rasheed Alsoufi",
+        "author_url": "https://www.google.com/maps/contrib/111462947093264555725/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJnhPN6yJgGHkYuUKv79bPr7bLxkAscT2aYdh1m1Y1jp06zVA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 years ago",
+        "text": "Happy outcome",
+        "time": 1685260138,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:17.964Z"
+  },
+  "dr-khalid-ahmed-penrith": {
+    "placeId": "ChIJD1TwMnaFEmsRm4joBipLyvU",
+    "surgeonName": "Dr. Khalid Ahmed",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:18.215Z"
+  },
+  "dr-khalid-ahmed-gledswood-hills": {
+    "placeId": "ChIJ20WH88XtEmsRtPjk4zlKzTI",
+    "surgeonName": "Dr. Khalid Ahmed",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:18.446Z"
   },
   "dr-mark-magdy-miranda": {
     "placeId": "ChIJXx9aKs25EmsRST6j-im3L6Y",
@@ -2358,7 +3244,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:34.884Z"
+    "lastUpdated": "2025-10-07T05:30:18.696Z"
   },
   "dr-paul-j-ah-tye-dandenong": {
     "placeId": "ChIJa2o-iMMV1moRzKKwotyePeY",
@@ -2421,7 +3307,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:35.129Z"
+    "lastUpdated": "2025-10-07T05:30:18.941Z"
   },
   "dr-qiuye-cheng-kogarah": {
     "placeId": "ChIJ1a6wpae5EmsRcg-s2GS0dbY",
@@ -2490,7 +3376,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:35.392Z"
+    "lastUpdated": "2025-10-07T05:30:19.208Z"
   },
   "credibility-royal-australasian-college-of-surgeons": {
     "placeId": "ChIJD9tPuuWhEmsRHMBoQtj7PuY",
@@ -2543,7 +3429,145 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:35.864Z"
+    "lastUpdated": "2025-10-07T05:30:19.460Z"
+  },
+  "dr-umed-cosmetics-laser-skin-treatment-cosmetic-body-clinic-five-dock": {
+    "placeId": "ChIJMdM0qfelEmsRFGcE2hx2_E0",
+    "surgeonName": "Dr. Umed Cosmetics",
+    "rating": 4.4,
+    "totalRatings": 59,
+    "reviews": [
+      {
+        "author_name": "Hala R",
+        "author_url": "https://www.google.com/maps/contrib/116435712042050217475/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjX_H3P4sRyBcvzYXwPocpNZ0n199jL2EUrDQYv9F8fEfWtEMrwH=s128-c0x00000000-cc-rp-mo",
+        "rating": 1,
+        "relative_time_description": "2 weeks ago",
+        "text": "Such incredibly rude service. Some lady named Tiyana. when asked why she is speaking so rudely, she said “Im not a secretary, i have clients working for me, I can speak however I like” INSANE lmaoo. Also not reliable for procedures considering the only good doctor that worked there quit.",
+        "time": 1758155936,
+        "translated": false
+      },
+      {
+        "author_name": "Melissa Jane",
+        "author_url": "https://www.google.com/maps/contrib/105025931951870065358/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjU2T2mPTlQDpKrIwJEeGvNAExMHt3Sk_uWt0YkXduZ4qxe2ulA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "⭐⭐⭐⭐⭐\nBest on the coast! I’ve been coming to this clinic to see Nurse Vish and Dr. Umed for years, and I always get perfect results. They are both kind and truly skilled. If you’re looking for cosmetic injectables, this is the place to go!!!",
+        "time": 1752210352,
+        "translated": false
+      },
+      {
+        "author_name": "Nadia David",
+        "author_url": "https://www.google.com/maps/contrib/100628597804382155035/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJLOlxFcTGZ8KPBVl_147hScOg7wK2cRRXZk34MpXqFs2VEaw=s128-c0x00000000-cc-rp-mo",
+        "rating": 1,
+        "relative_time_description": "7 months ago",
+        "text": "The biggest waste of my $465!\nIM ALMOST SURE THIS CLING USES DILUTED DOSES.\n\nI have been getting cosmetic injections for over 10 years and have never had a problem with the results. I decided to try Dr Umed for their advertised price of $320, but in the end it cost $465.\nI got a massive 63 units and after 2 weeks, the results were hardly noticeable, as well as I had a dropped eye. I went back to five dock for review but, the nurse there blamed it on the product not working on me, didn’t even attempt to fix their mistake and said “I can’t give you more for free”, she insisted that I pay another $180 for more units in the same place they injected. After arguing with her and getting attitude, she called the doctor and decided to try and fix a couple of the spots……even though, I’m sure she gave me a highly diluted dose just to shut me up.\nI now need to save my money again and try somewhere more reputable who stand behind the guarantee to give you results!!!!\nNEVER AGAIN",
+        "time": 1739910155,
+        "translated": false
+      },
+      {
+        "author_name": "Angie Kalinic",
+        "author_url": "https://www.google.com/maps/contrib/101284910986179728194/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjW-z5jFVICIkldUepK60nCT0bPSWhV5K2gnEEkKnrKJnrr9FIur=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "I saw Dr Umed & must say my expectations were far exceeded. From the moment I stepped through the door, I was greeted with friendly staff who made me feel very comfortable & welcome.\nDr Umed is a true expert in the field of cosmetic procedures, he has a wealth of knowledge & experience. He took the time to listen to my concerns & goals, and then explained every step of the procedure, making me feel truly at ease.\nI can say that his meticulous approach & attention to detail delivered results that had me leaving his clinic very satisfied to say the least. This is one doctor who shows true passion for his work, and not in it for a \"quick buck\".\nThank you Dr Umed, and your lovely staff.",
+        "time": 1720317030,
+        "translated": false
+      },
+      {
+        "author_name": "Kimberley Howat",
+        "author_url": "https://www.google.com/maps/contrib/100807496733910262937/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIUKqx5Qmc2IUC6w1rD06UaQzeT3NyfK2wsdlcW-lstW-F6tA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 years ago",
+        "text": "I'm very very happy with the results. Never felt so confident. The girls at reception are lovely and very knowledgeable. I will continue coming here for my injections. I have received nose filler and anti wrinkle fillers also have had lip plumping. You guys are amazing 😍",
+        "time": 1694831792,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:19.820Z"
+  },
+  "dr-yuan-cheng-richmond": {
+    "placeId": "ChIJVVXl1cRC1moRniqUZ6Yf3qI",
+    "surgeonName": "Dr. Yuan Cheng",
+    "rating": 5,
+    "totalRatings": 72,
+    "reviews": [
+      {
+        "author_name": "Ahlam",
+        "author_url": "https://www.google.com/maps/contrib/103475998383306327943/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLYStdvL2f2tMjf-Ffk8YdIcCxce9PVisFCSc_xdaXpV3UiXg=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "a month ago",
+        "text": "I'm beyond grateful for the care I received from Dr. Yuan Cheng. Three months post-op, I've lost 30 kilos with zero complications. His expertise, compassion, and dedication are truly remarkable. I feel incredibly grateful and honoured to have been under his care.\n\nMy mother is also under his care, and the support and attention he provided has been outstanding and improved her quality of life! She is doing so much better!\n\nThank you, Dr. Cheng, for transforming our lives!!!!!! You are the best 😁",
+        "time": 1756383107,
+        "translated": false
+      },
+      {
+        "author_name": "Kylie",
+        "author_url": "https://www.google.com/maps/contrib/113259308160680200266/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJd-IVzm83cMkkhApUGEDX_i88IYdMLm6qtAm7Mw0K69LveSA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "3 months ago",
+        "text": "My entire experience with Dr Cheng & his team has been amazing. Right from enquiring about the surgery every step has been easy, Chanhom from destination beauty was always keeping me up to date with the progress of my journey. All the doctors & nurses at the hospital were wonderful, I felt that I was taken care of at all times. If you are thinking of weight loss surgery I can highly recommend Dr Cheng & his amazing team.",
+        "time": 1750153804,
+        "translated": false
+      },
+      {
+        "author_name": "Andrea Squire",
+        "author_url": "https://www.google.com/maps/contrib/101674503216050610071/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKRURwGWybG_RgpiDUulw0whh_fw3asUG_7VFBIeoEifmFzNw=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "3 months ago",
+        "text": "I can't thank Dr. Cheng enough for the exceptional care and skill he provided. The surgery itself went smoothly, and the results exceeded my expectations. I truly felt I was in the best hands every step of the way. I’m deeply grateful for Dr. Cheng’s expertise and would highly recommend them to anyone in need of this type of surgical care.",
+        "time": 1749450383,
+        "translated": false
+      },
+      {
+        "author_name": "mundi mundi",
+        "author_url": "https://www.google.com/maps/contrib/101044553251366306951/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJyBzehOQs1WoO8ki8Ac2QmGfpmSpQvhadoYg9sCA9YBn1ufw=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 weeks ago",
+        "text": "I'm very impressed with your (Dr Cheng’s )knowledge and skills how thorough you are, you performed an excellent surgery, and it has made a huge difference. I really feel I'm in really good hands with you. You make my weight loss journey so easy and wonderful. Amazing!!",
+        "time": 1758017265,
+        "translated": false
+      },
+      {
+        "author_name": "diane seymour",
+        "author_url": "https://www.google.com/maps/contrib/111128039855788221685/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocI2ty_Xw-4U8yslukqVl_aSP5bZY_Hv5ZlUr1eAaQSjdZQeSQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "3 months ago",
+        "text": "Dr Cheng has been such an amazing surgeon\nHe cares highly about his patients\nI went into the surgery feeling quite anxious, I was expecting bad nausea, a lot of pain and experienced none at all. I would highly recommend Dr Cheng if you are thinking of the surgery, he is kind caring and a lovely person, I can’t thank him enough for my smooth experience",
+        "time": 1749887406,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:20.159Z"
   },
   "ahmed-naqeeb706b2d19-1200-4798-88fe-98aa652f28db": {
     "placeId": "ChIJA7mitg0_1moRJG77dixTBwk",
@@ -2600,7 +3624,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:36.493Z"
+    "lastUpdated": "2025-10-07T05:30:20.412Z"
   },
   "mr-anthony-clough-box-hill": {
     "placeId": "ChIJkeFJl7ZA1moRNoUu49qyWak",
@@ -2669,7 +3693,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:36.804Z"
+    "lastUpdated": "2025-10-07T05:30:20.694Z"
   },
   "mr-geoffrey-dr-aper-frankston": {
     "placeId": "ChIJdxC1XRsL1moR6-8H1TncGLk",
@@ -2738,7 +3762,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:37.051Z"
+    "lastUpdated": "2025-10-07T05:30:20.937Z"
   },
   "mr-hai-t-bui-ascot-vale": {
     "placeId": "ChIJfWCQwPtc1moRExR6FtB0LdI",
@@ -2807,7 +3831,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:37.442Z"
+    "lastUpdated": "2025-10-07T05:30:21.230Z"
   },
   "mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne": {
     "placeId": "ChIJR8ELQblD1moRAUhIgdUbVIA",
@@ -2828,7 +3852,15 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:37.693Z"
+    "lastUpdated": "2025-10-07T05:30:21.485Z"
+  },
+  "mr-kiron-bhatia-bundoora": {
+    "placeId": "ChIJD6UJf8ZI1moRrqillLMUltE",
+    "surgeonName": "Mr Kiron Bhatia",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:21.731Z"
   },
   "mr-mark-cullinan-richmond": {
     "placeId": "ChIJzSZVvSpC1moRntHNkQBh7JQ",
@@ -2889,7 +3921,84 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:38.140Z"
+    "lastUpdated": "2025-10-07T05:30:21.983Z"
+  },
+  "ce2e14e2d8624d619229a434bafb7fb1": {
+    "placeId": "ChIJGTvULeRp1moR0HlrHB_IsMo",
+    "surgeonName": "Mr Richard Chen",
+    "rating": 4.5,
+    "totalRatings": 8,
+    "reviews": [
+      {
+        "author_name": "Rebecca Theodoropoulos",
+        "author_url": "https://www.google.com/maps/contrib/104646949183695657727/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIwgUTGspbiPBlRdsA38yl1iDOt30s5udtSQuWKVpEg5DgBbw=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "3 months ago",
+        "text": "Dr Richard Chen is an exceptional and very dedicated doctor which I had the privilege to be in the care of. He was very attentive and answered all my questions & concerns in detail before and after my epic and rare surgery. I never felt rushed and he always put me at ease with his wonderful and caring bedside manner.  A true professional. I can never thank him enough.",
+        "time": 1750224569,
+        "translated": false
+      },
+      {
+        "author_name": "Gayle Farnsworth",
+        "author_url": "https://www.google.com/maps/contrib/108525613098720257076/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJ138_35tWxvAO8bE4Qq4nmbij31gk_GfibymOIf3AhscyA_Q=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "6 months ago",
+        "text": "I first met Dr. Richard Chen when I was transferred from Mildura Base Hospital to Cabrini Hospital in Malvern. From our very first meeting I knew that Richard had my best interests at heart, and the subsequent consultations I had with him served to strengthen my confidence in his surgical ability and in his commitment to holistic patient care. My situation was a challenge for Richard as, with an ejection fraction (how much blood the left ventricle pumps out with each contraction) of 22.5%, it would, under normal circumstances, not be considered safe for me to have surgery. However, I was not only asymptomatic but I was strong and healthy and positive, and definitely keen to have surgery to remove the tumour in my oesophagus. Richard championed my case for surgery calling on the advice and opinions of numerous specialists. His investigations and deliberations were extremely thorough and his tireless capacity to inform me at every stage of the process meant that I was fully aware of the risks and the potential outcomes of the surgery if I chose to proceed. The surgery took place at the Alfred where one of the nursing staff on Ward 2 East told me she watched the entire surgery and was in awe of Richard’s skill and commitment. She said it was brilliant. Richard has maintained an exemplary level of post-surgery care with multiple daily bedside visits from himself and his team members. Thank you Richard for believing in me and for all the hard work you put into making this surgery happen for me. You were prepared to look beyond my test results on paper (which I was told many times were “crap”) and consider the physical and mental toughness of the individual, thereby successfully performing a huge operation on a 70 year old man with heart failure.\nIan Farnsworth",
+        "time": 1742445286,
+        "translated": false
+      },
+      {
+        "author_name": "gayle farnsworth",
+        "author_url": "https://www.google.com/maps/contrib/112322033689158598367/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKPutIMHwD6NgXY9Qt5DZ_C1l9tSuayBC9abgS1XNyCVY7chw=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "6 months ago",
+        "text": "Dr. Richard Chen is the most caring doctor I have ever met. How lucky we were that Mildura Base Hospital referred my husband to Cabrini Hospital and specifically to Richard. From the beginning of November 2024 right through into the post-surgical period in late March 2025, Richard has been 100% committed to the very best outcome for my husband. His attentiveness, his thoroughness, his integrity, his bed-side care, have all been outstanding. The success of my husband’s risky surgery is testament to Richard’s skill as a surgeon. My family and I received comments from other health professionals who praised Richard’s surgical ability describing it as ‘brilliant’. Richard also ensured that my husband’s pre, during, and post-surgical care was in the hands of a wonderful team, including Anna and Donna. Thank you all.\nGayle Farnsworth",
+        "time": 1742423181,
+        "translated": false
+      },
+      {
+        "author_name": "Steve Quodling",
+        "author_url": "https://www.google.com/maps/contrib/118388076170756745887/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocK7qyrq1izaAp6CxyP725k0MHX-DNED6obL7w8x3iZAq7aAPJNl=s128-c0x00000000-cc-rp-mo-ba2",
+        "rating": 5,
+        "relative_time_description": "6 months ago",
+        "text": "Richard is an incredibly dedicated, skilled and professional surgeon. From the first consultation of my cancer diagnosis to the actual surgery, he was compassionate, accessible, informative and thorough.\n\nEvery consultation, Zoom meeting, and every day in recovery in hospital, Richard was attentive to my needs and clear with instructions.\n\nRichard's PA Donna was also very supportive, friendly and accessible when planning consultations, scans and pre operation visits.\n\nThank you Richard for everything.",
+        "time": 1742440843,
+        "translated": false
+      },
+      {
+        "author_name": "Rosalyn Quodling",
+        "author_url": "https://www.google.com/maps/contrib/113626578355108768543/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKOG1E2h85Cst8NJqt7qCZ_T9X6YCAR1YngVb2cFHf7xgRlng=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "6 months ago",
+        "text": "As the wife of a patient of Richard Chen, I am extremely grateful for the care Richard took of my husband. Richard's bedside manner is second to none. He truly cares for the health and wellbeing of his patients, and we were very glad to have been referred to Richard.",
+        "time": 1742288995,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:22.230Z"
+  },
+  "df40c0dd214e97b3b29fa449570d0a": {
+    "placeId": "ChIJPeSs_Doa1moRCZgfYU2LqJU",
+    "surgeonName": "Mr Zeev Duieb",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:22.450Z"
   },
   "surgicalweightlosssolutions": {
     "placeId": "ChIJx2raz_FC1moRKeGEdUGtNoc",
@@ -2932,7 +4041,84 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:38.822Z"
+    "lastUpdated": "2025-10-07T05:30:22.698Z"
+  },
+  "mr-jacob-vanyai-surrey-hills": {
+    "placeId": "ChIJg_XapoFB1moR_WkT7eLhBto",
+    "surgeonName": "Mr. Jacob Vanyai",
+    "rating": 0,
+    "totalRatings": 0,
+    "reviews": [],
+    "lastUpdated": "2025-10-07T05:30:22.964Z"
+  },
+  "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna": {
+    "placeId": "ChIJ7Rl1x-g91moR9iuko-FdYrg",
+    "surgeonName": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gast",
+    "rating": 4.9,
+    "totalRatings": 92,
+    "reviews": [
+      {
+        "author_name": "Josie Ferraro",
+        "author_url": "https://www.google.com/maps/contrib/100905453491541879684/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXVrQWhqzSjiupmFl8CTDvsToQ8s75_TMXaobrcJgjIoB7Li5W3bQ=s128-c0x00000000-cc-rp-mo-ba3",
+        "rating": 5,
+        "relative_time_description": "5 months ago",
+        "text": "I had an amazing experience with Dr. Niruben as my sleeve surgeon. From the very first consultation, he was knowledgeable, kind, and incredibly supportive. He took the time to explain the entire process in detail, answered all my questions patiently, and made me feel completely at ease.\n\nThe surgery went smoothly, and his follow-up care has been exceptional. I felt genuinely cared for every step of the way, and his team was just as professional and compassionate. Thanks to Dr. Niruben, I’m on a new, healthier path, and I couldn’t be more grateful. I highly recommend him to anyone considering bariatric surgery!",
+        "time": 1746144283,
+        "translated": false
+      },
+      {
+        "author_name": "Sonia Loutit",
+        "author_url": "https://www.google.com/maps/contrib/112185175270069131517/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJvvw1n2ywOsIT0dO4eE_4iBny5ldqBE8JLCGkAHHh-XSNufA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "Mr Niruben and his team have been great. I had a gastric sleeve done. After the surgery, I had gas pain (which is normal after surgery) but I never had any pain around the surgery site. I never needed any heavy duty pain medication and was only on Panadole for 2 days. I have already passed on Mr Niruben contact details to 2 of my friends who are wanting to get the surgery done.",
+        "time": 1754086122,
+        "translated": false
+      },
+      {
+        "author_name": "Margo",
+        "author_url": "https://www.google.com/maps/contrib/108230068848188780928/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWAUdzqcxOMsug0nAQg13tpx7Mm-ujGK0UEYnS4rqUA0s8n4w0=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 weeks ago",
+        "text": "Dr Niruben is an excellent surgeon, I had to see him for unplanned Gall bladder removal. An ultrasound found it was inflammed with multiple gallstones, some measuring 19mm.\nI also have bad anxiety attacks in hospital and both Dr Niruben and his anaesthetist looked after me, I felt very comfortable with how they prepared me fof the surgery. I only had to wait 3 days for the surgery to be done and as there wasn't any real pain after the surgery, I was only in hospital for 24hrs.\nI did have a flare up 2 days after discharge but again he was in the hospital to see me straight away and had the problem sorted.\nHe was thorough in his explanation of the procedure and answered all of my questions. He gave information sheets outlining each step of the surgery for post op reference.\nI Wouldn't hesitate in recommending Dr Niruben to family and friends.",
+        "time": 1758169110,
+        "translated": false
+      },
+      {
+        "author_name": "Trevlyn Wyngard",
+        "author_url": "https://www.google.com/maps/contrib/104663875800361272951/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUrgmH3tk2touyju79Z9ptLrwhU87S568e4BhBAAbMufnd0B_6M=s128-c0x00000000-cc-rp-mo-ba2",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "Highly recommend Mr Niruben Rajasagaram. My experience as his patient exceeds any expectations I had beforehand. He provides the highest level of care and professionalism, and explains his procedures thoroughly, making you a part of the team over your health decisions. His bedside manner is impeccable and his thoroughness is top notch! I'd choose him again and again because I know I'd be in excellent professional hands. His support team is great too - very helpful and ready to guide you all the way. Stefania his Dietician is wonderful to work with. A++++",
+        "time": 1752635446,
+        "translated": false
+      },
+      {
+        "author_name": "Stephanie Anne Hamzath",
+        "author_url": "https://www.google.com/maps/contrib/115823954266866656728/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKwRQHA9yb1uOVcQfyVFvrteJ8F4-FTobS3ZMLVAYQSZBMPHw=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "A True Life-Saver — Thank You, Dr. Niruben and Team\n\nI don't even know where to begin because words feel so small compared to what Dr. Niruben and his team have done for me. From the very first consultation, Dr. Niruben treated me not just as a patient, but as a person with compassion, empathy, and an incredible depth of understanding. He listened to all my fears, answered every question with patience, and made me feel truly heard and seen. That alone meant the world to me.\n\nBut what he gave me, what this surgery gave me, is so much more than physical. He gave me a second chance at life. Because of him, I now wake up with hope. Because of him, I have the strength and the tools to be the mother my four year old daughter deserves. I chose this path for her and for myself, and I will forever be grateful to Dr. Niruben for walking alongside me on this journey.\n\nHis kindness, his expertise, and the unwavering support from his entire team in made me feel safe every step of the way. I truly believe God works through people, and Dr. Niruben is one of those people. What he’s doing isn’t just medicine, it’s life transformation.\n\nTo anyone considering this journey, if you’re looking for a surgeon who will not only guide you medically but support you unconditionally, Dr. Niruben is the one. I would recommend him in a heartbeat.\n\nThank you, Dr. Niruben.\nMay God bless you and your incredible team for the lives you’re changing, including mine.\n\nForever grateful,\nA Healthier, Hopeful Me ♥️",
+        "time": 1754009582,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:23.243Z"
   },
   "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick": {
     "placeId": "ChIJNecoU4Yb1moRKNr-bU2ua8w",
@@ -3001,7 +4187,7 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:39.523Z"
+    "lastUpdated": "2025-10-07T05:30:23.495Z"
   },
   "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston": {
     "placeId": "ChIJFZ3hHS4L1moRtEnbf2OPIeQ",
@@ -3070,6 +4256,144 @@
         "translated": false
       }
     ],
-    "lastUpdated": "2025-10-07T03:49:39.782Z"
+    "lastUpdated": "2025-10-07T05:30:23.743Z"
+  },
+  "prof-charbel-sandr-oussi-innerwest-ugit-surgery-camperdown": {
+    "placeId": "ChIJX7AluC6wEmsRs2bMN4xlrBA",
+    "surgeonName": "Prof. Charbel Sandroussi",
+    "rating": 4.9,
+    "totalRatings": 66,
+    "reviews": [
+      {
+        "author_name": "Jodi Mawad",
+        "author_url": "https://www.google.com/maps/contrib/106480673363260570105/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJpkKfGWxFICip89Kn5FwlFxiPKwOWunsNamX7bbt_Ki9OUQw=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "3 weeks ago",
+        "text": "I have trained and looked after myself for all my 49years I have absorbed my young teenager son and we have trained together and with excitement pushed myself to far causing a hernia. I took this process very seriously and did all my research and opted to only wait for the very best professor Charbel Sandroussi\nAn amazing gentleman with such down to earth caring qualities very detailed and super transparent quite simple a magician with Gods touch.\nThe operation took place yesterday midday he came past my room and explained he had also found two further minor tears next to me hernia,\nHis words were simply “ it’s fine I fixed those as well’ like it was a walk in the park, he asked if I was in pain and said actually no the pain was simply were the cut occurred near me belly button the actual hernia pain was not there.\nHe giggled and as per usual we started talking about our passion and love for cars.\nAmazing human been, we are blessed to have such an amazing person and professor at our call.\nI’m home resting and I feel amazing and content\nI cannot praise this man and his staff any more.\nGOD BLESS YOU.",
+        "time": 1757718942,
+        "translated": false
+      },
+      {
+        "author_name": "Elena Ibrahim",
+        "author_url": "https://www.google.com/maps/contrib/113671745758291414231/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKU0RJxj05XDjGC9bBooKDP5pTN4NJ7MTbW0uunUortcyJk5A=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "2 months ago",
+        "text": "Dr Charbel Sandroussi changed my life!\n\nI saw several doctors for acid reflux and they would just keep prescribing me PPIs.\n\nHe actually listens and does something about the problem.\n\nAfter a successful surgery I am eating things I haven’t eaten in years.\n\n100% recommend 🙏🏽",
+        "time": 1753939894,
+        "translated": false
+      },
+      {
+        "author_name": "Reem El Houssainy",
+        "author_url": "https://www.google.com/maps/contrib/110920675928535368523/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjV_B9H8gzkMAgfUuXF_DCj92W9odHgBGYGdDzuIjAl_HW5khXx3dQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "3 months ago",
+        "text": "Number 1 Doctor in NSW in all aspects\n{ Experience, knowledge, Talented, Smart, Magic hands, very very humble and honest person}. May God bless him and his family. I swear to God we( as me and my husband) are so lucky that doctor Sandroussi done the surgery for us, especially for my husband as he done Whipple procedure for him which is very big and complicated surgery that many surgeons refuse to do it since it's hard, literally he saved my husband life.\nWe are so grateful for him and his lovely\nExpert team especially his anaesthesialogist (Dr Neil pleinger) and his Assistance.\nThere's no words can describe him as professional Doctor, we can say that he gots God hands .\nThanks God and thanks to Dr sandroussi.",
+        "time": 1750166986,
+        "translated": false
+      },
+      {
+        "author_name": "Julia Theodosis",
+        "author_url": "https://www.google.com/maps/contrib/116269130621220395906/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVnmk4wRGBgluBvWotaV1a9mPuvlMx-EHQqdUJo8THNghy_KXeodQ=s128-c0x00000000-cc-rp-mo-ba3",
+        "rating": 5,
+        "relative_time_description": "4 months ago",
+        "text": "I had a hernia reappear after 29 yrs. my GP gave ne 3 surgein names to pick one. I read the reviews and decided to go with Prof, Sandroussi. I made the apointment and went and saw Prof Sandroussi who explained everything to me after seening my Ultra sound. The next morning after surgery, he came to visit me and explained that the ultra sound did actually show how large the hernia was and that the mesh they had put in 20yrs ago was entangled with the hernia and fat tissue. A week ater the surgery I had a huge bump measuring 4 inch long and about 2 in thck. contacted his office and he sent me for immediate ultra sound and to have it aspirated which they wanted $550 and no claiming. He said for me to visit his office the next morning before having it aspirated. He looked at it and aspirated it himself in his office and said that $550 was obsered to pay.\nI have now had my visit after 6wks and he was very happy with the out come and for me to massage it for 15mins a day as he didn't put a another mesh instead sewed the muscles together and all will go back to normal. As a surgeon of his callebar he is a very down to earth and carring human being. All the staff are very polite and caring just like himself. Thank Prof Sandroussi.",
+        "time": 1747288823,
+        "translated": false
+      },
+      {
+        "author_name": "Louise",
+        "author_url": "https://www.google.com/maps/contrib/116683950719178406758/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKq4KYAt5NWXt0gNvo53TwgYnUiNW7s994-fjtSuGg_rD85Sg=s128-c0x00000000-cc-rp-mo-ba2",
+        "rating": 5,
+        "relative_time_description": "a year ago",
+        "text": "From the first phone contact with the reception staff we were made feel at ease and shown care and compassion.\n\nWe had to travel from the Hunter Valley for my husbands surgery as our team were unable to perform procedure.\n\nProfessor spoke to us by phone before the procedure and the reception staff ensured us they were there if we needed any assistance.\n\nThe procedure was performed successfully and Professor rang as soon as the operation was completed and explained what was done.\n\nThe Chris O'Brien Lifehouse ICU and ward staff provided excellent care.\nWe received follow up phone calls and check from Professors staff.\nThis made our ongoing cancer journey a little easier.\n\nWe will be forever grateful 🙏\nThankyou from the\nNorris family Hunter Valley",
+        "time": 1726743270,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:24.038Z"
+  },
+  "professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield": {
+    "placeId": "ChIJm8YimemoEmsRCmujIT2HN24",
+    "surgeonName": "Professor Gregory Falk",
+    "rating": 5,
+    "totalRatings": 20,
+    "reviews": [
+      {
+        "author_name": "CA 90210",
+        "author_url": "https://www.google.com/maps/contrib/106088388911667482754/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLXPgj4Lts1z1Oh2pC3zytXiYAs-tbvoXGBoglXSfv7LaeF5w=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "in the last week",
+        "text": "I can’t praise Prof Falk enough, what a wonderful person. He saved my dad’s life! He is the only one who took an interest in getting to the bottom of my father’s illness and finding the root cause! Teresa, the receptionist is just amazing too - responded to all my emails quickly and helped me get the answers I needed. Thank you, thank you, thank you!!!",
+        "time": 1759356830,
+        "translated": false
+      },
+      {
+        "author_name": "Tabatha Lane",
+        "author_url": "https://www.google.com/maps/contrib/104063143397445776696/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJuEXH9gJCZURzQGoMkSZr-Zlt-AiiZvTAqGmitElDSWcTOqQ=s128-c0x00000000-cc-rp-mo-ba3",
+        "rating": 5,
+        "relative_time_description": "5 months ago",
+        "text": "I found Doctor G. Falk to be a very knowledgeable doctor and one who listens, before jumping in and making a diagnosis. Theresa the reception although very busy will acknowledge any email questions and forward to Dr Falk if need be.",
+        "time": 1745998411,
+        "translated": false
+      },
+      {
+        "author_name": "Robyn Warwick",
+        "author_url": "https://www.google.com/maps/contrib/115887797995516728445/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIoAUiFP5CciBgyZX0_RI6HqNnk6hfyHH_Wba2BSG4a0-dCTA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "4 years ago",
+        "text": "Prof. Falk has performed two surgeries for me over a 20 year period, the second being a challenge for all concerned. He did a great job. He was very good and had procedures in place so that my visits to Sydney were planned in advance and most consultations were via Skype which is very convenient for country patients. He and his team are very professional and always very helpful and I would have not hesitation in recommending his to anyone who is in need of a skilled and professional surgeon. Thankyou and good luck to you in the future.",
+        "time": 1604359496,
+        "translated": false
+      },
+      {
+        "author_name": "Matt Adams",
+        "author_url": "https://www.google.com/maps/contrib/118432491145977013611/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocL25KQUMjiZTy7aoRvCMx7SEtlH2UMmMdDUy6pdlo--AdV5PA=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "4 years ago",
+        "text": "After over 12 months of being misdiagnosed by several other medical specialists, my local GP recommended me to contact Dr Falk's office and from day 1 of speaking to Teresa I knew I was in the right hands. Dr Falk takes the time to explain everything to you and generally cares for his patience wellbeing. I also have to say the follow up from both Teresa and Dr Falk is excellent. I have just recently come out of surgery this week with Dr Falk and as expected he did an excellent job and was a very quick time between the initial phone call with him and the day of surgery. Thanks Teresa and Dr Falk I appreciate all what you have done for me and would highly recommend to anyone.",
+        "time": 1602293890,
+        "translated": false
+      },
+      {
+        "author_name": "Suzanne Howard",
+        "author_url": "https://www.google.com/maps/contrib/114799940294267120531/reviews",
+        "language": "en",
+        "original_language": "en",
+        "profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLpjR7RXjIjR8BzzvdncZlffp62LcNa1MpVUESYMjzPBqe7yQ=s128-c0x00000000-cc-rp-mo",
+        "rating": 5,
+        "relative_time_description": "11 months ago",
+        "text": "Dr Falk saved my life.He is the very best Very compassionate and just wonderful. Do not hesitate to see him.",
+        "time": 1730467203,
+        "translated": false
+      }
+    ],
+    "lastUpdated": "2025-10-07T05:30:24.310Z"
   }
 }
