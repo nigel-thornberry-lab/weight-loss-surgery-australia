@@ -1,0 +1,238 @@
+---
+const { surgeonName, surgeonCity } = Astro.props;
+---
+
+<div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl p-6 shadow-2xl border-2 border-blue-500">
+  <div class="text-center mb-6">
+    <div class="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-4">
+      <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+      </svg>
+    </div>
+    <h3 class="text-2xl font-bold text-white mb-2">Book Your Consultation</h3>
+    <p class="text-blue-100 text-sm">Get a personalized assessment with {surgeonName}</p>
+  </div>
+
+  <form 
+    id="lead-form" 
+    class="space-y-4"
+    data-surgeon={surgeonName}
+    data-city={surgeonCity}
+  >
+    <!-- Name -->
+    <div>
+      <label for="name" class="block text-sm font-semibold text-white mb-2">
+        Full Name <span class="text-red-300">*</span>
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        required
+        class="w-full px-4 py-3 rounded-lg border-2 border-blue-400 focus:border-white focus:ring-2 focus:ring-white bg-white text-gray-900 placeholder-gray-500 transition-all"
+        placeholder="John Smith"
+      />
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for="email" class="block text-sm font-semibold text-white mb-2">
+        Email Address <span class="text-red-300">*</span>
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        class="w-full px-4 py-3 rounded-lg border-2 border-blue-400 focus:border-white focus:ring-2 focus:ring-white bg-white text-gray-900 placeholder-gray-500 transition-all"
+        placeholder="john@example.com"
+      />
+    </div>
+
+    <!-- Phone -->
+    <div>
+      <label for="phone" class="block text-sm font-semibold text-white mb-2">
+        Phone Number <span class="text-red-300">*</span>
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        pattern="[0-9\s\+\-\(\)]+"
+        class="w-full px-4 py-3 rounded-lg border-2 border-blue-400 focus:border-white focus:ring-2 focus:ring-white bg-white text-gray-900 placeholder-gray-500 transition-all"
+        placeholder="0400 000 000"
+      />
+    </div>
+
+    <!-- Procedure Interest -->
+    <div>
+      <label for="procedure" class="block text-sm font-semibold text-white mb-2">
+        Procedure of Interest
+      </label>
+      <select
+        id="procedure"
+        name="procedure"
+        class="w-full px-4 py-3 rounded-lg border-2 border-blue-400 focus:border-white focus:ring-2 focus:ring-white bg-white text-gray-900 transition-all"
+      >
+        <option value="">Select a procedure...</option>
+        <option value="gastric-sleeve">Gastric Sleeve</option>
+        <option value="gastric-bypass">Gastric Bypass</option>
+        <option value="mini-gastric-bypass">Mini Gastric Bypass</option>
+        <option value="gastric-band">Gastric Band</option>
+        <option value="gastric-balloon">Gastric Balloon</option>
+        <option value="revision">Revision Surgery</option>
+        <option value="not-sure">Not Sure Yet</option>
+      </select>
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label for="message" class="block text-sm font-semibold text-white mb-2">
+        Additional Information
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        rows="3"
+        class="w-full px-4 py-3 rounded-lg border-2 border-blue-400 focus:border-white focus:ring-2 focus:ring-white bg-white text-gray-900 placeholder-gray-500 transition-all resize-none"
+        placeholder="Tell us about your goals, medical history, or any questions..."
+      ></textarea>
+    </div>
+
+    <!-- Consent -->
+    <div class="flex items-start gap-3">
+      <input
+        type="checkbox"
+        id="consent"
+        name="consent"
+        required
+        class="mt-1 w-5 h-5 rounded border-2 border-blue-400 text-blue-600 focus:ring-2 focus:ring-white"
+      />
+      <label for="consent" class="text-xs text-blue-100">
+        I consent to being contacted by {surgeonName}'s practice regarding my consultation request. 
+        I understand my information will be kept confidential and used only for this purpose.
+      </label>
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      class="w-full bg-white text-blue-700 font-bold py-4 px-6 rounded-lg hover:bg-blue-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+    >
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+      </svg>
+      <span id="submit-text">Request Consultation</span>
+    </button>
+
+    <!-- Success/Error Messages -->
+    <div id="form-message" class="hidden p-4 rounded-lg text-sm font-semibold"></div>
+  </form>
+
+  <!-- Trust Badges -->
+  <div class="mt-6 pt-6 border-t border-blue-400">
+    <div class="grid grid-cols-3 gap-4 text-center">
+      <div>
+        <div class="text-2xl font-bold text-white">24h</div>
+        <div class="text-xs text-blue-100">Response Time</div>
+      </div>
+      <div>
+        <div class="text-2xl font-bold text-white">100%</div>
+        <div class="text-xs text-blue-100">Confidential</div>
+      </div>
+      <div>
+        <div class="text-2xl font-bold text-white">Free</div>
+        <div class="text-xs text-blue-100">Consultation</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Lead form submission handler
+  document.getElementById('lead-form')?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const form = e.target as HTMLFormElement;
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const submitText = document.getElementById('submit-text');
+    const messageDiv = document.getElementById('form-message');
+    
+    // Disable submit button
+    submitBtn.disabled = true;
+    if (submitText) submitText.textContent = 'Sending...';
+    
+    // Get form data
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      procedure: formData.get('procedure'),
+      message: formData.get('message'),
+      surgeon: form.dataset.surgeon,
+      city: form.dataset.city,
+      timestamp: new Date().toISOString(),
+      source: 'surgeon-profile'
+    };
+    
+    try {
+      // TODO: Replace with your actual endpoint
+      // For now, we'll use a webhook service like Zapier, Make.com, or your own API
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      
+      if (response.ok) {
+        // Success
+        if (messageDiv) {
+          messageDiv.className = 'p-4 rounded-lg text-sm font-semibold bg-green-100 text-green-800';
+          messageDiv.textContent = '✅ Thank you! We\'ll contact you within 24 hours to schedule your consultation.';
+          messageDiv.classList.remove('hidden');
+        }
+        form.reset();
+        
+        // Track conversion (Google Analytics, Facebook Pixel, etc.)
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'generate_lead', {
+            'event_category': 'Lead',
+            'event_label': data.surgeon,
+            'value': 1
+          });
+        }
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (error) {
+      // Error
+      if (messageDiv) {
+        messageDiv.className = 'p-4 rounded-lg text-sm font-semibold bg-red-100 text-red-800';
+        messageDiv.textContent = '❌ Sorry, there was an error. Please call us directly or try again later.';
+        messageDiv.classList.remove('hidden');
+      }
+    } finally {
+      // Re-enable submit button
+      submitBtn.disabled = false;
+      if (submitText) submitText.textContent = 'Request Consultation';
+    }
+  });
+</script>
+
+<style>
+  /* Custom styles for form elements */
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+  }
+  
+  /* Smooth transitions */
+  input, select, textarea, button {
+    transition: all 0.2s ease-in-out;
+  }
+</style>
