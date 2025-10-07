@@ -6,6 +6,7 @@ import TeamSection from '../../../components/surgeons/TeamSection.astro';
 import HospitalsSection from '../../../components/surgeons/HospitalsSection.astro';
 import PricingSection from '../../../components/surgeons/PricingSection.astro';
 import LeadContactForm from '../../../components/surgeons/LeadContactForm.astro';
+import GoogleReviews from '../../../components/surgeons/GoogleReviews.astro';
 
 const surgeon = {
   "name": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne",
@@ -470,6 +471,17 @@ const breadcrumbSchema = {
         {enhanced.team && <TeamSection team={enhanced.team} />}
         {enhanced.hospitals && <HospitalsSection hospitals={enhanced.hospitals} />}
         {enhanced.pricing && <PricingSection pricing={enhanced.pricing} />}
+        
+        {/* Google Reviews Section */}
+        {surgeon.place_id && (
+          <GoogleReviews 
+            placeId={surgeon.place_id}
+            surgeonName={cleanName}
+            rating={surgeon.rating}
+            reviewCount={surgeon.review_count}
+          />
+        )}
+        
         {seo.faqs && seo.faqs.length > 0 && <FAQSection faqs={seo.faqs} />}
       </div>
     </div>
