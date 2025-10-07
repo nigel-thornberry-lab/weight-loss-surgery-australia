@@ -620,6 +620,7 @@ function main() {
 
     const surgeon = {
       name: values[1],
+      street: values[6],
       city: values[7],
       state: values[8],
       phone: values[11],
@@ -631,6 +632,7 @@ function main() {
       slug: values[18],
       bio_long: values[24],
       surgeon_photo: values[25],
+      place_id: values[26],
       rating: parseFloat(values[4]) || 0,
       review_count: parseInt(values[5]) || 0
     };
