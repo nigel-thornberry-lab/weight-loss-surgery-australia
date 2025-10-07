@@ -1,40 +1,58 @@
 ---
 const { team } = Astro.props;
-const { surgeons, team_size, has_dietitian, has_psychologist } = team || {};
+const { team_size, has_dietitian, has_psychologist, has_nurses } = team || {};
 ---
 
 {team && (
-  <div class="bg-white rounded-xl p-6 shadow-lg">
-    <h2 class="text-2xl font-bold text-gray-900 mb-6">Multidisciplinary Team</h2>
+  <div class="bg-white rounded-xl p-5 shadow-md border border-gray-200">
+    <h2 class="text-xl font-bold text-gray-900 mb-4">Multidisciplinary Care Team</h2>
     
-    {surgeons && surgeons.length > 0 && (
-      <div class="space-y-4 mb-6">
-        {surgeons.map(s => (
-          <div class="border-l-4 border-blue-500 pl-4">
-            <h3 class="font-semibold text-gray-900">{s.name}</h3>
-            <p class="text-sm text-gray-700">{s.role}</p>
-            {s.experience && <p class="text-xs text-gray-600">{s.experience}</p>}
-          </div>
-        ))}
+    <div class="grid md:grid-cols-2 gap-3">
+      <div class="flex items-center gap-3 p-3 rounded-lg {has_dietitian ? 'bg-green-50' : 'bg-gray-50'}">
+        {has_dietitian ? (
+          <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+        ) : (
+          <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+          </svg>
+        )}
+        <span class="text-sm font-semibold {has_dietitian ? 'text-gray-900' : 'text-gray-500'}">Dietitian / Nutritionist</span>
       </div>
-    )}
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-      {has_dietitian && (
-        <div class="bg-green-50 rounded-lg p-3 text-center">
-          <p class="text-sm font-semibold text-green-700">✓ Dietitian</p>
-        </div>
-      )}
-      {has_psychologist && (
-        <div class="bg-green-50 rounded-lg p-3 text-center">
-          <p class="text-sm font-semibold text-green-700">✓ Psychologist</p>
-        </div>
-      )}
-      {team_size && (
-        <div class="bg-blue-50 rounded-lg p-3 text-center">
-          <p class="text-sm font-semibold text-blue-700">{team_size}</p>
-        </div>
-      )}
+      <div class="flex items-center gap-3 p-3 rounded-lg {has_psychologist ? 'bg-green-50' : 'bg-gray-50'}">
+        {has_psychologist ? (
+          <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+        ) : (
+          <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+          </svg>
+        )}
+        <span class="text-sm font-semibold {has_psychologist ? 'text-gray-900' : 'text-gray-500'}">Psychologist / Counselor</span>
+      </div>
+
+      <div class="flex items-center gap-3 p-3 rounded-lg {has_nurses ? 'bg-green-50' : 'bg-gray-50'}">
+        {has_nurses ? (
+          <svg class="w-5 h-5 text-green-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+        ) : (
+          <svg class="w-5 h-5 text-gray-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+          </svg>
+        )}
+        <span class="text-sm font-semibold {has_nurses ? 'text-gray-900' : 'text-gray-500'}">Nursing Support</span>
+      </div>
+
+      <div class="flex items-center gap-3 p-3 rounded-lg bg-blue-50">
+        <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+        </svg>
+        <span class="text-sm font-semibold text-gray-900">{team_size || 'Multidisciplinary team'}</span>
+      </div>
     </div>
   </div>
 )}
