@@ -174,7 +174,7 @@ const breadcrumbSchema = {
         <div class="grid md:grid-cols-[280px_1fr] gap-8">
           
           <!-- Left Sidebar: Photo + Rating + CTAs -->
-          <div class="space-y-4">
+          <div class="space-y-4 sticky top-4 self-start">
             <!-- Surgeon Photo -->
             {surgeon.surgeon_photo ? (
               <img src={surgeon.surgeon_photo} alt={surgeon.name} class="w-full rounded-xl shadow-lg" loading="eager" />
@@ -327,33 +327,28 @@ const breadcrumbSchema = {
                 </div>
               </div>
             </div>
+
+            <!-- Enhanced Content Sections - Now in Right Column -->
+            {enhanced.credentials && <CredentialsSection credentials={enhanced.credentials} />}
+            {enhanced.team && <TeamSection team={enhanced.team} />}
+            {enhanced.hospitals && <HospitalsSection hospitals={enhanced.hospitals} />}
+            {enhanced.pricing && <PricingSection pricing={enhanced.pricing} />}
+            
+            {/* Google Reviews Section */}
+            {surgeon.slug && (
+              <GoogleReviews 
+                surgeonName={cleanName}
+                surgeonSlug={surgeon.slug}
+                rating={surgeon.rating}
+                reviewCount={surgeon.review_count}
+              />
+            )}
+            
+            {seo.faqs && seo.faqs.length > 0 && <FAQSection faqs={seo.faqs} />}
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Enhanced Content Sections -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div class="space-y-6">
-        {enhanced.credentials && <CredentialsSection credentials={enhanced.credentials} />}
-        {enhanced.team && <TeamSection team={enhanced.team} />}
-        {enhanced.hospitals && <HospitalsSection hospitals={enhanced.hospitals} />}
-        {enhanced.pricing && <PricingSection pricing={enhanced.pricing} />}
-        
-        {/* Google Reviews Section */}
-        {surgeon.place_id && (
-          <GoogleReviews 
-            placeId={surgeon.place_id}
-            surgeonName={cleanName}
-            surgeonSlug={slug}
-            rating={surgeon.rating}
-            reviewCount={surgeon.review_count}
-          />
-        )}
-        
-        {seo.faqs && seo.faqs.length > 0 && <FAQSection faqs={seo.faqs} />}
-      </div>
-    </div>
   </main>
 </BaseLayout>
 `;

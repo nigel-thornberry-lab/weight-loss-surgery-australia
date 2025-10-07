@@ -1,5 +1,5 @@
 ---
-const { placeId, surgeonName, surgeonSlug, rating, reviewCount } = Astro.props;
+const { surgeonName, surgeonSlug, rating, reviewCount } = Astro.props;
 
 // Load cached reviews from static JSON file
 let cachedReviews = null;
@@ -12,6 +12,7 @@ try {
 
 const reviews = cachedReviews?.reviews || [];
 const hasReviews = reviews.length > 0;
+const placeId = cachedReviews?.placeId; // Get placeId from cached data
 ---
 
 <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200">
