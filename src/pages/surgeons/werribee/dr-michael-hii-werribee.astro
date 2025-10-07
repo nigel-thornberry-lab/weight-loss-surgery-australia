@@ -20,7 +20,7 @@ const surgeon = {
   "estimated_procedures": "2000",
   "slug": "dr-michael-hii-werribee",
   "bio_long": "Dr Michael Hii practices bariatric surgery in Werribee; Victoria; offering gastric sleeve; bypass; and band procedures to patients seeking effective weight loss solutions. With 10+ years of surgical experience; Dr Michael Hii provides thorough consultations and personalized treatment approaches tailored to each patient's needs.",
-  "surgeon_photo": "/public/surgeons/images/optimized/Dr Michael Hii .webp",
+  "surgeon_photo": "/surgeons/images/optimized/Dr Michael Hii .webp",
   "rating": 0,
   "review_count": 0
 };
@@ -79,7 +79,7 @@ const physicianSchema = {
   "name": cleanName,
   "image": surgeon.surgeon_photo ? {
     "@type": "ImageObject",
-    "url": `https://weightlosssurgery.com.au${surgeon.surgeon_photo}`,
+    "url": `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}`,
     "width": "800",
     "height": "1000",
     "caption": `${cleanName} - Bariatric Surgeon in ${surgeon.city}, ${surgeon.state}`,
@@ -173,7 +173,7 @@ const breadcrumbSchema = {
   title={title} 
   description={description} 
   canonicalUrl={canonicalUrl}
-  image={surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo}` : undefined}
+  image={surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined}
   type="profile"
 >
   <!-- Comprehensive Schema.org Structured Data -->

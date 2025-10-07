@@ -20,7 +20,7 @@ const surgeon = {
   "estimated_procedures": "2000",
   "slug": "dr-ertugrul-durmush-liverpool",
   "bio_long": "Dr Ertugrul Durmush is an experienced bariatric surgeon serving Liverpool; NSW. With significant experience in weight loss surgery and a 4.2-star rating from 26 verified reviews; they provide comprehensive bariatric care including gastric sleeve; bypass; and band procedures. Dr Ertugrul Durmush focuses on individualized patient care and long-term weight management support.",
-  "surgeon_photo": "/public/surgeons/images/optimized/Dr Ertugrul Durmush.webp",
+  "surgeon_photo": "/surgeons/images/optimized/Dr Ertugrul Durmush.webp",
   "rating": 4.2,
   "review_count": 26
 };
@@ -79,7 +79,7 @@ const physicianSchema = {
   "name": cleanName,
   "image": surgeon.surgeon_photo ? {
     "@type": "ImageObject",
-    "url": `https://weightlosssurgery.com.au${surgeon.surgeon_photo}`,
+    "url": `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}`,
     "width": "800",
     "height": "1000",
     "caption": `${cleanName} - Bariatric Surgeon in ${surgeon.city}, ${surgeon.state}`,
@@ -173,7 +173,7 @@ const breadcrumbSchema = {
   title={title} 
   description={description} 
   canonicalUrl={canonicalUrl}
-  image={surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo}` : undefined}
+  image={surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined}
   type="profile"
 >
   <!-- Comprehensive Schema.org Structured Data -->

@@ -20,7 +20,7 @@ const surgeon = {
   "estimated_procedures": "2000",
   "slug": "mr-hai-t-bui-ascot-vale",
   "bio_long": "Based in Ascot Vale; Victoria; Mr Hai T. Bui brings 10+ years of bariatric surgery experience to patients seeking weight loss solutions. Their 5.0-star rating across 28 verified reviews reflects a commitment to quality care and positive surgical outcomes. Mr Hai T. Bui specializes in modern bariatric procedures including gastric sleeve; bypass; and adjustable band surgery.",
-  "surgeon_photo": "/public/surgeons/images/optimized/Mr Hai T. Bui.webp",
+  "surgeon_photo": "/surgeons/images/optimized/Mr Hai T. Bui.webp",
   "rating": 5,
   "review_count": 28
 };
@@ -79,7 +79,7 @@ const physicianSchema = {
   "name": cleanName,
   "image": surgeon.surgeon_photo ? {
     "@type": "ImageObject",
-    "url": `https://weightlosssurgery.com.au${surgeon.surgeon_photo}`,
+    "url": `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}`,
     "width": "800",
     "height": "1000",
     "caption": `${cleanName} - Bariatric Surgeon in ${surgeon.city}, ${surgeon.state}`,
@@ -173,7 +173,7 @@ const breadcrumbSchema = {
   title={title} 
   description={description} 
   canonicalUrl={canonicalUrl}
-  image={surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo}` : undefined}
+  image={surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined}
   type="profile"
 >
   <!-- Comprehensive Schema.org Structured Data -->

@@ -32,7 +32,9 @@ function generateImageSitemap() {
     
     const citySlug = city.toLowerCase().replace(/\s+/g, '-');
     const pageUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${slug}`;
-    const imageUrl = `https://weightlosssurgery.com.au${photo}`;
+    // Remove /public/ prefix if present (Astro serves public folder from root)
+    const cleanPhoto = photo.startsWith('/public/') ? photo.replace('/public/', '/') : photo;
+    const imageUrl = `https://weightlosssurgery.com.au${cleanPhoto}`;
     const imageTitle = `${name} - Bariatric Surgeon in ${city}, ${state}`;
     const imageCaption = `Professional photo of ${name}, expert bariatric surgeon specializing in weight loss surgery in ${city}`;
     

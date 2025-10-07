@@ -48,7 +48,7 @@ for (const record of records) {
   });
   
   if (matchingPhoto) {
-    record.surgeon_photo = `/public/surgeons/images/optimized/${matchingPhoto}.webp`;
+    record.surgeon_photo = `/surgeons/images/optimized/${matchingPhoto}.webp`;
     updated++;
     console.log(`✅ ${name}`);
   }

@@ -64,7 +64,7 @@ const physicianSchema = {
   "name": cleanName,
   "image": surgeon.surgeon_photo ? {
     "@type": "ImageObject",
-    "url": \`https://weightlosssurgery.com.au\${surgeon.surgeon_photo}\`,
+    "url": \`https://weightlosssurgery.com.au\${surgeon.surgeon_photo.replace('/public/', '/')}\`,
     "width": "800",
     "height": "1000",
     "caption": \`\${cleanName} - Bariatric Surgeon in \${surgeon.city}, \${surgeon.state}\`,
@@ -158,7 +158,7 @@ const breadcrumbSchema = {
   title={title} 
   description={description} 
   canonicalUrl={canonicalUrl}
-  image={surgeon.surgeon_photo ? \`https://weightlosssurgery.com.au\${surgeon.surgeon_photo}\` : undefined}
+  image={surgeon.surgeon_photo ? \`https://weightlosssurgery.com.au\${surgeon.surgeon_photo.replace('/public/', '/')}\` : undefined}
   type="profile"
 >
   <!-- Comprehensive Schema.org Structured Data -->
@@ -395,7 +395,7 @@ const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/${citySlug}/${s
   title={title} 
   description={description} 
   canonicalUrl={canonicalUrl}
-  image={surgeon.surgeon_photo ? \`https://weightlosssurgery.com.au\${surgeon.surgeon_photo}\` : undefined}
+  image={surgeon.surgeon_photo ? \`https://weightlosssurgery.com.au\${surgeon.surgeon_photo.replace('/public/', '/')}\` : undefined}
   type="profile"
 >
   <main class="min-h-screen bg-gray-50">
