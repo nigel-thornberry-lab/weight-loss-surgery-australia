@@ -22,5 +22,9 @@
     "astro": "^5.14.1",
     "sharp": "^0.33.5",
     "tailwindcss": "^4.1.14"
+  },
+  "devDependencies": {
+    "csv-parse": "^6.1.0",
+    "csv-stringify": "^6.6.0"
   }
 }
