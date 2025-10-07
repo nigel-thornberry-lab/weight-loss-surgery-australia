@@ -1,0 +1,118 @@
+---
+const { surgeonName, placeId, address, city, state } = Astro.props;
+
+// Generate Google Maps embed URL
+const mapEmbedUrl = placeId 
+  ? `https://www.google.com/maps/embed/v1/place?key=AIzaSyAbqPkgGdtyBmdqjdARyrnidZV4nqBWMZw&q=place_id:${placeId}&zoom=15`
+  : null;
+
+// Fallback: Generate directions URL for "Get Directions" button
+const directionsUrl = placeId
+  ? `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address + ', ' + city + ', ' + state)}&destination_place_id=${placeId}`
+  : `https://www.google.com/maps/search/${encodeURIComponent(address + ', ' + city + ', ' + state)}`;
+---
+
+{mapEmbedUrl && (
+  <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+    <div class="p-6 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-white">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="bg-blue-600 rounded-full p-2">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-900">Practice Location</h3>
+            <p class="text-sm text-gray-600">{address}, {city}, {state}</p>
+          </div>
+        </div>
+        <a 
+          href={directionsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden md:inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+          </svg>
+          Get Directions
+        </a>
+      </div>
+    </div>
+    
+    <div class="relative w-full" style="padding-bottom: 56.25%;"> <!-- 16:9 aspect ratio -->
+      <iframe
+        src={mapEmbedUrl}
+        width="600"
+        height="450"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title={`Map showing location of ${surgeonName} at ${address}, ${city}`}
+      ></iframe>
+    </div>
+    
+    <!-- Mobile: Get Directions Button -->
+    <div class="md:hidden p-4 bg-gray-50 border-t border-gray-200">
+      <a 
+        href={directionsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold w-full"
+      >
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+        </svg>
+        Get Directions
+      </a>
+    </div>
+    
+    <!-- Additional Location Info -->
+    <div class="p-4 bg-blue-50 border-t border-blue-100">
+      <div class="flex items-start gap-2 text-sm text-gray-700">
+        <svg class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <p>
+          <strong>Getting There:</strong> Use the map above to plan your route. Free parking is typically available at most medical centers. 
+          For public transport options, click "Get Directions" and select your preferred travel mode.
+        </p>
+      </div>
+    </div>
+  </div>
+)}
+
+{!mapEmbedUrl && (
+  <!-- Fallback if no place_id available -->
+  <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+    <div class="flex items-center gap-3 mb-4">
+      <div class="bg-blue-600 rounded-full p-2">
+        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+        </svg>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold text-gray-900">Practice Location</h3>
+        <p class="text-gray-600">{address}</p>
+        <p class="text-gray-600">{city}, {state}</p>
+      </div>
+    </div>
+    
+    <a 
+      href={directionsUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold w-full justify-center"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+      </svg>
+      View on Google Maps
+    </a>
+  </div>
+)}
+

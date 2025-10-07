@@ -42,6 +42,7 @@ import TeamSection from '../../../components/surgeons/TeamSection.astro';
 import HospitalsSection from '../../../components/surgeons/HospitalsSection.astro';
 import PricingSection from '../../../components/surgeons/PricingSection.astro';
 import LeadContactForm from '../../../components/surgeons/LeadContactForm.astro';
+import LocationMap from '../../../components/surgeons/LocationMap.astro';
 import GoogleReviews from '../../../components/surgeons/GoogleReviews.astro';
 
 const surgeon = ${JSON.stringify(surgeon, null, 2)};
@@ -366,6 +367,15 @@ const breadcrumbSchema = {
               />
             )}
             
+            {/* Location Map */}
+            <LocationMap 
+              surgeonName={cleanName}
+              placeId={surgeon.place_id}
+              address={surgeon.street}
+              city={surgeon.city}
+              state={surgeon.state}
+            />
+            
             {seo.faqs && seo.faqs.length > 0 && <FAQSection faqs={seo.faqs} />}
           </div>
         </div>
@@ -383,8 +393,10 @@ function generateBasicProfile(surgeon) {
   
   return `---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LocationMap from '../../../components/surgeons/LocationMap.astro';
 
 const surgeon = ${JSON.stringify(surgeon, null, 2)};
+const cleanName = surgeon.name.replace(/^(Dr\.?|Mr\.?|Mrs\.?|Ms\.?|Prof\.?|Professor|A\/Prof\.?|Associate Professor)\s*/i, '');
 
 const title = \`\${surgeon.name} - Bariatric Surgeon \${surgeon.city} | Weight Loss Surgery\`;
 const description = \`\${surgeon.name} is an experienced bariatric surgeon in \${surgeon.city} with \${surgeon.years_experience}+ years experience. Rating: \${surgeon.rating}/5 (\${surgeon.review_count} reviews). Specialist in gastric sleeve, bypass & band surgery.\`;
@@ -476,11 +488,20 @@ const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/${citySlug}/${s
       </div>
     </section>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
       <div class="bg-white rounded-xl p-6 shadow-lg">
         <h2 class="text-2xl font-bold text-gray-900 mb-4">About {surgeon.name}</h2>
         <p class="text-gray-700 leading-relaxed">{surgeon.bio_long}</p>
       </div>
+      
+      {/* Location Map */}
+      <LocationMap 
+        surgeonName={cleanName}
+        placeId={surgeon.place_id}
+        address={surgeon.street}
+        city={surgeon.city}
+        state={surgeon.state}
+      />
     </div>
   </main>
 </BaseLayout>

@@ -6,6 +6,7 @@ import TeamSection from '../../../components/surgeons/TeamSection.astro';
 import HospitalsSection from '../../../components/surgeons/HospitalsSection.astro';
 import PricingSection from '../../../components/surgeons/PricingSection.astro';
 import LeadContactForm from '../../../components/surgeons/LeadContactForm.astro';
+import LocationMap from '../../../components/surgeons/LocationMap.astro';
 import GoogleReviews from '../../../components/surgeons/GoogleReviews.astro';
 
 const surgeon = {
@@ -419,6 +420,15 @@ const breadcrumbSchema = {
                 reviewCount={surgeon.review_count}
               />
             )}
+            
+            {/* Location Map */}
+            <LocationMap 
+              surgeonName={cleanName}
+              placeId={surgeon.place_id}
+              address={surgeon.street}
+              city={surgeon.city}
+              state={surgeon.state}
+            />
             
             {seo.faqs && seo.faqs.length > 0 && <FAQSection faqs={seo.faqs} />}
           </div>
