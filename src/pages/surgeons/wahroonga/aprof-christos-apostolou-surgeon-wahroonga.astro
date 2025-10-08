@@ -1,401 +1,497 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CredentialsSection from '../../../components/surgeons/CredentialsSection.astro';
+import FAQSection from '../../../components/surgeons/FAQSection.astro';
+import TeamSection from '../../../components/surgeons/TeamSection.astro';
+import HospitalsSection from '../../../components/surgeons/HospitalsSection.astro';
+import PricingSection from '../../../components/surgeons/PricingSection.astro';
+import LeadContactForm from '../../../components/surgeons/LeadContactForm.astro';
+import LocationMap from '../../../components/surgeons/LocationMap.astro';
+import GoogleReviews from '../../../components/surgeons/GoogleReviews.astro';
 
 const surgeon = {
-  name: "A/Prof. Christos Apostolou",
-  title: "A/Prof. Christos Apostolou",
-  city: "Wahroonga",
-  state: "NSW",
-  rating: 4.9,
-  reviewCount: 79,
-  phone: "+61 2 9480 4250",
-  website: "http://www.christosapostolou.com.au/",
-  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=A%2FProf.%20Christos%20Apostolou%20-%20Surgeon&query_place_id=ChIJc4Gz_q6nEmsRrW3yx_wiqzU",
-  surgeonPhoto: "/surgeons/images/optimized/aprof-christos-apostolou-surgeon-wahroonga.webp",
-  yearsExperience: 10,
-  estimatedProcedures: 2000,
-  slug: "aprof-christos-apostolou-surgeon-wahroonga",
-  citySlug: "wahroonga"
+  "name": "A/Prof. Christos Apostolou",
+  "street": "Suite 220, Level 2, Clark Tower/185 Fox Valley Rd",
+  "city": "Wahroonga",
+  "state": "NSW",
+  "phone": "+61 2 9480 4250",
+  "website": "http://www.christosapostolou.com.au/",
+  "category": "Surgeon",
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=A%2FProf.%20Christos%20Apostolou%20-%20Surgeon&query_place_id=ChIJc4Gz_q6nEmsRrW3yx_wiqzU",
+  "years_experience": "10",
+  "estimated_procedures": "2000",
+  "slug": "aprof-christos-apostolou-surgeon-wahroonga",
+  "bio_long": "A/Prof. Christos Apostolou - Surgeon is a leading bariatric surgeon in Wahroonga; NSW; known for significant expertise in weight loss surgery. With a 4.9-star rating from 79+ patient reviews; they've built a reputation for exceptional patient outcomes and comprehensive surgical care. Specializing in gastric sleeve; bypass; and band procedures; A/Prof. Christos Apostolou - Surgeon offers personalized treatment plans backed by 10+ years of surgical experience.",
+  "surgeon_photo": "/surgeons/images/optimized/aprof-christos-apostolou-surgeon-wahroonga.webp",
+  "place_id": "ChIJc4Gz_q6nEmsRrW3yx_wiqzU",
+  "rating": 4.9,
+  "review_count": 79
+};
+const citySlug = "wahroonga";
+const slug = "aprof-christos-apostolou-surgeon-wahroonga";
+const enhanced = {
+  "surgeon_name": "A/Prof. Christos Apostolou",
+  "city": "Wahroonga",
+  "state": "NSW",
+  "credentials": {
+    "medical_school": "University of Cape Town (MBChB, 1996)",
+    "fellowships": [
+      "South African College of Surgeons (FCS(SA), 2003)",
+      "Certificate of Surgical Gastroenterology, South African College (2006)",
+      "Fellow of the Royal Australasian College of Surgeons (FRACS, 2012)"
+    ],
+    "professional_memberships": [
+      "Australasian Association of Upper Gastrointestinal Surgeons (AANZHPBA)",
+      "Australian & New Zealand Gastric & Oesophageal Surgery Association (ANZGOSA)",
+      "General Surgeons Australia (GSA)",
+      "Gastroenterological Society of Australia (GESA)",
+      "Australian Medical Association (AMA)",
+      "Australia & New Zealand Metabolic and Obesity Surgery Society (ANZMOSS)"
+    ],
+    "special_training": [
+      "Robotic surgery training at Yonsei University, Seoul, South Korea (2015)",
+      "da Vinci and Versius robotic surgical systems accreditation"
+    ],
+    "years_practicing": 22
+  },
+  "team": {
+    "surgeons": [
+      {
+        "name": "A/Prof. Christos Apostolou",
+        "role": "Lead Surgeon, Specialist Upper GI/Bariatric Surgeon"
+      }
+    ],
+    "team_size": "Multidisciplinary team",
+    "has_dietitian": true,
+    "has_psychologist": true,
+    "has_nurses": true
+  },
+  "services": {
+    "procedures": [
+      "Bariatric surgery (gastric sleeve, bypass)",
+      "Upper gastrointestinal surgery (oncological and benign)",
+      "Gallbladder and anti-reflux surgery",
+      "Hernia surgery (laparoscopic/open)",
+      "Liver and pancreatic surgery",
+      "Endoscopy/ERCP (interventional)",
+      "General surgical emergencies"
+    ],
+    "pre_op_program": "Comprehensive pre-operative assessment with multidisciplinary team",
+    "post_op_program": "Ongoing post-operative monitoring with dietetic and psychological support",
+    "follow_up_duration": "Continuous follow-up for bariatric patients",
+    "telehealth": true,
+    "support_groups": true
+  },
+  "hospitals": [
+    {
+      "name": "Sydney Adventist Hospital",
+      "address": "185 Fox Valley Road, Wahroonga, NSW 2076"
+    },
+    {
+      "name": "Macquarie University Hospital",
+      "address": "75 Talavera Rd, Macquarie Park NSW 2113"
+    },
+    {
+      "name": "Northern Beaches Hospital",
+      "address": "105 Frenchs Forest Rd W, Frenchs Forest NSW 2086"
+    },
+    {
+      "name": "Bankstown-Lidcombe Hospital",
+      "address": "Bankstown, NSW 2200"
+    },
+    {
+      "name": "Norwest Private Hospital",
+      "address": "11 Norbrik Dr, Bella Vista NSW 2153"
+    }
+  ],
+  "pricing": {
+    "available": false,
+    "gastric_sleeve": "Contact for pricing",
+    "gastric_bypass": "Contact for pricing",
+    "consultation": "Contact for pricing"
+  },
+  "unique_features": [
+    "Accredited in both da Vinci and Versius robotic surgical systems",
+    "Academic appointments at UNSW, Sydney University, Macquarie University, and ANU Medical School",
+    "Clinical lead in Upper GI Surgery at Sydney Adventist Hospital",
+    "RACS training supervisor and Area Cancer Committee chair",
+    "Active in clinical research with peer-reviewed publications",
+    "22 years of surgical experience"
+  ],
+  "faqs": [
+    {
+      "question": "What procedures does A/Prof Christos Apostolou specialize in?",
+      "answer": "A/Prof Apostolou specializes in upper gastrointestinal, liver, biliary, pancreatic, and bariatric surgery (laparoscopic, robotic, and open), as well as endoscopy/ERCP, hernia, and gallbladder/anti-reflux surgery."
+    },
+    {
+      "question": "What are A/Prof Christos Apostolou's qualifications?",
+      "answer": "He holds an MBChB and a Master of Medicine (Surgery) from the University of Cape Town, is a Fellow of both the South African College of Surgeons and the Royal Australasian College of Surgeons, and holds a Certificate of Surgical Gastroenterology."
+    },
+    {
+      "question": "Where does A/Prof Christos Apostolou perform surgery?",
+      "answer": "He operates at Sydney Adventist Hospital (Wahroonga), Macquarie University Hospital, Northern Beaches Hospital, Bankstown-Lidcombe Hospital, and Norwest Private Hospital."
+    }
+  ]
+};
+const seo = {
+  "meta_title": "A/Prof. Christos Apostolou - Bariatric Surgeon Wahroonga | Weight Loss Surgery",
+  "meta_description": "A/Prof. Christos Apostolou is an experienced bariatric surgeon in Wahroonga. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+  "schema_org": {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "A/Prof. Christos Apostolou",
+    "medicalSpecialty": "Bariatric Surgery",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Wahroonga",
+      "addressCountry": "AU"
+    }
+  },
+  "faqs": [
+    {
+      "question": "What procedures does A/Prof Christos Apostolou specialize in?",
+      "answer": "A/Prof Apostolou specializes in upper gastrointestinal, liver, biliary, pancreatic, and bariatric surgery (laparoscopic, robotic, and open), as well as endoscopy/ERCP, hernia, and gallbladder/anti-reflux surgery."
+    },
+    {
+      "question": "What are A/Prof Christos Apostolou's qualifications?",
+      "answer": "He holds an MBChB and a Master of Medicine (Surgery) from the University of Cape Town, is a Fellow of both the South African College of Surgeons and the Royal Australasian College of Surgeons, and holds a Certificate of Surgical Gastroenterology."
+    },
+    {
+      "question": "Where does A/Prof Christos Apostolou perform surgery?",
+      "answer": "He operates at Sydney Adventist Hospital (Wahroonga), Macquarie University Hospital, Northern Beaches Hospital, Bankstown-Lidcombe Hospital, and Norwest Private Hospital."
+    }
+  ]
 };
 
-const title = "A/Prof. Christos Apostolou - Wahroonga Bariatric Surgeon | Enhanced Profile";
-const description = "A/Prof. Christos Apostolou is an experienced bariatric surgeon in Wahroonga, NSW. 4.9 stars (79 reviews). Comprehensive team support, 5 hospital affiliations. Full multidisciplinary care team. Book your consultation today.";
-const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${surgeon.citySlug}/${surgeon.slug}`;
+// Extract clean name (remove title/role if present)
+const cleanName = surgeon.name.split('|')[0].split('-')[0].trim();
+
+const title = `${cleanName} - Bariatric Surgeon ${surgeon.city}, ${surgeon.state}`;
+const description = `Top-rated bariatric surgeon in ${surgeon.city} (${surgeon.rating}★, ${surgeon.review_count} reviews). Gastric sleeve, bypass & revision. Serving ${surgeon.state}. Book consultation today.`;
+const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${slug}`;
+
+// Comprehensive Schema.org structured data
+const physicianSchema = {
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": cleanName,
+  "image": surgeon.surgeon_photo ? {
+    "@type": "ImageObject",
+    "url": `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}`,
+    "width": "800",
+    "height": "1000",
+    "caption": `${cleanName} - Bariatric Surgeon in ${surgeon.city}, ${surgeon.state}`,
+    "description": `Professional photo of ${cleanName}, expert bariatric surgeon specializing in weight loss surgery`
+  } : "https://weightlosssurgery.com.au/default-surgeon.jpg",
+  "url": canonicalUrl,
+  "telephone": surgeon.phone,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": surgeon.street,
+    "addressLocality": surgeon.city,
+    "addressRegion": surgeon.state,
+    "addressCountry": "AU"
+  },
+  "medicalSpecialty": "Bariatric Surgery",
+  "availableService": [
+    {
+      "@type": "MedicalProcedure",
+      "name": "Gastric Sleeve Surgery",
+      "alternateName": "Sleeve Gastrectomy"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Gastric Bypass Surgery",
+      "alternateName": "Roux-en-Y Gastric Bypass"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Gastric Band Surgery",
+      "alternateName": "Lap Band"
+    }
+  ]
+};
+
+if (surgeon.rating > 0 && surgeon.review_count > 0) {
+  physicianSchema.aggregateRating = {
+    "@type": "AggregateRating",
+    "ratingValue": surgeon.rating,
+    "reviewCount": surgeon.review_count,
+    "bestRating": "5",
+    "worstRating": "1"
+  };
+}
+
+const faqSchema = seo?.faqs && seo.faqs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": seo.faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question || faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer || faq.a
+    }
+  }))
+} : null;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://weightlosssurgery.com.au"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Surgeons",
+      "item": "https://weightlosssurgery.com.au/surgeons"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": surgeon.city,
+      "item": `https://weightlosssurgery.com.au/surgeons/${citySlug}`
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": cleanName,
+      "item": canonicalUrl
+    }
+  ]
+};
 ---
 
-<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
-  <!-- Breadcrumbs -->
-  <nav class="bg-gray-50 py-3">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <ol class="flex items-center space-x-2 text-sm">
-        <li><a href="/" class="text-blue-600 hover:text-blue-800">Home</a></li>
-        <li class="text-gray-400">/</li>
-        <li><a href="/surgeons" class="text-blue-600 hover:text-blue-800">Surgeons</a></li>
-        <li class="text-gray-400">/</li>
-        <li><a href={`/surgeons/${surgeon.citySlug}`} class="text-blue-600 hover:text-blue-800">{surgeon.city}</a></li>
-        <li class="text-gray-400">/</li>
-        <li class="text-gray-900">{surgeon.name}</li>
-      </ol>
-    </div>
-  </nav>
+<BaseLayout 
+  title={title} 
+  description={description} 
+  canonicalUrl={canonicalUrl}
+  image={surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined}
+  type="profile"
+>
+  <!-- Comprehensive Schema.org Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(physicianSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 md:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8 items-start">
-        
-        <!-- Left: Photo -->
-        <div class="md:col-span-1">
-          {surgeon.surgeonPhoto ? (
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+  <main class="min-h-screen bg-gray-50">
+    <nav class="bg-white border-b border-gray-200 py-3">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center space-x-2 text-sm">
+          <a href="/" class="text-blue-600 hover:text-blue-800">Home</a>
+          <span class="text-gray-400">/</span>
+          <a href="/surgeons" class="text-blue-600 hover:text-blue-800">Surgeons</a>
+          <span class="text-gray-400">/</span>
+          <a href={`/surgeons/${citySlug}`} class="text-blue-600 hover:text-blue-800">{surgeon.city}</a>
+          <span class="text-gray-400">/</span>
+          <span class="text-gray-700">{surgeon.name}</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section - Clean Compact Layout -->
+    <section class="bg-white py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-[280px_1fr] gap-8">
+          
+          <!-- Left Sidebar: Photo + Rating + CTAs -->
+          <div class="space-y-4 sticky top-4 self-start">
+            <!-- Surgeon Photo -->
+            {surgeon.surgeon_photo ? (
               <img 
-                src={surgeon.surgeonPhoto} 
-                alt={surgeon.name}
-                class="w-full h-auto object-cover"
+                src={surgeon.surgeon_photo} 
+                alt={`${cleanName} - Bariatric Surgeon in ${surgeon.city}, ${surgeon.state} | Weight Loss Surgery Specialist`}
+                title={`${cleanName} - Expert Bariatric Surgeon`}
+                width="800"
+                height="1000"
+                class="w-full rounded-xl shadow-lg" 
                 loading="eager"
+                fetchpriority="high"
               />
-            </div>
-          ) : (
-            <div class="bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl shadow-lg p-12 flex items-center justify-center">
-              <svg class="w-32 h-32 text-white" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
-              </svg>
-            </div>
-          )}
-          
-          <!-- Quick Actions -->
-          <div class="mt-6 space-y-3">
-            {surgeon.phone && (
-              <a 
-                href={`tel:${surgeon.phone}`}
-                class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-colors"
-              >
-                📞 Call Now
-              </a>
+            ) : (
+              <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl shadow-lg aspect-[3/4] flex items-center justify-center">
+                <div class="text-center text-white p-6">
+                  <svg class="w-20 h-20 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-xs font-semibold uppercase tracking-wide">Experience</p>
+                  <p class="text-xs uppercase tracking-wide">Precision</p>
+                  <p class="text-xs uppercase tracking-wide">Results</p>
+                </div>
+              </div>
             )}
-            {surgeon.website && (
-              <a 
-                href={surgeon.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-colors"
-              >
-                🌐 Visit Website
-              </a>
-            )}
-            {surgeon.googleMapsUrl && (
-              <a 
-                href={surgeon.googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="block w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-4 rounded-lg text-center transition-colors"
-              >
-                📍 Get Directions
-              </a>
-            )}
-          </div>
-        </div>
-        
-        <!-- Right: Info -->
-        <div class="md:col-span-2">
-          <div class="flex items-start justify-between mb-4">
-            <div>
-              <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-                {surgeon.name}
-              </h1>
-              <p class="text-xl text-gray-600">
-                Bariatric & Upper GI Surgeon
-              </p>
-              <p class="text-lg text-gray-500">
-                {surgeon.city}, {surgeon.state}
-              </p>
-            </div>
-          </div>
-          
-          <!-- Quick Stats -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-            <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-yellow-500">
-              <div class="text-3xl font-bold text-gray-900">
-                ⭐ {surgeon.rating}
-              </div>
-              <div class="text-sm text-gray-600">
-                {surgeon.reviewCount} reviews
-              </div>
-            </div>
-            
-            <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-blue-500">
-              <div class="text-3xl font-bold text-gray-900">
-                {surgeon.yearsExperience}+
-              </div>
-              <div class="text-sm text-gray-600">
-                Years Experience
-              </div>
-            </div>
-            
-            <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-green-500">
-              <div class="text-3xl font-bold text-gray-900">
-                5
-              </div>
-              <div class="text-sm text-gray-600">
-                Hospital Affiliations
-              </div>
-            </div>
-            
-            <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-purple-500">
-              <div class="text-3xl font-bold text-gray-900">
-                {surgeon.estimatedProcedures.toLocaleString()}+
-              </div>
-              <div class="text-sm text-gray-600">
-                Procedures
-              </div>
-            </div>
-          </div>
-          
-          <!-- Bio -->
-          <div class="bg-white rounded-lg p-6 shadow-md">
-            <h2 class="text-2xl font-bold text-gray-900 mb-3">About {surgeon.name}</h2>
-            <p class="text-gray-700 leading-relaxed">
-              A/Prof. Christos Apostolou - Surgeon is a leading bariatric surgeon in Wahroonga; NSW; known for significant expertise in weight loss surgery. With a 4.9-star rating from 79+ patient reviews; they've built a reputation for exceptional patient outcomes and comprehensive surgical care. Specializing in gastric sleeve; bypass; and band procedures; A/Prof. Christos Apostolou - Surgeon offers personalized treatment plans backed by 10+ years of surgical experience.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Enhanced Content Sections -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    
-    
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">🎯 Comprehensive Care Team</h2>
-      <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border-2 border-green-200">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          
-          <div class="flex items-start space-x-3">
-            <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <div>
-              <div class="font-semibold text-gray-900">Dietitian/Nutritionist</div>
-              <div class="text-sm text-gray-600">Pre & post-op dietary support</div>
+            <!-- Rating Tile -->
+            <div class="bg-white rounded-lg p-4 shadow-md border border-gray-200">
+              <div class="text-center">
+                <p class="text-sm text-gray-600 mb-1">Rating</p>
+                {surgeon.rating > 0 ? (
+                  <>
+                    <div class="flex items-center justify-center gap-1 mb-1">
+                      <span class="text-2xl">⭐</span>
+                      <span class="text-2xl font-bold text-gray-900">{surgeon.rating}</span>
+                    </div>
+                    <p class="text-sm text-gray-600">{surgeon.review_count} reviews</p>
+                  </>
+                ) : (
+                  <>
+                    <div class="flex items-center justify-center gap-1 mb-1">
+                      <span class="text-2xl">⭐</span>
+                      <span class="text-lg font-bold text-gray-900">New</span>
+                    </div>
+                    <p class="text-sm text-gray-600">0 reviews</p>
+                  </>
+                )}
+              </div>
+              <div class="mt-3 pt-3 border-t border-gray-200">
+                <p class="text-xs text-gray-600 text-center">Experience</p>
+                <p class="text-lg font-bold text-gray-900 text-center">{surgeon.years_experience}+ years</p>
+              </div>
             </div>
-          </div>
-          
-          
-          
-          <div class="flex items-start space-x-3">
-            <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
+
+            <!-- CTA Buttons -->
+            {surgeon.website && (
+              <a href={surgeon.website} target="_blank" rel="noopener" class="block w-full bg-blue-600 text-white text-center px-4 py-3 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-colors shadow-md">
+                Visit Website
+              </a>
+            )}
+            {surgeon.google_maps_url && (
+              <a href={surgeon.google_maps_url} target="_blank" rel="noopener" class="block w-full bg-green-600 text-white text-center px-4 py-3 rounded-lg text-sm font-semibold hover:bg-green-700 transition-colors shadow-md">
+                View on Google Maps
+              </a>
+            )}
+                    {surgeon.phone && (
+                      <a href={`tel:${surgeon.phone}`} class="block w-full bg-gray-800 text-white text-center px-4 py-3 rounded-lg text-sm font-semibold hover:bg-gray-900 transition-colors shadow-md">
+                        📞 Call Now
+                      </a>
+                    )}
+
+                    <!-- Lead Contact Form -->
+                    <div class="mt-6">
+                      <LeadContactForm surgeonName={cleanName} surgeonCity={surgeon.city} />
+                    </div>
+                  </div>
+
+          <!-- Right: Main Info -->
+          <div class="space-y-6">
+            <!-- Header -->
             <div>
-              <div class="font-semibold text-gray-900">Psychologist</div>
-              <div class="text-sm text-gray-600">Mental health & emotional support</div>
+              <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{cleanName}</h1>
+              <p class="text-lg text-gray-600 mb-4">{surgeon.category}</p>
+              
+              <!-- Info Tiles - Smaller & More Rounded -->
+              <div class="grid grid-cols-3 gap-2 mb-4">
+                <div class="bg-blue-50 rounded-xl p-2 text-center">
+                  <svg class="w-4 h-4 mx-auto mb-0.5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-[10px] font-semibold text-gray-700">{surgeon.city}, {surgeon.state}</p>
+                </div>
+                
+                <div class="bg-purple-50 rounded-xl p-2 text-center">
+                  <svg class="w-4 h-4 mx-auto mb-0.5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                  </svg>
+                  <p class="text-[10px] font-semibold text-gray-700">{enhanced.credentials?.fellowships?.[0]?.replace('Royal Australasian College of Surgeons', 'FRACS') || 'MBBS, FRACS'}</p>
+                </div>
+
+                <div class="bg-green-50 rounded-xl p-2 text-center">
+                  <svg class="w-4 h-4 mx-auto mb-0.5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                  </svg>
+                  <p class="text-[10px] font-semibold text-gray-700">{surgeon.estimated_procedures}+ Procedures</p>
+                </div>
+              </div>
             </div>
-          </div>
-          
-          
-          
-          
-          
-          <div class="flex items-start space-x-3">
-            <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <div>
-              <div class="font-semibold text-gray-900">Telehealth Available</div>
-              <div class="text-sm text-gray-600">Virtual consultations offered</div>
+
+            <!-- About - Enhanced with Specific Details -->
+            <div class="bg-gray-50 rounded-lg p-5">
+              <h2 class="text-xl font-bold text-gray-900 mb-3">About {cleanName}</h2>
+              <p class="text-gray-700 leading-relaxed mb-4">{surgeon.bio_long.replace(surgeon.name, cleanName)}</p>
+              
+              {enhanced.unique_features && enhanced.unique_features.length > 0 && (
+                <div class="mt-4 pt-4 border-t border-gray-300">
+                  <h3 class="text-sm font-bold text-gray-900 mb-2">What Sets {cleanName} Apart:</h3>
+                  <ul class="space-y-1">
+                    {enhanced.unique_features.slice(0, 4).map(feature => (
+                      <li class="text-sm text-gray-700 flex items-start gap-2">
+                        <svg class="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {enhanced.services?.approach && (
+                <div class="mt-4 pt-4 border-t border-gray-300">
+                  <h3 class="text-sm font-bold text-gray-900 mb-2">Treatment Approach:</h3>
+                  <p class="text-sm text-gray-700">{enhanced.services.approach}</p>
+                </div>
+              )}
             </div>
-          </div>
-          
-          
-          
-          <div class="flex items-start space-x-3">
-            <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-            </svg>
-            <div>
-              <div class="font-semibold text-gray-900">Follow-up Care</div>
-              <div class="text-sm text-gray-600">Continuous follow-up for bariatric patients</div>
+
+            <!-- Procedures - With Shaded Background -->
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-5 shadow-sm border border-blue-100">
+              <h3 class="text-lg font-bold text-gray-900 mb-3">Procedures Offered</h3>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
+                <div class="bg-white rounded-lg p-3 flex items-center gap-2 text-gray-700 shadow-sm">
+                  <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="font-semibold text-sm">Gastric Sleeve</span>
+                </div>
+                <div class="bg-white rounded-lg p-3 flex items-center gap-2 text-gray-700 shadow-sm">
+                  <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="font-semibold text-sm">Gastric Bypass</span>
+                </div>
+                <div class="bg-white rounded-lg p-3 flex items-center gap-2 text-gray-700 shadow-sm">
+                  <svg class="w-5 h-5 text-blue-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  <span class="font-semibold text-sm">Gastric Band</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Enhanced Content Sections - Now in Right Column -->
+            {enhanced.credentials && <CredentialsSection credentials={enhanced.credentials} />}
+            {enhanced.team && <TeamSection team={enhanced.team} />}
+            {enhanced.hospitals && <HospitalsSection hospitals={enhanced.hospitals} />}
+            {enhanced.pricing && <PricingSection pricing={enhanced.pricing} />}
+            
+            {/* Google Reviews Section */}
+            {surgeon.slug && (
+              <GoogleReviews 
+                surgeonName={cleanName}
+                surgeonSlug={surgeon.slug}
+                rating={surgeon.rating}
+                reviewCount={surgeon.review_count}
+              />
+            )}
+            
+            {/* Location Map */}
+            <LocationMap 
+              surgeonName={cleanName}
+              placeId={surgeon.place_id}
+              address={surgeon.street}
+              city={surgeon.city}
+              state={surgeon.state}
+            />
+            
+            {seo.faqs && seo.faqs.length > 0 && <FAQSection faqs={seo.faqs} />}
           </div>
-          
-        </div>
-        
-        
-        <div class="mt-4 pt-4 border-t border-green-300">
-          <p class="text-sm text-gray-700">
-            <span class="font-semibold">Team Size:</span> Multidisciplinary team
-          </p>
-        </div>
-        
-      </div>
-    </section>
-  
-    
-    
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">🔬 Procedures & Services</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
-        
-        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
-          <span class="text-sm font-medium text-gray-800">Bariatric surgery (gastric sleeve, bypass)</span>
-        </div>
-        
-        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
-          <span class="text-sm font-medium text-gray-800">Upper gastrointestinal surgery (oncological and benign)</span>
-        </div>
-        
-        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
-          <span class="text-sm font-medium text-gray-800">Gallbladder and anti-reflux surgery</span>
-        </div>
-        
-        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
-          <span class="text-sm font-medium text-gray-800">Hernia surgery (laparoscopic/open)</span>
-        </div>
-        
-        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
-          <span class="text-sm font-medium text-gray-800">Liver and pancreatic surgery</span>
-        </div>
-        
-        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
-          <span class="text-sm font-medium text-gray-800">Endoscopy/ERCP (interventional)</span>
-        </div>
-        
-        <div class="bg-blue-50 rounded-lg p-3 border border-blue-200">
-          <span class="text-sm font-medium text-gray-800">General surgical emergencies</span>
-        </div>
-        
-      </div>
-    </section>
-  
-    
-    
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">🏥 Hospital Affiliations</h2>
-      <div class="grid md:grid-cols-2 gap-4">
-        
-        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
-          <h3 class="font-semibold text-gray-900">Sydney Adventist Hospital</h3>
-          <p class="text-sm text-gray-600 mt-1">185 Fox Valley Road, Wahroonga, NSW 2076</p>
-          
-          
-        </div>
-        
-        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
-          <h3 class="font-semibold text-gray-900">Macquarie University Hospital</h3>
-          <p class="text-sm text-gray-600 mt-1">75 Talavera Rd, Macquarie Park NSW 2113</p>
-          
-          
-        </div>
-        
-        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
-          <h3 class="font-semibold text-gray-900">Northern Beaches Hospital</h3>
-          <p class="text-sm text-gray-600 mt-1">105 Frenchs Forest Rd W, Frenchs Forest NSW 2086</p>
-          
-          
-        </div>
-        
-        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
-          <h3 class="font-semibold text-gray-900">Bankstown-Lidcombe Hospital</h3>
-          <p class="text-sm text-gray-600 mt-1">Bankstown, NSW 2200</p>
-          
-          
-        </div>
-        
-        <div class="bg-white rounded-lg border-2 border-gray-200 p-4 hover:border-blue-300 transition-colors">
-          <h3 class="font-semibold text-gray-900">Norwest Private Hospital</h3>
-          <p class="text-sm text-gray-600 mt-1">11 Norbrik Dr, Bella Vista NSW 2153</p>
-          
-          
-        </div>
-        
-      </div>
-    </section>
-  
-    
-    
-    <section class="mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-6">🌟 What Makes This Practice Unique</h2>
-      <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border-2 border-yellow-200">
-        <ul class="space-y-3">
-          
-          <li class="flex items-start space-x-3">
-            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <span class="text-gray-700">Accredited in both da Vinci and Versius robotic surgical systems</span>
-          </li>
-          
-          <li class="flex items-start space-x-3">
-            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <span class="text-gray-700">Academic appointments at UNSW, Sydney University, Macquarie University, and ANU Medical School</span>
-          </li>
-          
-          <li class="flex items-start space-x-3">
-            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <span class="text-gray-700">Clinical lead in Upper GI Surgery at Sydney Adventist Hospital</span>
-          </li>
-          
-          <li class="flex items-start space-x-3">
-            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <span class="text-gray-700">RACS training supervisor and Area Cancer Committee chair</span>
-          </li>
-          
-          <li class="flex items-start space-x-3">
-            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <span class="text-gray-700">Active in clinical research with peer-reviewed publications</span>
-          </li>
-          
-          <li class="flex items-start space-x-3">
-            <svg class="w-5 h-5 text-yellow-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-            </svg>
-            <span class="text-gray-700">22 years of surgical experience</span>
-          </li>
-          
-        </ul>
-      </div>
-    </section>
-  
-    
-    <!-- Contact Section -->
-    <section class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
-        <p class="text-xl mb-6 text-blue-100">
-          Book a consultation with {surgeon.name} today to discuss your weight loss surgery options.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          {surgeon.phone && (
-            <a 
-              href={`tel:${surgeon.phone}`}
-              class="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-8 rounded-lg transition-colors inline-block"
-            >
-              📞 {surgeon.phone}
-            </a>
-          )}
-          {surgeon.website && (
-            <a 
-              href={surgeon.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-8 rounded-lg transition-colors inline-block border-2 border-white"
-            >
-              Visit Website →
-            </a>
-          )}
         </div>
       </div>
     </section>
-    
-  </div>
+  </main>
 </BaseLayout>
