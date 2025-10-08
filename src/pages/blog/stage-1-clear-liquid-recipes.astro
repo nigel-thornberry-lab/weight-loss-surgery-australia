@@ -1,10 +1,23 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
+
+const category = "Recovery & Diet";
+const publishDate = "2025-01-16";
+const keywords = [
+  "clear liquid recipes",
+  "bariatric surgery stage 1",
+  "gastric sleeve week 1",
+  "post-surgery liquids",
+  "bariatric clear liquids"
+];
 ---
 
 <BlogLayout 
   title="Stage 1 Clear Liquid Recipes: Days 1-7 After Gastric Sleeve Surgery"
   description="8 detailed clear liquid recipes for the first week after bariatric surgery. Hydration-focused, healing-friendly, and stomach-gentle options with exact portions and Australian ingredients."
+  category={category}
+  publishDate={publishDate}
+  keywords={keywords}
 >
 
 <div class="hero-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin-bottom: 3rem;">

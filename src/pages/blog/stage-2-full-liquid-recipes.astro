@@ -1,10 +1,23 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
+
+const category = "Recovery & Diet";
+const publishDate = "2025-01-16";
+const keywords = [
+  "full liquid recipes",
+  "bariatric surgery stage 2",
+  "gastric sleeve week 2",
+  "protein shakes bariatric",
+  "high protein liquids"
+];
 ---
 
 <BlogLayout 
   title="Stage 2 Full Liquid Recipes: Weeks 2-3 After Gastric Sleeve Surgery"
   description="13 protein-rich full liquid recipes for weeks 2-3 after bariatric surgery. High-protein shakes, creamy soups, and nutrient-dense options with Australian ingredients."
+  category={category}
+  publishDate={publishDate}
+  keywords={keywords}
 >
 
 <div class="hero-section" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin-bottom: 3rem;">
