@@ -4,19 +4,28 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 // Blog articles
 const articles = [
   {
+    title: "50+ Bariatric Surgery Recipes for Every Stage of Your Journey",
+    description: "Complete bariatric recipe collection: Liquid, pureed, soft & solid foods. High-protein, delicious recipes for every stage of your weight loss journey.",
+    href: "/blog/bariatric-surgery-recipes-all-stages/",
+    category: "Recovery & Diet",
+    publishDate: "2025-01-16",
+    readingTime: "24 min read",
+    featured: true
+  },
+  {
     title: "Gastric Sleeve Cost in Australia: 2025 Complete Breakdown",
     description: "Detailed gastric sleeve cost breakdown: $15K-25K self-funded, $5K-12K with insurance. Medicare rebates, payment plans, hidden costs + city-by-city pricing.",
     href: "/blog/gastric-sleeve-cost-australia-2025/",
     category: "Cost & Financing",
     publishDate: "2025-01-15",
     readingTime: "18 min read",
-    featured: true
+    featured: false
   }
 ];
 
 const categories = [
   { name: 'Cost & Financing', slug: 'cost-financing', count: 1 },
-  { name: 'Recovery & Diet', slug: 'recovery-diet', count: 0 },
+  { name: 'Recovery & Diet', slug: 'recovery-diet', count: 1 },
   { name: 'Surgery Information', slug: 'surgery-information', count: 0 },
   { name: 'Pre-Surgery', slug: 'pre-surgery', count: 0 },
   { name: 'Long-Term Success', slug: 'long-term-success', count: 0 },
