@@ -12,6 +12,77 @@ import path from 'path';
 // TYPE DEFINITIONS
 // ============================================================================
 
+// Enhanced data types from Perplexity research
+export interface SurgeonCredentials {
+  medical_school?: string;
+  graduation_year?: string;
+  surgical_training?: string;
+  fellowships?: Array<{
+    specialty: string;
+    institution: string;
+    year: string;
+  }>;
+  certifications?: string[];
+  years_in_practice?: string;
+  procedures_performed?: string;
+  degrees?: string[];
+  professional_memberships?: string[];
+  special_training?: string[];
+  years_practicing?: number;
+}
+
+export interface SurgeonTeam {
+  surgeons?: Array<{ name: string; role: string }>;
+  team_size?: string;
+  has_dietitian?: boolean;
+  has_psychologist?: boolean;
+  has_nurses?: boolean;
+}
+
+export interface SurgeonServices {
+  procedures?: string[];
+  pre_op_program?: boolean | string;
+  post_op_program?: boolean | string;
+  follow_up_duration?: string;
+  telehealth?: boolean;
+  support_groups?: boolean;
+}
+
+export interface SurgeonHospital {
+  name: string;
+  address?: string;
+  verified?: boolean;
+}
+
+export interface SurgeonPricing {
+  available?: boolean;
+  gastric_sleeve?: string;
+  gastric_sleeve_uninsured?: string;
+  gastric_bypass?: string;
+  consultation?: string;
+}
+
+export interface SurgeonFAQ {
+  q: string;
+  a: string;
+  question?: string;
+  answer?: string;
+}
+
+export interface SurgeonEnhancedData {
+  credentials?: SurgeonCredentials;
+  team?: SurgeonTeam;
+  services?: SurgeonServices;
+  hospitals?: SurgeonHospital[];
+  pricing?: SurgeonPricing;
+  unique_features?: string[];
+  faqs?: SurgeonFAQ[];
+  achievements?: string[];
+  teaching?: string[];
+  _enhancement_level?: 'full' | 'partial' | 'minimal';
+  enhanced?: boolean;
+}
+
 export interface Surgeon {
   business_name: string;
   surgeon_name: string;
@@ -38,6 +109,8 @@ export interface Surgeon {
   tier: 1 | 2 | 3;
   location_display: string;
   bio_long: string;
+  // Enhanced data from Perplexity research
+  enhanced_data?: SurgeonEnhancedData;
 }
 
 export type SurgeonCity = 'Sydney' | 'Melbourne' | 'Other';
@@ -133,9 +206,33 @@ function parseCSV(filePath: string): Surgeon[] {
 // ============================================================================
 
 let surgeonCache: Surgeon[] | null = null;
+let enhancedDataCache: Record<string, SurgeonEnhancedData> | null = null;
 
 /**
- * Load and cache surgeon data from CSV
+ * Load enhanced data from consolidated JSON file
+ */
+function loadEnhancedData(): Record<string, SurgeonEnhancedData> {
+  if (enhancedDataCache) {
+    return enhancedDataCache;
+  }
+  
+  const enhancedPath = path.join(process.cwd(), 'surgeon-enhanced-data-consolidated.json');
+  
+  if (fs.existsSync(enhancedPath)) {
+    try {
+      enhancedDataCache = JSON.parse(fs.readFileSync(enhancedPath, 'utf-8'));
+      return enhancedDataCache!;
+    } catch (error) {
+      console.warn('Failed to load enhanced surgeon data:', error);
+      return {};
+    }
+  }
+  
+  return {};
+}
+
+/**
+ * Load and cache surgeon data from CSV, merging with enhanced data
  */
 function loadSurgeons(): Surgeon[] {
   if (surgeonCache) {
@@ -149,14 +246,34 @@ function loadSurgeons(): Surgeon[] {
     path.join(process.cwd(), '..', '..', 'surgeons-with-bios.csv'),
   ];
   
+  let baseSurgeons: Surgeon[] = [];
+  
   for (const filePath of possiblePaths) {
     if (fs.existsSync(filePath)) {
-      surgeonCache = parseCSV(filePath);
-      return surgeonCache;
+      baseSurgeons = parseCSV(filePath);
+      break;
     }
   }
   
-  throw new Error('Surgeon data file not found. Please ensure surgeons-with-bios.csv exists in the project root.');
+  if (baseSurgeons.length === 0) {
+    throw new Error('Surgeon data file not found. Please ensure surgeons-with-bios.csv exists in the project root.');
+  }
+  
+  // Load and merge enhanced data
+  const enhancedData = loadEnhancedData();
+  
+  surgeonCache = baseSurgeons.map(surgeon => {
+    const enhanced = enhancedData[surgeon.slug];
+    if (enhanced) {
+      return {
+        ...surgeon,
+        enhanced_data: enhanced
+      };
+    }
+    return surgeon;
+  });
+  
+  return surgeonCache;
 }
 
 // ============================================================================

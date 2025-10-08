@@ -1,0 +1,867 @@
+{
+  "aprof-christos-apostolou-surgeon-wahroonga": {
+    "credentials": {
+      "website": "http://www.christosapostolou.com.au/"
+    },
+    "enhanced": true,
+    "_enhancement_level": "minimal"
+  },
+  "dr-robert-gandy-randwick": {
+    "credentials": {
+      "website": "http://www.drrobertgandy.com.au/"
+    },
+    "enhanced": true,
+    "_enhancement_level": "minimal"
+  },
+  "dr-mark-magdy-miranda": {
+    "credentials": {
+      "website": "https://www.drmarkmagdy.com.au/"
+    },
+    "enhanced": true,
+    "_enhancement_level": "minimal"
+  },
+  "dr-yuan-cheng-richmond": {
+    "credentials": {
+      "website": "https://www.dryuancheng.com.au/"
+    },
+    "enhanced": true,
+    "_enhancement_level": "minimal"
+  },
+  "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna": {
+    "credentials": {
+      "website": "https://www.weightlosscentre.com.au/"
+    },
+    "enhanced": true,
+    "_enhancement_level": "minimal"
+  },
+  "dr-amitabha-das-liverpool": {
+    "credentials": {
+      "medical_school": "University of New South Wales",
+      "degrees": [
+        "MBBS (Hons)",
+        "MS (Master of Surgery, Laparoscopic Surgery)"
+      ],
+      "fellowships": [
+        "FRACS"
+      ],
+      "professional_memberships": [
+        "GSA",
+        "ANZMOSS",
+        "IFSO"
+      ],
+      "years_practicing": 15
+    },
+    "team": {
+      "has_dietitian": true,
+      "has_psychologist": false,
+      "has_nurses": true
+    },
+    "services": {
+      "procedures": [
+        "Gastric Sleeve",
+        "Gastric Bypass",
+        "Revision Surgery"
+      ],
+      "pre_op_program": true,
+      "post_op_program": true
+    },
+    "hospitals": [
+      {
+        "name": "Sydney Southwest Private Hospital",
+        "address": "Liverpool, NSW"
+      }
+    ],
+    "pricing": {
+      "available": true,
+      "gastric_sleeve_uninsured": "$15,400",
+      "consultation": "Free"
+    },
+    "unique_features": [
+      "Advanced laparoscopic and robotic surgery",
+      "15+ years bariatric experience"
+    ],
+    "enhanced": true,
+    "_enhancement_level": "partial"
+  },
+  "dr-paul-burton-brighton": {
+    "credentials": {
+      "degrees": [
+        "MBBS",
+        "MD",
+        "FRACS"
+      ],
+      "fellowships": [
+        "FRACS (General Surgery)"
+      ],
+      "professional_memberships": [
+        "RACS",
+        "OSSANZ",
+        "GSA"
+      ],
+      "years_practicing": 20
+    },
+    "team": {
+      "has_dietitian": true,
+      "has_psychologist": true,
+      "has_nurses": true
+    },
+    "services": {
+      "procedures": [
+        "Gastric Sleeve",
+        "Gastric Bypass",
+        "Gastric Band",
+        "Revision Surgery"
+      ],
+      "pre_op_program": true,
+      "post_op_program": true,
+      "telehealth": true
+    },
+    "hospitals": [
+      {
+        "name": "Epworth Freemasons Hospital",
+        "address": "East Melbourne, VIC"
+      }
+    ],
+    "pricing": {
+      "available": false
+    },
+    "unique_features": [
+      "University of Melbourne researcher",
+      "International bariatric surgery trainer"
+    ],
+    "enhanced": true,
+    "_enhancement_level": "partial"
+  },
+  "dr-ahmad-aly-bulleen": {
+    "credentials": {
+      "degrees": [
+        "MBBS",
+        "MD",
+        "PhD",
+        "FRACS"
+      ],
+      "fellowships": [
+        "FRACS"
+      ],
+      "professional_memberships": [
+        "RACS",
+        "IFSO",
+        "OSSANZ"
+      ],
+      "years_practicing": 15
+    },
+    "team": {
+      "has_dietitian": true,
+      "has_psychologist": true,
+      "has_nurses": true
+    },
+    "services": {
+      "procedures": [
+        "Gastric Sleeve",
+        "Gastric Bypass",
+        "Revision Surgery"
+      ],
+      "pre_op_program": true,
+      "post_op_program": true
+    },
+    "hospitals": [
+      {
+        "name": "Epworth Eastern Hospital",
+        "address": "Box Hill, VIC"
+      }
+    ],
+    "unique_features": [
+      "PhD in bariatric surgery outcomes",
+      "International presenter"
+    ],
+    "enhanced": true,
+    "_enhancement_level": "partial"
+  },
+  "aprof-michael-hii-east-melbourne": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "associate-professor-michael-talbot-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "daniel-foley-richmond": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-ali-zarrouk-campbelltown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-ben-keong-bundoora": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-clare-bouffler-kingswood": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-clement-tsang-hurstville": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-david-joseph-newtown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-david-links-randwick": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-david-yeo-camperdown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "credentials": {
+      "medical_school": "Not publicly listed",
+      "graduation_year": "Unknown",
+      "surgical_training": "NSW, QLD, NT; Subspecialised upper-GI in UK",
+      "fellowships": [
+        {
+          "specialty": "Upper Gastrointestinal Surgery",
+          "institution": "High-volume oesophageal and gastric surgery centre, United Kingdom",
+          "year": "After Australian registrar training"
+        }
+      ],
+      "certifications": [
+        "FRACS (Fellow, Royal Australasian College of Surgeons) - General Surgery",
+        "GESA Endoscopy Accreditation (Gastroscopy and Colonoscopy)"
+      ],
+      "years_in_practice": "15+",
+      "procedures_performed": "1500+"
+    },
+    "achievements": [
+      "Subspecialised training in high-volume oesophageal and gastric surgery centre in UK",
+      "Trained under internationally prominent general surgeons",
+      "Master of Surgery degree holder"
+    ],
+    "teaching": [],
+    "faqs": [
+      {
+        "q": "What is the process for my first consultation with Dr Devesh Kaushal?",
+        "a": "Your initial consultation involves a detailed medical assessment, review of any relevant test results (please bring these), and discussion of your surgical and non-surgical options. Arrive 10 minutes early for paperwork, and you are welcome to bring a support person. Telehealth consultations are also available if needed."
+      },
+      {
+        "q": "Who is part of the multidisciplinary team, and what are their roles?",
+        "a": "The team includes Dietitian Claudia for nutritional support, a psychologist for mental health and readiness, and an exercise physiologist for tailored physical activity plans. They work collaboratively with Dr Kaushal to optimize your outcomes before and after surgery."
+      },
+      {
+        "q": "What types of bariatric surgery does Dr Kaushal perform?",
+        "a": "Dr Kaushal specializes in gastric sleeve surgery and other minimally invasive (laparoscopic) weight loss procedures. He also has expertise in upper-GI and colorectal surgery, as well as advanced endoscopic procedures."
+      },
+      {
+        "q": "How long does it take to recover from bariatric surgery?",
+        "a": "Most patients stay in hospital for a few days post-surgery and can resume light activities within 1-2 weeks, with a gradual return to normal activities over several weeks. Comprehensive follow-up care is provided to support your recovery and monitor for complications."
+      },
+      {
+        "q": "What follow-up care will I receive after surgery?",
+        "a": "Scheduled post-operative appointments are arranged to monitor healing and progress. Ongoing care includes consultations with the dietitian, psychologist, and exercise physiologist as needed. Regular check-ins allow for any adjustments to your care plan and long-term support."
+      },
+      {
+        "q": "What are the costs, and is surgery covered by insurance?",
+        "a": "Dr Kaushal's clinic is a private practice; there are reasonable out-of-pocket costs for consultations and procedures. Private health insurance may cover substantial hospital fees, but self-funded options are available. Medicare rebates are possible for some follow-up services but not for the first consultation."
+      },
+      {
+        "q": "Where does Dr Kaushal operate?",
+        "a": "Dr Kaushal operates at Campbelltown Private Hospital and Sydney Southwest Private Hospital, both in South-Western Sydney."
+      },
+      {
+        "q": "What makes Dr Kaushal's practice unique?",
+        "a": "He offers over 15 years' experience, advanced training (including a Master of Surgery), international expertise, and a multidisciplinary, empathic approach. Patients benefit from specialized care tailored to complex cases, with state-of-the-art diagnostics and a patient-focused ethos."
+      },
+      {
+        "q": "How long are the waiting times for appointments and surgery?",
+        "a": "While every effort is made to run on time, occasional delays may occur due to complex case needs. You will be informed if there are scheduling delays. Same-day cancellations may incur a fee. Exact waiting times for surgery depend on medical urgency and hospital availability."
+      },
+      {
+        "q": "What does the typical patient journey look like?",
+        "a": "The process involves initial consultation and assessments (with relevant specialists), pre-operative planning, surgery at one of the partnered hospitals, and structured follow-up appointments with Dr Kaushal and the multidisciplinary team to ensure long-term success and support."
+      }
+    ],
+    "_enhancement_level": "partial"
+  },
+  "dr-edward-tong-campbelltown-campbelltown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-ernest-lim-bundoora": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-ertugrul-durmush-liverpool": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-fadil-khaleal-penrith": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-faizur-reza-bella-vista": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-gary-yee-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-govind-krishna-weight-loss-general-surgeon-wetherill-park": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-james-chau-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-jason-maani-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "credentials": {
+      "medical_school": "University of Auckland, New Zealand",
+      "graduation_year": "2001",
+      "surgical_training": "Bachelor of Human Biology (1998), MBChB (2001), Basic Surgical Trainee Auckland (2004), General Surgical Registrar The Alfred Hospital Melbourne (2007), Advanced Surgical Training completed (2013)",
+      "fellowships": [
+        {
+          "specialty": "Upper GI & Melanoma/Sarcoma",
+          "institution": "Peter MacCallum Cancer Institute, Melbourne",
+          "year": "2013"
+        },
+        {
+          "specialty": "Upper GI & Hepato-Pancreato-Biliary Surgery",
+          "institution": "Sir Charles Gairdner Hospital, Perth",
+          "year": "2014"
+        },
+        {
+          "specialty": "Upper GI Surgery",
+          "institution": "St. George Hospital, Kogarah (Sydney)",
+          "year": "2015"
+        },
+        {
+          "specialty": "Advanced Laparoscopic Upper GI and Bariatric Surgery",
+          "institution": "St George Public & Private Hospitals, Sydney",
+          "year": "2014-2015"
+        }
+      ],
+      "certifications": [
+        "FRACS (Fellow, Royal Australasian College of Surgeons) - 2016",
+        "Bariatric Surgeon of Excellence (Surgical Review Corporation)",
+        "Member: ANZGOSA (Australian and New Zealand Gastro Oesophageal Surgery Association)",
+        "Member: OSSANZ (Obesity Surgery Society of Australia and New Zealand)"
+      ],
+      "years_in_practice": "19+",
+      "procedures_performed": "3000+"
+    },
+    "achievements": [
+      "Over 3,000 surgeries performed",
+      "More than 1,000 laparoscopic procedures",
+      "Certified Bariatric Surgeon of Excellence",
+      "Research involvement through UNSW"
+    ],
+    "teaching": [
+      "Research involvement through University of New South Wales (UNSW)"
+    ],
+    "faqs": [
+      {
+        "q": "What is the consultation process with Dr Jason Maani?",
+        "a": "Your first consultation involves an in-depth review of your medical history, discussion of your weight loss journey, and a physical assessment. Dr Maani and his team take time to understand each patient's personal concerns and goals, ensuring a tailored approach to your care. You will learn about available surgical and non-surgical options, the risks and benefits, and any necessary pre-operative investigations."
+      },
+      {
+        "q": "Which bariatric procedures does Dr Maani offer?",
+        "a": "Dr Maani is highly trained in laparoscopic sleeve gastrectomy, gastric bypass, and other advanced bariatric surgeries, along with revisional (redo) bariatric procedures. He also consults on general and upper gastrointestinal surgery and provides access to weight loss medications when appropriate."
+      },
+      {
+        "q": "What is the typical recovery time after bariatric surgery?",
+        "a": "Most patients spend 2-3 days in hospital following surgery. You can expect to return to light activities within 1-2 weeks, depending on individual progress and procedure type. Full recovery, including a return to normal physical activity, may take 4-6 weeks."
+      },
+      {
+        "q": "What does the follow-up care involve?",
+        "a": "Comprehensive follow-up is core to Dr Maani's practice. This includes scheduled post-operative reviews, dietary guidance, and ongoing support from his multidisciplinary team to help you achieve and sustain your weight loss goals. Long-term monitoring is encouraged for best results."
+      },
+      {
+        "q": "How are costs and insurance handled?",
+        "a": "Costs depend on the procedure and your level of private health insurance coverage. Many bariatric surgeries may receive partial or full coverage via private health funds; patients without insurance will be advised about self-funding options and out-of-pocket expenses during their initial consult. Dr Maani's staff can help clarify coverage details relevant to your circumstances."
+      },
+      {
+        "q": "Is revision (redo) bariatric surgery available?",
+        "a": "Yes, Dr Maani has advanced expertise in revisional bariatric surgery for patients with previous weight loss operations who have experienced complications or insufficient weight loss. Each case is individually assessed to determine the safest and most effective revision option."
+      },
+      {
+        "q": "What is the waiting time for bariatric surgery?",
+        "a": "Waiting periods vary based on health fund approvals, necessary pre-operative investigations, and hospital scheduling. Typically, once preparatory steps are completed, surgery can be booked within several weeks to a couple of months. Exact timelines are provided after your initial consultation."
+      },
+      {
+        "q": "What makes Dr Maani's practice unique?",
+        "a": "Unhurried, personalized care, comprehensive follow-up, and a focus on holistic, long-term weight loss distinguish Dr Maani's approach. He is noted for his warm and understanding manner, strong patient relationships, and commitment to the latest minimally invasive surgical techniques. His team's ongoing support is a key feature."
+      },
+      {
+        "q": "What are the risks of bariatric surgery?",
+        "a": "Risks depend on the procedure but may include bleeding, infection, leaks, blood clots, reflux, and nutritional deficiencies. Dr Maani provides a detailed discussion of risks and benefits tailored to each patient, and all procedures are carried out according to the highest standards of safety."
+      },
+      {
+        "q": "What lifestyle changes are required after surgery?",
+        "a": "Successful, long-term weight loss depends on committing to major lifestyle changes. You will need to follow a specialized diet, increase physical activity, take recommended vitamin supplements, and attend ongoing follow-up appointments. Dr Maani and his team provide extensive education and support to help you adapt to these changes and achieve lasting results."
+      }
+    ],
+    "_enhancement_level": "partial"
+  },
+  "dr-jason-maani-bariatric-surgery-liverpool": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "credentials": {
+      "medical_school": "University of Auckland, New Zealand",
+      "graduation_year": "2001",
+      "surgical_training": "Bachelor of Human Biology (1998), MBChB (2001), Basic Surgical Trainee Auckland (2004), General Surgical Registrar The Alfred Hospital Melbourne (2007), Advanced Surgical Training completed (2013)",
+      "fellowships": [
+        {
+          "specialty": "Upper GI & Melanoma/Sarcoma",
+          "institution": "Peter MacCallum Cancer Institute, Melbourne",
+          "year": "2013"
+        },
+        {
+          "specialty": "Upper GI & Hepato-Pancreato-Biliary Surgery",
+          "institution": "Sir Charles Gairdner Hospital, Perth",
+          "year": "2014"
+        },
+        {
+          "specialty": "Upper GI Surgery",
+          "institution": "St. George Hospital, Kogarah (Sydney)",
+          "year": "2015"
+        },
+        {
+          "specialty": "Advanced Laparoscopic Upper GI and Bariatric Surgery",
+          "institution": "St George Public & Private Hospitals, Sydney",
+          "year": "2014-2015"
+        }
+      ],
+      "certifications": [
+        "FRACS (Fellow, Royal Australasian College of Surgeons) - 2016",
+        "Bariatric Surgeon of Excellence (Surgical Review Corporation)",
+        "Member: ANZGOSA (Australian and New Zealand Gastro Oesophageal Surgery Association)",
+        "Member: OSSANZ (Obesity Surgery Society of Australia and New Zealand)"
+      ],
+      "years_in_practice": "19+",
+      "procedures_performed": "3000+"
+    },
+    "achievements": [
+      "Over 3,000 surgeries performed",
+      "More than 1,000 laparoscopic procedures",
+      "Certified Bariatric Surgeon of Excellence",
+      "Research involvement through UNSW"
+    ],
+    "teaching": [
+      "Research involvement through University of New South Wales (UNSW)"
+    ],
+    "faqs": [
+      {
+        "q": "What is the consultation process with Dr Jason Maani?",
+        "a": "Your first consultation involves an in-depth review of your medical history, discussion of your weight loss journey, and a physical assessment. Dr Maani and his team take time to understand each patient's personal concerns and goals, ensuring a tailored approach to your care. You will learn about available surgical and non-surgical options, the risks and benefits, and any necessary pre-operative investigations."
+      },
+      {
+        "q": "Which bariatric procedures does Dr Maani offer?",
+        "a": "Dr Maani is highly trained in laparoscopic sleeve gastrectomy, gastric bypass, and other advanced bariatric surgeries, along with revisional (redo) bariatric procedures. He also consults on general and upper gastrointestinal surgery and provides access to weight loss medications when appropriate."
+      },
+      {
+        "q": "What is the typical recovery time after bariatric surgery?",
+        "a": "Most patients spend 2-3 days in hospital following surgery. You can expect to return to light activities within 1-2 weeks, depending on individual progress and procedure type. Full recovery, including a return to normal physical activity, may take 4-6 weeks."
+      },
+      {
+        "q": "What does the follow-up care involve?",
+        "a": "Comprehensive follow-up is core to Dr Maani's practice. This includes scheduled post-operative reviews, dietary guidance, and ongoing support from his multidisciplinary team to help you achieve and sustain your weight loss goals. Long-term monitoring is encouraged for best results."
+      },
+      {
+        "q": "How are costs and insurance handled?",
+        "a": "Costs depend on the procedure and your level of private health insurance coverage. Many bariatric surgeries may receive partial or full coverage via private health funds; patients without insurance will be advised about self-funding options and out-of-pocket expenses during their initial consult. Dr Maani's staff can help clarify coverage details relevant to your circumstances."
+      },
+      {
+        "q": "Is revision (redo) bariatric surgery available?",
+        "a": "Yes, Dr Maani has advanced expertise in revisional bariatric surgery for patients with previous weight loss operations who have experienced complications or insufficient weight loss. Each case is individually assessed to determine the safest and most effective revision option."
+      },
+      {
+        "q": "What is the waiting time for bariatric surgery?",
+        "a": "Waiting periods vary based on health fund approvals, necessary pre-operative investigations, and hospital scheduling. Typically, once preparatory steps are completed, surgery can be booked within several weeks to a couple of months. Exact timelines are provided after your initial consultation."
+      },
+      {
+        "q": "What makes Dr Maani's practice unique?",
+        "a": "Unhurried, personalized care, comprehensive follow-up, and a focus on holistic, long-term weight loss distinguish Dr Maani's approach. He is noted for his warm and understanding manner, strong patient relationships, and commitment to the latest minimally invasive surgical techniques. His team's ongoing support is a key feature."
+      },
+      {
+        "q": "What are the risks of bariatric surgery?",
+        "a": "Risks depend on the procedure but may include bleeding, infection, leaks, blood clots, reflux, and nutritional deficiencies. Dr Maani provides a detailed discussion of risks and benefits tailored to each patient, and all procedures are carried out according to the highest standards of safety."
+      },
+      {
+        "q": "What lifestyle changes are required after surgery?",
+        "a": "Successful, long-term weight loss depends on committing to major lifestyle changes. You will need to follow a specialized diet, increase physical activity, take recommended vitamin supplements, and attend ongoing follow-up appointments. Dr Maani and his team provide extensive education and support to help you adapt to these changes and achieve lasting results."
+      }
+    ],
+    "_enhancement_level": "partial"
+  },
+  "dr-jason-maani-gallbladder-surgery-liverpool": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-john-jorgensen-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-john-ozmen-general-upper-gi-surgeon-bella-vista": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-ken-loi-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-mani-niazi-wantirna": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "credentials": {
+      "medical_school": "Tehran University of Medical Science, Tehran, Iran",
+      "graduation_year": "~2000s",
+      "surgical_training": "Tehran University of Medical Science (General Surgery, completed 2006)",
+      "fellowships": [
+        {
+          "specialty": "Upper GI and Bariatric Surgery",
+          "institution": "St George Hospital, Sydney (Centre of Excellence in Bariatric Surgery)",
+          "year": "Post-2013"
+        },
+        {
+          "specialty": "Breast, Endocrine & Surgical Oncology",
+          "institution": "Tweed Heads Hospital & John Flynn Hospital, Gold Coast",
+          "year": "Post-2013"
+        }
+      ],
+      "certifications": [
+        "FRACS (Fellow, Royal Australasian College of Surgeons) - March 2013",
+        "Registered Consultant Surgeon - Eastern Health, Melbourne"
+      ],
+      "years_in_practice": "18+",
+      "procedures_performed": "2000+"
+    },
+    "achievements": [
+      "Pioneered Laparoscopic Gastric Plication technique",
+      "Presented at First International Summit of Gastric Plication, Barcelona (2011)",
+      "Supervised Australia's first laparoscopic gastric plication (Royal Brisbane Hospital, 2010)",
+      "Only cited paper on gastric plication in Schwartz's Principles of Surgery (10th edition)",
+      "Travelling fellowship from Royal Brisbane Hospital Bariatric Department (2010)"
+    ],
+    "teaching": [
+      "Lecturer: Bond University, Griffith University, UNSW, Monash University",
+      "International lecturer: Tehran and Gorgan Universities of Medical Science",
+      "Mentor for RACS surgical trainees"
+    ],
+    "faqs": [
+      {
+        "q": "What is the consultation process like with Dr Mani Niazi?",
+        "a": "Dr Niazi's consultation process is highly personalised, starting with an assessment of your medical history, weight loss goals, and suitability for surgery. He provides detailed explanations of surgical options and guides you through evidence-based choices tailored to your unique needs. The initial consult includes an overview of benefits, risks, and expected outcomes for each procedure."
+      },
+      {
+        "q": "Which weight loss surgeries does Dr Niazi perform?",
+        "a": "Dr Niazi offers Sleeve Gastrectomy, Gastric Bypass, and Bariatric Revision Surgery, among other metabolic procedures. Selection is based on individual factors such as your medical profile, previous interventions, and weight loss history. He is noted for his expertise in advanced laparoscopic (keyhole) techniques."
+      },
+      {
+        "q": "What can I expect during the recovery period?",
+        "a": "Most patients can expect a hospital stay of 2-4 days for major bariatric surgeries. Initial recovery is typically 2-3 weeks for daily activities, with full recovery and return to vigorous physical activity within 6-8 weeks. Dr Niazi's practice emphasizes careful monitoring and aftercare throughout this period."
+      },
+      {
+        "q": "What follow-up care does Dr Niazi's team provide?",
+        "a": "Dr Niazi's team delivers comprehensive aftercare, including regular follow-up appointments, nutritional counseling, and support groups to help patients adjust to lifestyle changes. His aftercare program is specifically tailored to support sustained weight loss and includes access to allied health professionals."
+      },
+      {
+        "q": "Does insurance cover bariatric surgery? How much will it cost?",
+        "a": "Cost and insurance coverage depend on your policy and procedure chosen. Dr Niazi's practice focuses on accessibility and affordability and can assist with insurance queries during consultation. Out-of-pocket costs will be clearly discussed, and financing options may be available."
+      },
+      {
+        "q": "Does Dr Niazi perform revision surgery?",
+        "a": "Yes, Dr Niazi is experienced in bariatric revision surgery, which addresses earlier procedures that have failed or caused complications. He provides expert evaluation of your surgical history and customises revision strategies to correct issues or improve outcomes."
+      },
+      {
+        "q": "How long are the waiting times for surgery?",
+        "a": "Waiting times vary by hospital and urgency, but Dr Niazi operates across several major private hospitals, often allowing for shorter wait periods. The initial consultation is usually scheduled within a few weeks, while surgery dates depend on your preparation and hospital scheduling."
+      },
+      {
+        "q": "What makes Dr Niazi's practice unique?",
+        "a": "Dr Niazi brings 18+ years of surgical experience and dual fellowships in Upper GI and Bariatric Surgery. He pioneered gastric plication in Australia and uses minimally invasive, laparoscopic methods for most surgeries. His commitment to research, patient advocacy, and teaching differentiates his practice. Multilingual support is also available (Farsi, Persian, Turkish)."
+      },
+      {
+        "q": "What risks are associated with bariatric surgery?",
+        "a": "Risks can include bleeding, infection, leaks from staple lines, acid reflux, or nutritional deficiencies. Dr Niazi provides thorough risk assessment and manages complications with evidence-based protocols and access to a multidisciplinary team."
+      },
+      {
+        "q": "What lifestyle changes are required post-surgery?",
+        "a": "Patients are educated about essential lifestyle modifications, including dietary adjustments, regular physical activity, and ongoing follow-up to ensure long-term weight management success. Dr Niazi's aftercare program provides ongoing support for these changes."
+      }
+    ],
+    "_enhancement_level": "partial"
+  },
+  "dr-mani-niazi-langwarrin-mbsa-langwarrin": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-michael-crawford-newtown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-michael-devadas-baulkham-hills": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-michael-hii-werribee": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-nicholas-cocco-norwest": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-nicholas-cocco-westmead": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-philip-le-page-campbelltown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-philip-le-page-surgeon-frenchs-forest": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-philip-le-page-surgeon-concord": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-rachel-kirby-campbelltown": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-ramez-bassari-richmond": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-sean-mackay-box-hill": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-khalid-ahmed-smithfield": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-khalid-ahmed-penrith": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-khalid-ahmed-gledswood-hills": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-paul-j-ah-tye-dandenong": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-qiuye-cheng-kogarah": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "dr-roy-brancatisano-norwest": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-ahmed-naqeeb-mount-waverley": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-anthony-clough-box-hill": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-geoffrey-dr-aper-frankston": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-hai-t-bui-ascot-vale": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-kiron-bhatia-bundoora": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-mark-cullinan-richmond": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-richard-chen-malvern": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-zeev-duieb-berwick": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-ian-michell-essendon": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mr-jacob-vanyai-surrey-hills": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  },
+  "reginald-v-n-lord-darlinghurst": {
+    "researched": true,
+    "enhanced": false,
+    "note": "Full research data from Perplexity available for integration",
+    "_enhancement_level": "minimal"
+  }
+}
