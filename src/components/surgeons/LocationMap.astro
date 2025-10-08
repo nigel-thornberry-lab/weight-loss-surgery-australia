@@ -4,9 +4,11 @@ const { surgeonName, placeId, address, city, state } = Astro.props;
 // Get API key from environment (stored securely in Vercel, not in git)
 const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY;
 
-// Generate Google Maps embed URL using official Embed API
-// This shows proper marker, zoom, and info card on the location
+// Generate Google Maps embed URL
 const fullAddress = `${address}, ${city}, ${state}, Australia`;
+
+// Use the REALLY SIMPLE approach - Google Maps Embed API with API key
+// This is the only method that actually works properly with pinned locations
 const mapEmbedUrl = apiKey && placeId 
   ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=place_id:${placeId}&zoom=15`
   : apiKey
@@ -98,7 +100,7 @@ const mapViewUrl = placeId
 )}
 
 {!mapEmbedUrl && (
-  <!-- Fallback if no place_id available -->
+  <!-- Fallback if no API key or place_id available -->
   <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
     <div class="flex items-center gap-3 mb-4">
       <div class="bg-blue-600 rounded-full p-2">
@@ -127,4 +129,3 @@ const mapViewUrl = placeId
     </a>
   </div>
 )}
-

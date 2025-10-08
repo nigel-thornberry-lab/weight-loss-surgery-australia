@@ -1,0 +1,576 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  publishDate: string;
+  author?: string;
+  category: string;
+  keywords: string[];
+  readingTime?: string;
+  lastUpdated?: string;
+  image?: string;
+  relatedArticles?: Array<{
+    title: string;
+    href: string;
+  }>;
+}
+
+const {
+  title,
+  description,
+  publishDate,
+  author = "Weight Loss Surgery Australia",
+  category,
+  keywords,
+  readingTime,
+  lastUpdated,
+  image,
+  relatedArticles = []
+} = Astro.props;
+
+// Schema.org Article markup
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description,
+  "image": image || "https://weight-loss-surgery-australia.com/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": author
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Weight Loss Surgery Australia",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weight-loss-surgery-australia.com/logo.png"
+    }
+  },
+  "datePublished": publishDate,
+  "dateModified": lastUpdated || publishDate,
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": Astro.url.href
+  }
+};
+
+// Breadcrumb schema
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://weight-loss-surgery-australia.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://weight-loss-surgery-australia.com/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": category,
+      "item": `https://weight-loss-surgery-australia.com/blog/${category.toLowerCase().replace(/\s+/g, '-')}/`
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": title
+    }
+  ]
+};
+---
+
+<BaseLayout title={title} description={description}>
+  <Fragment slot="head">
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content={keywords.join(', ')} />
+    <meta name="author" content={author} />
+    <meta name="publish_date" property="og:publish_date" content={publishDate} />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="article:published_time" content={publishDate} />
+    <meta property="article:modified_time" content={lastUpdated || publishDate} />
+    <meta property="article:author" content={author} />
+    <meta property="article:section" content={category} />
+    {keywords.map(keyword => <meta property="article:tag" content={keyword} />)}
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+  </Fragment>
+
+  <article class="blog-article">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href={`/blog/${category.toLowerCase().replace(/\s+/g, '-')}/`}>{category}</a></li>
+        <li aria-current="page">{title}</li>
+      </ol>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="article-header">
+      <div class="category-badge">{category}</div>
+      <h1>{title}</h1>
+      
+      <div class="article-meta">
+        <div class="meta-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 4v4l3 2" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <span>{readingTime || "10 min read"}</span>
+        </div>
+        
+        <div class="meta-item">
+          <svg class="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 5.5h12M4.5 2v1.5M11.5 2v1.5M3.5 5h9a1.5 1.5 0 0 1 1.5 1.5v6a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 12.5v-6A1.5 1.5 0 0 1 3.5 5z" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+          <time datetime={publishDate}>
+            {new Date(publishDate).toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+        </div>
+
+        {lastUpdated && (
+          <div class="meta-item">
+            <span>Updated: {new Date(lastUpdated).toLocaleDateString('en-AU', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          </div>
+        )}
+      </div>
+
+      <!-- Medical Disclaimer Banner -->
+      <div class="medical-disclaimer-banner">
+        <svg class="icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM10 6v4M10 14h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <p><strong>Medical Information:</strong> This content is for educational purposes only. Always consult with AHPRA-registered healthcare providers before making medical decisions.</p>
+      </div>
+    </header>
+
+    <!-- Article Content -->
+    <div class="article-content">
+      <slot />
+    </div>
+
+    <!-- Related Articles -->
+    {relatedArticles.length > 0 && (
+      <aside class="related-articles">
+        <h2>Related Articles</h2>
+        <div class="related-grid">
+          {relatedArticles.map(article => (
+            <a href={article.href} class="related-card">
+              <h3>{article.title}</h3>
+              <span class="read-more">Read more →</span>
+            </a>
+          ))}
+        </div>
+      </aside>
+    )}
+
+    <!-- Full Medical Disclaimer -->
+    <footer class="article-footer">
+      <div class="medical-disclaimer">
+        <h3>Medical Disclaimer</h3>
+        <p>This content is for educational and informational purposes only and does not constitute medical advice. Individual results from weight loss surgery vary based on numerous factors including adherence to post-surgery protocols, pre-existing health conditions, and individual physiology. Weight loss figures, recovery timelines, and cost estimates are based on clinical averages and available data, and may not reflect your individual experience.</p>
+        
+        <p>All bariatric surgery procedures carry risks including but not limited to bleeding, infection, blood clots, nutritional deficiencies, and the need for revision surgery. Always consult with qualified, AHPRA-registered healthcare providers and bariatric surgeons before making decisions about weight loss surgery.</p>
+        
+        <p>Information on this page is current as of {new Date(publishDate).toLocaleDateString('en-AU', { year: 'numeric', month: 'long' })} and should be verified with your healthcare provider. For official information about Medicare rebates and eligibility, visit <a href="https://www.servicesaustralia.gov.au/" target="_blank" rel="noopener noreferrer">Services Australia</a>. For information about AHPRA-registered practitioners, visit <a href="https://www.ahpra.gov.au/" target="_blank" rel="noopener noreferrer">AHPRA</a>.</p>
+
+        <p><strong>Evidence-Based Information:</strong> We strive to provide accurate, evidence-based information sourced from peer-reviewed medical journals, clinical guidelines, and reputable health organizations. References are provided throughout this article.</p>
+      </div>
+
+      <!-- Author Bio -->
+      <div class="author-bio">
+        <h3>About Weight Loss Surgery Australia</h3>
+        <p>Weight Loss Surgery Australia connects patients with qualified, AHPRA-registered bariatric surgeons across Australia. We provide evidence-based, unbiased information to help you make informed decisions about weight loss surgery. Our content is reviewed by medical professionals and updated regularly to ensure accuracy.</p>
+      </div>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .blog-article {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  /* Breadcrumbs */
+  .breadcrumbs {
+    margin-bottom: 2rem;
+  }
+
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  .breadcrumbs li:not(:last-child)::after {
+    content: '›';
+    margin-left: 0.5rem;
+    color: #999;
+  }
+
+  .breadcrumbs a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+  }
+
+  /* Article Header */
+  .article-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .category-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #dbeafe;
+    color: #1e40af;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+
+  .article-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .article-header h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .icon {
+    color: #9ca3af;
+  }
+
+  /* Medical Disclaimer Banner */
+  .medical-disclaimer-banner {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    border-radius: 0.375rem;
+    margin-top: 1.5rem;
+  }
+
+  .medical-disclaimer-banner .icon {
+    flex-shrink: 0;
+    color: #f59e0b;
+    margin-top: 0.125rem;
+  }
+
+  .medical-disclaimer-banner p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #78350f;
+    line-height: 1.5;
+  }
+
+  /* Article Content */
+  .article-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #374151;
+  }
+
+  .article-content :global(h2) {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: #111827;
+    scroll-margin-top: 2rem;
+  }
+
+  .article-content :global(h3) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: #111827;
+    scroll-margin-top: 2rem;
+  }
+
+  .article-content :global(h4) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #111827;
+  }
+
+  .article-content :global(p) {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content :global(ul),
+  .article-content :global(ol) {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .article-content :global(li) {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content :global(a) {
+    color: #2563eb;
+    text-decoration: underline;
+  }
+
+  .article-content :global(a:hover) {
+    color: #1e40af;
+  }
+
+  .article-content :global(blockquote) {
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    border-left: 4px solid #2563eb;
+    background: #f3f4f6;
+    border-radius: 0.375rem;
+    font-style: italic;
+  }
+
+  .article-content :global(code) {
+    padding: 0.125rem 0.375rem;
+    background: #f3f4f6;
+    border-radius: 0.25rem;
+    font-family: monospace;
+    font-size: 0.875em;
+  }
+
+  .article-content :global(pre) {
+    padding: 1rem;
+    background: #1f2937;
+    color: #f3f4f6;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 2rem 0;
+  }
+
+  .article-content :global(pre code) {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+
+  .article-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.875rem;
+  }
+
+  .article-content :global(th),
+  .article-content :global(td) {
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    text-align: left;
+  }
+
+  .article-content :global(th) {
+    background: #f9fafb;
+    font-weight: 600;
+  }
+
+  .article-content :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+  }
+
+  /* Reference box styling */
+  .article-content :global(.reference-box) {
+    padding: 1rem;
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    font-size: 0.875rem;
+  }
+
+  .article-content :global(.reference-box h4) {
+    margin-top: 0;
+    color: #0c4a6e;
+  }
+
+  /* Key takeaway box */
+  .article-content :global(.key-takeaway) {
+    padding: 1.5rem;
+    background: #dcfce7;
+    border-left: 4px solid #16a34a;
+    border-radius: 0.375rem;
+    margin: 2rem 0;
+  }
+
+  .article-content :global(.key-takeaway h4) {
+    margin-top: 0;
+    color: #14532d;
+  }
+
+  /* Related Articles */
+  .related-articles {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e5e7eb;
+  }
+
+  .related-articles h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .related-card {
+    display: block;
+    padding: 1.5rem;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .related-card:hover {
+    background: #fff;
+    border-color: #2563eb;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .related-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+  }
+
+  .read-more {
+    font-size: 0.875rem;
+    color: #2563eb;
+    font-weight: 500;
+  }
+
+  /* Article Footer */
+  .article-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid #e5e7eb;
+  }
+
+  .medical-disclaimer {
+    padding: 2rem;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .medical-disclaimer h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #991b1b;
+  }
+
+  .medical-disclaimer p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #7f1d1d;
+    margin-bottom: 1rem;
+  }
+
+  .medical-disclaimer p:last-child {
+    margin-bottom: 0;
+  }
+
+  .medical-disclaimer a {
+    color: #991b1b;
+    font-weight: 600;
+  }
+
+  .author-bio {
+    padding: 1.5rem;
+    background: #f9fafb;
+    border-radius: 0.5rem;
+  }
+
+  .author-bio h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .author-bio p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin: 0;
+  }
+</style>
+

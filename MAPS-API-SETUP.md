@@ -1,5 +1,11 @@
 # Google Maps Setup Guide
 
+## 🚨 ISSUE: Maps Show Blue Interface Only
+
+**Problem:** Google Maps iframe shows only a blue interface with no pinned location or interaction.
+
+**Root Cause:** Google Maps Embed API **REQUIRES** an API key to display pinned locations properly.
+
 ## ✅ The Simple Solution
 
 Use the **official Google Maps Embed API** with a properly configured API key.
