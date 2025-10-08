@@ -572,5 +572,510 @@ const breadcrumbSchema = {
     color: #4b5563;
     margin: 0;
   }
+
+  /* ====================================
+     ENHANCED UX/UI DESIGN SYSTEM
+     ==================================== */
+
+  /* Hero Section with Visual Impact */
+  .article-content :global(.hero-section) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    margin: -1rem 0 3rem 0;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .article-content :global(.hero-section h2) {
+    color: white;
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .article-content :global(.hero-section .cost-range) {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .article-content :global(.hero-section .cost-item) {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .article-content :global(.hero-section .cost-amount) {
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content :global(.hero-section .cost-label) {
+    font-size: 0.875rem;
+    opacity: 0.9;
+  }
+
+  /* Section Icons */
+  .article-content :global(.section-icon) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    vertical-align: middle;
+  }
+
+  /* Color-Coded Information Boxes */
+  .article-content :global(.info-box) {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin: 2rem 0;
+    border-left: 4px solid;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .article-content :global(.info-box.blue) {
+    background: #eff6ff;
+    border-color: #3b82f6;
+  }
+
+  .article-content :global(.info-box.blue h4) {
+    color: #1e40af;
+  }
+
+  .article-content :global(.info-box.green) {
+    background: #f0fdf4;
+    border-color: #10b981;
+  }
+
+  .article-content :global(.info-box.green h4) {
+    color: #065f46;
+  }
+
+  .article-content :global(.info-box.yellow) {
+    background: #fffbeb;
+    border-color: #f59e0b;
+  }
+
+  .article-content :global(.info-box.yellow h4) {
+    color: #92400e;
+  }
+
+  .article-content :global(.info-box.purple) {
+    background: #faf5ff;
+    border-color: #8b5cf6;
+  }
+
+  .article-content :global(.info-box.purple h4) {
+    color: #5b21b6;
+  }
+
+  .article-content :global(.info-box h4) {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+  }
+
+  /* Visual Pricing Cards */
+  .article-content :global(.pricing-cards) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .article-content :global(.price-card) {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .article-content :global(.price-card::before) {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .article-content :global(.price-card:hover) {
+    border-color: #667eea;
+    box-shadow: 0 20px 25px -5px rgba(102, 126, 234, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .article-content :global(.price-card .card-header) {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content :global(.price-card .card-icon) {
+    font-size: 2rem;
+  }
+
+  .article-content :global(.price-card h3) {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #111827;
+  }
+
+  .article-content :global(.price-card .price) {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #667eea;
+    margin: 1rem 0;
+    display: block;
+  }
+
+  .article-content :global(.price-card .price-detail) {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content :global(.price-card ul) {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .article-content :global(.price-card li) {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .article-content :global(.price-card li::before) {
+    content: '✓';
+    color: #10b981;
+    font-weight: 700;
+  }
+
+  /* Enhanced Tables */
+  .article-content :global(.styled-table) {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+  }
+
+  .article-content :global(.styled-table thead) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .article-content :global(.styled-table th) {
+    color: white;
+    font-weight: 600;
+    text-align: left;
+    padding: 1rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: none;
+  }
+
+  .article-content :global(.styled-table td) {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    border: none;
+  }
+
+  .article-content :global(.styled-table tbody tr) {
+    background: white;
+    transition: background 0.2s;
+  }
+
+  .article-content :global(.styled-table tbody tr:hover) {
+    background: #f9fafb;
+  }
+
+  .article-content :global(.styled-table tbody tr:last-child td) {
+    border-bottom: none;
+  }
+
+  /* Visual Cost Bars */
+  .article-content :global(.cost-comparison) {
+    margin: 2rem 0;
+  }
+
+  .article-content :global(.cost-bar-item) {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content :global(.cost-bar-label) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .article-content :global(.cost-bar) {
+    height: 2rem;
+    background: #f3f4f6;
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .article-content :global(.cost-bar-fill) {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: width 1s ease;
+  }
+
+  /* CTA Buttons */
+  .article-content :global(.cta-button) {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(102, 126, 234, 0.3);
+  }
+
+  .article-content :global(.cta-button:hover) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(102, 126, 234, 0.4);
+  }
+
+  .article-content :global(.cta-box) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin: 3rem 0;
+    box-shadow: 0 20px 25px -5px rgba(102, 126, 234, 0.2);
+  }
+
+  .article-content :global(.cta-box h2) {
+    color: white;
+    margin-top: 0;
+  }
+
+  .article-content :global(.cta-box p) {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+  }
+
+  .article-content :global(.cta-box .button) {
+    background: white;
+    color: #667eea;
+    padding: 1rem 2.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+
+  .article-content :global(.cta-box .button:hover) {
+    transform: scale(1.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Quick Facts Grid */
+  .article-content :global(.quick-facts) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .article-content :global(.fact-card) {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    border: 2px solid #bae6fd;
+  }
+
+  .article-content :global(.fact-number) {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0c4a6e;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content :global(.fact-label) {
+    font-size: 0.875rem;
+    color: #075985;
+    font-weight: 600;
+  }
+
+  /* Interactive FAQs */
+  .article-content :global(.faq-item) {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .article-content :global(.faq-item:hover) {
+    border-color: #667eea;
+  }
+
+  .article-content :global(.faq-question) {
+    padding: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .article-content :global(.faq-question::after) {
+    content: '▼';
+    font-size: 0.75rem;
+    color: #667eea;
+  }
+
+  .article-content :global(.faq-answer) {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: #4b5563;
+    line-height: 1.7;
+  }
+
+  /* Progress Indicator */
+  .article-content :global(.progress-bar) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #e5e7eb;
+    z-index: 1000;
+  }
+
+  .article-content :global(.progress-fill) {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.2s ease;
+  }
+
+  /* Tip Boxes */
+  .article-content :global(.tip-box) {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+  }
+
+  .article-content :global(.tip-box h4) {
+    color: #92400e;
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .article-content :global(.tip-box h4::before) {
+    content: '💡';
+    font-size: 1.5rem;
+  }
+
+  /* City Cards */
+  .article-content :global(.city-cards) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .article-content :global(.city-card) {
+    background: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .article-content :global(.city-card:hover) {
+    border-color: #667eea;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .article-content :global(.city-name) {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+  }
+
+  .article-content :global(.city-price) {
+    font-size: 1.25rem;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .article-content :global(.hero-section) {
+      padding: 2rem 1.5rem;
+    }
+
+    .article-content :global(.hero-section h2) {
+      font-size: 1.5rem;
+    }
+
+    .article-content :global(.pricing-cards) {
+      grid-template-columns: 1fr;
+    }
+
+    .article-content :global(.quick-facts) {
+      grid-template-columns: 1fr;
+    }
+
+    .article-content :global(.city-cards) {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 
