@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-// Load enhanced data
-const enhancedData = JSON.parse(fs.readFileSync('surgeon-enhanced-data.json', 'utf-8'));
-console.log(`✅ Loaded ${Object.keys(enhancedData).length} enhanced surgeon profiles\n`);
+// Load enhanced data from consolidated file
+const enhancedData = JSON.parse(fs.readFileSync('surgeon-enhanced-data-consolidated.json', 'utf-8'));
+console.log(`✅ Loaded ${Object.keys(enhancedData).length} enhanced surgeon profiles from consolidated file\n`);
 
 // Load existing surgeons data to get full details
 function parseCSVLine(line) {
@@ -55,6 +55,20 @@ for (const [slug, enhancedInfo] of Object.entries(enhancedData)) {
     continue;
   }
   
+  // Check if this surgeon has meaningful enhanced data
+  // Skip if only has minimal enhancement (just website/enhanced flag)
+  const hasTeam = enhancedInfo.team && (enhancedInfo.team.has_dietitian || enhancedInfo.team.has_psychologist);
+  const hasServices = enhancedInfo.services && enhancedInfo.services.procedures && enhancedInfo.services.procedures.length > 0;
+  const hasHospitals = enhancedInfo.hospitals && enhancedInfo.hospitals.length > 0;
+  const hasUniqueFeatures = enhancedInfo.unique_features && enhancedInfo.unique_features.length > 0;
+  const hasFAQs = enhancedInfo.faqs && enhancedInfo.faqs.length > 0;
+  const hasAchievements = enhancedInfo.achievements && enhancedInfo.achievements.length > 0;
+  
+  if (!hasTeam && !hasServices && !hasHospitals && !hasUniqueFeatures && !hasFAQs && !hasAchievements) {
+    console.log(`⏭️  ${surgeon.surgeon_name}: Minimal enhancement, skipping...`);
+    continue;
+  }
+  
   const citySlug = surgeon.city.toLowerCase().replace(/\s+/g, '-');
   const profilePath = path.join('src', 'pages', 'surgeons', citySlug, `${slug}.astro`);
   
@@ -77,17 +91,17 @@ for (const [slug, enhancedInfo] of Object.entries(enhancedData)) {
   const surgeonPhoto = surgeon.surgeon_photo;
   const bioLong = surgeon.bio_long;
   
-  // Generate comprehensive services section
-  const hasTeamSupport = enhancedInfo.team.has_dietitian === true || 
-                         enhancedInfo.team.has_psychologist === true || 
-                         enhancedInfo.team.has_exercise_physiologist === true;
+  // Generate comprehensive services section - with safe navigation
+  const hasTeamSupport = (enhancedInfo.team?.has_dietitian === true) || 
+                         (enhancedInfo.team?.has_psychologist === true) || 
+                         (enhancedInfo.team?.has_exercise_physiologist === true);
   
   const teamSupportHTML = hasTeamSupport ? `
     <section class="mb-12">
       <h2 class="text-3xl font-bold text-gray-900 mb-6">🎯 Comprehensive Care Team</h2>
       <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border-2 border-green-200">
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          ${enhancedInfo.team.has_dietitian === true ? `
+          ${enhancedInfo.team?.has_dietitian === true ? `
           <div class="flex items-start space-x-3">
             <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -99,7 +113,7 @@ for (const [slug, enhancedInfo] of Object.entries(enhancedData)) {
           </div>
           ` : ''}
           
-          ${enhancedInfo.team.has_psychologist === true ? `
+          ${enhancedInfo.team?.has_psychologist === true ? `
           <div class="flex items-start space-x-3">
             <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -111,7 +125,7 @@ for (const [slug, enhancedInfo] of Object.entries(enhancedData)) {
           </div>
           ` : ''}
           
-          ${enhancedInfo.team.has_exercise_physiologist === true ? `
+          ${enhancedInfo.team?.has_exercise_physiologist === true ? `
           <div class="flex items-start space-x-3">
             <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -123,7 +137,7 @@ for (const [slug, enhancedInfo] of Object.entries(enhancedData)) {
           </div>
           ` : ''}
           
-          ${enhancedInfo.services.telehealth === true ? `
+          ${enhancedInfo.services?.telehealth === true ? `
           <div class="flex items-start space-x-3">
             <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -135,23 +149,23 @@ for (const [slug, enhancedInfo] of Object.entries(enhancedData)) {
           </div>
           ` : ''}
           
-          ${enhancedInfo.services.follow_up_duration && enhancedInfo.services.follow_up_duration !== 'Not specified' ? `
+          ${enhancedInfo.services?.follow_up_duration && enhancedInfo.services.follow_up_duration !== 'Not specified' ? `
           <div class="flex items-start space-x-3">
             <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
             <div>
               <div class="font-semibold text-gray-900">Follow-up Care</div>
-              <div class="text-sm text-gray-600">${enhancedInfo.services.follow_up_duration}</div>
+              <div class="text-sm text-gray-600">${enhancedInfo.services?.follow_up_duration}</div>
             </div>
           </div>
           ` : ''}
         </div>
         
-        ${enhancedInfo.team.team_size ? `
+        ${enhancedInfo.team?.team_size ? `
         <div class="mt-4 pt-4 border-t border-green-300">
           <p class="text-sm text-gray-700">
-            <span class="font-semibold">Team Size:</span> ${enhancedInfo.team.team_size}
+            <span class="font-semibold">Team Size:</span> ${enhancedInfo.team?.team_size}
           </p>
         </div>
         ` : ''}
@@ -160,7 +174,7 @@ for (const [slug, enhancedInfo] of Object.entries(enhancedData)) {
   ` : '';
   
   // Hospital affiliations
-  const hospitalsHTML = enhancedInfo.hospitals.length > 0 ? `
+  const hospitalsHTML = (enhancedInfo.hospitals && enhancedInfo.hospitals.length > 0) ? `
     <section class="mb-12">
       <h2 class="text-3xl font-bold text-gray-900 mb-6">🏥 Hospital Affiliations</h2>
       <div class="grid md:grid-cols-2 gap-4">
@@ -177,7 +191,7 @@ for (const [slug, enhancedInfo] of Object.entries(enhancedData)) {
   ` : '';
   
   // Unique features
-  const uniqueFeaturesHTML = enhancedInfo.unique_features.length > 0 ? `
+  const uniqueFeaturesHTML = (enhancedInfo.unique_features && enhancedInfo.unique_features.length > 0) ? `
     <section class="mb-12">
       <h2 class="text-3xl font-bold text-gray-900 mb-6">🌟 What Makes This Practice Unique</h2>
       <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 border-2 border-yellow-200">
@@ -196,7 +210,7 @@ for (const [slug, enhancedInfo] of Object.entries(enhancedData)) {
   ` : '';
   
   // Procedures section
-  const proceduresHTML = enhancedInfo.services.procedures.length > 0 ? `
+  const proceduresHTML = (enhancedInfo.services?.procedures && enhancedInfo.services.procedures.length > 0) ? `
     <section class="mb-12">
       <h2 class="text-3xl font-bold text-gray-900 mb-6">🔬 Procedures & Services</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -230,7 +244,7 @@ const surgeon = {
 };
 
 const title = "${surgeonName} - ${city} Bariatric Surgeon | Enhanced Profile";
-const description = "${surgeonName} is an experienced bariatric surgeon in ${city}, ${state}. ${rating} stars (${reviewCount} reviews). Comprehensive team support, ${enhancedInfo.hospitals.length} hospital affiliations. ${hasTeamSupport ? 'Full multidisciplinary care team.' : ''} Book your consultation today.";
+const description = "${surgeonName} is an experienced bariatric surgeon in ${city}, ${state}. ${rating} stars (${reviewCount} reviews). Comprehensive team support, ${enhancedInfo.hospitals?.length || 0} hospital affiliations. ${hasTeamSupport ? 'Full multidisciplinary care team.' : ''} Book your consultation today.";
 const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/\${surgeon.citySlug}/\${surgeon.slug}\`;
 ---
 
@@ -345,7 +359,7 @@ const canonicalUrl = \`https://weightlosssurgery.com.au/surgeons/\${surgeon.city
             
             <div class="bg-white rounded-lg p-4 shadow-md border-l-4 border-green-500">
               <div class="text-3xl font-bold text-gray-900">
-                ${enhancedInfo.hospitals.length}
+                ${enhancedInfo.hospitals?.length || 0}
               </div>
               <div class="text-sm text-gray-600">
                 Hospital Affiliations
