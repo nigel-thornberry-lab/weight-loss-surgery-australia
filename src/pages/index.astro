@@ -1,654 +1,266 @@
 ---
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import { seoMeta } from '../data/seo-meta';
 
 const meta = seoMeta.home;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+<BaseLayout 
+  title={meta.title}
+  description={meta.description}
+  canonicalUrl="https://weightlosssurgery.com.au/"
+>
 
-		<!-- SEO Meta Tags -->
-		<title>{meta.title}</title>
-		<meta name="description" content={meta.description} />
-		<meta name="keywords" content={meta.keywords?.join(', ')} />
-
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/" />
-		<meta property="og:title" content={meta.title} />
-		<meta property="og:description" content={meta.description} />
-		<meta property="og:locale" content="en_AU" />
-
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/" />
-		<meta property="twitter:title" content={meta.title} />
-		<meta property="twitter:description" content={meta.description} />
-
-		<!-- Canonical URL -->
-		<link rel="canonical" href="https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/" />
-	</head>
-	<body class="antialiased">
-		<!-- Header -->
-		<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex justify-between items-center py-4">
-					<div class="flex items-center">
-						<a href="/" class="text-xl font-bold text-blue-600">Weight Loss Surgery Australia</a>
-					</div>
-					<nav class="hidden md:flex space-x-8">
-						<div class="relative group">
-							<button class="text-gray-700 hover:text-blue-600 flex items-center">
-								Procedures
-								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-								</svg>
-							</button>
-							<div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-								<div class="py-2">
-									<a href="/procedures/gastric-sleeve" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Sleeve</a>
-									<a href="/procedures/gastric-bypass" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Bypass</a>
-									<a href="/procedures/gastric-band" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Band</a>
-									<a href="/procedures/duodenal-switch" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Duodenal Switch</a>
-									<div class="border-t border-gray-200 my-2"></div>
-									<a href="/procedures" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Procedures</a>
-								</div>
-							</div>
-						</div>
-						<div class="relative group">
-							<button class="text-gray-700 hover:text-blue-600 flex items-center">
-								Surgeons
-								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-								</svg>
-							</button>
-							<div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-								<div class="py-2">
-									<a href="/surgeons" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">Find a Surgeon</a>
-									<div class="border-t border-gray-200 my-2"></div>
-									<a href="/surgeons/sydney" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Sydney Surgeons</a>
-									<a href="/surgeons/melbourne" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Melbourne Surgeons</a>
-								</div>
-							</div>
-						</div>
-						<a href="#costs" class="text-gray-700 hover:text-blue-600">Costs</a>
-						<div class="relative group">
-							<button class="text-gray-700 hover:text-blue-600 flex items-center">
-								Locations
-								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-								</svg>
-							</button>
-							<div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-								<div class="py-2">
-									<a href="/locations/sydney" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Sydney</a>
-									<a href="/locations/melbourne" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Melbourne</a>
-									<a href="#brisbane" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Brisbane</a>
-									<a href="#perth" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Perth</a>
-									<a href="#adelaide" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Adelaide</a>
-									<a href="#goldcoast" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gold Coast</a>
-									<div class="border-t border-gray-200 my-2"></div>
-									<a href="#locations" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Locations</a>
-								</div>
-							</div>
-						</div>
-						<a href="#faq" class="text-gray-700 hover:text-blue-600">FAQ</a>
-					</nav>
-					<div class="flex items-center space-x-4">
-						<a href="tel:1300000000" class="hidden sm:block text-blue-600 font-semibold">1300 000 000</a>
-						<a href="#consultation" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Free Consultation</a>
-					</div>
-				</div>
-			</div>
-		</header>
-
-		<!-- Hero Section -->
-		<section class="bg-gradient-to-br from-blue-50 to-white py-16 md:py-24">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid md:grid-cols-2 gap-12 items-center">
-					<div>
-						<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-							Transform Your Life with Weight Loss Surgery in Australia
-						</h2>
-						<p class="text-xl text-gray-600 mb-8">
-							Discover your options for gastric sleeve, bypass, and other bariatric procedures. Get transparent pricing, expert guidance, and find qualified surgeons near you.
-						</p>
-						<div class="flex flex-col sm:flex-row gap-4">
-							<a href="#calculator" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-center text-lg font-semibold">
-								Calculate Your Cost
-							</a>
-							<a href="#quiz" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-center text-lg font-semibold">
-								Am I Eligible?
-							</a>
-						</div>
-						<div class="mt-8 flex items-center space-x-8 text-sm text-gray-600">
-							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								AHPRA Compliant
-							</div>
-							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								Medicare Options
-							</div>
-							<div class="flex items-center">
-								<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								Expert Surgeons
-							</div>
-						</div>
-					</div>
-					<div class="hidden md:block">
-						<div class="bg-blue-100 rounded-2xl p-8 h-96 flex items-center justify-center">
-							<div class="text-center">
-								<p class="text-6xl mb-4">🏥</p>
-								<p class="text-gray-600">Professional Medical Care</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Quick Stats -->
-		<section class="bg-white py-12 border-y border-gray-200">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-					<div>
-						<div class="text-3xl font-bold text-blue-600">250,000+</div>
-						<div class="text-gray-600 mt-2">Eligible Australians</div>
-					</div>
-					<div>
-						<div class="text-3xl font-bold text-blue-600">$15,000+</div>
-						<div class="text-gray-600 mt-2">Average Cost Range</div>
-					</div>
-					<div>
-						<div class="text-3xl font-bold text-blue-600">2-4 weeks</div>
-						<div class="text-gray-600 mt-2">Recovery Time</div>
-					</div>
-					<div>
-						<div class="text-3xl font-bold text-blue-600">60-70%</div>
-						<div class="text-gray-600 mt-2">Excess Weight Loss</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Featured Location Banner -->
-		<section class="py-8 bg-gradient-to-r from-blue-50 to-purple-50 border-y border-blue-100">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex flex-col md:flex-row items-center justify-between">
-					<div class="mb-4 md:mb-0">
-						<h3 class="text-2xl font-bold text-gray-900 mb-2">🌟 Most Popular: Gastric Sleeve in Sydney</h3>
-						<p class="text-gray-600">Compare top surgeons, read reviews, and get instant cost estimates</p>
-					</div>
-					<a href="/procedures/gastric-sleeve-sydney" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-semibold whitespace-nowrap">
-						View Sydney Gastric Sleeve →
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-blue-50 to-white py-16 md:py-24">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="grid md:grid-cols-2 gap-12 items-center">
+			<div>
+				<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+					Transform Your Life with Weight Loss Surgery in Australia
+				</h2>
+				<p class="text-xl text-gray-600 mb-8">
+					Discover your options for gastric sleeve, bypass, and other bariatric procedures. Get transparent pricing, expert guidance, and find qualified surgeons near you.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="#consultation" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition text-center">
+						Get Free Consultation
+					</a>
+					<a href="/procedures" class="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition text-center">
+						Explore Procedures
 					</a>
 				</div>
 			</div>
-		</section>
-
-		<!-- Procedures Section -->
-		<section id="procedures" class="py-16 bg-gray-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-12">
-					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Popular Weight Loss Surgery Procedures</h2>
-					<p class="text-xl text-gray-600">Choose the right procedure for your health goals</p>
-				</div>
-
-				<div class="grid md:grid-cols-3 gap-8">
-					<!-- Gastric Sleeve -->
-					<div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition">
-						<div class="text-4xl mb-4">💊</div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-3">Gastric Sleeve</h3>
-						<p class="text-gray-600 mb-4">The most popular weight loss surgery in Australia. Removes 80% of the stomach to reduce appetite and portion sizes.</p>
-						<ul class="space-y-2 mb-6">
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">60-70% excess weight loss</span>
-							</li>
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">2-3 hour procedure</span>
-							</li>
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">$15,000 - $25,000</span>
-							</li>
-						</ul>
-						<a href="/procedures/gastric-sleeve" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
-					</div>
-
-					<!-- Gastric Bypass -->
-					<div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition">
-						<div class="text-4xl mb-4">🔄</div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-3">Gastric Bypass</h3>
-						<p class="text-gray-600 mb-4">Creates a small stomach pouch and reroutes the small intestine. Highly effective for diabetes and metabolic conditions.</p>
-						<ul class="space-y-2 mb-6">
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">70-80% excess weight loss</span>
-							</li>
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">3-4 hour procedure</span>
-							</li>
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">$18,000 - $30,000</span>
-							</li>
-						</ul>
-						<a href="/procedures/gastric-bypass" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
-					</div>
-
-					<!-- Mini Gastric Bypass -->
-					<div class="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition">
-						<div class="text-4xl mb-4">⚡</div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-3">Mini Gastric Bypass</h3>
-						<p class="text-gray-600 mb-4">Simplified version of gastric bypass with shorter surgery time and similar weight loss results.</p>
-						<ul class="space-y-2 mb-6">
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">65-75% excess weight loss</span>
-							</li>
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">1-2 hour procedure</span>
-							</li>
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-green-500 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">$16,000 - $27,000</span>
-							</li>
-						</ul>
-						<a href="#mini-bypass" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
-					</div>
-				</div>
-
-				<div class="text-center mt-12">
-					<a href="#consultation" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
-						Find Your Best Option
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- Costs Section -->
-		<section id="costs" class="py-16 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-12">
-					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing Information</h2>
-					<p class="text-xl text-gray-600">Understand your investment in a healthier future</p>
-				</div>
-
-				<div class="grid md:grid-cols-2 gap-8 mb-12">
-					<div class="bg-blue-50 rounded-xl p-8">
-						<h3 class="text-2xl font-bold text-gray-900 mb-4">Private Health Insurance</h3>
-						<p class="text-gray-600 mb-4">With adequate private health insurance, your out-of-pocket costs can be significantly reduced.</p>
-						<ul class="space-y-3">
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-blue-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">Gap payment: $5,000 - $12,000</span>
-							</li>
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-blue-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">Medicare rebate available</span>
-							</li>
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-blue-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">12-month waiting period applies</span>
-							</li>
-						</ul>
-					</div>
-
-					<div class="bg-orange-50 rounded-xl p-8">
-						<h3 class="text-2xl font-bold text-gray-900 mb-4">Self-Funded (No Insurance)</h3>
-						<p class="text-gray-600 mb-4">Pay directly for your procedure with flexible payment options available.</p>
-						<ul class="space-y-3">
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-orange-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">Full cost: $15,000 - $30,000</span>
-							</li>
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-orange-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">No waiting period</span>
-							</li>
-							<li class="flex items-start">
-								<svg class="w-5 h-5 text-orange-600 mr-2 mt-1" fill="currentColor" viewBox="0 0 20 20">
-									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-								</svg>
-								<span class="text-gray-700">Payment plans available</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white text-center">
-					<h3 class="text-2xl font-bold mb-3">Calculate Your Personalised Cost</h3>
-					<p class="text-blue-100 mb-6">Get an accurate estimate based on your procedure, location, and insurance coverage</p>
-					<a href="#calculator" class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition font-semibold">
-						Use Cost Calculator
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- Surgeons Section -->
-		<section id="surgeons" class="py-16 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-12">
-					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Find Qualified Bariatric Surgeons</h2>
-					<p class="text-xl text-gray-600">Browse 400+ verified weight loss surgeons across Australia</p>
-				</div>
-
-				<div class="grid md:grid-cols-2 gap-8 mb-8">
-					<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8">
-						<div class="text-4xl mb-4">🔍</div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-3">Search by Location</h3>
-						<p class="text-gray-600 mb-6">Find experienced surgeons in your area. View profiles, credentials, procedures offered, and patient reviews.</p>
-						<a href="/surgeons" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
-							Browse All Surgeons →
-						</a>
-					</div>
-
-					<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8">
-						<div class="text-4xl mb-4">⚖️</div>
-						<h3 class="text-2xl font-bold text-gray-900 mb-3">Compare Surgeons</h3>
-						<p class="text-gray-600 mb-6">Compare multiple surgeons side-by-side. See experience, specializations, costs, and make an informed decision.</p>
-						<a href="/surgeons/compare" class="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition font-semibold">
-							Compare Now →
-						</a>
-					</div>
-				</div>
-
-				<div class="grid md:grid-cols-3 gap-6">
-					<a href="/surgeons/sydney" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 hover:shadow-lg transition group">
-						<div class="flex items-center justify-between mb-3">
-							<h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600">Sydney</h3>
-							<span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold">150+ Surgeons</span>
-						</div>
-						<p class="text-gray-600 mb-4">Top-rated bariatric surgeons in Sydney and NSW</p>
-						<span class="text-blue-600 font-semibold">View Sydney Surgeons →</span>
-					</a>
-
-					<a href="/surgeons/melbourne" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 hover:shadow-lg transition group">
-						<div class="flex items-center justify-between mb-3">
-							<h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600">Melbourne</h3>
-							<span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold">120+ Surgeons</span>
-						</div>
-						<p class="text-gray-600 mb-4">Qualified weight loss surgeons across Victoria</p>
-						<span class="text-blue-600 font-semibold">View Melbourne Surgeons →</span>
-					</a>
-
-					<a href="/surgeons" class="bg-white border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 hover:shadow-lg transition group">
-						<div class="flex items-center justify-between mb-3">
-							<h3 class="text-xl font-bold text-gray-900 group-hover:text-blue-600">All Locations</h3>
-							<span class="text-sm bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-semibold">400+ Surgeons</span>
-						</div>
-						<p class="text-gray-600 mb-4">Browse surgeons in every state and territory</p>
-						<span class="text-blue-600 font-semibold">View All Surgeons →</span>
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- Locations Section -->
-		<section id="locations" class="py-16 bg-gray-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-12">
-					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Find Surgeons Near You</h2>
-					<p class="text-xl text-gray-600">Quality bariatric surgeons across major Australian cities</p>
-				</div>
-
-				<div class="grid md:grid-cols-3 gap-6">
-					<a href="/locations/sydney" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
-						<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Sydney</h3>
-						<p class="text-gray-600 mb-4">Find experienced bariatric surgeons in Sydney and surrounding areas</p>
-						<span class="text-blue-600 font-semibold">View Surgeons →</span>
-					</a>
-
-					<a href="/locations/melbourne" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
-						<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Melbourne</h3>
-						<p class="text-gray-600 mb-4">Connect with top-rated weight loss surgeons in Melbourne</p>
-						<span class="text-blue-600 font-semibold">View Surgeons →</span>
-					</a>
-
-					<a href="#brisbane" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
-						<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Brisbane</h3>
-						<p class="text-gray-600 mb-4">Explore Brisbane's qualified bariatric surgery specialists</p>
-						<span class="text-blue-600 font-semibold">View Surgeons →</span>
-					</a>
-
-					<a href="#perth" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
-						<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Perth</h3>
-						<p class="text-gray-600 mb-4">Discover Perth's leading weight loss surgery experts</p>
-						<span class="text-blue-600 font-semibold">View Surgeons →</span>
-					</a>
-
-					<a href="#adelaide" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
-						<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Adelaide</h3>
-						<p class="text-gray-600 mb-4">Find trusted bariatric surgeons in Adelaide region</p>
-						<span class="text-blue-600 font-semibold">View Surgeons →</span>
-					</a>
-
-					<a href="#goldcoast" class="bg-white rounded-xl p-6 hover:shadow-lg transition group">
-						<h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Gold Coast</h3>
-						<p class="text-gray-600 mb-4">Connect with Gold Coast weight loss surgery specialists</p>
-						<span class="text-blue-600 font-semibold">View Surgeons →</span>
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- FAQ Section -->
-		<section id="faq" class="py-16 bg-white">
-			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-12">
-					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-					<p class="text-xl text-gray-600">Get answers to common questions about weight loss surgery</p>
-				</div>
-
-				<div class="space-y-6">
-					<details class="bg-gray-50 rounded-lg p-6 group">
-						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
-							Am I eligible for weight loss surgery?
-							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+			<div class="relative">
+				<div class="bg-white rounded-2xl shadow-2xl p-8">
+					<div class="text-center">
+						<div class="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<svg class="w-12 h-12 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
 							</svg>
-						</summary>
-						<p class="mt-4 text-gray-600">Generally, you may be eligible if you have a BMI over 40, or a BMI over 35 with obesity-related health conditions such as type 2 diabetes, high blood pressure, or sleep apnoea. Your surgeon will assess your individual circumstances during consultation.</p>
-					</details>
-
-					<details class="bg-gray-50 rounded-lg p-6 group">
-						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
-							How much does weight loss surgery cost in Australia?
-							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-							</svg>
-						</summary>
-						<p class="mt-4 text-gray-600">Costs vary depending on the procedure and your circumstances. With private health insurance, out-of-pocket costs typically range from $5,000-$12,000. Without insurance, full costs range from $15,000-$30,000. Medicare rebates may apply. Use our cost calculator for a personalised estimate.</p>
-					</details>
-
-					<details class="bg-gray-50 rounded-lg p-6 group">
-						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
-							What is the recovery time after weight loss surgery?
-							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-							</svg>
-						</summary>
-						<p class="mt-4 text-gray-600">Most patients stay in hospital for 1-2 nights and can return to light activities within 1-2 weeks. Full recovery typically takes 4-6 weeks. Your surgeon will provide specific guidelines based on your procedure and individual healing.</p>
-					</details>
-
-					<details class="bg-gray-50 rounded-lg p-6 group">
-						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
-							Is weight loss surgery safe?
-							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-							</svg>
-						</summary>
-						<p class="mt-4 text-gray-600">Modern weight loss surgery is generally safe when performed by experienced surgeons. Serious complications occur in less than 5% of cases. Your surgeon will discuss specific risks during consultation. The long-term health benefits often outweigh the surgical risks for eligible patients.</p>
-					</details>
-
-					<details class="bg-gray-50 rounded-lg p-6 group">
-						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
-							What is the difference between gastric sleeve and gastric bypass?
-							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-							</svg>
-						</summary>
-						<p class="mt-4 text-gray-600">Gastric sleeve removes 80% of the stomach, while gastric bypass creates a small pouch and reroutes the intestine. Bypass typically leads to more weight loss and is better for diabetes, but has longer recovery. Sleeve is less complex with faster recovery. Your surgeon will recommend the best option for your needs.</p>
-					</details>
-
-					<details class="bg-gray-50 rounded-lg p-6 group">
-						<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
-							Does Medicare cover weight loss surgery?
-							<svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-							</svg>
-						</summary>
-						<p class="mt-4 text-gray-600">Yes, Medicare provides rebates for weight loss surgery if you meet eligibility criteria. However, Medicare only covers a portion of the costs. Private health insurance with appropriate hospital and extras cover can significantly reduce your out-of-pocket expenses.</p>
-					</details>
-				</div>
-
-				<div class="text-center mt-12">
-					<a href="#consultation" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
-						Still Have Questions? Book a Consultation
-					</a>
+						</div>
+						<h3 class="text-2xl font-bold text-gray-900 mb-2">Start Your Journey</h3>
+						<p class="text-gray-600 mb-6">Get personalized recommendations and connect with qualified surgeons in your area.</p>
+						<div class="space-y-3">
+							<div class="flex items-center text-sm text-gray-600">
+								<svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+								Free consultation
+							</div>
+							<div class="flex items-center text-sm text-gray-600">
+								<svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+								Transparent pricing
+							</div>
+							<div class="flex items-center text-sm text-gray-600">
+								<svg class="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+								Expert guidance
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-		</section>
+		</div>
+	</div>
+</section>
 
-		<!-- CTA Section -->
-		<section id="consultation" class="py-16 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
-			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-				<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Take the First Step?</h2>
-				<p class="text-xl text-blue-100 mb-8">Book a free consultation with a qualified bariatric surgeon near you</p>
+<!-- Procedures Section -->
+<section id="procedures" class="py-16 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Weight Loss Surgery Procedures</h2>
+			<p class="text-xl text-gray-600">Choose the procedure that's right for your weight loss journey</p>
+		</div>
+		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+			<div class="bg-blue-50 rounded-xl p-6 text-center hover:shadow-lg transition">
+				<div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+					<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+					</svg>
+				</div>
+				<h3 class="text-xl font-bold text-gray-900 mb-2">Gastric Sleeve</h3>
+				<p class="text-gray-600 mb-4">Most popular procedure with excellent results</p>
+				<a href="/procedures/gastric-sleeve" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+			</div>
+			<div class="bg-green-50 rounded-xl p-6 text-center hover:shadow-lg transition">
+				<div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+					<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+					</svg>
+				</div>
+				<h3 class="text-xl font-bold text-gray-900 mb-2">Gastric Bypass</h3>
+				<p class="text-gray-600 mb-4">Gold standard for significant weight loss</p>
+				<a href="/procedures/gastric-bypass" class="text-green-600 font-semibold hover:text-green-700">Learn More →</a>
+			</div>
+			<div class="bg-purple-50 rounded-xl p-6 text-center hover:shadow-lg transition">
+				<div class="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+					<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+					</svg>
+				</div>
+				<h3 class="text-xl font-bold text-gray-900 mb-2">Gastric Band</h3>
+				<p class="text-gray-600 mb-4">Adjustable and reversible option</p>
+				<a href="/procedures/gastric-band" class="text-purple-600 font-semibold hover:text-purple-700">Learn More →</a>
+			</div>
+			<div class="bg-orange-50 rounded-xl p-6 text-center hover:shadow-lg transition">
+				<div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+					<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+					</svg>
+				</div>
+				<h3 class="text-xl font-bold text-gray-900 mb-2">Duodenal Switch</h3>
+				<p class="text-gray-600 mb-4">Maximum weight loss for severe obesity</p>
+				<a href="/procedures/duodenal-switch" class="text-orange-600 font-semibold hover:text-orange-700">Learn More →</a>
+			</div>
+		</div>
+	</div>
+</section>
 
-				<div class="bg-white rounded-xl p-8 text-left max-w-md mx-auto">
-					<form class="space-y-4">
-						<div>
-							<label class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
-							<input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="John Smith" required />
-						</div>
-						<div>
-							<label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-							<input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="john@example.com" required />
-						</div>
-						<div>
-							<label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-							<input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="0400 000 000" required />
-						</div>
-						<div>
-							<label class="block text-sm font-medium text-gray-700 mb-2">Procedure Interest</label>
-							<select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
-								<option>Gastric Sleeve</option>
-								<option>Gastric Bypass</option>
-								<option>Mini Gastric Bypass</option>
-								<option>Not Sure Yet</option>
-							</select>
-						</div>
-						<button type="submit" class="w-full bg-blue-600 text-white px-6 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
-							Book Free Consultation
-						</button>
-						<p class="text-xs text-gray-500 text-center">By submitting, you agree to our privacy policy. We'll never share your information.</p>
-					</form>
+<!-- Costs Section -->
+<section id="costs" class="py-16 bg-gray-50">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Transparent Pricing</h2>
+			<p class="text-xl text-gray-600">Know exactly what you'll pay with our upfront cost breakdown</p>
+		</div>
+		<div class="grid md:grid-cols-3 gap-8">
+			<div class="bg-white rounded-xl p-8 shadow-lg">
+				<div class="text-center">
+					<div class="text-4xl font-bold text-blue-600 mb-2">$15K - $25K</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Self-Funded</h3>
+					<p class="text-gray-600 mb-6">Complete cost when paying out of pocket</p>
+					<ul class="text-left space-y-2 text-sm text-gray-600">
+						<li>• Surgery fees</li>
+						<li>• Hospital stay</li>
+						<li>• Anesthesia</li>
+						<li>• Follow-up care</li>
+					</ul>
 				</div>
 			</div>
-		</section>
-
-		<!-- Footer -->
-		<footer class="bg-gray-900 text-white py-12">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid md:grid-cols-4 gap-8 mb-8">
-					<div>
-						<h3 class="font-bold text-lg mb-4">Procedures</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li><a href="/procedures/gastric-sleeve" class="hover:text-white">Gastric Sleeve</a></li>
-							<li><a href="/procedures/gastric-bypass" class="hover:text-white">Gastric Bypass</a></li>
-							<li><a href="/procedures/mini-gastric-bypass" class="hover:text-white">Mini Gastric Bypass</a></li>
-							<li><a href="/procedures/gastric-band" class="hover:text-white">Gastric Band</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-bold text-lg mb-4">Surgeons</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li><a href="/surgeons" class="hover:text-white">Find a Surgeon</a></li>
-							<li><a href="/surgeons/sydney" class="hover:text-white">Sydney Surgeons</a></li>
-							<li><a href="/surgeons/melbourne" class="hover:text-white">Melbourne Surgeons</a></li>
-							<li><a href="/surgeons/compare" class="hover:text-white">Compare Surgeons</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-bold text-lg mb-4">Locations</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li><a href="/locations/sydney" class="hover:text-white">Sydney</a></li>
-							<li><a href="/procedures/gastric-sleeve-sydney" class="hover:text-white">Gastric Sleeve Sydney</a></li>
-							<li><a href="/locations/melbourne" class="hover:text-white">Melbourne</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-bold text-lg mb-4">Contact</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li>Phone: 1300 000 000</li>
-							<li>Email: info@wlsaustralia.com.au</li>
-							<li class="pt-4">
-								<a href="#newsletter" class="text-blue-400 hover:text-blue-300">Subscribe to Newsletter</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="border-t border-gray-800 pt-8">
-					<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-						<p>&copy; 2025 Weight Loss Surgery Australia. All rights reserved.</p>
-						<div class="flex space-x-6 mt-4 md:mt-0">
-							<a href="#privacy" class="hover:text-white">Privacy Policy</a>
-							<a href="#terms" class="hover:text-white">Terms of Service</a>
-							<a href="#disclaimer" class="hover:text-white">Medical Disclaimer</a>
-						</div>
-					</div>
-					<p class="text-xs text-gray-500 mt-4 text-center">
-						MEDICAL DISCLAIMER: This website provides educational information only and does not constitute medical advice. Always consult with qualified healthcare professionals before making decisions about weight loss surgery. Individual results may vary.
-					</p>
+			<div class="bg-white rounded-xl p-8 shadow-lg border-2 border-blue-600">
+				<div class="text-center">
+					<div class="text-4xl font-bold text-blue-600 mb-2">$5K - $12K</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-4">With Insurance</h3>
+					<p class="text-gray-600 mb-6">Out-of-pocket after Medicare & private health</p>
+					<ul class="text-left space-y-2 text-sm text-gray-600">
+						<li>• Medicare rebate</li>
+						<li>• Private health cover</li>
+						<li>• Gap payments only</li>
+						<li>• Payment plans available</li>
+					</ul>
 				</div>
 			</div>
-		</footer>
-	</body>
-</html>
+			<div class="bg-white rounded-xl p-8 shadow-lg">
+				<div class="text-center">
+					<div class="text-4xl font-bold text-green-600 mb-2">$0</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Consultation</h3>
+					<p class="text-gray-600 mb-6">Free initial consultation with our experts</p>
+					<ul class="text-left space-y-2 text-sm text-gray-600">
+						<li>• Procedure assessment</li>
+						<li>• Cost breakdown</li>
+						<li>• Surgeon matching</li>
+						<li>• No obligation</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Locations Section -->
+<section id="locations" class="py-16 bg-white">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Find Surgeons Near You</h2>
+			<p class="text-xl text-gray-600">Connect with qualified bariatric surgeons across Australia</p>
+		</div>
+		<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+			<a href="/surgeons/sydney" class="bg-blue-50 rounded-xl p-6 text-center hover:shadow-lg transition group">
+				<div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+					</svg>
+				</div>
+				<h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600">Sydney</h3>
+				<p class="text-gray-600 text-sm">15+ qualified surgeons</p>
+			</a>
+			<a href="/surgeons/melbourne" class="bg-green-50 rounded-xl p-6 text-center hover:shadow-lg transition group">
+				<div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+					</svg>
+				</div>
+				<h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600">Melbourne</h3>
+				<p class="text-gray-600 text-sm">12+ qualified surgeons</p>
+			</a>
+			<a href="#brisbane" class="bg-purple-50 rounded-xl p-6 text-center hover:shadow-lg transition group">
+				<div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+					</svg>
+				</div>
+				<h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600">Brisbane</h3>
+				<p class="text-gray-600 text-sm">8+ qualified surgeons</p>
+			</a>
+			<a href="#perth" class="bg-orange-50 rounded-xl p-6 text-center hover:shadow-lg transition group">
+				<div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+					<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+					</svg>
+				</div>
+				<h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-orange-600">Perth</h3>
+				<p class="text-gray-600 text-sm">6+ qualified surgeons</p>
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="py-16 bg-gray-50">
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-12">
+			<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+			<p class="text-xl text-gray-600">Get answers to common questions about weight loss surgery</p>
+		</div>
+		<div class="space-y-6">
+			<div class="bg-white rounded-xl p-6 shadow-lg">
+				<h3 class="text-lg font-bold text-gray-900 mb-2">How much does gastric sleeve surgery cost in Australia?</h3>
+				<p class="text-gray-600">Gastric sleeve surgery typically costs $15,000-$25,000 when self-funded, or $5,000-$12,000 out-of-pocket with private health insurance and Medicare rebates.</p>
+			</div>
+			<div class="bg-white rounded-xl p-6 shadow-lg">
+				<h3 class="text-lg font-bold text-gray-900 mb-2">What's the difference between gastric sleeve and gastric bypass?</h3>
+				<p class="text-gray-600">Gastric sleeve removes 80% of the stomach, while gastric bypass creates a small pouch and reroutes the small intestine. Both are effective, but gastric sleeve is more popular due to its simplicity.</p>
+			</div>
+			<div class="bg-white rounded-xl p-6 shadow-lg">
+				<h3 class="text-lg font-bold text-gray-900 mb-2">Do I qualify for weight loss surgery?</h3>
+				<p class="text-gray-600">Generally, you need a BMI of 35+ or 30+ with weight-related health conditions. Our free consultation will assess your eligibility and recommend the best procedure for you.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- CTA Section -->
+<section id="consultation" class="py-16 bg-blue-600">
+	<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+		<h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Start Your Weight Loss Journey?</h2>
+		<p class="text-xl text-blue-100 mb-8">Get a free consultation with our experts and find the right surgeon for you</p>
+		<div class="flex flex-col sm:flex-row gap-4 justify-center">
+			<a href="tel:1300000000" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
+				Call 1300 000 000
+			</a>
+			<a href="/surgeons" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+				Find a Surgeon
+			</a>
+		</div>
+	</div>
+</section>
+
+</BaseLayout>
