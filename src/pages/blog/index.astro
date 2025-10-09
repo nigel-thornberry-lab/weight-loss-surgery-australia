@@ -4,13 +4,49 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 // Blog articles
 const articles = [
   {
+    title: "Gastric Sleeve Recovery Week by Week: Complete 12-Week Timeline",
+    description: "Complete gastric sleeve recovery guide: What to expect each week for 12 weeks. Diet, activity, pain management, complications, and milestones.",
+    href: "/blog/gastric-sleeve-recovery-week-by-week/",
+    category: "Recovery & Diet",
+    publishDate: "2025-01-17",
+    readingTime: "22 min read",
+    featured: true
+  },
+  {
+    title: "Gastric Sleeve Diet Stages: Complete 5-Stage Guide",
+    description: "Complete gastric sleeve diet progression: Clear liquids to regular food over 8 weeks. Food lists, portions, schedules, and meal ideas for each stage.",
+    href: "/blog/gastric-sleeve-diet-stages/",
+    category: "Recovery & Diet",
+    publishDate: "2025-01-17",
+    readingTime: "20 min read",
+    featured: true
+  },
+  {
+    title: "Pre-Op Diet for Gastric Sleeve: Your Complete 2-Week Guide",
+    description: "Complete gastric sleeve pre-op diet guide: Why it's required, what to eat, meal plans, shopping lists, tips to succeed. Liver shrinking diet explained.",
+    href: "/blog/pre-op-diet-gastric-sleeve/",
+    category: "Pre-Surgery",
+    publishDate: "2025-01-17",
+    readingTime: "18 min read",
+    featured: true
+  },
+  {
     title: "50+ Bariatric Surgery Recipes for Every Stage of Your Journey",
     description: "Complete bariatric recipe collection: Liquid, pureed, soft & solid foods. High-protein, delicious recipes for every stage of your weight loss journey.",
     href: "/blog/bariatric-surgery-recipes-all-stages/",
     category: "Recovery & Diet",
     publishDate: "2025-01-16",
     readingTime: "24 min read",
-    featured: true
+    featured: false
+  },
+  {
+    title: "Gastric Sleeve Cost in Australia: 2025 Complete Breakdown",
+    description: "Detailed gastric sleeve cost breakdown: $15K-25K self-funded, $5K-12K with insurance. Medicare rebates, payment plans, hidden costs + city-by-city pricing.",
+    href: "/blog/gastric-sleeve-cost-australia-2025/",
+    category: "Cost & Financing",
+    publishDate: "2025-01-15",
+    readingTime: "18 min read",
+    featured: false
   },
   {
     title: "Stage 1 Clear Liquid Recipes: Days 1-7 After Gastric Sleeve",
@@ -47,25 +83,11 @@ const articles = [
     publishDate: "2025-01-16",
     readingTime: "18 min read",
     featured: false
-  },
-  {
-    title: "Gastric Sleeve Cost in Australia: 2025 Complete Breakdown",
-    description: "Detailed gastric sleeve cost breakdown: $15K-25K self-funded, $5K-12K with insurance. Medicare rebates, payment plans, hidden costs + city-by-city pricing.",
-    href: "/blog/gastric-sleeve-cost-australia-2025/",
-    category: "Cost & Financing",
-    publishDate: "2025-01-15",
-    readingTime: "18 min read",
-    featured: false
   }
 ];
 
-const categories = [
-  { name: 'Cost & Financing', slug: 'cost-financing', count: 1 },
-  { name: 'Recovery & Diet', slug: 'recovery-diet', count: 5 },
-  { name: 'Surgery Information', slug: 'surgery-information', count: 0 },
-  { name: 'Pre-Surgery', slug: 'pre-surgery', count: 0 },
-  { name: 'Long-Term Success', slug: 'long-term-success', count: 0 },
-];
+// Filter articles by category for display
+const allCategories = ['All Articles', 'Recovery & Diet', 'Cost & Financing', 'Pre-Surgery'];
 ---
 
 <BaseLayout 
@@ -78,22 +100,10 @@ const categories = [
       <p class="lead">Evidence-based guides for every stage of your weight loss surgery journey</p>
     </header>
 
-    <!-- Categories -->
-    <nav class="categories">
-      <h2>Browse by Category</h2>
-      <div class="category-grid">
-        {categories.map(category => (
-          <a href={`/blog/${category.slug}/`} class="category-card">
-            <h3>{category.name}</h3>
-            <span class="count">{category.count} articles</span>
-          </a>
-        ))}
-      </div>
-    </nav>
-
     <!-- Featured Articles -->
     <section class="featured-articles">
-      <h2>Latest Articles</h2>
+      <h2>Latest Expert Guides</h2>
+      <p class="section-description">Comprehensive, evidence-based articles to guide you through every stage of your bariatric surgery journey.</p>
       <div class="articles-grid">
         {articles.map(article => (
           <article class="article-card">
@@ -113,19 +123,6 @@ const categories = [
         ))}
       </div>
     </section>
-
-    <!-- Coming Soon Message -->
-    <div class="coming-soon">
-      <h2>More Articles Coming Soon</h2>
-      <p>We're creating comprehensive, evidence-based articles to guide you through every stage of your bariatric surgery journey. Coming next:</p>
-      <ul>
-        <li>Gastric Sleeve Recovery Week by Week: Complete Timeline</li>
-        <li>Gastric Sleeve Diet Stages: Complete Guide</li>
-        <li>Pre-Op Diet for Gastric Sleeve: Complete Guide</li>
-        <li>Life After Bariatric Surgery: Long-Term Success Strategies</li>
-      </ul>
-      <p>Sign up for our newsletter to be notified when new articles are published.</p>
-    </div>
 
     <!-- Newsletter Signup -->
     <div class="newsletter-signup">
@@ -165,50 +162,6 @@ const categories = [
     margin: 0 auto;
   }
 
-  .categories {
-    margin-bottom: 4rem;
-  }
-
-  .categories h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
-
-  .category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-  }
-
-  .category-card {
-    display: block;
-    padding: 1.5rem;
-    background: #f9fafb;
-    border: 2px solid #e5e7eb;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    transition: all 0.2s;
-  }
-
-  .category-card:hover {
-    background: #fff;
-    border-color: #2563eb;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  }
-
-  .category-card h3 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 0.5rem;
-  }
-
-  .category-card .count {
-    font-size: 0.875rem;
-    color: #6b7280;
-  }
-
   .featured-articles {
     margin-bottom: 4rem;
   }
@@ -216,7 +169,13 @@ const categories = [
   .featured-articles h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-description {
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .articles-grid {
@@ -309,51 +268,6 @@ const categories = [
 
   .read-more:hover {
     color: #1e40af;
-  }
-
-  .coming-soon {
-    padding: 3rem;
-    background: #f0f9ff;
-    border: 2px solid #bae6fd;
-    border-radius: 0.75rem;
-    margin-bottom: 3rem;
-    text-align: center;
-  }
-
-  .coming-soon h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #0c4a6e;
-  }
-
-  .coming-soon p {
-    font-size: 1.125rem;
-    color: #075985;
-    max-width: 700px;
-    margin: 0 auto 1.5rem;
-  }
-
-  .coming-soon ul {
-    list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 0 auto 1.5rem;
-    text-align: left;
-  }
-
-  .coming-soon li {
-    padding: 0.75rem 1rem;
-    background: white;
-    border-radius: 0.375rem;
-    margin-bottom: 0.5rem;
-    color: #111827;
-    font-weight: 500;
-  }
-
-  .coming-soon li::before {
-    content: '📝 ';
-    margin-right: 0.5rem;
   }
 
   .newsletter-signup {
