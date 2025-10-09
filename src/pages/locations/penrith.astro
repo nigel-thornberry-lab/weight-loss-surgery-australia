@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const surgeons = await getCollection('surgeons');
+const penrithSurgeons = surgeons.filter((s: any) =>
+	s.data.location?.includes('Penrith') ||
+	s.data.suburbs?.includes('Penrith')
+);
+
+const title = "Weight Loss Surgery Penrith NSW | Expert Bariatric Surgeons";
+const description = "Find weight loss surgery in Penrith with comprehensive local support. Expert surgeons, local hospitals, and detailed Medicare information for Penrith residents.";
+---
+
+<BaseLayout title={title} description={description}>
+	<!-- Breadcrumbs -->
+	<div class="bg-gray-50 border-b border-gray-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+			<nav class="flex text-sm" aria-label="Breadcrumb">
+				<a href="/" class="text-blue-600 hover:text-blue-800">Home</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<a href="/locations/sydney" class="text-blue-600 hover:text-blue-800">Sydney</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<span class="text-gray-600">Penrith</span>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-4xl">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Weight Loss Surgery in Penrith
+				</h1>
+				<p class="text-xl text-blue-100 mb-8 leading-relaxed">
+					Comprehensive bariatric surgery services for Penrith and Blue Mountains residents. Expert surgeons, Nepean Private Hospital facilities, and complete local support.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="/sydney/consultation" class="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg font-semibold text-center">
+						Book Free Consultation
+					</a>
+					<a href="/sydney/cost" class="bg-blue-800 text-white px-8 py-4 rounded-lg hover:bg-blue-900 transition text-lg font-semibold text-center border-2 border-white/20">
+						View Cost Breakdown
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Key Benefits -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Why Choose Penrith for Bariatric Surgery</h2>
+
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+					<div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Gateway to Western Sydney</h3>
+					<p class="text-gray-700 mb-3">Penrith serves the entire western Sydney and Blue Mountains region with excellent hospital access.</p>
+					<p class="text-sm text-blue-600 font-medium">→ Nepean Private Hospital on-site</p>
+				</div>
+
+				<div class="bg-green-50 rounded-xl p-6 border border-green-100">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Strong Local Support</h3>
+					<p class="text-gray-700 mb-3">Growing bariatric support community with specialist dietitians and exercise physiologists in Penrith.</p>
+					<p class="text-sm text-green-600 font-medium">→ Regional hub for health services</p>
+				</div>
+
+				<div class="bg-purple-50 rounded-xl p-6 border border-purple-100">
+					<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Experienced Facilities</h3>
+					<p class="text-gray-700 mb-3">Nepean Private Hospital has a dedicated bariatric program with experienced surgical teams.</p>
+					<p class="text-sm text-purple-600 font-medium">→ Comprehensive post-op care</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Post-Op Supplies & Pharmacies -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Post-Surgery Supplies in Penrith</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Stock up on essential vitamins and supplements at these local pharmacies.</p>
+
+			<div class="grid md:grid-cols-2 gap-6">
+				<a href="https://www.google.com/maps/search/?api=1&query=Chemist+Warehouse+Penrith" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Chemist Warehouse Penrith</h3>
+					<p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> Lowest prices, wide bariatric vitamin range, protein shakes</p>
+					<p class="text-sm text-gray-600">📍 Penrith Plaza, High St | 📞 <a href="tel:+61247214500" class="text-blue-600 hover:text-blue-800">(02) 4721 4500</a></p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Priceline+Pharmacy+Penrith" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Priceline Pharmacy Penrith</h3>
+					<p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> Extended hours, calcium citrate, pharmacist consultations</p>
+					<p class="text-sm text-gray-600">📍 Westfield Penrith | 📞 <a href="tel:+61247213444" class="text-blue-600 hover:text-blue-800">(02) 4721 3444</a></p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=TerryWhite+Chemmart+Penrith" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">TerryWhite Chemmart Penrith</h3>
+					<p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> Professional advice, prescription tracking, compounding services</p>
+					<p class="text-sm text-gray-600">📍 High St, Penrith | 📞 <a href="tel:+61247325888" class="text-blue-600 hover:text-blue-800">(02) 4732 5888</a></p>
+				</a>
+
+				<div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
+					<h3 class="font-bold text-gray-900 mb-3">🛒 Essential Post-Op Supplies</h3>
+					<ul class="text-sm text-gray-700 space-y-2">
+						<li>✓ <strong>Bariatric multivitamin</strong> (chewable/liquid)</li>
+						<li>✓ <strong>Calcium citrate</strong> supplement</li>
+						<li>✓ <strong>Vitamin B12</strong> (sublingual)</li>
+						<li>✓ <strong>Protein powder</strong> (30g per serve)</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Family Accommodation -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Family Accommodation in Penrith</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Nearby accommodation options for family support during your hospital stay.</p>
+
+			<div class="grid lg:grid-cols-3 gap-6">
+				<a href="https://www.google.com/maps/search/?api=1&query=Mercure+Penrith" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Mercure Penrith</h3>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 2km from Nepean Private</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$160/night</p>
+					<p class="text-gray-600 text-xs">✅ Restaurant, parking, WiFi</p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Panthers+Penrith" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Panthers Penrith</h3>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 1.5km from hospital</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$140/night</p>
+					<p class="text-gray-600 text-xs">✅ Casino, dining, budget option</p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Quality+Hotel+Penrith" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Quality Hotel Penrith</h3>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 2.5km from hospital</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$150/night</p>
+					<p class="text-gray-600 text-xs">✅ Breakfast included, pool</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Cost Information -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Cost & Medicare Information</h2>
+			<div class="max-w-4xl mx-auto">
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<p class="text-gray-700 mb-6">Bariatric surgery costs in Penrith are similar to greater Sydney, with typical out-of-pocket expenses ranging from $3,000-$7,000 with private health insurance, or $20,000-$35,000 without.</p>
+					<div class="text-center">
+						<a href="/sydney/cost" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold inline-block">
+							View Detailed Cost Breakdown →
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Surgeons Section -->
+	{penrithSurgeons.length > 0 && (
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Expert Bariatric Surgeons in Penrith</h2>
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{penrithSurgeons.slice(0, 6).map((surgeon: any) => (
+						<a href={`/surgeons/${surgeon.slug}`} class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+							<h3 class="text-xl font-bold text-gray-900 mb-2">{surgeon.data.name}</h3>
+							{surgeon.data.location && (
+								<p class="text-sm text-gray-600 mb-3">{surgeon.data.location}</p>
+							)}
+							<p class="text-blue-600 hover:text-blue-800 font-medium text-sm">View Profile →</p>
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
+	)}
+
+	<!-- Call to Action -->
+	<section class="bg-gradient-to-br from-blue-700 to-blue-800 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Journey?</h2>
+			<p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+				Book a free consultation with a leading bariatric surgeon serving Penrith and the Blue Mountains.
+			</p>
+			<div class="flex flex-col sm:flex-row justify-center gap-4">
+				<a href="/sydney/consultation" class="bg-white text-blue-700 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg font-semibold">
+					Book Free Consultation
+				</a>
+				<a href="/sydney/cost" class="bg-blue-900 text-white px-8 py-4 rounded-lg hover:bg-blue-950 transition text-lg font-semibold border-2 border-white/20">
+					Understand Costs
+				</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+

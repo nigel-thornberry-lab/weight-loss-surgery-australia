@@ -1,0 +1,217 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const surgeons = await getCollection('surgeons');
+const liverpoolSurgeons = surgeons.filter((s: any) =>
+	s.data.location?.includes('Liverpool') ||
+	s.data.suburbs?.includes('Liverpool')
+);
+
+const title = "Weight Loss Surgery Liverpool NSW | Expert Bariatric Surgeons";
+const description = "Find weight loss surgery in Liverpool with comprehensive local support. Expert surgeons, Liverpool Private Hospital facilities, and complete support for Liverpool residents.";
+---
+
+<BaseLayout title={title} description={description}>
+	<!-- Breadcrumbs -->
+	<div class="bg-gray-50 border-b border-gray-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+			<nav class="flex text-sm" aria-label="Breadcrumb">
+				<a href="/" class="text-blue-600 hover:text-blue-800">Home</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<a href="/locations/sydney" class="text-blue-600 hover:text-blue-800">Sydney</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<span class="text-gray-600">Liverpool</span>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-4xl">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Weight Loss Surgery in Liverpool
+				</h1>
+				<p class="text-xl text-blue-100 mb-8 leading-relaxed">
+					Comprehensive bariatric surgery services for Liverpool and south-west Sydney residents. Expert surgeons, Liverpool Private Hospital facilities, and complete local support.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="/sydney/consultation" class="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg font-semibold text-center">
+						Book Free Consultation
+					</a>
+					<a href="/sydney/cost" class="bg-blue-800 text-white px-8 py-4 rounded-lg hover:bg-blue-900 transition text-lg font-semibold text-center border-2 border-white/20">
+						View Cost Breakdown
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Key Benefits -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Why Choose Liverpool for Bariatric Surgery</h2>
+
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+					<div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Southwest Sydney Hub</h3>
+					<p class="text-gray-700 mb-3">Liverpool serves one of Sydney's fastest-growing regions with comprehensive hospital facilities and support services.</p>
+					<p class="text-sm text-blue-600 font-medium">→ Major regional medical center</p>
+				</div>
+
+				<div class="bg-green-50 rounded-xl p-6 border border-green-100">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Multicultural Support</h3>
+					<p class="text-gray-700 mb-3">Culturally diverse healthcare services with multilingual support and community-specific programs.</p>
+					<p class="text-sm text-green-600 font-medium">→ Tailored cultural support</p>
+				</div>
+
+				<div class="bg-purple-50 rounded-xl p-6 border border-purple-100">
+					<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Leading Hospital</h3>
+					<p class="text-gray-700 mb-3">Liverpool Private Hospital offers state-of-the-art facilities with dedicated bariatric teams.</p>
+					<p class="text-sm text-purple-600 font-medium">→ Comprehensive care pathways</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Post-Op Supplies & Pharmacies -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Post-Surgery Supplies in Liverpool</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Stock up on bariatric vitamins and supplements at these local pharmacies.</p>
+
+			<div class="grid md:grid-cols-2 gap-6">
+				<a href="https://www.google.com/maps/search/?api=1&query=Chemist+Warehouse+Liverpool" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Chemist Warehouse Liverpool</h3>
+					<p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> Cheapest prices, huge range, protein shakes and bariatric vitamins</p>
+					<p class="text-sm text-gray-600">📍 Westfield Liverpool | 📞 <a href="tel:+61287641450" class="text-blue-600 hover:text-blue-800">(02) 8764 1450</a></p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Priceline+Pharmacy+Liverpool" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Priceline Pharmacy Liverpool</h3>
+					<p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> Extended trading hours, calcium citrate supplements, health advice</p>
+					<p class="text-sm text-gray-600">📍 Macquarie St, Liverpool | 📞 <a href="tel:+61296008844" class="text-blue-600 hover:text-blue-800">(02) 9600 8844</a></p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Liverpool+Compounding+Pharmacy" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Liverpool Compounding Pharmacy</h3>
+					<p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> Custom vitamin blends, specialist advice, prescription tracking</p>
+					<p class="text-sm text-gray-600">📍 Hoxton Park Rd, Liverpool | 📞 <a href="tel:+61296004220" class="text-blue-600 hover:text-blue-800">(02) 9600 4220</a></p>
+				</a>
+
+				<div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
+					<h3 class="font-bold text-gray-900 mb-3">🛒 Essential Post-Op Supplies</h3>
+					<ul class="text-sm text-gray-700 space-y-2">
+						<li>✓ <strong>Bariatric multivitamin</strong> (chewable)</li>
+						<li>✓ <strong>Calcium citrate</strong> 600mg</li>
+						<li>✓ <strong>Vitamin B12</strong> sublingual</li>
+						<li>✓ <strong>Protein powder</strong> isolate</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Family Accommodation -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Family Accommodation in Liverpool</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Comfortable accommodation for family members during your hospital stay.</p>
+
+			<div class="grid lg:grid-cols-3 gap-6">
+				<a href="https://www.google.com/maps/search/?api=1&query=Quest+Liverpool" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Quest Liverpool</h3>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 1km from hospital</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$150/night</p>
+					<p class="text-gray-600 text-xs">✅ Apartments, kitchen, parking</p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Meriton+Suites+Liverpool" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Meriton Suites Liverpool</h3>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 500m from hospital</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$180/night</p>
+					<p class="text-gray-600 text-xs">✅ Pool, gym, city views</p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Liverpool+Motor+Inn" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Liverpool Motor Inn</h3>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 2km from hospital</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$110/night</p>
+					<p class="text-gray-600 text-xs">✅ Budget option, parking</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Cost Information -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Cost & Medicare Information</h2>
+			<div class="max-w-4xl mx-auto">
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<p class="text-gray-700 mb-6">Bariatric surgery costs in Liverpool are competitive with greater Sydney. With private health insurance, expect $3,000-$7,000 out-of-pocket. Without insurance: $20,000-$35,000 total.</p>
+					<div class="text-center">
+						<a href="/sydney/cost" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold inline-block">
+							View Detailed Cost Breakdown →
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Surgeons Section -->
+	{liverpoolSurgeons.length > 0 && (
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Expert Bariatric Surgeons in Liverpool</h2>
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{liverpoolSurgeons.slice(0, 6).map((surgeon: any) => (
+						<a href={`/surgeons/${surgeon.slug}`} class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+							<h3 class="text-xl font-bold text-gray-900 mb-2">{surgeon.data.name}</h3>
+							{surgeon.data.location && (
+								<p class="text-sm text-gray-600 mb-3">{surgeon.data.location}</p>
+							)}
+							<p class="text-blue-600 hover:text-blue-800 font-medium text-sm">View Profile →</p>
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
+	)}
+
+	<!-- Call to Action -->
+	<section class="bg-gradient-to-br from-blue-700 to-blue-800 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Journey?</h2>
+			<p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+				Book a free consultation with a leading bariatric surgeon serving Liverpool and south-west Sydney.
+			</p>
+			<div class="flex flex-col sm:flex-row justify-center gap-4">
+				<a href="/sydney/consultation" class="bg-white text-blue-700 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg font-semibold">
+					Book Free Consultation
+				</a>
+				<a href="/sydney/cost" class="bg-blue-900 text-white px-8 py-4 rounded-lg hover:bg-blue-950 transition text-lg font-semibold border-2 border-white/20">
+					Understand Costs
+				</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
