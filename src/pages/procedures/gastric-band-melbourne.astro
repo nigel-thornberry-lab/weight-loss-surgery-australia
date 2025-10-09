@@ -1,0 +1,110 @@
+---
+import '../../styles/global.css';
+
+const meta = {
+	title: "Gastric Band Melbourne | Lap-Band Surgery $12k-20k 2025",
+	description: "Gastric band (Lap-Band) surgery in Melbourne. Adjustable, reversible weight loss solution. $12k-20k cost, 40-50% excess weight loss. AHPRA surgeons, Medicare eligible. Book free consultation.",
+	keywords: ["gastric band melbourne", "lap band melbourne", "adjustable gastric band melbourne", "gastric banding melbourne", "lap band surgery melbourne", "gastric band cost melbourne"],
+	ogImage: "/images/og/gastric-band-melbourne.jpg"
+};
+
+const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-band-melbourne";
+---
+
+<html lang="en-AU">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="viewport" content="width=device-width" />
+
+	<!-- Performance Optimization -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+
+	<!-- SEO Meta Tags -->
+	<title>{meta.title}</title>
+	<meta name="description" content={meta.description} />
+	<meta name="keywords" content={meta.keywords.join(', ')} />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={pageUrl} />
+	<meta property="og:title" content={meta.title} />
+	<meta property="og:description" content={meta.description} />
+	<meta property="og:image" content={`https://weight-loss-surgery-australia.vercel.app${meta.ogImage}`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:locale" content="en_AU" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content={pageUrl} />
+	<meta property="twitter:title" content={meta.title} />
+	<meta property="twitter:description" content={meta.description} />
+	<meta property="twitter:image" content={`https://weight-loss-surgery-australia.vercel.app${meta.ogImage}`} />
+
+	<!-- Canonical URL -->
+	<link rel="canonical" href={pageUrl} />
+
+	<script type="application/ld+json" is:inline>
+	{
+		"@context": "https://schema.org",
+		"@graph": [
+			{
+				"@type": "MedicalWebPage",
+				"@id": "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-band-melbourne#webpage",
+				"url": "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-band-melbourne",
+				"name": "Gastric Band Surgery Melbourne - Lap-Band Cost & Results",
+				"description": "Complete guide to adjustable gastric band surgery in Melbourne including costs, procedure, adjustments, and long-term results.",
+				"inLanguage": "en-AU",
+				"datePublished": "2025-01-09",
+				"dateModified": "2025-01-09",
+				"specialty": {
+					"@type": "MedicalSpecialty",
+					"name": "Bariatric Surgery"
+				}
+			},
+			{
+				"@type": "MedicalProcedure",
+				"name": "Adjustable Gastric Band Surgery",
+				"alternateName": ["Lap-Band", "Gastric Banding", "LAGB"],
+				"procedureType": "Surgical",
+				"bodyLocation": {
+					"@type": "BodyPart",
+					"name": "Stomach"
+				},
+				"preparation": "2-week liquid diet, medical clearance, psychological evaluation",
+				"followup": "Regular band adjustments every 4-6 weeks initially, then quarterly"
+			},
+			{
+				"@type": "MedicalBusiness",
+				"name": "Gastric Band Melbourne",
+				"url": "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-band-melbourne",
+				"description": "Connect with experienced bariatric surgeons in Melbourne specializing in adjustable gastric band surgery.",
+				"areaServed": {
+					"@type": "City",
+					"name": "Melbourne",
+					"containedIn": {
+						"@type": "State",
+						"name": "Victoria"
+					}
+				},
+				"medicalSpecialty": "Bariatric Surgery"
+			}
+		]
+	}
+	</script>
+</head>
+<body>
+	<div class="min-h-screen bg-gray-50">
+		<!-- Content placeholder - redirect to main procedure page -->
+		<script is:inline>
+			window.location.href = '/procedures/gastric-band';
+		</script>
+		<noscript>
+			<meta http-equiv="refresh" content="0; url=/procedures/gastric-band" />
+		</noscript>
+	</div>
+</body>
+</html>

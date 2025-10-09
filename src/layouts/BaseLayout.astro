@@ -23,9 +23,12 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
     <!-- Preconnect to external domains for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <!-- DNS Prefetch for performance -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Optimized Font Loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     
     <!-- Favicon with all sizes -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -74,20 +77,72 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
     <!-- Additional SEO -->
     <meta name="generator" content={Astro.generator} />
     
-    <!-- Structured Data - Medical Website -->
+    <!-- Structured Data - Medical Website & Organization -->
     <script type="application/ld+json">
       {JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "MedicalWebPage",
-        "name": title,
-        "description": description,
-        "url": currentUrl,
-        "inLanguage": "en-AU",
-        "isPartOf": {
-          "@type": "WebSite",
-          "name": "Weight Loss Surgery Australia",
-          "url": "https://weightlosssurgery.com.au"
-        }
+        "@graph": [
+          {
+            "@type": "MedicalWebPage",
+            "name": title,
+            "description": description,
+            "url": currentUrl,
+            "inLanguage": "en-AU",
+            "isPartOf": {
+              "@type": "WebSite",
+              "name": "Weight Loss Surgery Australia",
+              "url": "https://weightlosssurgery.com.au"
+            }
+          },
+          {
+            "@type": "MedicalBusiness",
+            "@id": "https://weightlosssurgery.com.au/#organization",
+            "name": "Weight Loss Surgery Australia",
+            "description": "Australia's leading resource for weight loss surgery information, connecting patients with AHPRA-registered bariatric surgeons across Sydney, Melbourne, and beyond.",
+            "url": "https://weightlosssurgery.com.au",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://weightlosssurgery.com.au/logo.png"
+            },
+            "image": "https://weightlosssurgery.com.au/og-image.jpg",
+            "telephone": "1300 000 000",
+            "areaServed": {
+              "@type": "Country",
+              "name": "Australia"
+            },
+            "medicalSpecialty": ["Bariatric Surgery", "Weight Loss Surgery"],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Bariatric Surgery Procedures",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Gastric Sleeve Surgery",
+                    "description": "Vertical sleeve gastrectomy procedure"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Gastric Bypass Surgery",
+                    "description": "Roux-en-Y gastric bypass procedure"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Gastric Band Surgery",
+                    "description": "Adjustable gastric banding procedure"
+                  }
+                }
+              ]
+            }
+          }
+        ]
       })}
     </script>
   </head>
@@ -226,16 +281,21 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
           <div>
             <h3 class="font-bold text-lg mb-4">Locations</h3>
             <ul class="space-y-2 text-gray-400">
-              <li><a href="/locations/sydney" class="hover:text-white">Sydney</a></li>
+              <li><a href="/locations/sydney" class="hover:text-white">Sydney Surgeons</a></li>
               <li><a href="/procedures/gastric-sleeve-sydney" class="hover:text-white">Gastric Sleeve Sydney</a></li>
-              <li><a href="/locations/melbourne" class="hover:text-white">Melbourne</a></li>
+              <li><a href="/procedures/gastric-bypass-sydney" class="hover:text-white">Gastric Bypass Sydney</a></li>
+              <li><a href="/locations/melbourne" class="hover:text-white">Melbourne Surgeons</a></li>
+              <li><a href="/procedures/gastric-sleeve-melbourne" class="hover:text-white">Gastric Sleeve Melbourne</a></li>
+              <li><a href="/procedures/gastric-bypass-melbourne" class="hover:text-white">Gastric Bypass Melbourne</a></li>
             </ul>
           </div>
           <div>
-            <h3 class="font-bold text-lg mb-4">Contact</h3>
+            <h3 class="font-bold text-lg mb-4">Resources</h3>
             <ul class="space-y-2 text-gray-400">
-              <li>Phone: 1300 000 000</li>
-              <li>Email: info@wlsaustralia.com.au</li>
+              <li><a href="/blog" class="hover:text-white">Blog & Articles</a></li>
+              <li><a href="/blog/gastric-sleeve-recovery-week-by-week" class="hover:text-white">Recovery Guide</a></li>
+              <li><a href="/blog/gastric-sleeve-cost-australia-2025" class="hover:text-white">Cost Information</a></li>
+              <li>Phone: <a href="tel:1300000000" class="hover:text-white">1300 000 000</a></li>
             </ul>
           </div>
         </div>
