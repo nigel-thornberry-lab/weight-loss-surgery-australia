@@ -8,23 +8,32 @@
 
 ## ✅ CRITICAL ISSUES FIXED
 
-### 1. **noindex Tag (P0 - BLOCKING ALL SEO)**
-**Issue:** Site blocked from Google indexing via `x-robots-tag: noindex` header
-**Status:** ⚠️ MANUAL ACTION REQUIRED
-**Action Needed:**
-- The noindex header is coming from Vercel deployment settings, not code
-- **You must remove this in Vercel Dashboard:**
-  1. Go to https://vercel.com/dashboard
-  2. Select your project
-  3. Settings → Headers
-  4. Remove any `x-robots-tag: noindex` header
-  5. Redeploy
+### 1. **noindex Tag (P0 - Understanding Required)**
+**Issue:** Preview URL shows `x-robots-tag: noindex` header
+**Status:** ✅ CORRECT BEHAVIOR - NO ACTION NEEDED
+**Explanation:**
+- The noindex header on `*.vercel.app` URLs is **intentional and correct**
+- Vercel automatically adds `x-robots-tag: noindex` to ALL preview deployments
+- This prevents staging/preview sites from competing with your production domain
+- **Your production domain (`weightlosssurgery.com.au`) will NOT have this header**
 
-**Verification:** After removing, check headers with:
+**Action Needed:**
+1. **Ensure Custom Domain is Added:**
+   - Go to Vercel Dashboard → Your Project → Settings → Domains
+   - Verify `weightlosssurgery.com.au` is set as production domain
+   - Vercel automatically removes noindex for production domains
+
+2. **Verification:** After deploying to production, check:
+```bash
+curl -I https://weightlosssurgery.com.au/ | grep -i robots
+```
+Should show NO `x-robots-tag: noindex` header (or should be absent)
+
+**Preview URL Behavior (Expected):**
 ```bash
 curl -I https://weight-loss-surgery-australia-1lom65fql.vercel.app/
+# Shows: x-robots-tag: noindex ← This is CORRECT!
 ```
-Should NOT show `x-robots-tag: noindex`
 
 ---
 
@@ -288,10 +297,10 @@ site:weight-loss-surgery-australia-1lom65fql.vercel.app
 - ✅ No information downgrades occurred
 
 ### noindex Header:
-- ⚠️ **This is the MOST CRITICAL fix**
-- Must be removed in Vercel dashboard
-- Site will remain invisible to Google until removed
-- Check after deployment: `curl -I [your-url] | grep robots`
+- ✅ **Preview URLs correctly have noindex** (expected Vercel behavior)
+- ✅ **Production domain will NOT have noindex** (automatic)
+- Ensure `weightlosssurgery.com.au` is set as production domain in Vercel
+- Verify after deployment: `curl -I https://weightlosssurgery.com.au/ | grep robots`
 
 ### Build Output:
 ```
@@ -307,9 +316,9 @@ site:weight-loss-surgery-australia-1lom65fql.vercel.app
 
 ### Immediate Actions:
 1. **Deploy this build to production**
-2. **Remove noindex tag in Vercel settings** (CRITICAL!)
-3. **Verify noindex removal with curl**
-4. **Submit sitemap to Google Search Console**
+2. **Verify production domain is set in Vercel** (Settings → Domains → `weightlosssurgery.com.au`)
+3. **Verify production domain has NO noindex:** `curl -I https://weightlosssurgery.com.au/ | grep robots`
+4. **Submit production sitemap to Google Search Console:** `https://weightlosssurgery.com.au/sitemap-index.xml`
 
 ### Week 1 Actions:
 1. Monitor Google Search Console for indexing
