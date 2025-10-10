@@ -134,21 +134,20 @@ const schemaMarkup = {
   <meta name="generator" content={Astro.generator} />
 
   <!-- SEO Meta Tags -->
-  <title>{meta.title}</title>
-  <meta name="description" content={meta.description} />
-  <meta name="keywords" content={meta.keywords.join(', ')} />
+  <title>{title}</title>
+  <meta name="description" content={description} />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article" />
   <meta property="og:url" content={pageUrl} />
-  <meta property="og:title" content={meta.title} />
-  <meta property="og:description" content={meta.description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content={pageUrl} />
-  <meta property="twitter:title" content={meta.title} />
-  <meta property="twitter:description" content={meta.description} />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
 
   <!-- Canonical URL -->
   <link rel="canonical" href={pageUrl} />
