@@ -1210,17 +1210,51 @@ const schemaMarkup = {
         <p>Gastric bypass is complex surgery with serious risks. Your surgeon's experience, credentials (FRACS), complication rates, and hospital quality matter far more than saving $2,000-$3,000. Check surgeon reviews, ask for complication statistics, and meet multiple surgeons before deciding.</p>
       </div>
 
-      <!-- FAQ Section -->
+      <!-- FAQ Section with Dropdowns -->
       <section class="faq-section">
         <h2>Frequently Asked Questions</h2>
 
-        {faqs.map((faq) => (
-          <div class="faq-item">
-            <div class="faq-question">{faq.question}</div>
-            <div class="faq-answer">{faq.answer}</div>
-          </div>
-        ))}
+        <div class="space-y-4">
+          {faqs.map((faq, index) => (
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+              <button
+                class="faq-question-btn w-full text-left px-6 py-4 bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center cursor-pointer"
+                onclick={`toggleFAQ(${index})`}
+              >
+                <h3 class="text-lg font-bold text-gray-900 pr-8">{faq.question}</h3>
+                <svg
+                  class="faq-icon w-6 h-6 text-blue-600 transform transition-transform duration-200 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-answer-div hidden px-6 py-4 bg-white border-t border-gray-200">
+                <p class="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
+
+      <script is:inline>
+        function toggleFAQ(index) {
+          const allAnswers = document.querySelectorAll('.faq-answer-div');
+          const allIcons = document.querySelectorAll('.faq-icon');
+          const answer = allAnswers[index];
+          const icon = allIcons[index];
+
+          if (answer.classList.contains('hidden')) {
+            answer.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+          } else {
+            answer.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+          }
+        }
+      </script>
 
       <!-- Final CTA -->
       <div class="final-cta">
