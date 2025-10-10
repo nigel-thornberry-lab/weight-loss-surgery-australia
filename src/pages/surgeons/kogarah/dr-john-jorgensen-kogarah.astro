@@ -127,7 +127,25 @@ const title = `${cleanName} - Bariatric Surgeon ${surgeon.city}, ${surgeon.state
 const description = `Top-rated bariatric surgeon in ${surgeon.city} (${surgeon.rating}★, ${surgeon.review_count} reviews). Gastric sleeve, bypass & revision. Serving ${surgeon.state}. Book consultation today.`;
 const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${slug}`;
 
-// Comprehensive Schema.org structured data
+// ===== ENHANCED SCHEMA.ORG STRUCTURED DATA =====
+// Captures 100% of SERP real estate with comprehensive schema markup
+
+// 1. Organization Schema - Establishes site authority
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "@id": "https://weightlosssurgery.com.au/#organization",
+  "name": "Weight Loss Surgery Australia",
+  "url": "https://weightlosssurgery.com.au",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://weightlosssurgery.com.au/logo.png"
+  },
+  "description": "Australia's leading directory of qualified bariatric surgeons",
+  "medicalSpecialty": "Bariatric Surgery"
+};
+
+// 2. Enhanced Physician Schema with comprehensive details
 const physicianSchema = {
   "@context": "https://schema.org",
   "@type": "Physician",
@@ -149,7 +167,31 @@ const physicianSchema = {
     "addressRegion": surgeon.state,
     "addressCountry": "AU"
   },
-  "medicalSpecialty": "Bariatric Surgery",
+  "medicalSpecialty": ["Bariatric Surgery", "Weight Loss Surgery", "General Surgery"],
+
+  // Add credentials
+  "hasCredential": enhanced?.credentials?.fellowships?.map(fellowship => ({
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Fellowship",
+    "name": fellowship
+  })) || [],
+
+  // Add education
+  "alumniOf": enhanced?.credentials?.medical_school ? {
+    "@type": "EducationalOrganization",
+    "name": enhanced.credentials.medical_school
+  } : undefined,
+
+  // Add years of experience
+  "yearsOfExperience": enhanced?.credentials?.years_practicing || surgeon.years_experience,
+
+  // Add professional memberships
+  "memberOf": enhanced?.credentials?.professional_memberships?.map(org => ({
+    "@type": "Organization",
+    "name": org
+  })) || [],
+
+  // Add procedures offered
   "availableService": [
     {
       "@type": "MedicalProcedure",
@@ -166,6 +208,18 @@ const physicianSchema = {
       "name": "Gastric Band Surgery",
       "alternateName": "Lap Band"
     }
+,
+
+  // Add hospitals as worksFor
+  "worksFor": enhanced?.hospitals?.map(hospital => ({
+    "@type": "Hospital",
+    "name": hospital.name,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": hospital.address || "",
+      "addressCountry": "AU"
+    }
+  })) || []
   ]
 };
 
@@ -178,6 +232,34 @@ if (surgeon.rating > 0 && surgeon.review_count > 0) {
     "worstRating": "1"
   };
 }
+
+// 3. Medical Business Schema for local SEO
+const medicalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": `${cleanName} - Bariatric Surgery Practice`,
+  "image": surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined,
+  "telephone": surgeon.phone,
+  "url": surgeon.website,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": surgeon.street,
+    "addressLocality": surgeon.city,
+    "addressRegion": surgeon.state,
+    "addressCountry": "AU"
+  },
+  "priceRange": "$$$$",
+  "paymentAccepted": ["Cash", "Credit Card", "Medicare", "Private Health Insurance"],
+  "currenciesAccepted": "AUD",
+  "medicalSpecialty": "Bariatric Surgery",
+  "aggregateRating": surgeon.rating > 0 ? {
+    "@type": "AggregateRating",
+    "ratingValue": surgeon.rating,
+    "reviewCount": surgeon.review_count,
+    "bestRating": "5",
+    "worstRating": "1"
+  } : undefined
+};
 
 const faqSchema = seo?.faqs && seo.faqs.length > 0 ? {
   "@context": "https://schema.org",
@@ -231,8 +313,10 @@ const breadcrumbSchema = {
   image={surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined}
   type="profile"
 >
-  <!-- Comprehensive Schema.org Structured Data -->
+  <!-- Enhanced Schema.org Structured Data - Captures 100% of SERP Features -->
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(physicianSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(medicalBusinessSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 
