@@ -238,7 +238,21 @@ const schemaMarkup = {
               </div>
             </div>
           </div>
-          <a href="/costs/gastric-bypass-cost-australia" class="text-blue-600 font-semibold">Costs</a>
+          <div class="relative group">
+            <button class="text-blue-600 font-semibold flex items-center">
+              Costs
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div class="py-2">
+                <a href="/costs/gastric-sleeve-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Sleeve Cost</a>
+                <a href="/costs/gastric-bypass-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Bypass Cost</a>
+                <a href="/costs/gastric-band-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Band Cost</a>
+              </div>
+            </div>
+          </div>
           <a href="/surgeons" class="text-gray-700 hover:text-blue-600 font-medium">Surgeons</a>
         </nav>
         <a href="tel:1300000000" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition font-semibold">Call Now</a>
