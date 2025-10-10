@@ -176,7 +176,7 @@ const physicianSchema = {
       "name": "Gastric Band Surgery",
       "alternateName": "Lap Band"
     }
-,
+  ],
 
   // Add hospitals as worksFor
   "worksFor": enhanced?.hospitals?.map(hospital => ({
@@ -188,7 +188,6 @@ const physicianSchema = {
       "addressCountry": "AU"
     }
   })) || []
-  ]
 };
 
 if (surgeon.rating > 0 && surgeon.review_count > 0) {
