@@ -1177,16 +1177,48 @@ const faqs = [
       <div class="bg-white rounded-xl shadow-lg p-8">
         <h2 class="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions About Gastric Sleeve Costs</h2>
 
-        <div class="space-y-6">
-          {faqs.map((faq) => (
-            <div class="border-b border-gray-200 pb-6 last:border-0 last:pb-0">
-              <h3 class="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
-              <p class="text-gray-700 leading-relaxed">{faq.answer}</p>
+        <div class="space-y-4">
+          {faqs.map((faq, index) => (
+            <div class="border border-gray-200 rounded-lg overflow-hidden">
+              <button
+                class="faq-question w-full text-left px-6 py-4 bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center"
+                onclick={`toggleFAQ(${index})`}
+              >
+                <h3 class="text-lg font-bold text-gray-900 pr-8">{faq.question}</h3>
+                <svg
+                  class="faq-icon w-6 h-6 text-blue-600 transform transition-transform duration-200 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div class="faq-answer hidden px-6 py-4 bg-white border-t border-gray-200">
+                <p class="text-gray-700 leading-relaxed">{faq.answer}</p>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
+
+    <script is:inline>
+      function toggleFAQ(index) {
+        const allAnswers = document.querySelectorAll('.faq-answer');
+        const allIcons = document.querySelectorAll('.faq-icon');
+        const answer = allAnswers[index];
+        const icon = allIcons[index];
+
+        if (answer.classList.contains('hidden')) {
+          answer.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        } else {
+          answer.classList.add('hidden');
+          icon.classList.remove('rotate-180');
+        }
+      }
+    </script>
 
     <!-- Final CTA Section -->
     <section class="mb-16">
