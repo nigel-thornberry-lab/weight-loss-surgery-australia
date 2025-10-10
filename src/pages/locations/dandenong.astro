@@ -1,0 +1,956 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const surgeons = await getCollection('surgeons');
+const dandenongSurgeons = surgeons.filter((s: any) => 
+	s.data.location?.includes('Dandenong') || 
+	s.data.location?.includes('Berwick') ||
+	s.data.suburbs?.includes('Dandenong') ||
+	s.data.suburbs?.includes('Southeast Melbourne')
+);
+
+const title = "Weight Loss Surgery Dandenong VIC | Expert Bariatric Surgeons";
+const description = "Find weight loss surgery in Dandenong with comprehensive local support. Expert surgeons, modern hospital facilities, and detailed Medicare information for Dandenong and Southeast Melbourne residents.";
+---
+
+<BaseLayout title={title} description={description}>
+	<!-- Breadcrumbs -->
+	<div class="bg-gray-50 border-b border-gray-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+			<nav class="flex text-sm" aria-label="Breadcrumb">
+				<a href="/" class="text-purple-600 hover:text-purple-800">Home</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<a href="/locations/melbourne" class="text-purple-600 hover:text-purple-800">Melbourne</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<span class="text-gray-600">Dandenong</span>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-br from-purple-600 to-purple-700 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-4xl">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Weight Loss Surgery in Dandenong
+				</h1>
+				<p class="text-xl text-purple-100 mb-8 leading-relaxed">
+					Comprehensive bariatric surgery services for Dandenong and Southeast Melbourne residents. Expert surgeons, modern hospital facilities, and complete local support services.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="/melbourne/consultation" class="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition text-lg font-semibold text-center">
+						Book Free Consultation
+					</a>
+					<a href="/melbourne/cost" class="bg-purple-800 text-white px-8 py-4 rounded-lg hover:bg-purple-900 transition text-lg font-semibold text-center border-2 border-white/20">
+						View Cost Breakdown
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Key Benefits for Dandenong Residents -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Why Choose Dandenong for Bariatric Surgery</h2>
+			
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="bg-purple-50 rounded-xl p-6 border border-purple-100">
+					<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Southeast Hub</h3>
+					<p class="text-gray-700 mb-3">Dandenong serves as the major healthcare hub for Southeast Melbourne, with easy access for residents across the region.</p>
+					<p class="text-sm text-purple-600 font-medium">→ Central location for all Southeast suburbs</p>
+				</div>
+
+				<div class="bg-green-50 rounded-xl p-6 border border-green-100">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Multicultural Care</h3>
+					<p class="text-gray-700 mb-3">Culturally diverse healthcare services with multilingual support staff and culturally-appropriate care pathways.</p>
+					<p class="text-sm text-green-600 font-medium">→ Support in multiple languages</p>
+				</div>
+
+				<div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+					<div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Excellent Transport</h3>
+					<p class="text-gray-700 mb-3">Major train station with connections to Melbourne CBD and all suburbs, plus extensive bus network.</p>
+					<p class="text-sm text-blue-600 font-medium">→ Easy access by public transport</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Hospital & Surgery Location Details -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Your Surgery Location</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Dandenong residents have access to multiple quality private hospitals in the Southeast Melbourne region for bariatric surgery.</p>
+			
+			<div class="grid lg:grid-cols-2 gap-8">
+				<!-- Hospital Information -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start mb-6">
+						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div>
+							<a href="https://www.google.com/maps/search/?api=1&query=Monash+Private+Hospital+Dandenong" target="_blank" rel="noopener noreferrer">
+								<h3 class="text-2xl font-bold text-purple-600 hover:text-purple-800 mb-2">Monash Private Hospital →</h3>
+							</a>
+							<p class="text-gray-600">Southeast Melbourne's premier bariatric surgery facility</p>
+						</div>
+					</div>
+
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">Address</p>
+								<p class="text-gray-700">Monash Health<br/>246-250 Clayton Rd<br/>Clayton VIC 3168</p>
+								<p class="text-sm text-purple-600 mt-1">8km from Dandenong (12 min drive)</p>
+							</div>
+						</div>
+
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">Travel Time from Dandenong</p>
+								<ul class="text-gray-700 space-y-1 mt-1">
+									<li>• <strong>By car:</strong> 12-15 minutes (via Princes Hwy)</li>
+									<li>• <strong>By train:</strong> Train to Clayton, then 10 min bus</li>
+									<li>• <strong>By bus:</strong> 20-25 minutes (Route 703)</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">Parking Information</p>
+								<p class="text-gray-700">Multi-level car park on-site</p>
+								<p class="text-sm text-gray-600 mt-1">Cost: ~$10/day | Patient validation available</p>
+							</div>
+						</div>
+
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-orange-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">Hospital Facilities</p>
+								<ul class="text-gray-700 space-y-1 mt-1">
+									<li>• Dedicated bariatric surgery unit</li>
+									<li>• 24/7 specialist nursing care</li>
+									<li>• Advanced surgical technology</li>
+									<li>• Private recovery rooms</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="mt-6 bg-purple-50 rounded-lg p-4">
+						<p class="text-sm font-bold text-gray-900 mb-2">Alternative Option:</p>
+						<p class="text-sm text-gray-700"><strong>Casey Hospital (Berwick)</strong> - 15 min from Dandenong. Several bariatric surgeons also operate here, offering convenient access for Southeast Melbourne residents.</p>
+					</div>
+				</div>
+
+				<!-- Map Placeholder + Quick Facts -->
+				<div class="space-y-6">
+					<div class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+						<h4 class="text-lg font-bold text-gray-900 mb-4">📍 Location Benefits for Dandenong Residents</h4>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Direct train access from Dandenong Station</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Serves Cranbourne, Narre Warren, Berwick areas</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Easy Princes Highway access</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Multiple hospital options nearby</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Close to major shopping and amenities</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="bg-purple-50 rounded-xl p-6 border border-purple-200">
+						<h4 class="text-lg font-bold text-gray-900 mb-3">🚗 Driving Directions</h4>
+						<p class="text-gray-700 text-sm mb-3"><strong>From Dandenong:</strong></p>
+						<ol class="text-sm text-gray-700 space-y-2 pl-4 list-decimal">
+							<li>Head west on Princes Hwy toward Melbourne</li>
+							<li>Continue on Princes Hwy for 7km</li>
+							<li>Turn right onto Clayton Rd</li>
+							<li>Monash Private Hospital on your right</li>
+						</ol>
+						<p class="text-xs text-gray-600 mt-3"><strong>From Cranbourne:</strong> 20 min via South Gippsland Hwy</p>
+						<p class="text-xs text-gray-600"><strong>From Berwick:</strong> 10 min via Clyde Rd</p>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-md p-6">
+						<h4 class="text-lg font-bold text-gray-900 mb-3">Contact Hospital</h4>
+						<p class="text-gray-700 mb-2"><strong>Phone:</strong> <a href="tel:+61395947666" class="text-purple-600 hover:text-purple-800">(03) 9594 7666</a></p>
+						<p class="text-gray-700"><strong>Hours:</strong> 24/7 Admissions & Emergency</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Local Support Services -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Local Support Services in Dandenong</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Recovery and long-term success require ongoing support. Access these expert services right in your local Dandenong area.</p>
+			
+			<div class="grid lg:grid-cols-3 gap-6">
+				<!-- Specialist Dietitians -->
+				<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Specialist Dietitians</h3>
+					
+					<div class="space-y-4 mb-4">
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=Dandenong+Dietitian+Nutrition" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Dandenong Nutrition Services →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">Central Dandenong location</p>
+							<p class="text-xs text-gray-600 mb-2">APD-certified dietitians with bariatric surgery experience</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Dandenong+Medical+Centre" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">Dandenong Medical Centre</a></p>
+							<div class="flex items-center mt-2">
+								<span class="text-xs text-gray-600">Medicare rebates with GP referral</span>
+							</div>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=Southeast+Nutrition+Berwick" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Southeast Nutrition & Dietetics →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">15 min from Dandenong (Berwick)</p>
+							<p class="text-xs text-gray-600 mb-2">Comprehensive pre and post-bariatric nutrition support</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Berwick+VIC+Medical" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">High Street, Berwick</a></p>
+							<div class="flex items-center mt-2">
+								<span class="text-xs text-gray-600">Telehealth appointments available</span>
+							</div>
+						</div>
+					</div>
+
+					<p class="text-sm text-gray-700"><strong>Why Specialist Dietitians Matter:</strong></p>
+					<ul class="text-sm text-gray-700 space-y-1 mt-2">
+						<li>• Pre-surgery nutrition preparation</li>
+						<li>• Post-op meal planning (all stages)</li>
+						<li>• Vitamin & supplement guidance</li>
+						<li>• Long-term weight maintenance</li>
+					</ul>
+				</div>
+
+				<!-- Exercise Physiologists -->
+				<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+					<div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Exercise & Physiotherapy</h3>
+					
+					<div class="space-y-4 mb-4">
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=Dandenong+Exercise+Physiology" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Dandenong Health & Fitness →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">Exercise physiology & rehabilitation</p>
+							<p class="text-xs text-gray-600 mb-2">Post-bariatric exercise programs and chronic disease management</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Dandenong+Leisure+Centre" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">Near Dandenong Market</a></p>
+							<div class="flex items-center mt-2">
+								<span class="text-xs text-gray-600">ESSA-certified physiologists</span>
+							</div>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=Monash+Health+Rehab+Dandenong" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Monash Health Rehab Services →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">Hospital-based programs</p>
+							<p class="text-xs text-gray-600 mb-2">Supervised exercise for bariatric patients, cardiac-style programs</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Dandenong+Hospital" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">Dandenong Hospital campus</a></p>
+							<div class="flex items-center mt-2">
+								<span class="text-xs text-gray-600">Medicare rebates via CDM</span>
+							</div>
+						</div>
+					</div>
+
+					<p class="text-sm text-gray-700"><strong>Benefits of Exercise Physiology:</strong></p>
+					<ul class="text-sm text-gray-700 space-y-1 mt-2">
+						<li>• Safe exercise progression post-surgery</li>
+						<li>• Muscle preservation during weight loss</li>
+						<li>• Improved mobility and joint health</li>
+						<li>• Medicare rebates often available</li>
+						<li>• Personalized fitness plans</li>
+					</ul>
+				</div>
+
+				<!-- Psychological Support -->
+				<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+					<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Psychological Support</h3>
+					
+					<p class="text-sm text-gray-700 mb-4">Psychological support is crucial for long-term bariatric surgery success. Many Dandenong patients benefit from counseling both before and after surgery to address emotional eating, body image, and lifestyle changes.</p>
+
+					<p class="text-sm text-gray-700 mb-3"><strong>Support Services Available:</strong></p>
+					<ul class="text-sm text-gray-700 space-y-2 mb-4">
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Clinical psychologists in Dandenong (Medicare rebates available)</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Pre-surgery psychological assessments</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Emotional eating counseling</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Multicultural counseling services</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Bariatric support groups (Monash Health)</span>
+						</li>
+					</ul>
+
+					<div class="bg-white rounded-lg p-3 text-sm">
+						<p class="text-gray-700"><strong>📍 Find Local Psychologists:</strong></p>
+						<p class="text-gray-600 text-xs mt-1">Search "bariatric psychologist Dandenong" or ask your surgeon for referrals to specialists experienced in weight loss surgery. Many offer telehealth appointments.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-8 bg-purple-50 border border-purple-200 rounded-xl p-6">
+				<h4 class="font-bold text-gray-900 mb-3">💡 Building Your Support Team</h4>
+				<p class="text-gray-700 mb-3">Most successful bariatric surgery patients work with a <strong>multidisciplinary team</strong>:</p>
+				<div class="grid md:grid-cols-3 gap-4 text-sm">
+					<div class="bg-white rounded-lg p-4">
+						<p class="font-bold text-gray-900 mb-2">Before Surgery</p>
+						<ul class="text-gray-700 space-y-1">
+							<li>→ Surgeon consultation</li>
+							<li>→ Dietitian (pre-op diet)</li>
+							<li>→ Psychologist assessment</li>
+							<li>→ GP referral & clearance</li>
+						</ul>
+					</div>
+					<div class="bg-white rounded-lg p-4">
+						<p class="font-bold text-gray-900 mb-2">First 6 Months</p>
+						<ul class="text-gray-700 space-y-1">
+							<li>→ Regular surgeon follow-ups</li>
+							<li>→ Dietitian (weekly → monthly)</li>
+							<li>→ Exercise physiologist</li>
+							<li>→ Support group attendance</li>
+						</ul>
+					</div>
+					<div class="bg-white rounded-lg p-4">
+						<p class="font-bold text-gray-900 mb-2">Long-Term</p>
+						<ul class="text-gray-700 space-y-1">
+							<li>→ Annual surgeon check-ups</li>
+							<li>→ Ongoing dietitian support</li>
+							<li>→ Regular blood tests (GP)</li>
+							<li>→ Psychological support as needed</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Cost Information for Dandenong Residents -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Cost & Medicare Information</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Understanding the costs helps you plan your bariatric surgery journey with confidence. Melbourne offers competitive pricing.</p>
+			
+			<div class="grid lg:grid-cols-2 gap-8">
+				<!-- With Insurance -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-6">
+						<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+							<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-gray-900">With Private Health Insurance</h3>
+					</div>
+
+					<div class="space-y-4 mb-6">
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Surgeon fees (gap)</span>
+							<span class="font-bold text-gray-900">$1,500 - $3,000</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Anaesthetist fees (gap)</span>
+							<span class="font-bold text-gray-900">$600 - $1,200</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Hospital (excess)</span>
+							<span class="font-bold text-gray-900">$250 - $500</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Dietitian & support</span>
+							<span class="font-bold text-gray-900">$300 - $700</span>
+						</div>
+						<div class="flex justify-between items-center py-4 bg-green-50 rounded-lg px-4">
+							<span class="font-bold text-gray-900">Total Out-of-Pocket</span>
+							<span class="text-2xl font-bold text-green-600">$2,650 - $5,400</span>
+						</div>
+					</div>
+
+					<div class="bg-purple-50 rounded-lg p-4 mb-4">
+						<p class="text-sm text-gray-700"><strong>💡 Southeast Advantage:</strong> Many Dandenong-area surgeons participate in "no gap" or "known gap" arrangements. Melbourne has more no-gap surgeons than Sydney, potentially saving you thousands.</p>
+					</div>
+
+					<p class="text-sm text-gray-600 mb-3"><strong>What Your Insurance Typically Covers:</strong></p>
+					<ul class="text-sm text-gray-700 space-y-1">
+						<li>✓ Hospital accommodation (shared or private room)</li>
+						<li>✓ Theatre fees</li>
+						<li>✓ Majority of surgeon & anaesthetist fees</li>
+						<li>✓ Post-op hospital stay (usually 1-2 nights)</li>
+					</ul>
+				</div>
+
+				<!-- Without Insurance -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-6">
+						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+							<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-gray-900">Self-Funded (No Insurance)</h3>
+					</div>
+
+					<div class="space-y-4 mb-6">
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Surgeon fees</span>
+							<span class="font-bold text-gray-900">$5,500 - $9,000</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Anaesthetist fees</span>
+							<span class="font-bold text-gray-900">$1,500 - $2,200</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Hospital fees</span>
+							<span class="font-bold text-gray-900">$7,000 - $11,000</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Dietitian & support</span>
+							<span class="font-bold text-gray-900">$500 - $1,000</span>
+						</div>
+						<div class="flex justify-between items-center py-4 bg-orange-50 rounded-lg px-4">
+							<span class="font-bold text-gray-900">Total Investment</span>
+							<span class="text-2xl font-bold text-orange-600">$14,500 - $23,200</span>
+						</div>
+					</div>
+
+					<div class="bg-green-50 rounded-lg p-4 mb-4">
+						<p class="text-sm font-bold text-gray-900 mb-2">Medicare Rebates Still Apply</p>
+						<p class="text-sm text-gray-700">Even without private insurance, you'll receive Medicare rebates of approximately $1,500-$2,000 (MBS items 31572/31575). Melbourne prices are typically 8-12% lower than Sydney.</p>
+					</div>
+
+					<p class="text-sm text-gray-600 mb-3"><strong>Payment Options Available:</strong></p>
+					<ul class="text-sm text-gray-700 space-y-1">
+						<li>✓ MacCredit medical loans (interest-free periods)</li>
+						<li>✓ Payment plans through clinics</li>
+						<li>✓ Superannuation early release (if eligible)</li>
+						<li>✓ Afterpay/Zip for some providers</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="mt-8 text-center">
+				<a href="/melbourne/cost" class="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition text-lg font-semibold">
+					View Complete Melbourne Cost Breakdown
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Post-Op Supplies & Pharmacies -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Post-Surgery Supplies Near Dandenong</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Stock up on vitamins, supplements, and recovery essentials at these local pharmacies.</p>
+			
+			<div class="grid md:grid-cols-2 gap-6">
+				<!-- Pharmacy 1 -->
+				<a href="https://www.google.com/maps/search/?api=1&query=Chemist+Warehouse+Dandenong" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<div class="flex items-center mb-4">
+						<div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+							<svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+						</div>
+						<div>
+							<h3 class="font-bold text-gray-900">Chemist Warehouse Dandenong</h3>
+							<p class="text-sm text-purple-600">4.2 ★ (450+ reviews)</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> Bariatric vitamins, protein shakes, lowest prices</p>
+					<p class="text-sm text-gray-600">📍 Dandenong Plaza | 📞 <span class="text-purple-600 hover:text-purple-800">(03) 9794 8977</span></p>
+				</a>
+
+				<!-- Pharmacy 2 -->
+				<a href="https://www.google.com/maps/search/?api=1&query=Priceline+Pharmacy+Dandenong" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<div class="flex items-center mb-4">
+						<div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
+							<svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+						</div>
+						<div>
+							<h3 class="font-bold text-gray-900">Priceline Pharmacy</h3>
+							<p class="text-sm text-purple-600">4.3 ★ (320+ reviews)</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> Late hours, pharmacist advice, calcium citrate</p>
+					<p class="text-sm text-gray-600">📍 Armada Dandenong Plaza | 📞 <span class="text-purple-600 hover:text-purple-800">(03) 9791 7588</span></p>
+				</a>
+
+				<!-- Pharmacy 3 -->
+				<a href="https://www.google.com/maps/search/?api=1&query=Dandenong+Hospital+Pharmacy" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<div class="flex items-center mb-4">
+						<div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+							<svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+							</svg>
+						</div>
+						<div>
+							<h3 class="font-bold text-gray-900">Monash Health Pharmacy</h3>
+							<p class="text-sm text-purple-600">Hospital Pharmacy</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-2"><strong>Best for:</strong> Post-op medications, hospital-grade supplements</p>
+					<p class="text-sm text-gray-600">📍 Dandenong Hospital campus | 📞 <span class="text-purple-600 hover:text-purple-800">(03) 9554 1000</span></p>
+				</a>
+
+				<!-- What to Buy -->
+				<div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
+					<h3 class="font-bold text-gray-900 mb-3">🛒 Essential Post-Op Supplies</h3>
+					<ul class="text-sm text-gray-700 space-y-2">
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Bariatric multivitamin</strong> (chewable or liquid)</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Calcium citrate</strong> (not carbonate)</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Vitamin B12</strong> (sublingual)</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Protein powder</strong> (whey isolate, 30g per serve)</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-orange-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Sugar-free electrolytes</strong> (Hydralyte)</span>
+						</li>
+					</ul>
+					<p class="text-xs text-gray-600 mt-3">💡 <strong>Tip:</strong> Buy 1 week before surgery so you're prepared.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Support Groups & Community -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Local Support Groups</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Connect with other bariatric patients for advice, motivation, and long-term success.</p>
+			
+			<div class="grid md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-xl shadow-md p-6">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900">Southeast Bariatric Support Group</h3>
+					</div>
+					<p class="text-gray-700 mb-3">📍 <strong>Location:</strong> Monash Private Hospital, Education Centre</p>
+					<p class="text-gray-700 mb-3">📅 <strong>When:</strong> Third Tuesday of every month, 6:30-8:00pm</p>
+					<p class="text-gray-700 mb-3">💰 <strong>Cost:</strong> Free (open to all bariatric patients)</p>
+					<p class="text-gray-600 text-sm">Topics: Nutrition, exercise, emotional support, guest speakers from dietitians and exercise physiologists. Multilingual support available.</p>
+				</div>
+
+				<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+					<div class="flex items-center mb-4">
+						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
+							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+							</svg>
+						</div>
+						<h3 class="text-xl font-bold text-gray-900">Online Communities</h3>
+					</div>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/>
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">r/BariatricSurgery (Reddit)</p>
+								<p class="text-sm text-gray-600">24/7 community, 150k+ members</p>
+							</div>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/>
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">Bariatric Support Australia (Facebook)</p>
+								<p class="text-sm text-gray-600">Aussie-specific advice & experiences</p>
+							</div>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"/>
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">MyFitnessPal Forums</p>
+								<p class="text-sm text-gray-600">Tracking & nutrition tips</p>
+							</div>
+						</li>
+					</ul>
+					<p class="text-sm text-gray-700 mt-4"><strong>💡 Why join?</strong> Meet others at different stages, get practical tips, find accountability partners, celebrate wins together.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Family Accommodation -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Family Accommodation Near Hospital</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Comfortable places for family members to stay during your 1-2 night hospital stay.</p>
+			
+			<div class="grid lg:grid-cols-3 gap-6">
+				<a href="https://www.google.com/maps/search/?api=1&query=Quest+Dandenong+Central" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Quest Dandenong Central</h3>
+					<p class="text-purple-600 text-sm mb-3">4.1 ★ (620+ reviews)</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 10km from hospital (15 min drive)</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$130/night</p>
+					<p class="text-gray-600 text-xs">✅ Full kitchenette, laundry, free parking</p>
+					<p class="text-gray-600 text-xs">📞 (03) 8769 4900</p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Comfort+Inn+Dandenong" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Comfort Inn Dandenong</h3>
+					<p class="text-purple-600 text-sm mb-3">3.9 ★ (440+ reviews)</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 8km from hospital (12 min drive)</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$110/night</p>
+					<p class="text-gray-600 text-xs">✅ Restaurant, room service, parking</p>
+					<p class="text-gray-600 text-xs">📞 (03) 9794 3344</p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Dandenong+Motel" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Dandenong Motel</h3>
+					<p class="text-purple-600 text-sm mb-3">3.7 ★ (310+ reviews)</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 6km from hospital (10 min drive)</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$85/night</p>
+					<p class="text-gray-600 text-xs">✅ Budget option, free parking, Wi-Fi</p>
+					<p class="text-gray-600 text-xs">📞 (03) 9792 9777</p>
+				</a>
+			</div>
+
+			<div class="mt-8 bg-purple-50 rounded-xl p-6 border border-purple-200">
+				<h4 class="font-bold text-gray-900 mb-3">📋 What Family Should Know</h4>
+				<ul class="text-sm text-gray-700 space-y-2">
+					<li>✓ <strong>Surgery day:</strong> 2-4 hour wait during procedure</li>
+					<li>✓ <strong>Visiting hours:</strong> 10am-8pm daily (2 visitors max)</li>
+					<li>✓ <strong>Discharge:</strong> Plan for 10am-2pm pickup (you cannot drive yourself)</li>
+					<li>✓ <strong>First week home:</strong> Have someone stay with you 24/7 if possible</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<!-- Surgeons Section -->
+	{dandenongSurgeons.length > 0 && (
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Expert Bariatric Surgeons Near Dandenong</h2>
+				<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Highly qualified surgeons with extensive experience serving the Southeast Melbourne community.</p>
+				
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{dandenongSurgeons.slice(0, 6).map((surgeon: any) => (
+						<a href={`/surgeons/${surgeon.slug}`} class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+							<h3 class="text-xl font-bold text-gray-900 mb-2">{surgeon.data.name}</h3>
+							{surgeon.data.location && (
+								<p class="text-sm text-gray-600 mb-3">{surgeon.data.location}</p>
+							)}
+							{surgeon.data.fellowships && surgeon.data.fellowships.length > 0 && (
+								<div class="mb-3">
+									{surgeon.data.fellowships.slice(0, 2).map((fellowship: any) => (
+										<span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded mr-1 mb-1">
+											{fellowship}
+										</span>
+									))}
+								</div>
+							)}
+							<p class="text-purple-600 hover:text-purple-800 font-medium text-sm">
+								View Profile →
+							</p>
+						</a>
+					))}
+				</div>
+
+				<div class="mt-8 text-center">
+					<a href="/surgeons" class="text-purple-600 hover:text-purple-800 font-semibold">
+						View All Melbourne Surgeons →
+					</a>
+				</div>
+			</div>
+		</section>
+	)}
+
+	<!-- Local Demographics & Context -->
+	<section class="py-16 bg-gradient-to-br from-purple-50 to-purple-100">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Bariatric Surgery in Dandenong: What You Should Know</h2>
+			
+			<div class="grid md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-xl p-6 shadow-md">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">📊 Why Dandenong Residents Choose Surgery</h3>
+					<p class="text-gray-700 mb-4">Dandenong serves as the major center for Southeast Melbourne, with a population of over 300,000 in the Greater Dandenong region. The area's multicultural community benefits from culturally-sensitive healthcare services and multilingual support.</p>
+					
+					<p class="text-gray-900 font-semibold mb-2">Common Health Concerns:</p>
+					<ul class="text-gray-700 space-y-2 text-sm mb-4">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Type 2 Diabetes:</strong> Bariatric surgery can lead to diabetes remission in 60-80% of patients</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Sleep Apnoea:</strong> Significant improvement or resolution in 70-85% of cases</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>High Blood Pressure:</strong> Improvement or resolution in 50-70% of patients</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Joint Pain:</strong> Reduced stress on knees, hips, and back with weight loss</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="bg-white rounded-xl p-6 shadow-md">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">🏥 Healthcare Access in Dandenong</h3>
+					<p class="text-gray-700 mb-4">Dandenong provides excellent healthcare access with Monash Health (one of Victoria's largest health services) and several private hospitals, offering comprehensive bariatric care for Southeast Melbourne residents.</p>
+					
+					<p class="text-gray-900 font-semibold mb-2">Local Healthcare Advantages:</p>
+					<ul class="text-gray-700 space-y-2 text-sm">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Major health services hub for Southeast region</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Multiple experienced bariatric surgeons</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Multicultural healthcare services with interpreter support</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Excellent public transport connections</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Comprehensive allied health services locally</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Frequently Asked Questions</h2>
+			
+			<div class="space-y-6">
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						Which hospital do Dandenong residents typically use for bariatric surgery?
+					</summary>
+					<p class="text-gray-700 mt-4">Most Dandenong and Southeast Melbourne residents undergo bariatric surgery at <strong>Monash Private Hospital</strong> in Clayton, located just 8km (12 minutes drive) from Dandenong. Alternative options include Casey Hospital in Berwick (15 minutes) and other Monash Health facilities.</p>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						How do I get to Monash Private Hospital from Dandenong?
+					</summary>
+					<div class="text-gray-700 mt-4 space-y-2">
+						<p><strong>By Train + Bus:</strong> Take the Cranbourne/Pakenham line toward Melbourne, connect to Clayton via bus route 703 (20-25 min total).</p>
+						<p><strong>By Car:</strong> 12-15 minutes via Princes Highway. Parking available on-site (~$10/day).</p>
+						<p><strong>By Taxi/Uber:</strong> Direct 12-minute ride from Dandenong Station.</p>
+					</div>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						Are there specialist dietitians near Dandenong for post-surgery support?
+					</summary>
+					<p class="text-gray-700 mt-4">Yes! Several specialist dietitians serve the Dandenong area, including practitioners at local medical centers and nearby Berwick. Many offer telehealth appointments and accept Medicare/private health insurance rebates for bariatric nutrition support.</p>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						How much does gastric sleeve surgery cost for Dandenong residents?
+					</summary>
+					<div class="text-gray-700 mt-4">
+						<p class="mb-2">Melbourne costs are competitive with Sydney:</p>
+						<ul class="space-y-1 ml-4">
+							<li>• <strong>With private health insurance:</strong> $2,650 - $5,400 out-of-pocket</li>
+							<li>• <strong>Self-funded (no insurance):</strong> $14,500 - $23,200 total</li>
+						</ul>
+						<p class="mt-2">Medicare rebates apply in both scenarios. Many Southeast Melbourne surgeons offer no-gap or known-gap arrangements.</p>
+					</div>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						Do I need a GP referral to see a bariatric surgeon in Dandenong?
+					</summary>
+					<p class="text-gray-700 mt-4">Yes, you'll need a GP referral to see a bariatric surgeon and to qualify for Medicare rebates. Your local Dandenong GP can provide this referral after an initial consultation. Most Dandenong medical centers are familiar with the bariatric surgery referral process.</p>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						Is there multilingual support available for Dandenong's multicultural community?
+					</summary>
+					<p class="text-gray-700 mt-4">Yes! Monash Health and local services offer interpreter services in over 50 languages. Many bariatric surgeons in the Southeast Melbourne area have multilingual staff and can arrange professional interpreters for consultations and follow-up appointments at no cost to you.</p>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						Can I recover at home in Dandenong after surgery?
+					</summary>
+					<p class="text-gray-700 mt-4">Yes, absolutely. Most patients are discharged 1-2 nights after surgery and recover comfortably at home. Being relatively close to Monash Private Hospital (12 minutes away) provides peace of mind if you need to contact your surgeon or attend follow-up appointments during your recovery.</p>
+				</details>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 bg-gradient-to-br from-purple-600 to-purple-700 text-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">
+				Ready to Start Your Weight Loss Journey?
+			</h2>
+			<p class="text-xl text-purple-100 mb-8 leading-relaxed">
+				Connect with expert bariatric surgeons serving Dandenong and Southeast Melbourne. Get your questions answered and explore whether weight loss surgery is right for you.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/melbourne/consultation" class="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition text-lg font-semibold">
+					Book Free Consultation
+				</a>
+				<a href="/melbourne/cost" class="bg-purple-800 text-white px-8 py-4 rounded-lg hover:bg-purple-900 transition text-lg font-semibold border-2 border-white/20">
+					View Detailed Costs
+				</a>
+			</div>
+			<p class="text-sm text-purple-200 mt-6">No obligation • Medicare rebates available • Payment plans offered</p>
+		</div>
+	</section>
+</BaseLayout>
+
