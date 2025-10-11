@@ -1,13 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
-
-const surgeons = await getCollection('surgeons');
-const burwoodSurgeons = surgeons.filter((s: any) =>
-	s.data.location?.includes('Burwood') ||
-	s.data.suburbs?.includes('Burwood') ||
-	s.data.location?.includes('Inner West')
-);
 
 const title = "Weight Loss Surgery Burwood NSW | Expert Bariatric Surgeons";
 const description = "Find weight loss surgery in Burwood with comprehensive local support. Expert surgeons, local dietitians, physiotherapy services, and detailed Medicare information for Inner West residents.";
@@ -344,45 +336,6 @@ const description = "Find weight loss surgery in Burwood with comprehensive loca
 			</div>
 		</div>
 	</section>
-
-	<!-- Surgeons Section -->
-	{burwoodSurgeons.length > 0 && (
-		<section class="py-16 bg-gray-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Expert Bariatric Surgeons Near Burwood</h2>
-				<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Highly qualified surgeons with extensive experience serving the Inner West community.</p>
-
-				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-					{burwoodSurgeons.slice(0, 6).map((surgeon: any) => (
-						<a href={`/surgeons/${surgeon.slug}`} class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
-							<h3 class="text-xl font-bold text-gray-900 mb-2">{surgeon.data.name}</h3>
-							{surgeon.data.location && (
-								<p class="text-sm text-gray-600 mb-3">{surgeon.data.location}</p>
-							)}
-							{surgeon.data.fellowships && surgeon.data.fellowships.length > 0 && (
-								<div class="mb-3">
-									{surgeon.data.fellowships.slice(0, 2).map((fellowship: any) => (
-										<span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-1 mb-1">
-											{fellowship}
-										</span>
-									))}
-								</div>
-							)}
-							<p class="text-blue-600 hover:text-blue-800 font-medium text-sm">
-								View Profile →
-							</p>
-						</a>
-					))}
-				</div>
-
-				<div class="mt-8 text-center">
-					<a href="/surgeons" class="text-blue-600 hover:text-blue-800 font-semibold">
-						View All Sydney Surgeons →
-					</a>
-				</div>
-			</div>
-		</section>
-	)}
 
 	<!-- Call to Action Section -->
 	<section class="bg-gradient-to-br from-blue-700 to-blue-800 text-white py-16">
