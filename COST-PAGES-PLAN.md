@@ -385,7 +385,8 @@ Results:
 │ [View all 20 →]                                        │
 └────────────────────────────────────────────────────────┘
 
-[Get Free Quotes from 3 Surgeons →]
+
+
 ```
 
 #### 12. FAQ Section (Rich Snippets)
