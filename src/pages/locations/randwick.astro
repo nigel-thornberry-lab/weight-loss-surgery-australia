@@ -1,0 +1,329 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const surgeons = await getCollection('surgeons');
+const randwickSurgeons = surgeons.filter((s: any) => 
+	s.data.location?.includes('Randwick') || 
+	s.data.location?.includes('Kensington') ||
+	s.data.location?.includes('Maroubra') ||
+	s.data.suburbs?.includes('Randwick')
+);
+
+const title = "Weight Loss Surgery Randwick NSW | Expert Bariatric Surgeons";
+const description = "Find weight loss surgery in Randwick with comprehensive local support. Expert surgeons near Prince of Wales Hospital, local dietitians, exercise physiologists, and detailed Medicare information for Randwick residents.";
+---
+
+<BaseLayout title={title} description={description}>
+	<!-- Breadcrumbs -->
+	<div class="bg-gray-50 border-b border-gray-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+			<nav class="flex text-sm" aria-label="Breadcrumb">
+				<a href="/" class="text-blue-600 hover:text-blue-800">Home</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<a href="/locations/sydney" class="text-blue-600 hover:text-blue-800">Sydney</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<span class="text-gray-600">Randwick</span>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-br from-blue-600 to-blue-700 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-4xl">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Weight Loss Surgery in Randwick
+				</h1>
+				<p class="text-xl text-blue-100 mb-8 leading-relaxed">
+					Comprehensive bariatric surgery services for Randwick residents. Access expert surgeons near Prince of Wales Hospital, world-class Eastern Suburbs facilities, and complete local support services.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="/sydney/consultation" class="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg font-semibold text-center">
+						Book Free Consultation
+					</a>
+					<a href="/sydney/cost" class="bg-blue-800 text-white px-8 py-4 rounded-lg hover:bg-blue-900 transition text-lg font-semibold text-center border-2 border-white/20">
+						View Cost Breakdown
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Key Benefits for Randwick Residents -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Why Choose Randwick for Bariatric Surgery</h2>
+			
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
+					<div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Eastern Suburbs Hub</h3>
+					<p class="text-gray-700 mb-3">Randwick is the medical heart of Sydney's Eastern Suburbs, with excellent access to hospitals and specialist facilities.</p>
+					<p class="text-sm text-blue-600 font-medium">→ Close to major hospitals and specialists</p>
+				</div>
+
+				<div class="bg-green-50 rounded-xl p-6 border border-green-100">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Premium Support Services</h3>
+					<p class="text-gray-700 mb-3">Access exceptional dietitians, physiotherapists, and wellness centers in the Eastern Suburbs area.</p>
+					<p class="text-sm text-green-600 font-medium">→ High-quality post-operative care nearby</p>
+				</div>
+
+				<div class="bg-purple-50 rounded-xl p-6 border border-purple-100">
+					<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Beach Lifestyle</h3>
+					<p class="text-gray-700 mb-3">Recover in one of Sydney's most beautiful areas, with beaches, parks, and coastal walks perfect for post-surgery exercise.</p>
+					<p class="text-sm text-purple-600 font-medium">→ Supportive environment for your health journey</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Local Support Services -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Local Support Services in Randwick</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Recovery and long-term success require ongoing support. Access these expert services right in your local Randwick and Eastern Suburbs area.</p>
+
+			<div class="grid lg:grid-cols-3 gap-6">
+				<!-- Specialist Dietitians -->
+				<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Specialist Dietitians</h3>
+
+					<div class="space-y-4 mb-4">
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=Uplift+Nutrition+Bondi+Junction" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-blue-600 hover:text-blue-800 text-sm mb-1">Uplift Nutrition →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">Bondi Junction (5 min from Randwick)</p>
+							<p class="text-xs text-gray-600 mb-2">Dietitian within Bondi Junction Medical Practice specializing in weight management</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=231+Oxford+St+Bondi+Junction+NSW" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">231 Oxford St, Bondi Junction</a></p>
+							<p class="text-sm text-blue-600"><strong>Phone:</strong> <a href="tel:+61448843492" class="hover:text-blue-800">0448 843 492</a></p>
+							<div class="flex items-center mt-2">
+								<span class="text-yellow-400 text-sm mr-1">★★★★★</span>
+								<span class="text-xs text-gray-600">5.0/5 (2 reviews)</span>
+							</div>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=LIMITLESS+Physio+Pilates+Massage+Bronte" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-blue-600 hover:text-blue-800 text-sm mb-1">LIMITLESS Physio - Dietitian Services →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">Bronte (10 min from Randwick)</p>
+							<p class="text-xs text-gray-600 mb-2">Comprehensive health center with dietitian services, physiotherapy, and wellness programs</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=138+Macpherson+St+Bronte+NSW" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">138 Macpherson St, Bronte</a></p>
+							<p class="text-sm text-blue-600"><strong>Phone:</strong> <a href="tel:+61289709166" class="hover:text-blue-800">(02) 8970 9166</a></p>
+							<div class="flex items-center mt-2">
+								<span class="text-yellow-400 text-sm mr-1">★★★★★</span>
+								<span class="text-xs text-gray-600">5.0/5 (193 reviews)</span>
+							</div>
+						</div>
+					</div>
+
+					<p class="text-sm text-gray-700"><strong>Why Specialist Dietitians Matter:</strong></p>
+					<ul class="text-sm text-gray-700 space-y-1 mt-2">
+						<li>• Pre-surgery nutrition preparation</li>
+						<li>• Post-op meal planning (all stages)</li>
+						<li>• Vitamin & supplement guidance</li>
+						<li>• Long-term weight maintenance</li>
+					</ul>
+				</div>
+
+				<!-- Exercise Physiologists -->
+				<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+					<div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Exercise & Physiotherapy</h3>
+
+					<div class="space-y-4 mb-4">
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=Sports+and+Spine+Physiotherapy+Pilates+Bondi+Junction" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-blue-600 hover:text-blue-800 text-sm mb-1">Sports & Spine Physiotherapy and Pilates →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">Bondi Junction (5 min from Randwick)</p>
+							<p class="text-xs text-gray-600 mb-2">Expert physiotherapy with integrated Pilates and strength programs</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=1A+Newland+St+Bondi+Junction+NSW" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">1A Newland St, Bondi Junction</a></p>
+							<p class="text-sm text-blue-600"><strong>Phone:</strong> <a href="tel:+61272414362" class="hover:text-blue-800">(02) 7241 4362</a></p>
+							<div class="flex items-center mt-2">
+								<span class="text-yellow-400 text-sm mr-1">★★★★★</span>
+								<span class="text-xs text-gray-600">5.0/5 (81 reviews)</span>
+							</div>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=LIMITLESS+Physio+Bronte" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-blue-600 hover:text-blue-800 text-sm mb-1">LIMITLESS Physio Pilates & Massage →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">Bronte (10 min from Randwick)</p>
+							<p class="text-xs text-gray-600 mb-2">Comprehensive physiotherapy, Pilates, massage, and women's health services</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=138+Macpherson+St+Bronte+NSW" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800">138 Macpherson St, Bronte</a></p>
+							<p class="text-sm text-blue-600"><strong>Phone:</strong> <a href="tel:+61289709166" class="hover:text-blue-800">(02) 8970 9166</a></p>
+							<div class="flex items-center mt-2">
+								<span class="text-yellow-400 text-sm mr-1">★★★★★</span>
+								<span class="text-xs text-gray-600">5.0/5 (193 reviews)</span>
+							</div>
+						</div>
+					</div>
+
+					<p class="text-sm text-gray-700"><strong>Benefits of Exercise Physiology:</strong></p>
+					<ul class="text-sm text-gray-700 space-y-1 mt-2">
+						<li>• Safe exercise progression post-surgery</li>
+						<li>• Muscle preservation during weight loss</li>
+						<li>• Improved mobility and joint health</li>
+						<li>• Medicare rebates often available</li>
+						<li>• Personalized fitness plans</li>
+					</ul>
+				</div>
+
+				<!-- Psychological Support -->
+				<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+					<div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Psychological Support</h3>
+
+					<p class="text-sm text-gray-700 mb-4">Psychological support is crucial for long-term bariatric surgery success. Many patients benefit from counseling both before and after surgery to address emotional eating, body image, and lifestyle changes.</p>
+
+					<p class="text-sm text-gray-700 mb-3"><strong>Support Services Available:</strong></p>
+					<ul class="text-sm text-gray-700 space-y-2 mb-4">
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Clinical psychologists (Medicare rebates available)</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Pre-surgery psychological assessments</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Emotional eating counseling</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-4 h-4 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Body image therapy</span>
+						</li>
+					</ul>
+					<p class="text-sm text-gray-700 mt-4"><strong>💡 Finding a Psychologist:</strong> Your GP can provide a Mental Health Care Plan for Medicare rebates. Look for psychologists specializing in bariatric or eating disorder support in the Eastern Suburbs.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Cost Information -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Cost & Medicare Information</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Understanding the costs helps you plan your bariatric surgery journey with confidence.</p>
+
+			<div class="bg-blue-50 rounded-xl p-8 border border-blue-200">
+				<h3 class="text-2xl font-bold text-gray-900 mb-4">Typical Cost Range</h3>
+				<div class="grid md:grid-cols-2 gap-6">
+					<div>
+						<p class="font-bold text-gray-900 mb-2">With Private Health Insurance:</p>
+						<p class="text-3xl font-bold text-blue-600 mb-2">$3,000 - $7,000</p>
+						<p class="text-sm text-gray-700">Out-of-pocket gap payments for surgeon, anaesthetist, and hospital excess</p>
+					</div>
+					<div>
+						<p class="font-bold text-gray-900 mb-2">Without Insurance (Self-Funded):</p>
+						<p class="text-3xl font-bold text-red-600 mb-2">$20,000 - $30,000</p>
+						<p class="text-sm text-gray-700">Full cost including hospital, surgeon, anaesthetist, and all fees</p>
+					</div>
+				</div>
+				<div class="mt-6 text-center">
+					<a href="/sydney/cost" class="text-blue-600 hover:text-blue-800 font-semibold">
+						View Detailed Cost Breakdown →
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Surgeons Section -->
+	{randwickSurgeons.length > 0 && (
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Expert Bariatric Surgeons Near Randwick</h2>
+				<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Highly qualified surgeons with extensive experience serving the Randwick and Eastern Suburbs community.</p>
+
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{randwickSurgeons.slice(0, 6).map((surgeon: any) => (
+						<a href={`/surgeons/${surgeon.slug}`} class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+							<h3 class="text-xl font-bold text-gray-900 mb-2">{surgeon.data.name}</h3>
+							{surgeon.data.location && (
+								<p class="text-sm text-gray-600 mb-3">{surgeon.data.location}</p>
+							)}
+							{surgeon.data.fellowships && surgeon.data.fellowships.length > 0 && (
+								<div class="mb-3">
+									{surgeon.data.fellowships.slice(0, 2).map((fellowship: any) => (
+										<span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mr-1 mb-1">
+											{fellowship}
+										</span>
+									))}
+								</div>
+							)}
+							<p class="text-blue-600 hover:text-blue-800 font-medium text-sm">
+								View Profile →
+							</p>
+						</a>
+					))}
+				</div>
+
+				<div class="mt-8 text-center">
+					<a href="/surgeons" class="text-blue-600 hover:text-blue-800 font-semibold">
+						View All Sydney Surgeons →
+					</a>
+				</div>
+			</div>
+		</section>
+	)}
+
+	<!-- Call to Action Section -->
+	<section class="bg-gradient-to-br from-blue-700 to-blue-800 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Journey?</h2>
+			<p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+				Take the first step towards a healthier future. Book a free, no-obligation consultation with a leading bariatric surgeon near Randwick.
+			</p>
+			<div class="flex flex-col sm:flex-row justify-center gap-4">
+				<a href="/sydney/consultation" class="bg-white text-blue-700 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg font-semibold">
+					Book Free Consultation
+				</a>
+				<a href="/sydney/cost" class="bg-blue-900 text-white px-8 py-4 rounded-lg hover:bg-blue-950 transition text-lg font-semibold border-2 border-white/20">
+					Understand Costs
+				</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
