@@ -84,7 +84,7 @@ const openingHours = [
             href={surgeon.google_maps_url}
             target="_blank"
             rel="noopener noreferrer"
-            class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 transition-all group"
+            class="absolute inset-0 flex items-center justify-center bg-[#6c95ef] hover:bg-[#5a7fd8] transition-all group"
           >
             <div class="text-center text-white p-8">
               <svg class="w-24 h-24 mx-auto mb-4 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 20 20">
@@ -99,8 +99,8 @@ const openingHours = [
         <!-- Address Below Map -->
         <div class="p-6 bg-white border-t-2 border-gray-100">
           <div class="flex items-start gap-4">
-            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-              <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <div class="flex-shrink-0 w-12 h-12 bg-[#eedfd7] rounded-xl flex items-center justify-center">
+              <svg class="w-6 h-6 text-[#6c95ef]" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
               </svg>
             </div>
@@ -111,7 +111,7 @@ const openingHours = [
                 href={surgeon.google_maps_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 font-medium mt-2 text-sm"
+                class="inline-flex items-center gap-1 text-[#6c95ef] hover:text-[#5a7fd8] font-medium mt-2 text-sm"
               >
                 Get Directions
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -143,7 +143,7 @@ const openingHours = [
                 <h4 class="font-bold text-gray-900 mb-1">Phone</h4>
                 <a 
                   href={`tel:${surgeon.phone}`}
-                  class="text-lg text-blue-600 hover:text-blue-700 font-semibold block"
+                  class="text-lg text-[#6c95ef] hover:text-[#5a7fd8] font-semibold block"
                 >
                   {formattedPhone}
                 </a>
@@ -165,7 +165,7 @@ const openingHours = [
                     href={surgeon.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="text-blue-600 hover:text-blue-700 font-medium break-all"
+                    class="text-[#6c95ef] hover:text-[#5a7fd8] font-medium break-all"
                   >
                     {websiteDomain}
                   </a>
@@ -186,7 +186,7 @@ const openingHours = [
                 <h4 class="font-bold text-gray-900 mb-1">Email</h4>
                 <a 
                   href="#consultation"
-                  class="text-blue-600 hover:text-blue-700 font-medium"
+                  class="text-[#6c95ef] hover:text-[#5a7fd8] font-medium"
                 >
                   Send us a message
                 </a>
@@ -199,7 +199,7 @@ const openingHours = [
         <!-- Opening Hours Card -->
         <div class="bg-white rounded-2xl p-6 shadow-lg">
           <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-6 h-6 text-[#6c95ef]" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
             </svg>
             Opening Hours
@@ -231,9 +231,9 @@ const openingHours = [
         </div>
         
         <!-- Parking & Access Card -->
-        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 shadow-lg">
+        <div class="bg-[#def7f1] rounded-2xl p-6 shadow-lg border-2 border-gray-200">
           <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-            <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-6 h-6 text-[#6c95ef]" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
             </svg>
             Parking & Access

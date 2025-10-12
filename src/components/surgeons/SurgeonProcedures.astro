@@ -80,7 +80,7 @@ const surgeonProcedures = procedureList
 const displayName = surgeon.surgeon_name || surgeon.business_name;
 ---
 
-<section class="py-16 bg-gray-50">
+<section class="py-16 bg-[#c6cdcb]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Section Header -->
@@ -99,7 +99,7 @@ const displayName = surgeon.surgeon_name || surgeon.business_name;
         <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden hover:-translate-y-1">
           
           <!-- Card Header -->
-          <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-6 text-white">
+          <div class="bg-[#6c95ef] p-6 text-white">
             <div class="text-5xl mb-3">{procedure.icon}</div>
             <h3 class="text-2xl font-bold mb-2">{procedure.name}</h3>
             <p class="text-blue-100">{procedure.duration}</p>
@@ -126,14 +126,14 @@ const displayName = surgeon.surgeon_name || surgeon.business_name;
             <!-- Price Range -->
             <div class="mb-6">
               <p class="text-sm text-gray-500 mb-1">Estimated Cost</p>
-              <p class="text-2xl font-bold text-blue-600">{procedure.priceRange}</p>
+              <p class="text-2xl font-bold text-[#6c95ef]">{procedure.priceRange}</p>
               <p class="text-xs text-gray-500 mt-1">*Medicare rebates may apply</p>
             </div>
             
             <!-- CTA Button -->
             <a 
               href={`/procedures/${(procedure.name || 'procedure').toLowerCase().replace(/\s+/g, '-')}-${(surgeon?.city || 'australia').toLowerCase()}?surgeon=${surgeon?.slug || ''}`}
-              class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200 group-hover:bg-blue-700"
+              class="block w-full text-center bg-[#6c95ef] hover:bg-[#5a7fd8] text-white font-semibold py-3 px-6 rounded-xl transition-colors duration-200 group-hover:bg-[#5a7fd8]"
             >
               Learn More
               <svg class="inline-block w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
@@ -146,7 +146,7 @@ const displayName = surgeon.surgeon_name || surgeon.business_name;
     </div>
     
     <!-- Additional Info -->
-    <div class="mt-12 bg-blue-50 rounded-2xl p-8 text-center">
+    <div class="mt-12 bg-[#def7f1] rounded-2xl p-8 text-center">
       <h3 class="text-2xl font-bold text-gray-900 mb-4">
         Not sure which procedure is right for you?
       </h3>
@@ -155,7 +155,7 @@ const displayName = surgeon.surgeon_name || surgeon.business_name;
       </p>
       <a 
         href="#consultation" 
-        class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-xl transition-colors duration-200 shadow-lg hover:shadow-xl"
+        class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-[#6c95ef] hover:bg-[#5a7fd8] rounded-xl transition-colors duration-200 shadow-lg hover:shadow-xl"
       >
         Book Free Consultation
         <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">

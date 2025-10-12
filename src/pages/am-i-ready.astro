@@ -1,0 +1,725 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Am I Ready for Weight Loss Surgery? | Self-Assessment Quiz",
+  description: "Take our compassionate self-assessment to explore your emotional readiness for weight loss surgery. No judgment, just honest reflection on your journey.",
+};
+---
+
+<BaseLayout 
+  title={meta.title}
+  description={meta.description}
+  canonicalUrl="https://weightlosssurgery.com.au/am-i-ready"
+>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-blue-50 via-purple-50 to-white py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Am I Ready for Weight Loss Surgery?
+      </h1>
+      <p class="text-xl text-gray-600 mb-4">
+        You're not alone in asking this question. Let's explore your readiness together.
+      </p>
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg text-left max-w-2xl mx-auto mt-8">
+        <p class="text-gray-700">
+          <strong>This isn't about medical eligibility.</strong> This is about understanding where you are emotionally, mentally, and practically. There are no wrong answers—just honest reflection.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Assessment Section -->
+<section class="py-12 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div id="assessment-container">
+      <!-- Progress Bar -->
+      <div class="mb-8">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-sm font-medium text-gray-600">Progress</span>
+          <span class="text-sm font-medium text-gray-600"><span id="current-section">1</span> of 6</span>
+        </div>
+        <div class="w-full bg-gray-200 rounded-full h-3">
+          <div id="progress-bar" class="bg-blue-600 h-3 rounded-full transition-all duration-300" style="width: 16.66%"></div>
+        </div>
+      </div>
+
+      <!-- Questions Container -->
+      <div id="questions-container" class="space-y-8">
+        <!-- Questions will be inserted here by JavaScript -->
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="flex justify-between mt-12">
+        <button 
+          id="prev-btn" 
+          class="px-6 py-3 bg-gray-200 text-gray-700 rounded-lg font-semibold hover:bg-gray-300 transition disabled:opacity-50 disabled:cursor-not-allowed"
+          disabled
+        >
+          ← Previous
+        </button>
+        <button 
+          id="next-btn" 
+          class="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition"
+        >
+          Next →
+        </button>
+        <button 
+          id="submit-btn" 
+          class="hidden px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition"
+        >
+          Get My Results
+        </button>
+      </div>
+    </div>
+
+    <!-- Results Container (Hidden Initially) -->
+    <div id="results-container" class="hidden">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Your Readiness Report</h2>
+        
+        <!-- Overall Readiness Score -->
+        <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 mb-8 text-center">
+          <div class="text-6xl font-bold mb-2" id="overall-score"></div>
+          <p class="text-xl font-semibold text-gray-700" id="readiness-level"></p>
+        </div>
+
+        <!-- Individual Category Scores -->
+        <div class="space-y-6 mb-8" id="category-scores">
+          <!-- Category scores will be inserted here -->
+        </div>
+
+        <!-- Personalized Recommendations -->
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">📋 Your Recommended Next Steps</h3>
+          <div id="recommendations" class="space-y-3">
+            <!-- Recommendations will be inserted here -->
+          </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="bg-blue-50 rounded-lg p-6 mb-8">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">🔗 Helpful Resources for You</h3>
+          <div id="resources" class="space-y-2">
+            <!-- Resources will be inserted here -->
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/surgeons" class="flex-1 bg-blue-600 text-white px-6 py-4 rounded-lg text-center font-semibold hover:bg-blue-700 transition">
+            Find Qualified Surgeons
+          </a>
+          <a href="#consultation" class="flex-1 bg-green-600 text-white px-6 py-4 rounded-lg text-center font-semibold hover:bg-green-700 transition">
+            Request Free Consultation
+          </a>
+        </div>
+
+        <!-- Restart Button -->
+        <div class="text-center mt-6">
+          <button id="restart-btn" class="text-blue-600 font-semibold hover:text-blue-700">
+            ← Retake Assessment
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Privacy & Support Section -->
+<section class="py-12 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-lg p-6 shadow-sm">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Your Privacy is Sacred</h3>
+            <p class="text-gray-600 text-sm">
+              Your responses are completely private and not stored anywhere. This assessment is for your reflection only.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg p-6 shadow-sm">
+        <div class="flex items-start">
+          <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">No Judgment Here</h3>
+            <p class="text-gray-600 text-sm">
+              Wherever you are in your journey is exactly where you're supposed to be. This is about understanding, not judgment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Consultation Form -->
+<section id="consultation" class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 md:p-12 text-white">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Ready to Take the Next Step?</h2>
+      <p class="text-xl text-center mb-8 text-blue-100">Get a free consultation with a qualified surgeon in your area</p>
+      
+      <form class="space-y-4 max-w-2xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-4">
+          <input 
+            type="text" 
+            placeholder="First Name" 
+            class="w-full px-4 py-3 rounded-lg text-gray-900"
+            required
+          />
+          <input 
+            type="text" 
+            placeholder="Last Name" 
+            class="w-full px-4 py-3 rounded-lg text-gray-900"
+            required
+          />
+        </div>
+        <input 
+          type="email" 
+          placeholder="Email Address" 
+          class="w-full px-4 py-3 rounded-lg text-gray-900"
+          required
+        />
+        <input 
+          type="tel" 
+          placeholder="Phone Number" 
+          class="w-full px-4 py-3 rounded-lg text-gray-900"
+          required
+        />
+        <select class="w-full px-4 py-3 rounded-lg text-gray-900" required>
+          <option value="">Select your location</option>
+          <option value="sydney">Sydney</option>
+          <option value="melbourne">Melbourne</option>
+          <option value="brisbane">Brisbane</option>
+          <option value="perth">Perth</option>
+          <option value="adelaide">Adelaide</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea 
+          placeholder="Tell us about your journey (optional)" 
+          rows="4"
+          class="w-full px-4 py-3 rounded-lg text-gray-900"
+        ></textarea>
+        <button 
+          type="submit" 
+          class="w-full bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition"
+        >
+          Request Free Consultation
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  // @ts-nocheck - Inline script with dynamic DOM manipulation
+  // Assessment Questions Data
+  const assessmentData = [
+    {
+      category: "Emotional Relationship with Food",
+      icon: "❤️",
+      questions: [
+        {
+          text: "How would you describe your relationship with food?",
+          options: [
+            { text: "Food is primarily fuel for my body", score: 5 },
+            { text: "I enjoy food but don't rely on it emotionally", score: 4 },
+            { text: "I sometimes use food for comfort or stress relief", score: 3 },
+            { text: "Food is my main coping mechanism for emotions", score: 2 },
+            { text: "I feel completely controlled by food", score: 1 }
+          ]
+        },
+        {
+          text: "Do you recognize emotional triggers that lead to overeating?",
+          options: [
+            { text: "Yes, I'm very aware and working on alternatives", score: 5 },
+            { text: "Yes, I recognize them most of the time", score: 4 },
+            { text: "Sometimes, but not always", score: 3 },
+            { text: "Rarely, I don't notice until after", score: 2 },
+            { text: "No, I don't understand my triggers", score: 1 }
+          ]
+        }
+      ]
+    },
+    {
+      category: "Support System",
+      icon: "🤝",
+      questions: [
+        {
+          text: "Who knows you're considering weight loss surgery?",
+          options: [
+            { text: "Close family and friends who are supportive", score: 5 },
+            { text: "A few trusted people who support me", score: 4 },
+            { text: "One or two people, responses are mixed", score: 3 },
+            { text: "No one yet, I'm researching privately", score: 2 },
+            { text: "People know but are against it", score: 1 }
+          ]
+        },
+        {
+          text: "Do you have people who can help you during recovery?",
+          options: [
+            { text: "Yes, multiple people ready to support me", score: 5 },
+            { text: "Yes, at least one reliable person", score: 4 },
+            { text: "Possibly, but I haven't asked yet", score: 3 },
+            { text: "No, I'll need to figure this out", score: 2 },
+            { text: "No support available", score: 1 }
+          ]
+        }
+      ]
+    },
+    {
+      category: "Mental Health Stability",
+      icon: "🧠",
+      questions: [
+        {
+          text: "How would you describe your current mental health?",
+          options: [
+            { text: "Stable, with professional support if needed", score: 5 },
+            { text: "Generally good, manageable stress", score: 4 },
+            { text: "Up and down, but managing", score: 3 },
+            { text: "Struggling, but not seeking help", score: 2 },
+            { text: "In crisis, need immediate support", score: 1 }
+          ]
+        },
+        {
+          text: "Are you currently working with a therapist or counselor?",
+          options: [
+            { text: "Yes, regularly and it helps", score: 5 },
+            { text: "Yes, occasionally", score: 4 },
+            { text: "Not currently, but I have in the past", score: 3 },
+            { text: "No, but I'm open to it", score: 2 },
+            { text: "No, and I don't think I need it", score: 1 }
+          ]
+        }
+      ]
+    },
+    {
+      category: "Financial Preparedness",
+      icon: "💰",
+      questions: [
+        {
+          text: "Have you researched the total cost of surgery and ongoing expenses?",
+          options: [
+            { text: "Yes, I have a detailed budget plan", score: 5 },
+            { text: "Yes, I understand most costs", score: 4 },
+            { text: "Somewhat, still learning", score: 3 },
+            { text: "A little, it's overwhelming", score: 2 },
+            { text: "No, I don't know where to start", score: 1 }
+          ]
+        },
+        {
+          text: "How will you fund the surgery?",
+          options: [
+            { text: "I have savings or insurance coverage confirmed", score: 5 },
+            { text: "Payment plan arranged with provider", score: 4 },
+            { text: "Still exploring options", score: 3 },
+            { text: "Not sure yet, need guidance", score: 2 },
+            { text: "Can't afford it currently", score: 1 }
+          ]
+        }
+      ]
+    },
+    {
+      category: "Understanding of Commitment",
+      icon: "📅",
+      questions: [
+        {
+          text: "Do you understand that surgery requires lifelong lifestyle changes?",
+          options: [
+            { text: "Yes, I'm prepared for permanent changes", score: 5 },
+            { text: "Yes, and I'm working on habits now", score: 4 },
+            { text: "I understand but feel nervous", score: 3 },
+            { text: "Somewhat, need to learn more", score: 2 },
+            { text: "I hope surgery fixes everything", score: 1 }
+          ]
+        },
+        {
+          text: "Are you prepared to take vitamins daily for life?",
+          options: [
+            { text: "Yes, I already take supplements regularly", score: 5 },
+            { text: "Yes, I'm ready to commit to this", score: 4 },
+            { text: "I think so, a bit concerned about remembering", score: 3 },
+            { text: "This worries me", score: 2 },
+            { text: "I didn't know this was required", score: 1 }
+          ]
+        }
+      ]
+    },
+    {
+      category: "Realistic Expectations",
+      icon: "🎯",
+      questions: [
+        {
+          text: "What are your expectations for weight loss surgery?",
+          options: [
+            { text: "A tool to help me lose weight, not a magic fix", score: 5 },
+            { text: "Will help significantly, but I'll still need to work hard", score: 4 },
+            { text: "Will solve most of my weight problems", score: 3 },
+            { text: "Will fix everything wrong in my life", score: 2 },
+            { text: "Not sure what to expect", score: 1 }
+          ]
+        },
+        {
+          text: "Have you researched potential complications and regrets?",
+          options: [
+            { text: "Yes, extensively, I understand all risks", score: 5 },
+            { text: "Yes, I've read about most complications", score: 4 },
+            { text: "A little, trying not to scare myself", score: 3 },
+            { text: "No, I'm avoiding negative information", score: 2 },
+            { text: "There are complications?", score: 1 }
+          ]
+        }
+      ]
+    }
+  ];
+
+  // State management
+  let currentSection = 0;
+  let responses = {};
+  
+  // DOM elements
+  const questionsContainer = document.getElementById('questions-container');
+  const assessmentContainer = document.getElementById('assessment-container');
+  const resultsContainer = document.getElementById('results-container');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const submitBtn = document.getElementById('submit-btn');
+  const progressBar = document.getElementById('progress-bar');
+  const currentSectionSpan = document.getElementById('current-section');
+  const restartBtn = document.getElementById('restart-btn');
+
+  // Initialize assessment
+  function renderSection(sectionIndex) {
+    const section = assessmentData[sectionIndex];
+    let html = `
+      <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 mb-8">
+        <div class="flex items-center mb-2">
+          <span class="text-4xl mr-3">${section.icon}</span>
+          <h2 class="text-2xl font-bold text-gray-900">${section.category}</h2>
+        </div>
+      </div>
+    `;
+
+    section.questions.forEach((question, qIndex) => {
+      const questionId = `q-${sectionIndex}-${qIndex}`;
+      html += `
+        <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+          <p class="text-lg font-semibold text-gray-900 mb-4">${question.text}</p>
+          <div class="space-y-3">
+            ${question.options.map((option, oIndex) => `
+              <label class="flex items-start p-4 rounded-lg border-2 border-gray-200 hover:border-blue-400 cursor-pointer transition group">
+                <input 
+                  type="radio" 
+                  name="${questionId}" 
+                  value="${option.score}"
+                  class="mt-1 mr-3 w-4 h-4 text-blue-600"
+                  ${responses[questionId] == option.score ? 'checked' : ''}
+                  onchange="window.handleResponse('${questionId}', ${option.score})"
+                />
+                <span class="text-gray-700 group-hover:text-gray-900">${option.text}</span>
+              </label>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    });
+
+    questionsContainer.innerHTML = html;
+    updateProgress();
+    updateButtons();
+  }
+
+  // Handle response selection
+  window.handleResponse = function(questionId, score) {
+    responses[questionId] = score;
+    updateButtons();
+  };
+
+  // Update progress bar
+  function updateProgress() {
+    const progress = ((currentSection + 1) / assessmentData.length) * 100;
+    progressBar.style.width = `${progress}%`;
+    currentSectionSpan.textContent = currentSection + 1;
+  }
+
+  // Update navigation buttons
+  function updateButtons() {
+    prevBtn.disabled = currentSection === 0;
+    
+    const currentSectionData = assessmentData[currentSection];
+    const currentSectionResponses = Object.keys(responses).filter(key => 
+      key.startsWith(`q-${currentSection}-`)
+    );
+    
+    const allQuestionsAnswered = currentSectionResponses.length === currentSectionData.questions.length;
+    
+    if (currentSection === assessmentData.length - 1) {
+      nextBtn.classList.add('hidden');
+      submitBtn.classList.remove('hidden');
+      submitBtn.disabled = !allQuestionsAnswered;
+    } else {
+      nextBtn.classList.remove('hidden');
+      submitBtn.classList.add('hidden');
+      nextBtn.disabled = !allQuestionsAnswered;
+    }
+  }
+
+  // Navigation handlers
+  prevBtn.addEventListener('click', () => {
+    if (currentSection > 0) {
+      currentSection--;
+      renderSection(currentSection);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentSection < assessmentData.length - 1) {
+      currentSection++;
+      renderSection(currentSection);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
+  submitBtn.addEventListener('click', () => {
+    calculateResults();
+    showResults();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  restartBtn.addEventListener('click', () => {
+    currentSection = 0;
+    responses = {};
+    assessmentContainer.classList.remove('hidden');
+    resultsContainer.classList.add('hidden');
+    renderSection(0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Calculate results
+  function calculateResults() {
+    const categoryScores = {};
+    let totalScore = 0;
+    let totalQuestions = 0;
+
+    assessmentData.forEach((section, sIndex) => {
+      let categoryTotal = 0;
+      let categoryQuestions = section.questions.length;
+
+      section.questions.forEach((question, qIndex) => {
+        const questionId = `q-${sIndex}-${qIndex}`;
+        const score = parseInt(responses[questionId]) || 0;
+        categoryTotal += score;
+        totalScore += score;
+        totalQuestions++;
+      });
+
+      const categoryAverage = (categoryTotal / (categoryQuestions * 5)) * 100;
+      categoryScores[section.category] = {
+        score: Math.round(categoryAverage),
+        icon: section.icon,
+        raw: categoryTotal,
+        max: categoryQuestions * 5
+      };
+    });
+
+    const overallScore = Math.round((totalScore / (totalQuestions * 5)) * 100);
+
+    return { overallScore, categoryScores };
+  }
+
+  // Show results
+  function showResults() {
+    const { overallScore, categoryScores } = calculateResults();
+    
+    // Overall score
+    document.getElementById('overall-score').textContent = `${overallScore}%`;
+    
+    // Readiness level
+    let readinessLevel, readinessColor, readinessMessage;
+    if (overallScore >= 80) {
+      readinessLevel = "You're Ready to Move Forward! 🎉";
+      readinessColor = "text-green-600";
+      readinessMessage = "You show strong readiness across multiple areas. Consider scheduling consultations with surgeons.";
+    } else if (overallScore >= 60) {
+      readinessLevel = "You're Getting There 💪";
+      readinessColor = "text-blue-600";
+      readinessMessage = "You're on a good path, but there are some areas to strengthen before surgery.";
+    } else if (overallScore >= 40) {
+      readinessLevel = "Important Work to Do First 📚";
+      readinessColor = "text-yellow-600";
+      readinessMessage = "Surgery may be right for you eventually, but focus on preparation in key areas first.";
+    } else {
+      readinessLevel = "More Preparation Needed 🌱";
+      readinessColor = "text-orange-600";
+      readinessMessage = "Take time to build foundations before moving forward with surgery. That's perfectly okay.";
+    }
+    
+    const readinessElement = document.getElementById('readiness-level');
+    readinessElement.textContent = readinessLevel;
+    readinessElement.className = `text-xl font-semibold ${readinessColor}`;
+
+    // Category scores
+    const categoryScoresHtml = Object.entries(categoryScores).map(([category, data]) => {
+      let categoryColor;
+      if (data.score >= 80) categoryColor = "bg-green-500";
+      else if (data.score >= 60) categoryColor = "bg-blue-500";
+      else if (data.score >= 40) categoryColor = "bg-yellow-500";
+      else categoryColor = "bg-orange-500";
+
+      return `
+        <div class="bg-gray-50 rounded-lg p-4">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-semibold text-gray-900">${data.icon} ${category}</span>
+            <span class="text-lg font-bold text-gray-900">${data.score}%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="${categoryColor} h-2 rounded-full transition-all duration-500" style="width: ${data.score}%"></div>
+          </div>
+        </div>
+      `;
+    }).join('');
+    
+    document.getElementById('category-scores').innerHTML = categoryScoresHtml;
+
+    // Recommendations
+    const recommendations = generateRecommendations(overallScore, categoryScores);
+    document.getElementById('recommendations').innerHTML = recommendations.map(rec => 
+      `<div class="flex items-start">
+        <span class="text-yellow-600 mr-2">•</span>
+        <span class="text-gray-700">${rec}</span>
+      </div>`
+    ).join('');
+
+    // Resources
+    const resources = generateResources(categoryScores);
+    document.getElementById('resources').innerHTML = resources.map(resource => 
+      `<div class="flex items-start">
+        <span class="text-blue-600 mr-2">→</span>
+        <a href="${resource.url}" class="text-blue-600 hover:text-blue-700 font-medium">${resource.text}</a>
+      </div>`
+    ).join('');
+
+    // Show results, hide assessment
+    assessmentContainer.classList.add('hidden');
+    resultsContainer.classList.remove('hidden');
+  }
+
+  // Generate personalized recommendations
+  function generateRecommendations(overall, categories) {
+    const recs = [];
+    
+    if (overall >= 80) {
+      recs.push("Schedule consultations with 2-3 qualified surgeons to compare approaches");
+      recs.push("Start attending support groups (pre-surgery) to learn from others' experiences");
+      recs.push("Begin practicing portion control and mindful eating now");
+    } else if (overall >= 60) {
+      recs.push("Continue researching procedures and realistic outcomes");
+      recs.push("Work on strengthening any lower-scored areas before scheduling surgery");
+      recs.push("Consider a consultation to discuss your specific situation");
+    } else {
+      recs.push("Focus on building foundations in the areas where you scored lower");
+      recs.push("Take time for this process—there's no rush");
+      recs.push("Consider speaking with a therapist who specializes in bariatric surgery");
+    }
+
+    // Category-specific recommendations
+    if (categories["Emotional Relationship with Food"].score < 60) {
+      recs.push("Work with a therapist to develop healthier coping mechanisms beyond food");
+    }
+    if (categories["Support System"].score < 60) {
+      recs.push("Start conversations with trusted friends/family about your journey");
+    }
+    if (categories["Mental Health Stability"].score < 60) {
+      recs.push("Prioritize mental health support before surgery—it's essential");
+    }
+    if (categories["Financial Preparedness"].score < 60) {
+      recs.push("Review our detailed cost breakdowns and explore payment options");
+    }
+    if (categories["Understanding of Commitment"].score < 60) {
+      recs.push("Read patient stories about daily life after surgery to understand commitment");
+    }
+    if (categories["Realistic Expectations"].score < 60) {
+      recs.push("Research both successes AND challenges—honest information builds realistic expectations");
+    }
+
+    return recs.slice(0, 6); // Return top 6 recommendations
+  }
+
+  // Generate relevant resources
+  function generateResources(categories) {
+    const resources = [
+      { text: "Find Qualified Surgeons Near You", url: "/surgeons" },
+      { text: "Understand Surgery Costs & Payment Options", url: "/costs/gastric-sleeve-cost-australia" },
+      { text: "Compare Procedures: Sleeve vs Bypass vs Band", url: "/procedures" }
+    ];
+
+    if (categories["Mental Health Stability"].score < 70) {
+      resources.push({ text: "Mental Health Resources & Support", url: "/mental-health" });
+    }
+    if (categories["Emotional Relationship with Food"].score < 70) {
+      resources.push({ text: "Understanding Emotional Eating", url: "/blog/emotional-eating" });
+    }
+    if (categories["Support System"].score < 70) {
+      resources.push({ text: "Join Our Support Community", url: "#consultation" });
+    }
+
+    return resources;
+  }
+
+  // Initialize on page load
+  renderSection(0);
+</script>
+
+<style>
+  /* Smooth transitions */
+  #questions-container > div {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Custom radio button styling */
+  input[type="radio"]:checked + span {
+    font-weight: 600;
+  }
+
+  input[type="radio"]:checked {
+    accent-color: #2563eb;
+  }
+
+  /* Label hover effects */
+  label:has(input[type="radio"]:checked) {
+    border-color: #2563eb;
+    background-color: #eff6ff;
+  }
+</style>
+
+</BaseLayout>
+

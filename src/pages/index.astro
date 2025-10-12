@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ReadinessCallout from '../components/ReadinessCallout.astro';
 import { seoMeta } from '../data/seo-meta';
 
 const meta = seoMeta.home;
@@ -67,6 +68,9 @@ const meta = seoMeta.home;
 		</div>
 	</div>
 </section>
+
+<!-- Readiness Assessment Callout -->
+<ReadinessCallout />
 
 <!-- Procedures Section -->
 <section id="procedures" class="py-16 bg-white">
