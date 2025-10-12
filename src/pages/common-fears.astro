@@ -1,0 +1,710 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Common Fears About Weight Loss Surgery | Honest Answers to Your Concerns",
+  description: "Honest, compassionate answers to the fears and concerns most people have about weight loss surgery. No judgment, just real information.",
+};
+
+const faqs = [
+  {
+    id: 1,
+    category: "Safety & Health",
+    question: "Will I die during or after surgery?",
+    answer: `Let's address this directly: the mortality risk for gastric sleeve surgery is approximately 0.1-0.2% (1-2 in 1,000). That's comparable to a gallbladder removal and lower than a hip replacement.
+
+**Context that matters:**
+- Modern bariatric surgery is one of the safest procedures in medicine
+- Surgeons perform these operations daily with established protocols
+- The risk of NOT having surgery when severely obese is significantly higher
+- Obesity-related conditions (heart disease, diabetes, sleep apnea) carry much higher mortality risks
+
+**What increases risk:**
+- Very high BMI (>60)
+- Multiple existing health conditions
+- Smoking
+- Sleep apnea (untreated)
+
+**What decreases risk:**
+- Experienced, FRACS-certified surgeon
+- Accredited hospital with bariatric program
+- Proper pre-operative preparation
+- Following medical advice
+
+Your surgeon will assess your individual risk during consultation. For most patients, the life-extending benefits far outweigh the surgical risks.`
+  },
+  {
+    id: 2,
+    category: "Long-term Success",
+    question: "Will I regain all the weight?",
+    answer: `This is one of the most common fears, and it's understandable. Here's the honest truth:
+
+**Success rates:**
+- 10-15% of patients regain significant weight
+- 70-80% maintain substantial weight loss long-term
+- 5-10% lose all excess weight and never regain
+
+**What makes people regain:**
+❌ Returning to old eating habits
+❌ Not addressing emotional eating
+❌ Skipping follow-up appointments
+❌ Stopping exercise completely
+❌ Drinking high-calorie beverages
+❌ Grazing all day
+
+**What prevents regain:**
+✅ Building healthy habits BEFORE surgery
+✅ Regular therapy for food relationships
+✅ Staying connected to support groups
+✅ Annual check-ins with bariatric team
+✅ Treating surgery as a tool, not a cure
+✅ Finding non-food coping mechanisms
+
+**The reality:**
+Surgery makes it physically easier to eat less, but you still need to do the mental and emotional work. Most people who regain weight didn't fail—they just didn't have adequate support for the psychological component.
+
+If you regain some weight, revision surgery is an option, but prevention through support is the goal.`
+  },
+  {
+    id: 3,
+    category: "Social & Stigma",
+    question: "Will people judge me for taking the 'easy way out'?",
+    answer: `Some might. And that says everything about them and nothing about you.
+
+**The truth:**
+Weight loss surgery is not easy. It's:
+- Major abdominal surgery
+- Lifelong dietary restrictions
+- Daily vitamin requirements
+- Permanent lifestyle changes
+- Harder work than you've ever done
+
+**What to tell judgmental people:**
+"Would you tell a diabetic not to take insulin? This is medical treatment for a medical condition."
+
+**What most people actually think:**
+- Family: Often supportive once they understand
+- Friends: Usually impressed by your courage
+- Strangers: Don't need to know your medical history
+
+**Handling judgment:**
+1. You don't owe anyone an explanation
+2. Share on YOUR terms, with YOUR people
+3. Focus on health, not weight
+4. Let results speak for themselves
+5. Connect with others who understand
+
+**Consider this:**
+The same people who judge surgery would judge your weight. You can't win with critics, so focus on winning for yourself.
+
+You're choosing to live longer and healthier. That's brave, not easy.`
+  },
+  {
+    id: 4,
+    category: "Financial",
+    question: "Can I actually afford this?",
+    answer: `This is a legitimate concern. Let's break it down honestly:
+
+**If you have private health insurance:**
+Out-of-pocket: $3,500 - $7,000
+- Most people can manage this with payment plans
+- Many insurers offer interest-free hospital payment plans
+- Consider it an investment in 20+ extra years of life
+
+**If you're self-funding:**
+Total cost: $15,000 - $25,000
+- Payment plans available through most practices
+- Medical loan options (MacCredit, TLC)
+- Some people save for 12-18 months
+- Tax deductible as medical expense
+
+**Can't afford it right now?**
+- Public system option (1-2 year wait)
+- Start saving systematically
+- Use waiting period to prepare mentally
+- Build insurance coverage if possible
+
+**Cost of NOT having surgery:**
+- Ongoing medical costs for obesity-related conditions
+- Reduced work capacity/earning potential
+- Shorter life expectancy
+- Quality of life impact
+
+**Real talk:**
+Yes, it's expensive. But most people who have surgery say it's the best money they ever spent. It's not about affording it—it's about prioritizing it.
+
+If you can afford a car payment, you can find a way to afford this.`
+  },
+  {
+    id: 5,
+    category: "Regret & Decision",
+    question: "What if I regret it? It's permanent.",
+    answer: `This fear is completely normal. You're considering a life-changing, irreversible decision.
+
+**Regret statistics:**
+- 1-5% report significant regret
+- 3-8% have mixed feelings
+- 87-96% would do it again
+
+**Who regrets surgery:**
+- Those who had unrealistic expectations
+- Those who didn't address mental health first
+- Those who were pressured into it
+- Those who didn't understand the commitment
+- Those with undiagnosed eating disorders
+
+**Who celebrates their decision:**
+- Those who took time to prepare mentally
+- Those who built support systems first
+- Those who understood it as a tool, not magic
+- Those who committed to lifelong changes
+- Those who addressed food relationships
+
+**How to minimize regret:**
+1. Take our "Am I Ready?" assessment
+2. Talk to a bariatric psychologist
+3. Attend support groups BEFORE surgery
+4. Be honest about your relationship with food
+5. Don't rush—preparation matters
+6. Address any "red flags" first
+
+**What patients say:**
+"I wish I'd done it sooner" is more common than "I wish I hadn't done it."
+
+**If you're unsure:**
+That's okay. Wait. Prepare. Therapy. Support groups. There's no deadline. Better to wait and be ready than rush and regret.`
+  },
+  {
+    id: 6,
+    category: "Lifestyle",
+    question: "Will I ever enjoy food again?",
+    answer: `This is a huge fear, especially if food has been your comfort. The honest answer: yes, but differently.
+
+**What changes:**
+- Smaller portions (fist-sized meals)
+- Eating becomes fuel AND pleasure
+- You learn to savor, not inhale
+- Quality over quantity matters
+- Some foods may not agree with you
+
+**What you CAN still eat:**
+✅ Restaurant meals (just less)
+✅ Special occasion foods
+✅ Desserts (small amounts)
+✅ Your favorite foods (modified)
+✅ Social dining experiences
+
+**What becomes difficult:**
+❌ Large buffets
+❌ Drinking with meals
+❌ Very sugary foods (may cause dumping)
+❌ Mindless snacking
+❌ Using food to cope with emotions
+
+**The surprising truth:**
+Most people report enjoying food MORE after surgery because:
+- They actually taste food instead of inhaling it
+- They're not controlled by cravings
+- They choose foods mindfully
+- Hunger isn't constant
+- Food stops being the enemy
+
+**Your relationship with food changes from:**
+"I eat to cope" → "I eat to nourish"
+"I can't stop" → "I choose when"
+"Food controls me" → "I control food"
+
+This is scary if food is your primary joy. But most patients discover new pleasures: energy, mobility, confidence, relationships, activities they couldn't do before.`
+  },
+  {
+    id: 7,
+    category: "Relationships",
+    question: "Will my relationships change or suffer?",
+    answer: `Honest answer: some will change. Not all for the worse.
+
+**What might happen:**
+
+**Positive changes:**
+✅ Partners often feel more attracted
+✅ Increased confidence improves intimacy
+✅ More energy for relationships
+✅ Better mood reduces conflict
+✅ Can do activities together
+
+**Challenging changes:**
+⚠️ Some friends may feel threatened
+⚠️ Partners may feel insecure
+⚠️ Social dynamics shift
+⚠️ You outgrow some relationships
+⚠️ Jealousy can emerge
+
+**Why relationships struggle:**
+- Your change highlights their inaction
+- Dynamics were based on your weight
+- They lose their eating buddy
+- They feel left behind
+- Roles in relationship shift
+
+**Protecting relationships:**
+1. Communicate throughout the process
+2. Include partner in consultations
+3. Address insecurities directly
+4. Don't become "preachy" about health
+5. Make time for non-food activities
+6. Couples therapy if needed
+
+**Red flags:**
+If someone actively sabotages your health journey, that's not love—that's control. You deserve relationships that support your wellbeing.
+
+**The truth:**
+Real friends and healthy relationships survive and strengthen. Toxic ones expose themselves. Most patients say their relationships improved overall, even though some friendships faded.
+
+You're not losing relationships—you're discovering who was really there for you.`
+  },
+  {
+    id: 8,
+    category: "Mental Health",
+    question: "What if surgery makes my depression worse?",
+    answer: `This is a critical concern that deserves a thorough answer.
+
+**The complex truth:**
+
+**For most people (60-70%):**
+✅ Depression and anxiety IMPROVE after surgery
+✅ Better physical health = better mental health
+✅ Increased confidence and mobility help
+✅ No longer carrying obesity stigma
+
+**For some people (20-30%):**
+⚠️ Depression continues or worsens
+⚠️ Lose food as primary coping mechanism
+⚠️ Transfer addiction to alcohol, shopping, etc.
+⚠️ Body image issues don't resolve
+⚠️ Expected life transformation doesn't happen
+
+**High-risk factors:**
+- Untreated mental health conditions
+- History of substance abuse
+- Severe trauma or PTSD
+- Food as only coping mechanism
+- Unrealistic expectations about life changes
+
+**Essential before surgery:**
+1. **Psychological evaluation** (required)
+2. **Therapy** if any mental health history
+3. **Alternative coping mechanisms** in place
+4. **Support system** established
+5. **Medication stable** if applicable
+
+**Red flags - surgery should wait:**
+- Active suicidal thoughts
+- Untreated eating disorder
+- Recent major trauma
+- Unstable medication
+- No support system
+
+**What you need:**
+- Mental health professional experienced with bariatric patients
+- Plan for when food can't be your comfort anymore
+- Understanding that surgery fixes body, not life problems
+- Realistic expectations
+- Ongoing therapy commitment
+
+**The message:**
+If you're currently depressed, surgery can help BUT only as part of comprehensive mental health treatment. Surgery alone won't cure depression—but it can be a powerful tool alongside proper mental health care.
+
+Don't skip the psychological preparation. It's not a hoop to jump through—it's essential for your success and safety.`
+  },
+  {
+    id: 9,
+    category: "Physical Changes",
+    question: "Will I have lots of saggy, loose skin?",
+    answer: `Let's be honest: possibly yes, probably some, depends on several factors.
+
+**What determines loose skin:**
+- **Age:** Younger skin bounces back better
+- **Amount to lose:** 50kg vs 150kg makes a difference
+- **Genetics:** Skin elasticity varies
+- **Speed of loss:** Gradual is better
+- **Exercise:** Muscle building helps
+- **Hydration:** Keeps skin healthier
+
+**Realistic expectations:**
+
+**Mild (20-40kg loss):**
+- Some arm looseness
+- Minor belly skin
+- Usually hidden in clothes
+- May not need surgery
+
+**Moderate (40-70kg loss):**
+- Noticeable arm & thigh skin
+- Abdominal apron possible
+- Can be managed
+- May want surgery eventually
+
+**Significant (70kg+ loss):**
+- Loose skin likely on arms, thighs, belly, breasts
+- May interfere with exercise
+- Can cause rashes/hygiene issues
+- Skin removal surgery often needed
+
+**The truth most people don't tell you:**
+Almost everyone prefers loose skin to 100kg of extra weight. Here's why:
+
+✅ You can hide loose skin in clothes
+✅ You can't hide obesity
+✅ Loose skin doesn't cause diabetes
+✅ You can exercise with loose skin
+✅ Skin removal is possible later
+✅ You'll still feel so much better
+
+**Managing loose skin:**
+- Weight training (builds muscle underneath)
+- Gradual loss (gives skin time to adapt)
+- Proper hydration
+- Compression garments
+- Collagen supplements (limited evidence)
+- Skin removal surgery (1-2 years post-surgery)
+
+**Cost of skin removal:**
+- $8,000 - $25,000 (not usually covered)
+- Consider it phase 2 of your journey
+- Many people never do it and are fine
+
+**What patients say:**
+"I'd rather have loose skin and be healthy than tight skin and dying of obesity complications."
+
+It's a valid concern, but it shouldn't stop you. The benefits outweigh the cosmetic considerations.`
+  },
+  {
+    id: 10,
+    category: "Practical Concerns",
+    question: "How will I explain this to my kids/family/work?",
+    answer: `You get to decide what to share and with whom. Here's guidance:
+
+**With Kids (age-appropriate):**
+
+**Young kids (5-10):**
+"Mommy/Daddy is having an operation to help be healthier so I can play with you more and be around for a long time."
+
+**Tweens (11-14):**
+"I'm having surgery to help with my weight and health. The doctor says it's the best option for me. I'll need some help while I recover."
+
+**Teens (15+):**
+Consider being more direct about obesity being a disease and surgery being treatment. Can be educational.
+
+**With Extended Family:**
+
+**Option 1 - Direct:**
+"I'm having weight loss surgery on [date]. Here's what I need from you..."
+
+**Option 2 - General:**
+"I'm having a medical procedure. I'll share more when I'm ready."
+
+**Option 3 - After the fact:**
+"I had surgery. I'm doing well. Thanks for your support."
+
+**Dealing with unsupportive reactions:**
+- "I understand your concern. My doctors and I are confident."
+- "I've done extensive research. This is the right choice for me."
+- "I need support, not judgment. Can you give me that?"
+
+**At Work:**
+
+**What to say:**
+"I'm having a planned medical procedure. I'll be off for 2-3 weeks."
+
+**What NOT to say:**
+You don't owe details. "Personal medical procedure" is sufficient.
+
+**If asked directly:**
+"Yes, it's weight loss surgery. I'm excited about improving my health."
+
+**FMLA:** You're entitled to job-protected leave.
+
+**With Friends:**
+
+**Close friends:**
+Be honest. Real friends support your health.
+
+**Acquaintances:**
+Share what feels comfortable. "I'm focusing on my health" works.
+
+**Online:**
+Consider privacy. Once posted, it's permanent. Many people wait until they're comfortable with results.
+
+**Social situations:**
+
+**When people notice weight loss:**
+- "Thanks! I'm feeling great."
+- "I made some health changes."
+- "I'm working with my doctor on my health."
+
+**If someone guesses surgery:**
+- If you trust them: "Yes, it's been a great decision."
+- If you don't: "I'm just focusing on being healthier."
+
+**Remember:**
+Your medical decisions are YOUR business. Share on YOUR terms. Anyone who makes you feel bad about improving your health isn't serving you well.
+
+Most people care far less than you think they will.`
+  }
+];
+---
+
+<BaseLayout 
+  title={meta.title}
+  description={meta.description}
+  canonicalUrl="https://weightlosssurgery.com.au/common-fears"
+>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-br from-blue-50 via-purple-50 to-white py-16">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <div class="inline-block bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        💭 Common Fears Addressed
+      </div>
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Let's Talk About What Scares You
+      </h1>
+      <p class="text-xl text-gray-600 mb-4">
+        These are the questions most people are afraid to ask. Here are the honest answers.
+      </p>
+      <div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg text-left max-w-2xl mx-auto mt-8">
+        <p class="text-gray-700">
+          <strong>No judgment here.</strong> These fears are valid, common, and deserve real answers. We've gathered the 10 most-asked questions and answered them with compassion and honesty.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-12 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Quick Navigation -->
+    <div class="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 mb-12">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Jump to Your Concern:</h2>
+      <div class="grid md:grid-cols-2 gap-3 text-sm">
+        {faqs.map(faq => (
+          <a href={`#faq-${faq.id}`} class="text-blue-600 hover:text-blue-700 hover:underline">
+            → {faq.question}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="space-y-4" id="faq-container">
+      {faqs.map((faq, index) => (
+        <div 
+          class="bg-white border-2 border-gray-200 rounded-xl overflow-hidden hover:border-blue-400 transition-all duration-200"
+          id={`faq-${faq.id}`}
+        >
+          <button 
+            class="faq-question w-full text-left p-6 flex items-start justify-between gap-4 hover:bg-gray-50 transition-colors"
+            data-faq={faq.id}
+            aria-expanded="false"
+          >
+            <div class="flex-1">
+              <div class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
+                {faq.category}
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-0">
+                {faq.question}
+              </h3>
+            </div>
+            <div class="flex-shrink-0 mt-1">
+              <svg 
+                class="faq-icon w-6 h-6 text-gray-400 transition-transform duration-200" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </div>
+          </button>
+          
+          <div class="faq-answer hidden" data-answer={faq.id}>
+            <div class="px-6 pb-6 pt-2 text-gray-700 leading-relaxed">
+              <div class="prose prose-lg max-w-none" set:html={faq.answer.split('\n').map(para => para.trim() ? `<p class="mb-4">${para.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/✅/g, '<span class="text-green-600">✅</span>').replace(/❌/g, '<span class="text-red-600">❌</span>').replace(/⚠️/g, '<span class="text-yellow-600">⚠️</span>')}</p>` : '').join('')} />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<!-- Support Section -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 md:p-12 text-white text-center">
+      <h2 class="text-3xl font-bold mb-4">Still Have Fears or Questions?</h2>
+      <p class="text-xl text-blue-100 mb-8">
+        That's completely normal. Let's talk through them together.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/am-i-ready" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
+          Take Readiness Assessment
+        </a>
+        <a href="#consultation" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition">
+          Request Consultation
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related Resources -->
+<section class="py-12 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Helpful Resources</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="/am-i-ready" class="bg-purple-50 rounded-xl p-6 hover:shadow-lg transition text-center">
+        <div class="text-4xl mb-3">🎯</div>
+        <h3 class="font-bold text-gray-900 mb-2">Am I Ready?</h3>
+        <p class="text-sm text-gray-600">Self-assessment quiz</p>
+      </a>
+      <a href="/costs/gastric-sleeve-cost-australia" class="bg-blue-50 rounded-xl p-6 hover:shadow-lg transition text-center">
+        <div class="text-4xl mb-3">💰</div>
+        <h3 class="font-bold text-gray-900 mb-2">Cost Guide</h3>
+        <p class="text-sm text-gray-600">Transparent pricing</p>
+      </a>
+      <a href="/surgeons" class="bg-green-50 rounded-xl p-6 hover:shadow-lg transition text-center">
+        <div class="text-4xl mb-3">👨‍⚕️</div>
+        <h3 class="font-bold text-gray-900 mb-2">Find Surgeons</h3>
+        <p class="text-sm text-gray-600">Qualified specialists</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Consultation Form -->
+<section id="consultation" class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 md:p-12 text-white">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">Ready to Talk to an Expert?</h2>
+      <p class="text-xl text-center mb-8 text-blue-100">Get a free consultation with a qualified surgeon in your area</p>
+      
+      <form class="space-y-4 max-w-2xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-4">
+          <input 
+            type="text" 
+            placeholder="First Name" 
+            class="w-full px-4 py-3 rounded-lg text-gray-900"
+            required
+          />
+          <input 
+            type="text" 
+            placeholder="Last Name" 
+            class="w-full px-4 py-3 rounded-lg text-gray-900"
+            required
+          />
+        </div>
+        <input 
+          type="email" 
+          placeholder="Email Address" 
+          class="w-full px-4 py-3 rounded-lg text-gray-900"
+          required
+        />
+        <input 
+          type="tel" 
+          placeholder="Phone Number" 
+          class="w-full px-4 py-3 rounded-lg text-gray-900"
+          required
+        />
+        <select class="w-full px-4 py-3 rounded-lg text-gray-900" required>
+          <option value="">Select your location</option>
+          <option value="sydney">Sydney</option>
+          <option value="melbourne">Melbourne</option>
+          <option value="brisbane">Brisbane</option>
+          <option value="perth">Perth</option>
+          <option value="adelaide">Adelaide</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea 
+          placeholder="What concerns you most about surgery? (optional)" 
+          rows="4"
+          class="w-full px-4 py-3 rounded-lg text-gray-900"
+        ></textarea>
+        <button 
+          type="submit" 
+          class="w-full bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition"
+        >
+          Request Free Consultation
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  // FAQ Accordion functionality
+  document.addEventListener('DOMContentLoaded', () => {
+    const questions = document.querySelectorAll('.faq-question');
+    
+    questions.forEach(question => {
+      question.addEventListener('click', () => {
+        const faqId = question.getAttribute('data-faq');
+        const answer = document.querySelector(`.faq-answer[data-answer="${faqId}"]`);
+        const icon = question.querySelector('.faq-icon');
+        const isExpanded = question.getAttribute('aria-expanded') === 'true';
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-question').forEach(q => {
+          if (q !== question) {
+            q.setAttribute('aria-expanded', 'false');
+            const otherIcon = q.querySelector('.faq-icon');
+            if (otherIcon) otherIcon.classList.remove('rotate-180');
+          }
+        });
+        
+        document.querySelectorAll('.faq-answer').forEach(a => {
+          if (a !== answer) {
+            a.classList.add('hidden');
+          }
+        });
+        
+        // Toggle current FAQ
+        if (isExpanded) {
+          question.setAttribute('aria-expanded', 'false');
+          answer?.classList.add('hidden');
+          icon?.classList.remove('rotate-180');
+        } else {
+          question.setAttribute('aria-expanded', 'true');
+          answer?.classList.remove('hidden');
+          icon?.classList.add('rotate-180');
+          
+          // Smooth scroll to question if it's not in view
+          setTimeout(() => {
+            question.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }, 150);
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .faq-icon {
+    transition: transform 0.2s ease;
+  }
+  
+  .rotate-180 {
+    transform: rotate(180deg);
+  }
+  
+  .prose p {
+    white-space: pre-wrap;
+  }
+</style>
+
+</BaseLayout>
+
