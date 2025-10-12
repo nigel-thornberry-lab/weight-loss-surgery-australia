@@ -1,6 +1,7 @@
 ---
 import '../../styles/global.css';
 import ConsultationForm from '../../components/ConsultationForm.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const pageUrl = "https://weightlosssurgery.com.au/costs/gastric-sleeve-cost-australia";
 const lastUpdated = "January 2025";
@@ -1267,6 +1268,37 @@ const faqs = [
             Takes 5 minutes • Completely private • Get personalized recommendations
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- Related Content -->
+    <section class="mb-16">
+      <div class="max-w-4xl mx-auto px-4">
+        <RelatedContent 
+          title="Continue Your Research"
+          links={[
+            {
+              title: "Gastric Sleeve Procedure Guide",
+              href: "/procedures/gastric-sleeve",
+              description: "Learn how gastric sleeve surgery works, benefits, and risks"
+            },
+            {
+              title: "Gastric Sleeve Recovery Timeline",
+              href: "/blog/gastric-sleeve-recovery-week-by-week",
+              description: "Week-by-week recovery guide with milestones"
+            },
+            {
+              title: "Compare All Procedure Costs",
+              href: "/costs",
+              description: "See gastric bypass and band costs side-by-side"
+            },
+            {
+              title: "Find Gastric Sleeve Surgeons",
+              href: "/surgeons",
+              description: "Browse experienced surgeons and read reviews"
+            }
+          ]}
+        />
       </div>
     </section>
 

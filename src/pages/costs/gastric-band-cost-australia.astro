@@ -1,6 +1,7 @@
 ---
 import '../../styles/global.css';
 import ConsultationForm from '../../components/ConsultationForm.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 // Gastric Band Cost Australia 2025 - Complete Pricing Guide
 // Top 1% quality content with real data only
@@ -1338,6 +1339,37 @@ const schemaMarkup = {
             Takes 5 minutes • Completely private • Get personalized recommendations
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- Related Content -->
+    <section class="mb-16">
+      <div class="max-w-4xl mx-auto px-4">
+        <RelatedContent 
+          title="Continue Your Research"
+          links={[
+            {
+              title: "Gastric Band Procedure Guide",
+              href: "/procedures/gastric-band",
+              description: "Learn how gastric band surgery works, benefits, and risks"
+            },
+            {
+              title: "Gastric Sleeve vs Band Comparison",
+              href: "/costs/gastric-sleeve-cost-australia",
+              description: "Compare costs and outcomes of different procedures"
+            },
+            {
+              title: "Compare All Procedure Costs",
+              href: "/costs",
+              description: "See all weight loss surgery costs side-by-side"
+            },
+            {
+              title: "Find Gastric Band Surgeons",
+              href: "/surgeons",
+              description: "Browse experienced surgeons and read reviews"
+            }
+          ]}
+        />
       </div>
     </section>
 
