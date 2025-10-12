@@ -1,5 +1,7 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import SurgeonCTA from '../../components/SurgeonCTA.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const category = "Recovery & Diet";
 const publishDate = "2025-01-16";
@@ -415,5 +417,38 @@ const keywords = [
   <a href="/blog/bariatric-surgery-recipes-all-stages#download" class="cta-button">Download Free Recipe Book (PDF)</a>
 </div>
 
+
+<!-- Related Content -->
+<RelatedContent 
+  title="Related Recipe Collections"
+  links={[
+    {
+      title: "All 50+ Bariatric Recipes",
+      href: "/blog/bariatric-surgery-recipes-all-stages",
+      description: "Complete recipe collection for every stage"
+    },
+    {
+      title: "Diet Stages Guide",
+      href: "/blog/gastric-sleeve-diet-stages",
+      description: "Understand all 4 phases of post-surgery diet"
+    },
+    {
+      title: "Recovery Timeline",
+      href: "/blog/gastric-sleeve-recovery-week-by-week",
+      description: "Week-by-week recovery guide with milestones"
+    },
+    {
+      title: "Gastric Sleeve Procedure",
+      href: "/procedures/gastric-sleeve",
+      description: "Learn about the surgery and what to expect"
+    }
+  ]}
+/>
+
+<!-- Surgeon CTA -->
+<SurgeonCTA 
+  headline="Find Surgeons Who Support Your Nutrition Journey"
+  description="Choose a bariatric surgeon who provides comprehensive nutrition support and dietitian access throughout your recovery."
+/>
 </BlogLayout>
 

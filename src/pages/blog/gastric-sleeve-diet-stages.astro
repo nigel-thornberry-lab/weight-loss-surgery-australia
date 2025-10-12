@@ -1,5 +1,7 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import SurgeonCTA from '../../components/SurgeonCTA.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const title = "Gastric Sleeve Diet Stages: Complete 4-Phase Guide";
 const description = "Complete gastric sleeve diet guide: 4 stages from clear liquids to regular foods. What to eat, when, portion sizes, and meal plans for each phase.";
@@ -1126,21 +1128,38 @@ const relatedArticles = [
   </ul>
 </div>
 
-<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2.5rem; border-radius: 12px; margin: 3rem 0; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
-  <h3 style="color: white; margin-top: 0; font-size: 1.75rem; text-align: center;">🎯 Ready to Start Your Gastric Sleeve Journey?</h3>
-  <p style="text-align: center; font-size: 1.125rem; margin-bottom: 2rem; color: rgba(255,255,255,0.95);">Understanding the diet stages is crucial for success. Now that you know what to expect, take the next step:</p>
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-    <a href="/blog/gastric-sleeve-recovery-week-by-week/" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 1.5rem; border-radius: 8px; text-decoration: none; color: white; text-align: center; transition: all 0.3s; border: 2px solid rgba(255,255,255,0.3); font-weight: 600; display: block;">
-      📅 See Complete Recovery Timeline
-    </a>
-    <a href="/surgeons/" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 1.5rem; border-radius: 8px; text-decoration: none; color: white; text-align: center; transition: all 0.3s; border: 2px solid rgba(255,255,255,0.3); font-weight: 600; display: block;">
-      🔍 Find a Qualified Surgeon Near You
-    </a>
-    <a href="/blog/pre-op-diet-gastric-sleeve/" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 1.5rem; border-radius: 8px; text-decoration: none; color: white; text-align: center; transition: all 0.3s; border: 2px solid rgba(255,255,255,0.3); font-weight: 600; display: block;">
-      📖 Learn About Pre-Op Diet Requirements
-    </a>
-  </div>
-</div>
+<!-- Related Content -->
+<RelatedContent 
+  title="Related Diet & Recovery Resources"
+  links={[
+    {
+      title: "50+ Bariatric Surgery Recipes",
+      href: "/blog/bariatric-surgery-recipes-all-stages",
+      description: "High-protein recipes for every diet stage of your journey"
+    },
+    {
+      title: "Gastric Sleeve Recovery Timeline",
+      href: "/blog/gastric-sleeve-recovery-week-by-week",
+      description: "Week-by-week recovery guide with milestones and expectations"
+    },
+    {
+      title: "Pre-Op Diet Guide",
+      href: "/blog/pre-op-diet-gastric-sleeve",
+      description: "2-week pre-surgery diet to prepare your body for surgery"
+    },
+    {
+      title: "Gastric Sleeve Cost Guide",
+      href: "/blog/gastric-sleeve-cost-australia-2025",
+      description: "Complete cost breakdown with insurance and payment options"
+    }
+  ]}
+/>
+
+<!-- Surgeon CTA -->
+<SurgeonCTA 
+  headline="Start Your Journey with the Right Surgeon"
+  description="Your diet success starts with choosing an experienced bariatric surgeon who provides comprehensive nutritional support."
+/>
 
 </BlogLayout>
 

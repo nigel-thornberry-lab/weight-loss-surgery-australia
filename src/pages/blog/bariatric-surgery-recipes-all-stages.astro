@@ -1,5 +1,7 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import SurgeonCTA from '../../components/SurgeonCTA.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const title = "50+ Bariatric Surgery Recipes for Every Stage of Your Journey";
 const description = "Complete bariatric recipe collection: Liquid, pureed, soft & solid foods. High-protein, delicious recipes for every stage of your weight loss journey.";
@@ -2126,5 +2128,38 @@ const relatedArticles = [
     <a href="/blog/gastric-sleeve-diet-stages" class="cta-button" style="background: white; color: #3b82f6; border: 2px solid #3b82f6;">Read Diet Stages Guide</a>
   </div>
 </div>
+
+<!-- Related Content -->
+<RelatedContent 
+  title="Master Your Post-Surgery Diet"
+  links={[
+    {
+      title: "Gastric Sleeve Diet Stages",
+      href: "/blog/gastric-sleeve-diet-stages",
+      description: "Complete 4-phase diet progression guide"
+    },
+    {
+      title: "Gastric Sleeve Recovery Timeline",
+      href: "/blog/gastric-sleeve-recovery-week-by-week",
+      description: "Week-by-week recovery with diet milestones"
+    },
+    {
+      title: "Pre-Op Diet Guide",
+      href: "/blog/pre-op-diet-gastric-sleeve",
+      description: "Prepare your body for surgery with the 2-week diet"
+    },
+    {
+      title: "Find Bariatric Surgeons",
+      href: "/surgeons",
+      description: "Browse experienced surgeons who provide nutrition support"
+    }
+  ]}
+/>
+
+<!-- Surgeon CTA -->
+<SurgeonCTA 
+  headline="Find Surgeons with Strong Nutrition Programs"
+  description="Success after surgery requires expert nutritional guidance. Find surgeons who offer comprehensive dietitian support throughout your journey."
+/>
 
 </BlogLayout>

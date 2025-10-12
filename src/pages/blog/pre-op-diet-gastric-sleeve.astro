@@ -1,5 +1,7 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import SurgeonCTA from '../../components/SurgeonCTA.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const title = "Pre-Op Diet for Gastric Sleeve: Your Complete 2-Week Guide to Success";
 const description = "Complete gastric sleeve pre-op diet guide: Why it's required, what to eat, meal plans, shopping lists, tips to succeed. Liver shrinking diet explained.";
@@ -735,6 +737,40 @@ const faqSchema = {
     <li style="margin-bottom: 0;"><a href="/blog/gastric-sleeve-diet-stages/">Post-Op Diet Stages</a> — Life after surgery</li>
   </ul>
 </div>
+
+<!-- Related Content -->
+<RelatedContent 
+  title="Continue Your Journey"
+  links={[
+    {
+      title: "Gastric Sleeve Recovery Timeline",
+      href: "/blog/gastric-sleeve-recovery-week-by-week",
+      description: "What to expect in the 12 weeks after surgery"
+    },
+    {
+      title: "Post-Surgery Diet Stages",
+      href: "/blog/gastric-sleeve-diet-stages",
+      description: "4-phase diet progression from liquids to solid foods"
+    },
+    {
+      title: "50+ Bariatric Surgery Recipes",
+      href: "/blog/bariatric-surgery-recipes-all-stages",
+      description: "High-protein recipes for all recovery stages"
+    },
+    {
+      title: "Gastric Sleeve Cost Guide",
+      href: "/blog/gastric-sleeve-cost-australia-2025",
+      description: "Complete pricing breakdown and financing options"
+    }
+  ]}
+/>
+
+<!-- Surgeon CTA -->
+<SurgeonCTA 
+  procedure="Gastric Sleeve"
+  headline="Find Surgeons Who Provide Pre-Op Support"
+  description="Choose a surgeon who offers comprehensive pre-surgery preparation, including dietitian consultations and pre-op diet guidance."
+/>
 
 </BlogLayout>
 
