@@ -1,6 +1,8 @@
 ---
 import '../../styles/global.css';
 import { seoMeta } from '../../data/seo-meta';
+import RelatedContent from '../../components/RelatedContent.astro';
+import SurgeonCTA from '../../components/SurgeonCTA.astro';
 
 const meta = seoMeta.gastricSleeve;
 const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/gastric-sleeve";
@@ -1240,6 +1242,48 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 						<strong>Important:</strong> This content is for educational purposes only and does not constitute medical advice. Individual results from gastric sleeve surgery vary based on numerous factors including adherence to post-surgery protocols, pre-existing health conditions, and individual physiology. Weight loss figures and recovery timelines are based on clinical averages and may not reflect your experience. Gastric sleeve surgery carries risks including but not limited to bleeding, infection, staple line leak, nutritional deficiencies, and the need for revision surgery. This procedure is permanent and irreversible. Always consult with qualified, AHPRA-registered healthcare providers before making decisions about weight loss surgery. Information on this page is current as of January 2025 and should be verified with your surgeon. For official information about Medicare rebates and eligibility, visit <a href="https://www.servicesaustralia.gov.au/medicare" class="text-blue-600 hover:underline" target="_blank" rel="noopener">Services Australia</a>. For information about AHPRA-registered practitioners, visit <a href="https://www.ahpra.gov.au" class="text-blue-600 hover:underline" target="_blank" rel="noopener">AHPRA</a>.
 					</p>
 				</div>
+			</div>
+		</section>
+
+		<!-- Related Content -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<RelatedContent 
+					title="Continue Your Research"
+					links={[
+						{
+							title: "Gastric Sleeve Cost Guide",
+							href: "/costs/gastric-sleeve-cost-australia",
+							description: "Complete cost breakdown with insurance and payment options"
+						},
+						{
+							title: "Gastric Sleeve Recovery Timeline",
+							href: "/blog/gastric-sleeve-recovery-week-by-week",
+							description: "Week-by-week recovery guide with diet and activity milestones"
+						},
+						{
+							title: "Compare Gastric Sleeve vs Bypass",
+							href: "/procedures/gastric-bypass",
+							description: "Which procedure is right for you? Compare benefits and risks"
+						},
+						{
+							title: "Pre-Op Diet Guide",
+							href: "/blog/pre-op-diet-gastric-sleeve",
+							description: "2-week liver shrinking diet to prepare for surgery"
+						}
+					]}
+				/>
+			</div>
+		</section>
+
+		<!-- Surgeon CTA -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<SurgeonCTA 
+					procedure="Gastric Sleeve"
+					headline="Find Experienced Gastric Sleeve Surgeons"
+					description="Browse our directory of AHPRA-registered bariatric surgeons who specialize in gastric sleeve surgery. Compare qualifications, read reviews, and book consultations."
+				/>
 			</div>
 		</section>
 

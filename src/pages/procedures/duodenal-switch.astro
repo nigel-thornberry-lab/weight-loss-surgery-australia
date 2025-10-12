@@ -1,6 +1,8 @@
 ---
 import '../../styles/global.css';
 import { seoMeta } from '../../data/seo-meta';
+import RelatedContent from '../../components/RelatedContent.astro';
+import SurgeonCTA from '../../components/SurgeonCTA.astro';
 
 const meta = seoMeta.duodenalSwitch;
 const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/duodenal-switch";
@@ -1327,6 +1329,48 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 						</p>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<!-- Related Content -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<RelatedContent 
+					title="Continue Your Research"
+					links={[
+						{
+							title: "Compare Duodenal Switch vs Gastric Sleeve",
+							href: "/procedures/gastric-sleeve",
+							description: "Which procedure is right for you? Compare benefits and risks"
+						},
+						{
+							title: "Gastric Bypass Procedure",
+							href: "/procedures/gastric-bypass",
+							description: "Learn about gastric bypass, another malabsorptive procedure"
+						},
+						{
+							title: "Weight Loss Surgery Costs",
+							href: "/costs",
+							description: "Compare costs across all weight loss surgery procedures"
+						},
+						{
+							title: "50+ Bariatric Surgery Recipes",
+							href: "/blog/bariatric-surgery-recipes-all-stages",
+							description: "High-protein recipes for every recovery stage"
+						}
+					]}
+				/>
+			</div>
+		</section>
+
+		<!-- Surgeon CTA -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<SurgeonCTA 
+					procedure="Duodenal Switch"
+					headline="Find Experienced Duodenal Switch Surgeons"
+					description="Browse our directory of AHPRA-registered bariatric surgeons who specialize in duodenal switch surgery. This complex procedure requires highly experienced surgeons."
+				/>
 			</div>
 		</section>
 

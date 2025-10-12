@@ -1,6 +1,8 @@
 ---
 import '../../styles/global.css';
 import { seoMeta } from '../../data/seo-meta';
+import RelatedContent from '../../components/RelatedContent.astro';
+import SurgeonCTA from '../../components/SurgeonCTA.astro';
 
 const meta = seoMeta.gastricBand;
 const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/gastric-band";
@@ -1280,6 +1282,48 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 						<strong>Important:</strong> This content is for educational purposes only and does not constitute medical advice. Individual results from gastric band surgery vary based on numerous factors including adherence to post-surgery protocols, regular band adjustments, pre-existing health conditions, and individual physiology. Weight loss figures and recovery timelines are based on clinical averages and may not reflect your experience. Gastric band surgery carries risks including but not limited to band slippage, band erosion, port complications, infection, the need for band adjustment or removal, and requirement for revision surgery. This procedure is reversible. Always consult with qualified, AHPRA-registered healthcare providers before making decisions about weight loss surgery. Information on this page is current as of January 2025 and should be verified with your surgeon. For official information about Medicare rebates and eligibility, visit <a href="https://www.servicesaustralia.gov.au/medicare" class="text-blue-600 hover:underline" target="_blank" rel="noopener">Services Australia</a>. For information about AHPRA-registered practitioners, visit <a href="https://www.ahpra.gov.au" class="text-blue-600 hover:underline" target="_blank" rel="noopener">AHPRA</a>.
 					</p>
 				</div>
+			</div>
+		</section>
+
+		<!-- Related Content -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<RelatedContent 
+					title="Continue Your Research"
+					links={[
+						{
+							title: "Gastric Band Cost Guide",
+							href: "/costs/gastric-band-cost-australia",
+							description: "Complete cost breakdown with insurance and payment options"
+						},
+						{
+							title: "Compare Band vs Gastric Sleeve",
+							href: "/procedures/gastric-sleeve",
+							description: "Which procedure is right for you? Compare benefits and risks"
+						},
+						{
+							title: "Gastric Sleeve Diet Stages",
+							href: "/blog/gastric-sleeve-diet-stages",
+							description: "4-phase diet progression guide for after surgery"
+						},
+						{
+							title: "Find Bariatric Surgeons",
+							href: "/surgeons",
+							description: "Browse experienced surgeons who offer gastric band"
+						}
+					]}
+				/>
+			</div>
+		</section>
+
+		<!-- Surgeon CTA -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<SurgeonCTA 
+					procedure="Gastric Band"
+					headline="Find Experienced Gastric Band Surgeons"
+					description="Browse our directory of AHPRA-registered bariatric surgeons who specialize in gastric band surgery. Compare qualifications, read reviews, and book consultations."
+				/>
 			</div>
 		</section>
 
