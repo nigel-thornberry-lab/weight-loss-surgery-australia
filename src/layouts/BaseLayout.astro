@@ -155,16 +155,18 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
   </head>
   <body class="antialiased">
     <!-- Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
           <div class="flex items-center">
             <a href="/" class="text-xl font-bold text-[#6c95ef]">Weight Loss Surgery Australia</a>
           </div>
+          
           <!-- Desktop Navigation -->
-          <nav class="hidden md:flex space-x-8">
+          <nav class="hidden md:flex items-center space-x-6">
             <div class="relative group">
-              <button class="text-gray-700 hover:text-blue-600 flex items-center">
+              <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
                 Procedures
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -182,7 +184,7 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
               </div>
             </div>
             <div class="relative group">
-              <button class="text-gray-700 hover:text-blue-600 flex items-center">
+              <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
                 Surgeons
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -194,12 +196,11 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
                   <div class="border-t border-gray-200 my-2"></div>
                   <a href="/surgeons/sydney" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Sydney Surgeons</a>
                   <a href="/surgeons/melbourne" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Melbourne Surgeons</a>
-                  <a href="/surgeons/compare" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Compare Surgeons</a>
                 </div>
               </div>
             </div>
             <div class="relative group">
-              <button class="text-gray-700 hover:text-blue-600 flex items-center">
+              <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
                 Costs
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -207,6 +208,8 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
               </button>
               <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div class="py-2">
+                  <a href="/costs" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Costs</a>
+                  <div class="border-t border-gray-200 my-2"></div>
                   <a href="/costs/gastric-sleeve-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Sleeve Cost</a>
                   <a href="/costs/gastric-bypass-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Bypass Cost</a>
                   <a href="/costs/gastric-band-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Band Cost</a>
@@ -214,7 +217,7 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
               </div>
             </div>
             <div class="relative group">
-              <button class="text-gray-700 hover:text-blue-600 flex items-center">
+              <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
                 Locations
                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -227,18 +230,20 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
                 </div>
               </div>
             </div>
-            <a href="/blog" class="text-gray-700 hover:text-blue-600">Blog</a>
+            <a href="/blog" class="text-gray-700 hover:text-blue-600 py-2">Blog</a>
           </nav>
 
-          <!-- Mobile Menu Button -->
-          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
+          <!-- Right Side: Phone + CTA Button + Mobile Menu -->
           <div class="flex items-center space-x-4">
-            <a href="tel:1300000000" class="hidden sm:block text-[#6c95ef] font-semibold">1300 000 000</a>
-            <a href="/contact" class="bg-[#6c95ef] text-white px-6 py-2 rounded-lg hover:bg-[#5a7fd8] transition">Book Free Consultation</a>
+            <a href="tel:1300000000" class="hidden lg:block text-[#6c95ef] font-semibold">1300 000 000</a>
+            <a href="/contact" class="hidden md:block bg-[#6c95ef] text-white px-6 py-2 rounded-lg hover:bg-[#5a7fd8] transition">Book Free Consultation</a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
           </div>
         </div>
 
