@@ -1,6 +1,8 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import NewsletterForm from '../../components/NewsletterForm.astro';
+import SurgeonCTA from '../../components/SurgeonCTA.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const title = "Gastric Sleeve Recovery Week by Week: Complete 12-Week Timeline";
 const description = "Complete gastric sleeve recovery guide: What to expect each week for 12 weeks. Diet, activity, pain management, complications, and milestones.";
@@ -988,6 +990,39 @@ const faqSchema = {
     <li style="margin-bottom: 0;"><a href="/blog/bariatric-surgery-recipes-all-stages/">50+ Bariatric Recipes</a> — Delicious meals for every stage</li>
   </ul>
 </div>
+
+<!-- Related Content -->
+<RelatedContent 
+  title="Related Recovery Resources"
+  links={[
+    {
+      title: "Gastric Sleeve Diet Stages Guide",
+      href: "/blog/gastric-sleeve-diet-stages",
+      description: "Complete diet progression from liquids to solid foods over 8 weeks"
+    },
+    {
+      title: "50+ Bariatric Surgery Recipes",
+      href: "/blog/bariatric-surgery-recipes-all-stages",
+      description: "High-protein recipes for every stage of your recovery"
+    },
+    {
+      title: "Pre-Op Diet for Gastric Sleeve",
+      href: "/blog/pre-op-diet-gastric-sleeve",
+      description: "2-week pre-surgery diet guide and meal plans"
+    },
+    {
+      title: "Gastric Sleeve Procedure Overview",
+      href: "/procedures/gastric-sleeve",
+      description: "Learn about the surgery, benefits, risks, and expectations"
+    }
+  ]}
+/>
+
+<!-- Surgeon CTA -->
+<SurgeonCTA 
+  headline="Choose the Right Surgeon for Your Recovery"
+  description="Your recovery starts with choosing an experienced bariatric surgeon. Browse our directory of AHPRA-registered specialists."
+/>
 
 <!-- Newsletter Signup -->
 <section class="my-12">

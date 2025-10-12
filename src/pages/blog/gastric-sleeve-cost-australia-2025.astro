@@ -1,6 +1,8 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
 import NewsletterForm from '../../components/NewsletterForm.astro';
+import SurgeonCTA from '../../components/SurgeonCTA.astro';
+import RelatedContent from '../../components/RelatedContent.astro';
 
 const title = "Gastric Sleeve Cost Australia 2025: Complete Breakdown";
 const description = "Detailed gastric sleeve cost breakdown: $15K-25K self-funded, $5K-12K with insurance. Medicare rebates, payment plans, hidden costs + city-by-city pricing.";
@@ -662,6 +664,40 @@ const relatedArticles = [
   <h4>💚 Remember</h4>
   <p>While cost is important, prioritize surgeon qualifications, safety record, and long-term outcomes. The cheapest option isn't always the best value. This is your health—choose wisely.</p>
 </div>
+
+<!-- Related Content -->
+<RelatedContent 
+  title="Related Guides & Resources"
+  links={[
+    {
+      title: "Gastric Sleeve Procedure Guide",
+      href: "/procedures/gastric-sleeve",
+      description: "Learn how gastric sleeve surgery works, benefits, risks, and what to expect"
+    },
+    {
+      title: "Gastric Sleeve Recovery Timeline",
+      href: "/blog/gastric-sleeve-recovery-week-by-week",
+      description: "Week-by-week recovery guide with diet progression and activity milestones"
+    },
+    {
+      title: "Compare All Procedure Costs",
+      href: "/costs",
+      description: "Compare gastric sleeve, bypass, and band costs side-by-side"
+    },
+    {
+      title: "Gastric Bypass Cost Guide",
+      href: "/costs/gastric-bypass-cost-australia",
+      description: "Complete cost breakdown for gastric bypass surgery in Australia"
+    }
+  ]}
+/>
+
+<!-- Surgeon CTA -->
+<SurgeonCTA 
+  procedure="Gastric Sleeve"
+  headline="Ready to Take the Next Step?"
+  description="Find experienced gastric sleeve surgeons in your area. Compare qualifications, read patient reviews, and book free consultations."
+/>
 
 <!-- Newsletter Signup -->
 <section class="my-12">

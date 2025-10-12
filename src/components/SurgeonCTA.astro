@@ -1,0 +1,77 @@
+---
+interface Props {
+  location?: string; // e.g. "Sydney", "Melbourne"
+  procedure?: string; // e.g. "Gastric Sleeve", "Gastric Bypass"
+  headline?: string;
+  description?: string;
+  theme?: 'light' | 'dark';
+}
+
+const { 
+  location,
+  procedure,
+  headline,
+  description,
+  theme = 'light'
+} = Astro.props;
+
+// Build dynamic headline if not provided
+const defaultHeadline = location 
+  ? `Find Qualified${procedure ? ` ${procedure}` : ''} Surgeons${location ? ` in ${location}` : ''}`
+  : procedure 
+    ? `Find Qualified ${procedure} Surgeons`
+    : 'Find a Qualified Bariatric Surgeon';
+
+const defaultDescription = 'Browse our directory of AHPRA-registered bariatric surgeons. Compare experience, specialties, locations, and patient reviews.';
+
+const finalHeadline = headline || defaultHeadline;
+const finalDescription = description || defaultDescription;
+
+// Build URL with filters
+let surgeonUrl = '/surgeons';
+if (location) {
+  surgeonUrl = `/surgeons/${location.toLowerCase()}`;
+}
+
+const bgGradient = theme === 'dark'
+  ? 'from-gray-800 to-gray-900'
+  : 'from-blue-50 to-purple-50';
+---
+
+<section class={`bg-gradient-to-br ${bgGradient} rounded-2xl p-8 md:p-12 my-12 shadow-xl border-2 ${theme === 'dark' ? 'border-gray-700' : 'border-blue-200'}`}>
+  <div class="text-center max-w-3xl mx-auto">
+    <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-500 rounded-full mb-6">
+      <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      </svg>
+    </div>
+    
+    <h2 class={`text-3xl md:text-4xl font-bold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+      {finalHeadline}
+    </h2>
+    
+    <p class={`text-lg mb-8 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}`}>
+      {finalDescription}
+    </p>
+    
+    <a 
+      href={surgeonUrl}
+      class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-5 rounded-xl text-xl font-bold hover:from-blue-700 hover:to-purple-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+      </svg>
+      Browse Surgeons
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
+    </a>
+    
+    {location && (
+      <p class={`text-sm mt-4 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+        Showing surgeons practicing in {location}
+      </p>
+    )}
+  </div>
+</section>
+
