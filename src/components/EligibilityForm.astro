@@ -1,0 +1,255 @@
+---
+interface Props {
+  source?: string;
+  procedureName?: string;
+}
+
+const { 
+  source = 'Eligibility Assessment',
+  procedureName = 'Weight Loss Surgery'
+} = Astro.props;
+
+const webhookUrl = import.meta.env.PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL;
+const procedureForScript = procedureName;
+---
+
+<div class="eligibility-form-wrapper bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8 shadow-xl border-2 border-green-200">
+  <div class="eligibility-form-container">
+    <!-- Form -->
+    <form id="eligibility-form" class="space-y-5">
+      <div class="text-center mb-6">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-green-500 rounded-full mb-4">
+          <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-gray-900 mb-3">
+          Do You Qualify for {procedureName}?
+        </h3>
+        <p class="text-gray-700 text-lg">
+          Find out in 60 seconds • Free, no obligation • Instant eligibility check
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 space-y-4">
+        <!-- BMI Range (Qualifier) -->
+        <div>
+          <label for="eligibility-bmi" class="block text-sm font-semibold text-gray-700 mb-2">
+            What's your approximate BMI? <span class="text-green-600">*</span>
+          </label>
+          <select 
+            id="eligibility-bmi"
+            name="bmi"
+            class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 text-gray-900"
+            required
+          >
+            <option value="">Select your BMI range...</option>
+            <option value="under-30">Under 30 (Not yet eligible)</option>
+            <option value="30-35">30-35 (Eligible with health conditions)</option>
+            <option value="35-40">35-40 (Strong candidate)</option>
+            <option value="over-40">Over 40 (Highly eligible)</option>
+            <option value="dont-know">I don't know my BMI</option>
+          </select>
+          <p class="text-xs text-gray-500 mt-1">Medicare typically requires BMI ≥35 (or ≥30 with conditions)</p>
+        </div>
+
+        <!-- Health Conditions (Qualifier) -->
+        <div>
+          <label for="eligibility-conditions" class="block text-sm font-semibold text-gray-700 mb-2">
+            Do you have any of these conditions? <span class="text-green-600">*</span>
+          </label>
+          <select 
+            id="eligibility-conditions"
+            name="conditions"
+            class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 text-gray-900"
+            required
+          >
+            <option value="">Select...</option>
+            <option value="none">None</option>
+            <option value="diabetes">Type 2 Diabetes</option>
+            <option value="sleep-apnea">Sleep Apnea</option>
+            <option value="high-blood-pressure">High Blood Pressure</option>
+            <option value="heart-disease">Heart Disease</option>
+            <option value="multiple">Multiple conditions</option>
+          </select>
+          <p class="text-xs text-gray-500 mt-1">Health conditions improve your eligibility</p>
+        </div>
+
+        <!-- Email (Lead Capture) -->
+        <div>
+          <label for="eligibility-email" class="block text-sm font-semibold text-gray-700 mb-2">
+            Email Address <span class="text-green-600">*</span>
+          </label>
+          <input 
+            type="email" 
+            id="eligibility-email"
+            name="email"
+            placeholder="your@email.com" 
+            class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 text-gray-900"
+            required
+          />
+          <p class="text-xs text-gray-500 mt-1">We'll send your eligibility result + financing options</p>
+        </div>
+
+        <!-- Name (Optional but good to have) -->
+        <div>
+          <label for="eligibility-name" class="block text-sm font-semibold text-gray-700 mb-2">
+            First Name <span class="text-gray-400">(optional)</span>
+          </label>
+          <input 
+            type="text" 
+            id="eligibility-name"
+            name="name"
+            placeholder="John" 
+            class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500 text-gray-900"
+          />
+        </div>
+
+        <!-- Hidden source field -->
+        <input type="hidden" name="source" value={source} />
+        <input type="hidden" name="formType" value="Eligibility Assessment" />
+      </div>
+
+      <!-- Trust Signals -->
+      <div class="bg-green-50 rounded-lg p-4 border border-green-200">
+        <div class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          <div>
+            <p class="text-sm font-semibold text-gray-900">Your information is 100% confidential</p>
+            <p class="text-xs text-gray-600 mt-1">
+              We'll ONLY send your eligibility result. No spam, no selling your data. Unsubscribe anytime.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        id="eligibility-submit-btn"
+        class="w-full bg-gradient-to-r from-green-600 to-green-500 text-white px-8 py-5 rounded-lg text-xl font-bold hover:from-green-700 hover:to-green-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50"
+      >
+        <span class="flex items-center justify-center gap-3">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Check My Eligibility (Free)
+        </span>
+      </button>
+
+      <p class="text-center text-xs text-gray-500">
+        🔒 Takes 60 seconds • Over 2,000 Australians checked their eligibility in 2024
+      </p>
+
+      <div id="eligibility-message" class="hidden"></div>
+    </form>
+
+    <!-- Success State -->
+    <div id="eligibility-success" class="hidden">
+      <div class="bg-white rounded-xl p-8 text-center border-2 border-green-500">
+        <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+          <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <h3 class="text-3xl font-bold text-gray-900 mb-4">
+          ✅ Thank You! Check Your Email
+        </h3>
+        <p class="text-lg text-gray-700 mb-6">
+          We've sent your <strong>eligibility assessment</strong> to your inbox, along with:
+        </p>
+        <div class="bg-green-50 rounded-lg p-6 text-left space-y-3 mb-6">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <p class="text-gray-700"><strong>Your eligibility status</strong> for {procedureName}</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <p class="text-gray-700"><strong>Financing options</strong> you qualify for</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <p class="text-gray-700"><strong>Qualified surgeons</strong> near you</p>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <p class="text-gray-700"><strong>Next steps</strong> to get started</p>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600">
+          <strong>Don't see it?</strong> Check your spam folder or add us to your contacts.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ webhookUrl, procedureForScript }}>
+  const form = document.getElementById('eligibility-form');
+  const submitBtn = document.getElementById('eligibility-submit-btn');
+  const messageDiv = document.getElementById('eligibility-message');
+  const successDiv = document.getElementById('eligibility-success');
+  const formContainer = form.parentElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Checking...';
+    
+    const formData = new FormData(form);
+    const data = {
+      email: formData.get('email'),
+      name: formData.get('name') || 'Not provided',
+      bmi: formData.get('bmi'),
+      conditions: formData.get('conditions'),
+      procedure: procedureForScript,
+      source: formData.get('source'),
+      formType: 'Eligibility Assessment'
+    };
+
+    try {
+      await fetch(webhookUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      form.classList.add('hidden');
+      successDiv.classList.remove('hidden');
+      window.scrollTo({ top: formContainer.offsetTop - 100, behavior: 'smooth' });
+    } catch (error) {
+      console.error('Eligibility form error:', error);
+      
+      messageDiv.classList.remove('hidden');
+      messageDiv.className = 'bg-red-50 border-l-4 border-red-500 p-4 rounded';
+      messageDiv.innerHTML = `
+        <p class="text-red-800 font-semibold">Oops! Something went wrong.</p>
+        <p class="text-red-700 text-sm mt-1">
+          Please refresh and try again, or call us at <a href="tel:1300000000" class="underline">1300 000 000</a>
+        </p>
+      `;
+      
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Try Again';
+    }
+  });
+</script>
+
+<style>
+  .eligibility-form-wrapper {
+    position: relative;
+  }
+</style>
+

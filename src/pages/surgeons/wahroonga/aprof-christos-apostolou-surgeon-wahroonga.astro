@@ -5,7 +5,7 @@ import FAQSection from '../../../components/surgeons/FAQSection.astro';
 import TeamSection from '../../../components/surgeons/TeamSection.astro';
 import HospitalsSection from '../../../components/surgeons/HospitalsSection.astro';
 import PricingSection from '../../../components/surgeons/PricingSection.astro';
-import LeadContactForm from '../../../components/surgeons/LeadContactForm.astro';
+import ConsultationForm from '../../../components/ConsultationForm.astro';
 import LocationMap from '../../../components/surgeons/LocationMap.astro';
 import GoogleReviews from '../../../components/surgeons/GoogleReviews.astro';
 
@@ -456,7 +456,7 @@ const breadcrumbSchema = {
 
                     <!-- Lead Contact Form -->
                     <div class="mt-6">
-                      <LeadContactForm surgeonName={cleanName} surgeonCity={surgeon.city} />
+                      <ConsultationForm source={`Surgeon Profile: ${cleanName}`} surgeonName={cleanName} />
                     </div>
                   </div>
 

@@ -1,0 +1,246 @@
+---
+interface Props {
+  source?: string;
+  procedureName?: string;
+  theme?: 'light' | 'dark';
+}
+
+const { 
+  source = 'Cost Calculator',
+  procedureName,
+  theme = 'light'
+} = Astro.props;
+
+const webhookUrl = import.meta.env.PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL;
+
+const containerClass = theme === 'dark'
+  ? 'bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl p-8 text-white'
+  : 'bg-gradient-to-br from-blue-50 to-purple-50 border-2 border-blue-200 rounded-xl p-8';
+
+const inputClass = theme === 'dark' 
+  ? 'w-full px-4 py-3 rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur text-white placeholder-white/60 focus:ring-2 focus:ring-white focus:border-white'
+  : 'w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900';
+
+const labelClass = theme === 'dark'
+  ? 'block text-sm font-medium text-white mb-1'
+  : 'block text-sm font-medium text-gray-700 mb-1';
+
+const buttonClass = theme === 'dark'
+  ? 'w-full bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition disabled:opacity-50'
+  : 'w-full bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition disabled:opacity-50';
+
+const headlineClass = theme === 'dark' ? 'text-white' : 'text-gray-900';
+const subheadClass = theme === 'dark' ? 'text-blue-100' : 'text-gray-600';
+---
+
+<div class={containerClass} id="cost-calculator-container">
+  <form id="cost-calculator-form" class="space-y-4">
+    <div class="text-center mb-6">
+      <h3 class={`text-2xl md:text-3xl font-bold mb-2 ${headlineClass}`}>
+        Get Your Personalized Cost Estimate
+      </h3>
+      <p class={`text-sm ${subheadClass}`}>
+        See real pricing with Medicare & private health insurance breakdowns
+      </p>
+    </div>
+
+    <div>
+      <label for="cost-procedure" class={labelClass}>
+        Which procedure? <span class={theme === 'dark' ? 'text-yellow-300' : 'text-red-500'}>*</span>
+      </label>
+      <select 
+        id="cost-procedure"
+        name="procedure"
+        class={inputClass}
+        required
+      >
+        <option value="">Select procedure</option>
+        <option value="Gastric Sleeve" selected={procedureName === 'Gastric Sleeve'}>Gastric Sleeve (Most Popular)</option>
+        <option value="Gastric Bypass" selected={procedureName === 'Gastric Bypass'}>Gastric Bypass</option>
+        <option value="Mini Gastric Bypass" selected={procedureName === 'Mini Gastric Bypass'}>Mini Gastric Bypass</option>
+        <option value="Gastric Band" selected={procedureName === 'Gastric Band'}>Gastric Band</option>
+        <option value="Duodenal Switch" selected={procedureName === 'Duodenal Switch'}>Duodenal Switch</option>
+        <option value="Gastric Balloon" selected={procedureName === 'Gastric Balloon'}>Gastric Balloon</option>
+        <option value="Not Sure Yet">Not Sure Yet</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="cost-health-fund" class={labelClass}>
+        Private health fund (optional)
+      </label>
+      <select 
+        id="cost-health-fund"
+        name="health_fund"
+        class={inputClass}
+      >
+        <option value="">Select your fund (or skip)</option>
+        <option value="None">No private health insurance</option>
+        <option value="Medibank">Medibank</option>
+        <option value="Bupa">Bupa</option>
+        <option value="HCF">HCF</option>
+        <option value="NIB">NIB</option>
+        <option value="Australian Unity">Australian Unity</option>
+        <option value="HBF">HBF</option>
+        <option value="Teachers Health">Teachers Health</option>
+        <option value="Other">Other fund</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="cost-location" class={labelClass}>
+        Your location <span class={theme === 'dark' ? 'text-yellow-300' : 'text-red-500'}>*</span>
+      </label>
+      <select 
+        id="cost-location"
+        name="location"
+        class={inputClass}
+        required
+      >
+        <option value="">Select your location</option>
+        <option value="Sydney">Sydney</option>
+        <option value="Melbourne">Melbourne</option>
+        <option value="Brisbane">Brisbane</option>
+        <option value="Perth">Perth</option>
+        <option value="Adelaide">Adelaide</option>
+        <option value="Gold Coast">Gold Coast</option>
+        <option value="Canberra">Canberra</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="cost-email" class={labelClass}>
+        Email address <span class={theme === 'dark' ? 'text-yellow-300' : 'text-red-500'}>*</span>
+      </label>
+      <input 
+        type="email" 
+        id="cost-email"
+        name="email"
+        placeholder="your@email.com" 
+        class={inputClass}
+        required
+      />
+      <p class={`text-xs mt-1 ${subheadClass}`}>
+        We'll email you the detailed cost breakdown
+      </p>
+    </div>
+
+    <input type="hidden" name="source" value={source} />
+    <input type="hidden" name="name" value="Cost Calculator User" />
+    <input type="hidden" name="phone" value="" />
+    <input type="hidden" name="message" value="Requested cost estimate" />
+
+    <button 
+      type="submit" 
+      id="cost-submit-btn"
+      class={buttonClass}
+    >
+      Calculate My Cost
+    </button>
+
+    <!-- Trust Signals -->
+    <div class={`flex flex-wrap justify-center gap-4 text-xs ${subheadClass}`}>
+      <div class="flex items-center">
+        <svg class={`w-4 h-4 mr-1 ${theme === 'dark' ? 'text-green-300' : 'text-green-600'}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Free, no obligation</span>
+      </div>
+      <div class="flex items-center">
+        <svg class={`w-4 h-4 mr-1 ${theme === 'dark' ? 'text-green-300' : 'text-green-600'}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Accurate pricing</span>
+      </div>
+      <div class="flex items-center">
+        <svg class={`w-4 h-4 mr-1 ${theme === 'dark' ? 'text-green-300' : 'text-green-600'}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Instant results</span>
+      </div>
+    </div>
+
+    <div id="cost-message" class="hidden"></div>
+  </form>
+
+  <!-- Success State -->
+  <div id="cost-success" class="hidden text-center">
+    <div class={`rounded-xl p-8 ${theme === 'dark' ? 'bg-white/10' : 'bg-white border-2 border-green-500'}`}>
+      <div class={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${theme === 'dark' ? 'bg-green-400' : 'bg-green-500'}`}>
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h3 class={`text-2xl font-bold mb-2 ${headlineClass}`}>Check Your Email!</h3>
+      <p class={`text-lg mb-4 ${subheadClass}`}>
+        We've sent your personalized cost breakdown. You should receive it within a few minutes.
+      </p>
+      <div class={`rounded-lg p-4 text-left ${theme === 'dark' ? 'bg-white/5' : 'bg-blue-50'}`}>
+        <p class={`text-sm font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
+          Your cost breakdown includes:
+        </p>
+        <ul class={`text-sm space-y-1 ${subheadClass}`}>
+          <li>✓ Total procedure cost range</li>
+          <li>✓ Medicare rebates (if eligible)</li>
+          <li>✓ Private health insurance coverage</li>
+          <li>✓ Out-of-pocket estimates</li>
+          <li>✓ Payment plan options</li>
+        </ul>
+      </div>
+      <p class={`text-sm mt-4 ${subheadClass}`}>
+        Questions? Call us at <a href="tel:1300000000" class={`font-semibold underline ${theme === 'dark' ? 'text-white' : 'text-blue-600'}`}>1300 000 000</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ webhookUrl }}>
+  const form = document.getElementById('cost-calculator-form');
+  const submitBtn = document.getElementById('cost-submit-btn');
+  const messageDiv = document.getElementById('cost-message');
+  const successDiv = document.getElementById('cost-success');
+  const container = document.getElementById('cost-calculator-container');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Calculating...';
+    
+    const formData = new FormData(form);
+    const healthFund = formData.get('health_fund');
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      location: formData.get('location'),
+      procedure: formData.get('procedure'),
+      source: formData.get('source'),
+      message: `Cost estimate request. Health fund: ${healthFund || 'Not specified'}`
+    };
+
+    try {
+      await fetch(webhookUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      form.classList.add('hidden');
+      successDiv.classList.remove('hidden');
+      window.scrollTo({ top: container.offsetTop - 100, behavior: 'smooth' });
+    } catch (error) {
+      console.error('Cost calculator error:', error);
+      
+      messageDiv.classList.remove('hidden');
+      messageDiv.className = 'bg-red-50 border-l-4 border-red-500 p-3 rounded text-sm';
+      messageDiv.innerHTML = '<p class="text-red-800">Oops! Please try again or call us at 1300 000 000</p>';
+      
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Try Again';
+    }
+  });
+</script>
+

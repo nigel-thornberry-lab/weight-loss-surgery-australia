@@ -1,0 +1,155 @@
+---
+interface Props {
+  source?: string;
+  headline?: string;
+  description?: string;
+  ctaText?: string;
+  theme?: 'light' | 'dark';
+}
+
+const { 
+  source = 'Newsletter Signup',
+  headline = 'Get the Free Guide',
+  description = 'Evidence-based information, real patient stories, and honest guidance. No spam, ever.',
+  ctaText = 'Send Me Free Info',
+  theme = 'light'
+} = Astro.props;
+
+const webhookUrl = import.meta.env.PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL;
+
+const containerClass = theme === 'dark'
+  ? 'bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl p-8 text-white'
+  : 'bg-blue-50 border-2 border-blue-200 rounded-xl p-8';
+
+const inputClass = theme === 'dark' 
+  ? 'w-full px-4 py-3 rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur text-white placeholder-white/60 focus:ring-2 focus:ring-white focus:border-white'
+  : 'w-full px-4 py-3 rounded-lg border-2 border-blue-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-gray-900';
+
+const buttonClass = theme === 'dark'
+  ? 'w-full bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition disabled:opacity-50'
+  : 'w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition disabled:opacity-50';
+
+const headlineClass = theme === 'dark' ? 'text-white' : 'text-gray-900';
+const descClass = theme === 'dark' ? 'text-blue-100' : 'text-gray-600';
+---
+
+<div class={containerClass} id="newsletter-container">
+  <form id="newsletter-form" class="space-y-4">
+    <div class="text-center mb-4">
+      <h3 class={`text-2xl font-bold mb-2 ${headlineClass}`}>{headline}</h3>
+      <p class={`text-sm ${descClass}`}>{description}</p>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-3">
+      <input 
+        type="email" 
+        id="newsletter-email"
+        name="email"
+        placeholder="your@email.com" 
+        class={inputClass}
+        required
+      />
+      <button 
+        type="submit" 
+        id="newsletter-submit-btn"
+        class={buttonClass.replace('w-full', 'sm:w-auto px-8')}
+      >
+        {ctaText}
+      </button>
+    </div>
+
+    <input type="hidden" name="source" value={source} />
+    <input type="hidden" name="name" value="Newsletter Subscriber" />
+    <input type="hidden" name="phone" value="" />
+    <input type="hidden" name="location" value="" />
+    <input type="hidden" name="procedure" value="" />
+    <input type="hidden" name="message" value="Newsletter signup" />
+
+    <!-- Trust Signals -->
+    <div class={`flex flex-wrap justify-center gap-4 text-xs ${descClass}`}>
+      <div class="flex items-center">
+        <svg class={`w-4 h-4 mr-1 ${theme === 'dark' ? 'text-green-300' : 'text-green-600'}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Free forever</span>
+      </div>
+      <div class="flex items-center">
+        <svg class={`w-4 h-4 mr-1 ${theme === 'dark' ? 'text-green-300' : 'text-green-600'}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>No spam, ever</span>
+      </div>
+      <div class="flex items-center">
+        <svg class={`w-4 h-4 mr-1 ${theme === 'dark' ? 'text-green-300' : 'text-green-600'}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Unsubscribe anytime</span>
+      </div>
+    </div>
+
+    <div id="newsletter-message" class="hidden"></div>
+  </form>
+
+  <!-- Success State -->
+  <div id="newsletter-success" class="hidden text-center">
+    <div class={`rounded-xl p-6 ${theme === 'dark' ? 'bg-white/10' : 'bg-white'}`}>
+      <div class={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${theme === 'dark' ? 'bg-green-400' : 'bg-green-500'}`}>
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h3 class={`text-xl font-bold mb-2 ${headlineClass}`}>Check Your Email!</h3>
+      <p class={`text-sm ${descClass}`}>
+        We've sent you the free guide. You should receive it within a few minutes.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ webhookUrl }}>
+  const form = document.getElementById('newsletter-form');
+  const submitBtn = document.getElementById('newsletter-submit-btn');
+  const messageDiv = document.getElementById('newsletter-message');
+  const successDiv = document.getElementById('newsletter-success');
+  const container = document.getElementById('newsletter-container');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      location: formData.get('location'),
+      procedure: formData.get('procedure'),
+      source: formData.get('source'),
+      message: formData.get('message')
+    };
+
+    try {
+      await fetch(webhookUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      form.classList.add('hidden');
+      successDiv.classList.remove('hidden');
+    } catch (error) {
+      console.error('Newsletter signup error:', error);
+      
+      messageDiv.classList.remove('hidden');
+      messageDiv.className = 'bg-red-50 border-l-4 border-red-500 p-3 rounded text-sm';
+      messageDiv.innerHTML = '<p class="text-red-800">Oops! Please try again or email us directly.</p>';
+      
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Try Again';
+    }
+  });
+</script>
+

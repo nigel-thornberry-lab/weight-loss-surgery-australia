@@ -1,0 +1,254 @@
+---
+interface Props {
+  source?: string;
+  surgeonName?: string;
+  headline?: string;
+  theme?: 'light' | 'dark';
+}
+
+const { 
+  source = 'Consultation Request',
+  surgeonName,
+  headline = surgeonName ? `Book Consultation with ${surgeonName}` : 'Book Your Free Consultation',
+  theme = 'light'
+} = Astro.props;
+
+const webhookUrl = import.meta.env.PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL;
+
+// Pass surgeonName to client-side script
+const surgeonNameForScript = surgeonName || '';
+
+const inputClass = theme === 'dark' 
+  ? 'w-full px-4 py-3 rounded-lg border-2 border-white/30 bg-white/10 backdrop-blur text-white placeholder-white/60 focus:ring-2 focus:ring-white focus:border-white'
+  : 'w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900';
+
+const labelClass = theme === 'dark'
+  ? 'block text-sm font-medium text-white mb-1'
+  : 'block text-sm font-medium text-gray-700 mb-1';
+
+const buttonClass = theme === 'dark'
+  ? 'w-full bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition disabled:opacity-50'
+  : 'w-full bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition disabled:opacity-50';
+---
+
+<div class="consultation-form-container">
+  <form id="consultation-form" class="space-y-4">
+    <div class={`text-center mb-6 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+      <h3 class="text-2xl md:text-3xl font-bold mb-2">{headline}</h3>
+      <p class={`text-sm ${theme === 'dark' ? 'text-blue-100' : 'text-gray-600'}`}>
+        We'll call you within 24 hours (usually same day) • 100% free, no obligation
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <div>
+        <label for="consultation-name" class={labelClass}>
+          Full Name <span class={theme === 'dark' ? 'text-yellow-300' : 'text-red-500'}>*</span>
+        </label>
+        <input 
+          type="text" 
+          id="consultation-name"
+          name="name"
+          placeholder="John Smith" 
+          class={inputClass}
+          required
+        />
+      </div>
+      <div>
+        <label for="consultation-phone" class={labelClass}>
+          Phone Number <span class={theme === 'dark' ? 'text-yellow-300' : 'text-red-500'}>*</span>
+        </label>
+        <input 
+          type="tel" 
+          id="consultation-phone"
+          name="phone"
+          placeholder="0400 000 000" 
+          class={inputClass}
+          required
+        />
+      </div>
+    </div>
+
+    <div>
+      <label for="consultation-email" class={labelClass}>
+        Email Address <span class={theme === 'dark' ? 'text-yellow-300' : 'text-red-500'}>*</span>
+      </label>
+      <input 
+        type="email" 
+        id="consultation-email"
+        name="email"
+        placeholder="john@example.com" 
+        class={inputClass}
+        required
+      />
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <div>
+        <label for="consultation-location" class={labelClass}>
+          Your Location <span class={theme === 'dark' ? 'text-yellow-300' : 'text-red-500'}>*</span>
+        </label>
+        <select 
+          id="consultation-location"
+          name="location"
+          class={inputClass}
+          required
+        >
+          <option value="">Select your location</option>
+          <option value="Sydney">Sydney</option>
+          <option value="Melbourne">Melbourne</option>
+          <option value="Brisbane">Brisbane</option>
+          <option value="Perth">Perth</option>
+          <option value="Adelaide">Adelaide</option>
+          <option value="Gold Coast">Gold Coast</option>
+          <option value="Canberra">Canberra</option>
+          <option value="Hobart">Hobart</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="consultation-procedure" class={labelClass}>
+          Procedure Interest
+        </label>
+        <select 
+          id="consultation-procedure"
+          name="procedure"
+          class={inputClass}
+        >
+          <option value="">Select procedure (optional)</option>
+          <option value="Gastric Sleeve">Gastric Sleeve</option>
+          <option value="Gastric Bypass">Gastric Bypass</option>
+          <option value="Mini Gastric Bypass">Mini Gastric Bypass</option>
+          <option value="Gastric Band">Gastric Band</option>
+          <option value="Duodenal Switch">Duodenal Switch</option>
+          <option value="Gastric Balloon">Gastric Balloon</option>
+          <option value="Not Sure Yet">Not Sure Yet</option>
+        </select>
+      </div>
+    </div>
+
+    <input type="hidden" name="source" value={source} />
+    <input type="hidden" name="message" value={surgeonName ? `Consultation request for ${surgeonName}` : 'Consultation request'} />
+
+    <button 
+      type="submit" 
+      id="consultation-submit-btn"
+      class={buttonClass}
+    >
+      Request Free Consultation
+    </button>
+
+    <!-- Trust Signals -->
+    <div class={`flex flex-wrap justify-center gap-4 text-xs ${theme === 'dark' ? 'text-blue-100' : 'text-gray-500'}`}>
+      <div class="flex items-center">
+        <svg class={`w-4 h-4 mr-1 ${theme === 'dark' ? 'text-green-300' : 'text-green-600'}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Response within 24 hours</span>
+      </div>
+      <div class="flex items-center">
+        <svg class={`w-4 h-4 mr-1 ${theme === 'dark' ? 'text-green-300' : 'text-green-600'}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>100% free, no obligation</span>
+      </div>
+      <div class="flex items-center">
+        <svg class={`w-4 h-4 mr-1 ${theme === 'dark' ? 'text-green-300' : 'text-green-600'}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <span>Your privacy is protected</span>
+      </div>
+    </div>
+
+    <div id="consultation-message" class="hidden"></div>
+  </form>
+
+  <!-- Success State -->
+  <div id="consultation-success" class="hidden">
+    <div class={`rounded-xl p-8 text-center ${theme === 'dark' ? 'bg-white/10' : 'bg-green-50 border-2 border-green-500'}`}>
+      <div class={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${theme === 'dark' ? 'bg-green-400' : 'bg-green-500'}`}>
+        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+        </svg>
+      </div>
+      <h3 class={`text-2xl font-bold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+        Thank You! We'll Call You Soon
+      </h3>
+      <p class={`text-lg mb-4 ${theme === 'dark' ? 'text-blue-100' : 'text-gray-700'}`}>
+        A member of our team will contact you within 24 hours (usually much sooner).
+      </p>
+      <div class={`rounded-lg p-4 ${theme === 'dark' ? 'bg-white/5' : 'bg-blue-50'}`}>
+        <p class={`text-sm font-semibold mb-2 ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
+          What happens next:
+        </p>
+        <ul class={`text-sm text-left space-y-1 ${theme === 'dark' ? 'text-blue-100' : 'text-gray-600'}`}>
+          <li>✓ We'll review your information</li>
+          <li>✓ Match you with qualified surgeons in your area</li>
+          <li>✓ Call you to discuss your options</li>
+          <li>✓ Answer all your questions honestly (no pressure!)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ webhookUrl, surgeonNameForScript }}>
+  const form = document.getElementById('consultation-form');
+  const submitBtn = document.getElementById('consultation-submit-btn');
+  const messageDiv = document.getElementById('consultation-message');
+  const successDiv = document.getElementById('consultation-success');
+  const formContainer = form.parentElement;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+    
+    const formData = new FormData(form);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      location: formData.get('location'),
+      procedure: formData.get('procedure') || 'Not specified',
+      source: formData.get('source'),
+      message: formData.get('message'),
+      surgeonName: surgeonNameForScript || 'Not specified' // CRITICAL: Capture which surgeon
+    };
+
+    try {
+      await fetch(webhookUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      form.classList.add('hidden');
+      successDiv.classList.remove('hidden');
+      window.scrollTo({ top: formContainer.offsetTop - 100, behavior: 'smooth' });
+    } catch (error) {
+      console.error('Consultation form error:', error);
+      
+      messageDiv.classList.remove('hidden');
+      messageDiv.className = 'bg-red-50 border-l-4 border-red-500 p-4 rounded';
+      messageDiv.innerHTML = `
+        <p class="text-red-800 font-semibold">Oops! Something went wrong.</p>
+        <p class="text-red-700 text-sm mt-1">
+          Please try again or call us directly at <a href="tel:1300000000" class="underline">1300 000 000</a>
+        </p>
+      `;
+      
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Try Again';
+    }
+  });
+</script>
+
+<style>
+  .consultation-form-container {
+    position: relative;
+  }
+</style>
+

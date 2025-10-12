@@ -1,5 +1,6 @@
 ---
 import '../../styles/global.css';
+import ConsultationForm from '../../components/ConsultationForm.astro';
 
 const pageUrl = "https://weightlosssurgery.com.au/costs/gastric-sleeve-cost-australia";
 const lastUpdated = "January 2025";
@@ -1234,20 +1235,52 @@ const faqs = [
       }
     </script>
 
-    <!-- Final CTA Section -->
+    <!-- Readiness Assessment CTA -->
     <section class="mb-16">
-      <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-2xl p-8 md:p-12 text-white text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Take the Next Step?</h2>
-        <p class="text-xl mb-8 text-blue-100">Explore your options with qualified bariatric surgeons across Australia</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/surgeons" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
-            Find Surgeons Near You
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="bg-gradient-to-br from-purple-50 via-blue-50 to-green-50 rounded-2xl p-8 md:p-12 shadow-xl border-2 border-purple-200 text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 bg-purple-500 rounded-full mb-6">
+            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Now You Know the Cost—But Are You Ready?
+          </h2>
+          <p class="text-xl text-gray-700 mb-6 max-w-2xl mx-auto">
+            Take our 5-minute readiness assessment to figure out your next steps.
+          </p>
+          <div class="bg-white/60 rounded-xl p-6 mb-8 max-w-2xl mx-auto">
+            <p class="text-gray-800 font-medium mb-4">This isn't about whether you "qualify" medically—that's your surgeon's job.</p>
+            <p class="text-gray-700">This is about whether you're <strong>emotionally, financially, and practically ready</strong> for gastric sleeve surgery.</p>
+          </div>
+          <a 
+            href="/am-i-ready" 
+            class="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-10 py-5 rounded-xl text-xl font-bold hover:from-purple-700 hover:to-blue-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Take the Readiness Quiz (Free)
           </a>
-          <a href="/procedures/gastric-sleeve" class="bg-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-400 transition border-2 border-white">
-            Learn About the Procedure
-          </a>
+          <p class="text-sm text-gray-600 mt-4">
+            Takes 5 minutes • Completely private • Get personalized recommendations
+          </p>
         </div>
-        <p class="mt-6 text-sm text-blue-200">Compare surgeons, read reviews, and book consultations - all in one place</p>
+      </div>
+    </section>
+
+    <!-- Consultation Form Section -->
+    <section class="mb-16">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl shadow-2xl p-8 md:p-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-white">Ready to Take the Next Step?</h2>
+          <p class="text-xl text-center mb-8 text-blue-100">Request a free consultation with a qualified gastric sleeve surgeon</p>
+          
+          <div class="max-w-2xl mx-auto">
+            <ConsultationForm source="Gastric Sleeve Cost Page" theme="dark" />
+          </div>
+        </div>
       </div>
     </section>
 

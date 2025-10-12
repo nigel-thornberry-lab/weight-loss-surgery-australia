@@ -1,0 +1,5 @@
+# Copy this to .env file in root directory
+# Then replace YOUR_SCRIPT_ID_HERE with your actual Google Apps Script deployment ID
+
+PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL=https://script.google.com/macros/s/YOUR_SCRIPT_ID_HERE/exec
+

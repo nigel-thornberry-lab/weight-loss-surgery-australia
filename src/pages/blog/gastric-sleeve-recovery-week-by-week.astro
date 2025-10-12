@@ -1,5 +1,6 @@
 ---
 import BlogLayout from '../../layouts/BlogLayout.astro';
+import NewsletterForm from '../../components/NewsletterForm.astro';
 
 const title = "Gastric Sleeve Recovery Week by Week: Complete 12-Week Timeline";
 const description = "Complete gastric sleeve recovery guide: What to expect each week for 12 weeks. Diet, activity, pain management, complications, and milestones.";
@@ -987,6 +988,16 @@ const faqSchema = {
     <li style="margin-bottom: 0;"><a href="/blog/bariatric-surgery-recipes-all-stages/">50+ Bariatric Recipes</a> — Delicious meals for every stage</li>
   </ul>
 </div>
+
+<!-- Newsletter Signup -->
+<section class="my-12">
+  <NewsletterForm 
+    source="Blog: Gastric Sleeve Recovery Week by Week"
+    headline="Get Our Complete Recovery Toolkit (Free)"
+    description="7-day email course used by 20,000+ patients: Week-by-week meal plans, shopping lists, supplement schedules, exercise timelines, and real patient recovery journals. Everything you need to heal fast."
+    ctaText="Send Me the Recovery Toolkit"
+  />
+</section>
 
 </BlogLayout>
 
