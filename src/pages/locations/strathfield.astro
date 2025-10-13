@@ -1,0 +1,351 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const surgeons = await getCollection('surgeons');
+const strathfieldSurgeons = surgeons.filter((s: any) => 
+	s.data.suburbs?.includes('Strathfield') || 
+	s.data.location?.includes('Strathfield') ||
+	s.data.location?.includes('Inner West')
+);
+
+const title = "Weight Loss Surgery Strathfield NSW | Inner West Bariatric Surgeons";
+const description = "Find weight loss surgery in Strathfield at Strathfield Private Hospital (0km). Expert FRACS surgeons, comprehensive local support. 32,828 Strathfield residents rely on this guide.";
+const canonicalUrl = "https://weightlosssurgery.com.au/locations/strathfield";
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+	<!-- Breadcrumbs -->
+	<div class="bg-gray-50 border-b border-gray-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+			<nav class="flex text-sm" aria-label="Breadcrumb">
+				<a href="/" class="text-purple-600 hover:text-purple-800">Home</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<a href="/locations/sydney" class="text-purple-600 hover:text-purple-800">Sydney</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<span class="text-gray-600">Strathfield</span>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-3xl">
+				<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+					Weight Loss Surgery in Strathfield
+				</h1>
+				<p class="text-xl md:text-2xl text-white/90 mb-4 leading-relaxed">
+					Expert bariatric surgery for Strathfield residents with your hospital right in the local area - Strathfield Private Hospital.
+				</p>
+				<p class="text-lg text-white/80 mb-8">
+					<strong>Population:</strong> 32,828 Strathfield residents • <strong>Median Age:</strong> 39 • <strong>Hospital:</strong> In Strathfield (0km)
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="/contact" class="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition text-lg font-semibold text-center shadow-xl">
+						Book Free Consultation
+					</a>
+					<a href="/costs" class="bg-purple-600/80 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition text-lg font-semibold text-center border-2 border-white/30 shadow-xl">
+						View Cost Breakdown
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Hospital & Surgery Location -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Your Local Surgery Location</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Strathfield residents have the advantage of Strathfield Private Hospital right in their local area.</p>
+			
+			<div class="grid lg:grid-cols-2 gap-8">
+				<!-- Hospital Information -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start mb-6">
+						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div>
+							<a href="https://www.google.com/maps/search/?api=1&query=Strathfield+Private+Hospital+3+Everton+Road+Strathfield" target="_blank" rel="noopener noreferrer">
+								<h3 class="text-2xl font-bold text-purple-600 hover:text-purple-800 mb-2">Strathfield Private Hospital →</h3>
+							</a>
+							<p class="text-gray-600 mb-1">★ 3.9 Google Rating</p>
+							<p class="text-gray-600 mb-1">Modern private hospital with bariatric program</p>
+						</div>
+					</div>
+
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">Address</p>
+								<a href="https://www.google.com/maps/search/?api=1&query=3+Everton+Road+Strathfield" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">
+									<p class="text-gray-700">3 Everton Road<br/>Strathfield NSW 2135</p>
+								</a>
+								<p class="text-sm text-purple-600 mt-1 font-semibold">0km - Right in Strathfield!</p>
+							</div>
+						</div>
+
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">Contact Hospital</p>
+								<p class="text-gray-700">
+									<a href="tel:0297454000" class="text-purple-600 hover:text-purple-800">(02) 9745 4000</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="bg-purple-50 rounded-lg p-4">
+							<h4 class="font-bold text-gray-900 mb-3">Expert Bariatric Surgeons:</h4>
+							<div class="space-y-3">
+								<div class="bg-white rounded-lg p-3">
+									<p class="font-bold text-gray-900">Dr Simon Chew, MBBS MS FRACS</p>
+									<p class="text-sm text-gray-600">General & laparoscopic bariatric surgery specialist</p>
+									<p class="text-sm text-gray-600">20+ years experience</p>
+								</div>
+								<div class="bg-white rounded-lg p-3">
+									<p class="font-bold text-gray-900">Dr David McLeod, MBBS FRACS</p>
+									<p class="text-sm text-gray-600">Obesity surgery specialist • Strathfield Private Hospital</p>
+								</div>
+								<div class="bg-white rounded-lg p-3">
+									<p class="font-bold text-gray-900">Dr Alvin Ng, MBBS FRACS</p>
+									<p class="text-sm text-gray-600">Advanced laparoscopic & bariatric surgeon</p>
+									<p class="text-sm text-gray-600">15+ years experience</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="bg-green-50 rounded-lg p-4">
+							<p class="text-sm text-gray-700"><strong>💡 Exceptional Convenience:</strong> Having your hospital right in Strathfield means shorter travel for consultations, surgery, and follow-up appointments - all within your local community.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Location Benefits -->
+				<div class="space-y-6">
+					<div class="bg-white rounded-xl shadow-md p-6">
+						<h4 class="text-lg font-bold text-gray-900 mb-4">📍 Benefits for Strathfield Residents</h4>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Hospital right in your suburb (0km)</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Three experienced FRACS surgeons</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Easy access by train (Strathfield Station)</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Family can visit easily during recovery</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Full multidisciplinary team on-site</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="bg-purple-50 rounded-xl p-6 border border-purple-200">
+						<h4 class="text-lg font-bold text-gray-900 mb-3">🚇 From Strathfield</h4>
+						<p class="text-gray-700 text-sm mb-3"><strong>Walking:</strong> 10 minutes from Strathfield Station</p>
+						<p class="text-gray-700 text-sm mb-3"><strong>Driving:</strong> 2-5 minutes from central Strathfield</p>
+						<p class="text-gray-700 text-sm mb-3"><strong>Bus:</strong> Multiple routes along The Boulevarde</p>
+						<p class="text-gray-700 text-sm"><strong>Parking:</strong> On-site visitor parking</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Local Support Services -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Local Support Services in Strathfield</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Comprehensive post-surgery support right in your local Strathfield area.</p>
+			
+			<div class="grid lg:grid-cols-2 gap-6">
+				<!-- Dietitians -->
+				<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Specialist Dietitians</h3>
+					
+					<div class="space-y-4 mb-4">
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=Suite+304+Level+3+2-4+Cross+Street+Hurstville" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Accredited Weight Loss Dietitian (St George Area) →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">APD-certified bariatric dietitian • ★ 5.0 Google rating</p>
+							<p class="text-xs text-gray-600 mb-2">Specialist in pre- and post-bariatric surgery nutrition, weight management, diabetes</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Suite+304+Level+3+2-4+Cross+Street+Hurstville" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">Suite 304, Level 3, 2-4 Cross St, Hurstville</a></p>
+							<p class="text-sm text-gray-600">(7km from Strathfield, 15 min drive)</p>
+							<p class="text-sm text-purple-600"><strong>Phone:</strong> <a href="tel:0297503966" class="hover:text-purple-800">(02) 9750 3966</a></p>
+							<p class="text-xs text-gray-600 mt-2"><strong>✓ Medicare bulk billing available</strong></p>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm">
+							<h4 class="font-bold text-gray-700 text-sm mb-1">Other Options:</h4>
+							<ul class="text-sm text-gray-600 space-y-2">
+								<li class="flex items-start">
+									<svg class="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span><strong>Dietitians Australia:</strong> Search local APD dietitians at dietitiansaustralia.org.au</span>
+								</li>
+								<li class="flex items-start">
+									<svg class="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+										<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+									</svg>
+									<span><strong>Hospital-Affiliated:</strong> Ask surgeon for hospital dietitian referrals</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- Physiotherapists -->
+				<div class="bg-[#def7f1] rounded-xl p-6 border border-gray-200">
+					<div class="w-12 h-12 bg-[#6c95ef] rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Exercise & Physiotherapy</h3>
+					
+					<div class="space-y-4 mb-4">
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=3+Everton+Road+Strathfield" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Evolution Physio →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">★ 4.9 Google Rating (100+ reviews)</p>
+							<p class="text-xs text-gray-600 mb-2">Musculoskeletal physio, post-surgical rehab, chronic pain management, injury prevention</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=3+Everton+Road+Strathfield" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">3 Everton Rd, Strathfield</a></p>
+							<p class="text-sm text-purple-600 font-semibold">Same building as Strathfield Private Hospital!</p>
+							<p class="text-sm text-purple-600"><strong>Phone:</strong> <a href="tel:0297463555" class="hover:text-purple-800">(02) 9746 3555</a></p>
+							<p class="text-xs text-gray-600 mt-2">🕒 Mon-Fri 7am-7pm, Sat 8am-12pm</p>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=10A+The+Boulevarde+Strathfield" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Strathfield Physiotherapy & Sports Injury Centre →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">★ 4.6 Google Rating</p>
+							<p class="text-xs text-gray-600 mb-2">Post-surgical rehab, weight management support, individualized programs</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=10A+The+Boulevarde+Strathfield" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">10A The Boulevarde, Strathfield</a></p>
+							<p class="text-sm text-purple-600"><strong>Phone:</strong> <a href="tel:0297453911" class="hover:text-purple-800">(02) 9745 3911</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pharmacies -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Post-Surgery Supplies in Strathfield</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Stock up on bariatric vitamins, protein shakes, and supplements at these local pharmacies.</p>
+			
+			<div class="grid md:grid-cols-3 gap-6">
+				<a href="https://www.google.com/maps/search/?api=1&query=24-28+The+Boulevarde+Strathfield" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200 group block">
+					<div class="flex items-start mb-4">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+							<svg class="w-6 h-6 text-[#6c95ef]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="font-bold text-gray-900 mb-1 text-lg group-hover:text-blue-600 transition">Chemist Warehouse Strathfield</h3>
+							<p class="text-sm text-gray-600">24-28 The Boulevarde, Strathfield</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-3"><strong class="text-[#6c95ef]">Best for:</strong> Bariatric vitamins, lowest prices, Optifast</p>
+					<p class="text-sm text-gray-600">📞 <a href="tel:0297469988" class="text-purple-600 hover:text-purple-800">(02) 9746 9988</a></p>
+					<p class="text-sm text-gray-600">🕒 Mon-Sat 8:30am-8pm, Sun 9am-7pm</p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=11+The+Boulevarde+Strathfield" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200 group block">
+					<div class="flex items-start mb-4">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+							<svg class="w-6 h-6 text-[#6c95ef]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="font-bold text-gray-900 mb-1 text-lg group-hover:text-blue-600 transition">Priceline Pharmacy Strathfield</h3>
+							<p class="text-sm text-gray-600">Shop 16, 11 The Boulevarde, Strathfield</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-3"><strong class="text-[#6c95ef]">Best for:</strong> Skincare, supplements, personalized advice</p>
+					<p class="text-sm text-gray-600">📞 <a href="tel:0297469021" class="text-purple-600 hover:text-purple-800">(02) 9746 9021</a></p>
+					<p class="text-sm text-gray-600">🕒 Mon-Fri 8:30am-7pm, Sat 9am-6pm, Sun 10am-5pm</p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=2-4+Albert+Road+Strathfield" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200 group block">
+					<div class="flex items-start mb-4">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+							<svg class="w-6 h-6 text-[#6c95ef]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="font-bold text-gray-900 mb-1 text-lg group-hover:text-blue-600 transition">Strathfield South Pharmacy</h3>
+							<p class="text-sm text-gray-600">2-4 Albert Road, Strathfield</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-3"><strong class="text-[#6c95ef]">Best for:</strong> Local service, protein shakes, calcium</p>
+					<p class="text-sm text-gray-600">📞 <a href="tel:0297463022" class="text-purple-600 hover:text-purple-800">(02) 9746 3022</a></p>
+					<p class="text-sm text-gray-600">🕒 Mon-Fri 9am-6pm, Sat 9am-1pm</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 bg-gradient-to-br from-purple-600 to-purple-700 text-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">
+				Ready to Start Your Journey?
+			</h2>
+			<p class="text-xl text-purple-100 mb-8 leading-relaxed">
+				Connect with expert bariatric surgeons right in Strathfield. Get your questions answered with a free consultation.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contact" class="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition text-lg font-semibold">
+					Book Free Consultation
+				</a>
+				<a href="/costs" class="bg-purple-800 text-white px-8 py-4 rounded-lg hover:bg-purple-900 transition text-lg font-semibold border-2 border-white/20">
+					View Detailed Costs
+				</a>
+			</div>
+			<p class="text-sm text-purple-200 mt-6">No obligation • Medicare rebates available • Payment plans offered</p>
+		</div>
+	</section>
+</BaseLayout>
+
