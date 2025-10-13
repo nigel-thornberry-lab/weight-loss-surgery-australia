@@ -828,9 +828,16 @@ const schemaMarkup = {
           const target = e.currentTarget as HTMLElement;
           state.bmi = target.dataset.bmi || '';
           
-          // Visual feedback
-          document.querySelectorAll('.bmi-option').forEach(b => b.classList.remove('border-blue-600', 'bg-blue-100'));
-          target.classList.add('border-blue-600', 'bg-blue-100');
+          // Visual feedback - remove from all, add to selected
+          document.querySelectorAll('.bmi-option').forEach(b => {
+            b.classList.remove('border-blue-600', 'bg-blue-100', 'ring-2', 'ring-blue-500');
+          });
+          target.classList.add('border-blue-600', 'bg-blue-100', 'ring-2', 'ring-blue-500');
+          
+          // Scroll to health conditions section smoothly
+          setTimeout(() => {
+            document.querySelector('.mb-8 hr')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 300);
         });
       });
 
@@ -849,6 +856,25 @@ const schemaMarkup = {
 
       // Calculate button
       document.getElementById('calculate-btn')?.addEventListener('click', () => {
+        console.log('Calculate button clicked', state);
+        
+        // Validate we have minimum required data
+        if (!state.procedure) {
+          alert('Please select a procedure first');
+          goToStep(1);
+          return;
+        }
+        if (!state.city) {
+          alert('Please select your location');
+          goToStep(2);
+          return;
+        }
+        if (!state.insurance) {
+          alert('Please select your insurance status');
+          goToStep(3);
+          return;
+        }
+        
         // Collect selected conditions
         state.conditions = Array.from(document.querySelectorAll('input[name="conditions"]:checked'))
           .map((input: any) => input.value);
@@ -892,14 +918,24 @@ const schemaMarkup = {
     }
 
     function calculateResults() {
+      console.log('calculateResults called with state:', state);
+      
       // Show loading state
       document.getElementById('calculator-form')?.classList.add('hidden');
       document.getElementById('loading-state')?.classList.remove('hidden');
 
       // Simulate calculation delay for UX
       setTimeout(() => {
-        const results = generateResults();
-        displayResults(results);
+        try {
+          const results = generateResults();
+          console.log('Generated results:', results);
+          displayResults(results);
+        } catch (error) {
+          console.error('Error generating results:', error);
+          document.getElementById('loading-state')?.classList.add('hidden');
+          document.getElementById('calculator-form')?.classList.remove('hidden');
+          alert('Error calculating costs. Please try again or contact support.');
+        }
       }, 1500);
     }
 
@@ -975,6 +1011,8 @@ const schemaMarkup = {
     }
 
     function displayResults(results: any) {
+      console.log('Displaying results:', results);
+      
       // Hide loading
       document.getElementById('loading-state')?.classList.add('hidden');
       
@@ -982,20 +1020,35 @@ const schemaMarkup = {
       const template = document.getElementById('results-template') as HTMLTemplateElement;
       if (!template) {
         console.error('Results template not found');
+        alert('Error: Results template not found. Please refresh the page.');
         return;
       }
+      
+      console.log('Template found:', template);
       
       // Clone template content
       const resultsClone = template.content.cloneNode(true) as DocumentFragment;
       
+      console.log('Template cloned');
+      
       // Populate all the dynamic data
-      populateResults(resultsClone, results);
+      try {
+        populateResults(resultsClone, results);
+        console.log('Results populated');
+      } catch (error) {
+        console.error('Error populating results:', error);
+        alert('Error displaying results. Check console for details.');
+        return;
+      }
       
       // Insert into page
       const container = document.getElementById('results-container');
       if (container) {
+        console.log('Results container found, inserting content');
         container.innerHTML = '';
         container.appendChild(resultsClone);
+        
+        console.log('Content inserted, setting up interactions');
         
         // Setup accordion interactions
         setupAccordions();
@@ -1009,7 +1062,11 @@ const schemaMarkup = {
         // Scroll to results
         setTimeout(() => {
           container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          console.log('Scrolled to results');
         }, 100);
+      } else {
+        console.error('Results container not found');
+        alert('Error: Results container not found');
       }
     }
 
