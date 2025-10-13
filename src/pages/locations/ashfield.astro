@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const surgeons = await getCollection('surgeons');
+const ashfieldSurgeons = surgeons.filter((s: any) => 
+	s.data.suburbs?.includes('Ashfield') || 
+	s.data.location?.includes('Inner West')
+);
+
+const title = "Weight Loss Surgery Ashfield NSW | Inner West Bariatric Surgeons";
+const description = "Find weight loss surgery in Ashfield at Sydney Private Hospital (in Ashfield!). Expert FRACS surgeons, comprehensive local support. 23,012 Ashfield residents rely on this guide.";
+const canonicalUrl = "https://weightlosssurgery.com.au/locations/ashfield";
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+	<!-- Breadcrumbs -->
+	<div class="bg-gray-50 border-b border-gray-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+			<nav class="flex text-sm" aria-label="Breadcrumb">
+				<a href="/" class="text-purple-600 hover:text-purple-800">Home</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<a href="/locations/sydney" class="text-purple-600 hover:text-purple-800">Sydney</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<span class="text-gray-600">Ashfield</span>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-3xl">
+				<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+					Weight Loss Surgery in Ashfield
+				</h1>
+				<p class="text-xl md:text-2xl text-white/90 mb-4 leading-relaxed">
+					Expert bariatric surgery for Inner West residents with Sydney Private Hospital right in Ashfield.
+				</p>
+				<p class="text-lg text-white/80 mb-8">
+					<strong>Population:</strong> 23,012 Ashfield residents • <strong>Median Age:</strong> 36 • <strong>Hospital:</strong> In Ashfield (0km)
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="/contact" class="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition text-lg font-semibold text-center shadow-xl">
+						Book Free Consultation
+					</a>
+					<a href="/costs" class="bg-purple-600/80 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition text-lg font-semibold text-center border-2 border-white/30 shadow-xl">
+						View Cost Breakdown
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Hospital & Surgery Location -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Your Local Surgery Location</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Ashfield residents have the advantage of Sydney Private Hospital right in their suburb.</p>
+			
+			<div class="grid lg:grid-cols-2 gap-8">
+				<!-- Hospital Information -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start mb-6">
+						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div>
+							<a href="https://www.google.com/maps/search/?api=1&query=63+Victoria+Street+Ashfield" target="_blank" rel="noopener noreferrer">
+								<h3 class="text-2xl font-bold text-purple-600 hover:text-purple-800 mb-2">Sydney Private Hospital →</h3>
+							</a>
+							<p class="text-gray-600 mb-1">Modern private hospital with bariatric program</p>
+						</div>
+					</div>
+
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">Address</p>
+								<a href="https://www.google.com/maps/search/?api=1&query=63+Victoria+Street+Ashfield" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">
+									<p class="text-gray-700">63 Victoria Street<br/>Ashfield NSW 2131</p>
+								</a>
+								<p class="text-sm text-purple-600 mt-1 font-semibold">0km - Right in Ashfield!</p>
+							</div>
+						</div>
+
+						<div class="bg-purple-50 rounded-lg p-4">
+							<h4 class="font-bold text-gray-900 mb-3">Expert Bariatric Surgeons:</h4>
+							<div class="space-y-3">
+								<div class="bg-white rounded-lg p-3">
+									<p class="font-bold text-gray-900">Dr Fadil Khaleal, FRACS</p>
+									<p class="text-sm text-gray-600">Bariatric surgery specialist</p>
+									<p class="text-sm text-gray-600">Laparoscopic bariatric procedures</p>
+								</div>
+								<div class="bg-white rounded-lg p-3">
+									<p class="font-bold text-gray-900">Dr Titus Kwok, FRACS</p>
+									<p class="text-sm text-gray-600">Bariatric surgery specialist</p>
+									<p class="text-sm text-gray-600">Advanced laparoscopic techniques</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="bg-green-50 rounded-lg p-4">
+							<p class="text-sm text-gray-700"><strong>💡 Ultimate Convenience:</strong> Having your hospital right in Ashfield means minimal travel for consultations, surgery, and follow-up appointments.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Location Benefits -->
+				<div class="space-y-6">
+					<div class="bg-white rounded-xl shadow-md p-6">
+						<h4 class="text-lg font-bold text-gray-900 mb-4">📍 Benefits for Ashfield Residents</h4>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Hospital right in Ashfield (0km)</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Two experienced FRACS surgeons</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Walk to appointments from home</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Easy access via Liverpool Road</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Family support throughout recovery</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="bg-purple-50 rounded-xl p-6 border border-purple-200">
+						<h4 class="text-lg font-bold text-gray-900 mb-3">🚶 From Ashfield</h4>
+						<p class="text-gray-700 text-sm mb-3"><strong>Walking:</strong> 5-15 minutes from Ashfield Station</p>
+						<p class="text-gray-700 text-sm mb-3"><strong>Driving:</strong> 2-5 minutes from anywhere in Ashfield</p>
+						<p class="text-gray-700 text-sm mb-3"><strong>Train:</strong> Ashfield Station (T2 Inner West Line) + walk</p>
+						<p class="text-gray-700 text-sm"><strong>Bus:</strong> Multiple routes along Liverpool Road</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Local Support Services -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Local Support Services in Ashfield</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Comprehensive post-surgery support right in your local Ashfield area.</p>
+			
+			<div class="grid lg:grid-cols-2 gap-6">
+				<!-- Dietitians -->
+				<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Specialist Dietitians</h3>
+					
+					<div class="space-y-4 mb-4">
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=240+242+Liverpool+Road+Ashfield" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Mel Yang Nutrition →</h4>
+							</a>
+							<p class="text-xs text-gray-600 mb-2">Accredited Practising Dietitians (APDs)</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=240+242+Liverpool+Road+Ashfield" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">240/242 Liverpool Rd, Ashfield</a></p>
+							<p class="text-sm text-purple-600"><strong>Phone:</strong> <a href="tel:0297986999" class="hover:text-purple-800">(02) 9798 6999</a></p>
+							<p class="text-xs text-gray-600 mt-2"><strong>Services:</strong> 12-week weight management, Chronic Disease Management bulk billing available</p>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm">
+							<h4 class="font-bold text-gray-700 text-sm mb-1">Aseel Abdin, APD</h4>
+							<p class="text-xs text-gray-600 mb-2">Board Certified Bariatric Counselor</p>
+							<p class="text-sm text-gray-700"><strong>Practice:</strong> Bariatric Metabolic Institute (Sydney)</p>
+							<p class="text-xs text-gray-600 mt-2">National board certification in bariatric science • ANZMOSS associate member</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Physiotherapists -->
+				<div class="bg-[#def7f1] rounded-xl p-6 border border-gray-200">
+					<div class="w-12 h-12 bg-[#6c95ef] rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Exercise & Physiotherapy</h3>
+					
+					<div class="space-y-4 mb-4">
+						<div class="bg-white rounded-lg p-4 shadow-sm">
+							<h4 class="font-bold text-purple-600 text-sm mb-1">Movement Therapy EP</h4>
+							<p class="text-xs text-gray-600 mb-2">ESSA-accredited exercise physiologists</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> Ashfield, NSW</p>
+							<p class="text-xs text-gray-600 mt-2"><strong>Specialties:</strong> Post-surgical recovery programs, NDIS & WorkCover friendly</p>
+							<p class="text-xs text-gray-600 mt-1">Modern facility, fully accessible</p>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm">
+							<h4 class="font-bold text-purple-600 text-sm mb-1">Five Dock Physiotherapy & Sports Injury Centre</h4>
+							<p class="text-xs text-gray-600 mb-2">Est. early 1990s • Serves Ashfield residents</p>
+							<p class="text-sm text-gray-700"><strong>Services:</strong> Personalized treatment plans, post-surgical rehab</p>
+							<p class="text-xs text-gray-600 mt-2">State-of-the-art equipment, corrective exercise focus</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pharmacies -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Post-Surgery Supplies in Ashfield</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Stock up on bariatric vitamins, protein shakes, and supplements at these Liverpool Road pharmacies.</p>
+			
+			<div class="grid md:grid-cols-3 gap-6">
+				<a href="https://www.google.com/maps/search/?api=1&query=268+270+Liverpool+Road+Ashfield" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200 group block">
+					<div class="flex items-start mb-4">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+							<svg class="w-6 h-6 text-[#6c95ef]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="font-bold text-gray-900 mb-1 text-lg group-hover:text-blue-600 transition">Chemist Warehouse Ashfield</h3>
+							<p class="text-sm text-gray-600">268-270 Liverpool Rd, Ashfield</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-3"><strong class="text-[#6c95ef]">★ 4.1 Google Rating</strong></p>
+					<p class="text-sm text-gray-700 mb-3"><strong class="text-[#6c95ef]">Best for:</strong> Lowest prices, bariatric vitamins</p>
+					<p class="text-sm text-gray-600">📞 <a href="tel:0297986323" class="text-purple-600 hover:text-purple-800">(02) 9798 6323</a></p>
+					<p class="text-sm text-gray-600">🕒 Mon-Fri 8am-9pm, Sat 8am-7pm, Sun 9am-7pm</p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Shop+73+260A+Liverpool+Road+Ashfield" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200 group block">
+					<div class="flex items-start mb-4">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+							<svg class="w-6 h-6 text-[#6c95ef]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="font-bold text-gray-900 mb-1 text-lg group-hover:text-blue-600 transition">Priceline Pharmacy Ashfield</h3>
+							<p class="text-sm text-gray-600">Shop 73, Ashfield Mall, 260A Liverpool Rd</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-3"><strong class="text-[#6c95ef]">★ 4.3 Google Rating</strong></p>
+					<p class="text-sm text-gray-700 mb-3"><strong class="text-[#6c95ef]">Best for:</strong> Supplements, advice</p>
+					<p class="text-sm text-gray-600">📞 <a href="tel:0297995934" class="text-purple-600 hover:text-purple-800">(02) 9799 5934</a></p>
+					<p class="text-sm text-gray-600">🕒 Tue-Wed-Fri 9am-5:30pm, Thu 9am-9pm, Sat 9am-4pm</p>
+				</a>
+
+				<a href="https://www.google.com/maps/search/?api=1&query=Ashfield+NSW+2131" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200 group block">
+					<div class="flex items-start mb-4">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+							<svg class="w-6 h-6 text-[#6c95ef]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="font-bold text-gray-900 mb-1 text-lg group-hover:text-blue-600 transition">TerryWhite Chemmart Ashfield</h3>
+							<p class="text-sm text-gray-600">Ashfield NSW 2131</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-3"><strong class="text-[#6c95ef]">Best for:</strong> Professional advice, calcium</p>
+					<p class="text-sm text-gray-600">🕒 8:30am-7pm daily</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 bg-gradient-to-br from-purple-600 to-purple-700 text-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">
+				Ready to Start Your Journey?
+			</h2>
+			<p class="text-xl text-purple-100 mb-8 leading-relaxed">
+				Connect with expert bariatric surgeons right in Ashfield. Get your questions answered with a free consultation.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contact" class="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition text-lg font-semibold">
+					Book Free Consultation
+				</a>
+				<a href="/costs" class="bg-purple-800 text-white px-8 py-4 rounded-lg hover:bg-purple-900 transition text-lg font-semibold border-2 border-white/20">
+					View Detailed Costs
+				</a>
+			</div>
+			<p class="text-sm text-purple-200 mt-6">No obligation • Medicare rebates available • Payment plans offered</p>
+		</div>
+	</section>
+</BaseLayout>
+
