@@ -1,9 +1,75 @@
-	<!-- Support Groups & Community -->
+	<!-- Key Benefits -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Why Choose Cronulla for Bariatric Surgery</h2>
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="bg-[#eedfd7] rounded-xl p-6 border border-gray-200">
+					<div class="w-12 h-12 bg-[#6c95ef] rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Advanced Surgicare in Cronulla</h3>
+					<p class="text-gray-700 mb-3">Comprehensive bariatric services directly in Cronulla including sleeve gastrectomy and gastric bypass. Multi-disciplinary team with surgeons, nutritionists, and counselors—no extended travel to central Sydney.</p>
+					<p class="text-sm text-blue-600 font-medium">→ Local specialized center</p>
+				</div>
+				<div class="bg-[#def7f1] rounded-xl p-6 border border-gray-200">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Australia's Leading Hospital</h3>
+					<p class="text-gray-700 mb-3">St George Private Hospital in nearby Kogarah is Australia's highest volume bariatric hospital (1,400+ procedures annually) and first internationally accredited Centre of Excellence. World-class outcomes locally.</p>
+					<p class="text-sm text-green-600 font-medium">→ 1,400+ procedures/year</p>
+				</div>
+				<div class="bg-[#eedfd7] rounded-xl p-6 border border-gray-200">
+					<div class="w-12 h-12 bg-[#6c95ef] rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Perfect Beach Recovery</h3>
+					<p class="text-gray-700 mb-3">Cronulla's beachside location naturally encourages post-surgery activity through beach walks and swimming. Ideal environment for maintaining long-term weight loss with active outdoor lifestyle support.</p>
+					<p class="text-sm text-purple-600 font-medium">→ Active beach community</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Family Accommodation -->
 	<section class="py-16 bg-gray-50">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Family Accommodation Near Hospitals</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Comfortable stays for family members during your surgery.</p>
+			<div class="grid lg:grid-cols-3 gap-6">
+				<a href="https://www.google.com/maps/search/?api=1&query=Novotel+Sydney+Brighton+Beach" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Novotel Sydney Brighton Beach</h3>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 5km from St George Private</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$150-$250/night</p>
+					<p class="text-gray-600 text-xs">✅ Indoor pool, WiFi, fitness, restaurant, family rooms</p>
+				</a>
+				<a href="https://www.google.com/maps/search/?api=1&query=Travelodge+Hotel+Hurstville+Sydney" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Travelodge Hotel Hurstville</h3>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 4km from St George Private</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$120-$200/night</p>
+					<p class="text-gray-600 text-xs">✅ WiFi, restaurant, laundry, family rooms</p>
+				</a>
+				<a href="https://www.google.com/maps/search/?api=1&query=Quest+Cronulla+Beach" target="_blank" rel="noopener noreferrer" class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<h3 class="font-bold text-gray-900 mb-2">Quest Cronulla Beach</h3>
+					<p class="text-gray-700 text-sm mb-2"><strong>Distance:</strong> 5km from Miranda Private</p>
+					<p class="text-gray-700 text-sm mb-2"><strong>From:</strong> ~$180-$300/night</p>
+					<p class="text-gray-600 text-xs">✅ Kitchen suites, fitness, BBQ, beach access</p>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Support Groups -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Local Support Groups</h2>
-			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Connect with other bariatric patients for advice, motivation, and long-term success.</p>
-			
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Connect with other bariatric patients for ongoing support.</p>
 			<div class="grid md:grid-cols-2 gap-8">
 				<div class="bg-white rounded-xl shadow-md p-6">
 					<div class="flex items-center mb-4">
@@ -12,14 +78,13 @@
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
 							</svg>
 						</div>
-						<h3 class="text-xl font-bold text-gray-900">Eastern Suburbs Bariatric Group</h3>
+						<h3 class="text-xl font-bold text-gray-900">Sutherland Shire Bariatric Group</h3>
 					</div>
-					<p class="text-gray-700 mb-3">📍 <strong>Location:</strong> Prince of Wales Private Hospital, Level 3 Meeting Room</p>
-					<p class="text-gray-700 mb-3">📅 <strong>When:</strong> Second Tuesday of every month, 6:00-7:30pm</p>
+					<p class="text-gray-700 mb-3">📍 <strong>Location:</strong> St George Private Hospital, Level 2 Conference Room</p>
+					<p class="text-gray-700 mb-3">📅 <strong>When:</strong> First Thursday of every month, 6:30-8:00pm</p>
 					<p class="text-gray-700 mb-3">💰 <strong>Cost:</strong> Free (open to all bariatric patients)</p>
-					<p class="text-gray-600 text-sm">Topics: Real patient experiences, nutrition tips, exercise motivation, recipe sharing. Guest speakers include surgeons, dietitians, and psychologists.</p>
+					<p class="text-gray-600 text-sm">Share experiences, nutrition strategies, and exercise routines with fellow Shire residents.</p>
 				</div>
-
 				<div class="bg-[#def7f1] rounded-xl p-6 border border-gray-200">
 					<div class="flex items-center mb-4">
 						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
@@ -36,7 +101,7 @@
 							</svg>
 							<div>
 								<p class="font-semibold text-gray-900">r/BariatricSurgery (Reddit)</p>
-								<p class="text-sm text-gray-600">24/7 community, 150k+ members</p>
+								<p class="text-sm text-gray-600">150k+ members, 24/7 support</p>
 							</div>
 						</li>
 						<li class="flex items-start">
@@ -45,7 +110,7 @@
 							</svg>
 							<div>
 								<p class="font-semibold text-gray-900">Bariatric Support Australia (Facebook)</p>
-								<p class="text-sm text-gray-600">Aussie-specific advice & experiences</p>
+								<p class="text-sm text-gray-600">Aussie-specific advice</p>
 							</div>
 						</li>
 						<li class="flex items-start">
@@ -54,24 +119,21 @@
 							</svg>
 							<div>
 								<p class="font-semibold text-gray-900">MyFitnessPal Forums</p>
-								<p class="text-sm text-gray-600">Tracking & nutrition tips</p>
+								<p class="text-sm text-gray-600">Nutrition & tracking</p>
 							</div>
 						</li>
 					</ul>
-					<p class="text-sm text-gray-700 mt-4"><strong>💡 Why join?</strong> Meet others at different stages, get practical tips, find accountability partners, celebrate wins together.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Cost Information -->
-	<section class="py-16 bg-white">
+	<section class="py-16 bg-gray-50">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Cost & Medicare Information</h2>
-			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Understanding the costs helps you plan your bariatric surgery journey with confidence.</p>
-
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Plan your surgery with confidence knowing the costs.</p>
 			<div class="grid lg:grid-cols-2 gap-8">
-				<!-- With Insurance -->
 				<div class="bg-white rounded-xl shadow-md p-8">
 					<div class="flex items-center mb-6">
 						<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
@@ -79,20 +141,19 @@
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
 							</svg>
 						</div>
-						<h3 class="text-2xl font-bold text-gray-900">With Private Health Insurance</h3>
+						<h3 class="text-2xl font-bold text-gray-900">With Private Insurance</h3>
 					</div>
-
 					<div class="space-y-4 mb-6">
 						<div class="flex justify-between items-center py-3 border-b border-gray-200">
 							<span class="text-gray-700">Surgeon fees (gap)</span>
 							<span class="font-bold text-gray-900">$2,000 - $5,000</span>
 						</div>
 						<div class="flex justify-between items-center py-3 border-b border-gray-200">
-							<span class="text-gray-700">Anaesthetist fees (gap)</span>
+							<span class="text-gray-700">Anaesthetist (gap)</span>
 							<span class="font-bold text-gray-900">$800 - $1,500</span>
 						</div>
 						<div class="flex justify-between items-center py-3 border-b border-gray-200">
-							<span class="text-gray-700">Hospital (excess)</span>
+							<span class="text-gray-700">Hospital excess</span>
 							<span class="font-bold text-gray-900">$250 - $750</span>
 						</div>
 						<div class="flex justify-between items-center py-3 border-b border-gray-200">
@@ -104,21 +165,10 @@
 							<span class="text-2xl font-bold text-green-600">$3,450 - $8,050</span>
 						</div>
 					</div>
-
-					<div class="bg-blue-50 rounded-lg p-4 mb-4">
-						<p class="text-sm text-gray-700"><strong>💡 Bondi Tip:</strong> Prince of Wales Private works with many health funds offering "gap cover" arrangements. Ask during your consultation.</p>
+					<div class="bg-blue-50 rounded-lg p-4">
+						<p class="text-sm text-gray-700"><strong>💡 Cronulla Tip:</strong> St George Private works with all major health funds offering gap cover arrangements.</p>
 					</div>
-
-					<p class="text-sm text-gray-600 mb-3"><strong>What Your Insurance Typically Covers:</strong></p>
-					<ul class="text-sm text-gray-700 space-y-1">
-						<li>✓ Hospital accommodation (private or shared room)</li>
-						<li>✓ Theatre and equipment fees</li>
-						<li>✓ Majority of surgeon & anaesthetist fees</li>
-						<li>✓ Post-op hospital stay (1-2 nights typically)</li>
-					</ul>
 				</div>
-
-				<!-- Without Insurance -->
 				<div class="bg-white rounded-xl shadow-md p-8">
 					<div class="flex items-center mb-6">
 						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
@@ -126,9 +176,8 @@
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 							</svg>
 						</div>
-						<h3 class="text-2xl font-bold text-gray-900">Self-Funded (No Insurance)</h3>
+						<h3 class="text-2xl font-bold text-gray-900">Self-Funded</h3>
 					</div>
-
 					<div class="space-y-4 mb-6">
 						<div class="flex justify-between items-center py-3 border-b border-gray-200">
 							<span class="text-gray-700">Surgeon fees</span>
@@ -151,104 +200,76 @@
 							<span class="text-2xl font-bold text-orange-600">$18,400 - $28,700</span>
 						</div>
 					</div>
-
-					<div class="bg-green-50 rounded-lg p-4 mb-4">
-						<p class="text-sm font-bold text-gray-900 mb-2">Medicare Rebates Still Apply</p>
-						<p class="text-sm text-gray-700">Even without private insurance, you'll receive Medicare rebates of approximately $1,500-$2,000.</p>
+					<div class="bg-green-50 rounded-lg p-4">
+						<p class="text-sm font-bold text-gray-900 mb-2">Medicare Rebates Apply</p>
+						<p class="text-sm text-gray-700">~$1,500-$2,000 rebate regardless of insurance.</p>
 					</div>
-
-					<p class="text-sm text-gray-600 mb-3"><strong>Payment Options Available:</strong></p>
-					<ul class="text-sm text-gray-700 space-y-1">
-						<li>✓ MacCredit medical loans (interest-free periods)</li>
-						<li>✓ Payment plans through clinics</li>
-						<li>✓ Superannuation early release (if eligible)</li>
-						<li>✓ Afterpay/Zip for some providers</li>
-					</ul>
 				</div>
 			</div>
-
 			<div class="mt-8 text-center">
-				<a href="/costs" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
-					View Complete Cost Breakdown
-				</a>
+				<a href="/costs" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">View Full Cost Breakdown</a>
 			</div>
 		</div>
 	</section>
 
-	<!-- Local Demographics & Context -->
+	<!-- Demographics -->
 	<section class="py-16 bg-gradient-to-br from-blue-50 to-blue-100">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Bariatric Surgery in Bondi: What You Should Know</h2>
-			
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Bariatric Surgery in Cronulla</h2>
 			<div class="grid md:grid-cols-2 gap-8">
 				<div class="bg-white rounded-xl p-6 shadow-md">
-					<h3 class="text-xl font-bold text-gray-900 mb-4">📊 Why Bondi Residents Choose Surgery</h3>
-					<p class="text-gray-700 mb-4">Bondi is home to 10,411 residents with a median age of 33. Nearly half were born overseas, creating a culturally diverse, health-focused community that values preventive care and active lifestyles.</p>
-					
-					<p class="text-gray-900 font-semibold mb-2">Common Health Concerns:</p>
-					<ul class="text-gray-700 space-y-2 text-sm mb-4">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">📊 Cronulla Community</h3>
+					<p class="text-gray-700 mb-4">Cronulla is home to 17,898 residents with a median age of 43 and strong family focus (4,926 families). The Sutherland Shire is experiencing growing health awareness as diabetes and obesity rates rise.</p>
+					<p class="text-gray-900 font-semibold mb-2">Why Residents Choose Surgery:</p>
+					<ul class="text-gray-700 space-y-2 text-sm">
 						<li class="flex items-start">
 							<svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
 							</svg>
-							<span><strong>Type 2 Diabetes:</strong> Bariatric surgery can lead to diabetes remission in 60-80% of patients</span>
+							<span><strong>Type 2 Diabetes:</strong> 78-80% remission rates with surgery</span>
 						</li>
 						<li class="flex items-start">
 							<svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
 							</svg>
-							<span><strong>Sleep Apnoea:</strong> Significant improvement or resolution in 70-85% of cases</span>
+							<span><strong>Sleep Apnoea:</strong> 70-85% improvement</span>
 						</li>
 						<li class="flex items-start">
 							<svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
 							</svg>
-							<span><strong>High Blood Pressure:</strong> Improvement or resolution in 50-70% of patients</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-5 h-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-							<span><strong>Joint Pain:</strong> Reduced stress on knees, hips, and back with weight loss</span>
+							<span><strong>Joint Pain:</strong> Major relief for active lifestyles</span>
 						</li>
 					</ul>
 				</div>
-
 				<div class="bg-white rounded-xl p-6 shadow-md">
-					<h3 class="text-xl font-bold text-gray-900 mb-4">🏥 Healthcare Access in Bondi</h3>
-					<p class="text-gray-700 mb-4">Bondi's proximity to Prince of Wales Private Hospital means world-class bariatric care is just minutes away, with excellent transport links and comprehensive support services.</p>
-					
-					<p class="text-gray-900 font-semibold mb-2">Local Healthcare Advantages:</p>
+					<h3 class="text-xl font-bold text-gray-900 mb-4">🏥 Local Healthcare</h3>
+					<p class="text-gray-700 mb-4">World-class bariatric care at St George Private Hospital (Australia's busiest) plus local Advanced Surgicare clinic in Cronulla itself.</p>
+					<p class="text-gray-900 font-semibold mb-2">Advantages:</p>
 					<ul class="text-gray-700 space-y-2 text-sm">
 						<li class="flex items-start">
 							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
 							</svg>
-							<span>Premier private hospital with dedicated bariatric centre</span>
+							<span>International Centre of Excellence nearby</span>
 						</li>
 						<li class="flex items-start">
 							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
 							</svg>
-							<span>Multiple highly experienced bariatric surgeons</span>
+							<span>Local clinic for consultations</span>
 						</li>
 						<li class="flex items-start">
 							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
 							</svg>
-							<span>Health-conscious community with active lifestyle support</span>
+							<span>Beach lifestyle supports recovery</span>
 						</li>
 						<li class="flex items-start">
 							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
 							</svg>
-							<span>Excellent public transport and parking access</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-							</svg>
-							<span>Complete allied health services locally available</span>
+							<span>Complete allied health network</span>
 						</li>
 					</ul>
 				</div>
@@ -256,63 +277,44 @@
 		</div>
 	</section>
 
-	<!-- FAQ Section -->
+	<!-- FAQ -->
 	<section class="py-16 bg-white">
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Frequently Asked Questions</h2>
-			
 			<div class="space-y-6">
 				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
-					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
-						Which hospital do Bondi residents use for bariatric surgery?
-					</summary>
-					<p class="text-gray-700 mt-4">Most Bondi and Eastern Suburbs residents undergo bariatric surgery at <strong>Prince of Wales Private Hospital</strong> in Randwick, just 3.5km (8-10 minutes) from Bondi. The hospital offers state-of-the-art facilities and a dedicated bariatric surgery team.</p>
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">Which hospital do Cronulla residents use?</summary>
+					<p class="text-gray-700 mt-4">Most Cronulla and Sutherland Shire residents choose <strong>St George Private Hospital</strong> in Kogarah (Australia's highest volume bariatric hospital with 1,400+ procedures annually) or have consultations at <strong>Advanced Surgicare</strong> directly in Cronulla.</p>
 				</details>
-
 				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
-					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
-						How do I get to Prince of Wales Private Hospital from Bondi?
-					</summary>
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">How do I get to St George Private from Cronulla?</summary>
 					<div class="text-gray-700 mt-4 space-y-2">
-						<p><strong>By Car:</strong> 8-10 minutes via Avoca St and Alison Rd. On-site parking available.</p>
-						<p><strong>By Bus:</strong> Route 333 from Bondi Junction to Randwick (10 mins), then 5-minute walk.</p>
-						<p><strong>By Taxi/Uber:</strong> ~$15-20, takes 8-12 minutes depending on traffic.</p>
+						<p><strong>By Car:</strong> 20 minutes via A1. Hospital parking available.</p>
+						<p><strong>By Train:</strong> Cronulla to Kogarah (25 mins), then 5-min walk.</p>
+						<p><strong>By Taxi/Uber:</strong> ~$30-40, takes 20-25 minutes.</p>
 					</div>
 				</details>
-
 				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
-					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
-						Are there specialist dietitians near Bondi for post-surgery support?
-					</summary>
-					<p class="text-gray-700 mt-4">Yes! Bondi Junction and surrounding areas have several Accredited Practising Dietitians (APDs) with bariatric surgery specialization. Many offer Medicare rebates for bariatric nutrition consultations and some provide telehealth appointments.</p>
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">Are there dietitians near Cronulla for post-surgery support?</summary>
+					<p class="text-gray-700 mt-4">Yes! Multiple APD-certified dietitians in Cronulla, Miranda, and Caringbah specialize in bariatric nutrition. Many offer Medicare rebates and evening appointments.</p>
 				</details>
-
 				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
-					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
-						How much does gastric sleeve surgery cost for Bondi residents?
-					</summary>
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">Surgery costs for Cronulla residents?</summary>
 					<div class="text-gray-700 mt-4">
-						<p class="mb-2">Prince of Wales Private Hospital pricing:</p>
-						<ul class="space-y-1 ml-4">
-							<li>• <strong>With private health insurance:</strong> $3,450 - $8,050 out-of-pocket</li>
-							<li>• <strong>Self-funded (no insurance):</strong> $18,400 - $28,700 total</li>
+						<p class="mb-2">St George Private Hospital:</p>
+						<ul class="ml-4 space-y-1">
+							<li>• <strong>With insurance:</strong> $3,450 - $8,050 out-of-pocket</li>
+							<li>• <strong>Self-funded:</strong> $18,400 - $28,700 total</li>
 						</ul>
-						<p class="mt-2">Medicare rebates apply regardless of insurance status. Many surgeons offer gap cover arrangements.</p>
 					</div>
 				</details>
-
 				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
-					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
-						Do I need a GP referral to see a bariatric surgeon in Bondi?
-					</summary>
-					<p class="text-gray-700 mt-4">Yes, you'll need a GP referral to see a bariatric surgeon and to qualify for Medicare rebates. Your local Bondi GP can provide this referral after an initial consultation discussing your weight loss goals and medical history.</p>
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">Do I need a GP referral?</summary>
+					<p class="text-gray-700 mt-4">Yes, GP referral required for surgeon consultations and Medicare rebates. Your local Cronulla GP can refer you after discussing your goals.</p>
 				</details>
-
 				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
-					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
-						Can I recover at home in Bondi after surgery?
-					</summary>
-					<p class="text-gray-700 mt-4">Yes. Most patients are discharged 1-2 nights after surgery and recover comfortably at home. Being in Bondi means you're close to your surgeon's rooms and the hospital for any follow-up appointments. The hospital has 24/7 support lines if you have concerns. Plus, Bondi's beach walks provide perfect low-impact exercise during recovery.</p>
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">Can I recover at home in Cronulla?</summary>
+					<p class="text-gray-700 mt-4">Absolutely. Most patients discharged after 1-2 nights and recover well at home. Cronulla's beach walks provide perfect low-impact exercise during recovery. You're close to follow-up care.</p>
 				</details>
 			</div>
 		</div>

@@ -1,0 +1,657 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const surgeons = await getCollection('surgeons');
+const hurstvilleSurgeons = surgeons.filter((s: any) => 
+	s.data.suburbs?.includes('Hurstville') || 
+	s.data.location?.includes('St George') ||
+	s.data.suburbs?.includes('Kogarah')
+);
+
+const title = "Weight Loss Surgery Hurstville Heights NSW | Bariatric Surgeons at St George Private";
+const description = "Find weight loss surgery for Hurstville Heights residents at St George Private Hospital. Expert FRACS surgeons, comprehensive bariatric program, complete local support for Hurstville Heights' 5,200 residents.";
+const canonicalUrl = "https://weightlosssurgery.com.au/locations/hurstville-heights";
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+	<!-- Breadcrumbs -->
+	<div class="bg-gray-50 border-b border-gray-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+			<nav class="flex text-sm" aria-label="Breadcrumb">
+				<a href="/" class="text-purple-600 hover:text-purple-800">Home</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<a href="/locations/sydney" class="text-purple-600 hover:text-purple-800">Sydney</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<span class="text-gray-600">Hurstville Heights</span>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="relative bg-gradient-to-br from-blue-600 via-purple-600 to-blue-700 py-20">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-3xl">
+				<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+					Weight Loss Surgery in Hurstville Heights
+				</h1>
+				<p class="text-xl md:text-2xl text-white/90 mb-4 leading-relaxed">
+					Expert bariatric surgery for Hurstville Heights residents at St George Private Hospital - just 4km away in Kogarah.
+				</p>
+				<p class="text-lg text-white/80 mb-8">
+					<strong>Population:</strong> 5,200 Hurstville Heights residents • <strong>Median Age:</strong> 41 • <strong>Distance:</strong> 4km to St George Private
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="/contact" class="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition text-lg font-semibold text-center shadow-xl">
+						Book Free Consultation
+					</a>
+					<a href="/costs" class="bg-purple-600/80 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition text-lg font-semibold text-center border-2 border-white/30 shadow-xl">
+						View Cost Breakdown
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Hospital & Surgery Location -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Your Surgery Location</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Hurstville Heights residents access expert bariatric surgery at nearby St George Private Hospital - a leading Southern Sydney facility.</p>
+			
+			<div class="grid lg:grid-cols-2 gap-8">
+				<!-- Hospital Information -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start mb-6">
+						<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+							<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div>
+							<a href="https://www.google.com/maps/search/?api=1&query=St+George+Private+Hospital+Kogarah" target="_blank" rel="noopener noreferrer">
+								<h3 class="text-2xl font-bold text-purple-600 hover:text-purple-800 mb-2">St George Private Hospital →</h3>
+							</a>
+							<p class="text-gray-600 mb-1">Leading bariatric surgery centre - Southern Sydney</p>
+							<p class="text-sm text-yellow-600">★ 4.3 Google Rating</p>
+						</div>
+					</div>
+
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">Address</p>
+								<a href="https://www.google.com/maps/search/?api=1&query=1+South+Street+Kogarah+NSW+2217" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">
+									<p class="text-gray-700">1 South Street, Kogarah NSW 2217</p>
+								</a>
+								<p class="text-sm text-purple-600 mt-1">4km from Hurstville Heights (8-10 min drive)</p>
+							</div>
+						</div>
+
+						<div class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+							</svg>
+							<div>
+								<p class="font-semibold text-gray-900">Contact Hospital</p>
+								<p class="text-gray-700">
+									<a href="tel:0295536666" class="text-purple-600 hover:text-purple-800">(02) 9553 6666</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="bg-purple-50 rounded-lg p-4">
+							<h4 class="font-bold text-gray-900 mb-3">Expert Bariatric Surgeons:</h4>
+							<div class="space-y-3">
+								<div class="bg-white rounded-lg p-3">
+									<p class="font-bold text-gray-900">Dr Meena Mittal, MBBS, FRACS</p>
+									<p class="text-sm text-gray-600">St George Bariatric Clinic • 20+ years experience • All bariatric procedures</p>
+								</div>
+								<div class="bg-white rounded-lg p-3">
+									<p class="font-bold text-gray-900">Dr George Hopkins, MBBS, FRACS</p>
+									<p class="text-sm text-gray-600">15+ years experience • Upper GI & bariatric surgery specialist</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Location Benefits -->
+				<div class="space-y-6">
+					<div class="bg-white rounded-xl shadow-md p-6">
+						<h4 class="text-lg font-bold text-gray-900 mb-4">📍 Benefits for Hurstville Heights Residents</h4>
+						<ul class="space-y-3">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Short 4km distance - under 10 minutes drive</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Leading Southern Sydney bariatric centre</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Two FRACS-accredited surgeons with 15-20+ years experience</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Easy train access (Kogarah Station nearby)</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="bg-purple-50 rounded-xl p-6 border border-purple-200">
+						<h4 class="text-lg font-bold text-gray-900 mb-3">🚗 Getting There from Hurstville Heights</h4>
+						<p class="text-gray-700 text-sm mb-3"><strong>Driving:</strong> Via Penshurst St & Princes Hwy (8-10 min, 4km)</p>
+						<p class="text-gray-700 text-sm mb-3"><strong>Train:</strong> Hurstville to Kogarah Station (2 stops, then 15 min walk or short bus)</p>
+						<p class="text-gray-700 text-sm"><strong>Parking:</strong> On-site hospital parking available</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Local Support Services -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Local Support Services in Hurstville</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Build your bariatric support team with healthcare professionals in Hurstville and nearby St George area.</p>
+			
+			<div class="grid lg:grid-cols-2 gap-6">
+				<!-- Dietitians -->
+				<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Specialist Dietitians</h3>
+					
+					<div class="space-y-4 mb-4">
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=238+Forest+Road+Hurstville" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Nutrition Australia NSW →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">APD-certified dietitians • Weight management & bariatric specialists</p>
+							<p class="text-xs text-gray-600 mb-2">Specialization: Pre & post-bariatric surgery nutrition counseling</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=238+Forest+Road+Hurstville" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">238 Forest Road, Hurstville</a></p>
+							<p class="text-sm text-purple-600"><strong>Phone:</strong> <a href="tel:0295863900" class="hover:text-purple-800">(02) 9586 3900</a></p>
+							<p class="text-xs text-green-600 mt-2">✓ Medicare rebates available with GP referral</p>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=Smart+Nutrition+Hurstville" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Smart Nutrition Hurstville →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">APD-certified • Weight loss & post-surgical nutrition</p>
+							<p class="text-xs text-gray-600 mb-2">Specialization: Bariatric surgery nutrition plans</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> Westfield Hurstville</p>
+							<p class="text-xs text-green-600 mt-2">✓ Bulk billing available with GP care plans</p>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<h4 class="font-bold text-gray-900 text-sm mb-1">St George Bariatric Clinic Dietitians</h4>
+							<p class="text-sm text-gray-600 mb-2">APD-certified • Integrated with St George Private Hospital</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> Kogarah (at St George Private Hospital)</p>
+							<p class="text-xs text-gray-600 mt-2">Part of comprehensive bariatric surgery package</p>
+						</div>
+					</div>
+					
+					<p class="text-xs text-gray-600 mt-4"><strong>💡 Tip:</strong> Ask your GP for a Chronic Disease Management plan for Medicare rebates on dietitian consultations.</p>
+				</div>
+
+				<!-- Exercise Physiologists -->
+				<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+					<div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Exercise Physiologists</h3>
+					
+					<div class="space-y-4 mb-4">
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=Hurstville+Physiotherapy+Clinic" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">Hurstville Physiotherapy Clinic →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">ESSA-accredited • 4.8 Google rating (200+ reviews)</p>
+							<p class="text-xs text-gray-600 mb-2">Specialization: Post-surgical rehabilitation, exercise physiology</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Hurstville+Physiotherapy+Clinic" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800">Central Hurstville</a></p>
+							<p class="text-sm text-purple-600"><strong>Phone:</strong> <a href="tel:0295792277" class="hover:text-purple-800">(02) 9579 2277</a></p>
+							<p class="text-xs text-green-600 mt-2">✓ Medicare rebates available with GP referral</p>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<a href="https://www.google.com/maps/search/?api=1&query=St+George+Physiotherapy+Sports+Medicine" target="_blank" rel="noopener noreferrer" class="block">
+								<h4 class="font-bold text-purple-600 hover:text-purple-800 text-sm mb-1">St George Physiotherapy & Sports Medicine →</h4>
+							</a>
+							<p class="text-sm text-gray-600 mb-2">ESSA-accredited • Post-surgical rehabilitation specialists</p>
+							<p class="text-xs text-gray-600 mb-2">Specialization: Post-bariatric surgery exercise programs</p>
+							<p class="text-sm text-gray-700"><strong>Location:</strong> Kogarah (near St George Private Hospital)</p>
+							<p class="text-xs text-green-600 mt-2">✓ Bulk billing with Medicare EPC plans</p>
+						</div>
+
+						<div class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition">
+							<h4 class="font-bold text-gray-900 text-sm mb-1">Chronic Gains</h4>
+							<p class="text-sm text-gray-600 mb-2">ESSA-accredited • 50+ five-star reviews</p>
+							<p class="text-sm text-gray-700"><strong>Service Area:</strong> Covers St George region</p>
+							<p class="text-sm text-purple-600"><strong>Phone:</strong> <a href="tel:0410883228" class="hover:text-purple-800">0410 883 228</a></p>
+							<p class="text-xs text-gray-600 mt-2">Post-surgical rehab & chronic disease management</p>
+						</div>
+					</div>
+					
+					<p class="text-xs text-gray-600 mt-4"><strong>💡 Tip:</strong> Medicare rebates available with GP referral under Chronic Disease Management plans.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Post-Op Supplies & Pharmacies -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Post-Surgery Supplies in Hurstville</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Stock up on bariatric vitamins and supplements at Hurstville's local pharmacies.</p>
+
+			<div class="grid md:grid-cols-2 gap-6 mb-8">
+				<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<div class="flex items-start mb-4">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="font-bold text-gray-900 mb-1 text-lg">Chemist Warehouse Hurstville</h3>
+							<p class="text-sm text-gray-600 mb-2">Westfield Hurstville Shopping Centre</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-4"><strong class="text-blue-600">Best for:</strong> Widest bariatric supplement selection, competitive prices</p>
+					<div class="flex flex-col gap-3">
+						<a href="https://www.google.com/maps/search/?api=1&query=Westfield+Hurstville+Shopping+Centre" target="_blank" rel="noopener noreferrer" class="bg-blue-50 hover:bg-blue-100 text-blue-700 px-4 py-2 rounded-lg transition text-sm font-medium text-center border border-blue-200">
+							📍 Get Directions
+						</a>
+						<a href="tel:0295796766" class="bg-green-50 hover:bg-green-100 text-green-700 px-4 py-2 rounded-lg transition text-sm font-medium text-center border border-green-200">
+							📞 (02) 9579 6766
+						</a>
+					</div>
+					<p class="text-xs text-gray-600 mt-3">Extended shopping centre hours including weekends</p>
+				</div>
+
+				<div class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+					<div class="flex items-start mb-4">
+						<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
+							<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+							</svg>
+						</div>
+						<div class="flex-1">
+							<h3 class="font-bold text-gray-900 mb-1 text-lg">Priceline Pharmacy Hurstville</h3>
+							<p class="text-sm text-gray-600 mb-2">Forest Road, Hurstville</p>
+						</div>
+					</div>
+					<p class="text-sm text-gray-700 mb-4"><strong class="text-blue-600">Best for:</strong> Professional advice, health consultations</p>
+					<div class="flex flex-col gap-3">
+						<a href="https://www.google.com/maps/search/?api=1&query=Priceline+Pharmacy+Forest+Road+Hurstville" target="_blank" rel="noopener noreferrer" class="bg-blue-50 hover:bg-blue-100 text-blue-700 px-4 py-2 rounded-lg transition text-sm font-medium text-center border border-blue-200">
+							📍 Get Directions
+						</a>
+						<a href="tel:0295796688" class="bg-green-50 hover:bg-green-100 text-green-700 px-4 py-2 rounded-lg transition text-sm font-medium text-center border border-green-200">
+							📞 (02) 9579 6688
+						</a>
+					</div>
+					<p class="text-xs text-gray-600 mt-3">Call ahead to confirm bariatric vitamin stock</p>
+				</div>
+			</div>
+
+			<div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-8 border-2 border-orange-200 max-w-4xl mx-auto mt-8">
+				<h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">🛒 Essential Post-Op Supplies Checklist</h3>
+				<div class="grid md:grid-cols-2 gap-4 text-gray-700">
+					<div class="flex items-start">
+						<svg class="w-5 h-5 text-orange-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						<div>
+							<p class="font-bold text-gray-900">Bariatric Multivitamin</p>
+							<p class="text-sm text-gray-600">Chewable or capsule, daily</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+						<svg class="w-5 h-5 text-orange-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						<div>
+							<p class="font-bold text-gray-900">Calcium Citrate 600mg</p>
+							<p class="text-sm text-gray-600">Twice daily, between meals</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+						<svg class="w-5 h-5 text-orange-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						<div>
+							<p class="font-bold text-gray-900">Vitamin B12 Sublingual</p>
+							<p class="text-sm text-gray-600">1000mcg, dissolves under tongue</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+						<svg class="w-5 h-5 text-orange-600 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						<div>
+							<p class="font-bold text-gray-900">Protein Powder (Isolate)</p>
+							<p class="text-sm text-gray-600">25-30g protein per serve</p>
+						</div>
+					</div>
+				</div>
+				<p class="text-sm text-gray-700 mt-4 text-center"><strong>💡 Tip:</strong> Your surgeon will provide a detailed supplement schedule. Always follow their specific recommendations.</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Cost Information -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Cost & Medicare Information</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Understanding the costs helps you plan your bariatric surgery journey with confidence.</p>
+
+			<div class="grid lg:grid-cols-2 gap-8">
+				<!-- With Insurance -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-6">
+						<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+							<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-gray-900">With Private Health Insurance</h3>
+					</div>
+
+					<div class="space-y-4 mb-6">
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Surgeon fees (gap)</span>
+							<span class="font-bold text-gray-900">$2,000 - $5,000</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Anaesthetist fees (gap)</span>
+							<span class="font-bold text-gray-900">$800 - $1,500</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Hospital (excess)</span>
+							<span class="font-bold text-gray-900">$250 - $750</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Dietitian & support</span>
+							<span class="font-bold text-gray-900">$400 - $800</span>
+						</div>
+						<div class="flex justify-between items-center py-4 bg-green-50 rounded-lg px-4">
+							<span class="font-bold text-gray-900">Total Out-of-Pocket</span>
+							<span class="text-2xl font-bold text-green-600">$3,450 - $8,050</span>
+						</div>
+					</div>
+
+					<p class="text-sm text-gray-600 mb-3"><strong>What Your Insurance Typically Covers:</strong></p>
+					<ul class="text-sm text-gray-700 space-y-1">
+						<li>✓ Hospital accommodation (private or shared room)</li>
+						<li>✓ Theatre and equipment fees</li>
+						<li>✓ Majority of surgeon & anaesthetist fees</li>
+						<li>✓ Post-op hospital stay (1-2 nights typically)</li>
+					</ul>
+				</div>
+
+				<!-- Without Insurance -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-6">
+						<div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mr-4">
+							<svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+						</div>
+						<h3 class="text-2xl font-bold text-gray-900">Self-Funded (No Insurance)</h3>
+					</div>
+
+					<div class="space-y-4 mb-6">
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Surgeon fees</span>
+							<span class="font-bold text-gray-900">$6,000 - $10,000</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Anaesthetist fees</span>
+							<span class="font-bold text-gray-900">$1,800 - $2,500</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Hospital fees</span>
+							<span class="font-bold text-gray-900">$10,000 - $15,000</span>
+						</div>
+						<div class="flex justify-between items-center py-3 border-b border-gray-200">
+							<span class="text-gray-700">Dietitian & support</span>
+							<span class="font-bold text-gray-900">$600 - $1,200</span>
+						</div>
+						<div class="flex justify-between items-center py-4 bg-orange-50 rounded-lg px-4">
+							<span class="font-bold text-gray-900">Total Investment</span>
+							<span class="text-2xl font-bold text-orange-600">$18,400 - $28,700</span>
+						</div>
+					</div>
+
+					<div class="bg-green-50 rounded-lg p-4 mb-4">
+						<p class="text-sm font-bold text-gray-900 mb-2">Medicare Rebates Still Apply</p>
+						<p class="text-sm text-gray-700">Even without private insurance, you'll receive Medicare rebates of approximately $1,500-$2,000 (MBS items 31572/31575).</p>
+					</div>
+
+					<p class="text-sm text-gray-600 mb-3"><strong>Payment Options Available:</strong></p>
+					<ul class="text-sm text-gray-700 space-y-1">
+						<li>✓ MacCredit medical loans (interest-free periods)</li>
+						<li>✓ Payment plans through clinics</li>
+						<li>✓ Superannuation early release (if eligible)</li>
+						<li>✓ Afterpay/Zip for some providers</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="mt-8 text-center">
+				<a href="/costs" class="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition text-lg font-semibold">
+					View Complete Sydney Cost Breakdown
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Demographics & Health -->
+	<section class="py-16 bg-gradient-to-br from-blue-50 to-purple-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Bariatric Surgery in Hurstville Heights: What You Should Know</h2>
+			
+			<div class="grid md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-xl p-6 shadow-md">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">📊 Why Hurstville Heights Residents Choose Surgery</h3>
+					<p class="text-gray-700 mb-4">Hurstville Heights' 5,200 residents (median age 41, median household income $1,705/week) have convenient access to St George Private Hospital's comprehensive bariatric program - just 4km away in Kogarah.</p>
+					
+					<p class="text-gray-900 font-semibold mb-2">Common Health Concerns:</p>
+					<ul class="text-gray-700 space-y-2 text-sm mb-4">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Type 2 Diabetes:</strong> Bariatric surgery can lead to diabetes remission in 60-80% of patients</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Sleep Apnoea:</strong> Significant improvement or resolution in 70-85% of cases</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>High Blood Pressure:</strong> Improvement or resolution in 50-70% of patients</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span><strong>Joint Pain:</strong> Reduced stress on knees, hips, and back with weight loss</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="bg-white rounded-xl p-6 shadow-md">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">🏥 Healthcare Access from Hurstville Heights</h3>
+					<p class="text-gray-700 mb-4">Hurstville Heights residents enjoy exceptional proximity to St George Private Hospital - just 4km away with easy access to one of Southern Sydney's leading bariatric surgery centres.</p>
+					
+					<p class="text-gray-900 font-semibold mb-2">Local Healthcare Advantages:</p>
+					<ul class="text-gray-700 space-y-2 text-sm">
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Ultra-short distance (4km) to surgery location</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>St George Bariatric Clinic - comprehensive program</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Two FRACS surgeons with 15-20+ years experience</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Local support services in Hurstville</span>
+						</li>
+						<li class="flex items-start">
+							<svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+							</svg>
+							<span>Easy train or car access to hospital</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Frequently Asked Questions</h2>
+			
+			<div class="space-y-6">
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						Where do Hurstville Heights residents have bariatric surgery?
+					</summary>
+					<p class="text-gray-700 mt-4">Hurstville Heights residents typically have bariatric surgery at <strong>St George Private Hospital</strong> in Kogarah, just 4km away (8-10 minute drive). The hospital features experienced FRACS surgeons Dr Meena Mittal and Dr George Hopkins.</p>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						How do I get to St George Private Hospital from Hurstville Heights?
+					</summary>
+					<div class="text-gray-700 mt-4 space-y-2">
+						<p><strong>By Car:</strong> Via Penshurst St & Princes Hwy (8-10 minutes, 4km). On-site parking available.</p>
+						<p><strong>By Train:</strong> Hurstville to Kogarah Station (2 stops, then 15 min walk or short bus)</p>
+						<p><strong>Address:</strong> 1 South Street, Kogarah NSW 2217</p>
+					</div>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						Are there specialist dietitians in Hurstville for post-surgery support?
+					</summary>
+					<p class="text-gray-700 mt-4">Yes! Nutrition Australia NSW at 238 Forest Road, Hurstville has APD dietitians specializing in bariatric surgery nutrition. Smart Nutrition at Westfield Hurstville and St George Bariatric Clinic also provide comprehensive support.</p>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						How much does gastric sleeve surgery cost for Hurstville Heights residents?
+					</summary>
+					<div class="text-gray-700 mt-4">
+						<p class="mb-2">St George Private Hospital pricing:</p>
+						<ul class="space-y-1 ml-4">
+							<li>• <strong>With private health insurance:</strong> $3,450 - $8,050 out-of-pocket</li>
+							<li>• <strong>Self-funded (no insurance):</strong> $18,400 - $28,700 total</li>
+						</ul>
+						<p class="mt-2">Medicare rebates apply regardless of insurance status.</p>
+					</div>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						Do I need a GP referral to see a bariatric surgeon?
+					</summary>
+					<p class="text-gray-700 mt-4">Yes, you'll need a GP referral to see a bariatric surgeon and to qualify for Medicare rebates. Your local Hurstville Heights or Hurstville GP can provide this referral after an initial consultation discussing your weight loss goals and medical history.</p>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						Where can I get exercise physiology support near Hurstville Heights?
+					</summary>
+					<p class="text-gray-700 mt-4">Hurstville Physiotherapy Clinic in central Hurstville offers ESSA-accredited exercise physiology with 4.8 Google rating (200+ reviews). St George Physiotherapy & Sports Medicine near the hospital provides bulk-billed services with Medicare EPC plans.</p>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<summary class="font-bold text-gray-900 cursor-pointer text-lg">
+						Can I recover at home in Hurstville Heights after surgery?
+					</summary>
+					<p class="text-gray-700 mt-4">Yes. Most patients are discharged 1-2 nights after surgery and recover comfortably at home. The hospital provides 24/7 support lines, and you'll have follow-up appointments with your surgeon during the recovery period. Being only 4km from the hospital is ideal for post-op care.</p>
+				</details>
+			</div>
+		</div>
+	</section>
+
+	<!-- Surgeons Section -->
+	{hurstvilleSurgeons.length > 0 && (
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Expert Bariatric Surgeons Serving Hurstville Heights</h2>
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+					{hurstvilleSurgeons.slice(0, 6).map((surgeon: any) => (
+						<a href={`/surgeons/${surgeon.slug}`} class="bg-white rounded-xl shadow-md hover:shadow-xl transition p-6 border border-gray-200">
+							<h3 class="text-xl font-bold text-gray-900 mb-2">{surgeon.data.name}</h3>
+							{surgeon.data.location && (
+								<p class="text-sm text-gray-600 mb-3">{surgeon.data.location}</p>
+							)}
+							<p class="text-purple-600 hover:text-purple-800 font-medium text-sm">View Profile →</p>
+						</a>
+					))}
+				</div>
+			</div>
+		</section>
+	)}
+
+	<!-- Call to Action -->
+	<section class="bg-gradient-to-br from-purple-600 to-blue-600 text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Journey?</h2>
+			<p class="text-xl text-white/90 mb-10 max-w-3xl mx-auto">
+				Book a free consultation with an experienced bariatric surgeon at St George Private Hospital.
+			</p>
+			<div class="flex flex-col sm:flex-row justify-center gap-4">
+				<a href="/contact" class="bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition text-lg font-semibold">
+					Book Free Consultation
+				</a>
+				<a href="/costs" class="bg-purple-600 text-white px-8 py-4 rounded-lg hover:bg-purple-700 transition text-lg font-semibold border-2 border-white/30">
+					Understand Costs
+				</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
