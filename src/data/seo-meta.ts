@@ -125,6 +125,13 @@ export const seoMeta: Record<string, PageMeta> = {
     keywords: ["gastric sleeve vs bypass", "sleeve vs bypass", "which weight loss surgery"]
   },
 
+  // Cost Calculator
+  costCalculator: {
+    title: "Weight Loss Surgery Cost Calculator Australia - True Cost Breakdown 2025",
+    description: "Calculate your exact weight loss surgery costs including surgeon fees, insurance gaps, Medicare rebates, and 5-year ongoing costs. Most comprehensive calculator in Australia.",
+    keywords: ["gastric sleeve cost calculator", "weight loss surgery cost Australia", "bariatric surgery calculator", "Medicare bariatric surgery rebate", "true cost weight loss surgery"]
+  },
+
   bandVsSleeve: {
     title: "Gastric Band vs Sleeve - Compare Cost, Weight Loss & Recovery 2025",
     description: "Gastric band vs sleeve: Compare weight loss results, costs, recovery time & reversibility. Which procedure is right for you? Expert comparison guide.",

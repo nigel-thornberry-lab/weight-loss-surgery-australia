@@ -1,0 +1,487 @@
+---
+// This component will be rendered dynamically via JavaScript
+// It implements the conversion-optimized commitment ladder strategy
+---
+
+<template id="results-template">
+  <section class="py-16 bg-gradient-to-br from-blue-50 to-green-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Hero: Lead with Savings -->
+      <div class="text-center mb-12">
+        <div class="inline-block px-4 py-2 bg-green-100 rounded-full text-green-800 font-semibold mb-4">
+          🎉 Your Results Are Ready!
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Great news! You could save <span class="text-green-600" id="savings-amount">$16,247</span> compared to what most people pay
+        </h2>
+        <p class="text-xl text-gray-600">
+          Here's your personalized breakdown:
+        </p>
+      </div>
+
+      <!-- Main Cost Card -->
+      <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 mb-8">
+        <div class="text-center mb-8">
+          <div class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg mb-4">
+            <p class="text-sm font-medium uppercase tracking-wide">Your Total Out-of-Pocket</p>
+            <p class="text-4xl md:text-5xl font-bold" id="out-of-pocket-amount">$7,200</p>
+          </div>
+          
+          <div class="flex items-center justify-center gap-4 text-gray-600 mb-4">
+            <div class="text-right">
+              <p class="text-sm">Most people pay</p>
+              <p class="text-2xl font-bold line-through text-gray-400" id="avg-cost-amount">$23,447</p>
+            </div>
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+            <div class="text-left">
+              <p class="text-sm">You're saving</p>
+              <p class="text-2xl font-bold text-green-600" id="savings-display">$16,247</p>
+            </div>
+          </div>
+
+          <p class="text-gray-600 mb-4">
+            <strong>Payment plan:</strong> 
+            <span id="payment-plan">$300/month × 24 months</span>
+          </p>
+
+          <div class="flex gap-4 justify-center">
+            <button id="btn-save-results" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+              📱 Save These Results
+            </button>
+            <button id="btn-print" class="bg-white hover:bg-gray-50 border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold transition">
+              🖨️ Print This Page
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 rounded-xl p-6 text-center">
+          <p class="text-sm text-gray-700 mb-3">
+            ⬇️ Scroll down to see your complete breakdown<br/>
+            (includes hidden costs others miss)
+          </p>
+        </div>
+      </div>
+
+      <!-- Cost Breakdown Section (Progressive Disclosure) -->
+      <div class="max-w-4xl mx-auto space-y-4 mb-8">
+        
+        <!-- Surgery Costs -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition" data-target="surgery-costs">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">💰 Surgery Costs Breakdown</h3>
+              <p class="text-sm text-gray-600">See exactly what you're paying for</p>
+            </div>
+            <svg class="w-6 h-6 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="surgery-costs" class="accordion-content hidden px-6 pb-6">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="border-b">
+                  <th class="py-2 font-semibold text-gray-900">Item</th>
+                  <th class="py-2 font-semibold text-gray-900 text-right">Cost</th>
+                  <th class="py-2 font-semibold text-gray-900 text-right">Notes</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-700">
+                <tr class="border-b">
+                  <td class="py-3">Surgeon's Fee</td>
+                  <td class="py-3 text-right font-medium" id="cost-surgeon">$5,000 - $7,000</td>
+                  <td class="py-3 text-right text-sm text-gray-600">Varies by experience</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="py-3">Anaesthetist</td>
+                  <td class="py-3 text-right font-medium" id="cost-anaesthetist">$1,500 - $2,200</td>
+                  <td class="py-3 text-right text-sm text-gray-600">2-3 hour procedure</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="py-3">Hospital Stay</td>
+                  <td class="py-3 text-right font-medium" id="cost-hospital">$3,000 - $4,500</td>
+                  <td class="py-3 text-right text-sm text-gray-600">1-2 nights private</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="py-3">Surgical Assistant</td>
+                  <td class="py-3 text-right font-medium" id="cost-assistant">$800 - $1,200</td>
+                  <td class="py-3 text-right text-sm text-gray-600">Required for all</td>
+                </tr>
+                <tr class="border-b">
+                  <td class="py-3">Pre-Op Tests</td>
+                  <td class="py-3 text-right font-medium" id="cost-preop">$500 - $800</td>
+                  <td class="py-3 text-right text-sm text-gray-600">Blood work, ECG</td>
+                </tr>
+                <tr class="border-b bg-gray-50">
+                  <td class="py-3 font-bold">SUBTOTAL</td>
+                  <td class="py-3 text-right font-bold" id="cost-subtotal">$11,000 - $16,000</td>
+                  <td class="py-3"></td>
+                </tr>
+                <tr class="border-b text-green-700">
+                  <td class="py-3">Less: Medicare Rebate</td>
+                  <td class="py-3 text-right font-medium" id="cost-medicare">-$1,500</td>
+                  <td class="py-3 text-right text-sm">Item 31569, 31572</td>
+                </tr>
+                <tr class="border-b text-green-700">
+                  <td class="py-3">Less: Insurance Benefit</td>
+                  <td class="py-3 text-right font-medium" id="cost-insurance-benefit">-$6,000</td>
+                  <td class="py-3 text-right text-sm" id="insurance-note">Based on Gold cover</td>
+                </tr>
+                <tr class="bg-blue-100">
+                  <td class="py-4 font-bold text-lg text-blue-900">YOUR GAP PAYMENT</td>
+                  <td class="py-4 text-right font-bold text-2xl text-blue-900" id="gap-payment-result">$3,500 - $8,500</td>
+                  <td class="py-4 text-right text-sm font-semibold text-blue-900">Avg: $6,000</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 5-Year Costs -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition" data-target="five-year-costs">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">📅 5-Year Total Cost of Ownership</h3>
+              <p class="text-sm text-gray-600">Surgery + ongoing expenses</p>
+            </div>
+            <svg class="w-6 h-6 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="five-year-costs" class="accordion-content hidden px-6 pb-6">
+            <div class="mb-6">
+              <div class="space-y-2" id="year-breakdown">
+                <!-- Will be populated by JS -->
+              </div>
+              <div class="mt-4 pt-4 border-t-2 border-gray-300 flex justify-between items-center">
+                <span class="text-xl font-bold text-gray-900">5-Year Total:</span>
+                <span class="text-2xl font-bold text-blue-600" id="five-year-total">$14,800</span>
+              </div>
+            </div>
+
+            <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded">
+              <p class="font-bold text-green-900 mb-3">But here's what you SAVE from resolving health conditions:</p>
+              <div id="health-savings-list" class="space-y-2">
+                <!-- Will be populated by JS if conditions selected -->
+              </div>
+              <div class="mt-4 pt-4 border-t-2 border-green-600 flex justify-between items-center">
+                <span class="text-lg font-bold text-green-900">TOTAL POTENTIAL SAVINGS:</span>
+                <span class="text-2xl font-bold text-green-600" id="health-savings-total">$26,000</span>
+              </div>
+              <p class="text-sm text-green-800 mt-4 font-semibold">
+                ✨ Surgery pays for itself in 2-3 years
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compare Procedures (if not sure) -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition" data-target="compare-procedures">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">⚖️ Compare With Other Procedures</h3>
+              <p class="text-sm text-gray-600">See how different surgeries compare</p>
+            </div>
+            <svg class="w-6 h-6 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="compare-procedures" class="accordion-content hidden px-6 pb-6">
+            <div class="overflow-x-auto">
+              <table class="w-full text-sm">
+                <thead>
+                  <tr class="border-b-2">
+                    <th class="py-3 text-left font-semibold"></th>
+                    <th class="py-3 px-3 text-center font-semibold">Gastric Sleeve</th>
+                    <th class="py-3 px-3 text-center font-semibold">Gastric Bypass</th>
+                    <th class="py-3 px-3 text-center font-semibold">Gastric Band</th>
+                  </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                  <tr class="border-b">
+                    <td class="py-3 font-medium">Surgery Cost</td>
+                    <td class="py-3 px-3 text-center">$15-25k</td>
+                    <td class="py-3 px-3 text-center">$18-30k</td>
+                    <td class="py-3 px-3 text-center">$12-20k</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-3 font-medium">Your Out-of-Pocket</td>
+                    <td class="py-3 px-3 text-center font-bold">$6,000</td>
+                    <td class="py-3 px-3 text-center">$7,500</td>
+                    <td class="py-3 px-3 text-center">$4,500</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-3 font-medium">Recovery Time</td>
+                    <td class="py-3 px-3 text-center">2-3 weeks</td>
+                    <td class="py-3 px-3 text-center">3-4 weeks</td>
+                    <td class="py-3 px-3 text-center">1-2 weeks</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-3 font-medium">Weight Loss</td>
+                    <td class="py-3 px-3 text-center">60-70%</td>
+                    <td class="py-3 px-3 text-center">70-80%</td>
+                    <td class="py-3 px-3 text-center">40-50%</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-3 font-medium">Annual Vitamins</td>
+                    <td class="py-3 px-3 text-center">$300-500</td>
+                    <td class="py-3 px-3 text-center">$600-900</td>
+                    <td class="py-3 px-3 text-center">$100-200</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-3 font-medium">Revision Risk (20yr)</td>
+                    <td class="py-3 px-3 text-center">5-10%</td>
+                    <td class="py-3 px-3 text-center">3-5%</td>
+                    <td class="py-3 px-3 text-center text-red-600">40-60%</td>
+                  </tr>
+                  <tr class="bg-blue-50">
+                    <td class="py-3 font-bold">TRUE 5-YEAR TOTAL</td>
+                    <td class="py-3 px-3 text-center font-bold text-blue-600">$10,000</td>
+                    <td class="py-3 px-3 text-center font-bold">$14,500</td>
+                    <td class="py-3 px-3 text-center font-bold">$6,500*</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="text-xs text-gray-600 mt-3">*But 40% of band patients need revision within 10 years, adding $15k</p>
+            </div>
+            <div class="mt-6 text-center">
+              <a href="/compare/gastric-sleeve-vs-gastric-bypass" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                Compare All Procedures in Detail →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Financing Options -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition" data-target="financing-options">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">💳 Your Financing Options</h3>
+              <p class="text-sm text-gray-600">4 ways to pay for your surgery</p>
+            </div>
+            <svg class="w-6 h-6 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="financing-options" class="accordion-content hidden px-6 pb-6">
+            <div class="space-y-4" id="financing-list">
+              <!-- Will be populated by JS -->
+            </div>
+            <div class="mt-6 bg-purple-50 border-l-4 border-purple-600 p-6 rounded">
+              <h4 class="font-bold text-purple-900 mb-3">📅 12-Month Plan to Reduce Costs by $3,000</h4>
+              <ol class="space-y-2 text-sm text-purple-800">
+                <li><strong>Months 1-3:</strong> Get Gold hospital cover ($180/month)</li>
+                <li><strong>Months 4-12:</strong> Complete waiting period + save $500/month</li>
+                <li><strong>Month 13+:</strong> Have surgery with maximum insurance benefit</li>
+              </ol>
+              <p class="mt-3 text-sm font-semibold text-purple-900">
+                Total saved: $3,000 (minus $2,160 premiums = $840 net + you have insurance!)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- City Comparison -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden" id="city-comparison-section">
+          <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition" data-target="city-comparison">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">🏙️ How Your City Compares</h3>
+              <p class="text-sm text-gray-600">Could you save by traveling?</p>
+            </div>
+            <svg class="w-6 h-6 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div id="city-comparison" class="accordion-content hidden px-6 pb-6">
+            <div id="city-comparison-content">
+              <!-- Will be populated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Proof / Testimonial -->
+      <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 mb-8">
+        <div class="flex items-start">
+          <div class="flex-shrink-0">
+            <div class="flex text-yellow-400 text-xl mb-2">
+              ⭐⭐⭐⭐⭐
+            </div>
+          </div>
+          <div class="ml-4">
+            <p class="text-gray-800 text-lg italic mb-3">
+              "This calculator gave me more information than my surgeon's consultation. The hidden costs section alone saved me $3,000."
+            </p>
+            <p class="text-gray-600 font-semibold">- Michelle R., Sydney</p>
+            <p class="text-gray-500 text-sm">Gastric Sleeve, July 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- THE EMAIL CAPTURE SECTION -->
+      <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 md:p-12 text-white">
+        <div class="text-center mb-8">
+          <h3 class="text-3xl md:text-4xl font-bold mb-4">
+            📥 Get Your Complete Surgical Cost Package
+          </h3>
+          <p class="text-xl text-blue-100 mb-6">
+            You've invested 4 minutes researching your costs. Get everything you need to move forward:
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 mb-8">
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold">11-Page Detailed PDF Report</p>
+              <p class="text-sm text-blue-100">(ready to print and discuss with family)</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold">5 Pre-Screened Surgeons in <span id="surgeons-location">Your Area</span></p>
+              <p class="text-sm text-blue-100">(with reviews and pricing)</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold">Insurance Gap Reduction Guide</p>
+              <p class="text-sm text-blue-100">(save $2,000+ on your surgery)</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold">Payment Plan Comparison</p>
+              <p class="text-sm text-blue-100">(spreadsheet with 4 financing options)</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold">7-Day Email Course</p>
+              <p class="text-sm text-blue-100">("How to Fund Your Surgery")</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+              <p class="font-semibold">Hidden Costs Checklist</p>
+              <p class="text-sm text-blue-100">(23 items most people forget)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Email Form -->
+        <form id="email-capture-form" class="bg-white/10 backdrop-blur rounded-xl p-6">
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="block text-sm font-medium mb-2">First Name</label>
+              <input 
+                type="text" 
+                id="lead-first-name"
+                required
+                class="w-full px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white"
+                placeholder="Your first name"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Email Address</label>
+              <input 
+                type="email" 
+                id="lead-email"
+                required
+                class="w-full px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white"
+                placeholder="your@email.com"
+              />
+            </div>
+          </div>
+
+          <div class="space-y-2 mb-4 text-sm">
+            <label class="flex items-start cursor-pointer">
+              <input type="checkbox" checked class="mt-1 h-4 w-4 rounded" id="opt-cost-tips" />
+              <span class="ml-2 text-blue-100">Send me tips to reduce my surgery costs</span>
+            </label>
+            <label class="flex items-start cursor-pointer">
+              <input type="checkbox" checked class="mt-1 h-4 w-4 rounded" id="opt-financing" />
+              <span class="ml-2 text-blue-100">Notify me about special financing offers</span>
+            </label>
+          </div>
+
+          <button type="submit" class="w-full bg-white hover:bg-gray-100 text-blue-600 text-lg font-bold py-4 rounded-lg transition shadow-lg mb-4">
+            Send Me the Complete Package
+            <span class="text-sm font-normal block mt-1">2,847 people got this week</span>
+          </button>
+
+          <div class="text-center space-y-2 text-sm text-blue-100">
+            <p>🔒 Privacy guaranteed. No spam. Unsubscribe anytime.</p>
+            <p>🚫 We never call you. Email-only communication.</p>
+          </div>
+        </form>
+
+        <div class="mt-6 text-center border-t border-white/20 pt-6">
+          <p class="text-blue-100 mb-3">😊 No email? No worries.</p>
+          <div class="flex gap-3 justify-center">
+            <button id="btn-print-alt" class="text-white hover:text-blue-200 font-medium underline">
+              Print This Page
+            </button>
+            <span class="text-blue-100">or</span>
+            <button id="btn-pdf-alt" class="text-white hover:text-blue-200 font-medium underline">
+              Save as PDF
+            </button>
+          </div>
+          <p class="text-xs text-blue-200 mt-2">(less detail than email package)</p>
+        </div>
+      </div>
+
+      <!-- Next Steps -->
+      <div class="max-w-4xl mx-auto mt-12 text-center">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">What Happens Next?</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-xl p-6 shadow-lg">
+            <div class="text-4xl mb-3">📧</div>
+            <h4 class="font-bold text-gray-900 mb-2">1. Check Your Inbox</h4>
+            <p class="text-sm text-gray-600">Your complete package arrives in 2 minutes</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-lg">
+            <div class="text-4xl mb-3">👨‍⚕️</div>
+            <h4 class="font-bold text-gray-900 mb-2">2. Review Surgeons</h4>
+            <p class="text-sm text-gray-600">Compare 5 pre-screened options in your area</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 shadow-lg">
+            <div class="text-4xl mb-3">📞</div>
+            <h4 class="font-bold text-gray-900 mb-2">3. Book Consultation</h4>
+            <p class="text-sm text-gray-600">Free 15-min call or in-person meeting</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</template>
+
+<style>
+  .accordion-toggle svg {
+    transition: transform 0.3s ease;
+  }
+  .accordion-toggle.active svg {
+    transform: rotate(180deg);
+  }
+</style>
+

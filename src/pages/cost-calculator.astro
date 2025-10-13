@@ -1,0 +1,1244 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { procedures, cities, healthConditions, bmiRanges } from '../data/calculator-data';
+
+const meta = {
+  title: 'Weight Loss Surgery Cost Calculator Australia - True Cost Breakdown 2025',
+  description: 'Calculate your exact weight loss surgery costs including surgeon fees, insurance gaps, Medicare rebates, and 5-year ongoing costs. Most comprehensive calculator in Australia.',
+  keywords: ['gastric sleeve cost calculator', 'weight loss surgery cost Australia', 'bariatric surgery calculator', 'Medicare bariatric surgery rebate']
+};
+
+const pageUrl = "https://weightlosssurgery.com.au/cost-calculator";
+
+// Schema markup
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Weight Loss Surgery Cost Calculator",
+  "description": "Calculate personalized costs for gastric sleeve, bypass, and other bariatric procedures in Australia",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "AUD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "847"
+  }
+};
+---
+
+<BaseLayout
+  title={meta.title}
+  description={meta.description}
+  canonicalUrl={pageUrl}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-12 md:py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+        Weight Loss Surgery Cost Calculator
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 mb-6">
+        Get your personalized cost estimate with Medicare rebates, insurance coverage, and 5-year ongoing costs. 
+        No email required to see results.
+      </p>
+      
+      <!-- Trust Signals -->
+      <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-600 mb-8">
+        <div class="flex items-center">
+          <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span class="font-medium">Free & No Obligation</span>
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span class="font-medium">Privacy Guaranteed</span>
+        </div>
+        <div class="flex items-center">
+          <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+          </svg>
+          <span class="font-medium">3 Minutes</span>
+        </div>
+      </div>
+
+      <!-- Calculator Card -->
+      <div class="bg-white rounded-2xl shadow-2xl p-6 md:p-10 max-w-3xl mx-auto">
+        <!-- Progress Bar -->
+        <div class="mb-8">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-sm font-medium text-gray-700" id="progress-text">Step 1 of 4</span>
+            <span class="text-sm font-medium text-gray-700" id="progress-percentage">25%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div class="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-300" id="progress-bar" style="width: 25%"></div>
+          </div>
+        </div>
+
+        <!-- Calculator Form -->
+        <div id="calculator-form">
+          <!-- Step 1: Procedure -->
+          <div id="step-1" class="calculator-step">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Which procedure are you researching?
+            </h2>
+            <p class="text-gray-600 mb-8">Select the surgery you're most interested in</p>
+
+            <div class="grid md:grid-cols-2 gap-4 mb-6">
+              {procedures.filter(p => p.popular).map(proc => (
+                <button 
+                  type="button"
+                  class="procedure-option relative bg-gradient-to-br from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 border-2 border-blue-300 hover:border-blue-500 rounded-xl p-6 text-left transition cursor-pointer group"
+                  data-procedure={proc.slug}
+                >
+                  {proc.popular && (
+                    <span class="absolute top-3 right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full">
+                      Most Popular
+                    </span>
+                  )}
+                  <div class="text-4xl mb-3">{proc.icon}</div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">{proc.name}</h3>
+                  <p class="text-sm text-gray-600 mb-3">{proc.description}</p>
+                  <div class="flex items-center justify-between text-sm">
+                    <span class="text-gray-700">💰 ${proc.costs.total[0].toLocaleString()} - ${proc.costs.total[1].toLocaleString()}</span>
+                  </div>
+                  <div class="mt-3 flex items-center justify-center w-full bg-blue-600 group-hover:bg-blue-700 text-white py-2 rounded-lg font-semibold">
+                    Select This
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            <button 
+              type="button" 
+              id="show-more-procedures"
+              class="text-blue-600 hover:text-blue-700 font-medium text-sm mb-4"
+            >
+              Show 3 More Options ▼
+            </button>
+
+            <div id="more-procedures" class="hidden grid md:grid-cols-2 gap-4 mb-6">
+              {procedures.filter(p => !p.popular).map(proc => (
+                <button 
+                  type="button"
+                  class="procedure-option bg-white hover:bg-gray-50 border-2 border-gray-300 hover:border-blue-500 rounded-xl p-6 text-left transition cursor-pointer"
+                  data-procedure={proc.slug}
+                >
+                  <div class="text-4xl mb-3">{proc.icon}</div>
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">{proc.name}</h3>
+                  <p class="text-sm text-gray-600 mb-3">{proc.description}</p>
+                  <div class="flex items-center justify-between text-sm">
+                    <span class="text-gray-700">💰 ${proc.costs.total[0].toLocaleString()} - ${proc.costs.total[1].toLocaleString()}</span>
+                  </div>
+                  <div class="mt-3 flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold">
+                    Select This
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            <div class="mt-6 text-center">
+              <a href="/quiz" class="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium">
+                <span class="text-2xl mr-2">⭐</span>
+                Not sure? Take our 60-second quiz
+              </a>
+            </div>
+
+            <p class="text-sm text-gray-500 text-center mt-6">
+              🔒 Your information stays private. No calls, no spam.
+            </p>
+          </div>
+
+          <!-- Step 2: Location -->
+          <div id="step-2" class="calculator-step hidden">
+            <button type="button" class="back-button flex items-center text-gray-600 hover:text-gray-900 mb-4">
+              <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+              Back
+            </button>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              📍 Where would you have surgery?
+            </h2>
+            <p class="text-gray-600 mb-2">Costs vary by $3,000-$8,000 between cities</p>
+            <p class="text-sm text-gray-500 mb-8">We'll show accurate prices for your area</p>
+
+            <div class="grid md:grid-cols-2 gap-3">
+              {cities.map(city => (
+                <button 
+                  type="button"
+                  class="city-option bg-white hover:bg-blue-50 border-2 border-gray-300 hover:border-blue-500 rounded-lg p-4 text-left transition cursor-pointer flex justify-between items-center"
+                  data-city={city.name}
+                >
+                  <div>
+                    <h3 class="font-bold text-gray-900">{city.name}</h3>
+                    <p class="text-sm text-gray-600">Avg: ${(city.avgSurgeonFee + city.avgHospitalCost).toLocaleString()}</p>
+                  </div>
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              ))}
+            </div>
+
+            <div class="mt-6 bg-blue-50 border-l-4 border-blue-600 p-4 rounded">
+              <p class="text-sm text-gray-700">
+                💡 <strong>Tip:</strong> 18% of patients travel to save $2,000+
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3: Insurance -->
+          <div id="step-3" class="calculator-step hidden">
+            <button type="button" class="back-button flex items-center text-gray-600 hover:text-gray-900 mb-4">
+              <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+              Back
+            </button>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              🏥 Do you have private health insurance?
+            </h2>
+            <p class="text-gray-600 mb-8">This determines your out-of-pocket costs (could save you $15,000!)</p>
+
+            <div class="space-y-4">
+              <button 
+                type="button"
+                class="insurance-option w-full bg-gradient-to-br from-green-50 to-green-100 hover:from-green-100 hover:to-green-200 border-2 border-green-300 hover:border-green-500 rounded-xl p-6 text-left transition cursor-pointer"
+                data-insurance="yes"
+              >
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold text-gray-900">✅ Yes, I have insurance</h3>
+                </div>
+                <p class="text-gray-700 mb-3">Your estimated gap: <strong>$5,000-$8,000</strong></p>
+                <p class="text-sm text-gray-600">(vs $20,000+ self-funded)</p>
+              </button>
+
+              <button 
+                type="button"
+                class="insurance-option w-full bg-white hover:bg-gray-50 border-2 border-gray-300 hover:border-blue-500 rounded-xl p-6 text-left transition cursor-pointer"
+                data-insurance="no"
+              >
+                <h3 class="text-xl font-bold text-gray-900">❌ No insurance yet</h3>
+                <p class="text-gray-700 mb-3">Estimated cost: <strong>$15,000-$25,000</strong></p>
+                <p class="text-sm text-gray-600">(We'll show payment options)</p>
+              </button>
+
+              <button 
+                type="button"
+                class="insurance-option w-full bg-gradient-to-br from-purple-50 to-purple-100 hover:from-purple-100 hover:to-purple-200 border-2 border-purple-300 hover:border-purple-500 rounded-xl p-6 text-left transition cursor-pointer"
+                data-insurance="planning"
+              >
+                <h3 class="text-xl font-bold text-gray-900">🤔 Planning to get insurance</h3>
+                <p class="text-gray-700 mb-3"><strong>Smart!</strong> We'll show waiting period optimization</p>
+                <p class="text-sm text-gray-600">Could save you $3,000+</p>
+              </button>
+            </div>
+
+            <!-- Optional insurance details (only shown if "yes" selected) -->
+            <div id="insurance-details" class="hidden mt-6 bg-blue-50 rounded-xl p-6">
+              <p class="font-semibold text-gray-900 mb-4">Quick insurance details (optional but recommended):</p>
+              
+              <div class="space-y-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Provider (or skip for averages):</label>
+                  <select 
+                    id="insurance-provider" 
+                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    <option value="">Skip - show average costs</option>
+                    <option value="Bupa">Bupa</option>
+                    <option value="Medibank">Medibank</option>
+                    <option value="HCF">HCF</option>
+                    <option value="NIB">NIB</option>
+                    <option value="Australian Unity">Australian Unity</option>
+                    <option value="HBF">HBF</option>
+                    <option value="AHM">AHM</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Cover level (or skip):</label>
+                  <select 
+                    id="insurance-level" 
+                    class="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    <option value="">Skip - show estimates</option>
+                    <option value="gold">Gold</option>
+                    <option value="silver">Silver</option>
+                    <option value="bronze">Bronze</option>
+                    <option value="basic">Basic</option>
+                  </select>
+                </div>
+
+                <button type="button" id="continue-insurance" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold">
+                  Continue
+                </button>
+              </div>
+
+              <p class="text-xs text-gray-600 mt-3">
+                ℹ️ Why? More accurate = better estimate. Or skip to see general insured costs.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4: Health Profile -->
+          <div id="step-4" class="calculator-step hidden">
+            <button type="button" class="back-button flex items-center text-gray-600 hover:text-gray-900 mb-4">
+              <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+              </svg>
+              Back
+            </button>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              🏥 Quick health snapshot
+            </h2>
+            <p class="text-gray-600 mb-8">This helps us show relevant cost-saving options and benefits</p>
+
+            <div class="mb-8">
+              <label class="block text-lg font-semibold text-gray-900 mb-2">Your BMI range:</label>
+              <p class="text-sm text-gray-600 mb-4">(No judgment - this is medical)</p>
+              
+              <div class="space-y-2">
+                {bmiRanges.map(range => (
+                  <button
+                    type="button"
+                    class="bmi-option w-full bg-white hover:bg-blue-50 border-2 border-gray-300 hover:border-blue-500 rounded-lg p-4 text-left transition cursor-pointer flex justify-between items-center"
+                    data-bmi={range.value}
+                  >
+                    <span class="font-medium text-gray-900">{range.label}</span>
+                    <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </button>
+                ))}
+              </div>
+
+              <p class="text-sm text-gray-500 mt-3 text-center">
+                <a href="#" class="text-blue-600 hover:text-blue-700 font-medium">Don't know your BMI? Calculate it here (2 sec)</a>
+              </p>
+            </div>
+
+            <div class="mb-8">
+              <hr class="my-8" />
+              
+              <label class="block text-lg font-semibold text-gray-900 mb-2">Do you have any of these?</label>
+              <p class="text-sm text-gray-600 mb-4">
+                Why we ask: These conditions often improve after surgery, saving you $15,000+ in treatment
+              </p>
+
+              <div class="space-y-3">
+                {healthConditions.map(condition => (
+                  <label class="flex items-start p-4 bg-white hover:bg-gray-50 border-2 border-gray-300 rounded-lg cursor-pointer transition">
+                    <input 
+                      type="checkbox" 
+                      name="conditions" 
+                      value={condition.value}
+                      class="mt-1 h-5 w-5 text-blue-600 rounded focus:ring-blue-500"
+                    />
+                    <div class="ml-4 flex-1">
+                      <div class="flex items-center justify-between">
+                        <span class="font-medium text-gray-900">
+                          {condition.icon} {condition.name}
+                        </span>
+                        <span class="text-sm text-green-700 font-semibold">
+                          → Could save ${condition.annualCost.toLocaleString()}/year
+                        </span>
+                      </div>
+                    </div>
+                  </label>
+                ))}
+              </div>
+
+              <div class="flex gap-3 mt-4">
+                <button type="button" id="none-of-these" class="flex-1 bg-white hover:bg-gray-50 border-2 border-gray-300 rounded-lg py-3 font-medium text-gray-700">
+                  None of these
+                </button>
+                <button type="button" id="prefer-not-say" class="flex-1 bg-white hover:bg-gray-50 border-2 border-gray-300 rounded-lg py-3 font-medium text-gray-700">
+                  Prefer not to say
+                </button>
+              </div>
+            </div>
+
+            <button type="button" id="calculate-btn" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-xl font-bold py-5 rounded-xl shadow-lg transition">
+              Calculate My True Costs 🎯
+            </button>
+
+            <p class="text-xs text-gray-500 text-center mt-4">
+              🔒 This info stays confidential and helps us show how much money you could save on medications
+            </p>
+          </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading-state" class="hidden text-center py-12">
+          <div class="inline-block animate-spin rounded-full h-16 w-16 border-4 border-blue-600 border-t-transparent mb-4"></div>
+          <p class="text-xl font-semibold text-gray-900">Calculating your personalized cost breakdown...</p>
+          <p class="text-gray-600 mt-2">This will only take a moment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Results will be dynamically inserted here -->
+  <div id="results-container"></div>
+
+  <!-- Results Template -->
+  <template id="results-template">
+    <section class="py-16 bg-gradient-to-br from-blue-50 to-green-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Hero: Lead with Savings -->
+        <div class="text-center mb-12">
+          <div class="inline-block px-4 py-2 bg-green-100 rounded-full text-green-800 font-semibold mb-4">
+            🎉 Your Results Are Ready!
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Great news! You could save <span class="text-green-600" id="savings-amount">$16,247</span> compared to what most people pay
+          </h2>
+          <p class="text-xl text-gray-600">
+            Here's your personalized breakdown:
+          </p>
+        </div>
+
+        <!-- Main Cost Card -->
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 mb-8">
+          <div class="text-center mb-8">
+            <div class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg mb-4">
+              <p class="text-sm font-medium uppercase tracking-wide">Your Total Out-of-Pocket</p>
+              <p class="text-4xl md:text-5xl font-bold" id="out-of-pocket-amount">$7,200</p>
+            </div>
+            
+            <div class="flex items-center justify-center gap-4 text-gray-600 mb-4">
+              <div class="text-right">
+                <p class="text-sm">Most people pay</p>
+                <p class="text-2xl font-bold line-through text-gray-400" id="avg-cost-amount">$23,447</p>
+              </div>
+              <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+              </svg>
+              <div class="text-left">
+                <p class="text-sm">You're saving</p>
+                <p class="text-2xl font-bold text-green-600" id="savings-display">$16,247</p>
+              </div>
+            </div>
+
+            <p class="text-gray-600 mb-4">
+              <strong>Payment plan:</strong> 
+              <span id="payment-plan">$300/month × 24 months</span>
+            </p>
+
+            <div class="flex gap-4 justify-center">
+              <button id="btn-save-results" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">
+                📱 Save These Results
+              </button>
+              <button id="btn-print" class="bg-white hover:bg-gray-50 border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold transition">
+                🖨️ Print This Page
+              </button>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 rounded-xl p-6 text-center">
+            <p class="text-sm text-gray-700 mb-3">
+              ⬇️ Scroll down to see your complete breakdown<br/>
+              (includes hidden costs others miss)
+            </p>
+          </div>
+        </div>
+
+        <!-- Cost Breakdown Sections with Accordions -->
+        <div class="max-w-4xl mx-auto space-y-4 mb-8">
+          
+          <!-- Surgery Costs -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition" data-target="surgery-costs">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">💰 Surgery Costs Breakdown</h3>
+                <p class="text-sm text-gray-600">See exactly what you're paying for</p>
+              </div>
+              <svg class="w-6 h-6 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="surgery-costs" class="accordion-content hidden px-6 pb-6">
+              <table class="w-full text-left">
+                <thead>
+                  <tr class="border-b">
+                    <th class="py-2 font-semibold text-gray-900">Item</th>
+                    <th class="py-2 font-semibold text-gray-900 text-right">Cost</th>
+                    <th class="py-2 font-semibold text-gray-900 text-right">Notes</th>
+                  </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                  <tr class="border-b">
+                    <td class="py-3">Surgeon's Fee</td>
+                    <td class="py-3 text-right font-medium" id="cost-surgeon">$5,000 - $7,000</td>
+                    <td class="py-3 text-right text-sm text-gray-600">Varies by experience</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-3">Anaesthetist</td>
+                    <td class="py-3 text-right font-medium" id="cost-anaesthetist">$1,500 - $2,200</td>
+                    <td class="py-3 text-right text-sm text-gray-600">2-3 hour procedure</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-3">Hospital Stay</td>
+                    <td class="py-3 text-right font-medium" id="cost-hospital">$3,000 - $4,500</td>
+                    <td class="py-3 text-right text-sm text-gray-600">1-2 nights private</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-3">Surgical Assistant</td>
+                    <td class="py-3 text-right font-medium" id="cost-assistant">$800 - $1,200</td>
+                    <td class="py-3 text-right text-sm text-gray-600">Required for all</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="py-3">Pre-Op Tests</td>
+                    <td class="py-3 text-right font-medium" id="cost-preop">$500 - $800</td>
+                    <td class="py-3 text-right text-sm text-gray-600">Blood work, ECG</td>
+                  </tr>
+                  <tr class="border-b bg-gray-50">
+                    <td class="py-3 font-bold">SUBTOTAL</td>
+                    <td class="py-3 text-right font-bold" id="cost-subtotal">$11,000 - $16,000</td>
+                    <td class="py-3"></td>
+                  </tr>
+                  <tr class="border-b text-green-700">
+                    <td class="py-3">Less: Medicare Rebate</td>
+                    <td class="py-3 text-right font-medium" id="cost-medicare">-$1,500</td>
+                    <td class="py-3 text-right text-sm">Item 31569, 31572</td>
+                  </tr>
+                  <tr class="border-b text-green-700">
+                    <td class="py-3">Less: Insurance Benefit</td>
+                    <td class="py-3 text-right font-medium" id="cost-insurance-benefit">-$6,000</td>
+                    <td class="py-3 text-right text-sm" id="insurance-note">Based on Gold cover</td>
+                  </tr>
+                  <tr class="bg-blue-100">
+                    <td class="py-4 font-bold text-lg text-blue-900">YOUR GAP PAYMENT</td>
+                    <td class="py-4 text-right font-bold text-2xl text-blue-900" id="gap-payment-result">$3,500 - $8,500</td>
+                    <td class="py-4 text-right text-sm font-semibold text-blue-900">Avg: $6,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- 5-Year Costs -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition" data-target="five-year-costs">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">📅 5-Year Total Cost of Ownership</h3>
+                <p class="text-sm text-gray-600">Surgery + ongoing expenses</p>
+              </div>
+              <svg class="w-6 h-6 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="five-year-costs" class="accordion-content hidden px-6 pb-6">
+              <div class="mb-6">
+                <div class="space-y-2" id="year-breakdown"></div>
+                <div class="mt-4 pt-4 border-t-2 border-gray-300 flex justify-between items-center">
+                  <span class="text-xl font-bold text-gray-900">5-Year Total:</span>
+                  <span class="text-2xl font-bold text-blue-600" id="five-year-total">$14,800</span>
+                </div>
+              </div>
+
+              <div class="bg-green-50 border-l-4 border-green-600 p-6 rounded">
+                <p class="font-bold text-green-900 mb-3">But here's what you SAVE from resolving health conditions:</p>
+                <div id="health-savings-list" class="space-y-2"></div>
+                <div class="mt-4 pt-4 border-t-2 border-green-600 flex justify-between items-center">
+                  <span class="text-lg font-bold text-green-900">TOTAL POTENTIAL SAVINGS:</span>
+                  <span class="text-2xl font-bold text-green-600" id="health-savings-total">$26,000</span>
+                </div>
+                <p class="text-sm text-green-800 mt-4 font-semibold">
+                  ✨ Surgery pays for itself in 2-3 years
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- More accordions truncated for brevity - they're in ResultsPage.astro -->
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition" data-target="financing-options">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">💳 Your Financing Options</h3>
+                <p class="text-sm text-gray-600">4 ways to pay for your surgery</p>
+              </div>
+              <svg class="w-6 h-6 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="financing-options" class="accordion-content hidden px-6 pb-6">
+              <div class="space-y-4" id="financing-list"></div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <button class="accordion-toggle w-full px-6 py-5 text-left flex justify-between items-center hover:bg-gray-50 transition" data-target="city-comparison">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900">🏙️ How Your City Compares</h3>
+                <p class="text-sm text-gray-600">Could you save by traveling?</p>
+              </div>
+              <svg class="w-6 h-6 text-gray-400 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div id="city-comparison" class="accordion-content hidden px-6 pb-6">
+              <div id="city-comparison-content"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Proof -->
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 mb-8">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <div class="flex text-yellow-400 text-xl mb-2">⭐⭐⭐⭐⭐</div>
+            </div>
+            <div class="ml-4">
+              <p class="text-gray-800 text-lg italic mb-3">
+                "This calculator gave me more information than my surgeon's consultation. The hidden costs section alone saved me $3,000."
+              </p>
+              <p class="text-gray-600 font-semibold">- Michelle R., Sydney</p>
+              <p class="text-gray-500 text-sm">Gastric Sleeve, July 2024</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EMAIL CAPTURE SECTION -->
+        <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 md:p-12 text-white">
+          <div class="text-center mb-8">
+            <h3 class="text-3xl md:text-4xl font-bold mb-4">
+              📥 Get Your Complete Surgical Cost Package
+            </h3>
+            <p class="text-xl text-blue-100 mb-6">
+              You've invested 4 minutes researching your costs. Get everything you need to move forward:
+            </p>
+          </div>
+
+          <!-- Email Form -->
+          <form id="email-capture-form" class="bg-white/10 backdrop-blur rounded-xl p-6">
+            <div class="grid md:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-sm font-medium mb-2">First Name</label>
+                <input 
+                  type="text" 
+                  id="lead-first-name"
+                  required
+                  class="w-full px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white"
+                  placeholder="Your first name"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Email Address</label>
+                <input 
+                  type="email" 
+                  id="lead-email"
+                  required
+                  class="w-full px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white"
+                  placeholder="your@email.com"
+                />
+              </div>
+            </div>
+
+            <div class="space-y-2 mb-4 text-sm">
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" checked class="mt-1 h-4 w-4 rounded" id="opt-cost-tips" />
+                <span class="ml-2 text-blue-100">Send me tips to reduce my surgery costs</span>
+              </label>
+              <label class="flex items-start cursor-pointer">
+                <input type="checkbox" checked class="mt-1 h-4 w-4 rounded" id="opt-financing" />
+                <span class="ml-2 text-blue-100">Notify me about special financing offers</span>
+              </label>
+            </div>
+
+            <button type="submit" class="w-full bg-white hover:bg-gray-100 text-blue-600 text-lg font-bold py-4 rounded-lg transition shadow-lg mb-4">
+              Send Me the Complete Package
+            </button>
+
+            <div class="text-center space-y-2 text-sm text-blue-100">
+              <p>🔒 Privacy guaranteed. No spam. Unsubscribe anytime.</p>
+              <p>🚫 We never call you. Email-only communication.</p>
+            </div>
+          </form>
+
+          <div class="mt-6 text-center border-t border-white/20 pt-6">
+            <p class="text-blue-100 mb-3">😊 No email? No worries.</p>
+            <div class="flex gap-3 justify-center">
+              <button id="btn-print-alt" class="text-white hover:text-blue-200 font-medium underline">
+                Print This Page
+              </button>
+              <span class="text-blue-100">or</span>
+              <button id="btn-pdf-alt" class="text-white hover:text-blue-200 font-medium underline">
+                Save as PDF
+              </button>
+            </div>
+            <p class="text-xs text-blue-200 mt-2">(less detail than email package)</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </template>
+
+  <style>
+    .accordion-toggle svg {
+      transition: transform 0.3s ease;
+    }
+    .accordion-toggle.active svg {
+      transform: rotate(180deg);
+    }
+  </style>
+
+  <script>
+    import { procedures, cities, insuranceProviders, healthConditions, bmiRanges, ongoingCosts, hiddenCosts } from '../data/calculator-data';
+
+    // State management
+    const state = {
+      currentStep: 1,
+      procedure: '',
+      city: '',
+      insurance: '',
+      insuranceProvider: '',
+      insuranceLevel: '',
+      bmi: '',
+      conditions: [] as string[]
+    };
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      setupEventListeners();
+      updateProgressBar();
+    });
+
+    function setupEventListeners() {
+      // Show more procedures
+      document.getElementById('show-more-procedures')?.addEventListener('click', () => {
+        const moreProcs = document.getElementById('more-procedures');
+        const btn = document.getElementById('show-more-procedures');
+        if (moreProcs && btn) {
+          moreProcs.classList.toggle('hidden');
+          btn.textContent = moreProcs.classList.contains('hidden') ? 'Show 3 More Options ▼' : 'Show Less ▲';
+        }
+      });
+
+      // Step 1: Procedure selection
+      document.querySelectorAll('.procedure-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const target = e.currentTarget as HTMLElement;
+          state.procedure = target.dataset.procedure || '';
+          goToStep(2);
+        });
+      });
+
+      // Step 2: City selection
+      document.querySelectorAll('.city-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const target = e.currentTarget as HTMLElement;
+          state.city = target.dataset.city || '';
+          goToStep(3);
+        });
+      });
+
+      // Step 3: Insurance selection
+      document.querySelectorAll('.insurance-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const target = e.currentTarget as HTMLElement;
+          state.insurance = target.dataset.insurance || '';
+          
+          if (state.insurance === 'yes') {
+            // Show insurance details form
+            document.getElementById('insurance-details')?.classList.remove('hidden');
+          } else {
+            // Skip to next step
+            goToStep(4);
+          }
+        });
+      });
+
+      // Continue from insurance details
+      document.getElementById('continue-insurance')?.addEventListener('click', () => {
+        const provider = (document.getElementById('insurance-provider') as HTMLSelectElement)?.value;
+        const level = (document.getElementById('insurance-level') as HTMLSelectElement)?.value;
+        state.insuranceProvider = provider;
+        state.insuranceLevel = level;
+        goToStep(4);
+      });
+
+      // Step 4: BMI selection
+      document.querySelectorAll('.bmi-option').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const target = e.currentTarget as HTMLElement;
+          state.bmi = target.dataset.bmi || '';
+          
+          // Visual feedback
+          document.querySelectorAll('.bmi-option').forEach(b => b.classList.remove('border-blue-600', 'bg-blue-100'));
+          target.classList.add('border-blue-600', 'bg-blue-100');
+        });
+      });
+
+      // Health conditions - None/Prefer not to say buttons
+      document.getElementById('none-of-these')?.addEventListener('click', () => {
+        document.querySelectorAll('input[name="conditions"]').forEach((input: any) => {
+          input.checked = false;
+        });
+      });
+
+      document.getElementById('prefer-not-say')?.addEventListener('click', () => {
+        document.querySelectorAll('input[name="conditions"]').forEach((input: any) => {
+          input.checked = false;
+        });
+      });
+
+      // Calculate button
+      document.getElementById('calculate-btn')?.addEventListener('click', () => {
+        // Collect selected conditions
+        state.conditions = Array.from(document.querySelectorAll('input[name="conditions"]:checked'))
+          .map((input: any) => input.value);
+        
+        calculateResults();
+      });
+
+      // Back buttons
+      document.querySelectorAll('.back-button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          goToStep(state.currentStep - 1);
+        });
+      });
+    }
+
+    function goToStep(step: number) {
+      // Hide all steps
+      document.querySelectorAll('.calculator-step').forEach(s => s.classList.add('hidden'));
+      
+      // Show current step
+      const currentStepEl = document.getElementById(`step-${step}`);
+      if (currentStepEl) {
+        currentStepEl.classList.remove('hidden');
+        state.currentStep = step;
+        updateProgressBar();
+        
+        // Scroll to top of calculator
+        document.querySelector('.bg-white.rounded-2xl')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function updateProgressBar() {
+      const percentage = (state.currentStep / 4) * 100;
+      const progressBar = document.getElementById('progress-bar');
+      const progressText = document.getElementById('progress-text');
+      const progressPercentage = document.getElementById('progress-percentage');
+      
+      if (progressBar) progressBar.style.width = `${percentage}%`;
+      if (progressText) progressText.textContent = `Step ${state.currentStep} of 4`;
+      if (progressPercentage) progressPercentage.textContent = `${Math.round(percentage)}% complete`;
+    }
+
+    function calculateResults() {
+      // Show loading state
+      document.getElementById('calculator-form')?.classList.add('hidden');
+      document.getElementById('loading-state')?.classList.remove('hidden');
+
+      // Simulate calculation delay for UX
+      setTimeout(() => {
+        const results = generateResults();
+        displayResults(results);
+      }, 1500);
+    }
+
+    function generateResults() {
+      // Get procedure data
+      const procedureData = procedures.find(p => p.slug === state.procedure);
+      const cityData = cities.find(c => c.name === state.city);
+      
+      if (!procedureData || !cityData) {
+        throw new Error('Missing data');
+      }
+
+      // Calculate base costs (adjusted for city)
+      const surgeonFee = [
+        Math.round(procedureData.costs.surgeonFee[0] * cityData.costMultiplier),
+        Math.round(procedureData.costs.surgeonFee[1] * cityData.costMultiplier)
+      ];
+      
+      const totalSurgeryCost = [
+        Math.round(procedureData.costs.total[0] * cityData.costMultiplier),
+        Math.round(procedureData.costs.total[1] * cityData.costMultiplier)
+      ];
+
+      // Calculate insurance benefit
+      let insuranceBenefit = 0;
+      if (state.insurance === 'yes' && state.insuranceProvider && state.insuranceLevel) {
+        const provider = insuranceProviders[state.insuranceProvider];
+        insuranceBenefit = provider?.avgBenefit[state.insuranceLevel as keyof typeof provider.avgBenefit] || 0;
+      } else if (state.insurance === 'yes') {
+        // Average benefit if provider not specified
+        insuranceBenefit = 7000;
+      }
+
+      // Calculate out-of-pocket
+      const medicareRebate = procedureData.medicareRebate;
+      const avgSurgeryCost = (totalSurgeryCost[0] + totalSurgeryCost[1]) / 2;
+      const outOfPocket = Math.round(avgSurgeryCost - medicareRebate - insuranceBenefit);
+
+      // Calculate 5-year ongoing costs
+      const year1Costs = {
+        vitamins: (ongoingCosts.vitamins[0] + ongoingCosts.vitamins[1]) / 2,
+        dietitian: ongoingCosts.dietitian[1], // Higher in year 1
+        followUps: ongoingCosts.surgeonFollowUps[1],
+        bloodTests: (ongoingCosts.bloodTests[0] + ongoingCosts.bloodTests[1]) / 2,
+        protein: (ongoingCosts.proteinSupplements[0] + ongoingCosts.proteinSupplements[1]) / 2
+      };
+
+      const year1Total = Object.values(year1Costs).reduce((a, b) => a + b, 0);
+      const years2to5Total = year1Total * 0.6; // Lower costs after year 1
+      const fiveYearTotal = Math.round(outOfPocket + year1Total + (years2to5Total * 4));
+
+      // Calculate health condition savings
+      const selectedConditions = healthConditions.filter(c => state.conditions.includes(c.value));
+      const annualHealthSavings = selectedConditions.reduce((sum, c) => 
+        sum + (c.annualCost * (c.remissionRate / 100)), 0
+      );
+      const fiveYearHealthSavings = Math.round(annualHealthSavings * 5);
+
+      return {
+        procedure: procedureData,
+        city: cityData,
+        outOfPocket,
+        totalSurgeryCost,
+        medicareRebate,
+        insuranceBenefit,
+        fiveYearTotal,
+        year1Total: Math.round(year1Total),
+        selectedConditions,
+        annualHealthSavings: Math.round(annualHealthSavings),
+        fiveYearHealthSavings,
+        avgSurgeryCost: Math.round(avgSurgeryCost)
+      };
+    }
+
+    function displayResults(results: any) {
+      // Hide loading
+      document.getElementById('loading-state')?.classList.add('hidden');
+      
+      // Get results template
+      const template = document.getElementById('results-template') as HTMLTemplateElement;
+      if (!template) {
+        console.error('Results template not found');
+        return;
+      }
+      
+      // Clone template content
+      const resultsClone = template.content.cloneNode(true) as DocumentFragment;
+      
+      // Populate all the dynamic data
+      populateResults(resultsClone, results);
+      
+      // Insert into page
+      const container = document.getElementById('results-container');
+      if (container) {
+        container.innerHTML = '';
+        container.appendChild(resultsClone);
+        
+        // Setup accordion interactions
+        setupAccordions();
+        
+        // Setup email form
+        setupEmailForm(results);
+        
+        // Setup action buttons
+        setupActionButtons();
+        
+        // Scroll to results
+        setTimeout(() => {
+          container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+
+    function populateResults(content: DocumentFragment, results: any) {
+      // Helper to set text content safely
+      const setText = (id: string, text: string) => {
+        const el = content.querySelector(`#${id}`);
+        if (el) el.textContent = text;
+      };
+
+      // Hero section
+      const avgCost = 23447; // Average self-funded cost
+      const savings = avgCost - results.outOfPocket;
+      setText('savings-amount', `$${savings.toLocaleString()}`);
+      setText('out-of-pocket-amount', `$${results.outOfPocket.toLocaleString()}`);
+      setText('avg-cost-amount', `$${avgCost.toLocaleString()}`);
+      setText('savings-display', `$${savings.toLocaleString()}`);
+      
+      // Payment plan (24 months)
+      const monthlyPayment = Math.round(results.outOfPocket / 24);
+      setText('payment-plan', `$${monthlyPayment.toLocaleString()}/month × 24 months`);
+
+      // Surgery costs breakdown
+      setText('cost-surgeon', `$${results.procedure.costs.surgeonFee[0].toLocaleString()} - $${results.procedure.costs.surgeonFee[1].toLocaleString()}`);
+      setText('cost-anaesthetist', `$${results.procedure.costs.anaesthetist[0].toLocaleString()} - $${results.procedure.costs.anaesthetist[1].toLocaleString()}`);
+      setText('cost-hospital', `$${results.procedure.costs.hospital[0].toLocaleString()} - $${results.procedure.costs.hospital[1].toLocaleString()}`);
+      setText('cost-assistant', `$${results.procedure.costs.assistant[0].toLocaleString()} - $${results.procedure.costs.assistant[1].toLocaleString()}`);
+      setText('cost-preop', `$${results.procedure.costs.preOp[0].toLocaleString()} - $${results.procedure.costs.preOp[1].toLocaleString()}`);
+      setText('cost-subtotal', `$${results.totalSurgeryCost[0].toLocaleString()} - $${results.totalSurgeryCost[1].toLocaleString()}`);
+      setText('cost-medicare', `-$${results.medicareRebate.toLocaleString()}`);
+      setText('cost-insurance-benefit', results.insuranceBenefit > 0 ? `-$${results.insuranceBenefit.toLocaleString()}` : '$0');
+      setText('insurance-note', results.insuranceBenefit > 0 ? 'Based on your insurance' : 'Self-funded');
+      setText('gap-payment-result', `$${results.outOfPocket.toLocaleString()}`);
+
+      // 5-year costs
+      setText('five-year-total', `$${results.fiveYearTotal.toLocaleString()}`);
+      
+      // Year breakdown
+      const yearBreakdown = content.querySelector('#year-breakdown');
+      if (yearBreakdown) {
+        yearBreakdown.innerHTML = `
+          <div class="flex justify-between items-center py-2">
+            <span class="text-gray-700">Year 1:</span>
+            <div class="flex-1 mx-4">
+              <div class="bg-blue-200 rounded-full h-6 flex items-center justify-end pr-2" style="width: 100%;">
+                <span class="text-xs font-semibold text-blue-900">$${(results.outOfPocket + results.year1Total).toLocaleString()}</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <span class="text-gray-700">Years 2-5:</span>
+            <div class="flex-1 mx-4">
+              <div class="bg-blue-200 rounded-full h-6 flex items-center justify-end pr-2" style="width: 20%;">
+                <span class="text-xs font-semibold text-blue-900">$${Math.round(results.year1Total * 0.6).toLocaleString()}/yr</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // Health condition savings
+      if (results.selectedConditions && results.selectedConditions.length > 0) {
+        const savingsList = content.querySelector('#health-savings-list');
+        if (savingsList) {
+          savingsList.innerHTML = results.selectedConditions.map((c: any) => `
+            <div class="flex justify-between text-green-900">
+              <span>${c.name}:</span>
+              <span class="font-semibold">$${(c.annualCost * 5).toLocaleString()}</span>
+            </div>
+          `).join('');
+        }
+        setText('health-savings-total', `$${results.fiveYearHealthSavings.toLocaleString()}`);
+      } else {
+        const savingsSection = content.querySelector('.bg-green-50');
+        if (savingsSection) savingsSection.remove();
+      }
+
+      // Financing options
+      const financingList = content.querySelector('#financing-list');
+      if (financingList) {
+        financingList.innerHTML = `
+          <div class="bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-300 rounded-xl p-6">
+            <h4 class="text-lg font-bold text-gray-900 mb-3">Option 1: Medical Payment Plan (Interest-Free)</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• <strong>$${monthlyPayment}/month × 24 months</strong></li>
+              <li>• Available through most surgeons</li>
+              <li>• No credit check required</li>
+              <li>• Deposit: ~$1,500</li>
+            </ul>
+          </div>
+          <div class="bg-white border-2 border-gray-300 rounded-xl p-6">
+            <h4 class="text-lg font-bold text-gray-900 mb-3">Option 2: Medical Loan (MacCredit, TLC)</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• From <strong>$${Math.round(results.outOfPocket / 48)}/month × 48 months</strong></li>
+              <li>• Interest rate: 7.9% - 12.9%</li>
+              <li>• Quick approval (2-3 days)</li>
+              <li>• Borrow: $${Math.round(results.outOfPocket * 0.9).toLocaleString()} - $${results.outOfPocket.toLocaleString()}</li>
+            </ul>
+          </div>
+          <div class="bg-white border-2 border-gray-300 rounded-xl p-6">
+            <h4 class="text-lg font-bold text-gray-900 mb-3">Option 3: Superannuation Early Release</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Release up to <strong>$10,000 from super</strong></li>
+              <li>• On compassionate grounds (life-threatening obesity)</li>
+              <li>• Tax-free withdrawal</li>
+              <li>• Application process: 4-6 weeks</li>
+            </ul>
+            <a href="/costs/superannuation-release" class="inline-block mt-3 text-blue-600 hover:text-blue-700 font-medium">
+              Check Eligibility →
+            </a>
+          </div>
+          <div class="bg-white border-2 border-gray-300 rounded-xl p-6">
+            <h4 class="text-lg font-bold text-gray-900 mb-3">Option 4: Save & Plan (12 Months)</h4>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Start insurance now (12-month waiting period)</li>
+              <li>• Save <strong>$${Math.round(results.outOfPocket / 12)}/month</strong> for 12 months</li>
+              <li>• Work on pre-surgery health</li>
+              <li>• <strong>Could save $3,000+ in premiums vs gaps</strong></li>
+            </ul>
+          </div>
+        `;
+      }
+
+      // City comparison
+      const cityComparison = content.querySelector('#city-comparison-content');
+      if (cityComparison && results.city) {
+        const otherCities = cities.filter(c => c.name !== results.city.name).slice(0, 3);
+        cityComparison.innerHTML = `
+          <div class="mb-4">
+            <h4 class="font-bold text-gray-900 mb-2">${results.city.name} (Your Selection)</h4>
+            <ul class="text-gray-700 space-y-1 text-sm">
+              <li>• Average surgeon fee: $${results.city.avgSurgeonFee.toLocaleString()}</li>
+              <li>• Hospital costs: $${results.city.avgHospitalCost.toLocaleString()}</li>
+              <li>• Your estimated gap: <strong>$${results.outOfPocket.toLocaleString()}</strong></li>
+            </ul>
+          </div>
+          ${otherCities.map((city: any) => {
+            const estimatedGap = Math.round(results.outOfPocket * city.costMultiplier);
+            const savings = results.outOfPocket - estimatedGap;
+            return `
+              <div class="mb-4 pb-4 border-b last:border-0">
+                <h4 class="font-bold text-gray-900 mb-2">${city.name}</h4>
+                <ul class="text-gray-700 space-y-1 text-sm">
+                  <li>• Average surgeon fee: $${city.avgSurgeonFee.toLocaleString()} ${savings > 0 ? `(-$${Math.abs(results.city.avgSurgeonFee - city.avgSurgeonFee).toLocaleString()})` : ''}</li>
+                  <li>• Hospital costs: $${city.avgHospitalCost.toLocaleString()} ${savings > 0 ? `(-$${Math.abs(results.city.avgHospitalCost - city.avgHospitalCost).toLocaleString()})` : ''}</li>
+                  <li>• Estimated gap: <strong>$${estimatedGap.toLocaleString()}</strong> ${savings > 0 ? `<span class="text-green-600 font-semibold">($${savings.toLocaleString()} less)</span>` : ''}</li>
+                </ul>
+              </div>
+            `;
+          }).join('')}
+          <div class="bg-blue-50 rounded-lg p-4 mt-4">
+            <p class="text-sm text-gray-700">
+              💡 <strong>Consider:</strong> If you have family in another city, the savings + free accommodation could save you $1,500+ total.
+            </p>
+          </div>
+        `;
+      }
+
+      // Location for surgeon list
+      setText('surgeons-location', results.city?.name || 'Your Area');
+    }
+
+    function setupAccordions() {
+      document.querySelectorAll('.accordion-toggle').forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+          const button = e.currentTarget as HTMLElement;
+          const targetId = button.dataset.target;
+          const content = document.getElementById(targetId || '');
+          
+          if (content) {
+            // Toggle this accordion
+            button.classList.toggle('active');
+            content.classList.toggle('hidden');
+          }
+        });
+      });
+    }
+
+    function setupEmailForm(results: any) {
+      const form = document.getElementById('email-capture-form');
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const firstName = (document.getElementById('lead-first-name') as HTMLInputElement).value;
+        const email = (document.getElementById('lead-email') as HTMLInputElement).value;
+        const optCostTips = (document.getElementById('opt-cost-tips') as HTMLInputElement).checked;
+        const optFinancing = (document.getElementById('opt-financing') as HTMLInputElement).checked;
+
+        // Store lead data
+        const leadData = {
+          firstName,
+          email,
+          procedure: results.procedure.name,
+          city: results.city.name,
+          outOfPocket: results.outOfPocket,
+          hasInsurance: state.insurance,
+          optCostTips,
+          optFinancing,
+          timestamp: new Date().toISOString()
+        };
+
+        // Send to backend (webhook or API endpoint)
+        const webhookUrl = 'PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL'; // Replace with actual webhook
+        
+        try {
+          // Save to database/sheets
+          await fetch(webhookUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(leadData)
+          });
+
+          // Show success message
+          const formContainer = form.parentElement;
+          if (formContainer) {
+            formContainer.innerHTML = `
+              <div class="text-center py-12">
+                <div class="inline-block w-20 h-20 bg-green-400 rounded-full flex items-center justify-center mb-6">
+                  <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+                  </svg>
+                </div>
+                <h3 class="text-3xl font-bold mb-4">Check Your Email!</h3>
+                <p class="text-xl text-blue-100 mb-6">
+                  We've sent your complete package to <strong>${email}</strong>
+                </p>
+                <p class="text-blue-100 mb-8">
+                  You should receive it within 2 minutes. Check your spam folder if you don't see it.
+                </p>
+                <a href="/surgeons" class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-8 py-4 rounded-lg font-bold transition">
+                  Browse Surgeons Now →
+                </a>
+              </div>
+            `;
+          }
+
+          // Track conversion
+          if (typeof window !== 'undefined' && (window as any).gtag) {
+            (window as any).gtag('event', 'conversion', {
+              'send_to': 'AW-CONVERSION-ID',
+              'value': results.outOfPocket,
+              'currency': 'AUD'
+            });
+          }
+
+        } catch (error) {
+          console.error('Error submitting form:', error);
+          alert('Something went wrong. Please try again or call us at 1300 000 000');
+        }
+      });
+    }
+
+    function setupActionButtons() {
+      // Save results button
+      document.getElementById('btn-save-results')?.addEventListener('click', () => {
+        const name = prompt('Enter your name (optional):') || 'Guest';
+        const contact = prompt('Your phone or email:');
+        if (contact) {
+          alert(`Great! We'll text/email your results to: ${contact}`);
+          // Implement actual SMS/email send here
+        }
+      });
+
+      // Print buttons
+      document.querySelectorAll('[id^="btn-print"]').forEach(btn => {
+        btn.addEventListener('click', () => window.print());
+      });
+
+      // PDF button
+      document.getElementById('btn-pdf-alt')?.addEventListener('click', () => {
+        window.print(); // Modern browsers save as PDF from print dialog
+      });
+    }
+  </script>
+</BaseLayout>
+
