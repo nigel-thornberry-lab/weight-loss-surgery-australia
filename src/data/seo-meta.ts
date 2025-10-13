@@ -132,6 +132,13 @@ export const seoMeta: Record<string, PageMeta> = {
     keywords: ["gastric sleeve cost calculator", "weight loss surgery cost Australia", "bariatric surgery calculator", "Medicare bariatric surgery rebate", "true cost weight loss surgery"]
   },
 
+  // Superannuation Release Guide
+  superannuationRelease: {
+    title: "Superannuation Early Release for Weight Loss Surgery Australia 2025 - Complete Guide",
+    description: "Access your super for bariatric surgery on compassionate grounds. Step-by-step application process, eligibility criteria, ATO requirements, tax implications & alternatives. Takes 4-8 weeks.",
+    keywords: ["superannuation early release weight loss surgery", "access super for bariatric surgery", "compassionate grounds super release", "ATO early release medical", "super for gastric sleeve"]
+  },
+
   bandVsSleeve: {
     title: "Gastric Band vs Sleeve - Compare Cost, Weight Loss & Recovery 2025",
     description: "Gastric band vs sleeve: Compare weight loss results, costs, recovery time & reversibility. Which procedure is right for you? Expert comparison guide.",
