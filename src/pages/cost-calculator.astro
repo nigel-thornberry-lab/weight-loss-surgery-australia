@@ -691,12 +691,59 @@ const schemaMarkup = {
     </section>
   </template>
 
+  <!-- Exit Intent Popup -->
+  <div id="exit-intent-popup" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative">
+      <button id="close-exit-popup" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      
+      <div class="text-center">
+        <div class="text-4xl mb-4">⚠️</div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">
+          Wait! You're about to miss your results...
+        </h3>
+        <p class="text-gray-600 mb-6">
+          Based on your answers so far:
+        </p>
+        
+        <div class="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 mb-6">
+          <p class="text-lg font-semibold text-gray-900 mb-2">
+            Your estimated cost: <span id="exit-popup-cost" class="text-blue-600">$6,000-$9,000</span>
+          </p>
+          <p class="text-gray-700">
+            You could save <span class="font-bold text-green-600">$3,000+</span> with our optimization tips
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <button id="continue-calculator" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-4 rounded-lg font-bold transition">
+            See My Complete Results →
+          </button>
+          <button id="exit-anyway" class="w-full text-gray-600 hover:text-gray-900 font-medium">
+            No thanks, I'll pay more
+          </button>
+        </div>
+
+        <p class="text-xs text-gray-500 mt-4">
+          Takes 30 seconds to finish • 100% free • No email required
+        </p>
+      </div>
+    </div>
+  </div>
+
   <style>
     .accordion-toggle svg {
       transition: transform 0.3s ease;
     }
     .accordion-toggle.active svg {
       transform: rotate(180deg);
+    }
+    
+    #exit-intent-popup.active {
+      display: flex !important;
     }
   </style>
 
@@ -1239,6 +1286,71 @@ const schemaMarkup = {
         window.print(); // Modern browsers save as PDF from print dialog
       });
     }
+
+    // Exit Intent Popup
+    let exitIntentShown = false;
+    let mouseY = 0;
+
+    function showExitPopup() {
+      if (exitIntentShown) return;
+      
+      // Only show if user has made some progress
+      if (state.currentStep < 2) return;
+      
+      // Don't show if already on results page
+      const resultsContainer = document.getElementById('results-container');
+      if (resultsContainer !== null && resultsContainer.children.length > 0) return;
+      
+      exitIntentShown = true;
+      const popup = document.getElementById('exit-intent-popup');
+      if (popup) {
+        popup.classList.remove('hidden');
+        popup.classList.add('active');
+        
+        // Estimate cost based on current selections
+        if (state.procedure && state.city) {
+          const proc = procedures.find(p => p.slug === state.procedure);
+          const cityData = cities.find(c => c.name === state.city);
+          if (proc && cityData) {
+            const estimatedCost = Math.round(((proc.costs.total[0] + proc.costs.total[1]) / 2) * cityData.costMultiplier);
+            const estimatedGap = state.insurance === 'yes' ? Math.round(estimatedCost * 0.35) : estimatedCost;
+            document.getElementById('exit-popup-cost')!.textContent = `$${(estimatedGap - 2000).toLocaleString()}-$${(estimatedGap + 2000).toLocaleString()}`;
+          }
+        }
+      }
+    }
+
+    // Track mouse movement
+    document.addEventListener('mousemove', (e) => {
+      mouseY = e.clientY;
+    });
+
+    // Detect exit intent (mouse leaving top of page)
+    document.addEventListener('mouseout', (e) => {
+      if (e.clientY < 10 && mouseY > 10) {
+        showExitPopup();
+      }
+    });
+
+    // Close popup
+    document.getElementById('close-exit-popup')?.addEventListener('click', () => {
+      document.getElementById('exit-intent-popup')?.classList.remove('active');
+      document.getElementById('exit-intent-popup')?.classList.add('hidden');
+    });
+
+    document.getElementById('exit-anyway')?.addEventListener('click', () => {
+      document.getElementById('exit-intent-popup')?.classList.remove('active');
+      document.getElementById('exit-intent-popup')?.classList.add('hidden');
+    });
+
+    // Continue calculator
+    document.getElementById('continue-calculator')?.addEventListener('click', () => {
+      document.getElementById('exit-intent-popup')?.classList.remove('active');
+      document.getElementById('exit-intent-popup')?.classList.add('hidden');
+      
+      // Scroll back to calculator
+      document.querySelector('.bg-white.rounded-2xl')?.scrollIntoView({ behavior: 'smooth' });
+    });
   </script>
 </BaseLayout>
 
