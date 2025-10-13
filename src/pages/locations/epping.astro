@@ -1,0 +1,485 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const surgeons = await getCollection('surgeons');
+const localSurgeons = surgeons.filter((s: any) =>
+	s.data.location?.includes('Epping') ||
+	s.data.suburbs?.includes('Epping')
+);
+
+const title = "Weight Loss Surgery Epping VIC | Expert Bariatric Surgeons";
+const description = "Find weight loss surgery in Epping with comprehensive local support. Expert surgeons at Northern Private Hospital, local support services, and complete care for northern Melbourne residents.";
+const canonicalUrl = "https://weight-loss-surgery-australia.vercel.app/locations/epping";
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
+	<!-- Breadcrumbs -->
+	<div class="bg-gray-50 border-b border-gray-200">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+			<nav class="flex text-sm" aria-label="Breadcrumb">
+				<a href="/" class="text-[#6c95ef] hover:text-[#5a7fd8]">Home</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<a href="/locations/melbourne" class="text-[#6c95ef] hover:text-[#5a7fd8]">Melbourne</a>
+				<span class="mx-2 text-gray-400">/</span>
+				<span class="text-gray-600">Epping</span>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Hero Section -->
+	<section class="bg-[#6c95ef] text-white py-16">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-4xl">
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">
+					Weight Loss Surgery in Epping
+				</h1>
+				<p class="text-xl text-blue-100 mb-8 leading-relaxed">
+					Comprehensive bariatric surgery services for Epping and northern Melbourne residents. Expert surgeons at Northern Private Hospital with complete local support services. Population: 33,489 • Median Age: 30-39 years.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="/cost-calculator" class="bg-white text-[#6c95ef] px-8 py-4 rounded-lg hover:bg-gray-50 transition text-lg font-semibold text-center">
+						Cost Calculator
+					</a>
+					<a href="/procedures/gastric-sleeve" class="bg-[#6c95ef] text-white px-8 py-4 rounded-lg hover:bg-[#5a7fd8] transition text-lg font-semibold text-center border-2 border-white/20">
+						View Procedures
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Key Benefits -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Why Choose Epping for Bariatric Surgery</h2>
+
+			<div class="grid md:grid-cols-3 gap-8">
+				<div class="bg-[#eedfd7] rounded-xl p-6 border border-gray-200">
+					<div class="w-12 h-12 bg-[#6c95ef] rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Local Hospital in Epping</h3>
+					<p class="text-gray-700 mb-3">Northern Private Hospital is located right in Epping, eliminating travel stress for surgery and follow-up visits.</p>
+					<p class="text-sm text-blue-600 font-medium">→ 0km from Epping CBD</p>
+				</div>
+
+				<div class="bg-[#def7f1] rounded-xl p-6 border border-gray-200">
+					<div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Growing Community</h3>
+					<p class="text-gray-700 mb-3">Serving Epping's active 30-39 age group with modern facilities and comprehensive post-surgical support.</p>
+					<p class="text-sm text-green-600 font-medium">→ Median household income: $127,452/year</p>
+				</div>
+
+				<div class="bg-[#eedfd7] rounded-xl p-6 border border-gray-200">
+					<div class="w-12 h-12 bg-[#6c95ef] rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+						</svg>
+					</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-3">FRACS-Certified Surgeons</h3>
+					<p class="text-gray-700 mb-3">Mr Yahya Al-Habbal (FRACS 2016) and team at Northern Private Hospital with advanced surgical expertise.</p>
+					<p class="text-sm text-purple-600 font-medium">→ Minimally invasive specialists</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Hospital Information -->
+	<section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Northern Private Hospital</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Leading bariatric surgery facilities in Epping's heart with comprehensive care and BetterLife Surgery affiliation.</p>
+			
+			<div class="grid lg:grid-cols-2 gap-8">
+				<!-- Hospital Details -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<h3 class="text-2xl font-bold text-gray-900 mb-6">Hospital Details</h3>
+					
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+								<svg class="w-5 h-5 text-[#6c95ef]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+								</svg>
+							</div>
+							<div>
+								<p class="font-bold text-gray-900">Address</p>
+								<p class="text-gray-700">12 Osburn Place, Epping VIC 3076</p>
+								<a href="https://www.google.com/maps/search/?api=1&query=Northern+Private+Hospital+Epping" target="_blank" rel="noopener noreferrer" class="text-[#6c95ef] hover:text-[#5a7fd8] text-sm">
+									Get Directions →
+								</a>
+							</div>
+						</div>
+
+						<div class="flex items-start">
+							<div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+								<svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+								</svg>
+							</div>
+							<div>
+								<p class="font-bold text-gray-900">Surgeon Consulting</p>
+								<p class="text-gray-700 text-sm">Mr Yahya Al-Habbal: Suite 11, Level 2</p>
+								<p class="text-gray-700 text-sm">Dr Andrew Huo: Level 2, 230 Cooper Street</p>
+								<p class="text-gray-700 text-sm">Website: <a href="http://www.surgeon.melbourne" target="_blank" class="text-[#6c95ef] hover:underline">surgeon.melbourne</a></p>
+							</div>
+						</div>
+
+						<div class="flex items-start">
+							<div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+								<svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2" />
+								</svg>
+							</div>
+							<div>
+								<p class="font-bold text-gray-900">Procedures Offered</p>
+								<p class="text-gray-700 text-sm">Gastric bypass, gastric band, sleeve gastrectomy, advanced endoscopy</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+						<p class="text-sm font-bold text-gray-900 mb-2">🏥 BetterLife Surgery Network</p>
+						<p class="text-sm text-gray-700">Part of the comprehensive bariatric surgery network providing weight loss procedures across Melbourne.</p>
+					</div>
+				</div>
+
+				<!-- Surgeons -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<h3 class="text-2xl font-bold text-gray-900 mb-6">Bariatric Surgeons</h3>
+					
+					<div class="space-y-4">
+						<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-4 border border-blue-200">
+							<h4 class="font-bold text-gray-900 mb-2">Mr Yahya Al-Habbal, MBChB FRACS</h4>
+							<p class="text-sm text-gray-700 mb-2"><strong>Medical School:</strong> University of Mosul, Iraq (2001)</p>
+							<p class="text-sm text-gray-700 mb-2"><strong>FRACS:</strong> 2016 (Austin Health Melbourne)</p>
+							<p class="text-sm text-gray-700 mb-2"><strong>Additional Credentials:</strong> MRCSI (2004), Associate Fellow ACS</p>
+							<p class="text-sm text-gray-700 mb-2"><strong>Specialization:</strong> Minimally invasive upper GI surgery, weight loss surgery, advanced endoscopy</p>
+							<p class="text-sm text-gray-700 mb-2"><strong>Training:</strong> Austin Health, UK, UAE</p>
+							<p class="text-sm text-blue-600"><strong>Website:</strong> <a href="http://www.surgeon.melbourne" target="_blank" class="hover:underline">surgeon.melbourne</a></p>
+						</div>
+
+						<div class="bg-gray-50 rounded-lg p-4 border border-gray-200">
+							<h4 class="font-bold text-gray-900 mb-2">Dr Andrew Huo</h4>
+							<p class="text-sm text-gray-700 mb-2"><strong>Practice:</strong> Melbourne Weight Loss Centre network</p>
+							<p class="text-sm text-gray-700 mb-2"><strong>Consulting:</strong> Epping Private Specialist Centre</p>
+							<p class="text-sm text-gray-700">Comprehensive bariatric surgery expertise with multidisciplinary approach</p>
+						</div>
+
+						<div class="p-4 bg-green-50 rounded-lg border border-green-200">
+							<p class="text-sm font-bold text-gray-900 mb-1">✓ Both surgeons offer</p>
+							<ul class="text-sm text-gray-700 space-y-1">
+								<li>• Gastric sleeve and bypass procedures</li>
+								<li>• Advanced laparoscopic techniques</li>
+								<li>• Comprehensive pre & post-op support</li>
+								<li>• Multidisciplinary care coordination</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pharmacies -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Post-Surgery Supplies in Epping</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Three major pharmacies in Epping for bariatric vitamins, protein supplements, and post-surgical supplies.</p>
+
+			<div class="grid md:grid-cols-3 gap-6">
+				<div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-6 border border-red-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Chemist Warehouse Epping</h3>
+					<div class="space-y-3 text-sm">
+						<p class="text-gray-700"><strong>Address:</strong> Shop 15, Dalton Village SC, 371 Dalton Road</p>
+						<p class="text-gray-700"><strong>Phone:</strong> <a href="tel:0394088944" class="text-[#6c95ef] hover:underline">03 9408 8944</a></p>
+						<p class="text-gray-700"><strong>Hours:</strong> Mon-Fri 8:30am-9pm, Sat 9am-6pm, Sun 9am-6pm</p>
+						<p class="text-xs text-green-700 bg-green-50 p-2 rounded"><strong>✓ Bariatric Supplies:</strong> Call ahead to confirm vitamin stock availability</p>
+					</div>
+				</div>
+
+				<div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-6 border border-pink-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">TerryWhite Chemmart Epping</h3>
+					<div class="space-y-3 text-sm">
+						<p class="text-gray-700"><strong>Address:</strong> Unit 4, 230 Cooper Street (Quality Pharmacy)</p>
+						<p class="text-gray-700"><strong>Hours:</strong> Mon 8:30am-3:30pm, Tue 10am-2pm (varies by day)</p>
+						<p class="text-gray-700"><strong>Services:</strong> Bariatric formulations available</p>
+						<p class="text-xs text-green-700 bg-green-50 p-2 rounded"><strong>✓ Tip:</strong> Phone ahead for current hours and stock</p>
+					</div>
+				</div>
+
+				<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Priceline Pharmacy Epping</h3>
+					<div class="space-y-3 text-sm">
+						<p class="text-gray-700"><strong>Location:</strong> Use Priceline store locator for exact address</p>
+						<p class="text-gray-700"><strong>Typical Hours:</strong> 9am-6pm weekdays (suburban locations)</p>
+						<p class="text-gray-700"><strong>Services:</strong> Bariatric supplements typically stocked</p>
+						<p class="text-xs text-green-700 bg-green-50 p-2 rounded"><strong>✓ Availability:</strong> Contact store directly to confirm current inventory</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-200">
+				<h4 class="font-bold text-gray-900 mb-3">What to Get at Pharmacies After Surgery</h4>
+				<div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+					<div>
+						<p class="font-semibold mb-2">Essential Supplies:</p>
+						<ul class="space-y-1">
+							<li>• Bariatric multivitamins (chewable initially)</li>
+							<li>• Calcium citrate supplements</li>
+							<li>• Vitamin B12 sublingual</li>
+							<li>• Iron supplements (if recommended)</li>
+						</ul>
+					</div>
+					<div>
+						<p class="font-semibold mb-2">Protein & Nutrition:</p>
+						<ul class="space-y-1">
+							<li>• Sugar-free protein powders</li>
+							<li>• Clear protein drinks</li>
+							<li>• Sugar-free vitamins</li>
+							<li>• Probiotic supplements</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Dietitians -->
+	<section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Dietitian Support in Epping</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">APD-certified dietitians near Epping specializing in bariatric nutrition guidance.</p>
+
+			<div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+				<div class="bg-white rounded-xl shadow-md p-6 border border-green-200">
+					<h3 class="text-xl font-bold text-green-700 mb-4">NutriBlooms Epping</h3>
+					<p class="text-gray-700 mb-3"><strong>Location:</strong> Epping, Melbourne</p>
+					<p class="text-gray-700 mb-3"><strong>Services:</strong> Comprehensive dietetics services</p>
+					<p class="text-gray-700 mb-3"><strong>Accreditation:</strong> NDIS-registered</p>
+					<p class="text-sm text-gray-600">Range of nutrition support services available for bariatric patients.</p>
+				</div>
+
+				<div class="bg-white rounded-xl shadow-md p-6 border border-green-200">
+					<h3 class="text-xl font-bold text-green-700 mb-4">Epping Family Medical & Specialist Centre</h3>
+					<p class="text-gray-700 mb-3"><strong>Dietitians:</strong> Candice Newing and Manmeet Kaur</p>
+					<p class="text-gray-700 mb-3"><strong>Address:</strong> 24 Lyndarum Drive, Epping</p>
+					<p class="text-sm text-gray-600">Experienced APD dietitians providing comprehensive nutrition counseling and bariatric support.</p>
+				</div>
+			</div>
+
+			<div class="mt-8 bg-blue-50 rounded-xl p-6 border border-blue-200 max-w-4xl mx-auto">
+				<h4 class="font-bold text-gray-900 mb-3">Why You Need a Bariatric Dietitian</h4>
+				<div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+					<div>
+						<p class="font-semibold mb-2">Pre-Surgery:</p>
+						<ul class="space-y-1">
+							<li>• Prepare your body nutritionally</li>
+							<li>• Learn portion control</li>
+							<li>• Understand post-op diet stages</li>
+							<li>• Identify nutritional deficiencies</li>
+						</ul>
+					</div>
+					<div>
+						<p class="font-semibold mb-2">Post-Surgery:</p>
+						<ul class="space-y-1">
+							<li>• Progress through diet stages safely</li>
+							<li>• Prevent nutritional deficiencies</li>
+							<li>• Maximize weight loss</li>
+							<li>• Develop lifelong healthy habits</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Exercise Physiologists -->
+	<section class="py-16 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Exercise Physiology in Epping</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">ESSA-accredited exercise physiologists for post-surgical rehabilitation and fitness programming.</p>
+
+			<div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+				<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Integral Movement</h3>
+					<p class="text-gray-700 mb-2"><strong>Address:</strong> U11, 58 Willandra Drive, Epping VIC 3076</p>
+					<p class="text-gray-700 mb-3"><strong>Accreditation:</strong> ESSA accredited</p>
+					<p class="text-sm text-gray-600">Specializes in exercise physiology services with qualified practitioners.</p>
+				</div>
+
+				<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-4">Epping Family Medical Centre</h3>
+					<p class="text-gray-700 mb-2"><strong>Address:</strong> 24 Lyndarum Drive, Epping</p>
+					<p class="text-gray-700 mb-3"><strong>Services:</strong> Exercise physiology & physiotherapy</p>
+					<p class="text-gray-700 mb-3"><strong>Specializations:</strong> Cardiovascular, metabolic, musculoskeletal, post-surgical rehab</p>
+					<p class="text-sm text-gray-600">Comprehensive exercise physiology with ESSA-accredited practitioners.</p>
+				</div>
+			</div>
+
+			<div class="mt-8 bg-purple-50 rounded-xl p-6 border border-purple-200 max-w-4xl mx-auto">
+				<h4 class="font-bold text-gray-900 mb-3">Post-Surgery Exercise Timeline</h4>
+				<div class="space-y-3 text-sm text-gray-700">
+					<div class="flex items-start">
+						<div class="w-24 flex-shrink-0 font-semibold">Weeks 1-2:</div>
+						<div>Short walks (5-10 mins) multiple times daily. Focus on gentle movement and preventing blood clots.</div>
+					</div>
+					<div class="flex items-start">
+						<div class="w-24 flex-shrink-0 font-semibold">Weeks 3-6:</div>
+						<div>Increase walking duration to 20-30 mins. Begin light resistance exercises with physio guidance.</div>
+					</div>
+					<div class="flex items-start">
+						<div class="w-24 flex-shrink-0 font-semibold">Week 6+:</div>
+						<div>Start structured exercise program with ESSA-accredited physiologist. Gradually build strength and cardio.</div>
+					</div>
+					<div class="flex items-start">
+						<div class="w-24 flex-shrink-0 font-semibold">Month 3+:</div>
+						<div>Progress to full exercise capacity. Join gym or fitness classes with ongoing physio support.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Demographics & Community Support -->
+	<section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">Epping Community Health Profile</h2>
+			<p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Understanding obesity trends and health needs in Epping's growing community.</p>
+
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+				<div class="bg-white rounded-lg p-6 text-center shadow-md">
+					<p class="text-4xl font-bold text-[#6c95ef] mb-2">33,489</p>
+					<p class="text-gray-700 font-medium">Population (2021)</p>
+					<p class="text-xs text-gray-600 mt-2">Growing northern suburb</p>
+				</div>
+
+				<div class="bg-white rounded-lg p-6 text-center shadow-md">
+					<p class="text-4xl font-bold text-green-600 mb-2">30-39</p>
+					<p class="text-gray-700 font-medium">Median Age Group</p>
+					<p class="text-xs text-gray-600 mt-2">Active working families</p>
+				</div>
+
+				<div class="bg-white rounded-lg p-6 text-center shadow-md">
+					<p class="text-4xl font-bold text-purple-600 mb-2">$2,451</p>
+					<p class="text-gray-700 font-medium">Median Weekly Income</p>
+					<p class="text-xs text-gray-600 mt-2">$127,452 annually</p>
+				</div>
+
+				<div class="bg-white rounded-lg p-6 text-center shadow-md">
+					<p class="text-4xl font-bold text-orange-600 mb-2">32.3%</p>
+					<p class="text-gray-700 font-medium">Obesity Rate (2022)</p>
+					<p class="text-xs text-gray-600 mt-2">Above Victorian average</p>
+				</div>
+			</div>
+
+			<div class="bg-white rounded-xl p-8 shadow-md">
+				<h3 class="text-2xl font-bold text-gray-900 mb-6">Health Considerations for Epping Residents</h3>
+				<div class="grid md:grid-cols-2 gap-8">
+					<div>
+						<h4 class="font-bold text-gray-900 mb-3">Why Weight Loss Surgery Matters Here</h4>
+						<ul class="space-y-2 text-gray-700 text-sm">
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+								<span>Epping's 32.3% obesity rate means 1 in 3 residents face obesity-related health risks</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+								<span>Young, working-age population benefits most from long-term health improvements</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+								<span>Local hospital access reduces travel stress and improves post-op attendance</span>
+							</li>
+							<li class="flex items-start">
+								<svg class="w-5 h-5 text-green-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+								<span>Median income level allows access to private health coverage for reduced costs</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h4 class="font-bold text-gray-900 mb-3">Common Obesity-Related Conditions</h4>
+						<ul class="space-y-2 text-gray-700 text-sm">
+							<li>• <strong>Type 2 Diabetes:</strong> Often improves or resolves after gastric sleeve</li>
+							<li>• <strong>Sleep Apnea:</strong> Significant improvement with weight loss</li>
+							<li>• <strong>High Blood Pressure:</strong> Reduced medication needs common</li>
+							<li>• <strong>Joint Pain:</strong> Less weight = less stress on knees and hips</li>
+							<li>• <strong>Fatty Liver Disease:</strong> Can improve dramatically</li>
+							<li>• <strong>Heart Disease Risk:</strong> Substantially reduced with sustained weight loss</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQs -->
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Epping Weight Loss Surgery FAQs</h2>
+
+			<div class="space-y-6">
+				<div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-3">How far is Northern Private Hospital from Epping?</h3>
+					<p class="text-gray-700 mb-2">Northern Private Hospital is located at 12 Osburn Place, right in Epping—0km from the suburb center. Most Epping residents can reach the hospital in under 10 minutes by car.</p>
+					<p class="text-sm text-gray-600">This eliminates travel stress for pre-op appointments, surgery day, and frequent post-operative check-ups, making it ideal for local residents.</p>
+				</div>
+
+				<div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-3">What bariatric procedures does Mr Yahya Al-Habbal perform?</h3>
+					<p class="text-gray-700 mb-2">Mr Al-Habbal (FRACS 2016) specializes in minimally invasive upper GI and bariatric procedures including gastric sleeve, gastric bypass, gastric banding, and advanced endoscopic techniques.</p>
+					<p class="text-sm text-gray-600">He completed fellowship training at Austin Health Melbourne and has additional credentials from MRCS Ireland and is an Associate Fellow of the American College of Surgeons.</p>
+				</div>
+
+				<div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Can I get bariatric vitamins at Epping pharmacies?</h3>
+					<p class="text-gray-700 mb-2">Yes. Chemist Warehouse Epping (Dalton Village, 371 Dalton Road) and TerryWhite Chemmart (230 Cooper Street) both stock bariatric supplements. However, call ahead to confirm current stock: Chemist Warehouse at <a href="tel:0394088944" class="text-[#6c95ef] hover:underline">03 9408 8944</a>.</p>
+					<p class="text-sm text-gray-600">You'll need chewable multivitamins, calcium citrate, B12, and protein powders. Your dietitian will provide a specific shopping list.</p>
+				</div>
+
+				<div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Do I need private health insurance for weight loss surgery in Epping?</h3>
+					<p class="text-gray-700 mb-2">Private health insurance is not mandatory, but it significantly reduces your out-of-pocket costs. Most patients pay $5,000-$8,000 with insurance vs $15,000-$25,000 self-funded.</p>
+					<p class="text-sm text-gray-600">You'll need hospital cover with bariatric surgery inclusion (check for waiting periods, usually 12 months). Medicare rebates apply regardless of insurance status.</p>
+				</div>
+
+				<div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-3">Why is Epping's obesity rate 32.3% and what does that mean?</h3>
+					<p class="text-gray-700 mb-2">Epping's 32.3% obesity rate (2022) means nearly 1 in 3 residents have a BMI over 30, facing increased risks of diabetes, heart disease, and joint problems. This is above the Victorian average.</p>
+					<p class="text-sm text-gray-600">With median age 30-39, Epping residents benefit most from bariatric surgery as it provides decades of improved health, mobility, and quality of life while still young enough to maximize benefits.</p>
+				</div>
+
+				<div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+					<h3 class="text-xl font-bold text-gray-900 mb-3">When can I return to work after gastric sleeve in Epping?</h3>
+					<p class="text-gray-700 mb-2">Most patients return to desk jobs in 1-2 weeks, physical jobs in 4-6 weeks. Your surgeon will provide specific guidance based on your procedure and recovery progress.</p>
+					<p class="text-sm text-gray-600">Having Northern Private Hospital in Epping means easier follow-up visits during your return-to-work transition, and local exercise physiologists (like Integral Movement or Epping Family Medical Centre) can support your gradual return to activity.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 bg-gradient-to-r from-[#6c95ef] to-[#5a7fd8] text-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Weight Loss Journey in Epping?</h2>
+			<p class="text-xl text-blue-100 mb-8">Northern Private Hospital is right here in Epping with FRACS-certified surgeons and comprehensive local support.</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/cost-calculator" class="bg-white text-[#6c95ef] px-8 py-4 rounded-lg hover:bg-gray-50 transition text-lg font-semibold">
+					Calculate Your Cost
+				</a>
+				<a href="/procedures/gastric-sleeve" class="bg-[#6c95ef] text-white px-8 py-4 rounded-lg hover:bg-[#5a7fd8] transition text-lg font-semibold border-2 border-white/20">
+					Learn About Procedures
+				</a>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
