@@ -130,25 +130,20 @@ bariatric specialist.
 
 ## 📊 Homepage Integration (High Visibility)
 
-### **BMI Calculator CTA**
-**Location:** After stigma-busting section, before cost calculator
+### **⚠️ Strategic Decision: BMI Calculator Removed from Homepage**
 
-**Design:**
-- Purple/pink gradient theme (distinct from cost calculator's blue/purple)
-- Two-column layout (benefits + visual proof)
-- Social proof: "2,847 people used this week"
-- Three BMI range examples with visual indicators
-- Clear disclaimer: "Only a qualified surgeon can determine eligibility"
+**Why:**
+- BMI Calculator was competing with the more comprehensive Readiness Quiz
+- Both addressed eligibility, creating tool dilution
+- Caused prospect paralysis: "Which one should I do?"
+- Readiness Quiz is superior (eligibility + psychological + lifestyle)
 
-**Copy:**
-```
-"Am I Even Eligible?"
-
-Calculate your BMI in 10 seconds and discover if you may be a candidate 
-for weight loss surgery. Private, anonymous, instant results.
-
-🔒 100% private • No email required • Takes 10 seconds
-```
+**New Positioning:**
+- BMI Calculator page remains live at `/bmi-calculator`
+- Will be linked from Readiness Quiz results page
+- Used in blog content about eligibility
+- Targeted ads for simple entry point
+- **NOT promoted on homepage**
 
 ### **Surgeon Checklist CTA**
 **Location:** After location cards, before FAQ section
@@ -177,17 +172,17 @@ Book consultation + instant PDF download
 
 **Stage 1: Awareness (Top Funnel)**
 1. User lands on homepage
-2. Sees BMI Calculator CTA: "Am I Even Eligible?"
-3. Calculates BMI instantly (no email)
-4. Gets compliance-safe candidacy messaging
-5. Option to get full report (email gate)
+2. Takes Readiness Quiz (comprehensive eligibility + psychological + lifestyle)
+3. Gets personalized readiness score and recommendations
+4. Option for full report via email
+5. Introduced to Cost Calculator for next step
 
 **Stage 2: Consideration (Mid Funnel)**
-1. From BMI results, clicks "Calculate My Surgery Costs"
+1. From Readiness results, clicks "Calculate My Surgery Costs"
 2. Goes through 4-step cost calculator
 3. Gets detailed cost breakdown
 4. Email gate for personalized report + financing guide
-5. Sees "Next Steps" CTAs (surgeon selection, readiness quiz)
+5. Sees "Next Steps" CTAs (surgeon selection, BMI deep dive)
 
 **Stage 3: Decision (Bottom Funnel)**
 1. User explores surgeon profiles
@@ -211,18 +206,23 @@ Book consultation + instant PDF download
 - **Secondary KPI:** Email capture rate
 
 ### **BMI Calculator**
-- **Leads per month:** 200
-- **Cost calculator progression:** 25% (50 leads)
-- **Eventual consultation rate:** 8% (4 consultations)
-- **Lead quality:** Top-funnel, long-term nurture
-- **Primary KPI:** Email capture rate (target 35%+)
-- **Secondary KPI:** Progression to cost calculator
+- **Status:** Built but NOT promoted on homepage (to avoid Readiness Quiz competition)
+- **Positioning:** Secondary tool for blog content, ads, and post-quiz deep dives
+- **Expected leads:** ~50/month (reduced from 200 due to deprioritization)
+- **Strategic value:** Still valuable, just not competing with better tools
+
+### **Readiness Quiz** (Existing - Primary Top Funnel)
+- **Status:** Already live and superior to BMI calculator
+- **Leads per month:** 150+ (estimated)
+- **Comprehensive assessment:** Eligibility + psychological + lifestyle
+- **Lead quality:** Top-funnel, well-qualified
 
 ### **Combined Impact**
-- **Total new leads:** +320/month
-- **High-intent consultations:** +17/month (from lead magnets alone)
-- **Email list growth:** +320/month for ongoing nurture
+- **Total new leads:** +270/month (120 checklist + 150 readiness quiz)
+- **High-intent consultations:** +15/month (primarily from checklist)
+- **Email list growth:** +270/month for ongoing nurture
 - **Funnel coverage:** Complete (awareness → decision)
+- **No tool confusion:** Each tool has distinct purpose
 
 ---
 
