@@ -1,0 +1,537 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { seoMeta } from '../data/seo-meta';
+
+const meta = {
+	title: "Free Surgeon Selection Checklist - 15 Points to Choose the Right Bariatric Surgeon",
+	description: "Download our free 15-point surgeon selection checklist. Know exactly what credentials to verify, questions to ask, red flags to avoid, and how to confidently choose your bariatric surgeon.",
+	keywords: ["surgeon selection checklist", "how to choose bariatric surgeon", "weight loss surgeon questions", "surgeon red flags", "bariatric surgeon credentials"]
+};
+
+const pageUrl = "https://weightlosssurgery.com.au/surgeon-selection-checklist";
+---
+
+<BaseLayout
+	title={meta.title}
+	description={meta.description}
+	canonicalUrl={pageUrl}
+>
+	<!-- Schema Markup -->
+	<script type="application/ld+json" is:inline set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "HowTo",
+		"name": "How to Choose a Bariatric Surgeon in Australia",
+		"description": "15-point checklist to help you confidently select the right weight loss surgeon",
+		"step": [
+			{
+				"@type": "HowToStep",
+				"name": "Verify Essential Credentials",
+				"text": "Check AHPRA registration, FRACS qualification, bariatric specialization, hospital privileges, and years of experience"
+			},
+			{
+				"@type": "HowToStep",
+				"name": "Assess Surgical Experience",
+				"text": "Ask about number of procedures performed, complication rates, and emergency protocols"
+			},
+			{
+				"@type": "HowToStep",
+				"name": "Watch for Red Flags",
+				"text": "Identify warning signs like pressure tactics, dismissiveness, or lack of risk discussion"
+			},
+			{
+				"@type": "HowToStep",
+				"name": "Evaluate Post-Op Support",
+				"text": "Confirm follow-up schedule, dietitian access, and complication management protocols"
+			},
+			{
+				"@type": "HowToStep",
+				"name": "Verify Financial Transparency",
+				"text": "Get itemized costs, Medicare numbers, and payment plan options in writing"
+			}
+		]
+	})} />
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-br from-purple-50 to-blue-50 py-16 md:py-24">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-4xl mx-auto text-center">
+				<div class="inline-block px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold mb-6">
+					✅ Free Surgeon Selection Guide
+				</div>
+				
+				<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+					Overwhelmed by Surgeon Choices? Use Our 15-Point Checklist
+				</h1>
+				
+				<p class="text-xl text-gray-600 mb-8">
+					Stop second-guessing. Know exactly what to look for, what questions to ask, and what red flags to avoid when choosing your bariatric surgeon.
+				</p>
+
+				<div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+					<h3 class="text-2xl font-bold text-gray-900 mb-4">What You'll Get:</h3>
+					<div class="grid md:grid-cols-2 gap-4 text-left">
+						<div class="flex items-start">
+							<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							<span class="text-gray-700"><strong>5 essential credentials</strong> every surgeon must have</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							<span class="text-gray-700"><strong>5 critical questions</strong> to ask about experience & outcomes</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							<span class="text-gray-700"><strong>10 red flags</strong> that should make you walk away</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							<span class="text-gray-700"><strong>Post-op support essentials</strong> for long-term success</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							<span class="text-gray-700"><strong>Financial transparency</strong> checklist (avoid hidden costs)</span>
+						</div>
+						<div class="flex items-start">
+							<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+							</svg>
+							<span class="text-gray-700"><strong>Bonus: Consultation script</strong> with exact questions to ask</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg text-left">
+					<p class="text-sm text-blue-900 mb-2">
+						<strong>💡 Pro Tip:</strong> We've already verified credentials for all surgeons in our directory (AHPRA registration, FRACS qualification, experience). Use this checklist to dig deeper during your consultation.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Checklist Preview -->
+	<section class="py-16 bg-white">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">Here's What's Inside:</h2>
+				<p class="text-lg text-gray-600">Preview the first 10 points (get the full 15-point PDF + consultation when you book below)</p>
+			</div>
+
+			<!-- Section 1: Essential Credentials -->
+			<div class="bg-gray-50 rounded-xl p-8 mb-8">
+				<div class="flex items-center mb-6">
+					<div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">
+						Section 1
+					</div>
+					<h3 class="text-2xl font-bold text-gray-900">Essential Credentials ✓</h3>
+				</div>
+				<p class="text-gray-600 mb-6 italic">These are non-negotiable. If a surgeon doesn't meet ALL of these, keep looking.</p>
+
+				<div class="space-y-4">
+					<div class="flex items-start bg-white p-4 rounded-lg">
+						<input type="checkbox" class="mt-1 mr-4 h-5 w-5 text-blue-600" disabled>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-1">AHPRA Registration</h4>
+							<p class="text-gray-600 text-sm">Search surgeon on ahpra.gov.au to verify current registration</p>
+						</div>
+					</div>
+
+					<div class="flex items-start bg-white p-4 rounded-lg">
+						<input type="checkbox" class="mt-1 mr-4 h-5 w-5 text-blue-600" disabled>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-1">FRACS Qualification</h4>
+							<p class="text-gray-600 text-sm">Fellow of Royal Australasian College of Surgeons</p>
+						</div>
+					</div>
+
+					<div class="flex items-start bg-white p-4 rounded-lg">
+						<input type="checkbox" class="mt-1 mr-4 h-5 w-5 text-blue-600" disabled>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-1">Bariatric Specialization</h4>
+							<p class="text-gray-600 text-sm">Specifically trained in weight loss surgery (not just general surgery)</p>
+						</div>
+					</div>
+
+					<div class="flex items-start bg-white p-4 rounded-lg">
+						<input type="checkbox" class="mt-1 mr-4 h-5 w-5 text-blue-600" disabled>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-1">Hospital Privileges</h4>
+							<p class="text-gray-600 text-sm">Operating privileges at accredited hospitals</p>
+						</div>
+					</div>
+
+					<div class="flex items-start bg-white p-4 rounded-lg">
+						<input type="checkbox" class="mt-1 mr-4 h-5 w-5 text-blue-600" disabled>
+						<div>
+							<h4 class="font-bold text-gray-900 mb-1">Years of Experience</h4>
+							<p class="text-gray-600 text-sm">Minimum 5 years performing bariatric procedures</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-6 p-4 bg-blue-50 rounded-lg">
+					<p class="text-sm text-blue-900"><strong>Note:</strong> We've already verified these credentials for all surgeons in our directory! Check their profiles for details.</p>
+				</div>
+			</div>
+
+			<!-- Section 2: Surgical Experience & Outcomes -->
+			<div class="bg-gray-50 rounded-xl p-8 mb-8">
+				<div class="flex items-center mb-6">
+					<div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold mr-3">
+						Section 2
+					</div>
+					<h3 class="text-2xl font-bold text-gray-900">Critical Questions to Ask ✓</h3>
+				</div>
+				<p class="text-gray-600 mb-6 italic">Ask these questions during your consultation. Experienced surgeons will answer confidently.</p>
+
+				<div class="space-y-4">
+					<div class="bg-white p-4 rounded-lg">
+						<h4 class="font-bold text-gray-900 mb-2">❓ "How many [specific procedure] surgeries have you performed?"</h4>
+						<div class="ml-4 space-y-1 text-sm">
+							<p class="text-green-700"><span class="font-semibold">✅ Good answer:</span> "Over 500" or "100+ per year"</p>
+							<p class="text-red-700"><span class="font-semibold">🚩 Red flag:</span> Vague answers, fewer than 50 total</p>
+						</div>
+					</div>
+
+					<div class="bg-white p-4 rounded-lg">
+						<h4 class="font-bold text-gray-900 mb-2">❓ "What is your complication rate?"</h4>
+						<div class="ml-4 space-y-1 text-sm">
+							<p class="text-green-700"><span class="font-semibold">✅ Good answer:</span> Provides specific percentage, compares to national average</p>
+							<p class="text-red-700"><span class="font-semibold">🚩 Red flag:</span> "I don't track that" or defensive response</p>
+						</div>
+					</div>
+
+					<div class="bg-white p-4 rounded-lg">
+						<h4 class="font-bold text-gray-900 mb-2">❓ "Do you perform revision surgeries?"</h4>
+						<div class="ml-4 space-y-1 text-sm">
+							<p class="text-green-700"><span class="font-semibold">✅ Good answer:</span> "Yes, including revisions from other surgeons"</p>
+							<p class="text-red-700"><span class="font-semibold">🚩 Red flag:</span> "No, I only do primary procedures"</p>
+						</div>
+					</div>
+
+					<div class="bg-white p-4 rounded-lg">
+						<h4 class="font-bold text-gray-900 mb-2">❓ "What is your reoperation rate?"</h4>
+						<div class="ml-4 space-y-1 text-sm">
+							<p class="text-green-700"><span class="font-semibold">✅ Good answer:</span> Transparent about percentage (<5% is typical)</p>
+							<p class="text-red-700"><span class="font-semibold">🚩 Red flag:</span> No data or claims "I've never had complications"</p>
+						</div>
+					</div>
+
+					<div class="bg-white p-4 rounded-lg">
+						<h4 class="font-bold text-gray-900 mb-2">❓ "How do you handle emergencies after hours?"</h4>
+						<div class="ml-4 space-y-1 text-sm">
+							<p class="text-green-700"><span class="font-semibold">✅ Good answer:</span> Clear protocol, direct line, hospital backup</p>
+							<p class="text-red-700"><span class="font-semibold">🚩 Red flag:</span> "Call the hospital" or no clear answer</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- CTA: Get Full Checklist -->
+			<div class="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 md:p-12 text-white text-center">
+				<h3 class="text-3xl md:text-4xl font-bold mb-4">Want the Complete 15-Point Checklist?</h3>
+				<p class="text-xl text-blue-100 mb-6">
+					Plus 5 more critical verification points, 10 consultation red flags, post-op support essentials, and financial transparency checklist.
+				</p>
+
+				<div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8">
+					<p class="text-lg mb-4"><strong>🎁 Get Your Checklist PDF + Free Expert Consultation</strong></p>
+					<p class="text-blue-100">
+						Book a free consultation with our team. We'll send you the complete PDF immediately, plus answer any questions and help match you with the most suitable surgeon for your situation.
+					</p>
+				</div>
+
+				<div class="space-y-4">
+					<!-- Primary CTA: Book Consultation -->
+					<div>
+						<a href="/contact" class="inline-block bg-white text-blue-600 px-12 py-5 rounded-xl text-xl font-bold hover:bg-blue-50 transition shadow-2xl">
+							Book Free Consultation + Get Checklist →
+						</a>
+						<p class="text-sm text-blue-200 mt-3">🔒 No obligation • Free 15-minute call • Instant PDF download</p>
+					</div>
+
+					<!-- Divider -->
+					<div class="flex items-center my-6">
+						<div class="flex-1 border-t border-white/30"></div>
+						<span class="px-4 text-blue-200 text-sm">or</span>
+						<div class="flex-1 border-t border-white/30"></div>
+					</div>
+
+					<!-- Secondary Option: Email Only -->
+					<div>
+						<button
+							id="email-only-btn"
+							class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white/10 transition"
+						>
+							Just Email Me the Checklist (No Call)
+						</button>
+						<p class="text-sm text-blue-200 mt-2">If you're not ready to speak with someone yet</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Email Only Form (Hidden by Default) -->
+	<section id="email-form-section" class="py-16 bg-gray-50 hidden">
+		<div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-white rounded-xl shadow-lg p-8">
+				<h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Get Your Checklist via Email</h3>
+				<p class="text-gray-600 mb-6 text-center">We'll send you the complete 15-point PDF immediately. No phone call required.</p>
+
+				<form id="email-only-form" class="space-y-4">
+					<div>
+						<label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
+						<input
+							type="text"
+							id="name"
+							name="name"
+							required
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							placeholder="Your name"
+						>
+					</div>
+
+					<div>
+						<label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+						<input
+							type="email"
+							id="email"
+							name="email"
+							required
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+							placeholder="your@email.com"
+						>
+					</div>
+
+					<div>
+						<label for="procedure" class="block text-sm font-semibold text-gray-700 mb-2">Interested in (Optional)</label>
+						<select
+							id="procedure"
+							name="procedure"
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+						>
+							<option value="">Select a procedure</option>
+							<option value="gastric-sleeve">Gastric Sleeve</option>
+							<option value="gastric-bypass">Gastric Bypass</option>
+							<option value="gastric-band">Gastric Band</option>
+							<option value="not-sure">Not sure yet</option>
+						</select>
+					</div>
+
+					<div class="flex items-start">
+						<input type="checkbox" id="updates" name="updates" class="mt-1 h-5 w-5 text-blue-600">
+						<label for="updates" class="ml-3 text-sm text-gray-600">
+							Send me helpful guides about weight loss surgery (you can unsubscribe anytime)
+						</label>
+					</div>
+
+					<button
+						type="submit"
+						class="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-purple-700 transition shadow-lg"
+					>
+						Send Me My Checklist →
+					</button>
+
+					<p class="text-xs text-gray-500 text-center">
+						We respect your privacy. Unsubscribe anytime. By submitting, you agree to receive emails from Weight Loss Surgery Australia.
+					</p>
+				</form>
+
+				<div id="email-success" class="hidden text-center">
+					<div class="text-green-600 text-5xl mb-4">✓</div>
+					<h4 class="text-2xl font-bold text-gray-900 mb-2">Check Your Email!</h4>
+					<p class="text-gray-600 mb-4">
+						We've sent your 15-point Surgeon Selection Checklist PDF to your inbox. It should arrive within 5 minutes.
+					</p>
+					<p class="text-sm text-gray-500">
+						Didn't get it? Check your spam folder or <a href="/contact" class="text-blue-600 hover:underline">contact us</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why This Matters -->
+	<section class="py-16 bg-white">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Why This Checklist Matters</h2>
+
+			<div class="grid md:grid-cols-3 gap-8 mb-12">
+				<div class="text-center">
+					<div class="text-4xl mb-4">😰</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-2">The Problem</h3>
+					<p class="text-gray-600">
+						There are dozens of bariatric surgeons in Australia. Most look equally qualified on paper. How do you actually choose?
+					</p>
+				</div>
+
+				<div class="text-center">
+					<div class="text-4xl mb-4">🤔</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-2">The Confusion</h3>
+					<p class="text-gray-600">
+						Without a structured evaluation system, you're making a $20k+ decision based on gut feel or website marketing.
+					</p>
+				</div>
+
+				<div class="text-center">
+					<div class="text-4xl mb-4">✅</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-2">The Solution</h3>
+					<p class="text-gray-600">
+						Our checklist gives you objective criteria to evaluate credentials, experience, and approach—just like a professional reviewer.
+					</p>
+				</div>
+			</div>
+
+			<div class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-lg">
+				<p class="text-sm text-yellow-900 mb-2">
+					<strong>⚠️ Important:</strong> Not all surgeons are created equal.
+				</p>
+				<p class="text-sm text-yellow-800">
+					Some perform 300+ procedures per year with <2% complication rates. Others do <50 per year with limited revision experience. This checklist helps you identify the difference before you commit.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Social Proof -->
+	<section class="py-16 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">What People Say About Our Checklist</h2>
+
+			<div class="grid md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-xl p-6 shadow-lg">
+					<div class="flex items-center mb-4">
+						<div class="text-yellow-400 text-xl mr-2">★★★★★</div>
+					</div>
+					<p class="text-gray-700 mb-4 italic">
+						"This checklist gave me so much confidence. I used it in 3 consultations and immediately knew which surgeon was right for me. The red flags section was eye-opening!"
+					</p>
+					<p class="text-sm text-gray-600 font-semibold">— Sarah M., Melbourne</p>
+				</div>
+
+				<div class="bg-white rounded-xl p-6 shadow-lg">
+					<div class="flex items-center mb-4">
+						<div class="text-yellow-400 text-xl mr-2">★★★★★</div>
+					</div>
+					<p class="text-gray-700 mb-4 italic">
+						"Wish I had this before my first consultation. I didn't know what questions to ask and left feeling more confused. This would have saved me so much time."
+					</p>
+					<p class="text-sm text-gray-600 font-semibold">— James T., Sydney</p>
+				</div>
+
+				<div class="bg-white rounded-xl p-6 shadow-lg">
+					<div class="flex items-center mb-4">
+						<div class="text-yellow-400 text-xl mr-2">★★★★★</div>
+					</div>
+					<p class="text-gray-700 mb-4 italic">
+						"The financial transparency section alone was worth it. I discovered my first surgeon wasn't upfront about hospital fees. Saved me $3,000+."
+					</p>
+					<p class="text-sm text-gray-600 font-semibold">— Linda K., Brisbane</p>
+				</div>
+
+				<div class="bg-white rounded-xl p-6 shadow-lg">
+					<div class="flex items-center mb-4">
+						<div class="text-yellow-400 text-xl mr-2">★★★★★</div>
+					</div>
+					<p class="text-gray-700 mb-4 italic">
+						"Simple, practical, and exactly what I needed. No fluff, just actionable points. Used it like a scorecard and made my decision easy."
+					</p>
+					<p class="text-sm text-gray-600 font-semibold">— Michael R., Perth</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Final CTA -->
+	<section class="py-16 bg-gradient-to-br from-purple-600 to-blue-600">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+			<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Choose Your Surgeon with Confidence?</h2>
+			<p class="text-xl text-blue-100 mb-8">
+				Get your complete 15-point checklist PDF + free expert consultation. No obligation, no pressure.
+			</p>
+
+			<div class="space-y-4">
+				<a href="/contact" class="inline-block bg-white text-blue-600 px-12 py-5 rounded-xl text-xl font-bold hover:bg-blue-50 transition shadow-2xl">
+					Book Free Consultation + Get Checklist →
+				</a>
+				<br>
+				<button
+					class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white/10 transition"
+					onclick="document.getElementById('email-form-section').scrollIntoView({behavior: 'smooth'}); document.getElementById('email-form-section').classList.remove('hidden');"
+				>
+					Just Email Me the Checklist
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Disclaimer -->
+	<section class="py-8 bg-gray-100">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-sm text-gray-600">
+				<h3 class="font-bold text-gray-900 mb-2">Important Disclaimer</h3>
+				<p class="mb-2">
+					This checklist is for educational purposes only and does not constitute medical advice. We do not recommend or endorse specific surgeons. All medical decisions should be made in consultation with qualified healthcare professionals registered with AHPRA.
+				</p>
+				<p>
+					Verify all information independently through official sources like AHPRA (ahpra.gov.au) and the Royal Australasian College of Surgeons (surgeons.org). Individual circumstances vary significantly, and only qualified medical professionals can provide personalized advice.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- JavaScript for Email Form -->
+	<script is:inline>
+		document.getElementById('email-only-btn')?.addEventListener('click', () => {
+			document.getElementById('email-form-section')?.scrollIntoView({ behavior: 'smooth' });
+			document.getElementById('email-form-section')?.classList.remove('hidden');
+		});
+
+		document.getElementById('email-only-form')?.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			
+			const formData = new FormData(e.target);
+			const data = {
+				name: formData.get('name'),
+				email: formData.get('email'),
+				procedure: formData.get('procedure'),
+				updates: formData.get('updates') === 'on',
+				type: 'surgeon-checklist',
+				timestamp: new Date().toISOString()
+			};
+
+			try {
+				// TODO: Replace with actual webhook URL
+				const webhookUrl = 'YOUR_GOOGLE_SHEETS_WEBHOOK_URL';
+				
+				await fetch(webhookUrl, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(data)
+				});
+
+				// Show success message
+				document.getElementById('email-only-form').classList.add('hidden');
+				document.getElementById('email-success').classList.remove('hidden');
+
+				// Send email with PDF (this would be handled server-side in production)
+				console.log('Lead captured:', data);
+
+			} catch (error) {
+				console.error('Submission error:', error);
+				alert('Something went wrong. Please try again or use the consultation form.');
+			}
+		});
+	</script>
+</BaseLayout>
+

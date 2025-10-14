@@ -17,7 +17,7 @@ Two high-converting lead magnets designed to capture leads at different funnel s
 ### **Value Proposition**
 
 **What the lead gets:**
-> "Download our free 15-Point Surgeon Selection Checklist used by over 2,000 Australians to confidently choose their bariatric surgeon. Know exactly what to look for, what questions to ask, and what red flags to avoid."
+> "Download our free 15-Point Surgeon Selection Checklist to confidently choose your bariatric surgeon. Know exactly what to look for, what questions to ask, and what red flags to avoid."
 
 **Why they want it:**
 - Removes overwhelm (too many surgeons, don't know how to compare)
@@ -40,7 +40,7 @@ Two high-converting lead magnets designed to capture leads at different funnel s
 - [ ] **Years of Experience** - Minimum 5 years performing bariatric procedures
 
 **Compliance Note:** These are objective, verifiable facts, not medical recommendations.
-
+Note* We have already done this for them! All that infomration can be found in our surgeon profile
 ---
 
 #### **Section 2: Surgical Experience & Outcomes ✓**
@@ -141,6 +141,7 @@ No spam. We'll also send you our surgeon interview guide.
 [Email input field]
 [Download Complete Checklist →]
 ```
+I think we should just go for the consult lead right here. THey get the checklist and call to answer any questions and book them in with the most suitable surgeon for them
 
 **Follow-up sequence:**
 - **Immediate:** PDF download + "How to use this checklist" email
@@ -177,7 +178,7 @@ like AHPRA and RACS.
 - `/surgeon-selection-checklist` (landing page)
 - Hero: Problem (overwhelmed by choice) → Solution (our checklist)
 - Preview: Show first 2 sections
-- Email gate
+- Email gate (consult lead gen gate) (or.. not option of email only if they aren't ready to consult yet)
 - Download: PDF generation or pre-made PDF link
 - Thank you page: Next steps + consultation CTA
 
@@ -207,7 +208,7 @@ like AHPRA and RACS.
 ### **Value Proposition**
 
 **What the lead gets:**
-> "Calculate your BMI in 10 seconds and discover if you may be a candidate for weight loss surgery in Australia. Get your personalized candidacy report with procedure recommendations."
+> "Calculate your BMI in 10 seconds and discover if you may be a candidate for weight loss surgery in Australia. Get your personalized candidacy report with procedure options."
 
 **Why they want it:**
 - Immediate answer to #1 question: "Am I eligible?"

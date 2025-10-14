@@ -139,6 +139,13 @@ export const seoMeta: Record<string, PageMeta> = {
     keywords: ["superannuation early release weight loss surgery", "access super for bariatric surgery", "compassionate grounds super release", "ATO early release medical", "super for gastric sleeve"]
   },
 
+  // Surgeon Selection Checklist
+  surgeonChecklist: {
+    title: "Free Surgeon Selection Checklist - 15 Points to Choose the Right Bariatric Surgeon",
+    description: "Download our free 15-point surgeon selection checklist. Know exactly what credentials to verify, questions to ask, red flags to avoid, and how to confidently choose your bariatric surgeon.",
+    keywords: ["surgeon selection checklist", "how to choose bariatric surgeon", "weight loss surgeon questions", "surgeon red flags", "bariatric surgeon credentials"]
+  },
+
   bandVsSleeve: {
     title: "Gastric Band vs Sleeve - Compare Cost, Weight Loss & Recovery 2025",
     description: "Gastric band vs sleeve: Compare weight loss results, costs, recovery time & reversibility. Which procedure is right for you? Expert comparison guide.",
