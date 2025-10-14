@@ -1,0 +1,705 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { seoMeta } from '../data/seo-meta';
+
+const meta = seoMeta.bmiCalculator || {
+	title: "BMI Calculator for Weight Loss Surgery - Check Your Eligibility 2025",
+	description: "Calculate your BMI in 10 seconds and discover if you may be a candidate for weight loss surgery in Australia. Get your personalized candidacy report with procedure options.",
+	keywords: ["bmi calculator", "weight loss surgery eligibility", "bariatric surgery bmi", "am I eligible for surgery"]
+};
+
+const pageUrl = "https://weightlosssurgery.com.au/bmi-calculator";
+---
+
+<BaseLayout
+	title={meta.title}
+	description={meta.description}
+	canonicalUrl={pageUrl}
+>
+	<!-- Schema Markup -->
+	<script type="application/ld+json" is:inline set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "Weight Loss Surgery BMI Calculator",
+		"applicationCategory": "HealthApplication",
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "AUD"
+		},
+		"operatingSystem": "Any",
+		"description": "Calculate your BMI and weight loss surgery candidacy in Australia"
+	})} />
+
+	<!-- Hero Section -->
+	<section class="bg-gradient-to-br from-green-50 to-blue-50 py-16 md:py-24">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-4xl mx-auto text-center">
+				<div class="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-6">
+					📊 Free BMI Calculator
+				</div>
+				
+				<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+					Am I Eligible for Weight Loss Surgery?
+				</h1>
+				
+				<p class="text-xl text-gray-600 mb-8">
+					Calculate your BMI in 10 seconds and discover if you may be a candidate for weight loss surgery in Australia. Private, anonymous, and instant results.
+				</p>
+
+				<div class="grid md:grid-cols-3 gap-6 mb-8">
+					<div class="bg-white rounded-lg p-4 shadow-md">
+						<div class="text-3xl mb-2">⚡</div>
+						<p class="font-semibold text-gray-900">Instant Results</p>
+						<p class="text-sm text-gray-600">Know in 10 seconds</p>
+					</div>
+					<div class="bg-white rounded-lg p-4 shadow-md">
+						<div class="text-3xl mb-2">🔒</div>
+						<p class="font-semibold text-gray-900">100% Private</p>
+						<p class="text-sm text-gray-600">No email required</p>
+					</div>
+					<div class="bg-white rounded-lg p-4 shadow-md">
+						<div class="text-3xl mb-2">📋</div>
+						<p class="font-semibold text-gray-900">Expert Guidance</p>
+						<p class="text-sm text-gray-600">Next steps included</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- BMI Calculator -->
+	<section class="py-16 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-gray-50 rounded-2xl shadow-xl p-8 md:p-12">
+				<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Calculate Your BMI</h2>
+
+				<div class="space-y-6">
+					<!-- Height Input -->
+					<div>
+						<label class="block text-sm font-semibold text-gray-700 mb-3">Height</label>
+						<div class="flex gap-4">
+							<div class="flex-1">
+								<div class="flex items-center">
+									<input
+										type="number"
+										id="height-cm"
+										placeholder="170"
+										class="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+									>
+									<span class="px-4 py-3 bg-gray-200 border border-l-0 border-gray-300 rounded-r-lg text-gray-700 font-semibold">cm</span>
+								</div>
+							</div>
+							<div class="flex items-center text-gray-500">or</div>
+							<div class="flex-1">
+								<div class="flex gap-2">
+									<input
+										type="number"
+										id="height-ft"
+										placeholder="5"
+										class="w-20 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+									>
+									<span class="px-2 py-3 text-gray-700">ft</span>
+									<input
+										type="number"
+										id="height-in"
+										placeholder="7"
+										class="w-20 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+									>
+									<span class="px-2 py-3 text-gray-700">in</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Weight Input -->
+					<div>
+						<label class="block text-sm font-semibold text-gray-700 mb-3">Weight</label>
+						<div class="flex gap-4">
+							<div class="flex-1">
+								<div class="flex items-center">
+									<input
+										type="number"
+										id="weight-kg"
+										placeholder="85"
+										class="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+									>
+									<span class="px-4 py-3 bg-gray-200 border border-l-0 border-gray-300 rounded-r-lg text-gray-700 font-semibold">kg</span>
+								</div>
+							</div>
+							<div class="flex items-center text-gray-500">or</div>
+							<div class="flex-1">
+								<div class="flex items-center">
+									<input
+										type="number"
+										id="weight-lbs"
+										placeholder="187"
+										class="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+									>
+									<span class="px-4 py-3 bg-gray-200 border border-l-0 border-gray-300 rounded-r-lg text-gray-700 font-semibold">lbs</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Age Input -->
+					<div>
+						<label class="block text-sm font-semibold text-gray-700 mb-3">Age</label>
+						<select
+							id="age"
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+						>
+							<option value="">Select your age</option>
+							<option value="18-25">18-25</option>
+							<option value="26-35">26-35</option>
+							<option value="36-45">36-45</option>
+							<option value="46-55">46-55</option>
+							<option value="56-65">56-65</option>
+							<option value="66-75">66-75</option>
+						</select>
+					</div>
+
+					<!-- Gender Input -->
+					<div>
+						<label class="block text-sm font-semibold text-gray-700 mb-3">Gender</label>
+						<div class="grid grid-cols-3 gap-4">
+							<button
+								type="button"
+								data-gender="male"
+								class="gender-btn px-6 py-3 border-2 border-gray-300 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition font-semibold text-gray-700"
+							>
+								Male
+							</button>
+							<button
+								type="button"
+								data-gender="female"
+								class="gender-btn px-6 py-3 border-2 border-gray-300 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition font-semibold text-gray-700"
+							>
+								Female
+							</button>
+							<button
+								type="button"
+								data-gender="other"
+								class="gender-btn px-6 py-3 border-2 border-gray-300 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition font-semibold text-gray-700"
+							>
+								Other
+							</button>
+						</div>
+					</div>
+
+					<!-- Calculate Button -->
+					<button
+						id="calculate-btn"
+						class="w-full bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-5 rounded-xl text-xl font-bold hover:from-green-700 hover:to-blue-700 transition shadow-lg"
+					>
+						Calculate My BMI →
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Results Section (Hidden initially) -->
+	<section id="results-section" class="py-16 bg-gray-50 hidden">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<!-- BMI Result Card -->
+			<div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 mb-8">
+				<div class="text-center mb-8">
+					<h2 class="text-3xl font-bold text-gray-900 mb-4">Your Results</h2>
+					<div class="bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl p-6 inline-block">
+						<p class="text-sm uppercase tracking-wide mb-2">Your BMI</p>
+						<p id="bmi-value" class="text-5xl font-bold mb-2">--</p>
+						<p id="bmi-category" class="text-lg font-semibold">--</p>
+					</div>
+				</div>
+
+				<!-- BMI Scale Visual -->
+				<div class="mb-8">
+					<div class="relative h-8 bg-gradient-to-r from-blue-300 via-yellow-300 to-red-500 rounded-lg mb-4">
+						<div id="bmi-marker" class="absolute top-0 w-1 h-12 bg-gray-900 -mt-2 hidden transition-all duration-500">
+							<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-2xl">▼</div>
+						</div>
+					</div>
+					<div class="flex justify-between text-xs text-gray-600">
+						<span>Underweight<br>(&lt;18.5)</span>
+						<span>Normal<br>(18.5-24.9)</span>
+						<span>Overweight<br>(25-29.9)</span>
+						<span>Class I<br>(30-34.9)</span>
+						<span>Class II<br>(35-39.9)</span>
+						<span>Class III<br>(40+)</span>
+					</div>
+				</div>
+
+				<!-- Candidacy Message -->
+				<div id="candidacy-message" class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+					<!-- Content populated by JavaScript -->
+				</div>
+
+				<!-- CTA for Full Report -->
+				<div class="mt-8 text-center">
+					<button
+						id="get-report-btn"
+						class="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-12 py-5 rounded-xl text-xl font-bold hover:from-purple-700 hover:to-pink-700 transition shadow-lg"
+					>
+						Get Your Full Candidacy Report →
+					</button>
+					<p class="text-sm text-gray-500 mt-3">Free personalized report with procedure options & next steps</p>
+				</div>
+			</div>
+
+			<!-- Why This Matters -->
+			<div class="bg-white rounded-xl p-8 shadow-lg">
+				<h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Understanding Your BMI Result</h3>
+				<div class="space-y-4 text-gray-700">
+					<p>
+						<strong>BMI (Body Mass Index)</strong> is one of several factors surgeons consider when assessing weight loss surgery candidacy. It's calculated using your height and weight.
+					</p>
+					<p>
+						<strong>General guidelines in Australia:</strong>
+					</p>
+					<ul class="list-disc ml-6 space-y-2">
+						<li>BMI 40+ typically meets criteria for surgery</li>
+						<li>BMI 35-39.9 may qualify with obesity-related health conditions (diabetes, sleep apnea, etc.)</li>
+						<li>BMI 30-34.9 may be considered in specific cases with multiple co-morbidities</li>
+					</ul>
+					<div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded mt-4">
+						<p class="text-sm text-yellow-900">
+							<strong>⚠️ Important:</strong> BMI is just one factor. Your individual eligibility depends on medical history, health conditions, previous weight loss attempts, mental health assessment, and many other factors that only a qualified surgeon can evaluate.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Email Gate (Hidden initially) -->
+	<section id="email-gate-section" class="py-16 bg-gradient-to-br from-purple-50 to-pink-50 hidden">
+		<div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
+				<div class="text-center mb-8">
+					<div class="text-5xl mb-4">📊</div>
+					<h2 class="text-3xl font-bold text-gray-900 mb-4">Get Your Complete Candidacy Report</h2>
+					<p class="text-lg text-gray-600">
+						Your BMI is just one factor. Get your personalized report covering:
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-4 mb-8">
+					<div class="flex items-start">
+						<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						<span class="text-gray-700">Detailed candidacy factors for your situation</span>
+					</div>
+					<div class="flex items-start">
+						<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						<span class="text-gray-700">Procedure options for your BMI range</span>
+					</div>
+					<div class="flex items-start">
+						<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						<span class="text-gray-700">Expected weight loss ranges (statistical averages)</span>
+					</div>
+					<div class="flex items-start">
+						<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						<span class="text-gray-700">Co-morbidity impact on eligibility</span>
+					</div>
+					<div class="flex items-start">
+						<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						<span class="text-gray-700">Next steps: What to do from here</span>
+					</div>
+					<div class="flex items-start">
+						<svg class="w-6 h-6 text-green-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+							<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+						</svg>
+						<span class="text-gray-700">5 questions to ask your GP</span>
+					</div>
+				</div>
+
+				<form id="candidacy-report-form" class="space-y-4">
+					<div>
+						<label for="report-name" class="block text-sm font-semibold text-gray-700 mb-2">Name</label>
+						<input
+							type="text"
+							id="report-name"
+							name="name"
+							required
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+							placeholder="Your name"
+						>
+					</div>
+
+					<div>
+						<label for="report-email" class="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+						<input
+							type="email"
+							id="report-email"
+							name="email"
+							required
+							class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+							placeholder="your@email.com"
+						>
+					</div>
+
+					<div class="flex items-start">
+						<input type="checkbox" id="report-updates" name="updates" checked class="mt-1 h-5 w-5 text-purple-600">
+						<label for="report-updates" class="ml-3 text-sm text-gray-600">
+							Send me helpful guides about weight loss surgery (you can unsubscribe anytime)
+						</label>
+					</div>
+
+					<button
+						type="submit"
+						class="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-purple-700 hover:to-pink-700 transition shadow-lg"
+					>
+						Send Me My Free Report →
+					</button>
+
+					<p class="text-xs text-gray-500 text-center">
+						🔒 No spam. We'll also send you helpful guides on the surgery process. Unsubscribe anytime.
+					</p>
+				</form>
+
+				<div id="report-success" class="hidden text-center">
+					<div class="text-green-600 text-5xl mb-4">✓</div>
+					<h4 class="text-2xl font-bold text-gray-900 mb-2">Check Your Email!</h4>
+					<p class="text-gray-600 mb-6">
+						We've sent your personalized candidacy report to your inbox. It should arrive within 5 minutes.
+					</p>
+					<div class="space-y-3">
+						<a href="/cost-calculator" class="block bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition">
+							Calculate My Surgery Costs →
+						</a>
+						<a href="/surgeon-selection-checklist" class="block border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+							Download Surgeon Selection Checklist
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Disclaimer -->
+	<section class="py-8 bg-gray-100">
+		<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-sm text-gray-600">
+				<h3 class="font-bold text-gray-900 mb-2">⚠️ Important Medical Disclaimer</h3>
+				<p class="mb-2">
+					This BMI calculator and candidacy guide are for educational purposes only and do not constitute medical advice, diagnosis, or treatment recommendations.
+				</p>
+				<ul class="list-disc ml-6 space-y-1 mb-2">
+					<li>Only a qualified medical professional can determine your eligibility for weight loss surgery</li>
+					<li>BMI is one of many factors surgeons consider</li>
+					<li>Individual circumstances vary significantly</li>
+					<li>All medical decisions must be made in consultation with your GP and a qualified bariatric surgeon registered with AHPRA</li>
+					<li>This tool does not replace professional medical assessment</li>
+				</ul>
+				<p>
+					Weight Loss Surgery Australia is an educational resource and directory. We do not provide medical services or make medical recommendations.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- JavaScript for BMI Calculator -->
+	<script is:inline>
+		let calculatedBMI = null;
+		let userGender = null;
+		let userAge = null;
+
+		// Unit conversions
+		function cmToFtIn(cm) {
+			const inches = cm / 2.54;
+			const feet = Math.floor(inches / 12);
+			const remainingInches = Math.round(inches % 12);
+			return { feet, inches: remainingInches };
+		}
+
+		function ftInToCm(feet, inches) {
+			return (feet * 12 + inches) * 2.54;
+		}
+
+		function kgToLbs(kg) {
+			return Math.round(kg * 2.20462);
+		}
+
+		function lbsToKg(lbs) {
+			return lbs / 2.20462;
+		}
+
+		// Auto-convert between units
+		document.getElementById('height-cm')?.addEventListener('input', (e) => {
+			const cm = parseFloat(e.target.value);
+			if (cm) {
+				const { feet, inches } = cmToFtIn(cm);
+				document.getElementById('height-ft').value = feet;
+				document.getElementById('height-in').value = inches;
+			}
+		});
+
+		document.getElementById('height-ft')?.addEventListener('input', syncFtInToCm);
+		document.getElementById('height-in')?.addEventListener('input', syncFtInToCm);
+
+		function syncFtInToCm() {
+			const feet = parseFloat(document.getElementById('height-ft').value) || 0;
+			const inches = parseFloat(document.getElementById('height-in').value) || 0;
+			if (feet || inches) {
+				const cm = Math.round(ftInToCm(feet, inches));
+				document.getElementById('height-cm').value = cm;
+			}
+		}
+
+		document.getElementById('weight-kg')?.addEventListener('input', (e) => {
+			const kg = parseFloat(e.target.value);
+			if (kg) {
+				document.getElementById('weight-lbs').value = kgToLbs(kg);
+			}
+		});
+
+		document.getElementById('weight-lbs')?.addEventListener('input', (e) => {
+			const lbs = parseFloat(e.target.value);
+			if (lbs) {
+				document.getElementById('weight-kg').value = Math.round(lbsToKg(lbs) * 10) / 10;
+			}
+		});
+
+		// Gender selection
+		document.querySelectorAll('.gender-btn').forEach(btn => {
+			btn.addEventListener('click', (e) => {
+				document.querySelectorAll('.gender-btn').forEach(b => {
+					b.classList.remove('border-blue-600', 'bg-blue-50', 'text-blue-700');
+				});
+				e.target.classList.add('border-blue-600', 'bg-blue-50', 'text-blue-700');
+				userGender = e.target.dataset.gender;
+			});
+		});
+
+		// Calculate BMI
+		document.getElementById('calculate-btn')?.addEventListener('click', () => {
+			const heightCm = parseFloat(document.getElementById('height-cm').value);
+			const weightKg = parseFloat(document.getElementById('weight-kg').value);
+			const age = document.getElementById('age').value;
+
+			if (!heightCm || !weightKg) {
+				alert('Please enter your height and weight');
+				return;
+			}
+
+			if (!age) {
+				alert('Please select your age');
+				return;
+			}
+
+			if (!userGender) {
+				alert('Please select your gender');
+				return;
+			}
+
+			userAge = age;
+
+			// Calculate BMI
+			const heightM = heightCm / 100;
+			const bmi = weightKg / (heightM * heightM);
+			calculatedBMI = Math.round(bmi * 10) / 10;
+
+			// Show results
+			displayBMIResults(calculatedBMI);
+			
+			// Scroll to results
+			setTimeout(() => {
+				document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+			}, 100);
+		});
+
+		function displayBMIResults(bmi) {
+			// Show results section
+			document.getElementById('results-section').classList.remove('hidden');
+
+			// Display BMI value
+			document.getElementById('bmi-value').textContent = bmi.toFixed(1);
+
+			// Determine category and message
+			let category = '';
+			let categoryColor = '';
+			let message = '';
+			let markerPosition = 0;
+
+			if (bmi < 18.5) {
+				category = 'Underweight';
+				categoryColor = 'text-blue-400';
+				markerPosition = (bmi / 18.5) * 16.66;
+				message = `
+					<h3 class="text-lg font-bold text-gray-900 mb-3">ℹ️ GENERAL INFORMATION ONLY</h3>
+					<p class="text-gray-700 mb-4">
+						Weight loss surgery is typically considered for people with BMI 30+ (with health conditions) or BMI 35+. For your situation, consider:
+					</p>
+					<ul class="list-disc ml-6 space-y-2 text-gray-700 mb-4">
+						<li>Consulting your GP about other weight management options</li>
+						<li>Dietitian support for healthy weight gain if appropriate</li>
+						<li>Addressing any underlying health conditions</li>
+					</ul>
+					<p class="text-sm text-gray-600">
+						If you have significant health conditions, speak to your GP about whether surgery might still be an option in your specific case.
+					</p>
+				`;
+			} else if (bmi < 25) {
+				category = 'Normal Weight';
+				categoryColor = 'text-green-600';
+				markerPosition = 16.66 + ((bmi - 18.5) / (25 - 18.5)) * 16.66;
+				message = `
+					<h3 class="text-lg font-bold text-gray-900 mb-3">ℹ️ GENERAL INFORMATION ONLY</h3>
+					<p class="text-gray-700 mb-4">
+						Weight loss surgery is typically not recommended for people in the normal BMI range. For your situation:
+					</p>
+					<ul class="list-disc ml-6 space-y-2 text-gray-700 mb-4">
+						<li>Maintain your healthy weight through balanced nutrition and exercise</li>
+						<li>Consult your GP if you have concerns about your weight</li>
+						<li>Consider speaking with a dietitian for personalized guidance</li>
+					</ul>
+					<p class="text-sm text-gray-600">
+						Surgery is not appropriate for people in the normal BMI range and carries significant risks without medical necessity.
+					</p>
+				`;
+			} else if (bmi < 30) {
+				category = 'Overweight';
+				categoryColor = 'text-yellow-600';
+				markerPosition = 33.32 + ((bmi - 25) / (30 - 25)) * 16.66;
+				message = `
+					<h3 class="text-lg font-bold text-gray-900 mb-3">ℹ️ GENERAL INFORMATION ONLY</h3>
+					<p class="text-gray-700 mb-4">
+						Weight loss surgery is typically considered for people with BMI 30+ (with health conditions) or BMI 35+. For your situation, consider:
+					</p>
+					<ul class="list-disc ml-6 space-y-2 text-gray-700 mb-4">
+						<li>Consulting your GP about medical weight loss programs</li>
+						<li>Working with a dietitian on nutrition strategies</li>
+						<li>Increasing physical activity with guidance from an exercise physiologist</li>
+						<li>Addressing any obesity-related health conditions</li>
+					</ul>
+					<p class="text-sm text-gray-600">
+						If you have significant obesity-related health conditions, speak to your GP about whether surgery might still be an option in your specific case.
+					</p>
+				`;
+			} else if (bmi < 35) {
+				category = 'Obesity Class I';
+				categoryColor = 'text-orange-600';
+				markerPosition = 49.98 + ((bmi - 30) / (35 - 30)) * 16.66;
+				message = `
+					<h3 class="text-lg font-bold text-gray-900 mb-3">ℹ️ GENERAL INFORMATION ONLY</h3>
+					<p class="text-gray-700 mb-4">
+						People in this BMI range may be considered for weight loss surgery if they have:
+					</p>
+					<ul class="list-disc ml-6 space-y-2 text-gray-700 mb-4">
+						<li>Type 2 diabetes, or</li>
+						<li>Sleep apnea, or</li>
+						<li>High blood pressure, or</li>
+						<li>Other obesity-related health conditions</li>
+					</ul>
+					<p class="text-sm text-gray-600">
+						This is general information only. A qualified bariatric surgeon and GP must assess your individual circumstances. Only a medical professional can determine your eligibility.
+					</p>
+				`;
+			} else if (bmi < 40) {
+				category = 'Obesity Class II';
+				categoryColor = 'text-orange-700';
+				markerPosition = 66.64 + ((bmi - 35) / (40 - 35)) * 16.66;
+				message = `
+					<h3 class="text-lg font-bold text-gray-900 mb-3">ℹ️ GENERAL INFORMATION ONLY</h3>
+					<p class="text-gray-700 mb-4">
+						People in this BMI range commonly meet criteria for weight loss surgery in Australia. Eligibility depends on:
+					</p>
+					<ul class="list-disc ml-6 space-y-2 text-gray-700 mb-4">
+						<li>Medical history and current health conditions</li>
+						<li>Previous weight loss attempts</li>
+						<li>Mental health assessment</li>
+						<li>Individual circumstances</li>
+					</ul>
+					<p class="text-sm text-gray-600">
+						This is general information only. Only a qualified medical professional can determine your eligibility. Speak to your GP for a referral to a bariatric specialist.
+					</p>
+				`;
+			} else {
+				category = 'Obesity Class III';
+				categoryColor = 'text-red-600';
+				markerPosition = Math.min(100, 83.3 + ((bmi - 40) / 10) * 16.66);
+				message = `
+					<h3 class="text-lg font-bold text-gray-900 mb-3">ℹ️ GENERAL INFORMATION ONLY</h3>
+					<p class="text-gray-700 mb-4">
+						People in this BMI range typically meet the general BMI criteria for weight loss surgery in Australia. However, eligibility requires:
+					</p>
+					<ul class="list-disc ml-6 space-y-2 text-gray-700 mb-4">
+						<li>Comprehensive medical assessment</li>
+						<li>Psychological evaluation</li>
+						<li>Consideration of overall health status</li>
+						<li>Professional medical guidance</li>
+					</ul>
+					<p class="text-sm text-gray-600">
+						This is general information only. Speak to your GP for a referral to a bariatric specialist who can fully assess your eligibility.
+					</p>
+				`;
+			}
+
+			document.getElementById('bmi-category').textContent = category;
+			document.getElementById('bmi-category').className = `text-lg font-semibold ${categoryColor}`;
+			document.getElementById('candidacy-message').innerHTML = message;
+
+			// Position marker
+			const marker = document.getElementById('bmi-marker');
+			marker.style.left = `${markerPosition}%`;
+			marker.classList.remove('hidden');
+		}
+
+		// Get Full Report button
+		document.getElementById('get-report-btn')?.addEventListener('click', () => {
+			document.getElementById('email-gate-section').classList.remove('hidden');
+			setTimeout(() => {
+				document.getElementById('email-gate-section').scrollIntoView({ behavior: 'smooth' });
+			}, 100);
+		});
+
+		// Handle form submission
+		document.getElementById('candidacy-report-form')?.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			
+			const formData = new FormData(e.target);
+			const data = {
+				name: formData.get('name'),
+				email: formData.get('email'),
+				updates: formData.get('updates') === 'on',
+				bmi: calculatedBMI,
+				gender: userGender,
+				age: userAge,
+				type: 'bmi-candidacy-report',
+				timestamp: new Date().toISOString()
+			};
+
+			try {
+				// TODO: Replace with actual webhook URL
+				const webhookUrl = 'YOUR_GOOGLE_SHEETS_WEBHOOK_URL';
+				
+				await fetch(webhookUrl, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(data)
+				});
+
+				// Show success message
+				document.getElementById('candidacy-report-form').classList.add('hidden');
+				document.getElementById('report-success').classList.remove('hidden');
+
+				console.log('Lead captured:', data);
+
+			} catch (error) {
+				console.error('Submission error:', error);
+				alert('Something went wrong. Please try again or contact us directly.');
+			}
+		});
+	</script>
+</BaseLayout>
+
