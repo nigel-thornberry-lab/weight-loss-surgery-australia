@@ -81,7 +81,7 @@
 ✅ **Follow-up care nightmare** scenarios (what happens when you return home)  
 ✅ **Revision surgery requirements** (20% of overseas patients need fixes)  
 ✅ **Insurance implications** (travel insurance won't cover, health insurance complications)  
-✅ **Case studies** (evidence-based, not testimonials)  
+✅ **Case studies** (evidence-based, not testimonials)  ONLY INCLUDE IF THESE ARE REAL AND VERIFIED
 ✅ **Decision framework** - When (if ever) overseas surgery makes sense
 
 **Zero overlap with existing content - this is investigative journalism meets consumer protection guide.**
