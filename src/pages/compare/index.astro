@@ -1,0 +1,230 @@
+---
+import '../../styles/global.css';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+const title = "Compare Weight Loss Surgery Options | Australia 2025";
+const description = "Compare gastric sleeve vs bypass, surgery vs medication, traditional vs mini bypass, and more. Evidence-based comparisons to help you make the right decision.";
+const pageUrl = "https://weight-loss-surgery-australia.vercel.app/compare";
+---
+
+<BaseLayout title={title} description={description} canonicalUrl={pageUrl}>
+
+	<!-- Hero -->
+	<section class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 pt-6 pb-12">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<!-- Breadcrumbs -->
+			<div class="mb-6">
+				<Breadcrumbs items={[
+					{ name: "Compare", url: "/compare" }
+				]} />
+			</div>
+			
+			<!-- Hero Content -->
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+					Compare Your Weight Loss Options
+				</h1>
+				<p class="text-xl text-gray-600 mb-6">
+					Evidence-based comparisons to help you make the right decision for your health and lifestyle
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Comparisons -->
+	<section class="py-12 bg-white">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Popular Comparisons</h2>
+			
+			<div class="grid md:grid-cols-2 gap-8">
+				<!-- Gastric Sleeve vs Gastric Bypass -->
+				<a href="/compare/gastric-sleeve-vs-gastric-bypass" class="block group">
+					<div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-md hover:shadow-xl transition h-full">
+						<div class="flex items-center mb-4">
+							<svg class="w-10 h-10 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+							</svg>
+							<h3 class="text-2xl font-bold text-gray-900 group-hover:text-blue-700">Gastric Sleeve vs Gastric Bypass</h3>
+						</div>
+						<p class="text-gray-700 mb-4">
+							The most common comparison. Compare weight loss results (60-70% vs 70-80%), recovery time, costs, and which works best for your BMI and health conditions.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="px-3 py-1 bg-white text-blue-700 text-sm font-semibold rounded-full">Weight Loss</span>
+							<span class="px-3 py-1 bg-white text-blue-700 text-sm font-semibold rounded-full">Cost</span>
+							<span class="px-3 py-1 bg-white text-blue-700 text-sm font-semibold rounded-full">Recovery</span>
+						</div>
+						<p class="text-blue-700 font-bold text-lg group-hover:underline">Read Full Comparison →</p>
+					</div>
+				</a>
+
+				<!-- Surgery vs Medication -->
+				<a href="/compare/surgery-vs-medication" class="block group">
+					<div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-8 shadow-md hover:shadow-xl transition h-full">
+						<div class="flex items-center mb-4">
+							<svg class="w-10 h-10 text-purple-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+							<h3 class="text-2xl font-bold text-gray-900 group-hover:text-purple-700">Surgery vs Medication</h3>
+						</div>
+						<p class="text-gray-700 mb-4">
+							How does weight loss surgery compare to Ozempic, Wegovy, or Mounjaro? Compare 5-year costs ($20K vs $36K), effectiveness (60-80% vs 15-20%), and long-term sustainability.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="px-3 py-1 bg-white text-purple-700 text-sm font-semibold rounded-full">5-Year Cost</span>
+							<span class="px-3 py-1 bg-white text-purple-700 text-sm font-semibold rounded-full">Effectiveness</span>
+							<span class="px-3 py-1 bg-white text-purple-700 text-sm font-semibold rounded-full">Side Effects</span>
+						</div>
+						<p class="text-purple-700 font-bold text-lg group-hover:underline">Compare Options →</p>
+					</div>
+				</a>
+
+				<!-- Gastric Bypass vs Mini Bypass -->
+				<a href="/compare/gastric-bypass-vs-mini-bypass" class="block group">
+					<div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-8 shadow-md hover:shadow-xl transition h-full">
+						<div class="flex items-center mb-4">
+							<svg class="w-10 h-10 text-green-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+							<h3 class="text-2xl font-bold text-gray-900 group-hover:text-green-700">Gastric Bypass vs Mini Bypass</h3>
+						</div>
+						<p class="text-gray-700 mb-4">
+							Traditional Roux-en-Y vs One Anastomosis (OAGB/MGB). Compare bile reflux risk (1-2% vs 10-15%), surgery time, and why 70-80% of Australian surgeons prefer traditional bypass.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="px-3 py-1 bg-white text-green-700 text-sm font-semibold rounded-full">Bile Reflux</span>
+							<span class="px-3 py-1 bg-white text-green-700 text-sm font-semibold rounded-full">Surgery Time</span>
+							<span class="px-3 py-1 bg-white text-green-700 text-sm font-semibold rounded-full">Revision Rate</span>
+						</div>
+						<p class="text-green-700 font-bold text-lg group-hover:underline">Compare Types →</p>
+					</div>
+				</a>
+
+				<!-- Australia vs Overseas Surgery -->
+				<a href="/blog/overseas-bariatric-surgery-risks-australia-comparison" class="block group">
+					<div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-8 shadow-md hover:shadow-xl transition h-full">
+						<div class="flex items-center mb-4">
+							<svg class="w-10 h-10 text-orange-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+							<h3 class="text-2xl font-bold text-gray-900 group-hover:text-orange-700">Australia vs Overseas Surgery</h3>
+						</div>
+						<p class="text-gray-700 mb-4">
+							Thinking about Thailand, Mexico, or Turkey for cheaper surgery? See the true cost analysis including complications (1-2% vs 3-7%), lack of follow-up care, and why Australian surgery with insurance is often cheaper.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="px-3 py-1 bg-white text-orange-700 text-sm font-semibold rounded-full">True Cost</span>
+							<span class="px-3 py-1 bg-white text-orange-700 text-sm font-semibold rounded-full">Safety</span>
+							<span class="px-3 py-1 bg-white text-orange-700 text-sm font-semibold rounded-full">Follow-up Care</span>
+						</div>
+						<p class="text-orange-700 font-bold text-lg group-hover:underline">Read Investigation →</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Why Compare? -->
+	<section class="py-12 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Why Compare Your Options?</h2>
+			
+			<div class="grid md:grid-cols-3 gap-6">
+				<div class="bg-white p-6 rounded-lg shadow-sm">
+					<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+					</div>
+					<h3 class="font-bold text-lg mb-2">Make Informed Decisions</h3>
+					<p class="text-gray-600 text-sm">Understand the real differences in costs, effectiveness, and long-term outcomes before committing to surgery.</p>
+				</div>
+
+				<div class="bg-white p-6 rounded-lg shadow-sm">
+					<div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+						</svg>
+					</div>
+					<h3 class="font-bold text-lg mb-2">Choose What's Right for YOU</h3>
+					<p class="text-gray-600 text-sm">Different procedures work better for different BMI ranges, health conditions, and lifestyle factors.</p>
+				</div>
+
+				<div class="bg-white p-6 rounded-lg shadow-sm">
+					<div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+						<svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+						</svg>
+					</div>
+					<h3 class="font-bold text-lg mb-2">Evidence-Based Data</h3>
+					<p class="text-gray-600 text-sm">All comparisons based on OSSANZ clinical guidelines, peer-reviewed research, and real Australian costs.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Still Have Questions? -->
+	<section class="py-12 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl font-bold text-gray-900 mb-4">Still Have Questions?</h2>
+			<p class="text-lg text-gray-600 mb-8">We've answered over 100 common questions about weight loss surgery in Australia</p>
+			
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/faq" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition">
+					Browse 100+ FAQ
+				</a>
+				<a href="/cost-calculator" class="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition">
+					💰 Calculate Your Cost
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "CollectionPage",
+		"name": "Compare Weight Loss Surgery Options",
+		"description": "Evidence-based comparisons of weight loss surgery procedures, costs, and alternatives in Australia",
+		"url": "https://weight-loss-surgery-australia.vercel.app/compare",
+		"breadcrumb": {
+			"@type": "BreadcrumbList",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://weight-loss-surgery-australia.vercel.app/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Compare",
+					"item": "https://weight-loss-surgery-australia.vercel.app/compare"
+				}
+			]
+		},
+		"hasPart": [
+			{
+				"@type": "WebPage",
+				"name": "Gastric Sleeve vs Gastric Bypass",
+				"url": "https://weight-loss-surgery-australia.vercel.app/compare/gastric-sleeve-vs-gastric-bypass"
+			},
+			{
+				"@type": "WebPage",
+				"name": "Surgery vs Medication",
+				"url": "https://weight-loss-surgery-australia.vercel.app/compare/surgery-vs-medication"
+			},
+			{
+				"@type": "WebPage",
+				"name": "Gastric Bypass vs Mini Bypass",
+				"url": "https://weight-loss-surgery-australia.vercel.app/compare/gastric-bypass-vs-mini-bypass"
+			}
+		]
+	}
+	</script>
+
+</BaseLayout>
+
