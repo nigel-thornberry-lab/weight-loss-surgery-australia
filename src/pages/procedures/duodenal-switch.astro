@@ -3,6 +3,8 @@ import '../../styles/global.css';
 import { seoMeta } from '../../data/seo-meta';
 import RelatedContent from '../../components/RelatedContent.astro';
 import SurgeonCTA from '../../components/SurgeonCTA.astro';
+import QuickAnswer from '../../components/QuickAnswer.astro';
+import ContentFreshness from '../../components/ContentFreshness.astro';
 
 const meta = seoMeta.duodenalSwitch;
 const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/duodenal-switch";
@@ -252,6 +254,29 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<!-- Quick Answer & Freshness -->
+		<section class="py-8 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ContentFreshness 
+				datePublished="2025-01-03"
+				dateModified="2025-10-16"
+			/>
+				
+				<QuickAnswer 
+					question="How much does duodenal switch surgery cost in Australia?"
+					answer="$25,000-$35,000 total cost. With private health insurance, expect $8,000-$15,000 out-of-pocket. Medicare provides a $1,800-$2,500 rebate for eligible patients."
+					details={[
+						"Surgeon fees: $12,000-$18,000",
+						"Hospital fees: $8,000-$12,000",
+						"Anesthetist fees: $3,000-$4,000",
+						"Most effective procedure for BMI 50+ patients"
+					]}
+					ctaText="Calculate Your Exact Cost"
+					ctaLink="/cost-calculator"
+				/>
 			</div>
 		</section>
 

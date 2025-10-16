@@ -108,6 +108,172 @@ const faqSchema = {
     }
   ]
 };
+
+// HowTo Schema
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Recover from Gastric Sleeve Surgery: Week-by-Week Guide",
+  "description": "Complete 12-week gastric sleeve recovery guide with diet progression, activity milestones, and what to expect each week after bariatric surgery.",
+  "totalTime": "P12W",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Week 1: Hospital Stay and Clear Liquids",
+      "text": "Focus on healing, managing pain, and starting clear liquids. Walk frequently (5-10 minutes every 2 hours), take prescribed pain medication, and stay hydrated with water, sugar-free jelly, and clear broths. Most challenging week with highest pain and lowest energy.",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Walk 5-10 minutes every 2 hours to prevent blood clots"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Sip clear liquids throughout the day (water, sugar-free jelly, clear broth)"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Take pain medication as prescribed"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Monitor for warning signs: fever, severe pain, persistent vomiting"
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Weeks 2-3: Full Liquids and Protein Introduction",
+      "text": "Transition to full liquids including protein shakes, smooth soups, and skim milk. Target 60-80g protein daily. Energy begins returning and this is a major turning point. Most patients feel significantly better by Week 2.",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Introduce protein shakes (20-30g protein each)"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Add smooth soups blended with no chunks"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Aim for 60-80g protein daily"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Increase walking to 15-20 minutes 3-4 times daily"
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Week 4: Pureed Foods Begin",
+      "text": "Start pureed foods stage - completely smooth foods with pudding-like consistency. Energy returns significantly. This is when most patients feel they've truly turned a corner. Introduce eggs, soft fish, Greek yogurt, and pureed chicken.",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Start with scrambled eggs and soft fish"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Add Greek yogurt and cottage cheese"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Introduce pureed chicken and tuna"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Begin light cardio like cycling or elliptical"
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Weeks 5-6: Soft Foods and Healing Complete",
+      "text": "Progress to soft foods that can be mashed with a fork. By Week 6, internal healing is complete. Most patients return to full activities. Introduce well-cooked vegetables, tender meats, and soft fruits.",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Add well-cooked vegetables that can be mashed"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Introduce tender, moist meats"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Start soft fruits like bananas and canned peaches"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Begin full exercise program including weights with surgeon clearance"
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Weeks 7-12: Normal Foods and Establishing Habits",
+      "text": "Transition to regular foods with continued focus on protein-first eating. Establish lifelong eating habits, maintain 60-80g protein daily, take vitamins, and build sustainable exercise routine. Weight loss averages 1.5-2kg per week.",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Progress to all normal foods following protein-first rule"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Maintain 60-80g protein daily"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Take prescribed vitamins and supplements"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Exercise 30-60 minutes 5 days per week"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Attend all follow-up appointments"
+        }
+      ]
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Protein shakes (20-30g protein per serving)"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Blender for pureeing foods"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Small plates and utensils"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Daily vitamin supplements"
+    }
+  ],
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "Clear liquids (water, sugar-free jelly, clear broth)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Protein powder or ready-made protein shakes"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Soft foods (eggs, Greek yogurt, soft fish)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Bariatric multivitamins"
+    }
+  ]
+};
 ---
 
 <BlogLayout

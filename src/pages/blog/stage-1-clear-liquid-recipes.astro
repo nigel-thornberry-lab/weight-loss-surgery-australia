@@ -12,6 +12,137 @@ const keywords = [
   "post-surgery liquids",
   "bariatric clear liquids"
 ];
+
+// HowTo Schema for Chicken Bone Broth Recipe
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Make Homemade Chicken Bone Broth for Bariatric Surgery Recovery",
+  "description": "Learn how to make protein-rich, healing chicken bone broth perfect for Stage 1 clear liquids after gastric sleeve surgery. High in collagen and easy to digest.",
+  "totalTime": "PT4H30M",
+  "prepTime": "PT10M",
+  "cookTime": "PT4H",
+  "recipeYield": "8 servings (8 cups)",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "AUD",
+    "value": "5"
+  },
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "1kg chicken bones (backs, necks, wings, or rotisserie chicken carcass)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "2L cold filtered water"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "2 tbsp apple cider vinegar"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "1 brown onion, quartered (optional)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "2 celery stalks, roughly chopped (optional)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "1 carrot, roughly chopped (optional)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "2 bay leaves"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Salt to taste"
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Large stockpot or slow cooker"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Fine mesh strainer"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Cheesecloth"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Storage containers or ice cube trays for freezing"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Prepare the Bones (Optional Roasting)",
+      "text": "For deeper flavor, roast bones at 200°C for 30 minutes until golden brown. This step is optional and can be skipped if using rotisserie chicken carcass or if you want a milder flavor.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-1-clear-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add Bones to Pot with Vinegar",
+      "text": "Place bones in large pot or slow cooker. Add cold water and apple cider vinegar. Let sit for 30 minutes. The vinegar helps extract minerals and nutrients from the bones into the broth.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-1-clear-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add Vegetables and Aromatics",
+      "text": "Add onion, celery, carrot, and bay leaves if using. These add flavor but are not required for Stage 1 - they will be strained out.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-1-clear-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Bring to Simmer",
+      "text": "Heat over medium-high until it just starts to bubble. Immediately reduce to low simmer. Never boil - boiling creates cloudy broth.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-1-clear-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Skim Foam",
+      "text": "Use a spoon to remove any foam or impurities that rise to the surface during the first 30 minutes. This ensures a clear, clean-tasting broth.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-1-clear-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Slow Cook for 4-24 Hours",
+      "text": "Stovetop: Simmer on lowest heat for 6-8 hours, stirring occasionally. Slow cooker: Cook on LOW for 12-24 hours (longer = more nutrient-dense). The longer you cook, the more collagen and minerals are extracted.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-1-clear-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Strain Completely",
+      "text": "Pour through fine mesh strainer lined with cheesecloth. Discard all solids - bones, vegetables, and aromatics. The broth should be completely clear with no chunks.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-1-clear-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cool and Refrigerate Overnight",
+      "text": "Let cool to room temperature, then refrigerate overnight. This allows the fat to rise and solidify on top for easy removal.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-1-clear-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Remove Fat Layer",
+      "text": "Next day, solid fat will have risen to top. Remove and discard this layer. The broth underneath is your healing liquid gold!",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-1-clear-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Season, Serve, and Store",
+      "text": "Gently reheat portion needed. Add salt to taste. Sip slowly, 30ml at a time. Store remaining broth in fridge for 5 days or freeze in ice cube trays for single servings (up to 3 months).",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-1-clear-liquid-recipes#recipe-1"
+    }
+  ]
+};
 ---
 
 <BlogLayout 
@@ -21,6 +152,9 @@ const keywords = [
   publishDate={publishDate}
   keywords={keywords}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  </Fragment>
 
 <div class="hero-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin-bottom: 3rem;">
   <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">

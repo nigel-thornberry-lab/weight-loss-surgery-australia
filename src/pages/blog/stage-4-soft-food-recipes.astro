@@ -12,6 +12,117 @@ const keywords = [
   "easy to chew meals",
   "bariatric soft foods"
 ];
+
+// HowTo Schema for Scrambled Eggs with Cheese Recipe
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Make Scrambled Eggs with Cheese for Bariatric Surgery Recovery",
+  "description": "Learn how to make soft, creamy scrambled eggs with cheese perfect for Stage 4 soft foods after gastric sleeve surgery. 18g protein, easy to chew, and essential for healing.",
+  "totalTime": "PT8M",
+  "prepTime": "PT3M",
+  "cookTime": "PT5M",
+  "recipeYield": "1 serving",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "AUD",
+    "value": "3.50"
+  },
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "2 large eggs"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "2 tbsp milk (lactose-free if needed)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "30g grated cheese (cheddar or tasty)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "1 tsp butter"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Fresh chives (optional)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Salt and pepper to taste"
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Non-stick frying pan"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Whisk or fork"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Spatula"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Small bowl for mixing"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Prepare the Eggs",
+      "text": "Crack 2 large eggs into a small bowl. Add 2 tbsp milk and whisk gently until well combined. Don't over-whisk - you want some texture variation.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-4-soft-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Heat the Pan",
+      "text": "Place a non-stick frying pan over LOW heat. Add 1 tsp butter and let it melt completely. The low heat is crucial for creamy, not rubbery eggs.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-4-soft-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add the Egg Mixture",
+      "text": "Pour the egg mixture into the pan. Let it sit for 10-15 seconds to start setting, then begin stirring gently with a spatula.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-4-soft-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Stir Gently and Continuously",
+      "text": "Stir the eggs gently and continuously, pushing the cooked parts to the center and allowing the liquid to flow to the edges. This creates the creamy texture.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-4-soft-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add Cheese When Nearly Set",
+      "text": "When the eggs are about 80% cooked (still slightly wet), add the grated cheese. Continue stirring gently until the cheese melts and eggs are just set.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-4-soft-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Season and Remove from Heat",
+      "text": "Add salt and pepper to taste, then immediately remove from heat. The residual heat will finish cooking the eggs to perfect creaminess.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-4-soft-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Garnish and Serve",
+      "text": "Garnish with fresh chives if using. Serve immediately while warm and creamy. The eggs should be soft and moist, not dry or rubbery.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-4-soft-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Eat Slowly and Mindfully",
+      "text": "Take 20-30 minutes to eat the entire serving. Even though it's soft, chew each bite thoroughly and mix with saliva. This aids digestion and helps you feel satisfied.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-4-soft-food-recipes#recipe-1"
+    }
+  ]
+};
 ---
 
 <BlogLayout 
@@ -21,6 +132,10 @@ const keywords = [
   publishDate={publishDate}
   keywords={keywords}
 >
+
+<Fragment slot="head">
+  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+</Fragment>
 
 <div class="hero-section" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin-bottom: 3rem;">
   <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">

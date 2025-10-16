@@ -35,6 +35,206 @@ const relatedArticles = [
   }
 ];
 
+// HowTo Schema for Pre-Op Diet Process
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Complete the 2-Week Pre-Op Diet for Gastric Sleeve Surgery",
+  "description": "Complete guide to successfully completing the 2-week pre-operative diet before gastric sleeve surgery. Learn what to eat, how to manage hunger, and prepare for surgery.",
+  "totalTime": "P14D",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "AUD",
+    "value": "120-180"
+  },
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "Protein powder (1kg) or Optifast boxes"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Lean proteins: chicken breast, white fish, turkey (1.5kg total)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Non-starchy vegetables: broccoli, cauliflower, zucchini, capsicum"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Greek yogurt (no fat), sugar-free jelly"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Herbal teas, water, stevia"
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Blender for protein shakes"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Food scale for portion control"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Slow cooker (optional, for meal prep)"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Week 1: Days 1-7 (Hardest Week)",
+      "text": "The first week is the most challenging as your body adjusts to very low calories (800-1,000 daily). Expect intense hunger Days 2-4, then gradual improvement as ketosis begins. Focus on staying hydrated, keeping busy, and following the meal structure strictly.",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Follow hybrid approach: 2 protein shakes + 1 small low-carb meal daily"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Breakfast (7am): Protein shake (200ml, 30g protein)"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Mid-morning snack (10am): Sugar-free jelly or Greek yogurt (100g)"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Lunch (12:30pm): Protein shake (200ml, 30g protein)"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Afternoon snack (3pm): Greek yogurt or sugar-free jelly"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Dinner (6pm): 100g lean protein + 200g non-starchy vegetables"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Manage side effects: Drink 2-3L water daily, rest when tired, take paracetamol for headaches"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Stay busy: Schedule activities, go to bed early, avoid food triggers (cooking shows, grocery shopping)"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Light exercise: Walk 20-30 minutes daily to manage hunger"
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Week 2: Days 8-14 (Still Hard, But Easier)",
+      "text": "Week 2 brings significant improvements. Your body has adapted to low calories and entered ketosis, meaning hunger is less intense and energy levels improve. Mental clarity returns and you can see visible weight loss (3-8kg total), which provides motivation.",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Continue same daily meal structure as Week 1"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Notice improvements: Reduced hunger, better energy, mental clarity returning"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Maintain protein target: 80-100g daily through shakes and meal"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Keep carbs under 50g daily to maintain ketosis"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Stay hydrated: Continue 2-3L water daily"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Prepare for surgery: Arrange time off work, prepare recovery space, batch cook post-op liquids"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Final days: Focus on the goal - surgery is almost here!"
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Managing Hunger Emergencies",
+      "text": "When hunger strikes intensely, use these evidence-based tactics to manage cravings without breaking the diet. These strategies work because they provide volume, distraction, or satisfy the oral fixation without adding calories or breaking ketosis.",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Drink 500ml cold water immediately and wait 15 minutes"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Eat sugar-free jelly (fills stomach, zero calories)"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Chew sugar-free gum to occupy mouth"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Brush teeth with mint toothpaste (reduces cravings)"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Go for 15-minute walk for distraction"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Call support person for accountability"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Take a nap if possible"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Drink hot herbal tea (warm liquid provides satisfaction)"
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "What to Do If You Cheat",
+      "text": "If you significantly cheat on the pre-op diet, your liver will re-enlarge within hours as glycogen and water return. This is a serious medical issue that can result in surgery cancellation. Honesty with your surgeon is critical for your safety.",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Call your surgeon immediately if you've had a major cheat (full meal, fast food, alcohol, high-carb foods)"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Be honest about what and when you ate - your safety depends on transparency"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Understand surgery may need to be postponed for your safety"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Restart the 2-week timeline if required by surgeon"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "For minor slips (extra vegetables, small piece of fruit), return immediately to plan and monitor yourself closely"
+        },
+        {
+          "@type": "HowToDirection",
+          "text": "Learn from the slip - identify triggers and create prevention strategies"
+        }
+      ]
+    }
+  ]
+};
+
 // FAQ Schema
 const faqSchema = {
   "@context": "https://schema.org",
@@ -119,6 +319,7 @@ const faqSchema = {
   relatedArticles={relatedArticles}
 >
   <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   </Fragment>
 

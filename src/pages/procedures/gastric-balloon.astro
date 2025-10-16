@@ -1,6 +1,8 @@
 ---
 import '../../styles/global.css';
 import { seoMeta } from '../../data/seo-meta';
+import QuickAnswer from '../../components/QuickAnswer.astro';
+import ContentFreshness from '../../components/ContentFreshness.astro';
 
 const meta = seoMeta.gastricBalloon;
 const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-balloon";
@@ -245,6 +247,29 @@ const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/gas
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<!-- Quick Answer & Freshness -->
+		<section class="py-8 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ContentFreshness 
+				datePublished="2025-01-03"
+				dateModified="2025-10-16"
+			/>
+				
+				<QuickAnswer 
+					question="How much does gastric balloon cost in Australia?"
+					answer="$8,000-$12,000 total cost. No private health insurance coverage. Medicare provides a $1,200-$1,800 rebate for eligible patients. Temporary procedure lasting 6-12 months."
+					details={[
+						"Procedure cost: $6,000-$8,000",
+						"Removal cost: $2,000-$4,000",
+						"No surgery required (endoscopic)",
+						"Best for BMI 30-40 patients"
+					]}
+					ctaText="Calculate Your Exact Cost"
+					ctaLink="/cost-calculator"
+				/>
 			</div>
 		</section>
 

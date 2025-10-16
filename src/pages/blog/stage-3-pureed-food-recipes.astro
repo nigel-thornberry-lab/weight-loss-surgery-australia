@@ -12,6 +12,108 @@ const keywords = [
   "soft food bariatric",
   "pureed meals"
 ];
+
+// HowTo Schema for Creamy Chicken Puree Recipe
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Make Creamy Chicken Puree for Bariatric Surgery Recovery",
+  "description": "Learn how to make a smooth, protein-rich chicken puree perfect for Stage 3 pureed foods after gastric sleeve surgery. 28g protein, easy to digest, and tastes like real food.",
+  "totalTime": "PT15M",
+  "prepTime": "PT15M",
+  "recipeYield": "1 serving (1/2 cup)",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "AUD",
+    "value": "4.50"
+  },
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "100g cooked chicken breast (skinless)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "50ml chicken broth (low-sodium)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "2 tbsp Greek yogurt (plain, no fat)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "1/4 tsp garlic powder"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Salt and pepper to taste"
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Food processor or high-speed blender"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Fine mesh strainer (for texture check)"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Measuring spoons and cups"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Prepare the Chicken",
+      "text": "Use 100g of cooked, skinless chicken breast. Rotisserie chicken from Coles/Woolworths works perfectly and saves time. Remove all skin and any visible fat before dicing finely.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-3-pureed-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Dice Chicken Finely",
+      "text": "Cut the chicken into very small pieces (about 1cm cubes). This helps the food processor blend it more smoothly and prevents any chunks from remaining.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-3-pureed-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add All Ingredients to Food Processor",
+      "text": "Place diced chicken, chicken broth, Greek yogurt, garlic powder, salt, and pepper into the food processor. The broth helps create the right consistency.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-3-pureed-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Blend Until Completely Smooth",
+      "text": "Process for 2-3 minutes until the mixture is completely smooth like hummus. Stop and scrape down the sides if needed. The texture should be uniform with no visible chunks.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-3-pureed-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Check Consistency",
+      "text": "The puree should pass through a fine mesh strainer easily. If it's too thick, add 1-2 tbsp more chicken broth and blend again. If too thin, add a bit more Greek yogurt.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-3-pureed-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Taste and Adjust Seasoning",
+      "text": "Taste the puree and adjust salt, pepper, and garlic powder to your preference. Remember that your taste buds may be different after surgery, so start with less seasoning.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-3-pureed-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Serve at Appropriate Temperature",
+      "text": "You can serve this warm or cold. If serving warm, heat gently in microwave for 30-60 seconds, stirring halfway. Don't overheat as it can change the texture.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-3-pureed-food-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Eat Slowly and Mindfully",
+      "text": "Take 30 minutes to eat the entire 1/2 cup serving. Even though it's pureed, 'chew' it in your mouth and mix with saliva. This helps with digestion and satisfaction.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-3-pureed-food-recipes#recipe-1"
+    }
+  ]
+};
 ---
 
 <BlogLayout 
@@ -21,6 +123,9 @@ const keywords = [
   publishDate={publishDate}
   keywords={keywords}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  </Fragment>
 
 <div class="hero-section" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin-bottom: 3rem;">
   <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">

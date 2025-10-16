@@ -12,6 +12,108 @@ const keywords = [
   "protein shakes bariatric",
   "high protein liquids"
 ];
+
+// HowTo Schema for Classic Vanilla Protein Shake Recipe
+const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Make a Classic Vanilla Protein Shake for Bariatric Surgery Recovery",
+  "description": "Learn how to make a high-protein vanilla shake perfect for Stage 2 full liquids after gastric sleeve surgery. 25g protein, easy to digest, and essential for healing.",
+  "totalTime": "PT3M",
+  "prepTime": "PT3M",
+  "recipeYield": "1 serving (200ml)",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "AUD",
+    "value": "2.50"
+  },
+  "supply": [
+    {
+      "@type": "HowToSupply",
+      "name": "1 scoop (30g) vanilla whey protein isolate"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "200ml lactose-free milk (Liddells or Zymil)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "1/4 tsp vanilla extract (optional)"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "2-3 ice cubes"
+    },
+    {
+      "@type": "HowToSupply",
+      "name": "Stevia drops (optional)"
+    }
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "High-speed blender"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Measuring scoop"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Tall glass for serving"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Choose Your Liquid Base",
+      "text": "Select lactose-free milk for more protein and creaminess, or almond milk for lower calories. Lactose-free milk provides better nutrition for healing.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-2-full-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add Liquid to Blender First",
+      "text": "Pour 200ml of your chosen milk into the blender first. Adding liquid first prevents protein powder from sticking to the blades and ensures even mixing.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-2-full-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add Protein Powder",
+      "text": "Add one level scoop (30g) of vanilla whey protein isolate. Don't add extra - more isn't better in early weeks and can cause digestive issues.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-2-full-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add Ice and Vanilla",
+      "text": "Add 2-3 ice cubes and 1/4 tsp vanilla extract if using. Ice makes the shake thicker and more milkshake-like, providing better satisfaction.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-2-full-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Blend on Low Then High",
+      "text": "Start blending on low speed for 10 seconds, then increase to high for 20-30 seconds until completely smooth. This prevents powder from flying everywhere.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-2-full-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Check Consistency",
+      "text": "The shake should be smooth like a thin milkshake. If too thick, add 30-50ml more milk. If too thin, add 1-2 more ice cubes and blend again.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-2-full-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Serve Immediately",
+      "text": "Protein shakes separate if left sitting. Drink within 15 minutes for best texture and to prevent protein from settling.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-2-full-liquid-recipes#recipe-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Sip Slowly",
+      "text": "Take 20-30 minutes to drink the entire shake. Use a spoon if easier than sipping. Never use a straw as it can cause gas and discomfort.",
+      "url": "https://weight-loss-surgery-australia.vercel.app/blog/stage-2-full-liquid-recipes#recipe-1"
+    }
+  ]
+};
 ---
 
 <BlogLayout 
@@ -21,6 +123,9 @@ const keywords = [
   publishDate={publishDate}
   keywords={keywords}
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  </Fragment>
 
 <div class="hero-section" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 3rem 2rem; border-radius: 20px; text-align: center; margin-bottom: 3rem;">
   <div style="display: inline-block; background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; margin-bottom: 1rem; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">

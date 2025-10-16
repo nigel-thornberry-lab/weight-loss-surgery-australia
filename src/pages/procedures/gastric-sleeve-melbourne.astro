@@ -1,6 +1,8 @@
 ---
 import '../../styles/global.css';
 import { seoMeta, generateProcedureCityMeta } from '../../data/seo-meta';
+import QuickAnswer from '../../components/QuickAnswer.astro';
+import ContentFreshness from '../../components/ContentFreshness.astro';
 
 const meta = generateProcedureCityMeta('Gastric Sleeve', 'Melbourne');
 const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/gastric-sleeve-melbourne";
@@ -348,6 +350,29 @@ const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/gas
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<!-- Quick Answer & Freshness -->
+		<section class="py-8 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ContentFreshness 
+				datePublished="2025-01-03"
+				dateModified="2025-10-16"
+			/>
+				
+				<QuickAnswer 
+					question="How much does gastric sleeve surgery cost in Melbourne?"
+					answer="$15,000-$25,000 total cost in Melbourne. With private health insurance, expect $5,000-$10,000 out-of-pocket. Medicare provides a $1,500-$2,000 rebate for eligible patients."
+					details={[
+						"Surgeon fees: $8,000-$12,000",
+						"Hospital fees: $5,000-$10,000",
+						"Anesthetist fees: $2,000-$3,000",
+						"12-month waiting period for insurance coverage"
+					]}
+					ctaText="Calculate Your Exact Cost"
+					ctaLink="/cost-calculator"
+				/>
 			</div>
 		</section>
 
