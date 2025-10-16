@@ -1327,16 +1327,6 @@
     ]
   },
   {
-    "url": "/compare/gastric-bypass-vs-mini-bypass",
-    "file": "compare/gastric-bypass-vs-mini-bypass.astro",
-    "outgoing": 4,
-    "incoming": 2,
-    "incomingFrom": [
-      "/compare",
-      "/procedures/gastric-bypass"
-    ]
-  },
-  {
     "url": "/procedures/gastric-balloon-sydney",
     "file": "procedures/gastric-balloon-sydney.astro",
     "outgoing": 23,
@@ -1417,17 +1407,6 @@
     ]
   },
   {
-    "url": "/blog/gastric-sleeve-recovery-week-by-week",
-    "file": "blog/gastric-sleeve-recovery-week-by-week.astro",
-    "outgoing": 6,
-    "incoming": 3,
-    "incomingFrom": [
-      "/blog/gastric-sleeve-cost-australia-2025",
-      "/blog/gastric-sleeve-diet-stages",
-      "/blog/pre-op-diet-gastric-sleeve"
-    ]
-  },
-  {
     "url": "/blog/pre-op-diet-gastric-sleeve",
     "file": "blog/pre-op-diet-gastric-sleeve.astro",
     "outgoing": 6,
@@ -1436,6 +1415,17 @@
       "/blog/gastric-sleeve-cost-australia-2025",
       "/blog/gastric-sleeve-diet-stages",
       "/blog/gastric-sleeve-recovery-week-by-week"
+    ]
+  },
+  {
+    "url": "/compare/gastric-bypass-vs-mini-bypass",
+    "file": "compare/gastric-bypass-vs-mini-bypass.astro",
+    "outgoing": 4,
+    "incoming": 3,
+    "incomingFrom": [
+      "/compare",
+      "/procedures/gastric-bypass",
+      "/procedures/mini-gastric-bypass"
     ]
   },
   {
@@ -1459,6 +1449,18 @@
       "/blog/gastric-sleeve-cost-australia-2025",
       "/blog/gastric-sleeve-recovery-week-by-week",
       "/blog/pre-op-diet-gastric-sleeve"
+    ]
+  },
+  {
+    "url": "/blog/gastric-sleeve-recovery-week-by-week",
+    "file": "blog/gastric-sleeve-recovery-week-by-week.astro",
+    "outgoing": 6,
+    "incoming": 4,
+    "incomingFrom": [
+      "/blog/gastric-sleeve-cost-australia-2025",
+      "/blog/gastric-sleeve-diet-stages",
+      "/blog/pre-op-diet-gastric-sleeve",
+      "/faq"
     ]
   },
   {
@@ -1695,31 +1697,9 @@
     ]
   },
   {
-    "url": "/procedures/gastric-balloon",
-    "file": "procedures/gastric-balloon.astro",
-    "outgoing": 18,
-    "incoming": 14,
-    "incomingFrom": [
-      "/locations/melbourne",
-      "/locations/sydney",
-      "/procedures/duodenal-switch-sydney",
-      "/procedures/gastric-balloon-sydney",
-      "/procedures/gastric-balloon",
-      "/procedures/gastric-band-sydney",
-      "/procedures/gastric-bypass-melbourne",
-      "/procedures/gastric-bypass-sydney",
-      "/procedures/gastric-sleeve-melbourne",
-      "/procedures/gastric-sleeve-sydney",
-      "/procedures/mini-gastric-bypass-melbourne",
-      "/procedures/mini-gastric-bypass-sydney",
-      "/procedures/mini-gastric-bypass",
-      "/procedures"
-    ]
-  },
-  {
     "url": "/procedures/mini-gastric-bypass",
     "file": "procedures/mini-gastric-bypass.astro",
-    "outgoing": 18,
+    "outgoing": 20,
     "incoming": 14,
     "incomingFrom": [
       "/compare/gastric-bypass-vs-mini-bypass",
@@ -1741,7 +1721,7 @@
   {
     "url": "/faq",
     "file": "faq.astro",
-    "outgoing": 2,
+    "outgoing": 7,
     "incoming": 15,
     "incomingFrom": [
       "/compare",
@@ -1782,6 +1762,29 @@
       "/melbourne/cost",
       "/procedures/gastric-bypass-melbourne",
       "/procedures/gastric-sleeve-melbourne"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-balloon",
+    "file": "procedures/gastric-balloon.astro",
+    "outgoing": 19,
+    "incoming": 15,
+    "incomingFrom": [
+      "/locations/melbourne",
+      "/locations/sydney",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass",
+      "/procedures"
     ]
   },
   {
@@ -1866,7 +1869,7 @@
   {
     "url": "/procedures/duodenal-switch",
     "file": "procedures/duodenal-switch.astro",
-    "outgoing": 25,
+    "outgoing": 26,
     "incoming": 21,
     "incomingFrom": [
       "/compare/gastric-sleeve-vs-gastric-bypass",
@@ -1958,7 +1961,7 @@
   {
     "url": "/procedures/gastric-band",
     "file": "procedures/gastric-band.astro",
-    "outgoing": 17,
+    "outgoing": 19,
     "incoming": 25,
     "incomingFrom": [
       "/compare/gastric-sleeve-vs-gastric-bypass",
@@ -1991,7 +1994,7 @@
   {
     "url": "/procedures/gastric-bypass",
     "file": "procedures/gastric-bypass.astro",
-    "outgoing": 26,
+    "outgoing": 27,
     "incoming": 26,
     "incomingFrom": [
       "/compare/gastric-bypass-vs-mini-bypass",
@@ -2025,7 +2028,7 @@
   {
     "url": "/procedures/gastric-sleeve",
     "file": "procedures/gastric-sleeve.astro",
-    "outgoing": 17,
+    "outgoing": 18,
     "incoming": 36,
     "incomingFrom": [
       "/blog/gastric-sleeve-cost-australia-2025",
@@ -2125,7 +2128,7 @@
     "url": "/compare",
     "file": "compare/index.astro",
     "outgoing": 6,
-    "incoming": 52,
+    "incoming": 58,
     "incomingFrom": [
       "/locations/ashfield",
       "/locations/auburn",
@@ -2178,15 +2181,22 @@
       "/locations/sutherland",
       "/locations/sydney",
       "/locations/wentworthville",
-      "/locations/werribee"
+      "/locations/werribee",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass"
     ]
   },
   {
     "url": "/bmi-calculator",
     "file": "bmi-calculator.astro",
     "outgoing": 2,
-    "incoming": 58,
+    "incoming": 59,
     "incomingFrom": [
+      "/faq",
       "/locations/ashfield",
       "/locations/auburn",
       "/locations/bankstown",
@@ -2251,9 +2261,10 @@
     "url": "/surgeon-selection-checklist",
     "file": "surgeon-selection-checklist.astro",
     "outgoing": 1,
-    "incoming": 60,
+    "incoming": 61,
     "incomingFrom": [
       "/bmi-calculator",
+      "/faq",
       "/",
       "/locations/ashfield",
       "/locations/auburn",
@@ -2394,10 +2405,11 @@
     "url": "/compare/gastric-sleeve-vs-gastric-bypass",
     "file": "compare/gastric-sleeve-vs-gastric-bypass.astro",
     "outgoing": 21,
-    "incoming": 69,
+    "incoming": 70,
     "incomingFrom": [
       "/compare/gastric-sleeve-vs-gastric-bypass",
       "/compare",
+      "/faq",
       "/",
       "/locations/ashfield",
       "/locations/auburn",
@@ -2677,7 +2689,7 @@
     "url": "/surgeons",
     "file": "surgeons/index.astro",
     "outgoing": 0,
-    "incoming": 169,
+    "incoming": 170,
     "incomingFrom": [
       "/am-i-ready",
       "/blog/bariatric-surgery-recipes-all-stages",
@@ -2692,6 +2704,7 @@
       "/costs/gastric-sleeve-cost-australia",
       "/costs",
       "/costs/superannuation-release",
+      "/faq",
       "/index-old",
       "/",
       "/locations/ashfield",
