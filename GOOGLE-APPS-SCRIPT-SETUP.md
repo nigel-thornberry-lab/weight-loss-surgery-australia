@@ -13,6 +13,10 @@
    - F1: `Procedure`
    - G1: `Source`
    - H1: `Message`
+   - I1: `Surgeon Name`
+   - J1: `Form Type`
+   - K1: `BMI Range`
+   - L1: `Health Conditions`
 
 ## Step 2: Create Apps Script Webhook
 
@@ -23,19 +27,23 @@
 ```javascript
 function doPost(e) {
   try {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-    var data = JSON.parse(e.postData.contents);
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    const data = JSON.parse(e.postData.contents);
     
-    // Add row with form data
+    // Add row with form data (matches current form structure)
     sheet.appendRow([
-      new Date(),
-      data.name || '',
-      data.email || '',
-      data.phone || '',
-      data.location || '',
-      data.procedure || '',
-      data.source || '',
-      data.message || ''
+      new Date(),                           // Timestamp
+      data.name || '',                      // Name
+      data.email || '',                     // Email
+      data.phone || '',                     // Phone
+      data.location || '',                  // Location
+      data.procedure || '',                 // Procedure
+      data.source || '',                    // Source
+      data.message || '',                   // Message
+      data.surgeonName || '',               // Surgeon Name
+      data.formType || 'Consultation',      // Form Type
+      data.bmi || '',                       // BMI Range
+      data.conditions || ''                 // Health Conditions
     ]);
     
     // Return success
@@ -71,15 +79,12 @@ function doGet(e) {
 
 1. Create `.env` file in your project root:
 ```
-GOOGLE_SHEETS_WEBHOOK_URL=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
+PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
 ```
 
-2. Add to `.gitignore`:
-```
-.env
-```
+2. The `.env` file is already in `.gitignore` ✅
 
-3. Update `astro.config.mjs` if needed to load env vars
+3. Your forms are already configured to use `PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL` ✅
 
 ## Step 4: Test Your Webhook
 
@@ -95,7 +100,11 @@ fetch('YOUR_WEBHOOK_URL', {
     location: 'Sydney',
     procedure: 'Gastric Sleeve',
     source: 'Manual Test',
-    message: 'This is a test'
+    message: 'This is a test',
+    surgeonName: 'Dr. Test Surgeon',
+    formType: 'Consultation',
+    bmi: '30-35',
+    conditions: 'Diabetes, Sleep Apnea'
   })
 })
 .then(r => r.json())
