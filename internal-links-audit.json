@@ -1,0 +1,2553 @@
+[
+  {
+    "url": "/blog/overseas-bariatric-surgery-risks-australia-comparison",
+    "file": "blog/overseas-bariatric-surgery-risks-australia-comparison.astro",
+    "outgoing": 0,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/bmi-calculator",
+    "file": "bmi-calculator.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/compare/gastric-bypass-vs-mini-bypass",
+    "file": "compare/gastric-bypass-vs-mini-bypass.astro",
+    "outgoing": 4,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/compare/surgery-vs-medication",
+    "file": "compare/surgery-vs-medication.astro",
+    "outgoing": 3,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/faq",
+    "file": "faq.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/index-old",
+    "file": "index-old.astro",
+    "outgoing": 15,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/locations/burwood",
+    "file": "locations/burwood.astro",
+    "outgoing": 4,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/locations/hornsby",
+    "file": "locations/hornsby.astro",
+    "outgoing": 4,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/locations/randwick",
+    "file": "locations/randwick.astro",
+    "outgoing": 4,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/locations/ryde",
+    "file": "locations/ryde.astro",
+    "outgoing": 4,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/locations/sutherland",
+    "file": "locations/sutherland.astro",
+    "outgoing": 4,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/ascot-vale",
+    "file": "surgeons/ascot-vale/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/ascot-vale/mr-hai-t-bui-ascot-vale",
+    "file": "surgeons/ascot-vale/mr-hai-t-bui-ascot-vale.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/baulkham-hills/dr-michael-devadas-baulkham-hills",
+    "file": "surgeons/baulkham-hills/dr-michael-devadas-baulkham-hills.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/baulkham-hills",
+    "file": "surgeons/baulkham-hills/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/bella-vista/dr-faizur-reza-bella-vista",
+    "file": "surgeons/bella-vista/dr-faizur-reza-bella-vista.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/bella-vista/dr-john-ozmen-general-upper-gi-surgeon-bella-vista",
+    "file": "surgeons/bella-vista/dr-john-ozmen-general-upper-gi-surgeon-bella-vista.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/bella-vista",
+    "file": "surgeons/bella-vista/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/berwick",
+    "file": "surgeons/berwick/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/berwick/mr-zeev-duieb-berwick",
+    "file": "surgeons/berwick/mr-zeev-duieb-berwick.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/berwick/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick",
+    "file": "surgeons/berwick/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/box-hill",
+    "file": "surgeons/box-hill/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/box-hill/mr-anthony-clough-box-hill",
+    "file": "surgeons/box-hill/mr-anthony-clough-box-hill.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/brighton/dr-paul-burton-brighton",
+    "file": "surgeons/brighton/dr-paul-burton-brighton.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/brighton",
+    "file": "surgeons/brighton/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/bulleen/dr-ahmad-aly-bulleen",
+    "file": "surgeons/bulleen/dr-ahmad-aly-bulleen.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/bulleen/dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen",
+    "file": "surgeons/bulleen/dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/bulleen",
+    "file": "surgeons/bulleen/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/bundoora/dr-ben-keong-bundoora",
+    "file": "surgeons/bundoora/dr-ben-keong-bundoora.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/bundoora/dr-ernest-lim-bundoora",
+    "file": "surgeons/bundoora/dr-ernest-lim-bundoora.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/bundoora",
+    "file": "surgeons/bundoora/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/bundoora/mr-kiron-bhatia-bundoora",
+    "file": "surgeons/bundoora/mr-kiron-bhatia-bundoora.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/campbelltown/dr-ali-zarrouk-campbelltown",
+    "file": "surgeons/campbelltown/dr-ali-zarrouk-campbelltown.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/campbelltown/dr-edward-tong-campbelltown-campbelltown",
+    "file": "surgeons/campbelltown/dr-edward-tong-campbelltown-campbelltown.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/campbelltown/dr-philip-le-page-campbelltown",
+    "file": "surgeons/campbelltown/dr-philip-le-page-campbelltown.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/campbelltown/dr-rachel-kirby-campbelltown",
+    "file": "surgeons/campbelltown/dr-rachel-kirby-campbelltown.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/campbelltown",
+    "file": "surgeons/campbelltown/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/camperdown/dr-david-yeo-camperdown",
+    "file": "surgeons/camperdown/dr-david-yeo-camperdown.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/camperdown/prof-charbel-sandr-oussi-innerwest-ugit-surgery-camperdown",
+    "file": "surgeons/camperdown/prof-charbel-sandr-oussi-innerwest-ugit-surgery-camperdown.astro",
+    "outgoing": 3,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/coburg",
+    "file": "surgeons/coburg/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/concord/dr-philip-le-page-surgeon-concord",
+    "file": "surgeons/concord/dr-philip-le-page-surgeon-concord.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/concord",
+    "file": "surgeons/concord/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/dandenong/dr-paul-j-ah-tye-dandenong",
+    "file": "surgeons/dandenong/dr-paul-j-ah-tye-dandenong.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/dandenong",
+    "file": "surgeons/dandenong/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/darlinghurst",
+    "file": "surgeons/darlinghurst/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/darlinghurst/reginald-v-n-lord-darlinghurst",
+    "file": "surgeons/darlinghurst/reginald-v-n-lord-darlinghurst.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/double-bay",
+    "file": "surgeons/double-bay/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/east-melbourne/aprof-michael-hii-east-melbourne",
+    "file": "surgeons/east-melbourne/aprof-michael-hii-east-melbourne.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/east-melbourne",
+    "file": "surgeons/east-melbourne/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/east-melbourne/mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne",
+    "file": "surgeons/east-melbourne/mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/essendon",
+    "file": "surgeons/essendon/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/essendon/mr-ian-michell-essendon",
+    "file": "surgeons/essendon/mr-ian-michell-essendon.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/five-dock",
+    "file": "surgeons/five-dock/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/frankston",
+    "file": "surgeons/frankston/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/frankston/mr-geoffrey-dr-aper-frankston",
+    "file": "surgeons/frankston/mr-geoffrey-dr-aper-frankston.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/frankston/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston",
+    "file": "surgeons/frankston/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/frenchs-forest/dr-philip-le-page-surgeon-frenchs-forest",
+    "file": "surgeons/frenchs-forest/dr-philip-le-page-surgeon-frenchs-forest.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/frenchs-forest",
+    "file": "surgeons/frenchs-forest/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/gledswood-hills/dr-khalid-ahmed-gledswood-hills",
+    "file": "surgeons/gledswood-hills/dr-khalid-ahmed-gledswood-hills.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/gledswood-hills",
+    "file": "surgeons/gledswood-hills/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/glen-waverley",
+    "file": "surgeons/glen-waverley/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/gregory-hills/dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills",
+    "file": "surgeons/gregory-hills/dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/gregory-hills",
+    "file": "surgeons/gregory-hills/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/hurstville/dr-clement-tsang-hurstville",
+    "file": "surgeons/hurstville/dr-clement-tsang-hurstville.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/hurstville",
+    "file": "surgeons/hurstville/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/kingswood/dr-clare-bouffler-kingswood",
+    "file": "surgeons/kingswood/dr-clare-bouffler-kingswood.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/kingswood",
+    "file": "surgeons/kingswood/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/kogarah/aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah",
+    "file": "surgeons/kogarah/aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/kogarah/dr-gary-yee-kogarah",
+    "file": "surgeons/kogarah/dr-gary-yee-kogarah.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/kogarah/dr-james-chau-kogarah",
+    "file": "surgeons/kogarah/dr-james-chau-kogarah.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/kogarah/dr-ken-loi-kogarah",
+    "file": "surgeons/kogarah/dr-ken-loi-kogarah.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/kogarah/dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah",
+    "file": "surgeons/kogarah/dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/kogarah",
+    "file": "surgeons/kogarah/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/langwarrin/dr-mani-niazi-langwarrin-mbsa-langwarrin",
+    "file": "surgeons/langwarrin/dr-mani-niazi-langwarrin-mbsa-langwarrin.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/langwarrin",
+    "file": "surgeons/langwarrin/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/lindfield",
+    "file": "surgeons/lindfield/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/lindfield/professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield",
+    "file": "surgeons/lindfield/professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/liverpool/dr-amitabha-das-liverpool",
+    "file": "surgeons/liverpool/dr-amitabha-das-liverpool.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/liverpool/dr-ertugrul-durmush-liverpool",
+    "file": "surgeons/liverpool/dr-ertugrul-durmush-liverpool.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/liverpool/dr-jason-maani-bariatric-surgery-liverpool",
+    "file": "surgeons/liverpool/dr-jason-maani-bariatric-surgery-liverpool.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/liverpool/dr-jason-maani-gallbladder-surgery-liverpool",
+    "file": "surgeons/liverpool/dr-jason-maani-gallbladder-surgery-liverpool.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/liverpool",
+    "file": "surgeons/liverpool/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/malvern",
+    "file": "surgeons/malvern/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/malvern/mr-richard-chen-malvern",
+    "file": "surgeons/malvern/mr-richard-chen-malvern.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/miranda",
+    "file": "surgeons/miranda/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/mount-waverley",
+    "file": "surgeons/mount-waverley/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/mount-waverley/mr-ahmed-naqeeb-mount-waverley",
+    "file": "surgeons/mount-waverley/mr-ahmed-naqeeb-mount-waverley.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/newtown/dr-michael-crawford-newtown",
+    "file": "surgeons/newtown/dr-michael-crawford-newtown.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/newtown",
+    "file": "surgeons/newtown/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/norwest/dr-nicholas-cocco-norwest",
+    "file": "surgeons/norwest/dr-nicholas-cocco-norwest.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/norwest/dr-roy-brancatisano-norwest",
+    "file": "surgeons/norwest/dr-roy-brancatisano-norwest.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/norwest",
+    "file": "surgeons/norwest/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/penrith/dr-fadil-khaleal-penrith",
+    "file": "surgeons/penrith/dr-fadil-khaleal-penrith.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/penrith/dr-khalid-ahmed-penrith",
+    "file": "surgeons/penrith/dr-khalid-ahmed-penrith.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/penrith",
+    "file": "surgeons/penrith/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/potts-point",
+    "file": "surgeons/potts-point/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/randwick",
+    "file": "surgeons/randwick/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/richmond/daniel-foley-richmond",
+    "file": "surgeons/richmond/daniel-foley-richmond.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/richmond/dr-yuan-cheng-richmond",
+    "file": "surgeons/richmond/dr-yuan-cheng-richmond.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/richmond",
+    "file": "surgeons/richmond/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/richmond/mr-mark-cullinan-richmond",
+    "file": "surgeons/richmond/mr-mark-cullinan-richmond.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/smithfield/dr-khalid-ahmed-smithfield",
+    "file": "surgeons/smithfield/dr-khalid-ahmed-smithfield.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/smithfield",
+    "file": "surgeons/smithfield/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/surrey-hills",
+    "file": "surgeons/surrey-hills/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/surrey-hills/mr-jacob-vanyai-surrey-hills",
+    "file": "surgeons/surrey-hills/mr-jacob-vanyai-surrey-hills.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/wahroonga",
+    "file": "surgeons/wahroonga/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/wantirna/dr-mani-niazi-wantirna",
+    "file": "surgeons/wantirna/dr-mani-niazi-wantirna.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/wantirna",
+    "file": "surgeons/wantirna/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/wantirna/mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna",
+    "file": "surgeons/wantirna/mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/werribee/dr-michael-hii-werribee",
+    "file": "surgeons/werribee/dr-michael-hii-werribee.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/werribee",
+    "file": "surgeons/werribee/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/westmead/dr-nicholas-cocco-westmead",
+    "file": "surgeons/westmead/dr-nicholas-cocco-westmead.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/westmead",
+    "file": "surgeons/westmead/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/wetherill-park/dr-govind-krishna-weight-loss-general-surgeon-wetherill-park",
+    "file": "surgeons/wetherill-park/dr-govind-krishna-weight-loss-general-surgeon-wetherill-park.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/surgeons/wetherill-park",
+    "file": "surgeons/wetherill-park/index.astro",
+    "outgoing": 2,
+    "incoming": 0,
+    "incomingFrom": []
+  },
+  {
+    "url": "/common-fears",
+    "file": "common-fears.astro",
+    "outgoing": 3,
+    "incoming": 1,
+    "incomingFrom": [
+      "/"
+    ]
+  },
+  {
+    "url": "/costs/superannuation-release",
+    "file": "costs/superannuation-release.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/cost-calculator"
+    ]
+  },
+  {
+    "url": "/locations/ashfield",
+    "file": "locations/ashfield.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/auburn",
+    "file": "locations/auburn.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/bankstown",
+    "file": "locations/bankstown.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/baulkham-hills",
+    "file": "locations/baulkham-hills.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/bentleigh",
+    "file": "locations/bentleigh.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/berwick",
+    "file": "locations/berwick.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/blacktown",
+    "file": "locations/blacktown.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/bondi",
+    "file": "locations/bondi.astro",
+    "outgoing": 7,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/box-hill",
+    "file": "locations/box-hill.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/cabramatta",
+    "file": "locations/cabramatta.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/campbelltown",
+    "file": "locations/campbelltown.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/castle-hill",
+    "file": "locations/castle-hill.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/chatswood",
+    "file": "locations/chatswood.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/cranbourne",
+    "file": "locations/cranbourne.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/cronulla",
+    "file": "locations/cronulla.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/dandenong",
+    "file": "locations/dandenong.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/dee-why",
+    "file": "locations/dee-why.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/doncaster",
+    "file": "locations/doncaster.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/eastwood",
+    "file": "locations/eastwood.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/epping",
+    "file": "locations/epping.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/fairfield",
+    "file": "locations/fairfield.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/footscray",
+    "file": "locations/footscray.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/frankston",
+    "file": "locations/frankston.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/geelong",
+    "file": "locations/geelong.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/heidelberg",
+    "file": "locations/heidelberg.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/hurstville-heights",
+    "file": "locations/hurstville-heights.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/hurstville",
+    "file": "locations/hurstville.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/kogarah",
+    "file": "locations/kogarah.astro",
+    "outgoing": 7,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/liverpool",
+    "file": "locations/liverpool.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/macquarie-park",
+    "file": "locations/macquarie-park.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/manly",
+    "file": "locations/manly.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/miranda",
+    "file": "locations/miranda.astro",
+    "outgoing": 6,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/narre-warren",
+    "file": "locations/narre-warren.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/newtown",
+    "file": "locations/newtown.astro",
+    "outgoing": 7,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/pakenham",
+    "file": "locations/pakenham.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/parramatta",
+    "file": "locations/parramatta.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/penrith",
+    "file": "locations/penrith.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/richmond",
+    "file": "locations/richmond.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/ringwood",
+    "file": "locations/ringwood.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/springvale",
+    "file": "locations/springvale.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/st-kilda",
+    "file": "locations/st-kilda.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/strathfield",
+    "file": "locations/strathfield.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/sunshine",
+    "file": "locations/sunshine.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/locations/wentworthville",
+    "file": "locations/wentworthville.astro",
+    "outgoing": 4,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/sydney"
+    ]
+  },
+  {
+    "url": "/locations/werribee",
+    "file": "locations/werribee.astro",
+    "outgoing": 5,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/melbourne"
+    ]
+  },
+  {
+    "url": "/procedures/duodenal-switch-melbourne",
+    "file": "procedures/duodenal-switch-melbourne.astro",
+    "outgoing": 1,
+    "incoming": 1,
+    "incomingFrom": [
+      "/procedures/duodenal-switch-sydney"
+    ]
+  },
+  {
+    "url": "/procedures/duodenal-switch-sydney",
+    "file": "procedures/duodenal-switch-sydney.astro",
+    "outgoing": 18,
+    "incoming": 1,
+    "incomingFrom": [
+      "/procedures/mini-gastric-bypass-sydney"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-balloon-melbourne",
+    "file": "procedures/gastric-balloon-melbourne.astro",
+    "outgoing": 1,
+    "incoming": 1,
+    "incomingFrom": [
+      "/procedures/gastric-balloon-sydney"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-band-melbourne",
+    "file": "procedures/gastric-band-melbourne.astro",
+    "outgoing": 1,
+    "incoming": 1,
+    "incomingFrom": [
+      "/procedures/gastric-band-sydney"
+    ]
+  },
+  {
+    "url": "/procedures/mini-gastric-bypass-melbourne",
+    "file": "procedures/mini-gastric-bypass-melbourne.astro",
+    "outgoing": 14,
+    "incoming": 1,
+    "incomingFrom": [
+      "/procedures/mini-gastric-bypass-sydney"
+    ]
+  },
+  {
+    "url": "/surgeons/box-hill/dr-sean-mackay-box-hill",
+    "file": "surgeons/box-hill/dr-sean-mackay-box-hill.astro",
+    "outgoing": 2,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/box-hill"
+    ]
+  },
+  {
+    "url": "/surgeons/camperdown",
+    "file": "surgeons/camperdown/index.astro",
+    "outgoing": 2,
+    "incoming": 1,
+    "incomingFrom": [
+      "/surgeons/camperdown/prof-charbel-sandr-oussi-innerwest-ugit-surgery-camperdown"
+    ]
+  },
+  {
+    "url": "/surgeons/kogarah/associate-professor-michael-talbot-kogarah",
+    "file": "surgeons/kogarah/associate-professor-michael-talbot-kogarah.astro",
+    "outgoing": 2,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/kogarah"
+    ]
+  },
+  {
+    "url": "/surgeons/kogarah/dr-jason-maani-kogarah",
+    "file": "surgeons/kogarah/dr-jason-maani-kogarah.astro",
+    "outgoing": 2,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/miranda"
+    ]
+  },
+  {
+    "url": "/surgeons/kogarah/dr-john-jorgensen-kogarah",
+    "file": "surgeons/kogarah/dr-john-jorgensen-kogarah.astro",
+    "outgoing": 2,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/kogarah"
+    ]
+  },
+  {
+    "url": "/surgeons/kogarah/dr-qiuye-cheng-kogarah",
+    "file": "surgeons/kogarah/dr-qiuye-cheng-kogarah.astro",
+    "outgoing": 2,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/kogarah"
+    ]
+  },
+  {
+    "url": "/surgeons/miranda/dr-mark-magdy-miranda",
+    "file": "surgeons/miranda/dr-mark-magdy-miranda.astro",
+    "outgoing": 2,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/miranda"
+    ]
+  },
+  {
+    "url": "/surgeons/wahroonga/aprof-christos-apostolou-surgeon-wahroonga",
+    "file": "surgeons/wahroonga/aprof-christos-apostolou-surgeon-wahroonga.astro",
+    "outgoing": 2,
+    "incoming": 1,
+    "incomingFrom": [
+      "/locations/manly"
+    ]
+  },
+  {
+    "url": "/blog/gastric-sleeve-cost-australia-2025",
+    "file": "blog/gastric-sleeve-cost-australia-2025.astro",
+    "outgoing": 5,
+    "incoming": 2,
+    "incomingFrom": [
+      "/blog/gastric-sleeve-recovery-week-by-week",
+      "/blog/pre-op-diet-gastric-sleeve"
+    ]
+  },
+  {
+    "url": "/blog/gastric-sleeve-recovery-week-by-week",
+    "file": "blog/gastric-sleeve-recovery-week-by-week.astro",
+    "outgoing": 6,
+    "incoming": 2,
+    "incomingFrom": [
+      "/blog/gastric-sleeve-diet-stages",
+      "/blog/pre-op-diet-gastric-sleeve"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-balloon-sydney",
+    "file": "procedures/gastric-balloon-sydney.astro",
+    "outgoing": 20,
+    "incoming": 2,
+    "incomingFrom": [
+      "/procedures/gastric-band-sydney",
+      "/procedures/mini-gastric-bypass-sydney"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-band-sydney",
+    "file": "procedures/gastric-band-sydney.astro",
+    "outgoing": 20,
+    "incoming": 2,
+    "incomingFrom": [
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/mini-gastric-bypass-sydney"
+    ]
+  },
+  {
+    "url": "/surgeon-selection-checklist",
+    "file": "surgeon-selection-checklist.astro",
+    "outgoing": 1,
+    "incoming": 2,
+    "incomingFrom": [
+      "/bmi-calculator",
+      "/"
+    ]
+  },
+  {
+    "url": "/surgeons/newtown/dr-david-joseph-newtown",
+    "file": "surgeons/newtown/dr-david-joseph-newtown.astro",
+    "outgoing": 2,
+    "incoming": 2,
+    "incomingFrom": [
+      "/locations/bondi",
+      "/locations/newtown"
+    ]
+  },
+  {
+    "url": "/surgeons/randwick/dr-david-links-randwick",
+    "file": "surgeons/randwick/dr-david-links-randwick.astro",
+    "outgoing": 2,
+    "incoming": 2,
+    "incomingFrom": [
+      "/locations/bondi",
+      "/locations/newtown"
+    ]
+  },
+  {
+    "url": "/surgeons/randwick/dr-robert-gandy-randwick",
+    "file": "surgeons/randwick/dr-robert-gandy-randwick.astro",
+    "outgoing": 2,
+    "incoming": 2,
+    "incomingFrom": [
+      "/locations/bondi",
+      "/locations/newtown"
+    ]
+  },
+  {
+    "url": "/surgeons/richmond/dr-ramez-bassari-richmond",
+    "file": "surgeons/richmond/dr-ramez-bassari-richmond.astro",
+    "outgoing": 2,
+    "incoming": 2,
+    "incomingFrom": [
+      "/locations/richmond",
+      "/locations/sunshine"
+    ]
+  },
+  {
+    "url": "/blog/gastric-sleeve-diet-stages",
+    "file": "blog/gastric-sleeve-diet-stages.astro",
+    "outgoing": 6,
+    "incoming": 3,
+    "incomingFrom": [
+      "/blog/bariatric-surgery-recipes-all-stages",
+      "/blog/gastric-sleeve-recovery-week-by-week",
+      "/blog/pre-op-diet-gastric-sleeve"
+    ]
+  },
+  {
+    "url": "/blog",
+    "file": "blog/index.astro",
+    "outgoing": 0,
+    "incoming": 3,
+    "incomingFrom": [
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/costs",
+      "/procedures/mini-gastric-bypass-sydney"
+    ]
+  },
+  {
+    "url": "/blog/pre-op-diet-gastric-sleeve",
+    "file": "blog/pre-op-diet-gastric-sleeve.astro",
+    "outgoing": 6,
+    "incoming": 3,
+    "incomingFrom": [
+      "/blog/gastric-sleeve-cost-australia-2025",
+      "/blog/gastric-sleeve-diet-stages",
+      "/blog/gastric-sleeve-recovery-week-by-week"
+    ]
+  },
+  {
+    "url": "/procedures/mini-gastric-bypass-sydney",
+    "file": "procedures/mini-gastric-bypass-sydney.astro",
+    "outgoing": 24,
+    "incoming": 3,
+    "incomingFrom": [
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-band-sydney"
+    ]
+  },
+  {
+    "url": "/blog/stage-1-clear-liquid-recipes",
+    "file": "blog/stage-1-clear-liquid-recipes.astro",
+    "outgoing": 4,
+    "incoming": 4,
+    "incomingFrom": [
+      "/blog/bariatric-surgery-recipes-all-stages",
+      "/blog/stage-2-full-liquid-recipes",
+      "/blog/stage-3-pureed-food-recipes",
+      "/blog/stage-4-soft-food-recipes"
+    ]
+  },
+  {
+    "url": "/blog/stage-2-full-liquid-recipes",
+    "file": "blog/stage-2-full-liquid-recipes.astro",
+    "outgoing": 4,
+    "incoming": 4,
+    "incomingFrom": [
+      "/blog/bariatric-surgery-recipes-all-stages",
+      "/blog/stage-1-clear-liquid-recipes",
+      "/blog/stage-3-pureed-food-recipes",
+      "/blog/stage-4-soft-food-recipes"
+    ]
+  },
+  {
+    "url": "/blog/stage-4-soft-food-recipes",
+    "file": "blog/stage-4-soft-food-recipes.astro",
+    "outgoing": 4,
+    "incoming": 4,
+    "incomingFrom": [
+      "/blog/bariatric-surgery-recipes-all-stages",
+      "/blog/stage-1-clear-liquid-recipes",
+      "/blog/stage-2-full-liquid-recipes",
+      "/blog/stage-3-pureed-food-recipes"
+    ]
+  },
+  {
+    "url": "/costs/gastric-band-cost-australia",
+    "file": "costs/gastric-band-cost-australia.astro",
+    "outgoing": 10,
+    "incoming": 4,
+    "incomingFrom": [
+      "/costs/gastric-band-cost-australia",
+      "/costs/gastric-bypass-cost-australia",
+      "/costs/gastric-sleeve-cost-australia",
+      "/costs"
+    ]
+  },
+  {
+    "url": "/costs/gastric-bypass-cost-australia",
+    "file": "costs/gastric-bypass-cost-australia.astro",
+    "outgoing": 10,
+    "incoming": 4,
+    "incomingFrom": [
+      "/costs/gastric-band-cost-australia",
+      "/costs/gastric-bypass-cost-australia",
+      "/costs/gastric-sleeve-cost-australia",
+      "/costs"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-bypass-melbourne",
+    "file": "procedures/gastric-bypass-melbourne.astro",
+    "outgoing": 15,
+    "incoming": 4,
+    "incomingFrom": [
+      "/melbourne/cost",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/mini-gastric-bypass-melbourne"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-sleeve-melbourne",
+    "file": "procedures/gastric-sleeve-melbourne.astro",
+    "outgoing": 15,
+    "incoming": 4,
+    "incomingFrom": [
+      "/melbourne/cost",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/mini-gastric-bypass-melbourne"
+    ]
+  },
+  {
+    "url": "/surgeons/melbourne",
+    "file": "surgeons/melbourne.astro",
+    "outgoing": 2,
+    "incoming": 4,
+    "incomingFrom": [
+      "/blog/gastric-sleeve-cost-australia-2025",
+      "/index-old",
+      "/",
+      "/melbourne/cost"
+    ]
+  },
+  {
+    "url": "/blog/stage-3-pureed-food-recipes",
+    "file": "blog/stage-3-pureed-food-recipes.astro",
+    "outgoing": 4,
+    "incoming": 5,
+    "incomingFrom": [
+      "/blog/bariatric-surgery-recipes-all-stages",
+      "/blog/gastric-sleeve-diet-stages",
+      "/blog/stage-1-clear-liquid-recipes",
+      "/blog/stage-2-full-liquid-recipes",
+      "/blog/stage-4-soft-food-recipes"
+    ]
+  },
+  {
+    "url": "/surgeons/sydney",
+    "file": "surgeons/sydney.astro",
+    "outgoing": 2,
+    "incoming": 5,
+    "incomingFrom": [
+      "/blog/gastric-sleeve-cost-australia-2025",
+      "/index-old",
+      "/",
+      "/sydney/consultation",
+      "/sydney/cost"
+    ]
+  },
+  {
+    "url": "/costs/gastric-sleeve-cost-australia",
+    "file": "costs/gastric-sleeve-cost-australia.astro",
+    "outgoing": 11,
+    "incoming": 6,
+    "incomingFrom": [
+      "/common-fears",
+      "/costs/gastric-band-cost-australia",
+      "/costs/gastric-bypass-cost-australia",
+      "/costs/gastric-sleeve-cost-australia",
+      "/costs",
+      "/costs/superannuation-release"
+    ]
+  },
+  {
+    "url": "/am-i-ready",
+    "file": "am-i-ready.astro",
+    "outgoing": 1,
+    "incoming": 7,
+    "incomingFrom": [
+      "/common-fears",
+      "/compare/surgery-vs-medication",
+      "/costs/gastric-band-cost-australia",
+      "/costs/gastric-bypass-cost-australia",
+      "/costs/gastric-sleeve-cost-australia",
+      "/costs",
+      "/"
+    ]
+  },
+  {
+    "url": "/blog/bariatric-surgery-recipes-all-stages",
+    "file": "blog/bariatric-surgery-recipes-all-stages.astro",
+    "outgoing": 6,
+    "incoming": 7,
+    "incomingFrom": [
+      "/blog/gastric-sleeve-diet-stages",
+      "/blog/gastric-sleeve-recovery-week-by-week",
+      "/blog/pre-op-diet-gastric-sleeve",
+      "/blog/stage-1-clear-liquid-recipes",
+      "/blog/stage-2-full-liquid-recipes",
+      "/blog/stage-3-pureed-food-recipes",
+      "/blog/stage-4-soft-food-recipes"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-bypass-sydney",
+    "file": "procedures/gastric-bypass-sydney.astro",
+    "outgoing": 12,
+    "incoming": 7,
+    "incomingFrom": [
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/sydney/cost"
+    ]
+  },
+  {
+    "url": "/compare/gastric-sleeve-vs-gastric-bypass",
+    "file": "compare/gastric-sleeve-vs-gastric-bypass.astro",
+    "outgoing": 21,
+    "incoming": 8,
+    "incomingFrom": [
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-sleeve-sydney",
+    "file": "procedures/gastric-sleeve-sydney.astro",
+    "outgoing": 11,
+    "incoming": 8,
+    "incomingFrom": [
+      "/index-old",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/sydney/cost"
+    ]
+  },
+  {
+    "url": "/melbourne/cost",
+    "file": "melbourne/cost.astro",
+    "outgoing": 4,
+    "incoming": 14,
+    "incomingFrom": [
+      "/locations/berwick",
+      "/locations/box-hill",
+      "/locations/cranbourne",
+      "/locations/dandenong",
+      "/locations/footscray",
+      "/locations/frankston",
+      "/locations/geelong",
+      "/locations/melbourne",
+      "/locations/richmond",
+      "/locations/st-kilda",
+      "/locations/sunshine",
+      "/locations/werribee",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-sleeve-melbourne"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-balloon",
+    "file": "procedures/gastric-balloon.astro",
+    "outgoing": 14,
+    "incoming": 14,
+    "incomingFrom": [
+      "/locations/melbourne",
+      "/locations/sydney",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass",
+      "/procedures"
+    ]
+  },
+  {
+    "url": "/procedures/mini-gastric-bypass",
+    "file": "procedures/mini-gastric-bypass.astro",
+    "outgoing": 14,
+    "incoming": 14,
+    "incomingFrom": [
+      "/compare/gastric-bypass-vs-mini-bypass",
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/index-old",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass",
+      "/procedures"
+    ]
+  },
+  {
+    "url": "/melbourne/consultation",
+    "file": "melbourne/consultation.astro",
+    "outgoing": 1,
+    "incoming": 15,
+    "incomingFrom": [
+      "/locations/berwick",
+      "/locations/box-hill",
+      "/locations/cranbourne",
+      "/locations/dandenong",
+      "/locations/footscray",
+      "/locations/frankston",
+      "/locations/geelong",
+      "/locations/melbourne",
+      "/locations/richmond",
+      "/locations/st-kilda",
+      "/locations/sunshine",
+      "/locations/werribee",
+      "/melbourne/cost",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-sleeve-melbourne"
+    ]
+  },
+  {
+    "url": "/cost-calculator",
+    "file": "cost-calculator.astro",
+    "outgoing": 3,
+    "incoming": 16,
+    "incomingFrom": [
+      "/bmi-calculator",
+      "/compare/gastric-bypass-vs-mini-bypass",
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/costs/superannuation-release",
+      "/faq",
+      "/",
+      "/locations/bentleigh",
+      "/locations/doncaster",
+      "/locations/epping",
+      "/locations/heidelberg",
+      "/locations/narre-warren",
+      "/locations/pakenham",
+      "/locations/ringwood",
+      "/locations/springvale",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-bypass"
+    ]
+  },
+  {
+    "url": "/costs",
+    "file": "costs/index.astro",
+    "outgoing": 10,
+    "incoming": 18,
+    "incomingFrom": [
+      "/costs/gastric-band-cost-australia",
+      "/costs/gastric-bypass-cost-australia",
+      "/costs/gastric-sleeve-cost-australia",
+      "/locations/ashfield",
+      "/locations/baulkham-hills",
+      "/locations/bondi",
+      "/locations/cabramatta",
+      "/locations/cronulla",
+      "/locations/dee-why",
+      "/locations/eastwood",
+      "/locations/hurstville-heights",
+      "/locations/kogarah",
+      "/locations/macquarie-park",
+      "/locations/manly",
+      "/locations/miranda",
+      "/locations/newtown",
+      "/locations/strathfield",
+      "/locations/wentworthville"
+    ]
+  },
+  {
+    "url": "/procedures",
+    "file": "procedures.astro",
+    "outgoing": 9,
+    "incoming": 20,
+    "incomingFrom": [
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/index-old",
+      "/locations/melbourne",
+      "/locations/sydney",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass",
+      "/procedures"
+    ]
+  },
+  {
+    "url": "/procedures/duodenal-switch",
+    "file": "procedures/duodenal-switch.astro",
+    "outgoing": 21,
+    "incoming": 21,
+    "incomingFrom": [
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/index-old",
+      "/",
+      "/locations/melbourne",
+      "/locations/sydney",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass",
+      "/procedures"
+    ]
+  },
+  {
+    "url": "/sydney/cost",
+    "file": "sydney/cost.astro",
+    "outgoing": 4,
+    "incoming": 23,
+    "incomingFrom": [
+      "/locations/auburn",
+      "/locations/bankstown",
+      "/locations/blacktown",
+      "/locations/burwood",
+      "/locations/campbelltown",
+      "/locations/castle-hill",
+      "/locations/chatswood",
+      "/locations/fairfield",
+      "/locations/hornsby",
+      "/locations/hurstville",
+      "/locations/liverpool",
+      "/locations/parramatta",
+      "/locations/penrith",
+      "/locations/randwick",
+      "/locations/ryde",
+      "/locations/sutherland",
+      "/locations/sydney",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/mini-gastric-bypass-sydney"
+    ]
+  },
+  {
+    "url": "/sydney/consultation",
+    "file": "sydney/consultation.astro",
+    "outgoing": 2,
+    "incoming": 24,
+    "incomingFrom": [
+      "/locations/auburn",
+      "/locations/bankstown",
+      "/locations/blacktown",
+      "/locations/burwood",
+      "/locations/campbelltown",
+      "/locations/castle-hill",
+      "/locations/chatswood",
+      "/locations/fairfield",
+      "/locations/hornsby",
+      "/locations/hurstville",
+      "/locations/liverpool",
+      "/locations/parramatta",
+      "/locations/penrith",
+      "/locations/randwick",
+      "/locations/ryde",
+      "/locations/sutherland",
+      "/locations/sydney",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/sydney/cost"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-band",
+    "file": "procedures/gastric-band.astro",
+    "outgoing": 13,
+    "incoming": 25,
+    "incomingFrom": [
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/costs/gastric-band-cost-australia",
+      "/costs/gastric-bypass-cost-australia",
+      "/costs/gastric-sleeve-cost-australia",
+      "/costs",
+      "/index-old",
+      "/",
+      "/locations/melbourne",
+      "/locations/sydney",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass",
+      "/procedures"
+    ]
+  },
+  {
+    "url": "/contact",
+    "file": "contact.astro",
+    "outgoing": 0,
+    "incoming": 26,
+    "incomingFrom": [
+      "/compare/gastric-bypass-vs-mini-bypass",
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/compare/surgery-vs-medication",
+      "/costs",
+      "/costs/superannuation-release",
+      "/faq",
+      "/",
+      "/locations/ashfield",
+      "/locations/baulkham-hills",
+      "/locations/bondi",
+      "/locations/cabramatta",
+      "/locations/cronulla",
+      "/locations/dee-why",
+      "/locations/eastwood",
+      "/locations/hurstville-heights",
+      "/locations/kogarah",
+      "/locations/macquarie-park",
+      "/locations/manly",
+      "/locations/miranda",
+      "/locations/newtown",
+      "/locations/strathfield",
+      "/locations/wentworthville",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-bypass",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/surgeon-selection-checklist"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-bypass",
+    "file": "procedures/gastric-bypass.astro",
+    "outgoing": 21,
+    "incoming": 26,
+    "incomingFrom": [
+      "/compare/gastric-bypass-vs-mini-bypass",
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/costs/gastric-band-cost-australia",
+      "/costs/gastric-bypass-cost-australia",
+      "/costs/gastric-sleeve-cost-australia",
+      "/costs",
+      "/index-old",
+      "/",
+      "/locations/melbourne",
+      "/locations/sydney",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass",
+      "/procedures"
+    ]
+  },
+  {
+    "url": "/locations/melbourne",
+    "file": "locations/melbourne.astro",
+    "outgoing": 32,
+    "incoming": 36,
+    "incomingFrom": [
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/index-old",
+      "/locations/bentleigh",
+      "/locations/berwick",
+      "/locations/box-hill",
+      "/locations/cranbourne",
+      "/locations/dandenong",
+      "/locations/doncaster",
+      "/locations/epping",
+      "/locations/footscray",
+      "/locations/frankston",
+      "/locations/geelong",
+      "/locations/heidelberg",
+      "/locations/melbourne",
+      "/locations/narre-warren",
+      "/locations/pakenham",
+      "/locations/richmond",
+      "/locations/ringwood",
+      "/locations/springvale",
+      "/locations/st-kilda",
+      "/locations/sunshine",
+      "/locations/sydney",
+      "/locations/werribee",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass"
+    ]
+  },
+  {
+    "url": "/procedures/gastric-sleeve",
+    "file": "procedures/gastric-sleeve.astro",
+    "outgoing": 13,
+    "incoming": 36,
+    "incomingFrom": [
+      "/blog/gastric-sleeve-cost-australia-2025",
+      "/blog/gastric-sleeve-diet-stages",
+      "/blog/gastric-sleeve-recovery-week-by-week",
+      "/blog/pre-op-diet-gastric-sleeve",
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/compare/surgery-vs-medication",
+      "/costs/gastric-sleeve-cost-australia",
+      "/costs",
+      "/index-old",
+      "/",
+      "/locations/bentleigh",
+      "/locations/doncaster",
+      "/locations/epping",
+      "/locations/heidelberg",
+      "/locations/melbourne",
+      "/locations/narre-warren",
+      "/locations/pakenham",
+      "/locations/ringwood",
+      "/locations/springvale",
+      "/locations/sydney",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass",
+      "/procedures"
+    ]
+  },
+  {
+    "url": "/locations/sydney",
+    "file": "locations/sydney.astro",
+    "outgoing": 39,
+    "incoming": 50,
+    "incomingFrom": [
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/index-old",
+      "/locations/ashfield",
+      "/locations/auburn",
+      "/locations/bankstown",
+      "/locations/baulkham-hills",
+      "/locations/blacktown",
+      "/locations/bondi",
+      "/locations/burwood",
+      "/locations/cabramatta",
+      "/locations/campbelltown",
+      "/locations/castle-hill",
+      "/locations/chatswood",
+      "/locations/cronulla",
+      "/locations/dee-why",
+      "/locations/eastwood",
+      "/locations/fairfield",
+      "/locations/hornsby",
+      "/locations/hurstville-heights",
+      "/locations/hurstville",
+      "/locations/kogarah",
+      "/locations/liverpool",
+      "/locations/macquarie-park",
+      "/locations/manly",
+      "/locations/melbourne",
+      "/locations/miranda",
+      "/locations/newtown",
+      "/locations/parramatta",
+      "/locations/penrith",
+      "/locations/randwick",
+      "/locations/ryde",
+      "/locations/strathfield",
+      "/locations/sutherland",
+      "/locations/sydney",
+      "/locations/wentworthville",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass"
+    ]
+  },
+  {
+    "url": "/surgeons",
+    "file": "surgeons/index.astro",
+    "outgoing": 0,
+    "incoming": 146,
+    "incomingFrom": [
+      "/am-i-ready",
+      "/blog/bariatric-surgery-recipes-all-stages",
+      "/blog/gastric-sleeve-cost-australia-2025",
+      "/blog/gastric-sleeve-diet-stages",
+      "/blog/gastric-sleeve-recovery-week-by-week",
+      "/blog/pre-op-diet-gastric-sleeve",
+      "/common-fears",
+      "/cost-calculator",
+      "/costs/gastric-band-cost-australia",
+      "/costs/gastric-bypass-cost-australia",
+      "/costs/gastric-sleeve-cost-australia",
+      "/costs",
+      "/costs/superannuation-release",
+      "/index-old",
+      "/",
+      "/locations/auburn",
+      "/locations/berwick",
+      "/locations/blacktown",
+      "/locations/castle-hill",
+      "/locations/chatswood",
+      "/locations/cranbourne",
+      "/locations/dandenong",
+      "/locations/fairfield",
+      "/locations/frankston",
+      "/locations/geelong",
+      "/locations/hurstville",
+      "/locations/parramatta",
+      "/locations/werribee",
+      "/surgeons/ascot-vale",
+      "/surgeons/ascot-vale/mr-hai-t-bui-ascot-vale",
+      "/surgeons/baulkham-hills/dr-michael-devadas-baulkham-hills",
+      "/surgeons/baulkham-hills",
+      "/surgeons/bella-vista/dr-faizur-reza-bella-vista",
+      "/surgeons/bella-vista/dr-john-ozmen-general-upper-gi-surgeon-bella-vista",
+      "/surgeons/bella-vista",
+      "/surgeons/berwick",
+      "/surgeons/berwick/mr-zeev-duieb-berwick",
+      "/surgeons/berwick/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick",
+      "/surgeons/box-hill/dr-sean-mackay-box-hill",
+      "/surgeons/box-hill",
+      "/surgeons/box-hill/mr-anthony-clough-box-hill",
+      "/surgeons/brighton/dr-paul-burton-brighton",
+      "/surgeons/brighton",
+      "/surgeons/bulleen/dr-ahmad-aly-bulleen",
+      "/surgeons/bulleen/dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen",
+      "/surgeons/bulleen",
+      "/surgeons/bundoora/dr-ben-keong-bundoora",
+      "/surgeons/bundoora/dr-ernest-lim-bundoora",
+      "/surgeons/bundoora",
+      "/surgeons/bundoora/mr-kiron-bhatia-bundoora",
+      "/surgeons/campbelltown/dr-ali-zarrouk-campbelltown",
+      "/surgeons/campbelltown/dr-edward-tong-campbelltown-campbelltown",
+      "/surgeons/campbelltown/dr-philip-le-page-campbelltown",
+      "/surgeons/campbelltown/dr-rachel-kirby-campbelltown",
+      "/surgeons/campbelltown",
+      "/surgeons/camperdown/dr-david-yeo-camperdown",
+      "/surgeons/camperdown",
+      "/surgeons/camperdown/prof-charbel-sandr-oussi-innerwest-ugit-surgery-camperdown",
+      "/surgeons/coburg",
+      "/surgeons/concord/dr-philip-le-page-surgeon-concord",
+      "/surgeons/concord",
+      "/surgeons/dandenong/dr-paul-j-ah-tye-dandenong",
+      "/surgeons/dandenong",
+      "/surgeons/darlinghurst",
+      "/surgeons/darlinghurst/reginald-v-n-lord-darlinghurst",
+      "/surgeons/double-bay",
+      "/surgeons/east-melbourne/aprof-michael-hii-east-melbourne",
+      "/surgeons/east-melbourne",
+      "/surgeons/east-melbourne/mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne",
+      "/surgeons/essendon",
+      "/surgeons/essendon/mr-ian-michell-essendon",
+      "/surgeons/five-dock",
+      "/surgeons/frankston",
+      "/surgeons/frankston/mr-geoffrey-dr-aper-frankston",
+      "/surgeons/frankston/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston",
+      "/surgeons/frenchs-forest/dr-philip-le-page-surgeon-frenchs-forest",
+      "/surgeons/frenchs-forest",
+      "/surgeons/gledswood-hills/dr-khalid-ahmed-gledswood-hills",
+      "/surgeons/gledswood-hills",
+      "/surgeons/glen-waverley",
+      "/surgeons/gregory-hills/dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills",
+      "/surgeons/gregory-hills",
+      "/surgeons/hurstville/dr-clement-tsang-hurstville",
+      "/surgeons/hurstville",
+      "/surgeons/kingswood/dr-clare-bouffler-kingswood",
+      "/surgeons/kingswood",
+      "/surgeons/kogarah/aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah",
+      "/surgeons/kogarah/associate-professor-michael-talbot-kogarah",
+      "/surgeons/kogarah/dr-gary-yee-kogarah",
+      "/surgeons/kogarah/dr-james-chau-kogarah",
+      "/surgeons/kogarah/dr-jason-maani-kogarah",
+      "/surgeons/kogarah/dr-john-jorgensen-kogarah",
+      "/surgeons/kogarah/dr-ken-loi-kogarah",
+      "/surgeons/kogarah/dr-qiuye-cheng-kogarah",
+      "/surgeons/kogarah/dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah",
+      "/surgeons/kogarah",
+      "/surgeons/langwarrin/dr-mani-niazi-langwarrin-mbsa-langwarrin",
+      "/surgeons/langwarrin",
+      "/surgeons/lindfield",
+      "/surgeons/lindfield/professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield",
+      "/surgeons/liverpool/dr-amitabha-das-liverpool",
+      "/surgeons/liverpool/dr-ertugrul-durmush-liverpool",
+      "/surgeons/liverpool/dr-jason-maani-bariatric-surgery-liverpool",
+      "/surgeons/liverpool/dr-jason-maani-gallbladder-surgery-liverpool",
+      "/surgeons/liverpool",
+      "/surgeons/malvern",
+      "/surgeons/malvern/mr-richard-chen-malvern",
+      "/surgeons/melbourne",
+      "/surgeons/miranda/dr-mark-magdy-miranda",
+      "/surgeons/miranda",
+      "/surgeons/mount-waverley",
+      "/surgeons/mount-waverley/mr-ahmed-naqeeb-mount-waverley",
+      "/surgeons/newtown/dr-david-joseph-newtown",
+      "/surgeons/newtown/dr-michael-crawford-newtown",
+      "/surgeons/newtown",
+      "/surgeons/norwest/dr-nicholas-cocco-norwest",
+      "/surgeons/norwest/dr-roy-brancatisano-norwest",
+      "/surgeons/norwest",
+      "/surgeons/penrith/dr-fadil-khaleal-penrith",
+      "/surgeons/penrith/dr-khalid-ahmed-penrith",
+      "/surgeons/penrith",
+      "/surgeons/potts-point",
+      "/surgeons/randwick/dr-david-links-randwick",
+      "/surgeons/randwick/dr-robert-gandy-randwick",
+      "/surgeons/randwick",
+      "/surgeons/richmond/daniel-foley-richmond",
+      "/surgeons/richmond/dr-ramez-bassari-richmond",
+      "/surgeons/richmond/dr-yuan-cheng-richmond",
+      "/surgeons/richmond",
+      "/surgeons/richmond/mr-mark-cullinan-richmond",
+      "/surgeons/smithfield/dr-khalid-ahmed-smithfield",
+      "/surgeons/smithfield",
+      "/surgeons/surrey-hills",
+      "/surgeons/surrey-hills/mr-jacob-vanyai-surrey-hills",
+      "/surgeons/sydney",
+      "/surgeons/wahroonga/aprof-christos-apostolou-surgeon-wahroonga",
+      "/surgeons/wahroonga",
+      "/surgeons/wantirna/dr-mani-niazi-wantirna",
+      "/surgeons/wantirna",
+      "/surgeons/wantirna/mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna",
+      "/surgeons/werribee/dr-michael-hii-werribee",
+      "/surgeons/werribee",
+      "/surgeons/westmead/dr-nicholas-cocco-westmead",
+      "/surgeons/westmead",
+      "/surgeons/wetherill-park/dr-govind-krishna-weight-loss-general-surgeon-wetherill-park",
+      "/surgeons/wetherill-park"
+    ]
+  },
+  {
+    "url": "/",
+    "file": "index.astro",
+    "outgoing": 13,
+    "incoming": 191,
+    "incomingFrom": [
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/costs/gastric-band-cost-australia",
+      "/costs/gastric-bypass-cost-australia",
+      "/costs/gastric-sleeve-cost-australia",
+      "/index-old",
+      "/locations/ashfield",
+      "/locations/auburn",
+      "/locations/bankstown",
+      "/locations/baulkham-hills",
+      "/locations/bentleigh",
+      "/locations/berwick",
+      "/locations/blacktown",
+      "/locations/bondi",
+      "/locations/box-hill",
+      "/locations/burwood",
+      "/locations/cabramatta",
+      "/locations/campbelltown",
+      "/locations/castle-hill",
+      "/locations/chatswood",
+      "/locations/cranbourne",
+      "/locations/cronulla",
+      "/locations/dandenong",
+      "/locations/dee-why",
+      "/locations/doncaster",
+      "/locations/eastwood",
+      "/locations/epping",
+      "/locations/fairfield",
+      "/locations/footscray",
+      "/locations/frankston",
+      "/locations/geelong",
+      "/locations/heidelberg",
+      "/locations/hornsby",
+      "/locations/hurstville-heights",
+      "/locations/hurstville",
+      "/locations/kogarah",
+      "/locations/liverpool",
+      "/locations/macquarie-park",
+      "/locations/manly",
+      "/locations/melbourne",
+      "/locations/miranda",
+      "/locations/narre-warren",
+      "/locations/newtown",
+      "/locations/pakenham",
+      "/locations/parramatta",
+      "/locations/penrith",
+      "/locations/randwick",
+      "/locations/richmond",
+      "/locations/ringwood",
+      "/locations/ryde",
+      "/locations/springvale",
+      "/locations/st-kilda",
+      "/locations/strathfield",
+      "/locations/sunshine",
+      "/locations/sutherland",
+      "/locations/sydney",
+      "/locations/wentworthville",
+      "/locations/werribee",
+      "/procedures/duodenal-switch-sydney",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass",
+      "/procedures",
+      "/surgeons/ascot-vale",
+      "/surgeons/ascot-vale/mr-hai-t-bui-ascot-vale",
+      "/surgeons/baulkham-hills/dr-michael-devadas-baulkham-hills",
+      "/surgeons/baulkham-hills",
+      "/surgeons/bella-vista/dr-faizur-reza-bella-vista",
+      "/surgeons/bella-vista/dr-john-ozmen-general-upper-gi-surgeon-bella-vista",
+      "/surgeons/bella-vista",
+      "/surgeons/berwick",
+      "/surgeons/berwick/mr-zeev-duieb-berwick",
+      "/surgeons/berwick/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick",
+      "/surgeons/box-hill/dr-sean-mackay-box-hill",
+      "/surgeons/box-hill",
+      "/surgeons/box-hill/mr-anthony-clough-box-hill",
+      "/surgeons/brighton/dr-paul-burton-brighton",
+      "/surgeons/brighton",
+      "/surgeons/bulleen/dr-ahmad-aly-bulleen",
+      "/surgeons/bulleen/dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen",
+      "/surgeons/bulleen",
+      "/surgeons/bundoora/dr-ben-keong-bundoora",
+      "/surgeons/bundoora/dr-ernest-lim-bundoora",
+      "/surgeons/bundoora",
+      "/surgeons/bundoora/mr-kiron-bhatia-bundoora",
+      "/surgeons/campbelltown/dr-ali-zarrouk-campbelltown",
+      "/surgeons/campbelltown/dr-edward-tong-campbelltown-campbelltown",
+      "/surgeons/campbelltown/dr-philip-le-page-campbelltown",
+      "/surgeons/campbelltown/dr-rachel-kirby-campbelltown",
+      "/surgeons/campbelltown",
+      "/surgeons/camperdown/dr-david-yeo-camperdown",
+      "/surgeons/camperdown",
+      "/surgeons/camperdown/prof-charbel-sandr-oussi-innerwest-ugit-surgery-camperdown",
+      "/surgeons/coburg",
+      "/surgeons/concord/dr-philip-le-page-surgeon-concord",
+      "/surgeons/concord",
+      "/surgeons/dandenong/dr-paul-j-ah-tye-dandenong",
+      "/surgeons/dandenong",
+      "/surgeons/darlinghurst",
+      "/surgeons/darlinghurst/reginald-v-n-lord-darlinghurst",
+      "/surgeons/double-bay",
+      "/surgeons/east-melbourne/aprof-michael-hii-east-melbourne",
+      "/surgeons/east-melbourne",
+      "/surgeons/east-melbourne/mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne",
+      "/surgeons/essendon",
+      "/surgeons/essendon/mr-ian-michell-essendon",
+      "/surgeons/five-dock",
+      "/surgeons/frankston",
+      "/surgeons/frankston/mr-geoffrey-dr-aper-frankston",
+      "/surgeons/frankston/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston",
+      "/surgeons/frenchs-forest/dr-philip-le-page-surgeon-frenchs-forest",
+      "/surgeons/frenchs-forest",
+      "/surgeons/gledswood-hills/dr-khalid-ahmed-gledswood-hills",
+      "/surgeons/gledswood-hills",
+      "/surgeons/glen-waverley",
+      "/surgeons/gregory-hills/dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills",
+      "/surgeons/gregory-hills",
+      "/surgeons/hurstville/dr-clement-tsang-hurstville",
+      "/surgeons/hurstville",
+      "/surgeons/kingswood/dr-clare-bouffler-kingswood",
+      "/surgeons/kingswood",
+      "/surgeons/kogarah/aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah",
+      "/surgeons/kogarah/associate-professor-michael-talbot-kogarah",
+      "/surgeons/kogarah/dr-gary-yee-kogarah",
+      "/surgeons/kogarah/dr-james-chau-kogarah",
+      "/surgeons/kogarah/dr-jason-maani-kogarah",
+      "/surgeons/kogarah/dr-john-jorgensen-kogarah",
+      "/surgeons/kogarah/dr-ken-loi-kogarah",
+      "/surgeons/kogarah/dr-qiuye-cheng-kogarah",
+      "/surgeons/kogarah/dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah",
+      "/surgeons/kogarah",
+      "/surgeons/langwarrin/dr-mani-niazi-langwarrin-mbsa-langwarrin",
+      "/surgeons/langwarrin",
+      "/surgeons/lindfield",
+      "/surgeons/lindfield/professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield",
+      "/surgeons/liverpool/dr-amitabha-das-liverpool",
+      "/surgeons/liverpool/dr-ertugrul-durmush-liverpool",
+      "/surgeons/liverpool/dr-jason-maani-bariatric-surgery-liverpool",
+      "/surgeons/liverpool/dr-jason-maani-gallbladder-surgery-liverpool",
+      "/surgeons/liverpool",
+      "/surgeons/malvern",
+      "/surgeons/malvern/mr-richard-chen-malvern",
+      "/surgeons/melbourne",
+      "/surgeons/miranda/dr-mark-magdy-miranda",
+      "/surgeons/miranda",
+      "/surgeons/mount-waverley",
+      "/surgeons/mount-waverley/mr-ahmed-naqeeb-mount-waverley",
+      "/surgeons/newtown/dr-david-joseph-newtown",
+      "/surgeons/newtown/dr-michael-crawford-newtown",
+      "/surgeons/newtown",
+      "/surgeons/norwest/dr-nicholas-cocco-norwest",
+      "/surgeons/norwest/dr-roy-brancatisano-norwest",
+      "/surgeons/norwest",
+      "/surgeons/penrith/dr-fadil-khaleal-penrith",
+      "/surgeons/penrith/dr-khalid-ahmed-penrith",
+      "/surgeons/penrith",
+      "/surgeons/potts-point",
+      "/surgeons/randwick/dr-david-links-randwick",
+      "/surgeons/randwick/dr-robert-gandy-randwick",
+      "/surgeons/randwick",
+      "/surgeons/richmond/daniel-foley-richmond",
+      "/surgeons/richmond/dr-ramez-bassari-richmond",
+      "/surgeons/richmond/dr-yuan-cheng-richmond",
+      "/surgeons/richmond",
+      "/surgeons/richmond/mr-mark-cullinan-richmond",
+      "/surgeons/smithfield/dr-khalid-ahmed-smithfield",
+      "/surgeons/smithfield",
+      "/surgeons/surrey-hills",
+      "/surgeons/surrey-hills/mr-jacob-vanyai-surrey-hills",
+      "/surgeons/sydney",
+      "/surgeons/wahroonga/aprof-christos-apostolou-surgeon-wahroonga",
+      "/surgeons/wahroonga",
+      "/surgeons/wantirna/dr-mani-niazi-wantirna",
+      "/surgeons/wantirna",
+      "/surgeons/wantirna/mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna",
+      "/surgeons/werribee/dr-michael-hii-werribee",
+      "/surgeons/werribee",
+      "/surgeons/westmead/dr-nicholas-cocco-westmead",
+      "/surgeons/westmead",
+      "/surgeons/wetherill-park/dr-govind-krishna-weight-loss-general-surgeon-wetherill-park",
+      "/surgeons/wetherill-park"
+    ]
+  }
+]
