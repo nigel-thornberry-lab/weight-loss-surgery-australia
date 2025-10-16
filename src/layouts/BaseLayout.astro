@@ -155,141 +155,150 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
   </head>
   <body class="antialiased">
     <!-- Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm backdrop-blur-sm bg-white/95">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center py-4">
+        <div class="flex justify-between items-center h-16">
           <!-- Logo -->
           <div class="flex items-center">
-            <a href="/" class="text-xl font-bold text-[#6c95ef]">Weight Loss Surgery Australia</a>
+            <a href="/" class="text-xl font-bold text-[#6c95ef] hover:text-[#5a7fd8] transition-colors">
+              Weight Loss Surgery Australia
+            </a>
           </div>
           
           <!-- Desktop Navigation -->
-          <nav class="hidden md:flex items-center space-x-6">
+          <nav class="hidden lg:flex items-center space-x-1">
             <div class="relative group">
-              <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
+              <button class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 transition-all duration-200">
                 Procedures
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                 </svg>
               </button>
-              <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div class="py-2">
-                  <a href="/procedures/gastric-sleeve" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Sleeve</a>
-                  <a href="/procedures/gastric-bypass" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Bypass</a>
-                  <a href="/procedures/mini-gastric-bypass" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Mini Gastric Bypass</a>
-                  <a href="/procedures/gastric-band" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Band</a>
-                  <a href="/procedures/gastric-balloon" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Balloon</a>
-                  <a href="/procedures/duodenal-switch" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Duodenal Switch</a>
-                  <div class="border-t border-gray-200 my-2"></div>
-                  <a href="/procedures" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Procedures</a>
+              <div class="absolute left-0 mt-1 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div class="py-2 px-1">
+                  <a href="/procedures/gastric-sleeve" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Gastric Sleeve</a>
+                  <a href="/procedures/gastric-bypass" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Gastric Bypass</a>
+                  <a href="/procedures/mini-gastric-bypass" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Mini Gastric Bypass</a>
+                  <a href="/procedures/gastric-band" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Gastric Band</a>
+                  <a href="/procedures/gastric-balloon" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Gastric Balloon</a>
+                  <a href="/procedures/duodenal-switch" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Duodenal Switch</a>
+                  <div class="border-t border-gray-100 my-1"></div>
+                  <a href="/procedures" class="block px-3 py-2 text-sm text-blue-600 font-semibold hover:bg-blue-50 rounded-md transition-colors">All Procedures</a>
                 </div>
               </div>
             </div>
             <div class="relative group">
-              <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
+              <button class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 transition-all duration-200">
                 Surgeons
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                 </svg>
               </button>
-              <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div class="py-2">
-                  <a href="/surgeons" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">Find a Surgeon</a>
-                  <div class="border-t border-gray-200 my-2"></div>
-                  <a href="/surgeons/sydney" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Sydney Surgeons</a>
-                  <a href="/surgeons/melbourne" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Melbourne Surgeons</a>
+              <div class="absolute left-0 mt-1 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div class="py-2 px-1">
+                  <a href="/surgeons" class="block px-3 py-2 text-sm text-blue-600 font-semibold hover:bg-blue-50 rounded-md transition-colors">Find a Surgeon</a>
+                  <div class="border-t border-gray-100 my-1"></div>
+                  <a href="/surgeons/sydney" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Sydney Surgeons</a>
+                  <a href="/surgeons/melbourne" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Melbourne Surgeons</a>
                 </div>
               </div>
             </div>
             <div class="relative group">
-              <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
+              <button class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 transition-all duration-200">
                 Costs
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                 </svg>
               </button>
-              <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div class="py-2">
-                  <a href="/cost-calculator" class="block px-4 py-2 text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 font-bold rounded-lg mx-2 my-1 text-center">
+              <div class="absolute left-0 mt-1 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div class="py-2 px-1">
+                  <a href="/cost-calculator" class="block mx-1 mb-2 px-3 py-2.5 text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 font-semibold rounded-lg text-center text-sm transition-all shadow-sm hover:shadow-md">
                     💰 Cost Calculator
                   </a>
-                  <div class="border-t border-gray-200 my-2"></div>
-                  <a href="/costs" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Costs</a>
-                  <a href="/costs/gastric-sleeve-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Sleeve Cost</a>
-                  <a href="/costs/gastric-bypass-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Bypass Cost</a>
-                  <a href="/costs/gastric-band-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Band Cost</a>
+                  <div class="border-t border-gray-100 my-1"></div>
+                  <a href="/costs" class="block px-3 py-2 text-sm text-blue-600 font-semibold hover:bg-blue-50 rounded-md transition-colors">All Costs</a>
+                  <a href="/costs/gastric-sleeve-cost-australia" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Gastric Sleeve Cost</a>
+                  <a href="/costs/gastric-bypass-cost-australia" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Gastric Bypass Cost</a>
+                  <a href="/costs/gastric-band-cost-australia" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Gastric Band Cost</a>
                 </div>
               </div>
             </div>
             <div class="relative group">
-              <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
+              <button class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 transition-all duration-200">
                 Compare
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                 </svg>
               </button>
-              <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div class="py-2">
-                  <a href="/compare" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Comparisons</a>
-                  <div class="border-t border-gray-200 my-2"></div>
-                  <a href="/compare/gastric-sleeve-vs-gastric-bypass" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Sleeve vs Bypass</a>
-                  <a href="/compare/gastric-bypass-vs-mini-bypass" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Bypass vs Mini Bypass</a>
-                  <a href="/compare/surgery-vs-medication" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Surgery vs Medication</a>
-                  <a href="/blog/overseas-bariatric-surgery-risks-australia-comparison" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Australia vs Overseas</a>
+              <div class="absolute left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div class="py-2 px-1">
+                  <a href="/compare" class="block px-3 py-2 text-sm text-blue-600 font-semibold hover:bg-blue-50 rounded-md transition-colors">All Comparisons</a>
+                  <div class="border-t border-gray-100 my-1"></div>
+                  <a href="/compare/gastric-sleeve-vs-gastric-bypass" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Sleeve vs Bypass</a>
+                  <a href="/compare/gastric-bypass-vs-mini-bypass" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Bypass vs Mini Bypass</a>
+                  <a href="/compare/surgery-vs-medication" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Surgery vs Medication</a>
+                  <a href="/blog/overseas-bariatric-surgery-risks-australia-comparison" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Australia vs Overseas</a>
                 </div>
               </div>
             </div>
             <div class="relative group">
-              <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
+              <button class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 transition-all duration-200">
                 Locations
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                 </svg>
               </button>
-              <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div class="py-2">
-                  <a href="/locations" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Locations</a>
-                  <div class="border-t border-gray-200 my-2"></div>
-                  <a href="/locations/sydney" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Sydney</a>
-                  <a href="/locations/melbourne" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Melbourne</a>
-                  <div class="border-t border-gray-200 my-2"></div>
-                  <div class="px-4 py-1 text-xs font-semibold text-gray-500 uppercase tracking-wide">Popular Suburbs</div>
-                  <a href="/locations/parramatta" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Parramatta</a>
-                  <a href="/locations/bondi" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Bondi</a>
-                  <a href="/locations/box-hill" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Box Hill</a>
-                  <a href="/locations/ringwood" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Ringwood</a>
+              <div class="absolute left-0 mt-1 w-64 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div class="py-2 px-1">
+                  <a href="/locations" class="block px-3 py-2 text-sm text-blue-600 font-semibold hover:bg-blue-50 rounded-md transition-colors">All Locations</a>
+                  <div class="border-t border-gray-100 my-1"></div>
+                  <a href="/locations/sydney" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Sydney</a>
+                  <a href="/locations/melbourne" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Melbourne</a>
+                  <div class="border-t border-gray-100 my-1"></div>
+                  <div class="px-3 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wider">Popular Suburbs</div>
+                  <a href="/locations/parramatta" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Parramatta</a>
+                  <a href="/locations/bondi" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Bondi</a>
+                  <a href="/locations/box-hill" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Box Hill</a>
+                  <a href="/locations/ringwood" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Ringwood</a>
                 </div>
               </div>
             </div>
             <div class="relative group">
-              <button class="text-gray-700 hover:text-blue-600 flex items-center py-2">
+              <button class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium flex items-center gap-1 transition-all duration-200">
                 Resources
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
                 </svg>
               </button>
-              <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <div class="py-2">
-                  <a href="/bmi-calculator" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">BMI Calculator</a>
-                  <a href="/surgeon-selection-checklist" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Surgeon Checklist</a>
-                  <div class="border-t border-gray-200 my-2"></div>
-                  <a href="/blog/gastric-sleeve-recovery-week-by-week" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Recovery Guide</a>
-                  <a href="/blog/gastric-sleeve-diet-stages" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Diet Stages</a>
-                  <a href="/blog/bariatric-surgery-recipes-all-stages" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Recipes</a>
+              <div class="absolute left-0 mt-1 w-60 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div class="py-2 px-1">
+                  <a href="/bmi-calculator" class="block px-3 py-2 text-sm text-blue-600 font-semibold hover:bg-blue-50 rounded-md transition-colors">BMI Calculator</a>
+                  <a href="/surgeon-selection-checklist" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Surgeon Checklist</a>
+                  <div class="border-t border-gray-100 my-1"></div>
+                  <a href="/blog/gastric-sleeve-recovery-week-by-week" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Recovery Guide</a>
+                  <a href="/blog/gastric-sleeve-diet-stages" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Diet Stages</a>
+                  <a href="/blog/bariatric-surgery-recipes-all-stages" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Recipes</a>
                 </div>
               </div>
             </div>
-            <a href="/faq" class="text-gray-700 hover:text-blue-600 py-2">FAQ</a>
-            <a href="/blog" class="text-gray-700 hover:text-blue-600 py-2">Blog</a>
+            <a href="/faq" class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200">FAQ</a>
+            <a href="/blog" class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200">Blog</a>
           </nav>
 
           <!-- Right Side: Phone + CTA Button + Mobile Menu -->
-          <div class="flex items-center space-x-4">
-            <a href="tel:1300000000" class="hidden lg:block text-[#6c95ef] font-semibold">1300 000 000</a>
-            <a href="/contact" class="hidden md:block bg-[#6c95ef] text-white px-6 py-2 rounded-lg hover:bg-[#5a7fd8] transition">Book Free Consultation</a>
+          <div class="flex items-center gap-3">
+            <a href="tel:1300000000" class="hidden lg:flex items-center gap-2 text-[#6c95ef] hover:text-[#5a7fd8] font-semibold text-sm transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              1300 000 000
+            </a>
+            <a href="/contact" class="hidden md:block bg-[#6c95ef] hover:bg-[#5a7fd8] text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 shadow-sm hover:shadow-md">
+              Book Free Consultation
+            </a>
             
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100">
+            <button id="mobile-menu-button" class="lg:hidden p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-all">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
               </svg>
