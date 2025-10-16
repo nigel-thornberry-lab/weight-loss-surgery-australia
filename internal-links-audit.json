@@ -1,19 +1,5 @@
 [
   {
-    "url": "/bmi-calculator",
-    "file": "bmi-calculator.astro",
-    "outgoing": 2,
-    "incoming": 0,
-    "incomingFrom": []
-  },
-  {
-    "url": "/compare",
-    "file": "compare/index.astro",
-    "outgoing": 6,
-    "incoming": 0,
-    "incomingFrom": []
-  },
-  {
     "url": "/index-old",
     "file": "index-old.astro",
     "outgoing": 15,
@@ -23,35 +9,35 @@
   {
     "url": "/locations/burwood",
     "file": "locations/burwood.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 0,
     "incomingFrom": []
   },
   {
     "url": "/locations/hornsby",
     "file": "locations/hornsby.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 0,
     "incomingFrom": []
   },
   {
     "url": "/locations/randwick",
     "file": "locations/randwick.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 0,
     "incomingFrom": []
   },
   {
     "url": "/locations/ryde",
     "file": "locations/ryde.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 0,
     "incomingFrom": []
   },
   {
     "url": "/locations/sutherland",
     "file": "locations/sutherland.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 0,
     "incomingFrom": []
   },
@@ -757,7 +743,7 @@
   {
     "url": "/locations/ashfield",
     "file": "locations/ashfield.astro",
-    "outgoing": 9,
+    "outgoing": 14,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -766,7 +752,7 @@
   {
     "url": "/locations/auburn",
     "file": "locations/auburn.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -775,7 +761,7 @@
   {
     "url": "/locations/bankstown",
     "file": "locations/bankstown.astro",
-    "outgoing": 4,
+    "outgoing": 9,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -784,7 +770,7 @@
   {
     "url": "/locations/baulkham-hills",
     "file": "locations/baulkham-hills.astro",
-    "outgoing": 9,
+    "outgoing": 14,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -793,7 +779,7 @@
   {
     "url": "/locations/bentleigh",
     "file": "locations/bentleigh.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -802,7 +788,7 @@
   {
     "url": "/locations/berwick",
     "file": "locations/berwick.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -811,7 +797,7 @@
   {
     "url": "/locations/blacktown",
     "file": "locations/blacktown.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -820,7 +806,7 @@
   {
     "url": "/locations/bondi",
     "file": "locations/bondi.astro",
-    "outgoing": 7,
+    "outgoing": 12,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -829,7 +815,7 @@
   {
     "url": "/locations/box-hill",
     "file": "locations/box-hill.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -838,7 +824,7 @@
   {
     "url": "/locations/cabramatta",
     "file": "locations/cabramatta.astro",
-    "outgoing": 4,
+    "outgoing": 9,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -847,7 +833,7 @@
   {
     "url": "/locations/campbelltown",
     "file": "locations/campbelltown.astro",
-    "outgoing": 4,
+    "outgoing": 9,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -856,7 +842,7 @@
   {
     "url": "/locations/castle-hill",
     "file": "locations/castle-hill.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -865,7 +851,7 @@
   {
     "url": "/locations/chatswood",
     "file": "locations/chatswood.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -874,7 +860,7 @@
   {
     "url": "/locations/cranbourne",
     "file": "locations/cranbourne.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -883,7 +869,7 @@
   {
     "url": "/locations/cronulla",
     "file": "locations/cronulla.astro",
-    "outgoing": 9,
+    "outgoing": 14,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -892,7 +878,7 @@
   {
     "url": "/locations/dandenong",
     "file": "locations/dandenong.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -901,7 +887,7 @@
   {
     "url": "/locations/dee-why",
     "file": "locations/dee-why.astro",
-    "outgoing": 9,
+    "outgoing": 14,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -910,7 +896,7 @@
   {
     "url": "/locations/doncaster",
     "file": "locations/doncaster.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -919,7 +905,7 @@
   {
     "url": "/locations/eastwood",
     "file": "locations/eastwood.astro",
-    "outgoing": 9,
+    "outgoing": 14,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -928,7 +914,7 @@
   {
     "url": "/locations/epping",
     "file": "locations/epping.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -937,7 +923,7 @@
   {
     "url": "/locations/fairfield",
     "file": "locations/fairfield.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -946,7 +932,7 @@
   {
     "url": "/locations/footscray",
     "file": "locations/footscray.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -955,7 +941,7 @@
   {
     "url": "/locations/frankston",
     "file": "locations/frankston.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -964,7 +950,7 @@
   {
     "url": "/locations/geelong",
     "file": "locations/geelong.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -973,7 +959,7 @@
   {
     "url": "/locations/heidelberg",
     "file": "locations/heidelberg.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -982,7 +968,7 @@
   {
     "url": "/locations/hurstville-heights",
     "file": "locations/hurstville-heights.astro",
-    "outgoing": 4,
+    "outgoing": 9,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -991,7 +977,7 @@
   {
     "url": "/locations/hurstville",
     "file": "locations/hurstville.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1000,7 +986,7 @@
   {
     "url": "/locations/kogarah",
     "file": "locations/kogarah.astro",
-    "outgoing": 7,
+    "outgoing": 12,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1009,7 +995,7 @@
   {
     "url": "/locations/liverpool",
     "file": "locations/liverpool.astro",
-    "outgoing": 4,
+    "outgoing": 9,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1018,7 +1004,7 @@
   {
     "url": "/locations/macquarie-park",
     "file": "locations/macquarie-park.astro",
-    "outgoing": 4,
+    "outgoing": 9,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1027,7 +1013,7 @@
   {
     "url": "/locations/manly",
     "file": "locations/manly.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1036,7 +1022,7 @@
   {
     "url": "/locations/miranda",
     "file": "locations/miranda.astro",
-    "outgoing": 6,
+    "outgoing": 11,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1045,7 +1031,7 @@
   {
     "url": "/locations/narre-warren",
     "file": "locations/narre-warren.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -1054,7 +1040,7 @@
   {
     "url": "/locations/newtown",
     "file": "locations/newtown.astro",
-    "outgoing": 7,
+    "outgoing": 12,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1063,7 +1049,7 @@
   {
     "url": "/locations/pakenham",
     "file": "locations/pakenham.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -1072,7 +1058,7 @@
   {
     "url": "/locations/parramatta",
     "file": "locations/parramatta.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1081,7 +1067,7 @@
   {
     "url": "/locations/penrith",
     "file": "locations/penrith.astro",
-    "outgoing": 4,
+    "outgoing": 9,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1090,7 +1076,7 @@
   {
     "url": "/locations/richmond",
     "file": "locations/richmond.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -1099,7 +1085,7 @@
   {
     "url": "/locations/ringwood",
     "file": "locations/ringwood.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -1108,7 +1094,7 @@
   {
     "url": "/locations/springvale",
     "file": "locations/springvale.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -1117,7 +1103,7 @@
   {
     "url": "/locations/st-kilda",
     "file": "locations/st-kilda.astro",
-    "outgoing": 10,
+    "outgoing": 15,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -1126,7 +1112,7 @@
   {
     "url": "/locations/strathfield",
     "file": "locations/strathfield.astro",
-    "outgoing": 9,
+    "outgoing": 14,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1135,7 +1121,7 @@
   {
     "url": "/locations/sunshine",
     "file": "locations/sunshine.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -1144,7 +1130,7 @@
   {
     "url": "/locations/wentworthville",
     "file": "locations/wentworthville.astro",
-    "outgoing": 4,
+    "outgoing": 9,
     "incoming": 1,
     "incomingFrom": [
       "/locations/sydney"
@@ -1153,7 +1139,7 @@
   {
     "url": "/locations/werribee",
     "file": "locations/werribee.astro",
-    "outgoing": 5,
+    "outgoing": 10,
     "incoming": 1,
     "incomingFrom": [
       "/locations/melbourne"
@@ -1333,20 +1319,10 @@
   {
     "url": "/blog/gastric-sleeve-cost-australia-2025",
     "file": "blog/gastric-sleeve-cost-australia-2025.astro",
-    "outgoing": 5,
+    "outgoing": 8,
     "incoming": 2,
     "incomingFrom": [
       "/blog/gastric-sleeve-recovery-week-by-week",
-      "/blog/pre-op-diet-gastric-sleeve"
-    ]
-  },
-  {
-    "url": "/blog/gastric-sleeve-recovery-week-by-week",
-    "file": "blog/gastric-sleeve-recovery-week-by-week.astro",
-    "outgoing": 6,
-    "incoming": 2,
-    "incomingFrom": [
-      "/blog/gastric-sleeve-diet-stages",
       "/blog/pre-op-diet-gastric-sleeve"
     ]
   },
@@ -1378,16 +1354,6 @@
     "incomingFrom": [
       "/procedures/gastric-balloon-sydney",
       "/procedures/mini-gastric-bypass-sydney"
-    ]
-  },
-  {
-    "url": "/surgeon-selection-checklist",
-    "file": "surgeon-selection-checklist.astro",
-    "outgoing": 1,
-    "incoming": 2,
-    "incomingFrom": [
-      "/bmi-calculator",
-      "/"
     ]
   },
   {
@@ -1451,25 +1417,14 @@
     ]
   },
   {
-    "url": "/blog/gastric-sleeve-diet-stages",
-    "file": "blog/gastric-sleeve-diet-stages.astro",
+    "url": "/blog/gastric-sleeve-recovery-week-by-week",
+    "file": "blog/gastric-sleeve-recovery-week-by-week.astro",
     "outgoing": 6,
     "incoming": 3,
     "incomingFrom": [
-      "/blog/bariatric-surgery-recipes-all-stages",
-      "/blog/gastric-sleeve-recovery-week-by-week",
+      "/blog/gastric-sleeve-cost-australia-2025",
+      "/blog/gastric-sleeve-diet-stages",
       "/blog/pre-op-diet-gastric-sleeve"
-    ]
-  },
-  {
-    "url": "/blog",
-    "file": "blog/index.astro",
-    "outgoing": 0,
-    "incoming": 3,
-    "incomingFrom": [
-      "/compare/gastric-sleeve-vs-gastric-bypass",
-      "/costs",
-      "/procedures/mini-gastric-bypass-sydney"
     ]
   },
   {
@@ -1492,6 +1447,30 @@
       "/procedures/duodenal-switch-sydney",
       "/procedures/gastric-balloon-sydney",
       "/procedures/gastric-band-sydney"
+    ]
+  },
+  {
+    "url": "/blog/gastric-sleeve-diet-stages",
+    "file": "blog/gastric-sleeve-diet-stages.astro",
+    "outgoing": 6,
+    "incoming": 4,
+    "incomingFrom": [
+      "/blog/bariatric-surgery-recipes-all-stages",
+      "/blog/gastric-sleeve-cost-australia-2025",
+      "/blog/gastric-sleeve-recovery-week-by-week",
+      "/blog/pre-op-diet-gastric-sleeve"
+    ]
+  },
+  {
+    "url": "/blog",
+    "file": "blog/index.astro",
+    "outgoing": 0,
+    "incoming": 4,
+    "incomingFrom": [
+      "/blog/gastric-sleeve-cost-australia-2025",
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/costs",
+      "/procedures/mini-gastric-bypass-sydney"
     ]
   },
   {
@@ -1718,7 +1697,7 @@
   {
     "url": "/procedures/gastric-balloon",
     "file": "procedures/gastric-balloon.astro",
-    "outgoing": 16,
+    "outgoing": 18,
     "incoming": 14,
     "incomingFrom": [
       "/locations/melbourne",
@@ -1740,7 +1719,7 @@
   {
     "url": "/procedures/mini-gastric-bypass",
     "file": "procedures/mini-gastric-bypass.astro",
-    "outgoing": 16,
+    "outgoing": 18,
     "incoming": 14,
     "incomingFrom": [
       "/compare/gastric-bypass-vs-mini-bypass",
@@ -1757,29 +1736,6 @@
       "/procedures/mini-gastric-bypass-sydney",
       "/procedures/mini-gastric-bypass",
       "/procedures"
-    ]
-  },
-  {
-    "url": "/compare/surgery-vs-medication",
-    "file": "compare/surgery-vs-medication.astro",
-    "outgoing": 3,
-    "incoming": 15,
-    "incomingFrom": [
-      "/compare",
-      "/procedures/duodenal-switch",
-      "/procedures/gastric-balloon-sydney",
-      "/procedures/gastric-balloon",
-      "/procedures/gastric-band-sydney",
-      "/procedures/gastric-band",
-      "/procedures/gastric-bypass-melbourne",
-      "/procedures/gastric-bypass-sydney",
-      "/procedures/gastric-bypass",
-      "/procedures/gastric-sleeve-melbourne",
-      "/procedures/gastric-sleeve-sydney",
-      "/procedures/gastric-sleeve",
-      "/procedures/mini-gastric-bypass-melbourne",
-      "/procedures/mini-gastric-bypass-sydney",
-      "/procedures/mini-gastric-bypass"
     ]
   },
   {
@@ -1826,31 +1782,6 @@
       "/melbourne/cost",
       "/procedures/gastric-bypass-melbourne",
       "/procedures/gastric-sleeve-melbourne"
-    ]
-  },
-  {
-    "url": "/compare/gastric-sleeve-vs-gastric-bypass",
-    "file": "compare/gastric-sleeve-vs-gastric-bypass.astro",
-    "outgoing": 21,
-    "incoming": 17,
-    "incomingFrom": [
-      "/compare/gastric-sleeve-vs-gastric-bypass",
-      "/compare",
-      "/",
-      "/procedures/duodenal-switch",
-      "/procedures/gastric-balloon-sydney",
-      "/procedures/gastric-balloon",
-      "/procedures/gastric-band-sydney",
-      "/procedures/gastric-band",
-      "/procedures/gastric-bypass-melbourne",
-      "/procedures/gastric-bypass-sydney",
-      "/procedures/gastric-bypass",
-      "/procedures/gastric-sleeve-melbourne",
-      "/procedures/gastric-sleeve-sydney",
-      "/procedures/gastric-sleeve",
-      "/procedures/mini-gastric-bypass-melbourne",
-      "/procedures/mini-gastric-bypass-sydney",
-      "/procedures/mini-gastric-bypass"
     ]
   },
   {
@@ -1935,7 +1866,7 @@
   {
     "url": "/procedures/duodenal-switch",
     "file": "procedures/duodenal-switch.astro",
-    "outgoing": 23,
+    "outgoing": 25,
     "incoming": 21,
     "incomingFrom": [
       "/compare/gastric-sleeve-vs-gastric-bypass",
@@ -2027,7 +1958,7 @@
   {
     "url": "/procedures/gastric-band",
     "file": "procedures/gastric-band.astro",
-    "outgoing": 15,
+    "outgoing": 17,
     "incoming": 25,
     "incomingFrom": [
       "/compare/gastric-sleeve-vs-gastric-bypass",
@@ -2060,7 +1991,7 @@
   {
     "url": "/procedures/gastric-bypass",
     "file": "procedures/gastric-bypass.astro",
-    "outgoing": 24,
+    "outgoing": 26,
     "incoming": 26,
     "incomingFrom": [
       "/compare/gastric-bypass-vs-mini-bypass",
@@ -2094,7 +2025,7 @@
   {
     "url": "/procedures/gastric-sleeve",
     "file": "procedures/gastric-sleeve.astro",
-    "outgoing": 15,
+    "outgoing": 17,
     "incoming": 36,
     "incomingFrom": [
       "/blog/gastric-sleeve-cost-australia-2025",
@@ -2138,7 +2069,7 @@
   {
     "url": "/locations/melbourne",
     "file": "locations/melbourne.astro",
-    "outgoing": 36,
+    "outgoing": 41,
     "incoming": 47,
     "incomingFrom": [
       "/compare/gastric-sleeve-vs-gastric-bypass",
@@ -2191,9 +2122,355 @@
     ]
   },
   {
+    "url": "/compare",
+    "file": "compare/index.astro",
+    "outgoing": 6,
+    "incoming": 52,
+    "incomingFrom": [
+      "/locations/ashfield",
+      "/locations/auburn",
+      "/locations/bankstown",
+      "/locations/baulkham-hills",
+      "/locations/bentleigh",
+      "/locations/berwick",
+      "/locations/blacktown",
+      "/locations/bondi",
+      "/locations/box-hill",
+      "/locations/burwood",
+      "/locations/cabramatta",
+      "/locations/campbelltown",
+      "/locations/castle-hill",
+      "/locations/chatswood",
+      "/locations/cranbourne",
+      "/locations/cronulla",
+      "/locations/dandenong",
+      "/locations/dee-why",
+      "/locations/doncaster",
+      "/locations/eastwood",
+      "/locations/epping",
+      "/locations/fairfield",
+      "/locations/footscray",
+      "/locations/frankston",
+      "/locations/geelong",
+      "/locations/heidelberg",
+      "/locations/hornsby",
+      "/locations/hurstville-heights",
+      "/locations/hurstville",
+      "/locations/kogarah",
+      "/locations/liverpool",
+      "/locations/macquarie-park",
+      "/locations/manly",
+      "/locations/melbourne",
+      "/locations/miranda",
+      "/locations/narre-warren",
+      "/locations/newtown",
+      "/locations/pakenham",
+      "/locations/parramatta",
+      "/locations/penrith",
+      "/locations/randwick",
+      "/locations/richmond",
+      "/locations/ringwood",
+      "/locations/ryde",
+      "/locations/springvale",
+      "/locations/st-kilda",
+      "/locations/strathfield",
+      "/locations/sunshine",
+      "/locations/sutherland",
+      "/locations/sydney",
+      "/locations/wentworthville",
+      "/locations/werribee"
+    ]
+  },
+  {
+    "url": "/bmi-calculator",
+    "file": "bmi-calculator.astro",
+    "outgoing": 2,
+    "incoming": 58,
+    "incomingFrom": [
+      "/locations/ashfield",
+      "/locations/auburn",
+      "/locations/bankstown",
+      "/locations/baulkham-hills",
+      "/locations/bentleigh",
+      "/locations/berwick",
+      "/locations/blacktown",
+      "/locations/bondi",
+      "/locations/box-hill",
+      "/locations/burwood",
+      "/locations/cabramatta",
+      "/locations/campbelltown",
+      "/locations/castle-hill",
+      "/locations/chatswood",
+      "/locations/cranbourne",
+      "/locations/cronulla",
+      "/locations/dandenong",
+      "/locations/dee-why",
+      "/locations/doncaster",
+      "/locations/eastwood",
+      "/locations/epping",
+      "/locations/fairfield",
+      "/locations/footscray",
+      "/locations/frankston",
+      "/locations/geelong",
+      "/locations/heidelberg",
+      "/locations/hornsby",
+      "/locations/hurstville-heights",
+      "/locations/hurstville",
+      "/locations/kogarah",
+      "/locations/liverpool",
+      "/locations/macquarie-park",
+      "/locations/manly",
+      "/locations/melbourne",
+      "/locations/miranda",
+      "/locations/narre-warren",
+      "/locations/newtown",
+      "/locations/pakenham",
+      "/locations/parramatta",
+      "/locations/penrith",
+      "/locations/randwick",
+      "/locations/richmond",
+      "/locations/ringwood",
+      "/locations/ryde",
+      "/locations/springvale",
+      "/locations/st-kilda",
+      "/locations/strathfield",
+      "/locations/sunshine",
+      "/locations/sutherland",
+      "/locations/sydney",
+      "/locations/wentworthville",
+      "/locations/werribee",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass"
+    ]
+  },
+  {
+    "url": "/surgeon-selection-checklist",
+    "file": "surgeon-selection-checklist.astro",
+    "outgoing": 1,
+    "incoming": 60,
+    "incomingFrom": [
+      "/bmi-calculator",
+      "/",
+      "/locations/ashfield",
+      "/locations/auburn",
+      "/locations/bankstown",
+      "/locations/baulkham-hills",
+      "/locations/bentleigh",
+      "/locations/berwick",
+      "/locations/blacktown",
+      "/locations/bondi",
+      "/locations/box-hill",
+      "/locations/burwood",
+      "/locations/cabramatta",
+      "/locations/campbelltown",
+      "/locations/castle-hill",
+      "/locations/chatswood",
+      "/locations/cranbourne",
+      "/locations/cronulla",
+      "/locations/dandenong",
+      "/locations/dee-why",
+      "/locations/doncaster",
+      "/locations/eastwood",
+      "/locations/epping",
+      "/locations/fairfield",
+      "/locations/footscray",
+      "/locations/frankston",
+      "/locations/geelong",
+      "/locations/heidelberg",
+      "/locations/hornsby",
+      "/locations/hurstville-heights",
+      "/locations/hurstville",
+      "/locations/kogarah",
+      "/locations/liverpool",
+      "/locations/macquarie-park",
+      "/locations/manly",
+      "/locations/melbourne",
+      "/locations/miranda",
+      "/locations/narre-warren",
+      "/locations/newtown",
+      "/locations/pakenham",
+      "/locations/parramatta",
+      "/locations/penrith",
+      "/locations/randwick",
+      "/locations/richmond",
+      "/locations/ringwood",
+      "/locations/ryde",
+      "/locations/springvale",
+      "/locations/st-kilda",
+      "/locations/strathfield",
+      "/locations/sunshine",
+      "/locations/sutherland",
+      "/locations/sydney",
+      "/locations/wentworthville",
+      "/locations/werribee",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass"
+    ]
+  },
+  {
+    "url": "/compare/surgery-vs-medication",
+    "file": "compare/surgery-vs-medication.astro",
+    "outgoing": 3,
+    "incoming": 67,
+    "incomingFrom": [
+      "/compare",
+      "/locations/ashfield",
+      "/locations/auburn",
+      "/locations/bankstown",
+      "/locations/baulkham-hills",
+      "/locations/bentleigh",
+      "/locations/berwick",
+      "/locations/blacktown",
+      "/locations/bondi",
+      "/locations/box-hill",
+      "/locations/burwood",
+      "/locations/cabramatta",
+      "/locations/campbelltown",
+      "/locations/castle-hill",
+      "/locations/chatswood",
+      "/locations/cranbourne",
+      "/locations/cronulla",
+      "/locations/dandenong",
+      "/locations/dee-why",
+      "/locations/doncaster",
+      "/locations/eastwood",
+      "/locations/epping",
+      "/locations/fairfield",
+      "/locations/footscray",
+      "/locations/frankston",
+      "/locations/geelong",
+      "/locations/heidelberg",
+      "/locations/hornsby",
+      "/locations/hurstville-heights",
+      "/locations/hurstville",
+      "/locations/kogarah",
+      "/locations/liverpool",
+      "/locations/macquarie-park",
+      "/locations/manly",
+      "/locations/melbourne",
+      "/locations/miranda",
+      "/locations/narre-warren",
+      "/locations/newtown",
+      "/locations/pakenham",
+      "/locations/parramatta",
+      "/locations/penrith",
+      "/locations/randwick",
+      "/locations/richmond",
+      "/locations/ringwood",
+      "/locations/ryde",
+      "/locations/springvale",
+      "/locations/st-kilda",
+      "/locations/strathfield",
+      "/locations/sunshine",
+      "/locations/sutherland",
+      "/locations/sydney",
+      "/locations/wentworthville",
+      "/locations/werribee",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass"
+    ]
+  },
+  {
+    "url": "/compare/gastric-sleeve-vs-gastric-bypass",
+    "file": "compare/gastric-sleeve-vs-gastric-bypass.astro",
+    "outgoing": 21,
+    "incoming": 69,
+    "incomingFrom": [
+      "/compare/gastric-sleeve-vs-gastric-bypass",
+      "/compare",
+      "/",
+      "/locations/ashfield",
+      "/locations/auburn",
+      "/locations/bankstown",
+      "/locations/baulkham-hills",
+      "/locations/bentleigh",
+      "/locations/berwick",
+      "/locations/blacktown",
+      "/locations/bondi",
+      "/locations/box-hill",
+      "/locations/burwood",
+      "/locations/cabramatta",
+      "/locations/campbelltown",
+      "/locations/castle-hill",
+      "/locations/chatswood",
+      "/locations/cranbourne",
+      "/locations/cronulla",
+      "/locations/dandenong",
+      "/locations/dee-why",
+      "/locations/doncaster",
+      "/locations/eastwood",
+      "/locations/epping",
+      "/locations/fairfield",
+      "/locations/footscray",
+      "/locations/frankston",
+      "/locations/geelong",
+      "/locations/heidelberg",
+      "/locations/hornsby",
+      "/locations/hurstville-heights",
+      "/locations/hurstville",
+      "/locations/kogarah",
+      "/locations/liverpool",
+      "/locations/macquarie-park",
+      "/locations/manly",
+      "/locations/melbourne",
+      "/locations/miranda",
+      "/locations/narre-warren",
+      "/locations/newtown",
+      "/locations/pakenham",
+      "/locations/parramatta",
+      "/locations/penrith",
+      "/locations/randwick",
+      "/locations/richmond",
+      "/locations/ringwood",
+      "/locations/ryde",
+      "/locations/springvale",
+      "/locations/st-kilda",
+      "/locations/strathfield",
+      "/locations/sunshine",
+      "/locations/sutherland",
+      "/locations/sydney",
+      "/locations/wentworthville",
+      "/locations/werribee",
+      "/procedures/duodenal-switch",
+      "/procedures/gastric-balloon-sydney",
+      "/procedures/gastric-balloon",
+      "/procedures/gastric-band-sydney",
+      "/procedures/gastric-band",
+      "/procedures/gastric-bypass-melbourne",
+      "/procedures/gastric-bypass-sydney",
+      "/procedures/gastric-bypass",
+      "/procedures/gastric-sleeve-melbourne",
+      "/procedures/gastric-sleeve-sydney",
+      "/procedures/gastric-sleeve",
+      "/procedures/mini-gastric-bypass-melbourne",
+      "/procedures/mini-gastric-bypass-sydney",
+      "/procedures/mini-gastric-bypass"
+    ]
+  },
+  {
     "url": "/locations/sydney",
     "file": "locations/sydney.astro",
-    "outgoing": 43,
+    "outgoing": 48,
     "incoming": 93,
     "incomingFrom": [
       "/compare/gastric-sleeve-vs-gastric-bypass",
