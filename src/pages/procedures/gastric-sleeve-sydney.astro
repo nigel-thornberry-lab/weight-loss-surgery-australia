@@ -1,6 +1,10 @@
 ---
 import '../../styles/global.css';
 import { seoMeta } from '../../data/seo-meta';
+import QuickAnswer from '../../components/QuickAnswer.astro';
+import ContentFreshness from '../../components/ContentFreshness.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorityCitations from '../../components/AuthorityCitations.astro';
 
 const meta = {
 	title: "Gastric Sleeve Surgery Sydney - Cost, Surgeons & Results 2025",
@@ -57,7 +61,7 @@ const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/gas
 					"description": "Comprehensive guide to gastric sleeve surgery in Sydney including costs, surgeons, recovery, and results.",
 					"inLanguage": "en-AU",
 					"datePublished": "2025-01-03",
-					"dateModified": "2025-01-03",
+					"dateModified": "2025-10-16",
 					"specialty": {
 						"@type": "MedicalSpecialty",
 						"name": "Bariatric Surgery"
@@ -367,6 +371,29 @@ const pageUrl = "https://weight-loss-surgery-australia.vercel.app/procedures/gas
 						</form>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<!-- Quick Answer & Freshness -->
+		<section class="py-8 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ContentFreshness 
+				datePublished="2025-01-03"
+				dateModified="2025-10-16"
+			/>
+				
+				<QuickAnswer 
+					question="How much does gastric sleeve surgery cost in Sydney?"
+					answer="In Sydney, gastric sleeve surgery costs $15,000-$25,000 total. With private health insurance, expect $5,000-$10,000 out-of-pocket after Medicare rebate."
+					details={[
+						"Sydney has 23 qualified bariatric surgeons",
+						"Most common hospitals: Sydney Adventist, St Vincent's Private, North Shore Private",
+						"Average wait time: 2-6 weeks (private), 12-18 months (public)",
+						"Medicare rebate: $1,500-$2,000"
+					]}
+					ctaText="Calculate Your Sydney Cost"
+					ctaLink="/cost-calculator"
+				/>
 			</div>
 		</section>
 

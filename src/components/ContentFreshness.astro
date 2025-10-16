@@ -1,0 +1,35 @@
+---
+interface Props {
+  datePublished: string;
+  dateModified: string;
+}
+
+const { datePublished, dateModified } = Astro.props;
+
+const formatDate = (dateStr: string) => {
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('en-AU', { month: 'long', year: 'numeric' });
+};
+---
+
+<div class="content-freshness bg-gray-50 border border-gray-200 rounded-lg p-4 mb-8">
+  <div class="grid md:grid-cols-2 gap-4 text-sm">
+    <div class="flex items-center gap-2">
+      <span class="text-gray-600">📅 Last Updated:</span>
+      <time datetime={dateModified} class="font-semibold text-gray-900">
+        {formatDate(dateModified)}
+      </time>
+    </div>
+    
+    <div class="flex items-center gap-2">
+      <span class="text-gray-600">💰 Prices Accurate:</span>
+      <span class="font-semibold text-gray-900">Q4 2025</span>
+    </div>
+    
+    <div class="flex items-center gap-2 md:col-span-2">
+      <span class="text-gray-600">📊 Based on:</span>
+      <span class="font-semibold text-gray-900">OSSANZ clinical guidelines & 2025 industry data</span>
+    </div>
+  </div>
+</div>
+

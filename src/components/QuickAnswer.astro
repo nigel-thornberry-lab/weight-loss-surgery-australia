@@ -1,0 +1,38 @@
+---
+interface Props {
+  question: string;
+  answer: string;
+  details?: string[];
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const { question, answer, details, ctaText, ctaLink } = Astro.props;
+---
+
+<div class="quick-answer-box bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-8">
+  <div class="flex items-start gap-3 mb-3">
+    <span class="text-2xl">🎯</span>
+    <h2 class="text-xl font-bold text-gray-900">Quick Answer</h2>
+  </div>
+  <p class="text-lg font-semibold text-gray-900 mb-2">{question}</p>
+  <p class="text-gray-800 text-lg mb-4">{answer}</p>
+  
+  {details && details.length > 0 && (
+    <ul class="space-y-2 mb-4">
+      {details.map(detail => (
+        <li class="flex items-start gap-2">
+          <span class="text-blue-600 mt-1">•</span>
+          <span class="text-gray-700">{detail}</span>
+        </li>
+      ))}
+    </ul>
+  )}
+  
+  {ctaText && ctaLink && (
+    <a href={ctaLink} class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+      {ctaText}
+    </a>
+  )}
+</div>
+

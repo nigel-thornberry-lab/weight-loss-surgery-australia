@@ -1,0 +1,714 @@
+---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContentFreshness from '../components/ContentFreshness.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const pageUrl = "https://weight-loss-surgery-australia.vercel.app/faq";
+
+const faqCategories = [
+	{
+		id: "before-surgery",
+		title: "Before Surgery",
+		questions: [
+			{
+				q: "How much does gastric sleeve surgery cost in Australia?",
+				a: "$15,000-$25,000 total. With private health insurance: $5,000-$10,000 out-of-pocket. Medicare rebates $1,500-$2,000. Costs vary by city and surgeon - Sydney and Melbourne are typically highest, regional areas more affordable."
+			},
+			{
+				q: "Am I eligible for gastric sleeve surgery in Australia?",
+				a: "You qualify if: BMI ≥ 40, OR BMI 35-40 with obesity-related conditions (diabetes, high blood pressure, sleep apnea), age 18-65, tried supervised weight loss for 6+ months, and no medical contraindications. Your surgeon will assess your individual eligibility."
+			},
+			{
+				q: "Do I need a GP referral for weight loss surgery?",
+				a: "Not required, but highly recommended. Your GP can refer you to a bariatric surgeon and help with insurance paperwork. Some insurers may require GP documentation of previous weight loss attempts for coverage."
+			},
+			{
+				q: "What tests do I need before surgery?",
+				a: "Blood tests, ECG (heart test), chest X-ray, sleep study (if you have sleep apnea), psychological assessment, and dietitian consultation. Total cost for pre-op tests: $500-$1,000."
+			},
+			{
+				q: "How long is the waiting list?",
+				a: "Private hospital: 2-6 weeks from booking. Public hospital: 12-24 months (varies by state). Most patients choose private to avoid long wait times."
+			},
+			{
+				q: "Can I get surgery if I'm on antidepressants?",
+				a: "Usually yes, as long as your condition is stable and managed. Your surgeon will consult with your psychiatrist. Untreated mental health conditions may need to be addressed first."
+			},
+			{
+				q: "What if I smoke?",
+				a: "You must quit at least 6 weeks before surgery. Smoking increases complication risk by 300%. Nicotine testing may be required. Many surgeons won't operate on active smokers."
+			},
+			{
+				q: "Will I need to lose weight before surgery?",
+				a: "Most surgeons require a 2-week pre-op liquid diet (Optifast) to shrink your liver. Some may require weight loss beforehand if BMI is very high. This makes surgery safer and easier."
+			},
+			{
+				q: "Can I have surgery if I'm taking blood thinners?",
+				a: "Usually yes, but your surgeon and GP will manage medication adjustments. You may need to stop blood thinners temporarily before surgery. Discuss all medications during consultation."
+			},
+			{
+				q: "How do I choose between gastric sleeve and gastric bypass?",
+				a: "Gastric sleeve: BMI 35-45, no severe GERD, simpler recovery. Gastric bypass: BMI 45+, severe diabetes or GERD, maximum weight loss needed. Your surgeon will recommend based on your specific situation."
+			},
+			{
+				q: "What's the minimum BMI for weight loss surgery?",
+				a: "BMI 35 with health conditions, or BMI 40 without conditions. Some surgeons may consider BMI 30-35 for severe diabetes. Medicare rebates only apply to BMI 35+ with documentation."
+			},
+			{
+				q: "Can teenagers have weight loss surgery?",
+				a: "In Australia, teens 14-17 can have surgery with parental consent, pediatric bariatric team evaluation, BMI ≥ 40 with complications, and must have finished puberty. Rare but possible for severe cases."
+			},
+			{
+				q: "How long from first consultation to surgery?",
+				a: "2-3 months typically: 2-4 weeks for pre-op tests, 1-4 weeks for insurance approval, 2-6 weeks wait for surgery date. Can be faster if self-funding."
+			},
+			{
+				q: "Do I need private health insurance?",
+				a: "No, but strongly recommended. Without insurance, you'll pay $15,000-$25,000 upfront. With insurance, out-of-pocket is $5,000-$10,000. Need 12-month waiting period for coverage."
+			},
+			{
+				q: "What happens at the first consultation?",
+				a: "Medical history review (15 mins), physical examination (10 mins), procedure discussion (20 mins), cost breakdown (10 mins). Total ~1 hour. Usually free, sometimes $200-$400 (refunded if you proceed)."
+			},
+			{
+				q: "Can I get a second opinion?",
+				a: "Absolutely! Most patients consult with 2-3 surgeons before deciding. This helps compare costs, approaches, and find the best fit. No obligation to choose the first surgeon you meet."
+			},
+			{
+				q: "Will my insurance cover it?",
+				a: "Most Australian private insurers cover bariatric surgery with Gold level or higher hospital cover. 12-month waiting period applies. Out-of-pocket gap fees typically $5,000-$10,000. Check your policy details."
+			},
+			{
+				q: "Can I use my superannuation to pay for surgery?",
+				a: "Yes, through compassionate grounds early release if you can demonstrate severe financial hardship or life-threatening condition. Applications made through ATO. Services like SuperCare can assist. Amounts released may be taxed."
+			},
+			{
+				q: "What if I'm afraid of surgery?",
+				a: "Completely normal! Discuss fears with your surgeon. Consider seeing a bariatric psychologist beforehand. Many patients say the fear was worse than the reality. Modern techniques are very safe with experienced surgeons."
+			},
+			{
+				q: "Should I tell people I'm having surgery?",
+				a: "Personal choice. Some tell everyone, others keep it private. You'll need support during recovery, so at least tell close family/friends. Your medical information is confidential - you don't owe anyone an explanation."
+			}
+		]
+	},
+	{
+		id: "about-surgery",
+		title: "About the Surgery",
+		questions: [
+			{
+				q: "How long does the surgery take?",
+				a: "Gastric sleeve: 1-2 hours. Gastric bypass: 2-3 hours. All under general anesthesia. You'll be asleep and won't feel anything during the procedure."
+			},
+			{
+				q: "How many incisions will I have?",
+				a: "Typically 4-5 small incisions (0.5-1.5cm each). It's laparoscopic (keyhole) surgery. Incisions are small and hidden, usually fade significantly within 12 months."
+			},
+			{
+				q: "Will I have visible scars?",
+				a: "Yes, 4-5 small scars. They fade significantly within 12 months. Use sunscreen on scars for first year. Most patients find scars barely noticeable and worth the trade-off."
+			},
+			{
+				q: "What if something goes wrong during surgery?",
+				a: "Your surgeon is prepared for complications. Hospital has emergency protocols. Serious complications are rare (<1%) but include bleeding (1-2%), staple line leak (0.5-1%), need for conversion to open surgery (<1%)."
+			},
+			{
+				q: "Can the surgery be reversed?",
+				a: "Gastric sleeve: No, it's permanent. Removed stomach tissue is discarded. Gastric band: Yes, reversible. Gastric bypass: Technically reversible but rarely done. Consider this a permanent decision."
+			},
+			{
+				q: "What happens to the removed part of my stomach?",
+				a: "It's discarded as medical waste. Cannot be reattached. The remaining stomach (sleeve) produces less hunger hormone, which helps with appetite control long-term."
+			},
+			{
+				q: "How is it different from liposuction?",
+				a: "Completely different! Liposuction removes fat from under skin (cosmetic). Gastric sleeve reduces stomach size to treat obesity as a disease (medical). Surgery changes hormones and metabolism, not just appearance."
+			},
+			{
+				q: "Will I need drains or tubes after surgery?",
+				a: "Usually no. Some surgeons place a small drain temporarily (removed before discharge). You'll have an IV line for fluids. No feeding tubes in modern gastric sleeve surgery."
+			},
+			{
+				q: "What's the risk of dying during surgery?",
+				a: "Mortality risk: approximately 0.1-0.2% (1-2 in 1,000). Comparable to gallbladder removal. Modern bariatric surgery is very safe. Risk of NOT having surgery when severely obese is much higher."
+			},
+			{
+				q: "Do they use staples or stitches?",
+				a: "Surgical staples inside your stomach (not visible from outside). They're permanent and safe. External incisions closed with dissolvable stitches or glue - no removal needed."
+			},
+			{
+				q: "Can I have surgery if I have diabetes?",
+				a: "Yes! Gastric sleeve can put type 2 diabetes into remission in 60-70% of patients. You'll need close monitoring as blood sugar drops quickly. May need to adjust medications within days."
+			},
+			{
+				q: "What about sleep apnea?",
+				a: "Surgery dramatically improves sleep apnea. 75-85% of patients come off CPAP machines within 6-12 months. You'll need to bring CPAP to hospital for first night after surgery."
+			},
+			{
+				q: "Will I need blood transfusion?",
+				a: "Rarely needed. Significant bleeding occurs in only 1-2% of cases. Surgeons take precautions to minimize blood loss. You may be offered iron supplements beforehand if anemic."
+			},
+			{
+				q: "How safe is general anesthesia?",
+				a: "Very safe with modern monitoring. Your anesthetist will assess your risk factors. Higher BMI slightly increases anesthesia risk, but anesthetists experienced with bariatric patients manage this well."
+			},
+			{
+				q: "Can I watch a video of the surgery?",
+				a: "Many surgeons show educational videos during consultation. YouTube has surgical demonstrations (viewer discretion advised). Seeing the procedure helps some patients feel more prepared."
+			}
+		]
+	},
+	{
+		id: "after-surgery",
+		title: "After Surgery",
+		questions: [
+			{
+				q: "How much pain will I be in?",
+				a: "Most patients rate pain 3-5/10 in first 3 days. Managed with medication. Gas pain in shoulders is common (from CO2 used during surgery). By day 7, most only need paracetamol."
+			},
+			{
+				q: "When can I drive?",
+				a: "Once you're off strong pain medication (usually 5-7 days) and can safely perform an emergency stop. Test by pressing brake pedal hard while parked. Check your insurance policy requirements."
+			},
+			{
+				q: "When can I shower?",
+				a: "Next day, usually. Keep dressings dry for 5 days, then remove. Pat incisions dry gently. No swimming or baths for 2 weeks. Most patients feel refreshed after first shower."
+			},
+			{
+				q: "What if I vomit after surgery?",
+				a: "Common in first few weeks if you eat too fast, too much, don't chew thoroughly, or drink with meals. It's your body's way of teaching you new eating habits. Persistent vomiting needs medical attention."
+			},
+			{
+				q: "Will I be constipated?",
+				a: "Very common in first month due to low food intake, pain medication, and dehydration. Solution: stool softeners, fiber supplements, lots of water. Walking helps too."
+			},
+			{
+				q: "When can I go back to work?",
+				a: "Desk job: 1-2 weeks. Physical job: 3-4 weeks. Everyone's different - some return sooner, others need more time. Discuss with your surgeon based on your job demands."
+			},
+			{
+				q: "When can I exercise?",
+				a: "Walking: Immediately (encouraged). Light exercise: 4 weeks. Weight training: 6-8 weeks. High-impact sports: 3 months. Start slowly and listen to your body."
+			},
+			{
+				q: "What can I eat in the first week?",
+				a: "Clear liquids only: water, broth, sugar-free jelly, protein shakes. Sip slowly, aim for 60-80g protein daily. No solid food yet. Your stomach needs time to heal."
+			},
+			{
+				q: "When can I eat solid food again?",
+				a: "Gradual progression: Week 1-2: Clear liquids. Week 3-4: Pureed foods. Week 5-8: Soft foods. Week 9+: Regular foods (small portions). Follow your surgeon's specific diet plan."
+			},
+			{
+				q: "Will I need to sleep propped up?",
+				a: "First few nights, yes - helps with breathing and reduces reflux. Most patients use 2-3 pillows. After first week, sleep in whatever position is comfortable."
+			},
+			{
+				q: "Can I sleep on my side?",
+				a: "After first few days, yes. Back sleeping is recommended initially. Side sleeping is fine once incision pain subsides. Avoid stomach sleeping for 2-3 weeks."
+			},
+			{
+				q: "What medications will I need?",
+				a: "Pain relief (1 week), anti-nausea (as needed), acid reducer (3-6 months), multivitamin (lifelong), calcium (lifelong), vitamin B12 (lifelong), iron especially for women (lifelong)."
+			},
+			{
+				q: "When are follow-up appointments?",
+				a: "Typical schedule: 2 weeks, 6 weeks, 3 months, 6 months, 12 months, then annually. Some surgeons see you more frequently. Never skip follow-ups - they're crucial for success."
+			},
+			{
+				q: "What are signs of complications?",
+				a: "Seek immediate care for: severe pain, fever >38.5°C, persistent vomiting, inability to keep fluids down, severe shortness of breath, calf pain/swelling, bleeding from incisions."
+			},
+			{
+				q: "Will I have a lot of gas?",
+				a: "Yes, especially first few days (from CO2 used during surgery). Walking helps move it through. Shoulder pain is actually gas pain. Usually resolves within 3-5 days."
+			}
+		]
+	},
+	{
+		id: "long-term",
+		title: "Long-Term Life",
+		questions: [
+			{
+				q: "Will I ever feel hungry again?",
+				a: "Yes, but differently. Physical hunger returns around month 3-6, but it's manageable. The removed part of your stomach produced ghrelin (hunger hormone), so hunger is 50-70% less than before."
+			},
+			{
+				q: "Can I eat out at restaurants?",
+				a: "Absolutely! Tips: order entrée size, take leftovers home, focus on protein, avoid sugary drinks. Most restaurants accommodate small portions. You'll learn what works for you."
+			},
+			{
+				q: "What foods will I never be able to eat?",
+				a: "You can technically eat anything, but some may cause discomfort: carbonated drinks (uncomfortable), bread/pasta (can get stuck), tough meats (hard to digest), sugar (may cause dumping). You'll learn your tolerances."
+			},
+			{
+				q: "Will I lose my hair?",
+				a: "Temporary hair thinning affects 40% of patients around months 3-6. It's from rapid weight loss and lower protein intake. It grows back! Take biotin supplements, ensure adequate protein."
+			},
+			{
+				q: "Can I build muscle after surgery?",
+				a: "Yes! After month 3, you can resume weight training. Focus on high-protein intake (80-100g/day). Many patients successfully build muscle and improve body composition."
+			},
+			{
+				q: "What if I want to lose more weight?",
+				a: "If you don't reach goal weight after 18 months, options: revision to gastric bypass, additional support (dietitian, personal trainer), address underlying issues (emotional eating, hormones)."
+			},
+			{
+				q: "Will I need skin removal surgery?",
+				a: "Depends on: amount of weight lost, age (younger = better elasticity), genetics. If you lose 50kg+, you may want it. Cost: $10,000-$30,000. Not usually covered by insurance."
+			},
+			{
+				q: "Can I get pregnant after surgery?",
+				a: "Yes! Wait 12-18 months after surgery before getting pregnant. After that, pregnancy is safe. You'll need extra monitoring for nutritional levels. Fertility often improves with weight loss."
+			},
+			{
+				q: "Do I have to take vitamins forever?",
+				a: "Yes. Daily requirements: multivitamin, calcium + vitamin D, iron (especially women), vitamin B12. Cost: ~$50-$100/month. Non-negotiable - prevents serious deficiencies."
+			},
+			{
+				q: "Can I drink alcohol?",
+				a: "After recovery, yes, but: alcohol absorbs faster, lower tolerance (get drunk quicker), empty calories can stall weight loss. Limit to special occasions. Risk of transfer addiction."
+			},
+			{
+				q: "Will my taste change?",
+				a: "Many patients report taste changes - sweet foods may taste too sweet, preferences shift to savory. Usually temporary but can last several months. Some welcome this change!"
+			},
+			{
+				q: "Can I drink coffee?",
+				a: "Yes, after first month. Tips: avoid on empty stomach (can cause nausea), decaf better in first 3 months, limit to 1-2 cups/day, avoid sugary coffee drinks."
+			},
+			{
+				q: "What about vitamins and supplements?",
+				a: "Lifelong requirements: multivitamin, calcium citrate (1200-1500mg), vitamin D, iron (women), vitamin B12, possibly others based on blood tests. Get levels checked annually."
+			},
+			{
+				q: "Will I be able to eat at social events?",
+				a: "Yes! You'll adapt. Most people won't notice you're eating less. You can enjoy food socially, just smaller portions. Many patients say they enjoy food more, eat mindfully."
+			},
+			{
+				q: "How do I maintain weight loss?",
+				a: "Keys: continue healthy eating habits, regular exercise, stay connected to support group, regular follow-ups, address emotional eating, treat surgery as a tool (not cure)."
+			}
+		]
+	},
+	{
+		id: "complications",
+		title: "Complications & Problems",
+		questions: [
+			{
+				q: "What is dumping syndrome?",
+				a: "When you eat too much sugar, it dumps into intestines too fast, causing: nausea, sweating, diarrhea, dizziness. Affects 10-15% of patients. Actually helpful - teaches you to avoid sugar."
+			},
+			{
+				q: "What if I regain weight?",
+				a: "15-20% of patients regain some weight after 5 years. Causes: stretching stomach (overeating), poor food choices, not exercising. Prevention: follow dietitian advice, support groups, regular follow-ups."
+			},
+			{
+				q: "Can my stomach stretch back out?",
+				a: "Yes, if you consistently overeat. Your sleeve can stretch 20-30% over years, but will never return to original size. This is why portion control remains important lifelong."
+			},
+			{
+				q: "What if I have complications years later?",
+				a: "Your surgeon should provide lifetime follow-up. If you move cities, any bariatric surgeon can help. Join patient support groups for ongoing guidance."
+			},
+			{
+				q: "What is a staple line leak?",
+				a: "Rare (0.5-1% of cases) but serious complication where stomach contents leak from staple line. Symptoms: severe pain, fever, rapid heartbeat. Requires immediate treatment, possibly re-operation."
+			},
+			{
+				q: "Can I develop gallstones?",
+				a: "10-25% of patients develop gallstones after rapid weight loss. Some surgeons remove gallbladder during surgery if ultrasound shows stones. Others prescribe preventive medication."
+			},
+			{
+				q: "What about nutritional deficiencies?",
+				a: "Preventable with supplements! Common deficiencies: iron (20-30%), vitamin B12 (15-20%), calcium, vitamin D. Annual blood tests catch deficiencies early. Take your vitamins!"
+			},
+			{
+				q: "Will I develop GERD/reflux?",
+				a: "20% of sleeve patients develop new reflux symptoms. Usually manageable with medication. If severe, may need conversion to gastric bypass. Bypass usually improves existing reflux."
+			},
+			{
+				q: "What's the revision rate?",
+				a: "5-10% of gastric sleeve patients need revision surgery within 5 years due to: inadequate weight loss, weight regain, or severe reflux. Revision options available."
+			},
+			{
+				q: "Can I still get an endoscopy if needed?",
+				a: "Yes, but tell your gastroenterologist about your surgery. They need to be careful navigating your altered anatomy. Most diagnostic procedures are still possible."
+			}
+		]
+	},
+	{
+		id: "costs-insurance",
+		title: "Costs & Insurance",
+		questions: [
+			{
+				q: "Why is gastric sleeve so expensive?",
+				a: "Breakdown: Surgeon professional fee (8 years training): $8,000-$12,000. Hospital theatre, equipment, nursing: $5,000-$10,000. Anesthetist: $2,000-$3,000. Post-op care: Included. Total: $15,000-$25,000."
+			},
+			{
+				q: "Can I get a payment plan?",
+				a: "Many surgeons offer: interest-free 12-month plans, medical finance companies (MacCredit, MediPay), SuperCare (use superannuation on medical grounds). Approval typically 24-48 hours."
+			},
+			{
+				q: "Is it cheaper to go overseas?",
+				a: "Thailand/Mexico gastric sleeve: $8,000-$12,000 AUD. But consider: no post-op support in Australia, if complications occur you're uninsured, travel costs, time off work, language barriers. Risk often not worth savings."
+			},
+			{
+				q: "Can I claim on tax?",
+				a: "Yes! If your out-of-pocket medical expenses exceed $2,398 in a financial year, you may claim the Net Medical Expenses Tax Offset. Keep all receipts."
+			},
+			{
+				q: "What's included in the surgery cost?",
+				a: "Typically includes: surgeon fee, hospital stay (1-2 nights), operating theatre, medical equipment, post-op consultations, often post-op support program. Does NOT include pre-op tests."
+			},
+			{
+				q: "What are the hidden costs?",
+				a: "Pre-surgery: GP referrals, specialist consultations, blood tests, ECG, sleep study, dietitian, psychology assessment, Optifast diet ($1,500-$3,000). Post-surgery: lifelong vitamins ($50-$100/month), compression garments, follow-up tests."
+			},
+			{
+				q: "How do costs compare between states?",
+				a: "Highest: Sydney/Melbourne ($16,000-$20,000 self-funded, $5,000-$7,000 with insurance). Moderate: Brisbane/Perth ($15,000-$18,000 / $4,000-$6,000). Most affordable: regional areas ($12,000-$16,000 / $3,500-$5,500)."
+			},
+			{
+				q: "What insurance level do I need?",
+				a: "Typically Gold tier or higher hospital cover with bariatric surgery included. Check policy: some Bronze Plus policies cover it. 12-month waiting period applies. Compare policies before choosing."
+			},
+			{
+				q: "What's the Medicare rebate amount?",
+				a: "Medicare provides $663.45 (MBS item 30514) for gastric sleeve. This is only a portion of total cost. You'll still need private insurance or pay remaining $14,000-$24,000."
+			},
+			{
+				q: "Are there any free options?",
+				a: "Public hospital: free but 12-24 month wait list (varies by state). Must meet strict criteria. Private is much faster (2-6 weeks). Some charity programs exist for extreme cases."
+			},
+			{
+				q: "What if my insurance won't cover it?",
+				a: "Options: self-fund ($15,000-$25,000), medical loans, payment plans, superannuation early release, save up while doing pre-op requirements, switch to insurance that covers it (wait 12 months)."
+			},
+			{
+				q: "Can I claim private health insurance extras?",
+				a: "Hospital cover pays for surgery/accommodation. Extras may cover: dietitian consultations, psychology appointments, physiotherapy. Check your specific extras benefits."
+			},
+			{
+				q: "Why do surgeons charge different amounts?",
+				a: "Based on: experience (senior surgeons charge more), hospital location/facilities, reputation/success rates, teaching hospital vs private practice, included aftercare, case complexity."
+			},
+			{
+				q: "Is the cheapest surgeon the best value?",
+				a: "Not necessarily! Consider: experience, complication rates, patient reviews, post-op support, hospital quality. The cheapest option may cost more long-term if complications arise."
+			},
+			{
+				q: "What's the cost per kilogram lost?",
+				a: "If you lose 40kg and paid $20,000: $500 per kg. Most patients find this perspective helpful - it's an investment in health, not just weight loss."
+			}
+		]
+	},
+	{
+		id: "comparing",
+		title: "Comparing Procedures",
+		questions: [
+			{
+				q: "Gastric sleeve vs gastric bypass?",
+				a: "Sleeve: BMI 35-45, simpler, faster recovery, 60-70% weight loss. Bypass: BMI 45+, 70-80% weight loss, better for diabetes/GERD, longer recovery. Your surgeon recommends based on your situation."
+			},
+			{
+				q: "Gastric sleeve vs gastric band?",
+				a: "Band is outdated. Sleeve has: 3x better weight loss, lower revision rate, no foreign device, no adjustments needed. Most surgeons no longer offer bands."
+			},
+			{
+				q: "Gastric sleeve vs gastric balloon?",
+				a: "Balloon is temporary (6-12 months), non-surgical. Choose balloon if: BMI 30-35 (too low for sleeve), want to test before surgery, can't have surgery (medical reasons). Sleeve is permanent solution."
+			},
+			{
+				q: "Gastric bypass vs mini bypass?",
+				a: "Mini bypass: shorter surgery time, single connection, similar results. Traditional bypass: longer track record, two connections, slightly lower reflux risk. Both effective - surgeon preference varies."
+			},
+			{
+				q: "Surgery vs medication (Ozempic/Wegovy)?",
+				a: "Medication: 15-20% weight loss, expensive ongoing ($400-$600/month), weight returns if stopped. Surgery: 60-70% weight loss, one-time cost, permanent tool. Surgery more effective for severe obesity."
+			},
+			{
+				q: "Should I try medication first?",
+				a: "If BMI 30-35: maybe. If BMI 40+: surgery more effective. Discuss with your doctor. Some patients try medication while on surgery waiting list."
+			},
+			{
+				q: "Lap band removal + sleeve conversion?",
+				a: "Common revision. If your band failed, sleeve is excellent next step. Single-stage or two-stage surgery depending on complications. Costs similar to primary sleeve."
+			},
+			{
+				q: "Sleeve vs switch (duodenal switch)?",
+				a: "Switch: maximum weight loss (70-80%), BMI 50+, higher malabsorption, more nutritional risks. Sleeve: simpler, safer, suitable for most. Switch reserved for extreme obesity."
+			},
+			{
+				q: "What's the best procedure overall?",
+				a: "No single \"best\" - depends on your BMI, health conditions, goals. Gastric sleeve is most popular (60-70% of procedures) because it balances effectiveness with safety."
+			},
+			{
+				q: "Revision surgery: what are my options?",
+				a: "If sleeve isn't enough: convert to bypass. If bypass isn't enough: distal bypass or duodenal switch. If complications: revision to correct issues. Discuss specific options with surgeon."
+			}
+		]
+	},
+	{
+		id: "surgeon-selection",
+		title: "Surgeon Selection",
+		questions: [
+			{
+				q: "How do I find the best surgeon?",
+				a: "Look for: FRACS certification, 5+ years experience, 100+ procedures/year, OSSANZ member, good online reviews, transparent about costs/risks. Consult with 2-3 before deciding."
+			},
+			{
+				q: "Should I get a second opinion?",
+				a: "YES! Most patients consult 2-3 surgeons before deciding. Helps you compare costs, find best fit, feel confident in choice. No obligation to choose first surgeon."
+			},
+			{
+				q: "What questions should I ask?",
+				a: "Essential: 1) How many procedures have you done? 2) What's your complication rate? 3) What's included in your fee? 4) What's my expected out-of-pocket? 5) What's your post-op support?"
+			},
+			{
+				q: "Red flags to watch for?",
+				a: "Warning signs: not FRACS certified, won't show complication rates, pressures you to book immediately, offers \"deals\"/discounts, no post-op support program, practice feels rushed/impersonal."
+			},
+			{
+				q: "Do I need a surgeon who specializes only in bariatrics?",
+				a: "Preferred but not essential. Look for surgeon who does bariatric surgery regularly (100+ per year). Specialists have more experience with complications and optimization."
+			},
+			{
+				q: "Hospital vs clinic - does it matter?",
+				a: "Choose accredited private hospital over small clinic. Better equipped for complications, experienced nursing staff, emergency backup. Ask where your surgeon operates."
+			},
+			{
+				q: "Can I see the surgeon's results?",
+				a: "Good surgeons share: complication rates, average weight loss results, patient testimonials. If they're evasive about outcomes, that's a red flag."
+			},
+			{
+				q: "What's more important: bedside manner or experience?",
+				a: "Both matter! You need a skilled surgeon (100+ procedures/year) who also makes you feel comfortable. Trust your gut - if something feels off, see someone else."
+			},
+			{
+				q: "Should I choose based on cost?",
+				a: "Don't choose cheapest! Consider total value: experience, outcomes, support. A $3,000 cheaper surgeon isn't worth it if complications cost $10,000 to fix."
+			},
+			{
+				q: "Can I switch surgeons if unhappy?",
+				a: "Before surgery: absolutely. After booking: may forfeit deposit. After surgery: you can see another surgeon for follow-up, but may need to pay consultation fees."
+			}
+		]
+	},
+	{
+		id: "special-circumstances",
+		title: "Special Circumstances",
+		questions: [
+			{
+				q: "Can I have surgery if I'm over 60?",
+				a: "Yes, if healthy enough for anesthesia. Age alone isn't a barrier. Surgeons operate on patients up to 65-70 regularly. Thorough pre-op assessment ensures safety."
+			},
+			{
+				q: "Can men get gastric sleeve?",
+				a: "Yes! 30-40% of patients are male. Men often have: faster weight loss, better diabetes remission, fewer nutritional deficiencies. Procedure is same for men and women."
+			},
+			{
+				q: "What if I have diabetes?",
+				a: "Surgery can put type 2 diabetes into remission in 60-70% of patients (bypass: 80-90%). Need close monitoring in first months as blood sugar drops quickly. May adjust medications within days."
+			},
+			{
+				q: "Can I have surgery with sleep apnea?",
+				a: "Yes! Surgery dramatically improves sleep apnea. 75-85% come off CPAP within 6-12 months. Bring CPAP to hospital for first night. Anesthetist will manage airway carefully."
+			},
+			{
+				q: "What if I'm trying to get pregnant?",
+				a: "Wait until after pregnancy. If you've already had surgery, wait 12-18 months before getting pregnant. Post-surgery: fertility often improves, pregnancy is safe with monitoring."
+			},
+			{
+				q: "Can I have surgery if I have GERD/reflux?",
+				a: "Depends. Mild GERD: gastric sleeve okay. Severe GERD: gastric bypass better (often cures reflux). Discuss severity with surgeon - they'll recommend best option."
+			},
+			{
+				q: "What about autoimmune diseases?",
+				a: "Usually safe to proceed. Your surgeon will consult with your specialist. Some conditions require special management. Ensure your condition is stable before surgery."
+			},
+			{
+				q: "Can I have surgery with heart disease?",
+				a: "Depends on severity. Cardiologist clearance required. Many heart patients benefit from weight loss, but surgery risk is assessed individually. May need cardiac monitoring during/after."
+			},
+			{
+				q: "What if I've had previous abdominal surgery?",
+				a: "Usually not a problem, though scar tissue may make surgery more challenging. Inform your surgeon of all previous surgeries. May slightly increase operating time."
+			},
+			{
+				q: "Can I have surgery if I'm on disability/benefits?",
+				a: "Yes - medical decisions aren't based on employment status. Accessing payment is the challenge. Explore: public hospital waiting list, payment plans, compassionate super release."
+			}
+		]
+	},
+	{
+		id: "lifestyle",
+		title: "Lifestyle Questions",
+		questions: [
+			{
+				q: "Can I take pain medication long-term?",
+				a: "Avoid NSAIDs (ibuprofen, Nurofen) long-term - they can cause ulcers. Use paracetamol instead. Talk to surgeon before taking any regular medications. Opioids should be avoided."
+			},
+			{
+				q: "Will I need plastic surgery?",
+				a: "Depends on: amount of weight lost, age (younger = better skin elasticity), genetics. If you lose 50kg+, you may want skin removal. Cost: $10,000-$30,000. Not usually insured."
+			},
+			{
+				q: "Can I go to the beach/pool?",
+				a: "Yes! Your scars are small and fade. Wear sunscreen on scars for first 12 months. Many patients feel more confident at the beach after weight loss despite scars."
+			},
+			{
+				q: "What about international travel?",
+				a: "After 3 months, you can travel freely. Bring: vitamin supplements, surgeon's letter explaining your surgery (for airport security), list of safe foods. Stay hydrated on flights."
+			},
+			{
+				q: "Can I still donate blood?",
+				a: "Usually yes, after 6 months and if your iron levels are adequate. Red Cross will assess eligibility. Some patients become ineligible due to low iron. Check before donating."
+			},
+			{
+				q: "Will surgery affect my medications?",
+				a: "Some medications need adjustment: diabetes meds (reduce immediately), blood pressure meds (may need lower doses), contraceptives (absorption may change). Inform all doctors about your surgery."
+			},
+			{
+				q: "Can I still have other surgeries if needed?",
+				a: "Yes. Always inform surgeons/anesthetists about your bariatric surgery. They need to know for medication dosing, positioning, and anesthesia planning."
+			},
+			{
+				q: "What about dental work?",
+				a: "Continue regular dental care. Some patients develop teeth sensitivity from vomiting. Dentist should know about your surgery - affects anesthesia and positioning."
+			},
+			{
+				q: "Can I go skiing/skydiving/adventure sports?",
+				a: "After 3-6 months and full recovery, yes! Many patients become MORE active after surgery. Just ensure you're healed and cleared by your surgeon for contact sports."
+			},
+			{
+				q: "How will this affect my social life?",
+				a: "Initially challenging - you can't eat much at social events. Long-term: most patients adapt well. You can still enjoy dining out, just smaller portions. Many report improved social confidence."
+			}
+		]
+	}
+];
+
+const meta = {
+	title: "Weight Loss Surgery FAQ: 100+ Questions Answered | Australia 2025",
+	description: "Complete FAQ for weight loss surgery in Australia. 100+ questions on costs, procedures, recovery, risks, insurance. Get honest answers from experienced bariatric experts.",
+	keywords: ["weight loss surgery faq", "gastric sleeve questions", "bariatric surgery australia", "gastric bypass faq"]
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description} canonicalUrl={pageUrl}>
+
+	<!-- Hero with Breadcrumbs -->
+	<section class="bg-gradient-to-br from-blue-50 to-white pt-6 pb-12">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<!-- Breadcrumbs -->
+			<div class="mb-6">
+				<Breadcrumbs items={[
+					{ name: "FAQ", url: "/faq" }
+				]} />
+			</div>
+			
+			<!-- Hero Content -->
+			<div class="text-center">
+				<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+					Weight Loss Surgery: 100+ Questions Answered
+				</h1>
+				<p class="text-xl text-gray-600 mb-6">
+					Honest, comprehensive answers to everything you need to know about bariatric surgery in Australia
+				</p>
+				<ContentFreshness 
+					datePublished="2025-01-15"
+					dateModified="2025-10-16"
+				/>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Content -->
+	<section class="py-12 bg-white">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex flex-col lg:flex-row gap-8">
+				
+				<!-- Sticky Sidebar Navigation -->
+				<aside class="lg:w-64 flex-shrink-0">
+					<div class="lg:sticky lg:top-24">
+						<nav class="bg-gray-50 rounded-lg p-4">
+							<h2 class="font-bold text-gray-900 mb-4">Categories</h2>
+							<ul class="space-y-2">
+								{faqCategories.map(cat => (
+									<li>
+										<a href={`#${cat.id}`} class="text-sm text-gray-700 hover:text-blue-600 block py-1">
+											{cat.title} ({cat.questions.length})
+										</a>
+									</li>
+								))}
+							</ul>
+						</nav>
+					</div>
+				</aside>
+
+				<!-- FAQ Content -->
+				<div class="flex-1">
+					{faqCategories.map(category => (
+						<div id={category.id} class="mb-12">
+							<h2 class="text-3xl font-bold text-gray-900 mb-6 pb-3 border-b-2 border-blue-600">
+								{category.title}
+							</h2>
+							<div class="space-y-4">
+								{category.questions.map(item => (
+									<details class="bg-gray-50 rounded-lg p-6 group">
+										<summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+											{item.q}
+											<svg class="w-5 h-5 text-gray-500 transform group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+											</svg>
+										</summary>
+										<div class="mt-4 text-gray-700 leading-relaxed">
+											{item.a}
+										</div>
+									</details>
+								))}
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CTA Section -->
+	<section class="py-16 bg-blue-600">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl font-bold text-white mb-4">Still Have Questions?</h2>
+			<p class="text-xl text-blue-100 mb-8">
+				Book a free consultation with one of our experienced bariatric surgeons
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contact" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
+					Book Free Consultation
+				</a>
+				<a href="/cost-calculator" class="bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition">
+					Calculate Your Cost
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json" is:inline set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": faqCategories.flatMap(cat => 
+			cat.questions.map(q => ({
+				"@type": "Question",
+				"name": q.q,
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": q.a
+				}
+			}))
+		)
+	})} />
+
+</BaseLayout>
+

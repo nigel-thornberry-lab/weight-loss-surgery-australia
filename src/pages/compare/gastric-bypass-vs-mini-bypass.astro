@@ -1,0 +1,464 @@
+---
+import '../../styles/global.css';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuickAnswer from '../../components/QuickAnswer.astro';
+import ContentFreshness from '../../components/ContentFreshness.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorityCitations from '../../components/AuthorityCitations.astro';
+
+const pageUrl = "https://weight-loss-surgery-australia.vercel.app/compare/gastric-bypass-vs-mini-bypass";
+
+const meta = {
+	title: "Gastric Bypass vs Mini Bypass: Which Is Better? | Australia 2025",
+	description: "Compare Roux-en-Y gastric bypass vs mini gastric bypass (OAGB). Surgery time, results, complications, reflux risk. Evidence-based comparison by Australian bariatric surgeons.",
+	keywords: ["gastric bypass vs mini bypass", "RYGB vs OAGB", "mini bypass complications", "which bypass better australia"]
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description} canonicalUrl={pageUrl}>
+
+	<!-- Hero with Breadcrumbs -->
+	<section class="bg-gradient-to-br from-green-50 to-white pt-6 pb-12">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<!-- Breadcrumbs -->
+			<div class="mb-6">
+				<Breadcrumbs items={[
+					{ name: "Compare", url: "/compare" },
+					{ name: "Gastric Bypass vs Mini Bypass", url: "/compare/gastric-bypass-vs-mini-bypass" }
+				]} />
+			</div>
+			
+			<!-- Hero Content -->
+			<div class="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">
+				According to OSSANZ 2025
+			</div>
+			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+				Gastric Bypass vs Mini Gastric Bypass: The Complete Comparison
+			</h1>
+			<p class="text-xl text-gray-600 mb-6">
+				Roux-en-Y gastric bypass vs One Anastomosis Gastric Bypass (OAGB/MGB). Compare weight loss, surgery time, complications, and which is right for you.
+			</p>
+			<ContentFreshness 
+				datePublished="2025-01-15"
+				dateModified="2025-10-16"
+			/>
+		</div>
+	</section>
+
+	<!-- Quick Answer -->
+	<section class="py-8 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<QuickAnswer 
+				question="What's the difference between gastric bypass and mini bypass?"
+				answer="Both deliver 70-80% excess weight loss. Traditional bypass (RYGB) has two connections and 40+ years of data. Mini bypass (OAGB) has one connection, 30 minutes shorter surgery, similar results, but higher bile reflux risk (10-15% vs 1-2%). Most Australian surgeons prefer traditional bypass for proven safety."
+				details={[
+					"RYGB: 2 connections, 2-3 hour surgery, gold standard",
+					"Mini bypass: 1 connection, 1.5-2 hour surgery, newer procedure",
+					"Weight loss: Both 70-80% excess weight",
+					"Diabetes remission: Both 80-90%"
+				]}
+				ctaText="Which Bypass Is Right for Me?"
+				ctaLink="/am-i-ready"
+			/>
+		</div>
+	</section>
+
+	<!-- Quick Comparison Table -->
+	<section class="py-12 bg-white">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Side-by-Side Comparison</h2>
+			
+			<div class="overflow-x-auto">
+				<table class="w-full bg-white shadow-lg rounded-lg overflow-hidden">
+					<thead class="bg-gray-100">
+						<tr>
+							<th class="px-6 py-4 text-left font-semibold text-gray-900">Factor</th>
+							<th class="px-6 py-4 text-left font-semibold text-green-600">Traditional Bypass (RYGB)</th>
+							<th class="px-6 py-4 text-left font-semibold text-blue-600">Mini Bypass (OAGB)</th>
+						</tr>
+					</thead>
+					<tbody class="divide-y divide-gray-200">
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Full Name</td>
+							<td class="px-6 py-4 text-gray-700">Roux-en-Y Gastric Bypass</td>
+							<td class="px-6 py-4 text-gray-700">One Anastomosis Gastric Bypass</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Surgery Time</td>
+							<td class="px-6 py-4 text-gray-700">2-3 hours</td>
+							<td class="px-6 py-4 text-gray-700">1.5-2 hours</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Number of Connections</td>
+							<td class="px-6 py-4 text-gray-700">2 anastomoses</td>
+							<td class="px-6 py-4 text-gray-700">1 anastomosis</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Weight Loss</td>
+							<td class="px-6 py-4 text-gray-700">70-80% excess weight</td>
+							<td class="px-6 py-4 text-gray-700">70-80% excess weight</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Diabetes Remission</td>
+							<td class="px-6 py-4 text-gray-700">80-90%</td>
+							<td class="px-6 py-4 text-gray-700">80-90%</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Cost Sydney</td>
+							<td class="px-6 py-4 text-gray-700">$20,000-$30,000</td>
+							<td class="px-6 py-4 text-gray-700">$18,000-$28,000</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Hospital Stay</td>
+							<td class="px-6 py-4 text-gray-700">2-3 days</td>
+							<td class="px-6 py-4 text-gray-700">2-3 days</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Recovery Time</td>
+							<td class="px-6 py-4 text-gray-700">3-4 weeks</td>
+							<td class="px-6 py-4 text-gray-700">3-4 weeks</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Bile Reflux Risk</td>
+							<td class="px-6 py-4 text-gray-700">1-2%</td>
+							<td class="px-6 py-4 text-gray-700">10-15%</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Revision Rate</td>
+							<td class="px-6 py-4 text-gray-700">5-8%</td>
+							<td class="px-6 py-4 text-gray-700">8-12%</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Years of Data</td>
+							<td class="px-6 py-4 text-gray-700">40+ years</td>
+							<td class="px-6 py-4 text-gray-700">20+ years</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Reversibility</td>
+							<td class="px-6 py-4 text-gray-700">Technically possible, rarely done</td>
+							<td class="px-6 py-4 text-gray-700">Easier to reverse if needed</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Australian Surgeon Preference</td>
+							<td class="px-6 py-4 text-gray-700">70-80% prefer RYGB</td>
+							<td class="px-6 py-4 text-gray-700">20-30% offer OAGB</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- Technical Differences -->
+	<section class="py-12 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8">How Each Surgery Works</h2>
+
+			<div class="grid md:grid-cols-2 gap-8">
+				<div class="bg-white rounded-xl shadow-sm p-8">
+					<h3 class="text-2xl font-bold text-green-600 mb-4">Traditional Bypass (RYGB)</h3>
+					<p class="text-gray-700 mb-4">
+						Creates a small stomach pouch (30-50ml), then divides the small intestine and creates two connections:
+					</p>
+					<ol class="space-y-3 text-gray-700 list-decimal list-inside mb-4">
+						<li><strong>First connection:</strong> Small stomach pouch to middle section of small intestine (bypasses 75cm)</li>
+						<li><strong>Second connection:</strong> Reconnects the bypassed segment to carry digestive juices</li>
+					</ol>
+					<p class="text-gray-700">
+						This creates a "Y" shape (hence "Roux-en-Y"). Food and digestive juices meet further down the intestine, reducing calorie absorption.
+					</p>
+				</div>
+
+				<div class="bg-white rounded-xl shadow-sm p-8">
+					<h3 class="text-2xl font-bold text-blue-600 mb-4">Mini Bypass (OAGB)</h3>
+					<p class="text-gray-700 mb-4">
+						Creates a longer, tube-shaped stomach pouch and makes one single connection:
+					</p>
+					<ol class="space-y-3 text-gray-700 list-decimal list-inside mb-4">
+						<li><strong>One connection:</strong> Long stomach tube directly to small intestine (bypasses 150-200cm)</li>
+					</ol>
+					<p class="text-gray-700 mb-4">
+						Simpler anatomy = faster surgery. However, bile from the liver can flow back into the stomach more easily, causing bile reflux in 10-15% of patients.
+					</p>
+					<p class="text-sm text-gray-600 italic">
+						"Mini" refers to the number of connections (one vs two), not the size or effectiveness of the surgery.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Pros and Cons -->
+	<section class="py-12 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Pros & Cons</h2>
+
+			<div class="grid md:grid-cols-2 gap-8">
+				<!-- Traditional Bypass -->
+				<div>
+					<h3 class="text-2xl font-bold text-green-600 mb-4">Traditional Bypass (RYGB)</h3>
+					
+					<div class="mb-6">
+						<h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+							<span class="text-green-500">✓</span> Pros
+						</h4>
+						<ul class="space-y-2 text-gray-700">
+							<li>• Gold standard with 40+ years of safety data</li>
+							<li>• Very low bile reflux risk (1-2%)</li>
+							<li>• 70-80% excess weight loss</li>
+							<li>• 80-90% diabetes remission</li>
+							<li>• Preferred by most Australian surgeons</li>
+							<li>• Lower revision rate (5-8%)</li>
+							<li>• Extensive long-term outcome data</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+							<span class="text-red-500">✗</span> Cons
+						</h4>
+						<ul class="space-y-2 text-gray-700">
+							<li>• Longer surgery time (2-3 hours)</li>
+							<li>• More complex procedure</li>
+							<li>• Two potential leak points (rare but possible)</li>
+							<li>• Slightly higher initial complication risk</li>
+							<li>• More expensive ($20,000-$30,000)</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Mini Bypass -->
+				<div>
+					<h3 class="text-2xl font-bold text-blue-600 mb-4">Mini Bypass (OAGB)</h3>
+					
+					<div class="mb-6">
+						<h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+							<span class="text-green-500">✓</span> Pros
+						</h4>
+						<ul class="space-y-2 text-gray-700">
+							<li>• Shorter surgery time (1.5-2 hours)</li>
+							<li>• Simpler procedure, one connection</li>
+							<li>• 70-80% excess weight loss</li>
+							<li>• 80-90% diabetes remission</li>
+							<li>• Slightly less expensive</li>
+							<li>• Easier to reverse if necessary</li>
+							<li>• Potentially less dumping syndrome</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 class="font-bold text-gray-900 mb-3 flex items-center gap-2">
+							<span class="text-red-500">✗</span> Cons
+						</h4>
+						<ul class="space-y-2 text-gray-700">
+							<li>• Higher bile reflux risk (10-15%)</li>
+							<li>• Less long-term data (20 vs 40 years)</li>
+							<li>• Higher revision rate (8-12%)</li>
+							<li>• Bile reflux can cause pain, nausea</li>
+							<li>• Fewer Australian surgeons offer it</li>
+							<li>• May need conversion to RYGB if bile reflux severe</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Bile Reflux Explained -->
+	<section class="py-12 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-6">Understanding Bile Reflux (The Key Difference)</h2>
+			
+			<div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 mb-6">
+				<h3 class="font-bold text-yellow-900 mb-2">⚠️ Why This Matters</h3>
+				<p class="text-yellow-800">
+					Bile reflux is the main reason most Australian surgeons prefer traditional bypass over mini bypass. It affects 10-15% of mini bypass patients vs only 1-2% of traditional bypass patients.
+				</p>
+			</div>
+
+			<div class="bg-white rounded-xl shadow-sm p-8">
+				<h4 class="text-xl font-bold text-gray-900 mb-4">What Is Bile Reflux?</h4>
+				<p class="text-gray-700 mb-4">
+					Bile is produced by your liver to help digest fats. In mini bypass, bile can flow backwards into the stomach because there's a direct connection between the intestine (where bile enters) and the stomach. 
+				</p>
+				<p class="text-gray-700 mb-4">
+					Traditional bypass has a separate "bile limb" that keeps bile away from the stomach until food has passed through.
+				</p>
+
+				<div class="mt-6">
+					<h5 class="font-semibold text-gray-900 mb-2">Symptoms of Bile Reflux:</h5>
+					<ul class="space-y-1 text-gray-700 list-disc list-inside">
+						<li>Severe heartburn (different from acid reflux)</li>
+						<li>Nausea and vomiting (especially yellow/green bile)</li>
+						<li>Upper abdominal pain</li>
+						<li>Bitter taste in mouth</li>
+						<li>Can damage stomach lining over time</li>
+					</ul>
+				</div>
+
+				<div class="mt-6 bg-red-50 p-4 rounded">
+					<p class="text-sm text-red-800">
+						<strong>Treatment:</strong> If bile reflux is severe, conversion to traditional bypass may be needed. This requires a second surgery.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- When to Choose Each -->
+	<section class="py-12 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">When to Choose Each</h2>
+			
+			<div class="grid md:grid-cols-2 gap-8">
+				<div class="bg-green-50 rounded-xl p-8">
+					<h3 class="text-2xl font-bold text-green-900 mb-4">Choose Traditional Bypass If:</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start gap-3">
+							<span class="text-green-600 font-bold mt-1">✓</span>
+							<span class="text-gray-800">You want the most proven, safest option</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-green-600 font-bold mt-1">✓</span>
+							<span class="text-gray-800">You already have reflux issues</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-green-600 font-bold mt-1">✓</span>
+							<span class="text-gray-800">You want lowest reflux risk</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-green-600 font-bold mt-1">✓</span>
+							<span class="text-gray-800">You prefer surgeon with 40 years of data</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-green-600 font-bold mt-1">✓</span>
+							<span class="text-gray-800">You want the "gold standard" procedure</span>
+						</li>
+					</ul>
+					<a href="/procedures/gastric-bypass" class="mt-6 block bg-green-600 text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-green-700 transition">
+						Learn More About Traditional Bypass
+					</a>
+				</div>
+				
+				<div class="bg-blue-50 rounded-xl p-8">
+					<h3 class="text-2xl font-bold text-blue-900 mb-4">Choose Mini Bypass If:</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">✓</span>
+							<span class="text-gray-800">You want shorter surgery time</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">✓</span>
+							<span class="text-gray-800">Your surgeon specializes in OAGB</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">✓</span>
+							<span class="text-gray-800">You're comfortable with 10-15% bile reflux risk</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">✓</span>
+							<span class="text-gray-800">You want potential reversibility</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">✓</span>
+							<span class="text-gray-800">Cost savings are important ($2,000 less)</span>
+						</li>
+					</ul>
+					<a href="/procedures/mini-gastric-bypass" class="mt-6 block bg-blue-600 text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-blue-700 transition">
+						Learn More About Mini Bypass
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Expert Opinion -->
+	<section class="py-12 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-white rounded-xl shadow-lg p-8">
+				<h3 class="text-2xl font-bold text-gray-900 mb-4">According to OSSANZ (Obesity Surgery Society of Australia and New Zealand)</h3>
+				<p class="text-gray-700 mb-4">
+					"While mini gastric bypass shows promising short-term results with reduced operative time, concerns remain regarding long-term bile reflux complications. Traditional Roux-en-Y gastric bypass remains the recommended standard given its extensive safety data and lower revision rates."
+				</p>
+				<p class="text-gray-700 mb-4">
+					<strong>Current Australian Practice:</strong> Approximately 70-80% of bariatric surgeons in Australia prefer traditional bypass. Mini bypass is typically offered by specialized surgeons who have extensive experience with the technique.
+				</p>
+				<p class="text-sm text-gray-600 italic">
+					If your surgeon offers mini bypass, ask about their specific complication rates, particularly bile reflux and revision rates.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ -->
+	<section class="py-12 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
+			
+			<div class="space-y-4">
+				<details class="bg-gray-50 rounded-lg p-6 group">
+					<summary class="font-semibold text-lg text-gray-900 cursor-pointer">
+						Is mini bypass as effective as traditional bypass for weight loss?
+					</summary>
+					<div class="mt-4 text-gray-700">
+						Yes, both deliver 70-80% excess weight loss and 80-90% diabetes remission. Weight loss outcomes are essentially identical. The difference is in potential complications, not effectiveness.
+					</div>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 group">
+					<summary class="font-semibold text-lg text-gray-900 cursor-pointer">
+						Can bile reflux be treated without revision?
+					</summary>
+					<div class="mt-4 text-gray-700">
+						Sometimes. Medications can help manage symptoms in mild cases. However, 5-8% of mini bypass patients eventually need conversion to traditional bypass if bile reflux is severe and unmanageable with medication.
+					</div>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 group">
+					<summary class="font-semibold text-lg text-gray-900 cursor-pointer">
+						Why don't all surgeons offer both options?
+					</summary>
+					<div class="mt-4 text-gray-700">
+						Most Australian surgeons learned and perfected traditional bypass during training. Mini bypass is newer and requires different technique. Surgeons typically stick with what they know works best. If a surgeon offers both, ask which they prefer and why.
+					</div>
+				</details>
+
+				<details class="bg-gray-50 rounded-lg p-6 group">
+					<summary class="font-semibold text-lg text-gray-900 cursor-pointer">
+						Is one surgery faster to recover from?
+					</summary>
+					<div class="mt-4 text-gray-700">
+						Recovery is essentially the same for both: 2-3 days in hospital, 2-4 weeks off work, 6 weeks to full recovery. The 30-minute surgery time difference doesn't translate to faster patient recovery.
+					</div>
+				</details>
+			</div>
+		</div>
+	</section>
+
+	<!-- Authority Citations -->
+	<section class="py-12 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<AuthorityCitations />
+		</div>
+	</section>
+
+	<!-- CTA -->
+	<section class="py-16 bg-blue-600">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl font-bold text-white mb-4">Ready to Decide?</h2>
+			<p class="text-xl text-blue-100 mb-8">
+				Discuss which bypass type is right for you with an experienced surgeon
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contact" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
+					Book Free Consultation
+				</a>
+				<a href="/cost-calculator" class="bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition">
+					Calculate Your Cost
+				</a>
+			</div>
+		</div>
+	</section>
+
+</BaseLayout>
+

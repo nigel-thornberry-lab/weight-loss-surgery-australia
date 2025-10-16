@@ -1,0 +1,465 @@
+---
+import '../../styles/global.css';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import QuickAnswer from '../../components/QuickAnswer.astro';
+import ContentFreshness from '../../components/ContentFreshness.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorityCitations from '../../components/AuthorityCitations.astro';
+
+const pageUrl = "https://weight-loss-surgery-australia.vercel.app/compare/surgery-vs-medication";
+
+const meta = {
+	title: "Weight Loss Surgery vs Medication (Ozempic, Wegovy, Mounjaro) | Australia 2025",
+	description: "Compare weight loss surgery vs GLP-1 medications like Ozempic, Wegovy, Mounjaro. Cost, results, long-term effectiveness, side effects. Which is right for you?",
+	keywords: ["surgery vs ozempic", "wegovy vs gastric sleeve", "mounjaro comparison", "weight loss medication australia"]
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description} canonicalUrl={pageUrl}>
+
+	<!-- Hero with Breadcrumbs -->
+	<section class="bg-gradient-to-br from-purple-50 to-white pt-6 pb-12">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<!-- Breadcrumbs -->
+			<div class="mb-6">
+				<Breadcrumbs items={[
+					{ name: "Compare", url: "/compare" },
+					{ name: "Surgery vs Medication", url: "/compare/surgery-vs-medication" }
+				]} />
+			</div>
+			
+			<!-- Hero Content -->
+			<div class="inline-block px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold mb-4">
+				According to OSSANZ Research 2025
+			</div>
+			<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+				Weight Loss Surgery vs Medication: Which Is Right for You?
+			</h1>
+			<p class="text-xl text-gray-600 mb-6">
+				Compare gastric sleeve/bypass surgery with GLP-1 medications like Ozempic, Wegovy, and Mounjaro. Get evidence-based insights on effectiveness, cost, and long-term results.
+			</p>
+			<ContentFreshness 
+				datePublished="2025-01-15"
+				dateModified="2025-10-16"
+			/>
+		</div>
+	</section>
+
+	<!-- Quick Answer -->
+	<section class="py-8 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<QuickAnswer 
+				question="Should I choose surgery or medication for weight loss?"
+				answer="Surgery (gastric sleeve/bypass) delivers 60-80% excess weight loss that's maintained long-term for $15,000-$30,000 one-time cost. GLP-1 medications (Ozempic, Wegovy) deliver 15-20% weight loss while taking them, costing $400-$600/month ongoing. Weight typically returns when medication stops."
+				details={[
+					"BMI 40+: Surgery more effective",
+					"BMI 30-35: Medication may be sufficient",
+					"Surgery: One-time cost, permanent tool",
+					"Medication: Ongoing expense, requires lifelong use"
+				]}
+				ctaText="Which is Right for Me?"
+				ctaLink="/am-i-ready"
+			/>
+		</div>
+	</section>
+
+	<!-- Quick Comparison Table -->
+	<section class="py-12 bg-white">
+		<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Quick Comparison</h2>
+			
+			<div class="overflow-x-auto">
+				<table class="w-full bg-white shadow-lg rounded-lg overflow-hidden">
+					<thead class="bg-gray-100">
+						<tr>
+							<th class="px-6 py-4 text-left font-semibold text-gray-900">Factor</th>
+							<th class="px-6 py-4 text-left font-semibold text-purple-600">Surgery (Gastric Sleeve/Bypass)</th>
+							<th class="px-6 py-4 text-left font-semibold text-blue-600">GLP-1 Medication (Ozempic/Wegovy)</th>
+						</tr>
+					</thead>
+					<tbody class="divide-y divide-gray-200">
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Weight Loss</td>
+							<td class="px-6 py-4 text-gray-700">60-80% of excess weight</td>
+							<td class="px-6 py-4 text-gray-700">15-20% of total weight</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Timeline</td>
+							<td class="px-6 py-4 text-gray-700">12-18 months to goal</td>
+							<td class="px-6 py-4 text-gray-700">12-18 months while taking</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Duration</td>
+							<td class="px-6 py-4 text-gray-700">Permanent tool</td>
+							<td class="px-6 py-4 text-gray-700">Must continue indefinitely</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Cost (1 Year)</td>
+							<td class="px-6 py-4 text-gray-700">$15,000-$30,000 (one-time)</td>
+							<td class="px-6 py-4 text-gray-700">$4,800-$7,200 (ongoing)</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Cost (5 Years)</td>
+							<td class="px-6 py-4 text-gray-700">~$20,000 total (incl. vitamins)</td>
+							<td class="px-6 py-4 text-gray-700">$24,000-$36,000</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Medicare Rebate</td>
+							<td class="px-6 py-4 text-gray-700">Yes ($1,500-$2,500)</td>
+							<td class="px-6 py-4 text-gray-700">No (not PBS listed for obesity)</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Insurance Coverage</td>
+							<td class="px-6 py-4 text-gray-700">Yes (with waiting period)</td>
+							<td class="px-6 py-4 text-gray-700">Rarely covered</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Invasiveness</td>
+							<td class="px-6 py-4 text-gray-700">Surgical procedure</td>
+							<td class="px-6 py-4 text-gray-700">Weekly/monthly injection</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Recovery</td>
+							<td class="px-6 py-4 text-gray-700">2-4 weeks off work</td>
+							<td class="px-6 py-4 text-gray-700">No downtime</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Side Effects</td>
+							<td class="px-6 py-4 text-gray-700">Surgical risks (2-3%)</td>
+							<td class="px-6 py-4 text-gray-700">Nausea, vomiting (30-40%)</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Diabetes Remission</td>
+							<td class="px-6 py-4 text-gray-700">60-90%</td>
+							<td class="px-6 py-4 text-gray-700">Improves but rarely cures</td>
+						</tr>
+						<tr class="bg-gray-50">
+							<td class="px-6 py-4 font-medium text-gray-900">Weight Regain Risk</td>
+							<td class="px-6 py-4 text-gray-700">15-20% regain some weight</td>
+							<td class="px-6 py-4 text-gray-700">Most regain when stopping</td>
+						</tr>
+						<tr>
+							<td class="px-6 py-4 font-medium text-gray-900">Best For</td>
+							<td class="px-6 py-4 text-gray-700">BMI 35+, severe obesity</td>
+							<td class="px-6 py-4 text-gray-700">BMI 27-35, mild to moderate</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</section>
+
+	<!-- Detailed Comparison -->
+	<section class="py-12 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8">Detailed Comparison</h2>
+
+			<!-- Effectiveness -->
+			<div class="bg-white rounded-xl shadow-sm p-8 mb-6">
+				<h3 class="text-2xl font-bold text-gray-900 mb-4">Weight Loss Effectiveness</h3>
+				
+				<div class="grid md:grid-cols-2 gap-8">
+					<div>
+						<h4 class="font-semibold text-purple-600 mb-3">Surgery</h4>
+						<p class="text-gray-700 mb-4">
+							According to OSSANZ data, gastric sleeve delivers 60-70% excess weight loss, gastric bypass 70-80%. Results maintained long-term in 70-80% of patients at 5 years.
+						</p>
+						<div class="bg-purple-50 p-4 rounded-lg">
+							<p class="text-sm font-medium text-gray-900 mb-2">Example:</p>
+							<p class="text-sm text-gray-700">Starting: 120kg (target 70kg, excess 50kg)<br>
+							After surgery: Lose 30-40kg<br>
+							End weight: 80-90kg</p>
+						</div>
+					</div>
+					
+					<div>
+						<h4 class="font-semibold text-blue-600 mb-3">GLP-1 Medication</h4>
+						<p class="text-gray-700 mb-4">
+							Clinical trials show 15-20% total body weight loss while taking medication. Weight typically returns to 60-70% of what was lost within 1 year of stopping.
+						</p>
+						<div class="bg-blue-50 p-4 rounded-lg">
+							<p class="text-sm font-medium text-gray-900 mb-2">Example:</p>
+							<p class="text-sm text-gray-700">Starting: 120kg<br>
+							While taking: Lose 18-24kg<br>
+							End weight: 96-102kg<br>
+							Stop meds: Regain 11-17kg</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Cost Analysis -->
+			<div class="bg-white rounded-xl shadow-sm p-8 mb-6">
+				<h3 class="text-2xl font-bold text-gray-900 mb-4">Cost Analysis (5-Year Comparison)</h3>
+				
+				<div class="space-y-6">
+					<div class="border-l-4 border-purple-500 pl-6">
+						<h4 class="font-semibold text-purple-600 mb-2">Surgery Total: $20,000-$25,000</h4>
+						<ul class="space-y-2 text-gray-700">
+							<li>• Year 1: $15,000-$30,000 (surgery)</li>
+							<li>• Years 2-5: $600-$1,200/year (vitamins)</li>
+							<li>• No ongoing medication costs</li>
+							<li>• Medicare rebate: $1,500-$2,500</li>
+							<li>• Insurance can reduce to $5,000-$10,000 out-of-pocket</li>
+						</ul>
+					</div>
+					
+					<div class="border-l-4 border-blue-500 pl-6">
+						<h4 class="font-semibold text-blue-600 mb-2">Medication Total: $24,000-$36,000</h4>
+						<ul class="space-y-2 text-gray-700">
+							<li>• $400-$600 per month</li>
+							<li>• $4,800-$7,200 per year</li>
+							<li>• Must continue indefinitely</li>
+							<li>• No Medicare subsidy for obesity</li>
+							<li>• Rarely covered by insurance</li>
+							<li>• 10 years: $48,000-$72,000</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="mt-6 bg-yellow-50 border-l-4 border-yellow-500 p-4">
+					<p class="text-sm font-semibold text-gray-900">Cost Crossover Point:</p>
+					<p class="text-sm text-gray-700">Surgery becomes more cost-effective after approximately 2-3 years of medication use.</p>
+				</div>
+			</div>
+
+			<!-- Lifestyle Impact -->
+			<div class="bg-white rounded-xl shadow-sm p-8 mb-6">
+				<h3 class="text-2xl font-bold text-gray-900 mb-4">Lifestyle Impact</h3>
+				
+				<div class="grid md:grid-cols-2 gap-8">
+					<div>
+						<h4 class="font-semibold text-purple-600 mb-3">Surgery</h4>
+						<ul class="space-y-3">
+							<li class="flex items-start gap-2">
+								<span class="text-green-500 mt-1">✓</span>
+								<span class="text-gray-700">Permanent tool for weight management</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-green-500 mt-1">✓</span>
+								<span class="text-gray-700">No daily medication routine</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-green-500 mt-1">✓</span>
+								<span class="text-gray-700">Can eat normal foods (smaller portions)</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-red-500 mt-1">✗</span>
+								<span class="text-gray-700">Requires 2-4 weeks recovery</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-red-500 mt-1">✗</span>
+								<span class="text-gray-700">Lifelong vitamin supplements</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-red-500 mt-1">✗</span>
+								<span class="text-gray-700">Permanent dietary restrictions</span>
+							</li>
+						</ul>
+					</div>
+					
+					<div>
+						<h4 class="font-semibold text-blue-600 mb-3">Medication</h4>
+						<ul class="space-y-3">
+							<li class="flex items-start gap-2">
+								<span class="text-green-500 mt-1">✓</span>
+								<span class="text-gray-700">No surgery or recovery time</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-green-500 mt-1">✓</span>
+								<span class="text-gray-700">Can eat normally</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-green-500 mt-1">✓</span>
+								<span class="text-gray-700">Can stop if side effects unbearable</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-red-500 mt-1">✗</span>
+								<span class="text-gray-700">Weekly/monthly injections forever</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-red-500 mt-1">✗</span>
+								<span class="text-gray-700">30-40% experience nausea/vomiting</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-red-500 mt-1">✗</span>
+								<span class="text-gray-700">Weight returns when stopping</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- When to Choose Each -->
+	<section class="py-12 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">When to Choose Each Option</h2>
+			
+			<div class="grid md:grid-cols-2 gap-8">
+				<div class="bg-purple-50 rounded-xl p-8">
+					<h3 class="text-2xl font-bold text-purple-900 mb-4">Choose Surgery If:</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start gap-3">
+							<span class="text-purple-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">BMI 40+ or BMI 35+ with health conditions</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-purple-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">Want one-time solution vs lifelong medication</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-purple-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">Have type 2 diabetes (highest remission rates)</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-purple-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">Tried medication without success</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-purple-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">Can afford $15,000-$30,000 or have insurance</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-purple-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">Want maximum long-term weight loss</span>
+						</li>
+					</ul>
+					<a href="/procedures/gastric-sleeve" class="mt-6 block bg-purple-600 text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-purple-700 transition">
+						Explore Surgery Options
+					</a>
+				</div>
+				
+				<div class="bg-blue-50 rounded-xl p-8">
+					<h3 class="text-2xl font-bold text-blue-900 mb-4">Choose Medication If:</h3>
+					<ul class="space-y-3">
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">BMI 27-35 (too low for surgery eligibility)</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">Want to avoid surgery/prefer non-invasive</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">Can't take time off work for recovery</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">Want to "test" weight loss tools first</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">Can afford $400-$600/month indefinitely</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-blue-600 font-bold mt-1">•</span>
+							<span class="text-gray-800">Have contraindications to surgery</span>
+						</li>
+					</ul>
+					<a href="/contact" class="mt-6 block bg-blue-600 text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-blue-700 transition">
+						Discuss with Doctor
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- FAQ Section -->
+	<section class="py-12 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Common Questions</h2>
+			
+			<div class="space-y-4">
+				<details class="bg-white rounded-lg p-6 group">
+					<summary class="font-semibold text-lg text-gray-900 cursor-pointer">
+						Can I try medication first, then surgery later?
+					</summary>
+					<div class="mt-4 text-gray-700">
+						Yes! Many patients try GLP-1 medications first. If you lose weight successfully but can't sustain the cost or side effects, or if weight returns when stopping, surgery is still an option. Some surgeons actually recommend trying medication during the surgery waiting period.
+					</div>
+				</details>
+
+				<details class="bg-white rounded-lg p-6 group">
+					<summary class="font-semibold text-lg text-gray-900 cursor-pointer">
+						Can I use medication after surgery to boost results?
+					</summary>
+					<div class="mt-4 text-gray-700">
+						Yes, some surgeons prescribe GLP-1 medications post-surgery for patients who experience weight regain or didn't reach goal weight. The combination can be effective. Discuss with your surgeon if you're considering this.
+					</div>
+				</details>
+
+				<details class="bg-white rounded-lg p-6 group">
+					<summary class="font-semibold text-lg text-gray-900 cursor-pointer">
+						What if I can't afford either option?
+					</summary>
+					<div class="mt-4 text-gray-700">
+						Surgery has more financing options: private health insurance (reduces cost to $5,000-$10,000), payment plans, medical loans, superannuation early release. Medication is rarely covered and requires ongoing cash payment. Public hospital surgery is free but has 12-24 month waiting list.
+					</div>
+				</details>
+
+				<details class="bg-white rounded-lg p-6 group">
+					<summary class="font-semibold text-lg text-gray-900 cursor-pointer">
+						Is medication safer than surgery?
+					</summary>
+					<div class="mt-4 text-gray-700">
+						Different risk profiles. Surgery: 2-3% major complications, 0.1-0.2% mortality (same as gallbladder removal). Medication: 30-40% experience nausea/vomiting, rare cases of pancreatitis, thyroid concerns. Long-term medication safety data is still emerging. Surgery has 30+ years of safety data.
+					</div>
+				</details>
+			</div>
+		</div>
+	</section>
+
+	<!-- Authority Citations -->
+	<section class="py-12 bg-white">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<AuthorityCitations />
+		</div>
+	</section>
+
+	<!-- CTA -->
+	<section class="py-16 bg-blue-600">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+			<h2 class="text-3xl font-bold text-white mb-4">Ready to Decide?</h2>
+			<p class="text-xl text-blue-100 mb-8">
+				Discuss your options with an experienced bariatric surgeon
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 justify-center">
+				<a href="/contact" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
+					Book Free Consultation
+				</a>
+				<a href="/am-i-ready" class="bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition">
+					Take Readiness Quiz
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Schema Markup -->
+	<script type="application/ld+json" is:inline set:html={JSON.stringify({
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": [
+			{
+				"@type": "Question",
+				"name": "Can I try medication first, then surgery later?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Yes! Many patients try GLP-1 medications first. If you lose weight successfully but can't sustain the cost or side effects, or if weight returns when stopping, surgery is still an option."
+				}
+			},
+			{
+				"@type": "Question",
+				"name": "Is weight loss surgery more effective than Ozempic or Wegovy?",
+				"acceptedAnswer": {
+					"@type": "Answer",
+					"text": "Yes. Surgery delivers 60-80% excess weight loss vs 15-20% total weight loss with medication. Surgery results are maintained long-term in 70-80% of patients, while medication weight typically returns when stopping."
+				}
+			}
+		]
+	})} />
+
+</BaseLayout>
+

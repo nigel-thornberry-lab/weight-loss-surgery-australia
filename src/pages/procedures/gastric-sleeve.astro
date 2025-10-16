@@ -3,6 +3,10 @@ import '../../styles/global.css';
 import { seoMeta } from '../../data/seo-meta';
 import RelatedContent from '../../components/RelatedContent.astro';
 import SurgeonCTA from '../../components/SurgeonCTA.astro';
+import QuickAnswer from '../../components/QuickAnswer.astro';
+import ContentFreshness from '../../components/ContentFreshness.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import AuthorityCitations from '../../components/AuthorityCitations.astro';
 
 const meta = seoMeta.gastricSleeve;
 const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/gastric-sleeve";
@@ -49,7 +53,7 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 					"description": "Comprehensive guide to gastric sleeve surgery in Australia including costs, recovery, eligibility and finding qualified surgeons.",
 					"inLanguage": "en-AU",
 					"datePublished": "2025-01-03",
-					"dateModified": "2025-01-03",
+					"dateModified": "2025-10-16",
 					"specialty": {
 						"@type": "MedicalSpecialty",
 						"name": "Bariatric Surgery"
@@ -190,17 +194,10 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 		<!-- Breadcrumbs -->
 		<div class="bg-gray-50 border-b border-gray-200">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-				<div class="flex items-center space-x-2 text-sm">
-					<a href="/" class="text-gray-600 hover:text-blue-600">Home</a>
-					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-					</svg>
-					<a href="/procedures" class="text-gray-600 hover:text-blue-600">Procedures</a>
-					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-					</svg>
-					<span class="text-gray-900 font-medium">Gastric Sleeve Surgery</span>
-				</div>
+				<Breadcrumbs items={[
+					{ name: "Procedures", url: "/procedures" },
+					{ name: "Gastric Sleeve Surgery", url: "/procedures/gastric-sleeve" }
+				]} />
 			</div>
 		</div>
 
@@ -246,6 +243,29 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<!-- Quick Answer & Freshness -->
+		<section class="py-8 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<ContentFreshness 
+				datePublished="2025-01-03"
+				dateModified="2025-10-16"
+			/>
+				
+				<QuickAnswer 
+					question="How much does gastric sleeve surgery cost in Australia?"
+					answer="$15,000-$25,000 total cost. With private health insurance, expect $5,000-$10,000 out-of-pocket. Medicare provides a $1,500-$2,000 rebate for eligible patients."
+					details={[
+						"Surgeon fees: $8,000-$12,000",
+						"Hospital fees: $5,000-$10,000",
+						"Anesthetist fees: $2,000-$3,000",
+						"12-month waiting period for insurance coverage"
+					]}
+					ctaText="Calculate Your Exact Cost"
+					ctaLink="/cost-calculator"
+				/>
 			</div>
 		</section>
 
@@ -1040,6 +1060,13 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 		</section>
 
 		<!-- FAQs -->
+		<!-- Authority Citations -->
+		<section class="py-12 bg-gray-50">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<AuthorityCitations />
+			</div>
+		</section>
+
 		<section class="py-16 bg-white">
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 				<h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Frequently Asked Questions</h2>
