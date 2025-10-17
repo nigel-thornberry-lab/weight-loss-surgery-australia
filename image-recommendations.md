@@ -191,3 +191,137 @@ A diverse group of 3-4 Australian adults (ages 30-50, mixed genders) in casual, 
 5. **Quality and Care** - Shows attention to detail and professionalism
 
 These images will transform the site from sterile and text-heavy to warm, trustworthy, and visually engaging while maintaining the professional medical credibility essential for this sensitive healthcare topic.
+
+---
+
+## Additional Pages Needing Visual Enhancement
+
+### 5. Am I Ready Assessment Page Hero
+**Page:** https://weight-loss-surgery-australia-7uslm8v19.vercel.app/am-i-ready  
+**Location:** Hero section above the fold  
+**Current Issue:** Text-only introduction without visual support
+
+### Image Prompt:
+```
+A thoughtful, introspective scene of a person (30-45 years old) sitting comfortably in a modern Australian home or office setting, looking at a tablet or laptop screen with a contemplative but hopeful expression. They should appear to be taking an assessment or quiz, with soft natural lighting. The setting should feel safe, private, and non-judgmental. Include subtle elements like a cup of tea, comfortable seating, and warm Australian interior design. The person should look like they're in a moment of honest self-reflection, ready to explore their options.
+```
+
+### Reasoning:
+- **Relatability:** Shows someone in the same situation as the user
+- **Privacy & Safety:** Comfortable, private setting encourages honest reflection
+- **Non-judgmental:** Warm, supportive environment reduces anxiety
+- **Modern & Accessible:** Technology suggests easy, accessible assessment
+
+---
+
+### 6. Gastric Bypass Procedure Page Hero
+**Page:** https://weight-loss-surgery-australia-7uslm8v19.vercel.app/procedures/gastric-bypass  
+**Location:** Hero section above the fold  
+**Current Issue:** Text-heavy introduction without visual context
+
+### Image Prompt:
+```
+A professional medical illustration showing the gastric bypass procedure with clear, educational diagrams. The illustration should show the stomach and small intestine with the bypass route highlighted in soft medical colors (blues, greens, whites). Include before/after comparison of the digestive system. The style should be clean, professional, and educational but not intimidating. Add a small inset showing a confident, healthy person (35-50 years old) in casual Australian setting, looking vibrant and healthy post-surgery.
+```
+
+### Reasoning:
+- **Educational Value:** Helps patients understand the complex procedure
+- **Professional Credibility:** Medical illustration shows expertise
+- **Reduces Fear:** Clean, educational style is less intimidating
+- **Success Visualization:** Healthy person shows positive outcomes
+
+---
+
+### 7. Gastric Balloon Procedure Page Hero
+**Page:** https://weight-loss-surgery-australia-7uslm8v19.vercel.app/procedures/gastric-balloon  
+**Location:** Hero section above the fold  
+**Current Issue:** Text-heavy introduction without visual context
+
+### Image Prompt:
+```
+A professional medical illustration showing the gastric balloon procedure with clear, educational diagrams. The illustration should show the stomach with the balloon inserted, highlighting the non-surgical nature of the procedure. Use soft, calming colors (blues, whites, light greens) and clean medical illustration style. Include a small inset showing a person (30-45 years old) in a modern Australian medical setting, looking comfortable and confident during the procedure consultation.
+```
+
+### Reasoning:
+- **Non-surgical Appeal:** Shows the less invasive nature of the procedure
+- **Educational Value:** Helps patients understand how the balloon works
+- **Reduces Anxiety:** Non-surgical imagery is less intimidating
+- **Professional Credibility:** Medical illustration shows expertise
+
+---
+
+### 8. Surgeon Directory Page Hero
+**Page:** https://weight-loss-surgery-australia-7uslm8v19.vercel.app/surgeons  
+**Location:** Hero section above the fold  
+**Current Issue:** Text-only introduction without visual support
+
+### Image Prompt:
+```
+A professional group of 3-4 Australian bariatric surgeons (ages 40-60, mixed genders) in clean white coats, standing together in a modern Australian hospital or medical center. They should appear confident, experienced, and approachable. The setting should be professional but welcoming, with modern Australian medical aesthetics. Include subtle elements like medical equipment, certificates, or Australian medical center architecture. The surgeons should look like a team you can trust with your health.
+```
+
+### Reasoning:
+- **Professional Credibility:** Group of surgeons builds trust and expertise
+- **Team Approach:** Shows collaborative, comprehensive care
+- **Australian Context:** Local medical professionals build trust
+- **Experience:** Mature, experienced appearance suggests expertise
+
+---
+
+### 9. Cost Calculator Page Hero
+**Page:** https://weight-loss-surgery-australia-7uslm8v19.vercel.app/cost-calculator  
+**Location:** Hero section above the fold  
+**Current Issue:** Text-only introduction without visual support
+
+### Image Prompt:
+```
+A clean, modern Australian home or office setting with a person (30-45 years old) sitting at a desk or table, looking at a laptop or tablet screen showing financial planning or cost calculation interface. They should appear thoughtful but optimistic, with documents or notes nearby. The setting should feel professional yet approachable, with soft natural lighting. Include subtle Australian elements like native plants or architecture. The person should look like they're making informed financial decisions about their health.
+```
+
+### Reasoning:
+- **Financial Planning:** Shows the practical, planning aspect of the decision
+- **Relatability:** Person in similar situation to the user
+- **Professional Approach:** Suggests serious, informed decision-making
+- **Australian Context:** Local setting builds trust and relatability
+
+---
+
+### 10. Blog Post Hero Images
+**Pages:** Various blog posts  
+**Location:** Hero section above the fold  
+**Current Issue:** Text-only blog posts without visual engagement
+
+### Image Prompt:
+```
+A warm, supportive scene of a person (30-50 years old) in a modern Australian home or medical setting, reading or reviewing health information on a tablet or laptop. They should appear engaged, informed, and hopeful. The setting should be comfortable and non-clinical, with soft natural lighting. Include subtle Australian elements like native plants or architecture. The person should look like they're actively learning and taking control of their health journey.
+```
+
+### Reasoning:
+- **Engagement:** Shows active learning and information consumption
+- **Relatability:** Person in similar situation to the reader
+- **Empowerment:** Suggests taking control of health decisions
+- **Australian Context:** Local setting builds trust and relatability
+
+---
+
+## Implementation Priority
+
+### Phase 1 (High Impact, Low Effort):
+1. **Am I Ready Assessment Page** - High conversion page, needs trust
+2. **Gastric Bypass Procedure Page** - Major procedure, needs education
+3. **Gastric Balloon Procedure Page** - Non-surgical option, needs clarity
+
+### Phase 2 (Medium Impact, Medium Effort):
+4. **Surgeon Directory Page** - Builds credibility for surgeon selection
+5. **Cost Calculator Page** - Financial decision support
+
+### Phase 3 (Lower Impact, Higher Effort):
+6. **Blog Post Images** - Multiple blog posts need individual images
+
+## Technical Implementation Notes
+
+- **Image Format:** All images should be converted to WebP for performance
+- **Loading Strategy:** Above-fold images use `loading="eager"`, below-fold use `loading="lazy"`
+- **Responsive Design:** Images should work across all device sizes
+- **Alt Text:** Descriptive alt text for accessibility
+- **Performance:** Optimize file sizes for fast loading
