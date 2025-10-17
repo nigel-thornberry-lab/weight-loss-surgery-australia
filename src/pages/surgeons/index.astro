@@ -237,12 +237,24 @@ const canonicalUrl = "https://weightlosssurgery.com.au/surgeons";
 <BaseLayout title={title} description={description} canonicalUrl={canonicalUrl}>
   <section class="bg-gradient-to-br from-blue-50 to-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
-        Find Your Bariatric Surgeon
-      </h1>
-      <p class="text-xl text-gray-600 text-center mb-8">
-        Browse experienced weight loss surgery specialists by location
-      </p>
+      <div class="grid lg:grid-cols-12 gap-8 items-center mb-12">
+        <div class="lg:col-span-7">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Find My Bariatric Surgeon
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Browse experienced weight loss surgery specialists by location
+          </p>
+        </div>
+        <div class="hidden lg:block lg:col-span-5">
+          <img 
+            src="/images/surgeon.webp" 
+            alt="Professional group of Australian bariatric surgeons in medical setting"
+            class="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+            loading="eager"
+          />
+        </div>
+      </div>
       
       <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
         {cities.map((city) => (

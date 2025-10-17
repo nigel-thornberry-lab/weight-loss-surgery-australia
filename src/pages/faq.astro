@@ -600,7 +600,7 @@ const meta = {
 
 	<!-- Hero with Breadcrumbs -->
 	<section class="bg-gradient-to-br from-blue-50 to-white pt-6 pb-12">
-		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<!-- Breadcrumbs -->
 			<div class="mb-6">
 				<Breadcrumbs items={[
@@ -609,17 +609,27 @@ const meta = {
 			</div>
 			
 			<!-- Hero Content -->
-			<div class="text-center">
-				<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-					Weight Loss Surgery: 100+ Questions Answered
-				</h1>
-				<p class="text-xl text-gray-600 mb-6">
-					Honest, comprehensive answers to everything you need to know about bariatric surgery in Australia
-				</p>
-				<ContentFreshness 
-					datePublished="2025-01-15"
-					dateModified="2025-10-16"
-				/>
+			<div class="grid lg:grid-cols-12 gap-8 items-center">
+				<div class="lg:col-span-7">
+					<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+						Weight Loss Surgery: 100+ Questions Answered
+					</h1>
+					<p class="text-xl text-gray-600 mb-6">
+						Honest, comprehensive answers to everything you need to know about bariatric surgery in Australia
+					</p>
+					<ContentFreshness 
+						datePublished="2025-01-15"
+						dateModified="2025-10-16"
+					/>
+				</div>
+				<div class="hidden lg:block lg:col-span-5">
+					<img 
+						src="/images/FAQ.webp" 
+						alt="Friendly medical professional answering questions about weight loss surgery"
+						class="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
+						loading="eager"
+					/>
+				</div>
 			</div>
 		</div>
 	</section>
