@@ -14,7 +14,7 @@ export const seoMeta: Record<string, PageMeta> = {
   // Homepage
   home: {
     title: "Weight Loss Surgery Australia - Compare Gastric Sleeve, Bypass & Costs 2025",
-    description: "Compare gastric sleeve, bypass & bariatric surgery in Australia. Transparent pricing $15k-30k, Medicare rebates, qualified surgeons. Book free consultation today.",
+    description: "Compare gastric sleeve, bypass & bariatric surgery in Australia. Transparent pricing $15k-30k, Medicare rebates, qualified surgeons. Book consultation today.",
     keywords: ["weight loss surgery australia", "gastric sleeve", "gastric bypass", "bariatric surgery", "surgery cost"]
   },
 
@@ -28,13 +28,13 @@ export const seoMeta: Record<string, PageMeta> = {
   // Individual Procedure Pages
   gastricSleeve: {
     title: "Gastric Sleeve Surgery Australia - Cost, Recovery & Results 2025",
-    description: "Gastric sleeve surgery in Australia: $15k-25k cost, 60-70% weight loss, 2-3 week recovery. Compare surgeons, Medicare rebates & financing. Book free consultation.",
+    description: "Gastric sleeve surgery in Australia: $15k-25k cost, 60-70% weight loss, 2-3 week recovery. Compare surgeons, Medicare rebates & financing. Book consultation.",
     keywords: ["gastric sleeve australia", "sleeve gastrectomy", "gastric sleeve cost", "VSG surgery"]
   },
 
   gastricBypass: {
     title: "Gastric Bypass Surgery Australia - Cost, Procedure & Success Rate 2025",
-    description: "Gastric bypass in Australia: $18k-30k cost, 70-80% weight loss, best for diabetes. Compare RYGB surgeons, Medicare coverage & payment plans. Free consultation.",
+    description: "Gastric bypass in Australia: $18k-30k cost, 70-80% weight loss, best for diabetes. Compare RYGB surgeons, Medicare coverage & payment plans. Book consultation.",
     keywords: ["gastric bypass australia", "RYGB", "gastric bypass cost", "bypass surgery"]
   },
 
@@ -52,7 +52,7 @@ export const seoMeta: Record<string, PageMeta> = {
 
   duodenalSwitch: {
     title: "Duodenal Switch Surgery Australia - Cost, Results & Surgeons 2025",
-    description: "Duodenal switch (BPD-DS): $25k-35k, maximum weight loss 70-80%, most complex procedure. Find experienced surgeons in Australia. Free consultation.",
+    description: "Duodenal switch (BPD-DS): $25k-35k, maximum weight loss 70-80%, most complex procedure. Find experienced surgeons in Australia. Book consultation.",
     keywords: ["duodenal switch", "BPD-DS", "biliopancreatic diversion"]
   },
 
@@ -90,19 +90,19 @@ export const seoMeta: Record<string, PageMeta> = {
 
   melbourne: {
     title: "Weight Loss Surgery Melbourne - Best Surgeons, Prices & Clinics 2025",
-    description: "Melbourne bariatric surgery: Compare top surgeons, costs & clinics. Gastric sleeve, bypass & band options. Medicare rebates available. Free consultations Melbourne-wide.",
+    description: "Melbourne bariatric surgery: Compare top surgeons, costs & clinics. Gastric sleeve, bypass & band options. Medicare rebates available. Consultations Melbourne-wide.",
     keywords: ["weight loss surgery melbourne", "gastric sleeve melbourne", "bariatric surgeon melbourne"]
   },
 
   brisbane: {
     title: "Weight Loss Surgery Brisbane - Surgeons, Costs & Hospital Options 2025",
-    description: "Weight loss surgery Brisbane: Find qualified surgeons, compare costs, hospital options. Gastric sleeve $15k-25k, bypass $18k-30k. Book free consultation today.",
+    description: "Weight loss surgery Brisbane: Find qualified surgeons, compare costs, hospital options. Gastric sleeve $15k-25k, bypass $18k-30k. Book consultation today.",
     keywords: ["weight loss surgery brisbane", "gastric sleeve brisbane", "bariatric surgeon brisbane"]
   },
 
   perth: {
     title: "Weight Loss Surgery Perth - Compare Surgeons, Costs & Procedures 2025",
-    description: "Perth bariatric surgery: Find experienced surgeons, compare procedure costs, read patient reviews. Medicare & private health insurance options. Free consultation.",
+    description: "Perth bariatric surgery: Find experienced surgeons, compare procedure costs, read patient reviews. Medicare & private health insurance options. Book consultation.",
     keywords: ["weight loss surgery perth", "gastric sleeve perth", "bariatric surgeon perth"]
   },
 
@@ -114,7 +114,7 @@ export const seoMeta: Record<string, PageMeta> = {
 
   goldCoast: {
     title: "Weight Loss Surgery Gold Coast - Find Surgeons, Costs & Reviews 2025",
-    description: "Gold Coast bariatric surgery: Compare surgeons, costs & patient reviews. Gastric sleeve, bypass & band procedures. Medicare & insurance options. Free consultation.",
+    description: "Gold Coast bariatric surgery: Compare surgeons, costs & patient reviews. Gastric sleeve, bypass & band procedures. Medicare & insurance options. Book consultation.",
     keywords: ["weight loss surgery gold coast", "gastric sleeve gold coast"]
   },
 
@@ -217,8 +217,8 @@ export const seoMeta: Record<string, PageMeta> = {
   },
 
   contact: {
-    title: "Contact Us - Weight Loss Surgery Australia | Book Free Consultation",
-    description: "Contact Weight Loss Surgery Australia for free consultation. Phone 1300 000 000, email info@wlsaustralia.com.au. Get personalised advice from bariatric surgery experts.",
+    title: "Contact Us - Weight Loss Surgery Australia | Book Consultation",
+    description: "Contact Weight Loss Surgery Australia for consultation. Phone 1300 000 000, email info@wlsaustralia.com.au. Get personalised advice from bariatric surgery experts.",
     keywords: ["contact", "consultation", "book appointment"]
   },
 
@@ -258,7 +258,7 @@ export function generateLocationMeta(city: string, state?: string): PageMeta {
 export function generateProcedureCityMeta(procedure: string, city: string): PageMeta {
   return {
     title: `${procedure} Surgery ${city} - Costs, Surgeons & Reviews 2025`,
-    description: `${procedure} surgery in ${city}: Find experienced surgeons, compare costs, read patient reviews. Medicare & private health insurance options. Book free consultation.`,
+    description: `${procedure} surgery in ${city}: Find experienced surgeons, compare costs, read patient reviews. Medicare & private health insurance options. Book consultation.`,
     keywords: [`${procedure.toLowerCase()} ${city.toLowerCase()}`, `${procedure.toLowerCase()} surgery ${city.toLowerCase()}`]
   };
 }
