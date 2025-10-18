@@ -224,45 +224,63 @@ const pageUrl = "https://weight-loss-surgery-australia.vercel.app/locations/sydn
 			</div>
 		</div>
 
-		<!-- Hero Section -->
-		<section class="bg-gradient-to-br from-blue-50 to-white py-12 md:py-16">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="max-w-4xl">
-					<div class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">
-						Sydney, NSW
-					</div>
-					<h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-						Weight Loss Surgery in Sydney
-					</h1>
-					<p class="text-xl text-gray-600 mb-8">
-						Connect with experienced, AHPRA-registered bariatric surgeons across Sydney and surrounding areas. Get transparent pricing, expert guidance, and comprehensive support for your weight loss journey.
-					</p>
-					<div class="flex flex-col sm:flex-row gap-4 mb-8">
-						<a href="/sydney/consultation" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-center text-lg font-semibold">
-							Book Consultation
-						</a>
-						<a href="/sydney/cost" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-center text-lg font-semibold">
-							View Cost Breakdown
-						</a>
-					</div>
-					<div class="flex flex-wrap items-center gap-6 text-sm text-gray-600">
-						<div class="flex items-center">
-							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-							</svg>
-							AHPRA-Registered Surgeons
+		<!-- Hero Section with Image -->
+		<section class="relative h-[500px] md:h-[600px] overflow-hidden">
+			<!-- Background Image -->
+			<picture>
+				<source srcset="/images/sydney.webp" type="image/webp">
+				<img 
+					src="/images/sydney.jpg" 
+					alt="Sydney skyline and harbor - weight loss surgery location in Sydney NSW"
+					class="absolute inset-0 w-full h-full object-cover"
+					loading="eager"
+					width="5858"
+					height="2441"
+				/>
+			</picture>
+			<!-- Overlay Gradient -->
+			<div class="absolute inset-0 bg-gradient-to-r from-blue-900/85 via-blue-800/70 to-blue-900/60"></div>
+			
+			<!-- Hero Content -->
+			<div class="relative h-full flex items-center">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+					<div class="max-w-3xl">
+						<div class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">
+							Sydney, NSW
 						</div>
-						<div class="flex items-center">
-							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-							</svg>
-							Medicare Rebates Available
+						<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+							Weight Loss Surgery in Sydney
+						</h1>
+						<p class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+							Connect with experienced, AHPRA-registered bariatric surgeons across Sydney and surrounding areas. Get transparent pricing, expert guidance, and comprehensive support for your weight loss journey.
+						</p>
+						<div class="flex flex-col sm:flex-row gap-4 mb-8">
+							<a href="/sydney/consultation" class="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-lg font-semibold text-center shadow-xl">
+								Book Consultation
+							</a>
+							<a href="/sydney/cost" class="bg-blue-600/80 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold text-center border-2 border-white/30 shadow-xl">
+								View Cost Breakdown
+							</a>
 						</div>
-						<div class="flex items-center">
-							<svg class="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-							</svg>
-							Multiple Hospital Locations
+						<div class="flex flex-wrap items-center gap-6 text-sm text-white/90">
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								AHPRA-Registered Surgeons
+							</div>
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								Medicare Rebates Available
+							</div>
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+								</svg>
+								Multiple Hospital Locations
+							</div>
 						</div>
 					</div>
 				</div>
@@ -979,91 +997,6 @@ const pageUrl = "https://weight-loss-surgery-australia.vercel.app/locations/sydn
 			</div>
 		</section>
 
-		<!-- Testimonials -->
-		<section class="py-16 bg-white">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="text-center mb-12">
-					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Sydney Patient Success Stories</h2>
-					<p class="text-xl text-gray-600">Real results from patients across Sydney</p>
-				</div>
-
-				<div class="grid md:grid-cols-3 gap-8">
-					<div class="bg-gray-50 rounded-xl p-8">
-						<div class="flex items-center mb-4">
-							<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl mr-4">S</div>
-							<div>
-								<h4 class="font-bold text-gray-900">Sarah M.</h4>
-								<p class="text-sm text-gray-600">Parramatta, NSW</p>
-							</div>
-						</div>
-						<div class="mb-4">
-							<span class="text-sm font-semibold text-[#6c95ef]">Gastric Sleeve • Lost 45kg</span>
-						</div>
-						<p class="text-gray-700 italic mb-4">
-							"Having my surgery at Westmead Private Hospital was the best decision I ever made. My surgeon was incredibly experienced and the staff were so caring. I'm now 18 months post-op and have lost 45kg. I can finally play with my kids at the park without getting exhausted."
-						</p>
-						<div class="flex items-center text-sm text-gray-600">
-							<svg class="w-4 h-4 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-							</svg>
-							Type 2 diabetes in remission
-						</div>
-					</div>
-
-					<div class="bg-gray-50 rounded-xl p-8">
-						<div class="flex items-center mb-4">
-							<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl mr-4">J</div>
-							<div>
-								<h4 class="font-bold text-gray-900">James T.</h4>
-								<p class="text-sm text-gray-600">Bondi Junction, NSW</p>
-							</div>
-						</div>
-						<div class="mb-4">
-							<span class="text-sm font-semibold text-[#6c95ef]">Gastric Bypass • Lost 62kg</span>
-						</div>
-						<p class="text-gray-700 italic mb-4">
-							"I chose gastric bypass because of my diabetes. The Mater Hospital team was fantastic from consultation through to recovery. My diabetes is now completely resolved and I've lost over 60kg. The support groups in Sydney have been invaluable for staying on track."
-						</p>
-						<div class="flex items-center text-sm text-gray-600">
-							<svg class="w-4 h-4 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-							</svg>
-							No longer needs sleep apnoea machine
-						</div>
-					</div>
-
-					<div class="bg-gray-50 rounded-xl p-8">
-						<div class="flex items-center mb-4">
-							<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl mr-4">M</div>
-							<div>
-								<h4 class="font-bold text-gray-900">Michelle K.</h4>
-								<p class="text-sm text-gray-600">Miranda, NSW</p>
-							</div>
-						</div>
-						<div class="mb-4">
-							<span class="text-sm font-semibold text-[#6c95ef]">Gastric Sleeve • Lost 38kg</span>
-						</div>
-						<p class="text-gray-700 italic mb-4">
-							"I was nervous about surgery but my surgeon at St George Private Hospital explained everything so well. The recovery was easier than I expected. I'm 10 months post-op, down 38kg, and my blood pressure is back to normal. Best investment in my health I've ever made."
-						</p>
-						<div class="flex items-center text-sm text-gray-600">
-							<svg class="w-4 h-4 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-							</svg>
-							Blood pressure normalised
-						</div>
-					</div>
-				</div>
-
-				<div class="mt-12 bg-blue-50 rounded-xl p-8 text-center">
-					<h3 class="text-2xl font-bold text-gray-900 mb-4">Join Thousands of Successful Sydney Patients</h3>
-					<p class="text-gray-700 mb-6">Take the first step towards a healthier future with support from Sydney's top bariatric surgeons</p>
-					<a href="/sydney/consultation" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-lg font-semibold">
-						Book Your Consultation
-					</a>
-				</div>
-			</div>
-		</section>
 
 		<!-- Travel & Accessibility -->
 		<section class="py-16 bg-gray-50">

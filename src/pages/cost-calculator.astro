@@ -55,7 +55,7 @@ const schemaMarkup = {
           <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
           </svg>
-          <span class="font-medium">Free & No Obligation</span>
+          <span class="font-medium">No Obligation</span>
         </div>
         <div class="flex items-center">
           <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -80,7 +80,7 @@ const schemaMarkup = {
             <span class="text-sm font-medium text-gray-700" id="progress-percentage">25%</span>
           </div>
           <div class="w-full bg-gray-200 rounded-full h-2">
-            <div class="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full transition-all duration-300" id="progress-bar" style="width: 25%"></div>
+            <div class="bg-blue-600 h-2 rounded-full transition-all duration-300" id="progress-bar" style="width: 25%"></div>
           </div>
         </div>
 
@@ -373,9 +373,24 @@ const schemaMarkup = {
               </div>
             </div>
 
-            <button type="button" id="calculate-btn" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-xl font-bold py-5 rounded-xl shadow-lg transition">
+            <button type="button" id="calculate-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-xl font-bold py-5 rounded-xl shadow-lg transition">
               Calculate My True Costs 🎯
             </button>
+
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mt-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="w-5 h-5 text-amber-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm text-amber-800">
+                    <strong>Disclaimer:</strong> Actual costs may vary significantly depending on your chosen surgeon, hospital, location, insurance coverage, and any additional procedures or complications. This calculator provides estimates only.
+                  </p>
+                </div>
+              </div>
+            </div>
 
             <p class="text-xs text-gray-500 text-center mt-4">
               🔒 This info stays confidential and helps us show how much money you could save on medications
@@ -417,9 +432,25 @@ const schemaMarkup = {
         <!-- Main Cost Card -->
         <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 mb-8">
           <div class="text-center mb-8">
-            <div class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg mb-4">
+            <div class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg mb-4">
               <p class="text-sm font-medium uppercase tracking-wide">Your Total Out-of-Pocket</p>
               <p class="text-4xl md:text-5xl font-bold" id="out-of-pocket-amount">$7,200</p>
+            </div>
+            
+            <!-- Cost Disclaimer -->
+            <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-6">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg class="w-5 h-5 text-amber-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <p class="text-sm text-amber-800">
+                    <strong>Important:</strong> These are estimates only. Actual costs may vary significantly based on your chosen surgeon, hospital, location, insurance coverage, and any additional procedures or complications.
+                  </p>
+                </div>
+              </div>
             </div>
             
             <div class="flex items-center justify-center gap-4 text-gray-600 mb-4">
@@ -616,7 +647,7 @@ const schemaMarkup = {
         </div>
 
         <!-- EMAIL CAPTURE SECTION -->
-        <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl p-8 md:p-12 text-white">
+        <div class="max-w-4xl mx-auto bg-blue-600 rounded-2xl shadow-2xl p-8 md:p-12 text-white">
           <div class="text-center mb-8">
             <h3 class="text-3xl md:text-4xl font-bold mb-4">
               📥 Get Your Complete Surgical Cost Package
@@ -719,7 +750,7 @@ const schemaMarkup = {
         </div>
 
         <div class="flex flex-col gap-3">
-          <button id="continue-calculator" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-4 rounded-lg font-bold transition">
+          <button id="continue-calculator" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-lg font-bold transition">
             See My Complete Results →
           </button>
           <button id="exit-anyway" class="w-full text-gray-600 hover:text-gray-900 font-medium">
@@ -1169,13 +1200,13 @@ const schemaMarkup = {
           <div class="bg-white border-2 border-gray-300 rounded-xl p-6">
             <h4 class="text-lg font-bold text-gray-900 mb-3">Option 3: Superannuation Early Release</h4>
             <ul class="space-y-2 text-gray-700">
-              <li>• Release up to <strong>$10,000 from super</strong></li>
-              <li>• On compassionate grounds (life-threatening obesity)</li>
-              <li>• Tax-free withdrawal</li>
-              <li>• Application process: 4-6 weeks</li>
+              <li>• Access your super on compassionate grounds</li>
+              <li>• Cover full surgery cost (no debt, no interest)</li>
+              <li>• Tax may apply if under 60 (up to 22% incl. Medicare levy)</li>
+              <li>• ATO approval: up to 14 days (online) or 28 days (paper)</li>
             </ul>
-            <a href="/costs/superannuation-release" class="inline-block mt-3 text-blue-600 hover:text-blue-700 font-medium">
-              Check Eligibility →
+            <a href="/superannuation-guide" class="inline-block mt-3 text-blue-600 hover:text-blue-700 font-medium">
+              Learn More & Check Eligibility →
             </a>
           </div>
           <div class="bg-white border-2 border-gray-300 rounded-xl p-6">
