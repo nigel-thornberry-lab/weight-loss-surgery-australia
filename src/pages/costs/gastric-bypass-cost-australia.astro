@@ -1,5 +1,6 @@
 ---
 
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
 import ConsultationForm from '../../components/ConsultationForm.astro';
 import RelatedContent from '../../components/RelatedContent.astro';
@@ -8,8 +9,11 @@ import RelatedContent from '../../components/RelatedContent.astro';
 // Top 1% quality content with real data only
 
 // Define metadata
-const title = "Gastric Bypass Cost Australia 2025: Complete Pricing Guide";
-const description = "Gastric bypass surgery costs $4,500-$7,624 with private health insurance or $18,000-$26,000 without insurance in Australia (2025). Complete cost breakdown, Medicare rebates, financing options, and hidden costs explained.";
+const meta = {
+  title: "Gastric Bypass Cost Australia 2025: Complete Pricing Guide",
+  description: "Gastric bypass surgery costs $4,500-$7,624 with private health insurance or $18,000-$26,000 without insurance in Australia (2025). Complete cost breakdown, Medicare rebates, financing options, and hidden costs explained.",
+  keywords: ["gastric bypass cost australia", "gastric bypass surgery price", "gastric bypass insurance", "bariatric surgery cost", "weight loss surgery cost australia"]
+};
 const canonicalUrl = "https://weightlosssurgery.com.au/costs/gastric-bypass-cost-australia";
 const pageUrl = canonicalUrl;
 const lastUpdated = "January 2025";
@@ -66,8 +70,8 @@ const schemaMarkup = {
       "@type": "MedicalWebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": title,
-      "description": description,
+      "name": meta.title,
+      "description": meta.description,
       "datePublished": "2025-01-15",
       "dateModified": "2025-01-15",
       "inLanguage": "en-AU",
@@ -131,92 +135,7 @@ const schemaMarkup = {
 ---
 
 
-<html lang="en-AU">
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="generator" content={Astro.generator} />
-
-  <!-- SEO Meta Tags -->
-  <title>{title}</title>
-  <meta name="description" content={description} />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content={pageUrl} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content={pageUrl} />
-  <meta property="twitter:title" content={title} />
-  <meta property="twitter:description" content={description} />
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href={pageUrl} />
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json" is:inline>
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "@id": `${pageUrl}#webpage`,
-        "url": pageUrl,
-        "name": "Gastric Bypass Cost Australia 2025: Complete Pricing Guide",
-        "description": "Comprehensive guide to gastric sleeve surgery costs in Australia including insurance options, payment plans, and cost breakdowns.",
-        "inLanguage": "en-AU",
-        "datePublished": "2025-01-10",
-        "dateModified": "2025-01-10",
-        "lastReviewed": "2025-01-10",
-        "specialty": {
-          "@type": "MedicalSpecialty",
-          "name": "Bariatric Surgery"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://weightlosssurgery.com.au"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Costs",
-            "item": "https://weightlosssurgery.com.au/costs"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Gastric Bypass Cost",
-            "item": pageUrl
-          }
-        ]
-      }
-    ]
-  })}
-  </script>
-</head>
-
-<body class="antialiased bg-gray-50">
+<BaseLayout title={meta.title} description={meta.description} canonicalUrl={pageUrl}>
   <!-- Header -->
   <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1428,5 +1347,4 @@ const schemaMarkup = {
     </div>
   </footer>
 
-</body>
-</html>
+</BaseLayout>

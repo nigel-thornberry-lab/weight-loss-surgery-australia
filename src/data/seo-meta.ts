@@ -177,13 +177,6 @@ export const seoMeta: Record<string, PageMeta> = {
     keywords: ["hcf weight loss surgery", "hcf bariatric surgery"]
   },
 
-  // Tools
-  costCalculator: {
-    title: "Weight Loss Surgery Cost Calculator Australia 2025 - Free Instant Quote",
-    description: "Calculate your weight loss surgery cost in 60 seconds. Personalized quote based on procedure, location, insurance & surgeon. Gastric sleeve, bypass & band pricing.",
-    keywords: ["weight loss surgery calculator", "gastric sleeve cost calculator", "surgery cost estimator"]
-  },
-
   eligibilityQuiz: {
     title: "Am I Eligible for Weight Loss Surgery? Take Our Free Quiz 2025",
     description: "Take our 2-minute eligibility quiz to find out if you qualify for weight loss surgery. BMI calculator, health conditions & Medicare eligibility assessment. Free & confidential.",
@@ -218,7 +211,7 @@ export const seoMeta: Record<string, PageMeta> = {
 
   contact: {
     title: "Contact Us - Weight Loss Surgery Australia | Book Consultation",
-    description: "Contact Weight Loss Surgery Australia for consultation. Phone 1300 000 000, email info@wlsaustralia.com.au. Get personalised advice from bariatric surgery experts.",
+    description: "Contact Weight Loss Surgery Australia for consultation. Email info@wlsaustralia.com.au. Get personalised advice from bariatric surgery experts.",
     keywords: ["contact", "consultation", "book appointment"]
   },
 

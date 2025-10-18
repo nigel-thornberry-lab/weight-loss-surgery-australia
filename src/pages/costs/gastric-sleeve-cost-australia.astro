@@ -1,4 +1,5 @@
 ---
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
 import ConsultationForm from '../../components/ConsultationForm.astro';
 import RelatedContent from '../../components/RelatedContent.astro';
@@ -57,7 +58,7 @@ const faqs = [
 ];
 ---
 
-<html lang="en-AU">
+<BaseLayout title={meta.title} description={meta.description} canonicalUrl={pageUrl}>
 <head>
   <meta charset="utf-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -1348,12 +1349,6 @@ const faqs = [
           <p class="text-gray-400 text-sm">Last updated: {lastUpdated}</p>
         </div>
       </div>
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-        <p>© 2025 Weight Loss Surgery Australia. All rights reserved.</p>
-        <p class="mt-2">Information provided for educational purposes only. Consult with a qualified surgeon for medical advice.</p>
-      </div>
     </div>
-  </footer>
-
-</body>
-</html>
+  </main>
+</BaseLayout>

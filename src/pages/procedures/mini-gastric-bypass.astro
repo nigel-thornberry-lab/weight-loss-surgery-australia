@@ -3,196 +3,15 @@ import '../../styles/global.css';
 import { seoMeta } from '../../data/seo-meta';
 import QuickAnswer from '../../components/QuickAnswer.astro';
 import ContentFreshness from '../../components/ContentFreshness.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const meta = seoMeta.miniGastricBypass;
 const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/mini-gastric-bypass";
 ---
 
-<html lang="en-AU">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+<BaseLayout title="{meta.title}" description="" canonicalUrl="">
 
-		<!-- SEO Meta Tags -->
-		<title>{meta.title}</title>
-		<meta name="description" content={meta.description} />
-		<meta name="keywords" content={meta.keywords?.join(', ')} />
-
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="article" />
-		<meta property="og:url" content={pageUrl} />
-		<meta property="og:title" content={meta.title} />
-		<meta property="og:description" content={meta.description} />
-		<meta property="og:locale" content="en_AU" />
-
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={pageUrl} />
-		<meta property="twitter:title" content={meta.title} />
-		<meta property="twitter:description" content={meta.description} />
-
-		<!-- Canonical URL -->
-		<link rel="canonical" href={pageUrl} />
-
-		<!-- Medical Procedure Schema -->
-		<script type="application/ld+json" is:inline>
-		{
-			"@context": "https://schema.org",
-			"@graph": [
-				{
-					"@type": "MedicalWebPage",
-					"@id": "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/mini-gastric-bypass#webpage",
-					"url": "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/mini-gastric-bypass",
-					"name": "Mini Gastric Bypass Surgery Australia - Complete Guide",
-					"description": "Comprehensive guide to mini gastric bypass surgery in Australia including costs, recovery, eligibility and finding qualified surgeons.",
-					"inLanguage": "en-AU",
-					"datePublished": "2025-01-03",
-					"dateModified": "2025-01-03",
-					"specialty": {
-						"@type": "MedicalSpecialty",
-						"name": "Bariatric Surgery"
-					}
-				},
-				{
-					"@type": "MedicalProcedure",
-					"name": "Mini Gastric Bypass Surgery",
-					"alternateName": ["One Anastomosis Gastric Bypass", "OAGB", "Single Anastomosis Gastric Bypass", "Loop Gastric Bypass", "Mini-Bypass"],
-					"description": "Mini gastric bypass creates a long narrow stomach tube and connects it directly to the small intestine with a single connection, offering similar weight loss to traditional bypass with simplified technique.",
-					"procedureType": "Surgical",
-					"bodyLocation": [
-						{
-							"@type": "BodyStructure",
-							"name": "Stomach"
-						},
-						{
-							"@type": "BodyStructure",
-							"name": "Small Intestine"
-						}
-					],
-					"expectedPrognosis": "65-75% excess weight loss within 12-18 months"
-				},
-				{
-					"@type": "FAQPage",
-					"mainEntity": [
-						{
-							"@type": "Question",
-							"name": "How much does mini gastric bypass surgery cost in Australia?",
-							"acceptedAnswer": {
-								"@type": "Answer",
-								"text": "Mini gastric bypass surgery in Australia typically costs between $16,000 and $27,000 for self-funded patients. With private health insurance, out-of-pocket costs range from $5,500 to $13,000. Medicare rebates are available for eligible patients. Costs are typically slightly lower than traditional gastric bypass due to shorter surgery time."
-							}
-						},
-						{
-							"@type": "Question",
-							"name": "Is mini gastric bypass safe?",
-							"acceptedAnswer": {
-								"@type": "Answer",
-								"text": "Mini gastric bypass is generally safe when performed by experienced, AHPRA-registered surgeons. The procedure has been performed since the 1990s with good long-term outcomes. Serious complications occur in 2-3% of cases. Some surgeons prefer traditional bypass due to concerns about bile reflux, though this affects only 1-2% of patients. The single connection point reduces surgical complexity."
-							}
-						},
-						{
-							"@type": "Question",
-							"name": "How long does mini gastric bypass recovery take?",
-							"acceptedAnswer": {
-								"@type": "Answer",
-								"text": "Most mini gastric bypass patients stay in hospital for 2-3 nights. Return to light activities occurs within 2-3 weeks, with return to work at 2-4 weeks for desk jobs and 4-6 weeks for physical work. Full recovery takes approximately 6-8 weeks. Recovery is slightly faster than traditional gastric bypass due to simplified surgical technique."
-							}
-						},
-						{
-							"@type": "Question",
-							"name": "What's the difference between mini gastric bypass and traditional gastric bypass?",
-							"acceptedAnswer": {
-								"@type": "Answer",
-								"text": "Mini gastric bypass uses one intestinal connection (anastomosis) compared to two in traditional bypass, making it technically simpler with shorter surgery time (90-120 minutes vs 2-3 hours). Weight loss and diabetes outcomes are similar (65-75% vs 70-80% excess weight loss). Mini bypass has slightly higher bile reflux risk but lower internal hernia risk. Both are reversible and require lifelong vitamin supplementation."
-							}
-						},
-						{
-							"@type": "Question",
-							"name": "How much weight will I lose with mini gastric bypass?",
-							"acceptedAnswer": {
-								"@type": "Answer",
-								"text": "Most mini gastric bypass patients lose 65-75% of their excess body weight within 12-18 months. For example, someone 60kg overweight may lose 39-45kg. Weight loss is most rapid in the first 6 months. Results are comparable to traditional gastric bypass and superior to gastric sleeve. Long-term success requires permanent lifestyle modifications."
-							}
-						},
-						{
-							"@type": "Question",
-							"name": "Can mini gastric bypass be reversed?",
-							"acceptedAnswer": {
-								"@type": "Answer",
-								"text": "Yes, mini gastric bypass can be reversed or revised if needed, though reversal is uncommon. The single connection point makes reversal technically simpler than traditional bypass. Some patients may require revision to traditional bypass if bile reflux becomes problematic. Revision surgery is possible if complications arise or additional weight loss is needed."
-							}
-						}
-					]
-				},
-				{
-					"@type": "BreadcrumbList",
-					"itemListElement": [
-						{
-							"@type": "ListItem",
-							"position": 1,
-							"name": "Home",
-							"item": "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app"
-						},
-						{
-							"@type": "ListItem",
-							"position": 2,
-							"name": "Procedures",
-							"item": "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures"
-						},
-						{
-							"@type": "ListItem",
-							"position": 3,
-							"name": "Mini Gastric Bypass Surgery",
-							"item": "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/mini-gastric-bypass"
-						}
-					]
-				}
-			]
-		}
-		</script>
-	</head>
-
-	<body class="antialiased">
-		<!-- Header -->
-		<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex justify-between items-center py-4">
-					<div class="flex items-center">
-						<a href="/" class="text-xl font-bold text-blue-600">Weight Loss Surgery Australia</a>
-					</div>
-					<nav class="hidden md:flex space-x-8">
-						<div class="relative group">
-							<button class="text-blue-600 font-semibold flex items-center">
-								Procedures
-								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-								</svg>
-							</button>
-							<div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-								<div class="py-2">
-									<a href="/procedures/gastric-sleeve" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Sleeve</a>
-									<a href="/procedures/gastric-bypass" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Bypass</a>
-									<a href="/procedures/gastric-band" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Band</a>
-									<a href="/procedures/gastric-balloon" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Gastric Balloon</a>
-									<a href="/procedures/duodenal-switch" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">Duodenal Switch</a>
-									<div class="border-t border-gray-200 my-2"></div>
-									<a href="/procedures" class="block px-4 py-2 text-blue-600 font-semibold hover:bg-blue-50">All Procedures</a>
-								</div>
-							</div>
-						</div>
-						<a href="/#costs" class="text-gray-700 hover:text-blue-600">Costs</a>
-						<a href="/#locations" class="text-gray-700 hover:text-blue-600">Locations</a>
-						<a href="/#faq" class="text-gray-700 hover:text-blue-600">FAQ</a>
-					</nav>
-					<div class="flex items-center space-x-4">
-						<a href="tel:1300000000" class="hidden sm:block text-blue-600 font-semibold">1300 000 000</a>
-						<a href="#consultation" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">Book Consultation</a>
-					</div>
-				</div>
-			</div>
-		</header>
+	<main class="min-h-screen bg-gray-50">
 
 		<!-- Breadcrumbs -->
 		<div class="bg-gray-50 border-b border-gray-200">
@@ -1341,7 +1160,7 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 						<svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
 							<path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
 						</svg>
-						Or call: 1300 000 000
+						Or call: 
 					</div>
 					<div class="text-sm">Monday - Friday, 9am - 5pm AEST</div>
 				</div>
@@ -1466,60 +1285,5 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 		</div>
 	</section></section>
 
-		<!-- Footer -->
-		<footer class="bg-gray-900 text-white py-12">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid md:grid-cols-4 gap-8 mb-8">
-					<div>
-						<h3 class="font-bold text-lg mb-4">Procedures</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li><a href="/procedures/gastric-sleeve" class="hover:text-white">Gastric Sleeve</a></li>
-							<li><a href="/procedures/gastric-bypass" class="hover:text-white">Gastric Bypass</a></li>
-							<li><a href="/procedures/mini-gastric-bypass" class="hover:text-white">Mini Gastric Bypass</a></li>
-							<li><a href="/procedures/gastric-band" class="hover:text-white">Gastric Band</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-bold text-lg mb-4">Locations</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li><a href="/locations/sydney" class="hover:text-white">Sydney</a></li>
-							<li><a href="/locations/melbourne" class="hover:text-white">Melbourne</a></li>
-							<li><a href="/locations/brisbane" class="hover:text-white">Brisbane</a></li>
-							<li><a href="/locations/perth" class="hover:text-white">Perth</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-bold text-lg mb-4">Resources</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li><a href="#cost" class="hover:text-white">Cost Calculator</a></li>
-							<li><a href="#consultation" class="hover:text-white">Eligibility Quiz</a></li>
-							<li><a href="/#faq" class="hover:text-white">FAQ</a></li>
-							<li><a href="/compare/gastric-sleeve-vs-gastric-bypass" class="hover:text-white">Compare Procedures</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-bold text-lg mb-4">Contact</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li>Phone: 1300 000 000</li>
-							<li>Email: info@wlsaustralia.com.au</li>
-							<li class="pt-4">
-								<a href="#newsletter" class="text-blue-400 hover:text-blue-300">Subscribe to Newsletter</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="border-t border-gray-800 pt-8">
-					<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-						<p>&copy; 2025 Weight Loss Surgery Australia. All rights reserved.</p>
-						<div class="flex space-x-6 mt-4 md:mt-0">
-							<a href="#privacy" class="hover:text-white">Privacy Policy</a>
-							<a href="#terms" class="hover:text-white">Terms of Service</a>
-							<a href="#disclaimer" class="hover:text-white">Medical Disclaimer</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</body>
-</html>
+		</main>
+</BaseLayout>

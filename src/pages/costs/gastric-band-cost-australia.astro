@@ -1,4 +1,5 @@
 ---
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import '../../styles/global.css';
 import ConsultationForm from '../../components/ConsultationForm.astro';
 import RelatedContent from '../../components/RelatedContent.astro';
@@ -7,8 +8,11 @@ import RelatedContent from '../../components/RelatedContent.astro';
 // Top 1% quality content with real data only
 
 // Define metadata
-const title = "Gastric Band Cost Australia 2025: Complete Pricing Guide";
-const description = "Gastric band surgery costs $3,500-$6,000 with private health insurance or $12,000-$20,000 without insurance in Australia (2025). Complete cost breakdown, Medicare rebates, adjustment fees, removal costs, and why demand is declining explained.";
+const meta = {
+  title: "Gastric Band Cost Australia 2025: Complete Pricing Guide",
+  description: "Gastric band surgery costs $3,500-$6,000 with private health insurance or $12,000-$20,000 without insurance in Australia (2025). Complete cost breakdown, Medicare rebates, adjustment fees, removal costs, and why demand is declining explained.",
+  keywords: ["gastric band cost australia", "lap band surgery price", "gastric band insurance", "bariatric surgery cost", "weight loss surgery cost australia"]
+};
 const canonicalUrl = "https://weightlosssurgery.com.au/costs/gastric-band-cost-australia";
 const pageUrl = canonicalUrl;
 const lastUpdated = "January 2025";
@@ -65,8 +69,8 @@ const schemaMarkup = {
       "@type": "MedicalWebPage",
       "@id": `${pageUrl}#webpage`,
       "url": pageUrl,
-      "name": title,
-      "description": description,
+      "name": meta.title,
+      "description": meta.description,
       "datePublished": "2025-01-15",
       "dateModified": "2025-01-15",
       "inLanguage": "en-AU",
@@ -129,155 +133,9 @@ const schemaMarkup = {
 };
 ---
 
-<html lang="en-AU">
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="generator" content={Astro.generator} />
-
-  <!-- SEO Meta Tags -->
-  <title>{title}</title>
-  <meta name="description" content={description} />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content={pageUrl} />
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content={pageUrl} />
-  <meta property="twitter:title" content={title} />
-  <meta property="twitter:description" content={description} />
-
-  <!-- Canonical URL -->
-  <link rel="canonical" href={pageUrl} />
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json" is:inline>
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "MedicalWebPage",
-        "@id": `${pageUrl}#webpage`,
-        "url": pageUrl,
-        "name": "Gastric Band Cost Australia 2025: Complete Pricing Guide",
-        "description": "Comprehensive guide to gastric sleeve surgery costs in Australia including insurance options, payment plans, and cost breakdowns.",
-        "inLanguage": "en-AU",
-        "datePublished": "2025-01-10",
-        "dateModified": "2025-01-10",
-        "lastReviewed": "2025-01-10",
-        "specialty": {
-          "@type": "MedicalSpecialty",
-          "name": "Bariatric Surgery"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://weightlosssurgery.com.au"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Costs",
-            "item": "https://weightlosssurgery.com.au/costs"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Gastric Band Cost",
-            "item": pageUrl
-          }
-        ]
-      }
-    ]
-  })}
-  </script>
-</head>
-
-<body class="antialiased bg-gray-50">
-  <!-- Header -->
-  <header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center py-4">
-        <div class="flex items-center">
-          <a href="/" class="text-xl font-bold text-[#6c95ef]">Weight Loss Surgery Australia</a>
-        </div>
-        <nav class="hidden md:flex space-x-8">
-          <div class="relative group">
-            <button class="text-gray-700 hover:text-[#6c95ef] font-medium flex items-center">
-              Procedures
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div class="py-2">
-                <a href="/procedures/gastric-band" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Gastric Band</a>
-                <a href="/procedures/gastric-bypass" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Gastric Bypass</a>
-                <a href="/procedures/gastric-band" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Gastric Band</a>
-              </div>
-            </div>
-          </div>
-          <div class="relative group">
-            <button class="text-[#6c95ef] font-semibold flex items-center">
-              Costs
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-              </svg>
-            </button>
-            <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <div class="py-2">
-                <a href="/costs/gastric-sleeve-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Gastric Sleeve Cost</a>
-                <a href="/costs/gastric-bypass-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Gastric Bypass Cost</a>
-                <a href="/costs/gastric-band-cost-australia" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Gastric Band Cost</a>
-              </div>
-            </div>
-          </div>
-          <a href="/surgeons" class="text-gray-700 hover:text-[#6c95ef] font-medium">Surgeons</a>
-        </nav>
-        <a href="tel:1300000000" class="bg-[#6c95ef] text-white px-6 py-2 rounded-lg hover:bg-[#5a7fd8] transition font-semibold">Call Now</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Breadcrumbs -->
-  <div class="bg-white border-b border-gray-200">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-      <div class="flex items-center space-x-2 text-sm">
-        <a href="/" class="text-gray-600 hover:text-[#6c95ef]">Home</a>
-        <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-        </svg>
-        <a href="/costs" class="text-gray-600 hover:text-[#6c95ef]">Costs</a>
-        <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
-        </svg>
-        <span class="text-gray-900 font-medium">Gastric Band Cost</span>
-      </div>
-    </div>
-  </div>
-
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<BaseLayout title={meta.title} description={meta.description} canonicalUrl={pageUrl}>
+  <main class="min-h-screen bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
     <!-- Hero Section -->
     <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12 mb-12">
@@ -1389,42 +1247,5 @@ const schemaMarkup = {
 
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12 mt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-4 gap-8">
-        <div>
-          <h3 class="font-bold text-lg mb-4">Weight Loss Surgery Australia</h3>
-          <p class="text-gray-400 text-sm">Australia's comprehensive directory of qualified bariatric surgeons.</p>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4">Procedures</h4>
-          <ul class="space-y-2 text-gray-400 text-sm">
-            <li><a href="/procedures/gastric-band" class="hover:text-white">Gastric Band</a></li>
-            <li><a href="/procedures/gastric-bypass" class="hover:text-white">Gastric Bypass</a></li>
-            <li><a href="/procedures/gastric-band" class="hover:text-white">Gastric Band</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4">Resources</h4>
-          <ul class="space-y-2 text-gray-400 text-sm">
-            <li><a href="/costs/gastric-band-cost-australia" class="hover:text-white">Gastric Band Cost</a></li>
-            <li><a href="/costs/gastric-bypass-cost-australia" class="hover:text-white">Gastric Bypass Cost</a></li>
-            <li><a href="/surgeons" class="hover:text-white">Find a Surgeon</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-4">Contact</h4>
-          <p class="text-gray-400 text-sm mb-2">📞 1300 XXX XXX</p>
-          <p class="text-gray-400 text-sm">Last updated: {lastUpdated}</p>
-        </div>
-      </div>
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm">
-        <p>© 2025 Weight Loss Surgery Australia. All rights reserved.</p>
-        <p class="mt-2">Information provided for educational purposes only. Consult with a qualified surgeon for medical advice.</p>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+  </main>
+</BaseLayout>

@@ -189,7 +189,7 @@ const subheadClass = theme === 'dark' ? 'text-blue-100' : 'text-gray-600';
         </ul>
       </div>
       <p class={`text-sm mt-4 ${subheadClass}`}>
-        Questions? Call us at <a href="tel:1300000000" class={`font-semibold underline ${theme === 'dark' ? 'text-white' : 'text-blue-600'}`}>1300 000 000</a>
+        Questions? <a href="/contact" class={`font-semibold underline ${theme === 'dark' ? 'text-white' : 'text-blue-600'}`}>Contact us here</a>
       </p>
     </div>
   </div>
@@ -236,7 +236,7 @@ const subheadClass = theme === 'dark' ? 'text-blue-100' : 'text-gray-600';
       
       messageDiv.classList.remove('hidden');
       messageDiv.className = 'bg-red-50 border-l-4 border-red-500 p-3 rounded text-sm';
-      messageDiv.innerHTML = '<p class="text-red-800">Oops! Please try again or call us at 1300 000 000</p>';
+      messageDiv.innerHTML = '<p class="text-red-800">Oops! Please try again or <a href="/contact" class="underline">contact us</a></p>';
       
       submitBtn.disabled = false;
       submitBtn.textContent = 'Try Again';

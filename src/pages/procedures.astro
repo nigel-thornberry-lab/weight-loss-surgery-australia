@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { seoMeta } from '../data/seo-meta';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
 const meta = seoMeta.procedures;
 ---
@@ -344,45 +345,7 @@ const meta = seoMeta.procedures;
 		}
 		</script>
 	</head>
-	<body class="antialiased">
-		<!-- Header -->
-		<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex justify-between items-center py-4">
-					<div class="flex items-center">
-						<a href="/" class="text-xl font-bold text-[#6c95ef]">Weight Loss Surgery Australia</a>
-					</div>
-					<nav class="hidden md:flex space-x-8">
-						<div class="relative group">
-							<button class="text-[#6c95ef] font-semibold flex items-center">
-								Procedures
-								<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-								</svg>
-							</button>
-							<div class="absolute left-0 mt-2 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-								<div class="py-2">
-									<a href="/procedures/gastric-sleeve" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Gastric Sleeve</a>
-									<a href="/procedures/gastric-bypass" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Gastric Bypass</a>
-									<a href="/procedures/gastric-band" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Gastric Band</a>
-									<a href="/procedures/gastric-balloon" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Gastric Balloon</a>
-									<a href="/procedures/duodenal-switch" class="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-[#6c95ef]">Duodenal Switch</a>
-									<div class="border-t border-gray-200 my-2"></div>
-									<a href="/procedures" class="block px-4 py-2 text-[#6c95ef] font-semibold hover:bg-gray-50">All Procedures</a>
-								</div>
-							</div>
-						</div>
-						<a href="/#costs" class="text-gray-700 hover:text-[#6c95ef]">Costs</a>
-						<a href="/#locations" class="text-gray-700 hover:text-[#6c95ef]">Locations</a>
-						<a href="/#faq" class="text-gray-700 hover:text-[#6c95ef]">FAQ</a>
-					</nav>
-					<div class="flex items-center space-x-4">
-						<a href="tel:1300000000" class="hidden sm:block text-[#6c95ef] font-semibold">1300 000 000</a>
-						<a href="/#consultation" class="bg-[#6c95ef] text-white px-6 py-2 rounded-lg hover:bg-[#5a7fd8] transition">Book Consultation</a>
-					</div>
-				</div>
-			</div>
-		</header>
+	<main class="min-h-screen bg-gray-50">
 
 		<!-- Breadcrumbs -->
 		<div class="bg-gray-50 border-b border-gray-200">
@@ -935,63 +898,5 @@ const meta = seoMeta.procedures;
 			</div>
 		</section>
 
-		<!-- Footer -->
-		<footer class="bg-gray-900 text-white py-12">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="grid md:grid-cols-4 gap-8 mb-8">
-					<div>
-						<h3 class="font-bold text-lg mb-4">Procedures</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li><a href="#gastric-sleeve" class="hover:text-white">Gastric Sleeve</a></li>
-							<li><a href="#gastric-bypass" class="hover:text-white">Gastric Bypass</a></li>
-							<li><a href="#mini-bypass" class="hover:text-white">Mini Gastric Bypass</a></li>
-							<li><a href="#gastric-band" class="hover:text-white">Gastric Band</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-bold text-lg mb-4">Locations</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li><a href="/#sydney" class="hover:text-white">Sydney</a></li>
-							<li><a href="/#melbourne" class="hover:text-white">Melbourne</a></li>
-							<li><a href="/#brisbane" class="hover:text-white">Brisbane</a></li>
-							<li><a href="/#perth" class="hover:text-white">Perth</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-bold text-lg mb-4">Resources</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li><a href="#calculator" class="hover:text-white">Cost Calculator</a></li>
-							<li><a href="#quiz" class="hover:text-white">Eligibility Quiz</a></li>
-							<li><a href="/#faq" class="hover:text-white">FAQ</a></li>
-							<li><a href="#about" class="hover:text-white">About Us</a></li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="font-bold text-lg mb-4">Contact</h3>
-						<ul class="space-y-2 text-gray-400">
-							<li>Phone: 1300 000 000</li>
-							<li>Email: info@wlsaustralia.com.au</li>
-							<li class="pt-4">
-								<a href="#newsletter" class="text-blue-400 hover:text-blue-300">Subscribe to Newsletter</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="border-t border-gray-800 pt-8">
-					<div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-						<p>&copy; 2025 Weight Loss Surgery Australia. All rights reserved.</p>
-						<div class="flex space-x-6 mt-4 md:mt-0">
-							<a href="#privacy" class="hover:text-white">Privacy Policy</a>
-							<a href="#terms" class="hover:text-white">Terms of Service</a>
-							<a href="#disclaimer" class="hover:text-white">Medical Disclaimer</a>
-						</div>
-					</div>
-					<p class="text-xs text-gray-500 mt-4 text-center">
-						MEDICAL DISCLAIMER: This website provides educational information only and does not constitute medical advice. Individual results may vary. Weight loss surgery carries risks and benefits which should be discussed with qualified healthcare professionals. All procedures should be performed by AHPRA-registered surgeons.
-					</p>
-				</div>
-			</div>
-		</footer>
-	</body>
-</html>
+		</main>
+</BaseLayout>
