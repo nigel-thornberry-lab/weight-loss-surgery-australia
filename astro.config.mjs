@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://weightlosssurgery.com.au',
+  site: 'https://bariatricsurgeryhub.com',
   integrations: [
     sitemap({
       filter: (page) => !page.includes('/admin') && !page.includes('/api'),

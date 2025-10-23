@@ -77,6 +77,17 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
     <!-- Additional SEO -->
     <meta name="generator" content={Astro.generator} />
     
+    <!-- Google Analytics 4 -->
+    <!-- TODO: Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
+    <!-- Get your ID from: https://analytics.google.com -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGQF9749LT></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-G-GGQF9749LT');
+    </script>
+    
     <!-- Structured Data - Medical Website & Organization -->
     <script type="application/ld+json">
       {JSON.stringify({
@@ -434,9 +445,10 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
           <div class="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
             <p>&copy; 2025 Bariatric SurgeryHub. All rights reserved.</p>
             <div class="flex space-x-6 mt-4 md:mt-0">
-              <a href="#privacy" class="hover:text-white">Privacy Policy</a>
-              <a href="#terms" class="hover:text-white">Terms of Service</a>
-              <a href="#disclaimer" class="hover:text-white">Medical Disclaimer</a>
+              <a href="/privacy-policy" class="hover:text-white">Privacy Policy</a>
+              <a href="/terms-of-service" class="hover:text-white">Terms of Service</a>
+              <a href="/disclaimer" class="hover:text-white">Medical Disclaimer</a>
+              <a href="/cookie-policy" class="hover:text-white">Cookie Policy</a>
             </div>
           </div>
           <p class="text-xs text-gray-500 mt-4 text-center">
