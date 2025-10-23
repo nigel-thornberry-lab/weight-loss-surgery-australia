@@ -31,10 +31,10 @@ function generateImageSitemap() {
     if (!slug || !photo) continue;
     
     const citySlug = city.toLowerCase().replace(/\s+/g, '-');
-    const pageUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${slug}`;
+    const pageUrl = `https://bariatricsurgeryhub.com/surgeons/${citySlug}/${slug}`;
     // Remove /public/ prefix if present (Astro serves public folder from root)
     const cleanPhoto = photo.startsWith('/public/') ? photo.replace('/public/', '/') : photo;
-    const imageUrl = `https://weightlosssurgery.com.au${cleanPhoto}`;
+    const imageUrl = `https://bariatricsurgeryhub.com${cleanPhoto}`;
     const imageTitle = `${name} - Bariatric Surgeon in ${city}, ${state}`;
     const imageCaption = `Professional photo of ${name}, expert bariatric surgeon specializing in weight loss surgery in ${city}`;
     
@@ -57,13 +57,13 @@ function generateImageSitemap() {
   console.log(`📄 Saved to: ${OUTPUT_FILE}\n`);
   
   // Update robots.txt to include image sitemap
-  const robotsTxt = `# Robots.txt for Weight Loss Surgery Australia
+  const robotsTxt = `# Robots.txt for Bariatric SurgeryHub
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://weightlosssurgery.com.au/sitemap-index.xml
-Sitemap: https://weightlosssurgery.com.au/image-sitemap.xml
+Sitemap: https://bariatricsurgeryhub.com/sitemap-index.xml
+Sitemap: https://bariatricsurgeryhub.com/image-sitemap.xml
 
 # Block admin/development paths
 Disallow: /api/

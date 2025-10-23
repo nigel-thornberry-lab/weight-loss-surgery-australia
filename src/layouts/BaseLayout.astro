@@ -27,8 +27,13 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
     <!-- DNS Prefetch for performance -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
-    <!-- Optimized Font Loading -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Preload critical font files for faster loading -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Optimized Font Loading with display=swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
     
     <!-- Favicon with all sizes -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -42,6 +47,18 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
       .max-w-7xl{max-width:80rem;margin:0 auto;padding:0 1rem}
       @media(min-width:640px){.max-w-7xl{padding:0 1.5rem}}
       @media(min-width:1024px){.max-w-7xl{padding:0 2rem}}
+      
+      /* Additional critical styles for immediate rendering */
+      .antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+      .bg-white{background-color:#fff}
+      .border-b{border-bottom-width:1px}
+      .border-gray-100{border-color:#f3f4f6}
+      .sticky{position:sticky}
+      .top-0{top:0}
+      .z-50{z-index:50}
+      .shadow-sm{box-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05)}
+      .backdrop-blur-sm{backdrop-filter:blur(4px)}
+      .bg-white\/95{background-color:rgb(255 255 255 / 0.95)}
     </style>
 
     <!-- SEO Meta Tags -->
@@ -467,6 +484,18 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
             mobileMenu.classList.toggle('hidden');
           });
         }
+      });
+    </script>
+
+    <!-- Load non-critical CSS asynchronously -->
+    <script>
+      // Load non-critical CSS after page load
+      window.addEventListener('load', function() {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = '/_astro/bariatric-surgery-recipes-all-stages.DtLXx8DQ.css';
+        link.media = 'all';
+        document.head.appendChild(link);
       });
     </script>
   </body>

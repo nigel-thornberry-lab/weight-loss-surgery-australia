@@ -8,16 +8,13 @@ export default defineConfig({
   site: 'https://bariatricsurgeryhub.com',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/admin') && !page.includes('/api'),
+      filter: (page) => !page.includes('/admin') && !page.includes('/api') && !page.includes('/index-old'),
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
       customPages: [],
     })
   ],
-  vite: {
-    plugins: [tailwindcss()]
-  },
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp'
@@ -27,5 +24,19 @@ export default defineConfig({
   compressHTML: true,
   build: {
     inlineStylesheets: 'auto',
+    assets: '_astro',
+  },
+  vite: {
+    plugins: [tailwindcss()],
+    build: {
+      cssCodeSplit: false,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            'vendor': ['astro']
+          }
+        }
+      }
+    }
   }
 });
