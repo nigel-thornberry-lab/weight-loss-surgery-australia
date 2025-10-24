@@ -142,7 +142,7 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
             "url": "https://weightlosssurgery.com.au",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://weightlosssurgery.com.au/images/logo.png"
+              "url": "https://weightlosssurgery.com.au/images/logo-optimized.webp"
             },
             "image": "https://weightlosssurgery.com.au/og-image.jpg",
             "areaServed": {
@@ -200,7 +200,15 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
           <!-- Logo -->
           <div class="flex items-center">
             <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-              <img src="/images/logo.png" alt="Bariatric SurgeryHub" class="h-20 sm:h-24 w-auto max-w-[400px] bg-transparent" style="background: transparent;" />
+              <img 
+                src="/images/logo-optimized.webp" 
+                alt="Bariatric SurgeryHub" 
+                class="h-20 sm:h-24 w-auto max-w-[400px] bg-transparent" 
+                style="background: transparent;"
+                width="192"
+                height="192"
+                loading="eager"
+              />
             </a>
           </div>
           
