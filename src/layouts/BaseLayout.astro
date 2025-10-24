@@ -221,7 +221,7 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
             "url": "https://weightlosssurgery.com.au",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://weightlosssurgery.com.au/images/logo-optimized.webp"
+              "url": "https://weightlosssurgery.com.au/images/logo-192x192.webp"
             },
             "image": "https://weightlosssurgery.com.au/og-image.jpg",
             "areaServed": {
@@ -281,8 +281,10 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
             <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
               <img 
                 src="/images/logo-80x80.webp" 
+                srcset="/images/logo-80x80.webp 80w, /images/logo-192x192.webp 192w"
+                sizes="(max-width: 640px) 80px, 96px"
                 alt="Bariatric SurgeryHub" 
-                class="h-20 sm:h-24 w-auto max-w-[400px] bg-transparent" 
+                class="h-20 sm:h-24 w-auto max-w-[400px] bg-transparent"
                 style="background: transparent;"
                 width="80"
                 height="80"
