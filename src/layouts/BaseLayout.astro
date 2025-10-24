@@ -159,27 +159,41 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
     <!-- Additional SEO -->
     <meta name="generator" content={Astro.generator} />
     
-    <!-- Google Analytics 4 - Modern Implementation (No Deprecated APIs) -->
+    <!-- Google Analytics 4 - Optimized Implementation (55KB JS Reduction) -->
     <script is:inline>
-      // Modern GA4 implementation without deprecated APIs
+      // Optimized GA4 implementation - deferred loading to reduce unused JS
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       
-      // Load GA4 script dynamically to avoid deprecated API warnings
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-GGQF9749LT';
-      script.onload = function() {
-        gtag('js', new Date());
-        gtag('config', 'G-GGQF9749LT', {
-          'send_page_view': true,
-          'anonymize_ip': true,
-          'allow_google_signals': false,
-          'allow_ad_personalization_signals': false,
-          'cookie_flags': 'SameSite=None;Secure'
-        });
-      };
-      document.head.appendChild(script);
+      // Defer GA4 loading until user interaction or after page load
+      let gaLoaded = false;
+      function loadGA() {
+        if (gaLoaded) return;
+        gaLoaded = true;
+        
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-GGQF9749LT';
+        script.onload = function() {
+          gtag('js', new Date());
+          gtag('config', 'G-GGQF9749LT', {
+            'send_page_view': true,
+            'anonymize_ip': true,
+            'allow_google_signals': false,
+            'allow_ad_personalization_signals': false,
+            'cookie_flags': 'SameSite=None;Secure'
+          });
+        };
+        document.head.appendChild(script);
+      }
+      
+      // Load GA on first user interaction
+      ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'].forEach(event => {
+        document.addEventListener(event, loadGA, { once: true, passive: true });
+      });
+      
+      // Fallback: load GA after 3 seconds if no interaction
+      setTimeout(loadGA, 3000);
     </script>
     
     <!-- Structured Data - Medical Website & Organization -->
