@@ -94,13 +94,27 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
     <!-- Additional SEO -->
     <meta name="generator" content={Astro.generator} />
     
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GGQF9749LT"></script>
+    <!-- Google Analytics 4 - Modern Implementation (No Deprecated APIs) -->
     <script is:inline>
+      // Modern GA4 implementation without deprecated APIs
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-GGQF9749LT');
+      
+      // Load GA4 script dynamically to avoid deprecated API warnings
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-GGQF9749LT';
+      script.onload = function() {
+        gtag('js', new Date());
+        gtag('config', 'G-GGQF9749LT', {
+          'send_page_view': true,
+          'anonymize_ip': true,
+          'allow_google_signals': false,
+          'allow_ad_personalization_signals': false,
+          'cookie_flags': 'SameSite=None;Secure'
+        });
+      };
+      document.head.appendChild(script);
     </script>
     
     <!-- Structured Data - Medical Website & Organization -->

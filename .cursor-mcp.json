@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "google-ai-studio": {
+      "command": "node",
+      "args": ["/Users/Cameron/Desktop/weight-loss-surgery-australia/mcp-server/mcp-google-ai-studio.js"],
+      "env": {
+        "GOOGLE_AI_STUDIO_API_KEY": "AIzaSyD3Igd4fS0kSFX9988fi0ISso0EZnLoI4g"
+      }
+    }
+  }
+}
+

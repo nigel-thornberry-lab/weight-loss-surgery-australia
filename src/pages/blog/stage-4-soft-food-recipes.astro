@@ -216,41 +216,234 @@ const howToSchema = {
 
 <div style="display: grid; gap: 2rem;">
 
-<!-- Recipe 1 -->
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
-  <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-    <div style="background: #3b82f6; color: white; padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600;">Recipe #1</div>
-    <h4 style="margin: 0; font-size: 1.5rem; color: #1f2937;">Scrambled Eggs with Cheese</h4>
+<!-- Recipe 1: Scrambled Eggs with Cheese -->
+<div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 3rem;">
+  
+  <div style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold; text-align: center; padding: 2rem;">
+    <div>
+      <div style="font-size: 3rem; margin-bottom: 0.5rem;">🍳</div>
+      <div>AI IMAGE: Scrambled Eggs with Cheese</div>
+      <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem; font-weight: normal;">Creamy scrambled eggs with melted cheese in white bowl, garnished with fresh chives</div>
+    </div>
   </div>
-  <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin: 1rem 0; padding: 1rem; background: #f3f4f6; border-radius: 8px; font-size: 0.95rem;">
-    <div><strong>Protein:</strong> 18g</div>
-    <div><strong>Calories:</strong> 210</div>
-    <div><strong>Fat:</strong> 14g</div>
-    <div><strong>Prep:</strong> 8 min</div>
+  
+  <div style="padding: 2.5rem;">
+    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+      <div style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600;">Recipe #1</div>
+      <div style="color: #6b7280; font-size: 0.9rem;">🍳 Breakfast Staple • High Protein</div>
+    </div>
+    
+    <h3 style="margin: 0 0 1rem 0; color: #1f2937; font-size: 2rem; font-weight: 800;">Scrambled Eggs with Cheese</h3>
+    
+    <p style="font-size: 1.125rem; color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
+      A soft, creamy scrambled egg dish that's perfect for Stage 4. These tender eggs with melted cheese provide essential protein for healing while being easy to chew and digest. A breakfast staple that feels like real food again.
+    </p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; padding: 1.5rem; background: #f9fafb; border-radius: 12px;">
+      <div style="text-align: center;">
+        <div style="font-size: 0.875rem; color: #6b7280; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Protein</div>
+        <div style="font-size: 2rem; font-weight: bold; color: #3b82f6;">18g</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 0.875rem; color: #6b7280; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Calories</div>
+        <div style="font-size: 2rem; font-weight: bold; color: #10b981;">210</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 0.875rem; color: #6b7280; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Fat</div>
+        <div style="font-size: 2rem; font-weight: bold; color: #f59e0b;">14g</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 0.875rem; color: #6b7280; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Prep Time</div>
+        <div style="font-size: 2rem; font-weight: bold; color: #3b82f6;">8 min</div>
+      </div>
+    </div>
+
+    <div class="info-box info-box-green" style="margin: 2rem 0;">
+      <h4>Why This Recipe is Perfect for Stage 4</h4>
+      <ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>High protein:</strong> 18g protein from eggs for healing</li>
+        <li><strong>Soft texture:</strong> Creamy eggs are easy to chew and digest</li>
+        <li><strong>Breakfast staple:</strong> Perfect morning meal for Stage 4</li>
+        <li><strong>Calcium-rich:</strong> Cheese provides essential calcium</li>
+        <li><strong>Digestive friendly:</strong> Gentle on healing stomach</li>
+      </ul>
+    </div>
+
+    <h4 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; font-weight: 700;">Ingredients</h4>
+    <p style="color: #6b7280; font-size: 0.95rem; margin-bottom: 1rem;"><em>Available from Coles, Woolworths, or health food stores</em></p>
+    <ul style="line-height: 2; font-size: 1.05rem;">
+      <li><strong>2 large eggs</strong> (free-range preferred)</li>
+      <li><strong>2 tbsp milk</strong> (lactose-free if needed)</li>
+      <li><strong>30g grated cheese</strong> (cheddar or tasty)</li>
+      <li><strong>1 tsp butter</strong> (for cooking)</li>
+      <li><strong>Fresh chives</strong> (chopped, for garnish)</li>
+      <li><strong>Salt and pepper</strong> to taste</li>
+    </ul>
+
+    <h4 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; font-weight: 700;">Step-by-Step Instructions</h4>
+    <ol style="line-height: 2.2; font-size: 1.05rem;">
+      <li>
+        <strong>Prepare the eggs:</strong> Crack 2 large eggs into a small bowl. Add 2 tbsp milk and whisk gently until well combined.
+      </li>
+      <li>
+        <strong>Heat the pan:</strong> Place a non-stick frying pan over LOW heat. Add 1 tsp butter and let it melt completely.
+      </li>
+      <li>
+        <strong>Add the egg mixture:</strong> Pour the egg mixture into the pan. Let it sit for 10-15 seconds to start setting.
+      </li>
+      <li>
+        <strong>Stir gently:</strong> Begin stirring gently with a spatula, pushing the cooked parts to the center.
+      </li>
+      <li>
+        <strong>Add cheese:</strong> When eggs are nearly set, add grated cheese and continue stirring.
+      </li>
+      <li>
+        <strong>Cook until creamy:</strong> Continue stirring until soft and creamy (not dry!). Remove from heat.
+      </li>
+      <li>
+        <strong>Garnish and serve:</strong> Garnish with fresh chives and serve immediately.
+      </li>
+      <li>
+        <strong>Eat slowly:</strong> Chew each bite 20-30 times. Eat over 20-30 minutes.
+      </li>
+    </ol>
+
+    <div class="tip-box" style="margin: 2.5rem 0;">
+      <h4 style="margin-top: 0;">Pro Tips for Best Results</h4>
+      <ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Low heat is key:</strong> Cook on LOW heat for creamiest texture</li>
+        <li><strong>Don't over-whisk:</strong> Gentle whisking preserves texture</li>
+        <li><strong>Add extra cheese:</strong> If eggs seem too dry, add more cheese</li>
+        <li><strong>Serve immediately:</strong> Best when fresh and warm</li>
+        <li><strong>Storage:</strong> Keeps 1-2 days refrigerated, reheat gently</li>
+      </ul>
+    </div>
+
+    <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+      <h4 style="margin: 0 0 0.75rem 0; color: #1e40af; font-size: 1.125rem;">Australian Shopping Guide</h4>
+      <p style="margin: 0; color: #1e3a8a; line-height: 1.8;">
+        <strong>Coles/Woolworths:</strong> Free-range eggs, milk, cheese, and fresh chives readily available.<br>
+        <strong>Health food stores:</strong> Organic eggs and artisanal cheeses.<br>
+        <strong>Breakfast staple:</strong> Perfect morning meal for Stage 4
+      </p>
   </div>
-  <p style="margin: 1rem 0;"><strong>Ingredients:</strong> 2 eggs, 2 tbsp milk, 30g grated cheese (cheddar or tasty), 1 tsp butter, chives, salt, pepper</p>
-  <p style="margin: 1rem 0;"><strong>Instructions:</strong> Whisk eggs and milk. Melt butter in non-stick pan over low heat. Pour eggs, stir gently. When nearly set, add cheese. Continue stirring until soft and creamy (not dry!). Garnish with chives.</p>
-  <div style="background: #dbeafe; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-    <strong style="color: #1e40af;">Breakfast staple:</strong> Soft, moist scrambled eggs are perfect for Stage 4. Cook on LOW heat for creamiest texture. Add extra cheese if too dry. Pairs well with 1/4 slice soft toast (no crust).
   </div>
 </div>
 
-<!-- Recipe 2 -->
-<div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.08);">
-  <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-    <div style="background: #10b981; color: white; padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.8rem; font-weight: 600;">Recipe #2</div>
-    <h4 style="margin: 0; font-size: 1.5rem; color: #1f2937;">Tender Chicken Stir-Fry</h4>
+<!-- Recipe 2: Tender Chicken Stir-Fry -->
+<div style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 3rem;">
+  
+  <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); height: 300px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold; text-align: center; padding: 2rem;">
+    <div>
+      <div style="font-size: 3rem; margin-bottom: 0.5rem;">🍗</div>
+      <div>AI IMAGE: Tender Chicken Stir-Fry</div>
+      <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 0.5rem; font-weight: normal;">Tender chicken stir-fry with soft vegetables in white bowl, garnished with fresh herbs</div>
+    </div>
   </div>
-  <div style="display: flex; gap: 2rem; flex-wrap: wrap; margin: 1rem 0; padding: 1rem; background: #f3f4f6; border-radius: 8px; font-size: 0.95rem;">
-    <div><strong>Protein:</strong> 30g</div>
-    <div><strong>Calories:</strong> 260</div>
-    <div><strong>Carbs:</strong> 12g</div>
-    <div><strong>Cook:</strong> 20 min</div>
+  
+  <div style="padding: 2.5rem;">
+    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+      <div style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600;">Recipe #2</div>
+      <div style="color: #6b7280; font-size: 0.9rem;">🍗 Tender Protein • Asian Flavors</div>
+    </div>
+    
+    <h3 style="margin: 0 0 1rem 0; color: #1f2937; font-size: 2rem; font-weight: 800;">Tender Chicken Stir-Fry</h3>
+    
+    <p style="font-size: 1.125rem; color: #4b5563; line-height: 1.8; margin-bottom: 2rem;">
+      A flavorful, tender chicken stir-fry that's perfect for Stage 4. This dish combines lean protein with soft-cooked vegetables in a delicious Asian-inspired sauce. The chicken is sliced thin and cooked until very tender, making it easy to chew and digest.
+    </p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 2rem 0; padding: 1.5rem; background: #f9fafb; border-radius: 12px;">
+      <div style="text-align: center;">
+        <div style="font-size: 0.875rem; color: #6b7280; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Protein</div>
+        <div style="font-size: 2rem; font-weight: bold; color: #3b82f6;">30g</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 0.875rem; color: #6b7280; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Calories</div>
+        <div style="font-size: 2rem; font-weight: bold; color: #10b981;">260</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 0.875rem; color: #6b7280; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Carbs</div>
+        <div style="font-size: 2rem; font-weight: bold; color: #f59e0b;">12g</div>
+      </div>
+      <div style="text-align: center;">
+        <div style="font-size: 0.875rem; color: #6b7280; text-transform: uppercase; font-weight: 600; margin-bottom: 0.5rem;">Cook Time</div>
+        <div style="font-size: 2rem; font-weight: bold; color: #10b981;">20 min</div>
+      </div>
+    </div>
+
+    <div class="info-box info-box-green" style="margin: 2rem 0;">
+      <h4>Why This Recipe is Perfect for Stage 4</h4>
+      <ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>High protein:</strong> 30g protein from chicken for healing</li>
+        <li><strong>Tender texture:</strong> Thinly sliced chicken is easy to chew</li>
+        <li><strong>Soft vegetables:</strong> Overcooked vegetables are gentle on digestion</li>
+        <li><strong>Asian flavors:</strong> Satisfying taste without being too spicy</li>
+        <li><strong>Digestive friendly:</strong> Gentle on healing stomach</li>
+      </ul>
+    </div>
+
+    <h4 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; font-weight: 700;">Ingredients</h4>
+    <p style="color: #6b7280; font-size: 0.95rem; margin-bottom: 1rem;"><em>Available from Coles, Woolworths, or health food stores</em></p>
+    <ul style="line-height: 2; font-size: 1.05rem;">
+      <li><strong>100g chicken breast</strong> (thinly sliced against the grain)</li>
+      <li><strong>1 cup soft-cooked vegetables</strong> (zucchini, capsicum, carrot)</li>
+      <li><strong>1 tbsp soy sauce</strong> (low-sodium preferred)</li>
+      <li><strong>1 tsp sesame oil</strong> (for flavor)</li>
+      <li><strong>2 cloves garlic</strong> (minced)</li>
+      <li><strong>1 tsp fresh ginger</strong> (grated)</li>
+    </ul>
+
+    <h4 style="color: #1f2937; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; font-weight: 700;">Step-by-Step Instructions</h4>
+    <ol style="line-height: 2.2; font-size: 1.05rem;">
+      <li>
+        <strong>Prepare chicken:</strong> Slice chicken breast very thin against the grain for maximum tenderness.
+      </li>
+      <li>
+        <strong>Marinate chicken:</strong> Marinate chicken in soy sauce for 1 hour before cooking (optional but recommended).
+      </li>
+      <li>
+        <strong>Cook vegetables:</strong> Soft-cook vegetables until very tender (overcook them - crisp-tender is still too hard).
+      </li>
+      <li>
+        <strong>Heat oil:</strong> Heat sesame oil in a large pan or wok over medium heat.
+      </li>
+      <li>
+        <strong>Stir-fry chicken:</strong> Add chicken and stir-fry for 5-6 minutes until tender and cooked through.
+      </li>
+      <li>
+        <strong>Add vegetables:</strong> Add soft-cooked vegetables and stir to combine.
+      </li>
+      <li>
+        <strong>Add seasonings:</strong> Add garlic, ginger, and remaining soy sauce. Cook for 2 minutes more.
+      </li>
+      <li>
+        <strong>Check tenderness:</strong> Ensure chicken is very tender and vegetables are soft.
+      </li>
+      <li>
+        <strong>Serve immediately:</strong> Serve while hot. Chew each bite 25+ times.
+      </li>
+    </ol>
+
+    <div class="tip-box" style="margin: 2.5rem 0;">
+      <h4 style="margin-top: 0;">Pro Tips for Best Results</h4>
+      <ul style="margin: 0.5rem 0 0 0; padding-left: 1.25rem;">
+        <li><strong>Slice against the grain:</strong> This makes chicken much more tender</li>
+        <li><strong>Marinate for tenderness:</strong> 1 hour in soy sauce makes a big difference</li>
+        <li><strong>Overcook vegetables:</strong> They must be very soft for Stage 4</li>
+        <li><strong>Chew thoroughly:</strong> 25+ chews per bite for proper digestion</li>
+        <li><strong>Storage:</strong> Keeps 2-3 days refrigerated, reheat gently</li>
+      </ul>
+    </div>
+
+    <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+      <h4 style="margin: 0 0 0.75rem 0; color: #1e40af; font-size: 1.125rem;">Australian Shopping Guide</h4>
+      <p style="margin: 0; color: #1e3a8a; line-height: 1.8;">
+        <strong>Coles/Woolworths:</strong> Chicken breast, vegetables, soy sauce, and sesame oil readily available.<br>
+        <strong>Health food stores:</strong> Organic chicken and premium soy sauce options.<br>
+        <strong>Tender protein:</strong> Perfect for Stage 4 protein needs
+      </p>
   </div>
-  <p style="margin: 1rem 0;"><strong>Ingredients:</strong> 100g chicken breast (thinly sliced), 1 cup soft-cooked vegetables (zucchini, capsicum), 1 tbsp soy sauce, 1 tsp sesame oil, garlic, ginger</p>
-  <p style="margin: 1rem 0;"><strong>Instructions:</strong> Slice chicken very thin. Stir-fry in sesame oil 5-6 min until tender. Add vegetables (cook until very soft). Add soy sauce, garlic, ginger. Cook 2 min more. Chew each bite 25+ times.</p>
-  <div style="background: #dcfce7; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
-    <strong style="color: #166534;">Tender tip:</strong> Slice chicken against the grain and marinate in soy sauce 1 hour before cooking for maximum tenderness. Overcook vegetables until very soft - crisp-tender is still too hard!
   </div>
 </div>
 
