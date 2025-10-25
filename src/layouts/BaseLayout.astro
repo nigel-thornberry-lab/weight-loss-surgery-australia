@@ -197,8 +197,7 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
     </script>
     
     <!-- Structured Data - Medical Website & Organization -->
-    <script type="application/ld+json">
-      {JSON.stringify({
+    <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@graph": [
           {
@@ -268,8 +267,7 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
             }
           }
         ]
-      })}
-    </script>
+      })} />
   </head>
   <body class="antialiased">
     <!-- Header -->
