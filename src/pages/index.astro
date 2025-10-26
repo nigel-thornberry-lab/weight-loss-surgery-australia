@@ -14,35 +14,36 @@ const meta = seoMeta.home;
 >
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-br from-blue-50 to-white py-6 lg:py-8">
-	<div class="max-w-screen-xl px-4 mx-auto w-full">
-		<div class="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[70vh]">
+<section class="bg-gradient-to-br from-blue-50 to-white py-12 lg:py-16">
+	<div class="max-w-screen-xl px-4 lg:px-8 mx-auto w-full">
+		<div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[85vh] lg:min-h-[90vh]">
 			<!-- Text Content -->
-			<div class="text-center lg:text-left order-2 lg:order-1">
-				<h1 class="mb-3 text-2xl font-extrabold tracking-tight leading-tight md:text-3xl lg:text-4xl xl:text-5xl text-gray-900">
+			<div class="text-center lg:text-left order-2 lg:order-1 lg:col-span-6">
+				<h1 class="mb-6 text-3xl font-black tracking-tight leading-[1.1] md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-gray-900">
 					You're Not Alone: Weight Loss Surgery Guide for Australians
 				</h1>
-				<p class="mb-4 font-light text-gray-700 text-sm md:text-base lg:text-lg">
+				<p class="mb-8 font-normal text-gray-700 text-lg md:text-xl lg:text-2xl leading-relaxed">
 					Get transparent pricing, honest guidance, and connect with Australia's best bariatric surgeons.
 				</p>
-				<div class="flex flex-col sm:flex-row gap-2 justify-center lg:justify-start">
-					<a href="/contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition">
+				<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+					<a href="/contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-center text-white rounded-xl bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition shadow-lg hover:shadow-xl">
 						Get My Consultation
 					</a>
-					<a href="/am-i-ready" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition">
+					<a href="/am-i-ready" class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-center text-gray-900 border-2 border-gray-300 rounded-xl hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition">
 						Take My Readiness Quiz
 					</a>
 				</div>
 			</div>
 
 		<!-- Image -->
-		<div class="relative w-full h-[400px] md:h-[500px] lg:h-[600px] order-1 lg:order-2">
+		<div class="relative w-full h-[450px] md:h-[550px] lg:h-[700px] order-1 lg:order-2 lg:col-span-6">
 			<img
 				src="/images/hero-4-400.webp"
 				srcset="/images/hero-4-400.webp 400w, /images/hero-4-800.webp 800w, /images/hero-4-1200.webp 1200w"
 				sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 50vw"
 				alt="Woman demonstrating weight loss success"
-				class="w-full h-full object-cover rounded-2xl shadow-2xl"
+				class="w-full h-full object-cover object-center rounded-2xl shadow-2xl"
+				style="object-position: center 30%;"
 				loading="eager"
 				fetchpriority="high"
 				width="1200"
@@ -611,6 +612,9 @@ const meta = seoMeta.home;
 			toggle.addEventListener('click', () => {
 				const content = toggle.nextElementSibling;
 				const icon = toggle.querySelector('.faq-icon');
+				
+				if (!content || !icon) return;
+				
 				const isOpen = !content.classList.contains('hidden');
 				
 				// Close all FAQs
