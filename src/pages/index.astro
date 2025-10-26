@@ -38,12 +38,15 @@ const meta = seoMeta.home;
 			<!-- Image -->
 			<div class="relative h-[400px] md:h-[500px] lg:h-[600px] xl:h-[700px] order-1 lg:order-2">
 				<img
-					src="/images/hero-4-mobile.webp"
-					srcset="/images/hero-4-mobile.webp 800w, /images/hero-4.webp 4000w"
-					sizes="(max-width: 768px) 800px, 1200px"
+					src="/images/hero-4-400.webp"
+					srcset="/images/hero-4-400.webp 400w, /images/hero-4-800.webp 800w, /images/hero-4-1200.webp 1200w"
+					sizes="(max-width: 480px) 400px, (max-width: 768px) 800px, 1200px"
 					alt="Woman demonstrating weight loss success"
 					class="w-full h-full object-cover rounded-2xl shadow-2xl"
 					loading="eager"
+					fetchpriority="high"
+					width="1200"
+					height="1800"
 				/>
 			</div>
 		</div>
