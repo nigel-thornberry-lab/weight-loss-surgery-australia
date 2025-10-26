@@ -295,17 +295,13 @@ Test these critical paths:
 - **TODO:** Sign up at improvmx.com
 - **TODO:** Add domain: bariatricsurgeryhub.com
 - **TODO:** Add MX records (Vercel DNS or registrar)
-- **TODO:** Create aliases:
-  - info@bariatricsurgeryhub.com
-  - privacy@bariatricsurgeryhub.com
-  - legal@bariatricsurgeryhub.com
-  - support@bariatricsurgeryhub.com
+- **TODO:** Set up single email: contact@bariatricsurgeryhub.com
 - **TODO:** Forward to personal email
 
 **Option 2: Google Workspace (PROFESSIONAL - $6/month)**
 - **TODO:** Sign up at workspace.google.com
 - **TODO:** Add domain and verify
-- **TODO:** Create mailboxes
+- **TODO:** Create single mailbox: contact@bariatricsurgeryhub.com
 - **TODO:** Configure mobile apps
 
 ---

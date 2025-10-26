@@ -852,7 +852,7 @@ Recovery from gastric sleeve surgery is challenging but manageable. With this we
 
 **Questions about recovery?**
 - Phone: 1300 000 000
-- Email: info@wlsaustralia.com.au
+- Email: contact@bariatricsurgeryhub.com
 
 ---
 

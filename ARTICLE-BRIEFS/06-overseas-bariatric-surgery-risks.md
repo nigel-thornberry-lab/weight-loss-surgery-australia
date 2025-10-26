@@ -1346,7 +1346,7 @@ If you answered **"no"** to any question: **Don't go overseas.**
 **We're here to help you make the safest, most informed decision.**
 
 📞 **Phone:** 1300 000 000 (Australian bariatric surgery information)  
-📧 **Email:** info@wlsaustralia.com.au  
+📧 **Email:** contact@bariatricsurgeryhub.com  
 💬 **Live Chat:** Available Mon-Fri 9am-5pm AEST
 
 **We can help you:**

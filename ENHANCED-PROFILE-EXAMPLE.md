@@ -158,7 +158,7 @@ Contact: Phone | Website | Google Maps
 │ 📞 CONTACT & BOOK CONSULTATION                                      │
 │                                                                     │
 │  Phone: 1300 849 118                                                │
-│  Email: info@drjasonmaani.com.au                                    │
+│  Email: contact@bariatricsurgeryhub.com                                    │
 │  Website: www.drjasonmaani.com.au                                   │
 │                                                                     │
 │  Initial Consultation: $250                                         │

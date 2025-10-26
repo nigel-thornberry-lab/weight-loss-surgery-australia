@@ -96,7 +96,7 @@
 - **FRACS Year:** 2015
 - **Total Bariatric Procedures:** Over 500 (as of January 2022)
 - **Practice Website:** www.obesity.com.au
-- **Phone:** (03) 9421 1166 or info@obesity.com.au
+- **Phone:** (03) 9421 1166 or contact@bariatricsurgeryhub.com
 - **Languages:** English, Mandarin
 - **Locations:** Epworth Eastern (Box Hill), Epworth Freemasons (East Melbourne)
 - **Procedures:** Sleeve gastrectomy, Roux-en-Y gastric bypass, mini gastric bypass, adjustable gastric band, revision surgeries
@@ -501,7 +501,7 @@
 - **FRACS Year:** 2011
 - **Experience:** Over 14 years in general surgery, several years dedicated to bariatric practice
 - **Practice Website:** www.nirubenrajasagaram.au
-- **Contact:** admin@vsscentre.com.au or 03 8548 0318
+- **Contact:** contact@bariatricsurgeryhub.com or 03 8548 0318
 - **Languages:** English
 - **Patient Reviews:** 142 verified patient reviews on Doctify; high patient satisfaction, noted for professionalism, expertise, and compassionate care
 - **Practice Locations:** Knox Private Hospital (main), Frankston, Berwick, and several Melbourne private hospitals

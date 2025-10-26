@@ -624,7 +624,7 @@ The pre-op diet is challenging but achievable. Thousands complete it successfull
 
 **Questions about pre-op diet?**
 - Phone: 1300 000 000
-- Email: info@wlsaustralia.com.au
+- Email: contact@bariatricsurgeryhub.com
 
 **Remember:** 2 weeks of discipline = a lifetime of health. You've got this!
 

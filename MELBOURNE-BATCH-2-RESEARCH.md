@@ -136,7 +136,7 @@
 - Patient Reviews: 142 verified reviews on Doctify
 - Practice: Director, Victorian Specialist Surgery & Weight Loss Centre
 - Website: nirubenrajasagaram.au
-- Contact: 03 8548 0318, admin@vsscentre.com.au
+- Contact: 03 8548 0318, contact@bariatricsurgeryhub.com
 - Hospitals: Knox Private, Frankston, Berwick
 
 ---

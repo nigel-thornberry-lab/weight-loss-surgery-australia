@@ -137,7 +137,7 @@ function doPost(e) {
     
     // Send email notification
     MailApp.sendEmail({
-      to: 'your-email@example.com', // CHANGE THIS
+      to: 'contact@bariatricsurgeryhub.com', // Main contact email
       subject: '🎯 New Lead: ' + (data.name || 'Unknown'),
       htmlBody: `
         <h2>New Lead Submission</h2>

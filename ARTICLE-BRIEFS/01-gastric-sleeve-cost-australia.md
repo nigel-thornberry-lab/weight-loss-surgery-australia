@@ -1054,7 +1054,7 @@ Every patient's situation is unique. Your exact gastric sleeve surgery cost depe
 
 **Contact us:**
 - Phone: 1300 000 000
-- Email: info@wlsaustralia.com.au
+- Email: contact@bariatricsurgeryhub.com
 - Live Chat: Available Mon-Fri 9am-5pm AEST
 
 **Remember:** While cost is important, prioritize surgeon qualifications, safety, and long-term outcomes. The cheapest option isn't always the best value.

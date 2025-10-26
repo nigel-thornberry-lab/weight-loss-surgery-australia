@@ -211,7 +211,7 @@ export const seoMeta: Record<string, PageMeta> = {
 
   contact: {
     title: "Contact Us - Weight Loss Surgery Australia | Book Consultation",
-    description: "Contact Weight Loss Surgery Australia for consultation. Email info@wlsaustralia.com.au. Get personalised advice from bariatric surgery experts.",
+    description: "Contact Weight Loss Surgery Australia for consultation. Email contact@bariatricsurgeryhub.com. Get personalised advice from bariatric surgery experts.",
     keywords: ["contact", "consultation", "book appointment"]
   },
 
