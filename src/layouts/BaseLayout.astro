@@ -39,9 +39,14 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
     
-    <!-- Favicon with all sizes -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
+    <!-- Favicons for all browsers and devices -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png" />
+    <link rel="icon" type="image/webp" href="/favicon.webp" />
+
+    <!-- Web App Manifest for PWA -->
+    <link rel="manifest" href="/site.webmanifest" />
     
     <!-- Critical inline CSS for above-fold content -->
     <style>
@@ -220,7 +225,9 @@ const ogImage = image || 'https://weightlosssurgery.com.au/og-image.jpg';
             "url": "https://weightlosssurgery.com.au",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://weightlosssurgery.com.au/images/logo-192x192.webp"
+              "url": "https://weightlosssurgery.com.au/logo-512.webp",
+              "width": 512,
+              "height": 512
             },
             "image": "https://weightlosssurgery.com.au/og-image.jpg",
             "areaServed": {

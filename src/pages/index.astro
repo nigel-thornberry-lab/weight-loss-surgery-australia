@@ -14,33 +14,34 @@ const meta = seoMeta.home;
 >
 
 <!-- Hero Section -->
-<section class="bg-gradient-to-br from-blue-50 to-white py-8 lg:py-0 lg:min-h-screen flex items-center">
+<section class="bg-gradient-to-br from-blue-50 to-white py-6 lg:py-8">
 	<div class="max-w-screen-xl px-4 mx-auto w-full">
-		<div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+		<div class="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center min-h-[70vh]">
 			<!-- Text Content -->
 			<div class="text-center lg:text-left order-2 lg:order-1">
-				<h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-tight md:text-4xl lg:text-5xl xl:text-6xl text-gray-900">
+				<h1 class="mb-3 text-2xl font-extrabold tracking-tight leading-tight md:text-3xl lg:text-4xl xl:text-5xl text-gray-900">
 					You're Not Alone: Weight Loss Surgery Guide for Australians
 				</h1>
-				<p class="mb-6 font-light text-gray-700 text-base md:text-lg lg:text-xl">
+				<p class="mb-4 font-light text-gray-700 text-sm md:text-base lg:text-lg">
 					Get transparent pricing, honest guidance, and connect with Australia's best bariatric surgeons.
 				</p>
-				<div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-					<a href="/contact" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition">
+				<div class="flex flex-col sm:flex-row gap-2 justify-center lg:justify-start">
+					<a href="/contact" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-white rounded-lg bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition">
 						Get My Consultation
 					</a>
-					<a href="/am-i-ready" class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition">
+					<a href="/am-i-ready" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition">
 						Take My Readiness Quiz
 					</a>
 				</div>
 			</div>
 
-			<!-- Image -->
-			<div class="relative aspect-[2/3] w-full max-w-[400px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px] order-1 lg:order-2">
+		<!-- Image -->
+		<div class="relative w-full h-[300px] md:h-[400px] lg:h-[500px] order-1 lg:order-2 flex justify-center lg:justify-end">
+			<div class="w-full max-w-[400px] md:max-w-[500px] lg:max-w-[600px] h-full">
 				<img
 					src="/images/hero-4-400.webp"
 					srcset="/images/hero-4-400.webp 400w, /images/hero-4-800.webp 800w, /images/hero-4-1200.webp 1200w"
-					sizes="(max-width: 480px) 400px, (max-width: 768px) 500px, (max-width: 1024px) 600px, 700px"
+					sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 50vw"
 					alt="Woman demonstrating weight loss success"
 					class="w-full h-full object-cover rounded-2xl shadow-2xl"
 					loading="eager"
@@ -49,6 +50,7 @@ const meta = seoMeta.home;
 					height="1800"
 				/>
 			</div>
+		</div>
 		</div>
 	</div>
 </section>
