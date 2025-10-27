@@ -1,30 +1,287 @@
 ---
-const meta = {
-  title: "Gastric Band Melbourne | Redirecting...",
-  description: "Redirecting to gastric band procedure page"
-};
+import '../../styles/global.css';
+import { seoMeta, generateProcedureCityMeta } from '../../data/seo-meta';
+import QuickAnswer from '../../components/QuickAnswer.astro';
+import ContentFreshness from '../../components/ContentFreshness.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const meta = generateProcedureCityMeta('Gastric Band', 'Melbourne');
+const pageUrl = "https://bariatricsurgeryhub.com/procedures/gastric-band-melbourne";
 ---
 
-<html lang="en-AU">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>{meta.title}</title>
-  <meta name="description" content={meta.description} />
-  
-  <!-- Immediate redirect -->
-  <meta http-equiv="refresh" content="0; url=/procedures/gastric-band" />
-  <link rel="canonical" href="/procedures/gastric-band" />
-  
-  <!-- JavaScript redirect as fallback -->
-  <script>
-    window.location.href = '/procedures/gastric-band';
-  </script>
-</head>
-<body>
-  <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
-    <h1>Redirecting...</h1>
-    <p>If you are not redirected automatically, <a href="/procedures/gastric-band">click here</a>.</p>
-  </div>
-</body>
-</html>
+<BaseLayout title="{meta.title}" description="{meta.description}" canonicalUrl={pageUrl}>
+	<main class="min-h-screen bg-gray-50">
+
+		<!-- Breadcrumbs -->
+		<div class="bg-gray-50 border-b border-gray-200">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+				<div class="flex items-center space-x-2 text-sm">
+					<a href="/" class="text-gray-600 hover:text-blue-600">Home</a>
+					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+					</svg>
+					<a href="/procedures" class="text-gray-600 hover:text-blue-600">Procedures</a>
+					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+					</svg>
+					<a href="/procedures/gastric-band" class="text-gray-600 hover:text-blue-600">Gastric Band</a>
+					<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+						<path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+					</svg>
+					<span class="text-gray-900 font-medium">Melbourne</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Melbourne Resources Banner -->
+		<div class="bg-gradient-to-r from-blue-600 to-blue-700 border-b border-blue-800">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+				<div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+					<div class="text-white">
+						<p class="font-semibold text-lg">Melbourne Gastric Band Resources</p>
+						<p class="text-sm text-blue-100">Get detailed costs and book your consultation</p>
+					</div>
+					<div class="flex flex-col sm:flex-row gap-3">
+						<a href="/melbourne/cost" class="bg-white text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-50 transition font-semibold text-center whitespace-nowrap">
+							View Cost Guide
+						</a>
+						<a href="/melbourne/consultation" class="bg-blue-800 text-white px-6 py-2 rounded-lg hover:bg-blue-900 transition font-semibold text-center whitespace-nowrap">
+							Book Consultation
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Hero Section -->
+		<section class="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center">
+					<h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+						Gastric Band Surgery in <span class="text-blue-600">Melbourne</span>
+					</h1>
+					<p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+						Find expert gastric band (Lap-Band) surgeons in Melbourne. Adjustable, reversible weight loss solution with 40-50% excess weight loss results.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<a href="#melbourne-surgeons" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+							Find Melbourne Surgeons
+						</a>
+						<a href="#melbourne-costs" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors">
+							View Costs
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Quick Answer -->
+		<QuickAnswer 
+			question="How much does gastric band surgery cost in Melbourne?"
+			answer="Gastric band surgery in Melbourne typically costs $12,000-$20,000. This includes the procedure, hospital stay, and follow-up adjustments. Medicare may provide rebates for eligible patients."
+		/>
+
+		<!-- Melbourne Gastric Band Overview -->
+		<section class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="grid lg:grid-cols-2 gap-12 items-center">
+					<div>
+						<h2 class="text-3xl font-bold text-gray-900 mb-6">Gastric Band Surgery in Melbourne</h2>
+						<p class="text-lg text-gray-600 mb-6">
+							Melbourne offers some of Australia's most experienced gastric band surgeons, with access to state-of-the-art facilities and comprehensive aftercare programs.
+						</p>
+						<div class="space-y-4">
+							<div class="flex items-start">
+								<div class="flex-shrink-0">
+									<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+										<svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+										</svg>
+									</div>
+								</div>
+								<div class="ml-3">
+									<h3 class="text-lg font-semibold text-gray-900">Adjustable & Reversible</h3>
+									<p class="text-gray-600">The gastric band can be adjusted or removed if needed, offering flexibility in your weight loss journey.</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="flex-shrink-0">
+									<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+										<svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+										</svg>
+									</div>
+								</div>
+								<div class="ml-3">
+									<h3 class="text-lg font-semibold text-gray-900">Regular Adjustments</h3>
+									<p class="text-gray-600">Band adjustments every 4-6 weeks initially, then quarterly to optimize weight loss results.</p>
+								</div>
+							</div>
+							<div class="flex items-start">
+								<div class="flex-shrink-0">
+									<div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+										<svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+											<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+										</svg>
+									</div>
+								</div>
+								<div class="ml-3">
+									<h3 class="text-lg font-semibold text-gray-900">40-50% Weight Loss</h3>
+									<p class="text-gray-600">Expected excess weight loss of 40-50% over 18-24 months with proper follow-up care.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="bg-gray-50 rounded-xl p-8">
+						<h3 class="text-2xl font-bold text-gray-900 mb-6">Melbourne Gastric Band Facts</h3>
+						<div class="space-y-4">
+							<div class="flex justify-between items-center py-3 border-b border-gray-200">
+								<span class="text-gray-600">Average Cost</span>
+								<span class="font-semibold text-gray-900">$12,000 - $20,000</span>
+							</div>
+							<div class="flex justify-between items-center py-3 border-b border-gray-200">
+								<span class="text-gray-600">Hospital Stay</span>
+								<span class="font-semibold text-gray-900">1-2 days</span>
+							</div>
+							<div class="flex justify-between items-center py-3 border-b border-gray-200">
+								<span class="text-gray-600">Recovery Time</span>
+								<span class="font-semibold text-gray-900">2-4 weeks</span>
+							</div>
+							<div class="flex justify-between items-center py-3 border-b border-gray-200">
+								<span class="text-gray-600">Medicare Eligible</span>
+								<span class="font-semibold text-green-600">Yes</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Melbourne Surgeons Section -->
+		<section id="melbourne-surgeons" class="py-16 bg-gray-50">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl font-bold text-gray-900 mb-4">Experienced Gastric Band Surgeons in Melbourne</h2>
+					<p class="text-lg text-gray-600 max-w-3xl mx-auto">
+						Connect with qualified bariatric surgeons across Melbourne who specialize in gastric band procedures.
+					</p>
+				</div>
+				<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Melbourne CBD</h3>
+						<p class="text-gray-600 mb-4">Central Melbourne surgeons with access to major hospitals and comprehensive aftercare programs.</p>
+						<a href="/surgeons/melbourne" class="text-blue-600 hover:text-blue-700 font-semibold">
+							Find CBD Surgeons →
+						</a>
+					</div>
+					<div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Eastern Suburbs</h3>
+						<p class="text-gray-600 mb-4">Experienced surgeons in Box Hill, Ringwood, and surrounding areas with convenient locations.</p>
+						<a href="/surgeons/box-hill" class="text-blue-600 hover:text-blue-700 font-semibold">
+							Find Eastern Surgeons →
+						</a>
+					</div>
+					<div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+						<h3 class="text-xl font-semibold text-gray-900 mb-3">Western Suburbs</h3>
+						<p class="text-gray-600 mb-4">Qualified surgeons in Footscray, Sunshine, and western Melbourne with modern facilities.</p>
+						<a href="/surgeons/footscray" class="text-blue-600 hover:text-blue-700 font-semibold">
+							Find Western Surgeons →
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Cost Section -->
+		<section id="melbourne-costs" class="py-16 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl font-bold text-gray-900 mb-4">Gastric Band Costs in Melbourne</h2>
+					<p class="text-lg text-gray-600 max-w-3xl mx-auto">
+						Understanding the complete cost breakdown for gastric band surgery in Melbourne.
+					</p>
+				</div>
+				<div class="grid lg:grid-cols-2 gap-12">
+					<div>
+						<h3 class="text-2xl font-bold text-gray-900 mb-6">What's Included</h3>
+						<div class="space-y-4">
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Surgical procedure and anesthesia</span>
+							</div>
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Hospital stay (1-2 days)</span>
+							</div>
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Initial follow-up appointments</span>
+							</div>
+							<div class="flex items-center">
+								<svg class="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+								</svg>
+								<span class="text-gray-700">Band adjustment appointments</span>
+							</div>
+						</div>
+					</div>
+					<div class="bg-blue-50 rounded-xl p-8">
+						<h3 class="text-2xl font-bold text-gray-900 mb-6">Cost Breakdown</h3>
+						<div class="space-y-4">
+							<div class="flex justify-between items-center py-2">
+								<span class="text-gray-600">Surgeon's Fee</span>
+								<span class="font-semibold text-gray-900">$8,000 - $12,000</span>
+							</div>
+							<div class="flex justify-between items-center py-2">
+								<span class="text-gray-600">Hospital & Anesthesia</span>
+								<span class="font-semibold text-gray-900">$3,000 - $5,000</span>
+							</div>
+							<div class="flex justify-between items-center py-2">
+								<span class="text-gray-600">Gastric Band Device</span>
+								<span class="font-semibold text-gray-900">$1,000 - $3,000</span>
+							</div>
+							<div class="border-t border-gray-300 pt-4">
+								<div class="flex justify-between items-center">
+									<span class="text-lg font-semibold text-gray-900">Total Cost</span>
+									<span class="text-xl font-bold text-blue-600">$12,000 - $20,000</span>
+								</div>
+							</div>
+						</div>
+						<div class="mt-6 p-4 bg-green-50 rounded-lg">
+							<p class="text-sm text-green-800">
+								<strong>Medicare Rebates:</strong> Eligible patients may receive rebates of $1,000-$2,000 depending on their health fund coverage.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CTA Section -->
+		<section class="py-16 bg-gradient-to-r from-blue-600 to-blue-700">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+				<h2 class="text-3xl font-bold text-white mb-4">Ready to Start Your Weight Loss Journey?</h2>
+				<p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+					Book a consultation with an experienced gastric band surgeon in Melbourne today.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a href="/melbourne/consultation" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+						Book Consultation
+					</a>
+					<a href="/procedures/gastric-band" class="bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold border-2 border-blue-800 hover:bg-blue-900 transition-colors">
+						Learn More About Gastric Band
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Content Freshness -->
+		<ContentFreshness lastUpdated="2025-01-09" />
+	</main>
+</BaseLayout>
