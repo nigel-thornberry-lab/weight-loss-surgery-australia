@@ -680,8 +680,14 @@ const pageUrl = "https://weightlosssurgery.com.au/bmi-calculator";
 			};
 
 			try {
-				// TODO: Replace with actual webhook URL
-				const webhookUrl = 'YOUR_GOOGLE_SHEETS_WEBHOOK_URL';
+				// Get webhook URL from environment variable
+				// Setup instructions: See BMI-EMAIL-AUTOMATION-SETUP.md
+				const webhookUrl = import.meta.env.PUBLIC_GOOGLE_SHEETS_WEBHOOK_URL;
+				
+				if (!webhookUrl || webhookUrl === 'YOUR_GOOGLE_SHEETS_WEBHOOK_URL') {
+					console.warn('Webhook URL not configured. Email will not be sent.');
+					console.warn('See BMI-EMAIL-AUTOMATION-SETUP.md for setup instructions');
+				}
 				
 				await fetch(webhookUrl, {
 					method: 'POST',
