@@ -8,7 +8,7 @@ export default defineConfig({
   site: 'https://bariatricsurgeryhub.com',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/admin') && !page.includes('/api') && !page.includes('/index-old'),
+      filter: (page) => !page.includes('/admin') && !page.includes('/api') && !page.includes('/index-old') && !page.includes('/procedures/gastric-band-melbourne') && !page.includes('/procedures/gastric-balloon-melbourne') && !page.includes('/procedures/duodenal-switch-melbourne'),
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date(),
