@@ -2,22 +2,88 @@
 // No props needed - using only verified organizational sources
 ---
 
-<section class="sources-section bg-gray-50 p-6 rounded-lg mb-8">
-  <h3 class="text-lg font-bold text-gray-900 mb-4">Sources & Medical Accuracy</h3>
-  <div class="space-y-2 text-sm text-gray-700">
-    <p><strong>Content Based On:</strong></p>
-    <ul class="list-disc list-inside space-y-1 ml-4">
-      <li>Obesity Surgery Society of Australia and New Zealand (OSSANZ) clinical guidelines</li>
-      <li>Royal Australasian College of Surgeons (RACS) standards</li>
-      <li>Australian Government Department of Health resources</li>
-      <li>National Health and Medical Research Council (NHMRC) evidence</li>
-      <li>Medicare Benefits Schedule (MBS) 2025 data</li>
-      <li>Peer-reviewed bariatric surgery research</li>
-    </ul>
-    <p class="text-xs text-gray-600 mt-4 pt-4 border-t border-gray-300">
-      <strong>Medical Disclaimer:</strong> This information is for educational purposes only and does not constitute medical advice. 
-      Always consult with qualified healthcare professionals before making decisions about weight loss surgery. 
-      Individual results may vary.
+<section class="sources-section bg-gray-50 p-6 rounded-lg mb-8 border-l-4 border-blue-600">
+  <div class="flex items-start mb-4">
+    <svg class="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+    </svg>
+    <div>
+      <h3 class="text-lg font-bold text-gray-900 mb-2">Medical Evidence & Sources</h3>
+      <p class="text-sm text-gray-700 mb-3">
+        All information is based on Australian clinical guidelines, government health resources, and peer-reviewed medical research.
+      </p>
+    </div>
+  </div>
+
+  <div class="ml-9 space-y-3 text-sm text-gray-700">
+    <div>
+      <p class="font-semibold text-gray-900 mb-2">Primary Clinical Sources:</p>
+      <ul class="space-y-2">
+        <li class="flex items-start">
+          <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span><strong><a href="https://www.monash.edu/medicine/translational/research/registries/bariatric" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Australian & New Zealand Bariatric Surgery Registry (ANZBSR)</a></strong> - 2023 Annual Report covering 120,000+ procedures since 2009. Data housed at Monash University.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span><strong><a href="https://anzmoss.com.au/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">ANZMOSS</a></strong> (Australian & New Zealand Metabolic and Obesity Surgery Society) - National Framework and minimum training standards for bariatric surgery.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span><strong><a href="https://www.surgeons.org/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Royal Australasian College of Surgeons (RACS)</a></strong> - Professional standards and surgeon qualification requirements.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span><strong><a href="https://www9.health.gov.au/mbs/search.cfm?q=31569" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Medicare Benefits Schedule (MBS) 2025</a></strong> - Items 31569, 31572, 31575, 31581 for bariatric surgery rebates.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span><strong><a href="https://www.nhmrc.gov.au/about-us/publications/clinical-practice-guidelines-management-overweight-and-obesity" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">NHMRC Clinical Practice Guidelines (2013)</a></strong> - National Health and Medical Research Council evidence-based guidelines for obesity management.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span><strong><a href="https://asmbs.org/resources/metabolic-and-bariatric-surgery-guidelines" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">ASMBS/IFSO Guidelines (2022)</a></strong> - International Federation for the Surgery of Obesity and Metabolic Disorders clinical recommendations.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span><strong><a href="https://www.ahpra.gov.au/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">AHPRA</a></strong> (Australian Health Practitioner Regulation Agency) - Surgeon registration and regulatory oversight.</span>
+        </li>
+        <li class="flex items-start">
+          <svg class="w-4 h-4 text-blue-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          <span><strong><a href="https://www.health.gov.au/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 underline">Australian Department of Health</a></strong> - Government health resources and obesity treatment pathways.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="pt-3 border-t border-gray-300">
+      <p class="font-semibold text-gray-900 mb-2">Supporting Research:</p>
+      <p class="text-xs text-gray-600">
+        Additional data from peer-reviewed journals including <em>Obesity Surgery</em>, <em>JAMA Surgery</em>,
+        <em>The Lancet</em>, and publications indexed in PubMed and Cochrane Library databases.
+      </p>
+    </div>
+  </div>
+
+  <div class="ml-9 mt-4 pt-4 border-t border-gray-300">
+    <p class="text-xs text-gray-600">
+      <strong>Medical Disclaimer:</strong> This information is for educational purposes only and does not constitute medical advice.
+      Always consult with qualified, AHPRA-registered healthcare professionals before making decisions about weight loss surgery.
+      Individual results may vary based on personal health factors and adherence to post-surgical protocols.
     </p>
   </div>
 </section>

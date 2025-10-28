@@ -1,0 +1,49 @@
+---
+interface Props {
+  source: string;
+  url?: string;
+  year?: string;
+}
+
+const { source, url, year } = Astro.props;
+---
+
+<sup class="inline-citation">
+  {url ? (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="citation-link"
+      title={`Source: ${source}${year ? ` (${year})` : ''}`}
+    >
+      [{source}{year ? `, ${year}` : ''}]
+    </a>
+  ) : (
+    <span class="citation-text" title={`Source: ${source}${year ? ` (${year})` : ''}`}>
+      [{source}{year ? `, ${year}` : ''}]
+    </span>
+  )}
+</sup>
+
+<style>
+  .inline-citation {
+    font-size: 0.75em;
+    margin-left: 2px;
+  }
+
+  .citation-link {
+    color: #2563eb;
+    text-decoration: none;
+    border-bottom: 1px dotted #2563eb;
+  }
+
+  .citation-link:hover {
+    color: #1d4ed8;
+    border-bottom: 1px solid #1d4ed8;
+  }
+
+  .citation-text {
+    color: #4b5563;
+  }
+</style>

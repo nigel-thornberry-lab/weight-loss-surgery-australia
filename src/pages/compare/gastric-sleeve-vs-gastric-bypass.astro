@@ -4,6 +4,8 @@ import { seoMeta } from '../../data/seo-meta';
 import RelatedContent from '../../components/RelatedContent.astro';
 import SurgeonCTA from '../../components/SurgeonCTA.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import OutcomeComparison from '../../components/OutcomeComparison.astro';
+import AuthorityCitations from '../../components/AuthorityCitations.astro';
 
 const meta = seoMeta.sleeveVsBypass;
 const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/compare/gastric-sleeve-vs-gastric-bypass";
@@ -154,6 +156,24 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/comp
 							</a>
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Evidence-Based Outcomes -->
+		<section class="py-12 bg-white">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="max-w-4xl mx-auto">
+					<OutcomeComparison
+						procedure1="Gastric Sleeve"
+						procedure2="Gastric Bypass"
+						weightLoss1="60-70%"
+						weightLoss2="70-80%"
+						diabetesRemission1="60-70%"
+						diabetesRemission2="80-90%"
+						complicationRate1="1-2%"
+						complicationRate2="2-3%"
+					/>
 				</div>
 			</div>
 		</section>
@@ -905,6 +925,13 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/comp
 					headline="Find Experienced Bariatric Surgeons"
 					description="Browse our directory of AHPRA-registered surgeons who specialise in both gastric sleeve and gastric bypass. Compare qualifications, read reviews, and book consultations."
 				/>
+			</div>
+		</section>
+
+		<!-- Authority Citations -->
+		<section class="py-12 bg-gray-50">
+			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+				<AuthorityCitations />
 			</div>
 		</section>
 

@@ -8,6 +8,8 @@ import QuickAnswer from '../../components/QuickAnswer.astro';
 import ContentFreshness from '../../components/ContentFreshness.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AuthorityCitations from '../../components/AuthorityCitations.astro';
+import RegistryStats from '../../components/RegistryStats.astro';
+import ClinicalGuidelines from '../../components/ClinicalGuidelines.astro';
 
 const meta = seoMeta.gastricBypass;
 const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/procedures/gastric-bypass";
@@ -1428,7 +1430,23 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 				</a>
 			</div>
 		</div>
-	</section></section>
+	</section>
 
-		</main>
+	<!-- Evidence & Authority Section -->
+	<section class="py-12 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Evidence-Based Information</h2>
+
+			<!-- Registry Statistics -->
+			<RegistryStats />
+
+			<!-- Clinical Guidelines -->
+			<ClinicalGuidelines />
+
+			<!-- Authority Citations -->
+			<AuthorityCitations />
+		</div>
+	</section>
+
+	</main>
 </BaseLayout>

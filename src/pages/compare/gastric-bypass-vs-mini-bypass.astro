@@ -5,6 +5,7 @@ import QuickAnswer from '../../components/QuickAnswer.astro';
 import ContentFreshness from '../../components/ContentFreshness.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import AuthorityCitations from '../../components/AuthorityCitations.astro';
+import OutcomeComparison from '../../components/OutcomeComparison.astro';
 
 const pageUrl = "https://weight-loss-surgery-australia.vercel.app/compare/gastric-bypass-vs-mini-bypass";
 
@@ -60,6 +61,24 @@ const meta = {
 				ctaText="Which Bypass Is Right for Me?"
 				ctaLink="/am-i-ready"
 			/>
+		</div>
+	</section>
+
+	<!-- Evidence-Based Outcomes -->
+	<section class="py-12 bg-gray-50">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="max-w-4xl mx-auto">
+				<OutcomeComparison
+					procedure1="Traditional Bypass (RYGB)"
+					procedure2="Mini Bypass (OAGB)"
+					weightLoss1="70-80%"
+					weightLoss2="65-75%"
+					diabetesRemission1="80-90%"
+					diabetesRemission2="75-85%"
+					complicationRate1="2-3%"
+					complicationRate2="1.5-2.5%"
+				/>
+			</div>
 		</div>
 	</section>
 
@@ -457,6 +476,13 @@ const meta = {
 					Calculate Your Cost
 				</a>
 			</div>
+		</div>
+	</section>
+
+	<!-- Authority Citations -->
+	<section class="py-12 bg-gray-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<AuthorityCitations />
 		</div>
 	</section>
 

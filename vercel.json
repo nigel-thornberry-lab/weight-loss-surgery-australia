@@ -1,5 +1,334 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "astro"
+  "framework": "astro",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.bariatricsurgeryhub.com"
+        }
+      ],
+      "destination": "https://bariatricsurgeryhub.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "bariatricsurgeryhub.com"
+        },
+        {
+          "type": "header",
+          "key": "x-forwarded-proto",
+          "value": "http"
+        }
+      ],
+      "destination": "https://bariatricsurgeryhub.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/procedures/gastric-band-melbourne",
+      "destination": "/procedures/gastric-band-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/procedures/gastric-balloon-melbourne",
+      "destination": "/procedures/gastric-balloon-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/procedures/duodenal-switch-melbourne",
+      "destination": "/procedures/duodenal-switch-sydney",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cost-&-financing/",
+      "destination": "/blog/gastric-sleeve-cost-australia-2025",
+      "permanent": true
+    },
+    {
+      "source": "/blog/pre-surgery-preparation/",
+      "destination": "/blog/pre-op-diet-gastric-sleeve",
+      "permanent": true
+    },
+    {
+      "source": "/blog/recovery-&-diet/",
+      "destination": "/blog/gastric-sleeve-recovery-week-by-week",
+      "permanent": true
+    },
+    {
+      "source": "/blog/safety-&-decision-making/",
+      "destination": "/blog/overseas-bariatric-surgery-risks-australia-comparison",
+      "permanent": true
+    },
+    {
+      "source": "/blog/choosing-bariatric-surgeon/",
+      "destination": "/surgeon-selection-checklist",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/cronulla",
+      "destination": "/locations/cronulla",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/st-kilda",
+      "destination": "/locations/st-kilda",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/bondi",
+      "destination": "/locations/bondi",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/coogee",
+      "destination": "/locations/bondi",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/noble-park",
+      "destination": "/locations/dandenong",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/elwood",
+      "destination": "/locations/st-kilda",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/springvale",
+      "destination": "/locations/springvale",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/doncaster",
+      "destination": "/locations/doncaster",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/templestowe",
+      "destination": "/locations/doncaster",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/heidelberg",
+      "destination": "/locations/heidelberg",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/ivanhoe",
+      "destination": "/locations/heidelberg",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/rosanna",
+      "destination": "/locations/heidelberg",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/ashfield",
+      "destination": "/locations/ashfield",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/thomastown",
+      "destination": "/locations/epping",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/epping",
+      "destination": "/locations/epping",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/lalor",
+      "destination": "/locations/epping",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/hornsby",
+      "destination": "/locations/hornsby",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/waitara",
+      "destination": "/locations/hornsby",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/eastwood",
+      "destination": "/locations/eastwood",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/ryde",
+      "destination": "/locations/ryde",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/bentleigh",
+      "destination": "/locations/bentleigh",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/mckinnon",
+      "destination": "/locations/bentleigh",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/ormond",
+      "destination": "/locations/bentleigh",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/homebush",
+      "destination": "/locations/strathfield",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/pakenham",
+      "destination": "/locations/pakenham",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/manly",
+      "destination": "/locations/manly",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/dee-why",
+      "destination": "/locations/dee-why",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/freshwater",
+      "destination": "/locations/manly",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/burwood",
+      "destination": "/locations/burwood",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/strathfield",
+      "destination": "/locations/strathfield",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/mitcham",
+      "destination": "/locations/ringwood",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/ringwood",
+      "destination": "/locations/ringwood",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/castle-hill",
+      "destination": "/locations/castle-hill",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/footscray",
+      "destination": "/locations/footscray",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/cranbourne",
+      "destination": "/locations/cranbourne",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/maribyrnong",
+      "destination": "/locations/footscray",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/croydon",
+      "destination": "/locations/ringwood",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/balaclava",
+      "destination": "/locations/st-kilda",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/denistone",
+      "destination": "/locations/eastwood",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/narre-warren",
+      "destination": "/locations/narre-warren",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/yarraville",
+      "destination": "/locations/footscray",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/sutherland",
+      "destination": "/locations/sutherland",
+      "permanent": true
+    },
+    {
+      "source": "/surgeons/compare",
+      "destination": "/surgeons",
+      "permanent": false
+    },
+    {
+      "source": "/pricing",
+      "destination": "/costs",
+      "permanent": true
+    },
+    {
+      "source": "/quiz",
+      "destination": "/bmi-calculator",
+      "permanent": false
+    },
+    {
+      "source": "/locations/brisbane",
+      "destination": "/locations",
+      "permanent": false
+    },
+    {
+      "source": "/surgeons/glen-waverley/dr-jan-parker-glen-waverley",
+      "destination": "/surgeons/glen-waverley",
+      "permanent": false
+    },
+    {
+      "source": "/surgeons/glen-waverley/dr-ina-takkar-glen-waverley",
+      "destination": "/surgeons/glen-waverley",
+      "permanent": false
+    },
+    {
+      "source": "/surgeons/double-bay/dr-saras-co-double-bay",
+      "destination": "/surgeons/double-bay",
+      "permanent": false
+    },
+    {
+      "source": "/surgeons/five-dock/dr-umed-cosmetics-laser-skin-treatment-cosmetic-body-clinic-five-dock",
+      "destination": "/surgeons/five-dock",
+      "permanent": false
+    },
+    {
+      "source": "/surgeons/potts-point/dr-michael-yunaev-potts-point",
+      "destination": "/surgeons/potts-point",
+      "permanent": false
+    },
+    {
+      "source": "/surgeons/coburg/dr-lp-cheah-coburg",
+      "destination": "/surgeons/coburg",
+      "permanent": false
+    }
+  ]
 }
