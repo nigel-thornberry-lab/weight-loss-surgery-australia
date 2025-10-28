@@ -13,6 +13,152 @@ const meta = seoMeta.home;
   canonicalUrl="https://weightlosssurgery.com.au/"
 >
 
+<!-- Enhanced Medical Organization Schema with E-E-A-T Signals -->
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalOrganization",
+      "@id": "https://weightlosssurgery.com.au/#organization",
+      "name": "Weight Loss Surgery Australia",
+      "alternateName": "WLSA",
+      "description": "Australia's leading patient education platform for bariatric surgery. We help Australians make informed decisions about weight loss surgery through evidence-based information, transparent pricing, and connections to AHPRA-registered bariatric surgeons.",
+      "url": "https://weightlosssurgery.com.au/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://weightlosssurgery.com.au/logo.png",
+        "width": 600,
+        "height": 60
+      },
+      "foundingDate": "2024",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Australia"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Patient Support",
+        "email": "support@weightlosssurgery.com.au",
+        "availableLanguage": ["English"],
+        "areaServed": "AU"
+      },
+      "medicalSpecialty": ["Bariatric Surgery", "Obesity Medicine", "Metabolic Surgery"],
+      "knowsAbout": [
+        "Gastric Sleeve Surgery",
+        "Gastric Bypass Surgery",
+        "Gastric Band Surgery",
+        "Duodenal Switch Surgery",
+        "Bariatric Surgery Costs Australia",
+        "Weight Loss Surgery Eligibility",
+        "Medicare Rebates for Bariatric Surgery",
+        "Private Health Insurance Coverage"
+      ],
+      "isBasedOn": [
+        {
+          "@type": "WebPage",
+          "url": "https://www.ahpra.gov.au/",
+          "name": "Australian Health Practitioner Regulation Agency",
+          "description": "All surgeons referenced are verified through AHPRA registration"
+        },
+        {
+          "@type": "MedicalGuideline",
+          "url": "https://www.surgeons.org/",
+          "name": "Royal Australasian College of Surgeons",
+          "description": "Surgical standards and guidelines"
+        }
+      ],
+      "publishingPrinciples": {
+        "@type": "CreativeWork",
+        "description": "Educational content for patients considering bariatric surgery. Information compiled from authoritative medical sources, Australian healthcare guidelines, and verified surgeon data. Content is regularly updated to reflect current medical practice and pricing."
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://weightlosssurgery.com.au/#website",
+      "url": "https://weightlosssurgery.com.au/",
+      "name": "Weight Loss Surgery Australia",
+      "description": "Comprehensive guide to bariatric surgery in Australia",
+      "publisher": {
+        "@id": "https://weightlosssurgery.com.au/#organization"
+      },
+      "inLanguage": "en-AU",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://weightlosssurgery.com.au/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "MedicalWebPage",
+      "@id": "https://weightlosssurgery.com.au/#webpage",
+      "url": "https://weightlosssurgery.com.au/",
+      "name": "Weight Loss Surgery Australia - Compare Costs, Surgeons & Procedures",
+      "description": "Australia's most comprehensive guide to bariatric surgery. Compare gastric sleeve, bypass, band costs. Find AHPRA-registered surgeons. Medicare rebates, insurance coverage explained.",
+      "inLanguage": "en-AU",
+      "isPartOf": {
+        "@id": "https://weightlosssurgery.com.au/#website"
+      },
+      "about": {
+        "@type": "MedicalCondition",
+        "name": "Obesity",
+        "alternateName": ["Morbid Obesity", "Severe Obesity", "Class III Obesity"]
+      },
+      "audience": {
+        "@type": "Patient",
+        "requiredMinAge": 18,
+        "suggestedMinAge": 18,
+        "audienceType": "Australians considering bariatric surgery"
+      },
+      "datePublished": "2024-01-01",
+      "dateModified": "2025-01-28",
+      "isBasedOn": [
+        {
+          "@type": "WebPage",
+          "url": "https://www.ahpra.gov.au/",
+          "name": "AHPRA Surgeon Verification"
+        },
+        {
+          "@type": "MedicalGuideline",
+          "url": "https://www.health.gov.au/",
+          "name": "Australian Department of Health Guidelines"
+        }
+      ],
+      "medicalAudience": [
+        {
+          "@type": "Patient",
+          "audienceType": "Adults with BMI ≥35 considering bariatric surgery"
+        },
+        {
+          "@type": "Patient",
+          "audienceType": "Individuals researching weight loss surgery options"
+        }
+      ],
+      "specialty": "Bariatric Surgery",
+      "mainContentOfPage": {
+        "@type": "WebPageElement",
+        "cssSelector": "main"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://weightlosssurgery.com.au/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://weightlosssurgery.com.au/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <!-- Hero Section -->
 <section class="bg-gradient-to-br from-blue-50 to-white py-12 lg:py-16">
 	<div class="max-w-screen-xl px-4 lg:px-8 mx-auto w-full">

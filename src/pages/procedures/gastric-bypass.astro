@@ -17,6 +17,223 @@ const pageUrl = "https://weight-loss-surgery-australia-a0qxp09x9.vercel.app/proc
 
 <BaseLayout title="{meta.title}" description="{meta.description}" canonicalUrl={pageUrl}>
 
+<!-- Advanced Medical Procedure Schema with E-E-A-T Signals -->
+<script type="application/ld+json" is:inline>
+{
+	"@context": "https://schema.org",
+	"@graph": [
+		{
+			"@type": "MedicalWebPage",
+			"@id": "https://weightlosssurgery.com.au/procedures/gastric-bypass#webpage",
+			"url": "https://weightlosssurgery.com.au/procedures/gastric-bypass",
+			"name": "Gastric Bypass Surgery Australia - Complete Guide 2025",
+			"description": "Comprehensive guide to Roux-en-Y gastric bypass surgery in Australia. Costs, recovery, 70-80% weight loss, 90% diabetes remission. Find AHPRA-registered surgeons.",
+			"inLanguage": "en-AU",
+			"isPartOf": {
+				"@id": "https://weightlosssurgery.com.au/#website"
+			},
+			"about": [
+				{
+					"@type": "MedicalCondition",
+					"name": "Obesity"
+				},
+				{
+					"@type": "MedicalCondition",
+					"name": "Type 2 Diabetes"
+				}
+			],
+			"audience": {
+				"@type": "Patient",
+				"requiredMinAge": 18,
+				"suggestedMinAge": 18,
+				"audienceType": "Australians with BMI ≥35 considering gastric bypass surgery",
+				"healthCondition": "Obesity with or without comorbidities"
+			},
+			"datePublished": "2024-01-01",
+			"dateModified": "2025-01-28",
+			"isBasedOn": [
+				{
+					"@type": "WebPage",
+					"url": "https://www.ahpra.gov.au/",
+					"name": "AHPRA Surgeon Verification"
+				},
+				{
+					"@type": "MedicalGuideline",
+					"url": "https://www.surgeons.org/",
+					"name": "Royal Australasian College of Surgeons Guidelines"
+				}
+			],
+			"medicalAudience": [
+				{
+					"@type": "Patient",
+					"audienceType": "Severe obesity with type 2 diabetes"
+				},
+				{
+					"@type": "Patient",
+					"audienceType": "Failed previous bariatric surgery"
+				}
+			],
+			"specialty": {
+				"@type": "MedicalSpecialty",
+				"name": "Bariatric Surgery"
+			},
+			"significantLink": [
+				"https://www.racs.org.au/",
+				"https://anzmoss.com.au/",
+				"https://www.ossanz.com.au/"
+			],
+			"citation": [
+				{
+					"@type": "MedicalScholarlyArticle",
+					"name": "Bariatric Surgery Registry 2023 Annual Report",
+					"author": {
+						"@type": "Organization",
+						"name": "Monash University"
+					}
+				}
+			]
+		},
+		{
+			"@type": "MedicalProcedure",
+			"@id": "https://weightlosssurgery.com.au/procedures/gastric-bypass#procedure",
+			"name": "Gastric Bypass Surgery",
+			"alternateName": ["Roux-en-Y Gastric Bypass", "RYGB", "RNY Gastric Bypass", "Bariatric Bypass"],
+			"description": "Gastric bypass (Roux-en-Y) is a bariatric surgery that creates a small stomach pouch and reroutes the small intestine, resulting in both restrictive and malabsorptive weight loss. Gold standard for diabetes remission.",
+			"procedureType": "Surgical",
+			"medicationUsed": "General anesthesia",
+			"bodyLocation": {
+				"@type": "BodyStructure",
+				"name": "Stomach and Small Intestine"
+			},
+			"preparation": [
+				"Pre-operative dietitian consultation (minimum 6 months)",
+				"Psychological assessment",
+				"Blood tests and medical clearance",
+				"2-week pre-operative diet",
+				"Smoking cessation (if applicable)"
+			],
+			"followup": "Regular follow-ups: 1 week, 6 weeks, 3 months, 6 months, 12 months, then annually",
+			"howPerformed": "Performed laparoscopically (keyhole surgery) under general anesthesia. Surgeon creates a small stomach pouch (30ml) and connects it to the small intestine, bypassing most of the stomach and first part of small intestine.",
+			"expectedPrognosis": "70-80% excess weight loss within 18-24 months. 80-90% type 2 diabetes remission rate.",
+			"status": "Approved by Medicare Australia (MBS Item 31569)",
+			"adverseOutcome": [
+				"Dumping syndrome (common, manageable)",
+				"Nutritional deficiencies (requires lifelong supplements)",
+				"Anastomotic leak (<1%)",
+				"Internal hernia (1-3%)",
+				"Bowel obstruction (rare)"
+			],
+			"offers": {
+				"@type": "Offer",
+				"priceRange": "$20000-$30000",
+				"priceCurrency": "AUD",
+				"availability": "https://schema.org/InStock",
+				"availableAtOrFrom": {
+					"@type": "Place",
+					"name": "Accredited Australian Private Hospitals"
+				},
+				"eligibleRegion": {
+					"@type": "Country",
+					"name": "Australia"
+				}
+			},
+			"contraindication": [
+				{
+					"@type": "MedicalContraindication",
+					"name": "Active substance abuse"
+				},
+				{
+					"@type": "MedicalContraindication",
+					"name": "Uncontrolled psychiatric disorder"
+				},
+				{
+					"@type": "MedicalContraindication",
+					"name": "Inability to comply with lifelong dietary requirements"
+				}
+			]
+		},
+		{
+			"@type": "FAQPage",
+			"@id": "https://weightlosssurgery.com.au/procedures/gastric-bypass#faq",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": "How much does gastric bypass surgery cost in Australia?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Gastric bypass surgery in Australia costs $20,000-$30,000 for self-funded patients. With private health insurance and Medicare rebates, out-of-pocket costs reduce to $6,000-$15,000. Costs vary by surgeon experience, hospital choice, and location (Sydney/Melbourne typically 15-20% higher than regional areas)."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What is the recovery time for gastric bypass surgery?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Gastric bypass recovery takes 4-6 weeks. Hospital stay is 2-3 nights. Return to light activities in 2-3 weeks, desk work at 3-4 weeks, physical work at 6 weeks. Diet progresses from liquids to solid foods over 8 weeks. Full recovery and stabilization occurs around 3 months post-surgery."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "How much weight will I lose after gastric bypass?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Most gastric bypass patients lose 70-80% of their excess body weight within 18-24 months. For example, someone 60kg overweight may lose 42-48kg. Maximum weight loss typically occurs at 18-24 months. Long-term success requires permanent lifestyle changes and adherence to dietary guidelines."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Is gastric bypass better than gastric sleeve for diabetes?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Yes, gastric bypass achieves superior diabetes remission rates (80-90%) compared to gastric sleeve (60-70%). Gastric bypass is considered the gold standard for type 2 diabetes treatment in obese patients. The intestinal rerouting causes hormonal changes that improve insulin sensitivity and blood sugar control independent of weight loss."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What are the long-term risks of gastric bypass?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Long-term gastric bypass risks include: nutritional deficiencies (requires lifelong vitamin supplementation), dumping syndrome (occurs with high-sugar foods), internal hernias (1-3% risk), bowel obstruction (rare), and potential weight regain if dietary guidelines aren't followed. Regular medical monitoring and supplement compliance significantly reduce these risks."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Can gastric bypass be reversed?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "While technically reversible, gastric bypass reversal is rarely performed due to surgical complexity and risks. Reversal surgery is typically only considered for severe, life-threatening complications. Gastric bypass should be viewed as a permanent, lifelong commitment. Patients must be prepared for permanent dietary changes and supplement requirements."
+					}
+				}
+			]
+		},
+		{
+			"@type": "BreadcrumbList",
+			"@id": "https://weightlosssurgery.com.au/procedures/gastric-bypass#breadcrumb",
+			"itemListElement": [
+				{
+					"@type": "ListItem",
+					"position": 1,
+					"name": "Home",
+					"item": "https://weightlosssurgery.com.au/"
+				},
+				{
+					"@type": "ListItem",
+					"position": 2,
+					"name": "Procedures",
+					"item": "https://weightlosssurgery.com.au/procedures"
+				},
+				{
+					"@type": "ListItem",
+					"position": 3,
+					"name": "Gastric Bypass Surgery",
+					"item": "https://weightlosssurgery.com.au/procedures/gastric-bypass"
+				}
+			]
+		}
+	]
+}
+</script>
+
 	<main class="min-h-screen bg-gray-50">
 
 		<!-- Breadcrumbs -->
