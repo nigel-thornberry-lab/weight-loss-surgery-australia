@@ -84,7 +84,7 @@
     "incomingFrom": []
   },
   {
-    "url": "/surgeons/berwick/niruben-rajasagaram-berwick",
+    "url": "/surgeons/berwick/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick",
     "file": "surgeons/berwick/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick.astro",
     "outgoing": 2,
     "incoming": 0,
@@ -168,7 +168,7 @@
     "incomingFrom": []
   },
   {
-    "url": "/surgeons/campbelltown/edward-tong-campbelltown",
+    "url": "/surgeons/campbelltown/dr-edward-tong-campbelltown-campbelltown",
     "file": "surgeons/campbelltown/dr-edward-tong-campbelltown-campbelltown.astro",
     "outgoing": 4,
     "incoming": 0,
@@ -217,7 +217,7 @@
     "incomingFrom": []
   },
   {
-    "url": "/surgeons/concord/philip-le-page-concord",
+    "url": "/surgeons/concord/dr-philip-le-page-surgeon-concord",
     "file": "surgeons/concord/dr-philip-le-page-surgeon-concord.astro",
     "outgoing": 4,
     "incoming": 0,
@@ -273,7 +273,7 @@
     "incomingFrom": []
   },
   {
-    "url": "/surgeons/east-melbourne/jacob-vanyai-east-melbourne",
+    "url": "/surgeons/east-melbourne/mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne",
     "file": "surgeons/east-melbourne/mr-jacob-vanyai-moggs-melbourne-oesophagogastric-and-general-surgery-east-melbourne-east-melbourne.astro",
     "outgoing": 4,
     "incoming": 0,
@@ -315,14 +315,14 @@
     "incomingFrom": []
   },
   {
-    "url": "/surgeons/frankston/niruben-rajasagaram-frankston",
+    "url": "/surgeons/frankston/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston",
     "file": "surgeons/frankston/mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-frankston.astro",
     "outgoing": 2,
     "incoming": 0,
     "incomingFrom": []
   },
   {
-    "url": "/surgeons/frenchs-forest/philip-le-page-frenchs-forest",
+    "url": "/surgeons/frenchs-forest/dr-philip-le-page-surgeon-frenchs-forest",
     "file": "surgeons/frenchs-forest/dr-philip-le-page-surgeon-frenchs-forest.astro",
     "outgoing": 4,
     "incoming": 0,
@@ -441,7 +441,7 @@
     "incomingFrom": []
   },
   {
-    "url": "/surgeons/langwarrin/mani-niazi-langwarrin",
+    "url": "/surgeons/langwarrin/dr-mani-niazi-langwarrin-mbsa-langwarrin",
     "file": "surgeons/langwarrin/dr-mani-niazi-langwarrin-mbsa-langwarrin.astro",
     "outgoing": 2,
     "incoming": 0,
@@ -462,7 +462,7 @@
     "incomingFrom": []
   },
   {
-    "url": "/surgeons/lindfield/essor-gregory-falk-lindfield",
+    "url": "/surgeons/lindfield/professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield",
     "file": "surgeons/lindfield/professor-gregory-falk-lindfield-general-surgery-sydney-heartburn-clinic-lindfield.astro",
     "outgoing": 4,
     "incoming": 0,
@@ -490,7 +490,7 @@
     "incomingFrom": []
   },
   {
-    "url": "/surgeons/liverpool/jason-maani-liverpool",
+    "url": "/surgeons/liverpool/dr-jason-maani-gallbladder-surgery-liverpool",
     "file": "surgeons/liverpool/dr-jason-maani-gallbladder-surgery-liverpool.astro",
     "outgoing": 4,
     "incoming": 0,
@@ -700,7 +700,7 @@
     "incomingFrom": []
   },
   {
-    "url": "/surgeons/wetherill-park/govind-krishna-wetherill-park",
+    "url": "/surgeons/wetherill-park/dr-govind-krishna-weight-loss-general-surgeon-wetherill-park",
     "file": "surgeons/wetherill-park/dr-govind-krishna-weight-loss-general-surgeon-wetherill-park.astro",
     "outgoing": 4,
     "incoming": 0,
@@ -1299,7 +1299,7 @@
     ]
   },
   {
-    "url": "/surgeons/wahroonga/christos-apostolou-wahroonga",
+    "url": "/surgeons/wahroonga/aprof-christos-apostolou-surgeon-wahroonga",
     "file": "surgeons/wahroonga/aprof-christos-apostolou-surgeon-wahroonga.astro",
     "outgoing": 4,
     "incoming": 1,

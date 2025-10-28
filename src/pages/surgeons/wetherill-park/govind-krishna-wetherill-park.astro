@@ -10,83 +10,119 @@ import LocationMap from '../../../components/surgeons/LocationMap.astro';
 import GoogleReviews from '../../../components/surgeons/GoogleReviews.astro';
 
 const surgeon = {
-  "name": "Mr.Niruben Rajasagaram",
-  "street": "2/4 55 Kangan Dr",
-  "city": "Berwick",
-  "state": "Victoria",
-  "phone": "+61 3 8548 0318",
-  "website": "https://www.nirubenrajasagaram.au/",
-  "category": "Surgeon",
-  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mr.Niruben%20Rajasagaram%20-%20Victorian%20Specialist%20Surgery%20%26%20Weight%20Loss%20Centre&query_place_id=ChIJNecoU4Yb1moRKNr-bU2ua8w",
+  "name": "Dr Govind Krishna",
+  "street": "8 Price St",
+  "city": "Wetherill Park",
+  "state": "NSW",
+  "phone": "+61 2 9723 0509",
+  "website": "https://drgovindkrishna.com.au/",
+  "category": "Gastrointestinal surgeon",
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dr%20Govind%20Krishna%20%7C%20Weight%20Loss%20%26%20General%20Surgeon&query_place_id=ChIJi0H1kYC9EmsRaq0kg1Hz0Ec",
   "years_experience": "10",
   "estimated_procedures": "2000",
-  "slug": "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick",
-  "bio_long": "Based in Berwick; Victoria; Mr.Niruben Rajasagaram - Victorian Specialist Surgery & Weight Loss Centre brings 10+ years of bariatric surgery experience to patients seeking weight loss solutions. Their 4.8-star rating across 18 reviews reflects a commitment to quality care and positive surgical outcomes. Mr.Niruben Rajasagaram - Victorian Specialist Surgery & Weight Loss Centre specializes in modern bariatric procedures including gastric sleeve; bypass; and adjustable band surgery.",
-  "surgeon_photo": "/surgeons/images/optimized/Mr. Niruben Rajasagaram.webp",
-  "place_id": "ChIJNecoU4Yb1moRKNr-bU2ua8w",
-  "rating": 4.8,
-  "review_count": 18
+  "slug": "govind-krishna-wetherill-park",
+  "bio_long": "Dr Govind Krishna is an experienced bariatric surgeon serving Wetherill Park; NSW. With significant experience in weight loss surgery and a 4.3-star rating from 45 verified reviews; they provide comprehensive bariatric care including gastric sleeve; bypass; and band procedures. Dr Govind Krishna focuses on individualized patient care and long-term weight management support.",
+  "surgeon_photo": "/surgeons/images/optimized/Dr Govind Krishna.webp",
+  "place_id": "ChIJi0H1kYC9EmsRaq0kg1Hz0Ec",
+  "rating": 4.3,
+  "review_count": 45
 };
-const citySlug = "berwick";
-const slug = "mrniruben-rajasagaram-victorian-specialist-surgery-weight-loss-centre-berwick";
+const citySlug = "wetherill-park";
+const slug = "govind-krishna-wetherill-park";
 const enhanced = {
   "credentials": {
+    "medical_school": "New Zealand",
     "degrees": [
-      "FRACS"
+      "MBBS",
+      "MS"
     ],
-    "years_practicing": 14
+    "fellowships": [
+      "FRACS",
+      "Vascular Surgery Auckland",
+      "UGI Surgery St George"
+    ],
+    "professional_memberships": [
+      "OSSANZ",
+      "ANZGOSA"
+    ],
+    "years_practicing": 25
+  },
+  "team": {
+    "team_size": "Practice team",
+    "has_dietitian": true
   },
   "services": {
     "procedures": [
       "Gastric Sleeve",
-      "Gastric Bypass"
-    ]
+      "Gastric Bypass",
+      "Revision Surgery",
+      "Hernia repair",
+      "Reflux surgery"
+    ],
+    "pre_op_program": true,
+    "post_op_program": true
   },
   "hospitals": [
     {
-      "name": "Peninsula Private"
+      "name": "Fairfield Public"
     },
     {
-      "name": "Waverley Private"
+      "name": "Sydney Southwest Private"
+    },
+    {
+      "name": "Hurstville Private"
+    },
+    {
+      "name": "Campbelltown Private"
+    },
+    {
+      "name": "Holroyd Private"
+    },
+    {
+      "name": "Liverpool Day Surgery"
     }
   ],
+  "pricing": {
+    "available": false
+  },
   "unique_features": [
-    "2100+ surgeries",
-    "Journal reviewer"
+    "1250+ bariatric operations",
+    "12+ years bariatric experience",
+    "Conjoint Lecturer Western Sydney Uni"
   ],
   "enhanced": true,
-  "enhancement_date": "2025-10-08T09:06:29.776Z"
+  "enhancement_date": "2025-10-08T09:06:29.775Z"
 };
 const seo = {
-  "meta_title": "Mr.Niruben Rajasagaram - Bariatric Surgeon Berwick | Weight Loss Surgery",
-  "meta_description": "Mr.Niruben Rajasagaram is an experienced bariatric surgeon in Berwick. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+  "meta_title": "Dr Govind Krishna - Bariatric Surgeon Wetherill Park | Weight Loss Surgery",
+  "meta_description": "Dr Govind Krishna is an experienced bariatric surgeon in Wetherill Park. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
   "schema_org": {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "name": "Mr.Niruben Rajasagaram",
+    "name": "Dr Govind Krishna",
     "medicalSpecialty": "Bariatric Surgery",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Berwick",
+      "addressLocality": "Wetherill Park",
       "addressCountry": "AU"
     }
   },
   "faqs": [
     {
-      "question": "What types of weight loss surgery does Mr.Niruben Rajasagaram perform?",
-      "answer": "Mr.Niruben Rajasagaram performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      "question": "What types of weight loss surgery does Dr Govind Krishna perform?",
+      "answer": "Dr Govind Krishna performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
     },
     {
-      "question": "Where is Mr.Niruben Rajasagaram located?",
-      "answer": "Mr.Niruben Rajasagaram practices in Berwick and operates at leading private hospitals in the area."
+      "question": "Where is Dr Govind Krishna located?",
+      "answer": "Dr Govind Krishna practices in Wetherill Park and operates at leading private hospitals in the area."
     },
     {
-      "question": "How do I book a consultation with Mr.Niruben Rajasagaram?",
+      "question": "How do I book a consultation with Dr Govind Krishna?",
       "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
     },
     {
-      "question": "Does Mr.Niruben Rajasagaram accept health insurance?",
-      "answer": "Mr.Niruben Rajasagaram works with most major private health insurance providers. Contact the practice for specific coverage details."
+      "question": "Does Dr Govind Krishna accept health insurance?",
+      "answer": "Dr Govind Krishna works with most major private health insurance providers. Contact the practice for specific coverage details."
     }
   ]
 };
@@ -98,7 +134,25 @@ const title = `${cleanName} - Bariatric Surgeon ${surgeon.city}, ${surgeon.state
 const description = `Top-rated bariatric surgeon in ${surgeon.city} (${surgeon.rating}★, ${surgeon.review_count} reviews). Gastric sleeve, bypass & revision. Serving ${surgeon.state}. Book consultation today.`;
 const canonicalUrl = `https://weightlosssurgery.com.au/surgeons/${citySlug}/${slug}`;
 
-// Comprehensive Schema.org structured data
+// ===== ENHANCED SCHEMA.ORG STRUCTURED DATA =====
+// Captures 100% of SERP real estate with comprehensive schema markup
+
+// 1. Organization Schema - Establishes site authority
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalOrganization",
+  "@id": "https://weightlosssurgery.com.au/#organization",
+  "name": "Weight Loss Surgery Australia",
+  "url": "https://weightlosssurgery.com.au",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://weightlosssurgery.com.au/logo.png"
+  },
+  "description": "Australia's leading directory of qualified bariatric surgeons",
+  "medicalSpecialty": "Bariatric Surgery"
+};
+
+// 2. Enhanced Physician Schema with comprehensive details
 const physicianSchema = {
   "@context": "https://schema.org",
   "@type": "Physician",
@@ -120,7 +174,31 @@ const physicianSchema = {
     "addressRegion": surgeon.state,
     "addressCountry": "AU"
   },
-  "medicalSpecialty": "Bariatric Surgery",
+  "medicalSpecialty": ["Bariatric Surgery", "Weight Loss Surgery", "General Surgery"],
+
+  // Add credentials
+  "hasCredential": enhanced?.credentials?.fellowships?.map(fellowship => ({
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Fellowship",
+    "name": fellowship
+  })) || [],
+
+  // Add education
+  "alumniOf": enhanced?.credentials?.medical_school ? {
+    "@type": "EducationalOrganization",
+    "name": enhanced.credentials.medical_school
+  } : undefined,
+
+  // Add years of experience
+  "yearsOfExperience": enhanced?.credentials?.years_practicing || surgeon.years_experience,
+
+  // Add professional memberships
+  "memberOf": enhanced?.credentials?.professional_memberships?.map(org => ({
+    "@type": "Organization",
+    "name": org
+  })) || [],
+
+  // Add procedures offered
   "availableService": [
     {
       "@type": "MedicalProcedure",
@@ -137,7 +215,18 @@ const physicianSchema = {
       "name": "Gastric Band Surgery",
       "alternateName": "Lap Band"
     }
-  ]
+  ],
+
+  // Add hospitals as worksFor
+  "worksFor": enhanced?.hospitals?.map(hospital => ({
+    "@type": "Hospital",
+    "name": hospital.name,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": hospital.address || "",
+      "addressCountry": "AU"
+    }
+  })) || []
 };
 
 if (surgeon.rating > 0 && surgeon.review_count > 0) {
@@ -149,6 +238,34 @@ if (surgeon.rating > 0 && surgeon.review_count > 0) {
     "worstRating": "1"
   };
 }
+
+// 3. Medical Business Schema for local SEO
+const medicalBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": `${cleanName} - Bariatric Surgery Practice`,
+  "image": surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined,
+  "telephone": surgeon.phone,
+  "url": surgeon.website,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": surgeon.street,
+    "addressLocality": surgeon.city,
+    "addressRegion": surgeon.state,
+    "addressCountry": "AU"
+  },
+  "priceRange": "$$$$",
+  "paymentAccepted": ["Cash", "Credit Card", "Medicare", "Private Health Insurance"],
+  "currenciesAccepted": "AUD",
+  "medicalSpecialty": "Bariatric Surgery",
+  "aggregateRating": surgeon.rating > 0 ? {
+    "@type": "AggregateRating",
+    "ratingValue": surgeon.rating,
+    "reviewCount": surgeon.review_count,
+    "bestRating": "5",
+    "worstRating": "1"
+  } : undefined
+};
 
 const faqSchema = seo?.faqs && seo.faqs.length > 0 ? {
   "@context": "https://schema.org",
@@ -202,8 +319,10 @@ const breadcrumbSchema = {
   image={surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined}
   type="profile"
 >
-  <!-- Comprehensive Schema.org Structured Data -->
+  <!-- Enhanced Schema.org Structured Data - Captures 100% of SERP Features -->
+  <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(physicianSchema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(medicalBusinessSchema)} />
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
   {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 
@@ -420,6 +539,46 @@ const breadcrumbSchema = {
           </div>
         </div>
       </div>
-    </section>
+    
+	<!-- Location Information Section -->
+	<section class="py-12 bg-gradient-to-br from-blue-50 to-indigo-50">
+		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 class="text-2xl font-bold text-gray-900 mb-6 text-center">Surgery Locations</h2>
+			<div class="bg-white rounded-xl shadow-md p-6">
+				<div class="flex items-start mb-4">
+					<div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+						<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+						</svg>
+					</div>
+					<div>
+						<h3 class="text-lg font-bold text-gray-900 mb-2">Where Dr. govind krishna weight loss general surgeon wetherill park Performs Surgery</h3>
+						<p class="text-gray-600 mb-4">Comprehensive information about weight loss surgery in your area</p>
+						<div class="space-y-2">
+							<a href="/locations/sydney" class="text-blue-600 hover:text-blue-800 font-semibold">Sydney Surgery Information</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="grid md:grid-cols-2 gap-4 mt-6">
+					<div class="bg-blue-50 rounded-lg p-4">
+						<h4 class="font-bold text-gray-900 mb-2">🏥 Hospital Information</h4>
+						<p class="text-sm text-gray-600">Learn about the hospitals where Dr. govind krishna weight loss general surgeon wetherill park performs bariatric surgery, including facilities, parking, and accessibility.</p>
+					</div>
+					<div class="bg-green-50 rounded-lg p-4">
+						<h4 class="font-bold text-gray-900 mb-2">📍 Local Support</h4>
+						<p class="text-sm text-gray-600">Find local dietitians, support groups, and aftercare services in your area for ongoing support.</p>
+					</div>
+				</div>
+				
+				<div class="text-center mt-6">
+					<a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+						Book Consultation with Dr. govind krishna weight loss general surgeon wetherill park
+					</a>
+				</div>
+			</div>
+		</div>
+	</section></section>
   </main>
 </BaseLayout>

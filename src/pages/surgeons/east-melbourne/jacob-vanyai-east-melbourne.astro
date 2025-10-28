@@ -10,99 +10,78 @@ import LocationMap from '../../../components/surgeons/LocationMap.astro';
 import GoogleReviews from '../../../components/surgeons/GoogleReviews.astro';
 
 const surgeon = {
-  "name": "Dr Philip Le Page",
-  "street": "Hospital Medical Centre, Suite 601, level 6/2a Hospital Rd",
-  "city": "Concord",
-  "state": "NSW",
-  "phone": "+61 2 9126 8963",
-  "website": "https://drlepage.com.au/",
-  "category": "Gastrointestinal surgeon",
-  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dr%20Philip%20Le%20Page%20-%20Surgeon&query_place_id=ChIJcyYyFj6lEmsRD1iQ36AgGxw",
+  "name": "Mr Jacob Vanyai",
+  "street": "Epworth Freemasons, Level 1/124 Grey St",
+  "city": "East Melbourne",
+  "state": "Victoria",
+  "phone": "+61 3 8370 3188",
+  "website": "http://moggs.com.au/",
+  "category": "Surgeon",
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Mr%20Jacob%20Vanyai%20%7C%20MOGGS%20%7C%20Melbourne%20Oesophagogastric%20and%20General%20Surgery%20%7C%20East%20Melbourne&query_place_id=ChIJR8ELQblD1moRAUhIgdUbVIA",
   "years_experience": "10",
   "estimated_procedures": "2000",
-  "slug": "dr-philip-le-page-surgeon-concord",
-  "bio_long": "Dr Philip Le Page - Surgeon practices bariatric surgery in Concord; NSW; offering gastric sleeve; bypass; and band procedures to patients seeking effective weight loss solutions. With 10+ years of surgical experience; Dr Philip Le Page - Surgeon provides thorough consultations and personalized treatment approaches tailored to each patient's needs.",
-  "surgeon_photo": "/surgeons/images/optimized/Dr Philip Le Page.webp",
-  "place_id": "ChIJcyYyFj6lEmsRD1iQ36AgGxw",
+  "slug": "jacob-vanyai-east-melbourne",
+  "bio_long": "Mr Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne practices bariatric surgery in East Melbourne; Victoria; offering gastric sleeve; bypass; and band procedures to patients seeking effective weight loss solutions. With 10+ years of surgical experience; Mr Jacob Vanyai | MOGGS | Melbourne Oesophagogastric and General Surgery | East Melbourne provides thorough consultations and personalized treatment approaches tailored to each patient's needs.",
+  "surgeon_photo": "/surgeons/images/optimized/Mr Jacob Vanyai.webp",
+  "place_id": "ChIJR8ELQblD1moRAUhIgdUbVIA",
   "rating": 5,
-  "review_count": 7
+  "review_count": 1
 };
-const citySlug = "concord";
-const slug = "dr-philip-le-page-surgeon-concord";
+const citySlug = "east-melbourne";
+const slug = "jacob-vanyai-east-melbourne";
 const enhanced = {
   "credentials": {
-    "medical_school": "Melbourne University",
     "degrees": [
-      "MBBS (Hons)",
       "FRACS"
     ],
-    "fellowships": [
-      "ANZGOSA Fellowship"
-    ],
-    "years_practicing": 14
-  },
-  "team": {
-    "has_dietitian": true,
-    "has_psychologist": true
+    "years_practicing": 12
   },
   "services": {
     "procedures": [
-      "Sleeve gastrectomy",
-      "Gastric bypass"
-    ],
-    "pre_op_program": true,
-    "post_op_program": true
+      "Bariatric surgery"
+    ]
   },
   "hospitals": [
     {
-      "name": "Northern Beaches Hospital"
-    },
-    {
-      "name": "Sydney Adventist Hospital"
+      "name": "St Vincents Private"
     }
   ],
-  "pricing": {
-    "available": true,
-    "notes": "2 years follow-up included"
-  },
   "unique_features": [
-    "Head of Bariatric Surgery NBH",
-    "2000+ procedures",
-    "2 years support"
+    "24-hour support"
   ],
   "enhanced": true,
   "enhancement_date": "2025-10-08T09:06:29.776Z"
 };
 const seo = {
-  "meta_title": "Dr Philip Le Page - Bariatric Surgeon Concord | Weight Loss Surgery",
-  "meta_description": "Dr Philip Le Page is an experienced bariatric surgeon in Concord. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+  "meta_title": "Mr Jacob Vanyai - Bariatric Surgeon East Melbourne | Weight Loss Surgery",
+  "meta_description": "Mr Jacob Vanyai is an experienced bariatric surgeon in East Melbourne. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
   "schema_org": {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "name": "Dr Philip Le Page",
+    "name": "Mr Jacob Vanyai",
     "medicalSpecialty": "Bariatric Surgery",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Concord",
+      "addressLocality": "East Melbourne",
       "addressCountry": "AU"
     }
   },
   "faqs": [
     {
-      "question": "What types of weight loss surgery does Dr Philip Le Page perform?",
-      "answer": "Dr Philip Le Page performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      "question": "What types of weight loss surgery does Mr Jacob Vanyai perform?",
+      "answer": "Mr Jacob Vanyai performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
     },
     {
-      "question": "Where is Dr Philip Le Page located?",
-      "answer": "Dr Philip Le Page practices in Concord and operates at leading private hospitals in the area."
+      "question": "Where is Mr Jacob Vanyai located?",
+      "answer": "Mr Jacob Vanyai practices in East Melbourne and operates at leading private hospitals in the area."
     },
     {
-      "question": "How do I book a consultation with Dr Philip Le Page?",
+      "question": "How do I book a consultation with Mr Jacob Vanyai?",
       "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
     },
     {
-      "question": "Does Dr Philip Le Page accept health insurance?",
-      "answer": "Dr Philip Le Page works with most major private health insurance providers. Contact the practice for specific coverage details."
+      "question": "Does Mr Jacob Vanyai accept health insurance?",
+      "answer": "Mr Jacob Vanyai works with most major private health insurance providers. Contact the practice for specific coverage details."
     }
   ]
 };
@@ -533,10 +512,10 @@ const breadcrumbSchema = {
 						</svg>
 					</div>
 					<div>
-						<h3 class="text-lg font-bold text-gray-900 mb-2">Where Dr. philip le page surgeon concord Performs Surgery</h3>
+						<h3 class="text-lg font-bold text-gray-900 mb-2">Where Dr. jacob vanyai moggs melbourne oesophagogastric and general surgery east melbourne east melbourne Performs Surgery</h3>
 						<p class="text-gray-600 mb-4">Comprehensive information about weight loss surgery in your area</p>
 						<div class="space-y-2">
-							<a href="/locations/sydney" class="text-blue-600 hover:text-blue-800 font-semibold">Sydney Surgery Information</a>
+							<a href="/locations/melbourne" class="text-blue-600 hover:text-blue-800 font-semibold">Melbourne Surgery Information</a>
 						</div>
 					</div>
 				</div>
@@ -544,7 +523,7 @@ const breadcrumbSchema = {
 				<div class="grid md:grid-cols-2 gap-4 mt-6">
 					<div class="bg-blue-50 rounded-lg p-4">
 						<h4 class="font-bold text-gray-900 mb-2">🏥 Hospital Information</h4>
-						<p class="text-sm text-gray-600">Learn about the hospitals where Dr. philip le page surgeon concord performs bariatric surgery, including facilities, parking, and accessibility.</p>
+						<p class="text-sm text-gray-600">Learn about the hospitals where Dr. jacob vanyai moggs melbourne oesophagogastric and general surgery east melbourne east melbourne performs bariatric surgery, including facilities, parking, and accessibility.</p>
 					</div>
 					<div class="bg-green-50 rounded-lg p-4">
 						<h4 class="font-bold text-gray-900 mb-2">📍 Local Support</h4>
@@ -554,7 +533,7 @@ const breadcrumbSchema = {
 				
 				<div class="text-center mt-6">
 					<a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
-						Book Consultation with Dr. philip le page surgeon concord
+						Book Consultation with Dr. jacob vanyai moggs melbourne oesophagogastric and general surgery east melbourne east melbourne
 					</a>
 				</div>
 			</div>

@@ -10,76 +10,99 @@ import LocationMap from '../../../components/surgeons/LocationMap.astro';
 import GoogleReviews from '../../../components/surgeons/GoogleReviews.astro';
 
 const surgeon = {
-  "name": "Dr Edward Tong",
-  "street": "Suite 223 Level 2/4 Hyde Parade",
-  "city": "Campbelltown",
+  "name": "Dr Philip Le Page",
+  "street": "Building 7, level 2, Suite 24/49 Frenchs Forest Rd E",
+  "city": "Frenchs Forest",
   "state": "NSW",
-  "phone": "+61 2 9057 6430",
-  "website": "https://dredwardtong.com/",
+  "phone": "+61 2 9126 8963",
+  "website": "http://www.drlepage.com.au/",
   "category": "Surgeon",
-  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dr%20Edward%20Tong%20%7C%20Campbelltown&query_place_id=ChIJSzKX8ybvEmsRe3yhiFwmJtU",
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Dr%20Philip%20Le%20Page%20-%20Surgeon&query_place_id=ChIJe4UtZG2pEmsRvTHpfaaVTsU",
   "years_experience": "10",
   "estimated_procedures": "2000",
-  "slug": "dr-edward-tong-campbelltown-campbelltown",
-  "bio_long": "Dr Edward Tong | Campbelltown practices bariatric surgery in Campbelltown; NSW; offering gastric sleeve; bypass; and band procedures to patients seeking effective weight loss solutions. With 10+ years of surgical experience; Dr Edward Tong | Campbelltown provides thorough consultations and personalized treatment approaches tailored to each patient's needs.",
-  "surgeon_photo": "/surgeons/images/optimized/Dr Edward Tong.webp",
-  "place_id": "ChIJSzKX8ybvEmsRe3yhiFwmJtU",
-  "rating": 1,
-  "review_count": 1
+  "slug": "philip-le-page-frenchs-forest",
+  "bio_long": "Based in Frenchs Forest; NSW; Dr Philip Le Page brings 10+ years of bariatric surgery experience to patients seeking weight loss solutions. Their 5.0-star rating across 26 verified reviews reflects a commitment to quality care and positive surgical outcomes. Dr Philip Le Page specializes in modern bariatric procedures including gastric sleeve; bypass; and adjustable band surgery.",
+  "surgeon_photo": "/surgeons/images/optimized/Dr Philip Le Page.webp",
+  "place_id": "ChIJe4UtZG2pEmsRvTHpfaaVTsU",
+  "rating": 5,
+  "review_count": 26
 };
-const citySlug = "campbelltown";
-const slug = "dr-edward-tong-campbelltown-campbelltown";
+const citySlug = "frenchs-forest";
+const slug = "philip-le-page-frenchs-forest";
 const enhanced = {
   "credentials": {
+    "medical_school": "Melbourne University",
     "degrees": [
-      "MBBS",
+      "MBBS (Hons)",
       "FRACS"
     ],
-    "years_practicing": 11
+    "fellowships": [
+      "ANZGOSA Fellowship"
+    ],
+    "years_practicing": 14
+  },
+  "team": {
+    "has_dietitian": true,
+    "has_psychologist": true
   },
   "services": {
     "procedures": [
-      "Bariatric surgery"
-    ]
+      "Sleeve gastrectomy",
+      "Gastric bypass"
+    ],
+    "pre_op_program": true,
+    "post_op_program": true
   },
   "hospitals": [
     {
-      "name": "Campbelltown"
+      "name": "Northern Beaches Hospital"
+    },
+    {
+      "name": "Sydney Adventist Hospital"
     }
+  ],
+  "pricing": {
+    "available": true,
+    "notes": "2 years follow-up included"
+  },
+  "unique_features": [
+    "Head of Bariatric Surgery NBH",
+    "2000+ procedures",
+    "2 years support"
   ],
   "enhanced": true,
   "enhancement_date": "2025-10-08T09:06:29.776Z"
 };
 const seo = {
-  "meta_title": "Dr Edward Tong - Bariatric Surgeon Campbelltown | Weight Loss Surgery",
-  "meta_description": "Dr Edward Tong is an experienced bariatric surgeon in Campbelltown. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
+  "meta_title": "Dr Philip Le Page - Bariatric Surgeon Frenchs Forest | Weight Loss Surgery",
+  "meta_description": "Dr Philip Le Page is an experienced bariatric surgeon in Frenchs Forest. Specialising in gastric sleeve, gastric bypass, and weight loss surgery. Book a consultation today.",
   "schema_org": {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "name": "Dr Edward Tong",
+    "name": "Dr Philip Le Page",
     "medicalSpecialty": "Bariatric Surgery",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Campbelltown",
+      "addressLocality": "Frenchs Forest",
       "addressCountry": "AU"
     }
   },
   "faqs": [
     {
-      "question": "What types of weight loss surgery does Dr Edward Tong perform?",
-      "answer": "Dr Edward Tong performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
+      "question": "What types of weight loss surgery does Dr Philip Le Page perform?",
+      "answer": "Dr Philip Le Page performs gastric sleeve, gastric bypass, gastric band, and revision bariatric surgery procedures."
     },
     {
-      "question": "Where is Dr Edward Tong located?",
-      "answer": "Dr Edward Tong practices in Campbelltown and operates at leading private hospitals in the area."
+      "question": "Where is Dr Philip Le Page located?",
+      "answer": "Dr Philip Le Page practices in Frenchs Forest and operates at leading private hospitals in the area."
     },
     {
-      "question": "How do I book a consultation with Dr Edward Tong?",
+      "question": "How do I book a consultation with Dr Philip Le Page?",
       "answer": "You can book a consultation by using the contact form on this page or calling the practice directly."
     },
     {
-      "question": "Does Dr Edward Tong accept health insurance?",
-      "answer": "Dr Edward Tong works with most major private health insurance providers. Contact the practice for specific coverage details."
+      "question": "Does Dr Philip Le Page accept health insurance?",
+      "answer": "Dr Philip Le Page works with most major private health insurance providers. Contact the practice for specific coverage details."
     }
   ]
 };
@@ -510,7 +533,7 @@ const breadcrumbSchema = {
 						</svg>
 					</div>
 					<div>
-						<h3 class="text-lg font-bold text-gray-900 mb-2">Where Dr. edward tong campbelltown campbelltown Performs Surgery</h3>
+						<h3 class="text-lg font-bold text-gray-900 mb-2">Where Dr. philip le page surgeon frenchs forest Performs Surgery</h3>
 						<p class="text-gray-600 mb-4">Comprehensive information about weight loss surgery in your area</p>
 						<div class="space-y-2">
 							<a href="/locations/sydney" class="text-blue-600 hover:text-blue-800 font-semibold">Sydney Surgery Information</a>
@@ -521,7 +544,7 @@ const breadcrumbSchema = {
 				<div class="grid md:grid-cols-2 gap-4 mt-6">
 					<div class="bg-blue-50 rounded-lg p-4">
 						<h4 class="font-bold text-gray-900 mb-2">🏥 Hospital Information</h4>
-						<p class="text-sm text-gray-600">Learn about the hospitals where Dr. edward tong campbelltown campbelltown performs bariatric surgery, including facilities, parking, and accessibility.</p>
+						<p class="text-sm text-gray-600">Learn about the hospitals where Dr. philip le page surgeon frenchs forest performs bariatric surgery, including facilities, parking, and accessibility.</p>
 					</div>
 					<div class="bg-green-50 rounded-lg p-4">
 						<h4 class="font-bold text-gray-900 mb-2">📍 Local Support</h4>
@@ -531,7 +554,7 @@ const breadcrumbSchema = {
 				
 				<div class="text-center mt-6">
 					<a href="/contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
-						Book Consultation with Dr. edward tong campbelltown campbelltown
+						Book Consultation with Dr. philip le page surgeon frenchs forest
 					</a>
 				</div>
 			</div>
