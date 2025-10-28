@@ -1,10 +1,10 @@
-# Robots.txt for Weight Loss Surgery Australia
+# Robots.txt for Bariatric SurgeryHub
 User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://weightlosssurgery.com.au/sitemap-index.xml
-Sitemap: https://weightlosssurgery.com.au/image-sitemap.xml
+Sitemap: https://bariatricsurgeryhub.com/sitemap-index.xml
+Sitemap: https://bariatricsurgeryhub.com/image-sitemap.xml
 
 # Block admin/development paths
 Disallow: /api/
