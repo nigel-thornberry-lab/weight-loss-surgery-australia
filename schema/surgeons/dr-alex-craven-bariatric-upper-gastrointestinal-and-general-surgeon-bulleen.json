@@ -1,0 +1,18 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dr Alex Craven",
+  "telephone": "+61 3 9852 3777",
+  "url": "https://dralexcraven.com.au/",
+  "image": "",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "195 Thompsons Rd",
+    "addressLocality": "Bulleen",
+    "addressRegion": "Victoria",
+    "addressCountry": "AU"
+  },
+  "medicalSpecialty": ["BariatricSurgery"],
+  "memberOf": [],
+  "affiliation": []
+}

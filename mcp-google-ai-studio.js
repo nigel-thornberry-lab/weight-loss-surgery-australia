@@ -43,8 +43,8 @@ class GoogleAIStudioServer {
                 },
                 model: {
                   type: 'string',
-                  description: 'The model to use (default: gemini-1.5-flash)',
-                  default: 'gemini-1.5-flash',
+                  description: 'The model to use (default: gemini-2.5-flash)',
+                  default: 'gemini-2.5-flash',
                 },
                 use_grounding: {
                   type: 'boolean',
@@ -123,6 +123,38 @@ class GoogleAIStudioServer {
               required: ['message'],
             },
           },
+          {
+            name: 'google_maps_grounding',
+            description: 'Search with Google Maps grounding for location-based information',
+            inputSchema: {
+              type: 'object',
+              properties: {
+                query: {
+                  type: 'string',
+                  description: 'The search query with location context',
+                },
+                latitude: {
+                  type: 'number',
+                  description: 'Latitude coordinate for localized search',
+                },
+                longitude: {
+                  type: 'number',
+                  description: 'Longitude coordinate for localized search',
+                },
+                model: {
+                  type: 'string',
+                  description: 'The model to use',
+                  default: 'gemini-1.5-flash',
+                },
+                max_tokens: {
+                  type: 'number',
+                  description: 'Maximum number of tokens in the response',
+                  default: 2048,
+                },
+              },
+              required: ['query'],
+            },
+          },
         ],
       };
     });
@@ -138,6 +170,8 @@ class GoogleAIStudioServer {
             return await this.handleGroundingSearch(args);
           case 'google_ai_chat':
             return await this.handleChat(args);
+          case 'google_maps_grounding':
+            return await this.handleMapsGrounding(args);
           default:
             throw new Error(`Unknown tool: ${name}`);
         }
@@ -157,7 +191,7 @@ class GoogleAIStudioServer {
   async handleSearch(args) {
     const {
       query,
-      model = 'gemini-1.5-flash',
+      model = 'gemini-2.5-flash',
       use_grounding = true,
       max_tokens = 1024,
       temperature = 0.7,
@@ -185,13 +219,16 @@ class GoogleAIStudioServer {
 
     // Add grounding configuration if requested
     if (use_grounding) {
-      requestBody.groundingConfig = {
-        groundingChunkingConfig: {
-          chunkSize: 1000,
-          chunkOverlap: 200,
-        },
-        searchQueries: [query],
-      };
+      requestBody.tools = [
+        {
+          googleSearchRetrieval: {
+            dynamicRetrievalConfig: {
+              mode: "MODE_DYNAMIC",
+              dynamicThreshold: 0.7
+            }
+          }
+        }
+      ];
     }
 
     const response = await fetch(
@@ -263,21 +300,20 @@ class GoogleAIStudioServer {
         maxOutputTokens: 1024,
         temperature: 0.7,
       },
-      groundingConfig: {
-        groundingChunkingConfig: {
-          chunkSize: 1000,
-          chunkOverlap: 200,
-        },
-        searchQueries: [query],
-        webSearchConfig: {
-          searchEngine: search_engine,
-          maxResults: max_results,
-        },
-      },
+      tools: [
+        {
+          googleSearchRetrieval: {
+            dynamicRetrievalConfig: {
+              mode: "MODE_DYNAMIC",
+              dynamicThreshold: 0.7
+            }
+          }
+        }
+      ],
     };
 
     const response = await fetch(
-      `${this.baseUrl}/models/gemini-1.5-flash:generateContent?key=${this.apiKey}`,
+      `${this.baseUrl}/models/gemini-2.5-flash:generateContent?key=${this.apiKey}`,
       {
         method: 'POST',
         headers: {
@@ -328,7 +364,7 @@ class GoogleAIStudioServer {
   async handleChat(args) {
     const {
       message,
-      model = 'gemini-1.5-flash',
+      model = 'gemini-2.5-flash',
       system_instruction,
       conversation_history = [],
     } = args;
@@ -392,6 +428,100 @@ class GoogleAIStudioServer {
     };
   }
 
+  async handleMapsGrounding(args) {
+    const {
+      query,
+      latitude,
+      longitude,
+      model = 'gemini-2.5-flash',
+      max_tokens = 2048,
+    } = args;
+
+    if (!this.apiKey) {
+      throw new Error('GOOGLE_AI_STUDIO_API_KEY environment variable is required');
+    }
+
+    // Create a location-aware query
+    let locationQuery = query;
+    if (latitude && longitude) {
+      locationQuery = `${query} near coordinates ${latitude}, ${longitude}`;
+    }
+
+    const requestBody = {
+      contents: [
+        {
+          parts: [
+            {
+              text: `Please find information about: ${locationQuery}. Focus on local businesses, services, or locations.`,
+            },
+          ],
+        },
+      ],
+      generationConfig: {
+        maxOutputTokens: max_tokens,
+        temperature: 0.7,
+      },
+      tools: [
+        {
+          googleSearchRetrieval: {
+            dynamicRetrievalConfig: {
+              mode: "MODE_DYNAMIC",
+              dynamicThreshold: 0.7
+            }
+          }
+        }
+      ],
+    };
+
+    const response = await fetch(
+      `${this.baseUrl}/models/${model}:generateContent?key=${this.apiKey}`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      }
+    );
+
+    if (!response.ok) {
+      const errorData = await response.text();
+      throw new Error(`Google AI API error: ${response.status} - ${errorData}`);
+    }
+
+    const data = await response.json();
+    
+    let result = '';
+    if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+      result = data.candidates[0].content.parts
+        .map(part => part.text)
+        .join('');
+    }
+
+    // Include grounding information
+    let groundingInfo = '';
+    if (data.groundingMetadata && data.groundingMetadata.groundingChunks) {
+      groundingInfo = '\n\n**Search Sources:**\n';
+      data.groundingMetadata.groundingChunks.forEach((chunk, index) => {
+        if (chunk.webSearchQueries && chunk.webSearchQueries.length > 0) {
+          groundingInfo += `${index + 1}. Search: ${chunk.webSearchQueries[0]}\n`;
+        }
+        if (chunk.segment && chunk.segment.text) {
+          groundingInfo += `   Content: ${chunk.segment.text.substring(0, 200)}...\n`;
+        }
+      });
+    }
+
+    return {
+      content: [
+        {
+          type: 'text',
+          text: result + groundingInfo,
+        },
+      ],
+    };
+  }
+
   async run() {
     const transport = new StdioServerTransport();
     await this.server.connect(transport);
@@ -401,4 +531,3 @@ class GoogleAIStudioServer {
 
 const server = new GoogleAIStudioServer();
 server.run().catch(console.error);
-

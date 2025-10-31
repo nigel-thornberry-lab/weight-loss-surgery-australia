@@ -1,0 +1,1196 @@
+{
+  "generatedAt": "2025-10-31T06:00:50.780Z",
+  "count": 119,
+  "report": [
+    {
+      "file": "ascot-vale/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "ascot-vale/mr-hai-t-bui-ascot-vale.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "baulkham-hills/dr-michael-devadas-baulkham-hills.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "baulkham-hills/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "bella-vista/dr-faizur-reza-bella-vista.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "bella-vista/dr-john-ozmen-general-upper-gi-surgeon-bella-vista.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "bella-vista/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "berwick/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "berwick/mr-zeev-duieb-berwick.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "berwick/niruben-rajasagaram-berwick.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "box-hill/dr-sean-mackay-box-hill.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "box-hill/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "box-hill/mr-anthony-clough-box-hill.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "brighton/dr-paul-burton-brighton.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "brighton/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "bulleen/dr-ahmad-aly-bulleen.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "bulleen/dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "bulleen/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "bundoora/dr-ben-keong-bundoora.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "bundoora/dr-ernest-lim-bundoora.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "bundoora/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "bundoora/mr-kiron-bhatia-bundoora.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "campbelltown/dr-ali-zarrouk-campbelltown.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "campbelltown/dr-philip-le-page-campbelltown.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "campbelltown/dr-rachel-kirby-campbelltown.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "campbelltown/edward-tong-campbelltown.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "campbelltown/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "camperdown/dr-david-yeo-camperdown.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "camperdown/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "camperdown/prof-charbel-sandr-oussi-innerwest-ugit-surgery-camperdown.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "coburg/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "concord/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "concord/philip-le-page-concord.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "dandenong/dr-paul-j-ah-tye-dandenong.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "dandenong/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "darlinghurst/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "darlinghurst/reginald-v-n-lord-darlinghurst.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "double-bay/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "east-melbourne/aprof-michael-hii-east-melbourne.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "east-melbourne/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "east-melbourne/jacob-vanyai-east-melbourne.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "essendon/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "essendon/mr-ian-michell-essendon.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "five-dock/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "frankston/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "frankston/mr-geoffrey-dr-aper-frankston.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "frankston/niruben-rajasagaram-frankston.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "frenchs-forest/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "frenchs-forest/philip-le-page-frenchs-forest.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "gledswood-hills/dr-khalid-ahmed-gledswood-hills.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "gledswood-hills/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "glen-waverley/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "gregory-hills/dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "gregory-hills/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "hurstville/dr-clement-tsang-hurstville.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "hurstville/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kingswood/dr-clare-bouffler-kingswood.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kingswood/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kogarah/aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kogarah/associate-professor-michael-talbot-kogarah.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kogarah/dr-gary-yee-kogarah.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kogarah/dr-james-chau-kogarah.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kogarah/dr-jason-maani-kogarah.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kogarah/dr-john-jorgensen-kogarah.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kogarah/dr-ken-loi-kogarah.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kogarah/dr-qiuye-cheng-kogarah.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kogarah/dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "kogarah/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "langwarrin/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "langwarrin/mani-niazi-langwarrin.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "lindfield/gregory-falk-lindfield.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "lindfield/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "liverpool/dr-amitabha-das-liverpool.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "liverpool/dr-ertugrul-durmush-liverpool.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "liverpool/dr-jason-maani-bariatric-surgery-liverpool.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "liverpool/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "liverpool/jason-maani-liverpool.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "malvern/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "malvern/mr-richard-chen-malvern.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "melbourne.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "miranda/dr-mark-magdy-miranda.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "miranda/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "mount-waverley/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "mount-waverley/mr-ahmed-naqeeb-mount-waverley.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "newtown/dr-david-joseph-newtown.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "newtown/dr-michael-crawford-newtown.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "newtown/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "norwest/dr-nicholas-cocco-norwest.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "norwest/dr-roy-brancatisano-norwest.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "norwest/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "penrith/dr-fadil-khaleal-penrith.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "penrith/dr-khalid-ahmed-penrith.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "penrith/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "potts-point/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "randwick/dr-david-links-randwick.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "randwick/dr-robert-gandy-randwick.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "randwick/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "richmond/daniel-foley-richmond.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "richmond/dr-ramez-bassari-richmond.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "richmond/dr-yuan-cheng-richmond.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "richmond/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "richmond/mr-mark-cullinan-richmond.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "smithfield/dr-khalid-ahmed-smithfield.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "smithfield/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "surrey-hills/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "surrey-hills/mr-jacob-vanyai-surrey-hills.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "sydney.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "wahroonga/christos-apostolou-wahroonga.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "wahroonga/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "wantirna/dr-mani-niazi-wantirna.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "wantirna/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "wantirna/mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "werribee/dr-michael-hii-werribee.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "werribee/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "westmead/dr-nicholas-cocco-westmead.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "westmead/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "wetherill-park/govind-krishna-wetherill-park.astro",
+      "hasEnhanced": true,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": true,
+      "usesHospitalsSection": true,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    },
+    {
+      "file": "wetherill-park/index.astro",
+      "hasEnhanced": false,
+      "hasCredentialsKey": false,
+      "hasHospitalsKey": false,
+      "importsHospitals": false,
+      "usesHospitalsSection": false,
+      "hasPlaceId": false,
+      "hasPhoto": false
+    }
+  ]
+}

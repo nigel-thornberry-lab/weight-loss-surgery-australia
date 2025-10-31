@@ -1,0 +1,41 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "A/Prof. Christos Apostolou",
+  "telephone": "+61 2 9480 4250",
+  "url": "http://www.christosapostolou.com.au/",
+  "image": "http://www.christosapostolou.com.au/images/dr-apostolou-logo-new.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Suite 220, Level 2, Clark Tower/185 Fox Valley Rd",
+    "addressLocality": "Wahroonga",
+    "addressRegion": "NSW",
+    "addressCountry": "AU"
+  },
+  "medicalSpecialty": ["BariatricSurgery"],
+  "memberOf": [
+    {
+      "@type": "Organization",
+      "name": "Royal Australasian College of Surgeons (RACS)",
+      "url": "https://www.surgeons.org/Profile/associate-professor-christos-apostolou"
+    },
+    {
+      "@type": "Organization",
+      "name": "Australian and New Zealand Metabolic and Obesity Surgery Society (ANZMOSS)",
+      "url": "https://www.anzmoss.com.au/"
+    }
+  ],
+  "affiliation": [
+    {
+      "@type": "Hospital",
+      "name": "Sydney Adventist Hospital",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "185 Fox Valley Rd",
+        "addressLocality": "Wahroonga",
+        "addressRegion": "NSW",
+        "addressCountry": "AU"
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "drip-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Drip email service provider integration",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "drip-mcp-server": "src/index.js"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "drip",
+    "email",
+    "marketing",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "node-fetch": "^3.3.2",
+    "dotenv": "^16.4.5"
+  }
+}

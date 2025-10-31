@@ -7,13 +7,12 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_KEY;
 // Generate Google Maps embed URL
 const fullAddress = `${address}, ${city}, ${state}, Australia`;
 
-// Use the REALLY SIMPLE approach - Google Maps Embed API with API key
-// This is the only method that actually works properly with pinned locations
+// Prefer Embed API with key (place_id > search). If no key, use public embed fallback.
 const mapEmbedUrl = apiKey && placeId 
   ? `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=place_id:${placeId}&zoom=15`
   : apiKey
     ? `https://www.google.com/maps/embed/v1/search?key=${apiKey}&q=${encodeURIComponent(fullAddress)}&zoom=15`
-    : null;
+    : `https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`;
 
 // Generate directions URL for "Get Directions" button
 const directionsUrl = placeId

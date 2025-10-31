@@ -272,16 +272,21 @@ Your profile includes:
 ✓ Patient inquiry routing (direct to your practice)
 ✓ SEO optimization (so patients actually find you)
 ✓ Quarterly updates (we handle everything)
-✓ Embeddable badge for YOUR website (quality backlink)
 
 Worth: $13,600/year in marketing value
 Cost to you: $0
 Time required: 5 minutes to verify info
 
-About that badge: It's not just a trust signal for patients.
-It's a quality backlink from our directory to your practice 
-website. Your web developer adds one snippet of code, and 
-you get an SEO boost. Simple.
+One small thing I'll ask after you approve:
+
+I'll send you a "Verified Surgeon" badge to add to your website.
+It's a simple HTML snippet - takes 5 minutes (or I'll do it for you).
+
+Why? It creates a backlink from your site to your profile, which
+helps both of us. You get a trust badge for patients. We get a
+quality backlink that helps our directory rank higher.
+
+Fair trade for $13,600 in free marketing value?
 
 Three options:
 
@@ -294,13 +299,14 @@ Fair?
 Cameron
 Weight Loss Surgery Australia
 
-P.S. Dr. [Competitor Name] at [Hospital] verified yesterday. 
-His profile is already ranking on page 1 for "[competitor name] 
-bariatric surgeon." Yours will too.
+P.S. Dr. [Competitor Name] at [Hospital] verified yesterday
+and added the badge to his website (took him 2 minutes). Now
+patients see he's verified, and we both get the SEO benefit.
 
-P.P.S. If you're wondering "what's the catch?" — there isn't one. 
-We make money from advertising and partnerships, not from surgeons. 
-Your verified profile makes our directory more valuable. Win-win.
+P.P.S. If you're wondering "what's the catch?" — there isn't one.
+We make money from advertising and partnerships, not from surgeons.
+The badge is just how we build credibility for our directory while
+giving you a trust signal. Win-win.
 ```
 
 **Why This Works:**
@@ -361,15 +367,25 @@ We get:
 • A more comprehensive directory
 • Increased credibility with patients
 • Advertising revenue (not from you)
-• Backlink via the "verified" badge on your site
+
+The only thing I'll ask:
+
+Add a small "Verified Surgeon" badge to your website. It's
+a trust signal for patients (shows you're credentialed) and
+it helps our directory build authority (backlink to your profile).
+
+Takes 5 minutes to add. Or I'll do it for you. Free.
 
 That's it. That's the whole model.
 
 The surgeons who verified? They're now getting:
 → Higher Google rankings for their names
-→ Verified badges on their websites
 → Patient inquiries from our directory
+→ Verified badge on their website (trust signal)
 → Zero cost, zero ongoing work
+
+And I'm getting the backlinks I need to build directory authority.
+Everyone wins.
 
 
 Your profile is still ready: [PREVIEW LINK]
@@ -478,7 +494,7 @@ Dr. [Name],
 
 I know you're busy. I get it.
 
-But I wanted to give you one final chance to see what 
+But I wanted to give you one final chance to see what
 I built for you before I archive it.
 
 Your profile includes:
@@ -487,39 +503,41 @@ Your profile includes:
 → AHPRA registration confirmed
 → Professional memberships listed
 → Patient inquiry form (goes directly to you)
+→ SEO-optimized content
+→ Quarterly updates (we handle it)
 
-Plus, you get a "Verified Surgeon" badge for YOUR website.
+All free. All done. Just needs your 2-minute approval.
 
-Here's what most surgeons don't realize:
+Here's the only thing I'll ask in return:
 
-The badge isn't just for show. It's a quality backlink 
-from our directory back to your practice website.
+Add a small "Verified Surgeon" badge to your website.
 
-When you embed it on your site, it:
-→ Links back to your verified profile (SEO boost)
-→ Shows patients you're credentialed (trust signal)
-→ Improves your domain authority (Google loves this)
+It's a trust signal for patients,
+And it helps our directory build authority (backlink to your profile).
 
-33 surgeons have already installed the badge. Their sites 
-are getting the SEO benefit right now.
+Simple HTML snippet. Takes 5 minutes. Or I'll do it for you.
+
+That's the trade: I give you $10,000+year in marketing value.
+You give me a small badge that helps both of us.
+
+33 surgeons have already said yes. They're getting profile
+views, patient inquiries, and the trust badge.
 
 Your profile: [PREVIEW LINK]
 
 Takes 2 minutes to review. Click "Approve" and you're done.
 
-Then I'll send you the badge code to add to your website.
-
-If you're not interested, that's completely fine. Just 
+If you're not interested, that's completely fine. Just
 reply "Not interested" and I'll stop emailing.
 
-But if you ARE interested, this is your last chance to 
+But if you ARE interested, this is your last chance to
 grab it before I move on.
 
 Cameron
 
-P.S. The badge is a simple HTML snippet. Your web developer 
-can add it in 5 minutes. Or I can send instructions for 
-your practice manager to do it.
+P.S. After you approve, I'll send you the badge code. Your
+web developer can add it in 5 minutes. Or reply "INSTALL IT"
+and I'll do it for you. Free.
 ```
 
 **Why This Works:**

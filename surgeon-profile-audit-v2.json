@@ -1,0 +1,581 @@
+{
+  "generatedAt": "2025-10-31T07:40:18.860Z",
+  "summary": {
+    "total": 71,
+    "missingCred": 1,
+    "missingHosp": 1,
+    "missingHospAddr": 42,
+    "missingPhoto": 0,
+    "missingPlace": 0
+  },
+  "rows": [
+    {
+      "file": "ascot-vale/mr-hai-t-bui-ascot-vale.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "baulkham-hills/dr-michael-devadas-baulkham-hills.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "bella-vista/dr-faizur-reza-bella-vista.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "bella-vista/dr-john-ozmen-general-upper-gi-surgeon-bella-vista.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "berwick/mr-zeev-duieb-berwick.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "berwick/niruben-rajasagaram-berwick.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "box-hill/dr-sean-mackay-box-hill.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "box-hill/mr-anthony-clough-box-hill.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "brighton/dr-paul-burton-brighton.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "bulleen/dr-ahmad-aly-bulleen.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "bulleen/dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "bundoora/dr-ben-keong-bundoora.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "bundoora/dr-ernest-lim-bundoora.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "bundoora/mr-kiron-bhatia-bundoora.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "campbelltown/dr-ali-zarrouk-campbelltown.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "campbelltown/dr-philip-le-page-campbelltown.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "campbelltown/dr-rachel-kirby-campbelltown.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "campbelltown/edward-tong-campbelltown.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "camperdown/dr-david-yeo-camperdown.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "camperdown/prof-charbel-sandr-oussi-innerwest-ugit-surgery-camperdown.astro",
+      "credOk": false,
+      "hospOk": false,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "concord/philip-le-page-concord.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "dandenong/dr-paul-j-ah-tye-dandenong.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "darlinghurst/reginald-v-n-lord-darlinghurst.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "east-melbourne/aprof-michael-hii-east-melbourne.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "east-melbourne/jacob-vanyai-east-melbourne.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "essendon/mr-ian-michell-essendon.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "frankston/mr-geoffrey-dr-aper-frankston.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "frankston/niruben-rajasagaram-frankston.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "frenchs-forest/philip-le-page-frenchs-forest.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "gledswood-hills/dr-khalid-ahmed-gledswood-hills.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "gregory-hills/dr-devesh-kaushal-upper-gi-weight-loss-surgeon-gregory-hills.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "hurstville/dr-clement-tsang-hurstville.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "kingswood/dr-clare-bouffler-kingswood.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "kogarah/aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "kogarah/associate-professor-michael-talbot-kogarah.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "kogarah/dr-gary-yee-kogarah.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "kogarah/dr-james-chau-kogarah.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "kogarah/dr-jason-maani-kogarah.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "kogarah/dr-john-jorgensen-kogarah.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "kogarah/dr-ken-loi-kogarah.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "kogarah/dr-qiuye-cheng-kogarah.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "kogarah/dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "langwarrin/mani-niazi-langwarrin.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "lindfield/gregory-falk-lindfield.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "liverpool/dr-amitabha-das-liverpool.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "liverpool/dr-ertugrul-durmush-liverpool.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "liverpool/dr-jason-maani-bariatric-surgery-liverpool.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "liverpool/jason-maani-liverpool.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "malvern/mr-richard-chen-malvern.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "miranda/dr-mark-magdy-miranda.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "mount-waverley/mr-ahmed-naqeeb-mount-waverley.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "newtown/dr-david-joseph-newtown.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "newtown/dr-michael-crawford-newtown.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "norwest/dr-nicholas-cocco-norwest.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "norwest/dr-roy-brancatisano-norwest.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "penrith/dr-fadil-khaleal-penrith.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "penrith/dr-khalid-ahmed-penrith.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "randwick/dr-david-links-randwick.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "randwick/dr-robert-gandy-randwick.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "richmond/daniel-foley-richmond.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "richmond/dr-ramez-bassari-richmond.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "richmond/dr-yuan-cheng-richmond.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "richmond/mr-mark-cullinan-richmond.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "smithfield/dr-khalid-ahmed-smithfield.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "surrey-hills/mr-jacob-vanyai-surrey-hills.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "wahroonga/christos-apostolou-wahroonga.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "wantirna/dr-mani-niazi-wantirna.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "wantirna/mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "werribee/dr-michael-hii-werribee.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": true,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "westmead/dr-nicholas-cocco-westmead.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    },
+    {
+      "file": "wetherill-park/govind-krishna-wetherill-park.astro",
+      "credOk": true,
+      "hospOk": true,
+      "hospAddrOk": false,
+      "photo": true,
+      "place": true
+    }
+  ]
+}

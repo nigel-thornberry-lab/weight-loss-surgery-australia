@@ -1,0 +1,421 @@
+{
+  "generated_from": "surgeons-complete-data-final.csv",
+  "total": 83,
+  "queue": [
+    {
+      "slug": "aprof-carlo-pulitano-camperdown",
+      "name": "A/Prof Carlo Pulitano",
+      "non_empty": 18
+    },
+    {
+      "slug": "christos-apostolou-wahroonga",
+      "name": "A/Prof. Christos Apostolou",
+      "non_empty": 18
+    },
+    {
+      "slug": "aprof-michael-hii-east-melbourne",
+      "name": "A/Prof. Michael Hii",
+      "non_empty": 18
+    },
+    {
+      "slug": "associate-professor-michael-talbot-kogarah",
+      "name": "Associate Professor Michael Talbot",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-alex-craven-bariatric-upper-gastrointestinal-and-general-surgeon-bulleen",
+      "name": "Dr Alex Craven - Bariatric, Upper Gastrointestinal and General Surgeon",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-ali-zarrouk-campbelltown",
+      "name": "Dr Ali Zarrouk",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-amitabha-das-liverpool",
+      "name": "Dr Amitabha Das",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-clare-bouffler-kingswood",
+      "name": "Dr Clare Bouffler",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-clement-tsang-hurstville",
+      "name": "Dr Clement Tsang",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-david-joseph-newtown",
+      "name": "Dr David Joseph",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-david-links-randwick",
+      "name": "Dr David Links",
+      "non_empty": 18
+    },
+    {
+      "slug": "devesh-kaushal-gregoryhills",
+      "name": "Dr Devesh Kaushal",
+      "non_empty": 18
+    },
+    {
+      "slug": "edward-tong-campbelltown",
+      "name": "Dr Edward Tong",
+      "non_empty": 18
+    },
+    {
+      "slug": "govind-krishna-wetherillpark",
+      "name": "Dr Govind Krishna",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-john-jorgensen-kogarah",
+      "name": "Dr John Jorgensen",
+      "non_empty": 18
+    },
+    {
+      "slug": "john-ozmen-bellavista",
+      "name": "Dr John Ozmen",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-ken-loi-kogarah",
+      "name": "Dr Ken Loi",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-michael-crawford-newtown",
+      "name": "Dr Michael Crawford",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-philip-le-page-campbelltown",
+      "name": "Dr Philip Le Page",
+      "non_empty": 18
+    },
+    {
+      "slug": "philip-le-page-frenchsforest",
+      "name": "Dr Philip Le Page",
+      "non_empty": 18
+    },
+    {
+      "slug": "philip-le-page-concord",
+      "name": "Dr Philip Le Page",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-ramez-bassari-richmond",
+      "name": "Dr Ramez Bassari",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-robert-gandy-randwick",
+      "name": "Dr Robert Gandy",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-roy-hopkins-upper-gi-bariatric-surgeon-kogarah",
+      "name": "Dr Roy Hopkins - Upper GI & Bariatric Surgeon",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-saras-co-double-bay",
+      "name": "Dr Saras & Co",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-sean-mackay-box-hill",
+      "name": "Dr Sean Mackay",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-chris-nahm-bella-vista",
+      "name": "Dr. Chris Nahm",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-ina-takkar-glen-waverley",
+      "name": "Dr. Ina Takkar",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-khalid-ahmed-smithfield",
+      "name": "Dr. Khalid Ahmed",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-qiuye-cheng-kogarah",
+      "name": "Dr. Qiuye Cheng",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-roy-brancatisano-norwest",
+      "name": "Dr. Roy Brancatisano",
+      "non_empty": 18
+    },
+    {
+      "slug": "umed-fivedock",
+      "name": "Dr. Umed",
+      "non_empty": 18
+    },
+    {
+      "slug": "dr-yuan-cheng-richmond",
+      "name": "Dr. Yuan Cheng",
+      "non_empty": 18
+    },
+    {
+      "slug": "mr-ahmed-naqeeb-mount-waverley",
+      "name": "Mr Ahmed Naqeeb",
+      "non_empty": 18
+    },
+    {
+      "slug": "mr-anthony-clough-box-hill",
+      "name": "Mr Anthony Clough",
+      "non_empty": 18
+    },
+    {
+      "slug": "mr-geoffrey-draper-frankston",
+      "name": "Mr Geoffrey Draper",
+      "non_empty": 18
+    },
+    {
+      "slug": "mr-hai-t-bui-ascot-vale",
+      "name": "Mr Hai T. Bui",
+      "non_empty": 18
+    },
+    {
+      "slug": "jacob-vanyai-eastmelbourne",
+      "name": "Mr Jacob Vanyai",
+      "non_empty": 18
+    },
+    {
+      "slug": "mr-richard-chen-malvern",
+      "name": "Mr Richard Chen",
+      "non_empty": 18
+    },
+    {
+      "slug": "mr-niruben-rajasagaram-bariatric-surgeon-for-gastric-sleeve-weight-loss-surgery-melbourne-wantirna",
+      "name": "Mr. Niruben Rajasagaram – Bariatric Surgeon for Gastric Sleeve & Weight Loss Surgery Melbourne",
+      "non_empty": 18
+    },
+    {
+      "slug": "niruben-rajasagaram-berwick",
+      "name": "Mr.Niruben Rajasagaram",
+      "non_empty": 18
+    },
+    {
+      "slug": "niruben-rajasagaram-frankston",
+      "name": "Mr.Niruben Rajasagaram",
+      "non_empty": 18
+    },
+    {
+      "slug": "charbel-sandroussi-camperdown",
+      "name": "Prof. Charbel Sandroussi",
+      "non_empty": 18
+    },
+    {
+      "slug": "aprof-oliver-fisher-specialist-upper-gi-bariatric-hernia-surgeon-kogarah",
+      "name": "A/Prof. Oliver Fisher | Specialist Upper GI, Bariatric, & Hernia Surgeon",
+      "non_empty": 17
+    },
+    {
+      "slug": "daniel-foley-richmond",
+      "name": "Daniel Foley",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-ben-keong-bundoora",
+      "name": "Dr Ben Keong",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-david-yeo-camperdown",
+      "name": "Dr David Yeo",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-ernest-lim-bundoora",
+      "name": "Dr Ernest Lim",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-ertugrul-durmush-liverpool",
+      "name": "Dr Ertugrul Durmush",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-fadil-khaleal-penrith",
+      "name": "Dr Fadil Khaleal",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-faizur-reza-bella-vista",
+      "name": "Dr Faizur Reza",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-gary-yee-kogarah",
+      "name": "Dr Gary Yee",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-james-chau-kogarah",
+      "name": "Dr James Chau",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-james-gallagher-newtown",
+      "name": "Dr James Gallagher",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-jason-maani-kogarah",
+      "name": "Dr Jason Maani",
+      "non_empty": 17
+    },
+    {
+      "slug": "jason-maani-liverpool",
+      "name": "Dr Jason Maani",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-jason-maani-bariatric-surgery-liverpool",
+      "name": "Dr Jason Maani Bariatric Surgery",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-lp-cheah-coburg",
+      "name": "Dr LP Cheah",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-mani-niazi-wantirna",
+      "name": "Dr Mani Niazi",
+      "non_empty": 17
+    },
+    {
+      "slug": "mani-niazi-langwarrin",
+      "name": "Dr Mani Niazi",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-michael-devadas-baulkham-hills",
+      "name": "Dr Michael Devadas",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-michael-yunaev-potts-point",
+      "name": "Dr Michael Yunaev",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-nicholas-cocco-norwest",
+      "name": "Dr Nicholas Cocco",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-nicholas-cocco-westmead",
+      "name": "Dr Nicholas Cocco",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-nicole-winter-east-melbourne",
+      "name": "Dr Nicole Winter",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-paul-burton-brighton",
+      "name": "Dr Paul Burton",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-rachel-kirby-campbelltown",
+      "name": "Dr Rachel Kirby",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-stuart-pincott-frenchs-forest",
+      "name": "Dr Stuart Pincott",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-suhirdan-vivekanandarajah-darlinghurst",
+      "name": "Dr Suhirdan Vivekanandarajah",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-ahmad-aly-bulleen",
+      "name": "Dr. Ahmad Aly",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-khalid-ahmed-penrith",
+      "name": "Dr. Khalid Ahmed",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-khalid-ahmed-gledswood-hills",
+      "name": "Dr. Khalid Ahmed",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-mark-magdy-miranda",
+      "name": "Dr. Mark Magdy",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-paul-j-ah-tye-dandenong",
+      "name": "Dr. Paul J. Ah Tye",
+      "non_empty": 17
+    },
+    {
+      "slug": "mr-mark-cullinan-richmond",
+      "name": "Mr Mark Cullinan",
+      "non_empty": 17
+    },
+    {
+      "slug": "mr-ian-michell-essendon",
+      "name": "Mr. Ian Michell",
+      "non_empty": 17
+    },
+    {
+      "slug": "mr-jacob-vanyai-surrey-hills",
+      "name": "Mr. Jacob Vanyai",
+      "non_empty": 17
+    },
+    {
+      "slug": "essor-gregory-falk-lindfield",
+      "name": "Professor Gregory Falk",
+      "non_empty": 17
+    },
+    {
+      "slug": "reginald-v-n-lord-darlinghurst",
+      "name": "Reginald V N Lord",
+      "non_empty": 17
+    },
+    {
+      "slug": "dr-jan-parker-glen-waverley",
+      "name": "Dr Jan Parker",
+      "non_empty": 16
+    },
+    {
+      "slug": "dr-michael-hii-werribee",
+      "name": "Dr Michael Hii",
+      "non_empty": 16
+    },
+    {
+      "slug": "mr-kiron-bhatia-bundoora",
+      "name": "Mr Kiron Bhatia",
+      "non_empty": 16
+    },
+    {
+      "slug": "mr-zeev-duieb-berwick",
+      "name": "Mr Zeev Duieb",
+      "non_empty": 16
+    }
+  ]
+}

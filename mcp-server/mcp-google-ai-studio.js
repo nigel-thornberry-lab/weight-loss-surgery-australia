@@ -144,7 +144,7 @@ class GoogleAIStudioServer {
                 model: {
                   type: 'string',
                   description: 'The model to use',
-                  default: 'gemini-2.5-pro-preview-03-25',
+                  default: 'gemini-1.5-flash',
                 },
                 max_tokens: {
                   type: 'number',
@@ -227,14 +227,6 @@ class GoogleAIStudioServer {
               dynamicThreshold: 0.7
             }
           }
-        },
-        {
-          googleMapsRetrieval: {
-            dynamicRetrievalConfig: {
-              mode: "MODE_DYNAMIC",
-              dynamicThreshold: 0.7
-            }
-          }
         }
       ];
     }
@@ -311,14 +303,6 @@ class GoogleAIStudioServer {
       tools: [
         {
           googleSearchRetrieval: {
-            dynamicRetrievalConfig: {
-              mode: "MODE_DYNAMIC",
-              dynamicThreshold: 0.7
-            }
-          }
-        },
-        {
-          googleMapsRetrieval: {
             dynamicRetrievalConfig: {
               mode: "MODE_DYNAMIC",
               dynamicThreshold: 0.7
@@ -449,7 +433,7 @@ class GoogleAIStudioServer {
       query,
       latitude,
       longitude,
-      model = 'gemini-2.5-pro-preview-03-25',
+      model = 'gemini-1.5-flash',
       max_tokens = 2048,
     } = args;
 
@@ -457,12 +441,18 @@ class GoogleAIStudioServer {
       throw new Error('GOOGLE_AI_STUDIO_API_KEY environment variable is required');
     }
 
+    // Create a location-aware query
+    let locationQuery = query;
+    if (latitude && longitude) {
+      locationQuery = `${query} near coordinates ${latitude}, ${longitude}`;
+    }
+
     const requestBody = {
       contents: [
         {
           parts: [
             {
-              text: query,
+              text: `Please find information about: ${locationQuery}. Focus on local businesses, services, or locations.`,
             },
           ],
         },
@@ -473,7 +463,7 @@ class GoogleAIStudioServer {
       },
       tools: [
         {
-          googleMapsRetrieval: {
+          googleSearchRetrieval: {
             dynamicRetrievalConfig: {
               mode: "MODE_DYNAMIC",
               dynamicThreshold: 0.7
@@ -482,14 +472,6 @@ class GoogleAIStudioServer {
         }
       ],
     };
-
-    // Add location coordinates if provided
-    if (latitude && longitude) {
-      requestBody.location = {
-        latitude: latitude,
-        longitude: longitude
-      };
-    }
 
     const response = await fetch(
       `${this.baseUrl}/models/${model}:generateContent?key=${this.apiKey}`,
@@ -516,16 +498,16 @@ class GoogleAIStudioServer {
         .join('');
     }
 
-    // Include Google Maps grounding information
-    let mapsInfo = '';
+    // Include grounding information
+    let groundingInfo = '';
     if (data.groundingMetadata && data.groundingMetadata.groundingChunks) {
-      mapsInfo = '\n\n**Google Maps Grounding Sources:**\n';
+      groundingInfo = '\n\n**Search Sources:**\n';
       data.groundingMetadata.groundingChunks.forEach((chunk, index) => {
         if (chunk.webSearchQueries && chunk.webSearchQueries.length > 0) {
-          mapsInfo += `${index + 1}. Maps Search: ${chunk.webSearchQueries[0]}\n`;
+          groundingInfo += `${index + 1}. Search: ${chunk.webSearchQueries[0]}\n`;
         }
         if (chunk.segment && chunk.segment.text) {
-          mapsInfo += `   Location Data: ${chunk.segment.text.substring(0, 200)}...\n`;
+          groundingInfo += `   Content: ${chunk.segment.text.substring(0, 200)}...\n`;
         }
       });
     }
@@ -534,7 +516,7 @@ class GoogleAIStudioServer {
       content: [
         {
           type: 'text',
-          text: result + mapsInfo,
+          text: result + groundingInfo,
         },
       ],
     };
