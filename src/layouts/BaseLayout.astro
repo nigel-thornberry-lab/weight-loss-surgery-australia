@@ -156,21 +156,15 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "WebSite",
-            "@id": "https://bariatricsurgeryhub.com/#website",
-            "name": "Bariatric SurgeryHub",
-            "url": "https://bariatricsurgeryhub.com",
-            "inLanguage": "en-AU"
-          },
-          {
             "@type": "MedicalWebPage",
-            "@id": currentUrl + "#webpage",
             "name": title,
             "description": description,
             "url": currentUrl,
             "inLanguage": "en-AU",
             "isPartOf": {
-              "@id": "https://bariatricsurgeryhub.com/#website"
+              "@type": "WebSite",
+              "name": "Bariatric SurgeryHub",
+              "url": "https://bariatricsurgeryhub.com"
             }
           },
           {
@@ -193,10 +187,10 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
             "medicalSpecialty": ["Bariatric Surgery", "Weight Loss Surgery"],
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": 4.9,
-              "reviewCount": 500,
-              "bestRating": 5,
-              "worstRating": 1
+              "ratingValue": "4.9",
+              "reviewCount": "500",
+              "bestRating": "5",
+              "worstRating": "1"
             },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
