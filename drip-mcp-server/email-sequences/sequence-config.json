@@ -1,0 +1,199 @@
+{
+  "sequences": {
+    "A_insured": {
+      "name": "Calculator Follow-up: Insured Patients",
+      "description": "7-email sequence for insured patients (with health insurance coverage)",
+      "trigger_tag": "calculator_user_insured",
+      "custom_fields_required": [
+        "estimated_cost",
+        "first_name",
+        "location"
+      ],
+      "emails": [
+        {
+          "id": "1A",
+          "day": 0,
+          "subject": "Your ${{estimated_cost}} gap - here's what happens next",
+          "preheader": "How insurance covers bariatric surgery + what you pay out of pocket.",
+          "file": "email-1a.html",
+          "delay_days": 0,
+          "delay_hours": 0
+        },
+        {
+          "id": "2A",
+          "day": 2,
+          "subject": "How to use your health insurance for bariatric surgery",
+          "preheader": "Waiting periods, gap cover, item numbers - everything you need to know.",
+          "file": "email-2a.html",
+          "delay_days": 2,
+          "delay_hours": 0
+        },
+        {
+          "id": "3A",
+          "day": 5,
+          "subject": "Is your ${{estimated_cost}} gap accurate?",
+          "preheader": "What makes gaps higher or lower + how to get your exact quote.",
+          "file": "email-3a.html",
+          "delay_days": 3,
+          "delay_hours": 0
+        },
+        {
+          "id": "4A",
+          "day": 7,
+          "subject": "Every surgeon is verified (here's how)",
+          "preheader": "We check credentials monthly so you don't waste time on unqualified surgeons.",
+          "file": "email-4a.html",
+          "delay_days": 2,
+          "delay_hours": 0
+        },
+        {
+          "id": "5A",
+          "day": 10,
+          "subject": "Still Googling surgeons in {{location}}?",
+          "preheader": "You're overthinking this. Let us match you with the right surgeon this week.",
+          "file": "email-5a.html",
+          "delay_days": 3,
+          "delay_hours": 0
+        },
+        {
+          "id": "6A",
+          "day": 14,
+          "subject": "Two Weeks of Research - Ready to Actually Book?",
+          "preheader": "We'll call you, match you with a surgeon, and book your consultation. It's that simple.",
+          "file": "email-6a.html",
+          "delay_days": 4,
+          "delay_hours": 0
+        },
+        {
+          "id": "7A",
+          "day": 21,
+          "subject": "3 Weeks Later: Are You Ready?",
+          "preheader": "Your ${{estimated_cost}} gap has kept you stuck. Time to decide.",
+          "file": "email-7a.html",
+          "delay_days": 7,
+          "delay_hours": 0
+        }
+      ]
+    },
+    "B_self_funded": {
+      "name": "Calculator Follow-up: Self-Funded Patients",
+      "description": "7-email sequence for self-funded patients (paying out-of-pocket)",
+      "trigger_tag": "calculator_user_self_funded",
+      "custom_fields_required": [
+        "estimated_cost",
+        "first_name",
+        "location"
+      ],
+      "emails": [
+        {
+          "id": "1B",
+          "day": 0,
+          "subject": "Your ${{estimated_cost}} estimate - here's what happens next",
+          "preheader": "We'll match you with surgeons who offer payment plans. Book your consultation this week.",
+          "file": "email-1b.html",
+          "delay_days": 0,
+          "delay_hours": 0
+        },
+        {
+          "id": "2B",
+          "day": 2,
+          "subject": "Still Googling surgeons in {{location}}?",
+          "preheader": "You're overthinking this. Let us match you with the right surgeon this week.",
+          "file": "email-2b.html",
+          "delay_days": 2,
+          "delay_hours": 0
+        },
+        {
+          "id": "3B",
+          "day": 5,
+          "subject": "What does waiting another year actually cost you?",
+          "preheader": "Medications, equipment, missed experiences - the math might surprise you.",
+          "file": "email-3b.html",
+          "delay_days": 3,
+          "delay_hours": 0
+        },
+        {
+          "id": "4B",
+          "day": 8,
+          "subject": "There's no \"perfect\" surgeon - here's what actually matters",
+          "preheader": "Stop trying to pick the perfect surgeon yourself. Let us match you.",
+          "file": "email-4b.html",
+          "delay_days": 3,
+          "delay_hours": 0
+        },
+        {
+          "id": "5B",
+          "day": 11,
+          "subject": "Stop vetting surgeons yourself - we've already done it",
+          "preheader": "We verify credentials monthly. You skip the research. Simple.",
+          "file": "email-5b.html",
+          "delay_days": 3,
+          "delay_hours": 0
+        },
+        {
+          "id": "6B",
+          "day": 14,
+          "subject": "Two Weeks of Research - Ready to Actually Book?",
+          "preheader": "We'll call you, match you with a surgeon, and book your consultation. It's that simple.",
+          "file": "email-6b.html",
+          "delay_days": 3,
+          "delay_hours": 0
+        },
+        {
+          "id": "7B",
+          "day": 21,
+          "subject": "3 Weeks Later: Are You Ready?",
+          "preheader": "Your ${{estimated_cost}} estimate has kept you stuck. Time to decide.",
+          "file": "email-7b.html",
+          "delay_days": 7,
+          "delay_hours": 0
+        }
+      ]
+    }
+  },
+  "tags": {
+    "calculator_user": "Tag applied when user completes cost calculator",
+    "calculator_user_insured": "User has health insurance (A-segment)",
+    "calculator_user_self_funded": "User paying out-of-pocket (B-segment)",
+    "booking_call_requested": "User requested consultation booking assistance",
+    "consultation_booked": "User has booked surgeon consultation"
+  },
+  "custom_fields": {
+    "estimated_cost": {
+      "type": "number",
+      "description": "Estimated surgery cost from calculator",
+      "example": 12000
+    },
+    "first_name": {
+      "type": "string",
+      "description": "Subscriber's first name",
+      "example": "John"
+    },
+    "location": {
+      "type": "string",
+      "description": "User's location (city or state)",
+      "example": "Sydney"
+    },
+    "procedure_type": {
+      "type": "string",
+      "description": "Type of procedure interested in",
+      "example": "Gastric Sleeve"
+    },
+    "insurance_fund": {
+      "type": "string",
+      "description": "Health insurance fund name (for insured segment)",
+      "example": "Bupa"
+    },
+    "payment_preference": {
+      "type": "string",
+      "description": "Payment plan preference (for self-funded segment)",
+      "example": "Interest-free payment plan"
+    }
+  },
+  "workflow_settings": {
+    "allow_multiple_subscriptions": false,
+    "exit_on_tag": "consultation_booked",
+    "send_time": "optimized",
+    "timezone": "Australia/Sydney"
+  }
+}

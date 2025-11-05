@@ -61,7 +61,6 @@ const seo = {
     "@context": "https://schema.org",
     "@type": "Physician",
     "name": "Dr Ramez Bassari",
-    "medicalSpecialty": "Bariatric Surgery",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Richmond",
@@ -109,8 +108,7 @@ const organizationSchema = {
     "@type": "ImageObject",
     "url": "https://weightlosssurgery.com.au/logo.png"
   },
-  "description": "Australia's leading directory of qualified bariatric surgeons",
-  "medicalSpecialty": "Bariatric Surgery"
+  "description": "Australia's leading directory of qualified bariatric surgeons"
 };
 
 // 2. Enhanced Physician Schema with comprehensive details
@@ -135,8 +133,6 @@ const physicianSchema = {
     "addressRegion": surgeon.state,
     "addressCountry": "AU"
   },
-  "medicalSpecialty": ["Bariatric Surgery", "Weight Loss Surgery", "General Surgery"],
-
   // Add credentials
   "hasCredential": enhanced?.credentials?.fellowships?.map(fellowship => ({
     "@type": "EducationalOccupationalCredential",
@@ -203,7 +199,7 @@ if (surgeon.rating > 0 && surgeon.review_count > 0) {
 // 3. Medical Business Schema for local SEO
 const medicalBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
+  "@type": "LocalBusiness",
   "name": `${cleanName} - Bariatric Surgery Practice`,
   "image": surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined,
   "telephone": surgeon.phone,
@@ -218,7 +214,6 @@ const medicalBusinessSchema = {
   "priceRange": "$$$$",
   "paymentAccepted": ["Cash", "Credit Card", "Medicare", "Private Health Insurance"],
   "currenciesAccepted": "AUD",
-  "medicalSpecialty": "Bariatric Surgery",
   "aggregateRating": surgeon.rating > 0 ? {
     "@type": "AggregateRating",
     "ratingValue": surgeon.rating,

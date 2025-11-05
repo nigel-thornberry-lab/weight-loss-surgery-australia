@@ -1,0 +1,45 @@
+{
+  "slug": "test-surgeon-sydney",
+  "name": "Dr. Test Surgeon - Test Practice",
+  "ahpraNumber": null,
+  "degrees": ["MBBS", "FRACS"],
+  "memberships": [],
+  "yearsExperience": "15",
+  "estimatedProcedures": "3000",
+  "rating": "5",
+  "reviewsCount": "25",
+  "phone": "+61 2 1234 5678",
+  "website": "https://test-surgeon.example.com",
+  "address": {
+    "streetAddress": "123 Test Street",
+    "addressLocality": "Sydney CBD",
+    "addressRegion": "New South Wales",
+    "addressCountry": "AU"
+  },
+  "locations": [],
+  "procedures": [
+    "Gastric Sleeve",
+    "Gastric Bypass",
+    "Mini Gastric Bypass",
+    "Gastric Band"
+  ],
+  "affiliations": [],
+  "publications": [],
+  "languages": ["English"],
+  "bio": "Dr. Test Surgeon is a test profile created for demonstration purposes. This surgeon specializes in all major bariatric procedures including gastric sleeve, gastric bypass, and gastric band surgery. With over 15 years of experience and 3000+ successful procedures, Dr. Test Surgeon provides comprehensive weight loss surgery services in Sydney.",
+  "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==",
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Test+Surgeon+Sydney",
+  "meta": {
+    "title": "Dr. Test Surgeon - Test Bariatric Surgeon Sydney",
+    "description": "Test surgeon profile for demonstration purposes.",
+    "lastReviewed": "2025-11-04"
+  },
+  "citations": {
+    "ahpra": null,
+    "hospitalProfiles": [],
+    "officialSite": "https://test-surgeon.example.com",
+    "professionalBodies": [],
+    "publications": [],
+    "notes": ["Test profile for development"]
+  }
+}

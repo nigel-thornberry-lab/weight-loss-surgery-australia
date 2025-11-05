@@ -168,7 +168,7 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
             }
           },
           {
-            "@type": "MedicalBusiness",
+            "@type": "MedicalOrganization",
             "@id": "https://bariatricsurgeryhub.com/#organization",
             "name": "Bariatric SurgeryHub",
             "description": "Australia's leading resource for weight loss surgery information, connecting patients with AHPRA-registered bariatric surgeons across Sydney, Melbourne, and beyond.",
@@ -184,7 +184,6 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
               "@type": "Country",
               "name": "Australia"
             },
-            "medicalSpecialty": ["Bariatric Surgery", "Weight Loss Surgery"],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
@@ -389,10 +388,13 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
             <a href="/blog" class="text-gray-600 hover:text-blue-600 hover:bg-blue-50 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200">Blog</a>
           </nav>
 
-          <!-- Right Side: CTA Button + Mobile Menu -->
+          <!-- Right Side: CTA Buttons + Mobile Menu -->
           <div class="flex items-center gap-3">
             <a href="/contact" class="hidden md:block bg-[#6c95ef] hover:bg-[#5a7fd8] text-white px-3 py-1.5 rounded-md text-xs font-semibold transition-all duration-200 shadow-sm hover:shadow-md">
               Book Consultation
+            </a>
+            <a href="/advertise" class="hidden md:block text-white bg-green-600 hover:bg-green-700 px-3 py-1.5 rounded-md text-xs font-semibold transition-all duration-200 shadow-sm hover:shadow-md">
+              For Surgeons
             </a>
             
             <!-- Mobile Menu Button -->
@@ -480,6 +482,11 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
               </div>
             </div>
             <a href="/blog" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-semibold">Blog</a>
+            <div class="pt-2">
+              <a href="/advertise" class="block px-3 py-2 text-white bg-green-600 hover:bg-green-700 font-bold rounded-lg text-center">
+                For Surgeons
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -545,6 +552,7 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
               <li><a href="/blog" class="hover:text-white">Blog & Articles</a></li>
               <li><a href="/blog/gastric-sleeve-recovery-week-by-week" class="hover:text-white">Recovery Guide</a></li>
               <li><a href="/blog/gastric-sleeve-cost-australia-2025" class="hover:text-white">Cost Information</a></li>
+              <li><a href="/advertise" class="text-green-400 font-semibold hover:text-white">For Surgeons</a></li>
             </ul>
           </div>
         </div>

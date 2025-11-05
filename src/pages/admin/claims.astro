@@ -1,0 +1,200 @@
+---
+export const prerender = false; // Enable SSR for this page
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getUser, isAdmin } from '../../lib/auth';
+import { supabase } from '../../lib/supabase';
+
+// Protect route and check admin access
+const user = await getUser(Astro.cookies);
+if (!user) {
+  return Astro.redirect('/login');
+}
+
+const userIsAdmin = await isAdmin(user.id);
+if (!userIsAdmin) {
+  return Astro.redirect('/dashboard');
+}
+
+// Get all pending claims
+const { data: pendingClaims, error } = await supabase
+  .from('user_claims')
+  .select('*')
+  .eq('status', 'pending')
+  .order('claimed_at', { ascending: false });
+
+const claims = pendingClaims || [];
+---
+
+<BaseLayout
+  title="Admin - Manage Claims"
+  description="Review and manage profile claim requests"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Header -->
+    <div class="mb-8 flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold text-gray-900">Manage Claims</h1>
+        <p class="mt-2 text-gray-600">Review and approve profile claim requests</p>
+      </div>
+      <div class="flex gap-3">
+        <a
+          href="/dashboard"
+          class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+        >
+          Dashboard
+        </a>
+        <form method="POST" action="/api/auth/signout" id="signout-form">
+          <button
+            type="submit"
+            class="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50"
+          >
+            Sign Out
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success/Error Messages -->
+    <div id="success-message" class="hidden mb-6 bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg"></div>
+    <div id="error-message" class="hidden mb-6 bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg"></div>
+
+    <!-- Claims Table -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-200">
+        <h2 class="text-xl font-semibold text-gray-900">
+          Pending Claims ({claims.length})
+        </h2>
+      </div>
+
+      {claims.length === 0 ? (
+        <div class="px-6 py-12 text-center">
+          <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <h3 class="mt-4 text-lg font-medium text-gray-900">No pending claims</h3>
+          <p class="mt-2 text-gray-600">All claims have been reviewed.</p>
+        </div>
+      ) : (
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Surgeon ID
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Contact
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Details
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Date
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+              {claims.map((claim) => (
+                <tr data-claim-id={claim.id}>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm font-medium text-gray-900">{claim.surgeon_id}</div>
+                  </td>
+                  <td class="px-6 py-4">
+                    <div class="text-sm text-gray-900">{claim.contact_name}</div>
+                    <div class="text-sm text-gray-500">{claim.contact_email}</div>
+                    <div class="text-sm text-gray-500">{claim.contact_phone}</div>
+                  </td>
+                  <td class="px-6 py-4">
+                    <div class="text-sm text-gray-900">
+                      {claim.verification_notes || <span class="text-gray-400 italic">No notes</span>}
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    {new Date(claim.claimed_at).toLocaleDateString()}
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <div class="flex gap-2">
+                      <button
+                        onclick={`handleClaim('${claim.id}', 'approved')`}
+                        class="px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+                      >
+                        Approve
+                      </button>
+                      <button
+                        onclick={`handleClaim('${claim.id}', 'rejected')`}
+                        class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+                      >
+                        Reject
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  const successMessage = document.getElementById('success-message');
+  const errorMessage = document.getElementById('error-message');
+  const signoutForm = document.getElementById('signout-form');
+
+  signoutForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const response = await fetch('/api/auth/signout', { method: 'POST' });
+    if (response.ok) {
+      window.location.href = '/login';
+    }
+  });
+
+  window.handleClaim = async function(claimId, status) {
+    const row = document.querySelector(`tr[data-claim-id="${claimId}"]`);
+
+    if (!confirm(`Are you sure you want to ${status === 'approved' ? 'approve' : 'reject'} this claim?`)) {
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/claims/update', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ claim_id: claimId, status }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to update claim');
+      }
+
+      // Show success message
+      successMessage.textContent = `Claim ${status} successfully!`;
+      successMessage.classList.remove('hidden');
+      errorMessage.classList.add('hidden');
+
+      // Remove the row from the table
+      if (row) {
+        row.remove();
+      }
+
+      // Reload after 2 seconds to update count
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    } catch (error) {
+      errorMessage.textContent = error.message;
+      errorMessage.classList.remove('hidden');
+      successMessage.classList.add('hidden');
+    }
+  };
+</script>

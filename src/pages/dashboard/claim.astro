@@ -1,0 +1,296 @@
+---
+export const prerender = false; // Enable SSR for this page
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getUser } from '../../lib/auth';
+import { getAllSurgeons } from '../../data/surgeons';
+
+// Protect route
+const user = await getUser(Astro.cookies);
+if (!user) {
+  return Astro.redirect('/login');
+}
+
+// Get all surgeons and extract unique cities
+const allSurgeons = getAllSurgeons();
+const cities = [...new Set(allSurgeons.map(s => s.city))].sort();
+---
+
+<BaseLayout
+  title="Claim a Profile"
+  description="Search for and claim your surgeon profile"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Header -->
+    <div class="mb-8">
+      <a href="/dashboard" class="text-blue-600 hover:text-blue-700 mb-4 inline-flex items-center">
+        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Dashboard
+      </a>
+      <h1 class="text-3xl font-bold text-gray-900">Claim Your Profile</h1>
+      <p class="mt-2 text-gray-600">Search for your practice and submit a claim request.</p>
+    </div>
+
+    <!-- Search Form -->
+    <div class="bg-white shadow-lg rounded-lg p-6 mb-8">
+      <label for="search-input" class="block text-sm font-medium text-gray-700 mb-2">
+        Search for Your Practice
+      </label>
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search by surgeon name, practice name, or suburb..."
+        class="block w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"
+      />
+      <p class="mt-2 text-sm text-gray-500">
+        Examples: "Dr Smith", "Sydney Bariatric Clinic", "Kogarah"
+      </p>
+    </div>
+
+    <!-- Results -->
+    <div id="results" class="hidden">
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="px-6 py-4 border-b border-gray-200">
+          <h2 class="text-xl font-semibold text-gray-900">
+            Search Results <span id="results-count" class="text-gray-600 font-normal text-base"></span>
+          </h2>
+        </div>
+        <div id="surgeons-list" class="divide-y divide-gray-200">
+          <!-- Surgeons will be loaded here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading" class="hidden text-center py-8">
+      <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+      <p class="mt-4 text-gray-600">Loading surgeons...</p>
+    </div>
+
+    <!-- No results message -->
+    <div id="no-results" class="hidden bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+      <p class="text-yellow-800">No surgeons found in this area.</p>
+    </div>
+  </div>
+
+  <!-- Claim Modal -->
+  <div id="claim-modal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+    <div class="relative top-20 mx-auto p-5 border w-full max-w-md shadow-lg rounded-md bg-white">
+      <div class="mt-3">
+        <h3 class="text-lg font-medium leading-6 text-gray-900 mb-4">Claim Profile</h3>
+
+        <form id="claim-form" class="space-y-4">
+          <input type="hidden" id="surgeon-id" name="surgeon_id" />
+
+          <div id="error-message" class="hidden bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg text-sm"></div>
+
+          <div>
+            <label for="contact-name" class="block text-sm font-medium text-gray-700">
+              Your Name <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="text"
+              id="contact-name"
+              name="contact_name"
+              required
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="contact-email" class="block text-sm font-medium text-gray-700">
+              Contact Email <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="email"
+              id="contact-email"
+              name="contact_email"
+              required
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="contact-phone" class="block text-sm font-medium text-gray-700">
+              Phone Number <span class="text-red-500">*</span>
+            </label>
+            <input
+              type="tel"
+              id="contact-phone"
+              name="contact_phone"
+              required
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="verification-notes" class="block text-sm font-medium text-gray-700">
+              Position/Role & Additional Notes
+            </label>
+            <textarea
+              id="verification-notes"
+              name="verification_notes"
+              rows="3"
+              placeholder="e.g., Practice Manager, Surgeon, etc."
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            ></textarea>
+          </div>
+
+          <div class="flex gap-3 pt-4">
+            <button
+              type="submit"
+              id="submit-claim"
+              class="flex-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+            >
+              Submit Claim
+            </button>
+            <button
+              type="button"
+              id="cancel-claim"
+              class="flex-1 px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ allSurgeons, userId: user.id }}>
+  const searchInput = document.getElementById('search-input');
+  const resultsDiv = document.getElementById('results');
+  const surgeonsListDiv = document.getElementById('surgeons-list');
+  const loadingDiv = document.getElementById('loading');
+  const noResultsDiv = document.getElementById('no-results');
+  const resultsCount = document.getElementById('results-count');
+  const modal = document.getElementById('claim-modal');
+  const claimForm = document.getElementById('claim-form');
+  const cancelBtn = document.getElementById('cancel-claim');
+  const errorMessage = document.getElementById('error-message');
+  const submitBtn = document.getElementById('submit-claim');
+
+  let searchTimeout;
+
+  // Search function
+  function searchSurgeons(query) {
+    if (!query || query.trim().length < 2) {
+      resultsDiv.classList.add('hidden');
+      noResultsDiv.classList.add('hidden');
+      return;
+    }
+
+    loadingDiv.classList.remove('hidden');
+    resultsDiv.classList.add('hidden');
+    noResultsDiv.classList.add('hidden');
+
+    const searchLower = query.toLowerCase().trim();
+
+    // Filter surgeons by name, business name, or city/suburb
+    const surgeons = allSurgeons.filter(s => {
+      const name = (s.surgeon_name || '').toLowerCase();
+      const businessName = (s.business_name || '').toLowerCase();
+      const city = (s.city || '').toLowerCase();
+      const street = (s.street || '').toLowerCase();
+
+      return name.includes(searchLower) ||
+             businessName.includes(searchLower) ||
+             city.includes(searchLower) ||
+             street.includes(searchLower);
+    });
+
+    setTimeout(() => {
+      loadingDiv.classList.add('hidden');
+
+      if (surgeons.length === 0) {
+        noResultsDiv.classList.remove('hidden');
+        return;
+      }
+
+      resultsCount.textContent = `(${surgeons.length} found)`;
+      surgeonsListDiv.innerHTML = surgeons.map(surgeon => `
+        <div class="px-6 py-4 hover:bg-gray-50">
+          <div class="flex justify-between items-start gap-4">
+            <div class="flex-1 min-w-0">
+              <h3 class="text-lg font-medium text-gray-900">${surgeon.business_name || surgeon.surgeon_name}</h3>
+              <p class="text-sm text-gray-600 mt-1">${surgeon.street}, ${surgeon.city}, ${surgeon.state}</p>
+              ${surgeon.phone ? `<p class="text-sm text-gray-500 mt-1">${surgeon.phone}</p>` : ''}
+            </div>
+            <button
+              onclick="openClaimModal('${surgeon.slug}')"
+              class="flex-shrink-0 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 whitespace-nowrap"
+            >
+              Claim this profile
+            </button>
+          </div>
+        </div>
+      `).join('');
+
+      resultsDiv.classList.remove('hidden');
+    }, 300);
+  }
+
+  // Debounced search on input
+  searchInput.addEventListener('input', (e) => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+      searchSurgeons(e.target.value);
+    }, 400); // Wait 400ms after user stops typing
+  });
+
+  // Modal functions
+  window.openClaimModal = function(surgeonId) {
+    document.getElementById('surgeon-id').value = surgeonId;
+    modal.classList.remove('hidden');
+    errorMessage.classList.add('hidden');
+  };
+
+  cancelBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    claimForm.reset();
+  });
+
+  // Close modal on background click
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+      claimForm.reset();
+    }
+  });
+
+  // Submit claim
+  claimForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+    errorMessage.classList.add('hidden');
+
+    const formData = new FormData(claimForm);
+    formData.append('user_id', userId);
+
+    try {
+      const response = await fetch('/api/claims/submit', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit claim');
+      }
+
+      // Success - redirect to dashboard
+      window.location.href = '/dashboard?claim_success=1';
+    } catch (error) {
+      errorMessage.textContent = error.message;
+      errorMessage.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Submit Claim';
+    }
+  });
+</script>

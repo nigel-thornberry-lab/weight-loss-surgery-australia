@@ -6,13 +6,27 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
+import { config } from 'dotenv';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+// Load .env file - try multiple locations
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const envPath1 = join(__dirname, 'mcp-server', '.env');
+const envPath2 = join(__dirname, '.env');
+// Try both paths
+config({ path: envPath1 });
+if (!process.env.GOOGLE_AI_STUDIO_API_KEY) {
+  config({ path: envPath2 });
+}
 
 class GoogleAIStudioServer {
   constructor() {
     this.server = new Server(
       {
         name: 'google-ai-studio-mcp',
-        version: '1.0.0',
+        version: '1.1.0',
       },
       {
         capabilities: {
@@ -102,7 +116,7 @@ class GoogleAIStudioServer {
                 model: {
                   type: 'string',
                   description: 'The model to use',
-                  default: 'gemini-1.5-flash',
+                  default: 'gemini-2.5-flash',
                 },
                 system_instruction: {
                   type: 'string',
@@ -144,7 +158,7 @@ class GoogleAIStudioServer {
                 model: {
                   type: 'string',
                   description: 'The model to use',
-                  default: 'gemini-1.5-flash',
+                  default: 'gemini-2.5-flash',
                 },
                 max_tokens: {
                   type: 'number',

@@ -3,9 +3,6 @@
     "google-ai-studio": {
       "command": "node",
       "args": ["/Users/Cameron/Desktop/weight-loss-surgery-australia/mcp-google-ai-studio.js"],
-      "env": {
-        "GOOGLE_AI_STUDIO_API_KEY": "${GOOGLE_AI_STUDIO_API_KEY}"
-      }
     }
   }
 }

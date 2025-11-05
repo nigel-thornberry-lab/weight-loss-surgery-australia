@@ -1,0 +1,124 @@
+---
+export const prerender = false; // Enable SSR for this page
+
+import AuthLayout from '../layouts/AuthLayout.astro';
+import { getUser } from '../lib/auth';
+
+// Redirect if already logged in
+const user = await getUser(Astro.cookies);
+if (user) {
+  return Astro.redirect('/dashboard');
+}
+---
+
+<AuthLayout title="Sign In">
+  <div class="bg-white py-8 px-6 shadow-lg rounded-lg">
+    <h2 class="text-center text-3xl font-bold text-gray-900 mb-6">
+      Sign in to your account
+    </h2>
+
+    <form id="signin-form" class="space-y-6">
+      <div id="confirm-message" class="hidden bg-blue-50 border border-blue-200 text-blue-800 px-4 py-3 rounded-lg text-sm"></div>
+      <div id="error-message" class="hidden bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg"></div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">
+          Email address
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+
+      <div>
+        <label for="password" class="block text-sm font-medium text-gray-700">
+          Password
+        </label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          required
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          id="submit-btn"
+          class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+        >
+          Sign in
+        </button>
+      </div>
+    </form>
+
+    <div class="mt-6 text-center">
+      <p class="text-sm text-gray-600">
+        Don't have an account?
+        <a href="/signup" class="font-medium text-blue-600 hover:text-blue-500">
+          Sign up
+        </a>
+      </p>
+    </div>
+  </div>
+</AuthLayout>
+
+<script>
+  const form = document.getElementById('signin-form') as HTMLFormElement;
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+  const errorMessage = document.getElementById('error-message') as HTMLDivElement;
+  const confirmMessage = document.getElementById('confirm-message') as HTMLDivElement;
+
+  // Check for confirmation message
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('message') === 'confirm_email') {
+    confirmMessage.textContent = 'Please check your email and click the confirmation link to activate your account, then sign in below.';
+    confirmMessage.classList.remove('hidden');
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Signing in...';
+    errorMessage.classList.add('hidden');
+
+    const formData = new FormData(form);
+    const payload = {
+      email: formData.get('email'),
+      password: formData.get('password')
+    };
+
+    try {
+      const response = await fetch('/api/auth/signin', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to sign in');
+      }
+
+      // Redirect to dashboard on success
+      window.location.href = '/dashboard';
+    } catch (error) {
+      errorMessage.textContent = error instanceof Error ? error.message : 'An error occurred';
+      errorMessage.classList.remove('hidden');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Sign in';
+    }
+  });
+</script>

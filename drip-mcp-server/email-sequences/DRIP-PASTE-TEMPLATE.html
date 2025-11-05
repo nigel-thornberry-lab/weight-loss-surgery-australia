@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Email Template for Drip</title>
+    <style>
+        /* Email Container */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000000 !important;
+            background-color: #ffffff;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Text Elements */
+        p {
+            color: #000000 !important;
+            margin: 15px 0;
+        }
+
+        strong {
+            color: #000000 !important;
+            font-weight: 600;
+        }
+
+        /* Headings */
+        h1, h2, h3, h4, h5, h6 {
+            color: #000000 !important;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 22px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+        }
+
+        /* Lists */
+        ul, ol {
+            color: #000000 !important;
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        li {
+            color: #000000 !important;
+            margin: 8px 0;
+        }
+
+        /* Call-to-Action Button */
+        .cta-button {
+            display: inline-block;
+            padding: 14px 32px;
+            background-color: #0066cc;
+            color: #ffffff !important;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin: 20px 0;
+            text-align: center;
+            border: none;
+        }
+
+        /* Highlight Boxes */
+        .highlight {
+            background-color: #f5f5f5;
+            border-left: 4px solid #0066cc;
+            padding: 15px 20px;
+            margin: 20px 0;
+            color: #000000 !important;
+        }
+
+        /* Signature Section */
+        .signature {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #000000 !important;
+        }
+
+        /* PS Section */
+        .ps {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+            font-style: italic;
+            color: #333333 !important;
+        }
+
+        /* Divider */
+        hr {
+            border: none;
+            border-top: 2px solid #e0e0e0;
+            margin: 25px 0;
+        }
+
+        /* Override any external styles */
+        * {
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+==============================================
+INSTRUCTIONS FOR USING THIS TEMPLATE IN DRIP:
+==============================================
+
+OPTION 1: Copy individual email body text (RECOMMENDED)
+1. Open ALL-14-EMAILS-FINAL.md
+2. Copy the text of one email (e.g., Email 1A body content)
+3. Paste into Drip's HTML editor
+4. Wrap headings with <h2> tags
+5. Wrap paragraphs with <p> tags
+6. Wrap bullet lists with <ul><li> tags
+7. Use <strong> for bold text
+8. Add CTA button HTML (see below)
+
+OPTION 2: Use this HTML structure as starting point
+1. Copy this entire HTML file
+2. Replace the placeholder content below with your email text
+3. Copy the updated HTML
+4. Paste into Drip's HTML editor
+
+==============================================
+CTA BUTTON CODE (copy this for each email):
+==============================================
+-->
+
+<p style="text-align: center;">
+    <a href="https://your-booking-form-url.com" style="display: inline-block; padding: 14px 32px; background-color: #0066cc; color: #ffffff !important; text-decoration: none; border-radius: 5px; font-weight: 600; margin: 20px 0;">Book a matching call →</a>
+</p>
+
+<!--
+==============================================
+EXAMPLE EMAIL FORMAT:
+==============================================
+-->
+
+<p style="color: #000000;">Hi {{first_name}},</p>
+
+<p style="color: #000000;">You just got your estimated gap: <strong style="color: #000000;">${{estimated_cost}}</strong>.</p>
+
+<p style="color: #000000;">That's what you'd pay out-of-pocket after insurance covers the surgery.</p>
+
+<p style="color: #000000;"><strong style="color: #000000;">Most people's first reaction: "How do I afford this? And which surgeon do I choose?"</strong></p>
+
+<p style="color: #000000;">Let me answer both questions.</p>
+
+<h2 style="color: #000000; font-size: 22px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">How People Actually Pay Their Gap</h2>
+
+<p style="color: #000000;"><strong style="color: #000000;">Interest-Free Payment Plans (Most Common)</strong></p>
+<ul style="color: #000000;">
+    <li style="color: #000000;">12-month plans: $300-650/month (zero interest)</li>
+    <li style="color: #000000;">6-month plans: $600-1,300/month (done faster)</li>
+    <li style="color: #000000;">Approved in 24-48 hours</li>
+</ul>
+
+<p style="color: #000000;"><strong style="color: #000000;">Most people finance $300-650/month for 6-12 months.</strong></p>
+
+<h2 style="color: #000000; font-size: 22px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">There's a Faster Way</h2>
+
+<p style="color: #000000;"><strong style="color: #000000;">Let us match you with a trusted, verified surgeon and book your consultation.</strong></p>
+
+<p style="color: #000000;">Here's how it works:</p>
+
+<p style="color: #000000;"><strong style="color: #000000;">1. Fill out our 2-minute form</strong></p>
+<p style="color: #000000;"><strong style="color: #000000;">2. We call you (within 24 hours)</strong></p>
+<p style="color: #000000;"><strong style="color: #000000;">3. We explain everything</strong></p>
+<p style="color: #000000;"><strong style="color: #000000;">4. We match you with the right surgeon</strong></p>
+<p style="color: #000000;"><strong style="color: #000000;">5. We book your consultation</strong></p>
+
+<div style="background-color: #f5f5f5; border-left: 4px solid #0066cc; padding: 15px 20px; margin: 20px 0;">
+    <p style="color: #000000;"><strong style="color: #000000;">Your time: 15 minutes total</strong><br>
+    <strong style="color: #000000;">Your cost: $0</strong><br>
+    <strong style="color: #000000;">Your stress: None</strong></p>
+</div>
+
+<h2 style="color: #000000; font-size: 22px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Ready to Skip the Research?</h2>
+
+<p style="text-align: center;">
+    <a href="https://your-booking-form-url.com" style="display: inline-block; padding: 14px 32px; background-color: #0066cc; color: #ffffff !important; text-decoration: none; border-radius: 5px; font-weight: 600; margin: 20px 0;">Book a matching call →</a>
+</p>
+
+<p style="text-align: center; color: #000000;">Fill out the 2-minute form. We'll call you within 24 hours to match you with a surgeon and book your consultation.</p>
+
+<p style="text-align: center; color: #000000;"><strong style="color: #000000;">No research. No phone tag. No uncertainty.</strong></p>
+
+<div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
+    <p style="color: #000000;">Talk soon,<br>
+    Cameron<br>
+    BariatricSurgeryHub</p>
+</div>
+
+<div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #e0e0e0; font-style: italic; color: #333333;">
+    <p style="color: #333333;"><strong>P.S.</strong> We matched 47 insured patients last month. Average time from form to booked consultation: 16 hours. You could be meeting your surgeon next week.</p>
+</div>
+
+<!--
+==============================================
+QUICK REFERENCE - HTML ELEMENTS:
+==============================================
+
+PARAGRAPH:
+<p style="color: #000000;">Your text here</p>
+
+BOLD TEXT:
+<strong style="color: #000000;">Bold text</strong>
+
+HEADING:
+<h2 style="color: #000000; font-size: 22px; margin-top: 25px; margin-bottom: 15px; border-bottom: 2px solid #e0e0e0; padding-bottom: 8px;">Heading Text</h2>
+
+BULLET LIST:
+<ul style="color: #000000;">
+    <li style="color: #000000;">Item 1</li>
+    <li style="color: #000000;">Item 2</li>
+</ul>
+
+NUMBERED LIST:
+<ol style="color: #000000;">
+    <li style="color: #000000;">Step 1</li>
+    <li style="color: #000000;">Step 2</li>
+</ol>
+
+HIGHLIGHT BOX:
+<div style="background-color: #f5f5f5; border-left: 4px solid #0066cc; padding: 15px 20px; margin: 20px 0;">
+    <p style="color: #000000;">Highlighted content</p>
+</div>
+
+CTA BUTTON:
+<p style="text-align: center;">
+    <a href="YOUR-URL-HERE" style="display: inline-block; padding: 14px 32px; background-color: #0066cc; color: #ffffff !important; text-decoration: none; border-radius: 5px; font-weight: 600; margin: 20px 0;">Book a matching call →</a>
+</p>
+
+HORIZONTAL LINE:
+<hr style="border: none; border-top: 2px solid #e0e0e0; margin: 25px 0;">
+
+==============================================
+-->
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+---
+export const prerender = false; // Enable SSR for this page
+
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getUser } from '../../../lib/auth';
+import { supabase } from '../../../lib/supabase';
+import { getSurgeonBySlug } from '../../../data/surgeons';
+
+// Protect route
+const user = await getUser(Astro.cookies);
+if (!user) {
+  return Astro.redirect('/login');
+}
+
+const { surgeonId } = Astro.params;
+
+// Verify user has an approved claim for this surgeon
+const { data: claim, error: claimError } = await supabase
+  .from('user_claims')
+  .select('*')
+  .eq('user_id', user.id)
+  .eq('surgeon_id', surgeonId)
+  .eq('status', 'approved')
+  .single();
+
+if (!claim) {
+  return Astro.redirect('/dashboard');
+}
+
+// Get surgeon data
+const surgeon = getSurgeonBySlug(surgeonId);
+if (!surgeon) {
+  return Astro.redirect('/dashboard');
+}
+---
+
+<BaseLayout
+  title={`Manage Profile - ${surgeon.surgeon_name}`}
+  description="Edit your surgeon profile information"
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Header -->
+    <div class="mb-8">
+      <a href="/dashboard" class="text-blue-600 hover:text-blue-700 mb-4 inline-flex items-center">
+        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Dashboard
+      </a>
+      <h1 class="text-3xl font-bold text-gray-900">Manage Profile</h1>
+      <p class="mt-2 text-gray-600">{surgeon.business_name || surgeon.surgeon_name}</p>
+    </div>
+
+    <!-- Success/Error Messages -->
+    <div id="success-message" class="hidden mb-6 bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg"></div>
+    <div id="error-message" class="hidden mb-6 bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg"></div>
+
+    <!-- Profile Edit Form -->
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-200 bg-gray-50">
+        <h2 class="text-lg font-semibold text-gray-900">Profile Information</h2>
+        <p class="text-sm text-gray-600 mt-1">Update your practice details below.</p>
+      </div>
+
+      <form id="profile-form" class="px-6 py-6 space-y-6">
+        <input type="hidden" name="surgeon_id" value={surgeonId} />
+
+        <!-- Profile Image -->
+        <div class="space-y-4">
+          <h3 class="text-md font-medium text-gray-900 pb-2 border-b border-gray-200">Profile Image</h3>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">
+              Upload Profile Photo
+            </label>
+            <div class="flex items-start gap-4">
+              <!-- Image Preview -->
+              <div class="flex-shrink-0">
+                <div id="image-preview-container" class="w-32 h-32 border-2 border-gray-300 rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center">
+                  <img id="image-preview" src="" alt="Profile preview" class="hidden w-full h-full object-cover" />
+                  <svg id="image-placeholder" class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Upload Controls -->
+              <div class="flex-1">
+                <input
+                  type="file"
+                  id="profile-image"
+                  name="profile_image"
+                  accept="image/jpeg,image/jpg,image/png,image/webp"
+                  class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-medium file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                />
+                <p class="mt-2 text-xs text-gray-500">
+                  JPG, PNG or WebP. Max 5MB. Recommended: 400x400px square image.
+                </p>
+                <div id="upload-progress" class="hidden mt-2">
+                  <div class="w-full bg-gray-200 rounded-full h-2">
+                    <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+                  </div>
+                  <p class="text-xs text-gray-600 mt-1">Uploading...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Basic Information -->
+        <div class="space-y-4">
+          <h3 class="text-md font-medium text-gray-900 pb-2 border-b border-gray-200">Basic Information</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="business_name" class="block text-sm font-medium text-gray-700">
+                Business Name
+              </label>
+              <input
+                type="text"
+                id="business_name"
+                name="business_name"
+                value={surgeon.business_name}
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+
+            <div>
+              <label for="surgeon_name" class="block text-sm font-medium text-gray-700">
+                Surgeon Name
+              </label>
+              <input
+                type="text"
+                id="surgeon_name"
+                name="surgeon_name"
+                value={surgeon.surgeon_name}
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="qualifications" class="block text-sm font-medium text-gray-700">
+              Qualifications
+            </label>
+            <input
+              type="text"
+              id="qualifications"
+              name="qualifications"
+              value={surgeon.qualifications}
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div>
+            <label for="bio_long" class="block text-sm font-medium text-gray-700">
+              Biography
+            </label>
+            <textarea
+              id="bio_long"
+              name="bio_long"
+              rows="6"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            >{surgeon.bio_long}</textarea>
+          </div>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="space-y-4">
+          <h3 class="text-md font-medium text-gray-900 pb-2 border-b border-gray-200">Contact Information</h3>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="phone" class="block text-sm font-medium text-gray-700">
+                Phone
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={surgeon.phone}
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+
+            <div>
+              <label for="website" class="block text-sm font-medium text-gray-700">
+                Website
+              </label>
+              <input
+                type="url"
+                id="website"
+                name="website"
+                value={surgeon.website}
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="street" class="block text-sm font-medium text-gray-700">
+              Street Address
+            </label>
+            <input
+              type="text"
+              id="street"
+              name="street"
+              value={surgeon.street}
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label for="city" class="block text-sm font-medium text-gray-700">
+                City
+              </label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                value={surgeon.city}
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+
+            <div>
+              <label for="state" class="block text-sm font-medium text-gray-700">
+                State
+              </label>
+              <input
+                type="text"
+                id="state"
+                name="state"
+                value={surgeon.state}
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+
+            <div>
+              <label for="country" class="block text-sm font-medium text-gray-700">
+                Country
+              </label>
+              <input
+                type="text"
+                id="country"
+                name="country"
+                value={surgeon.country}
+                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Procedures -->
+        <div class="space-y-4">
+          <h3 class="text-md font-medium text-gray-900 pb-2 border-b border-gray-200">Procedures Offered</h3>
+
+          <div>
+            <label for="procedures" class="block text-sm font-medium text-gray-700">
+              Procedures (comma-separated)
+            </label>
+            <input
+              type="text"
+              id="procedures"
+              name="procedures"
+              value={surgeon.procedures}
+              placeholder="e.g., Gastric Sleeve, Gastric Bypass"
+              class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="flex justify-end pt-4 border-t border-gray-200">
+          <button
+            type="submit"
+            id="submit-btn"
+            class="px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Save Changes
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Info Box -->
+    <div class="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
+      <div class="flex">
+        <svg class="h-5 w-5 text-blue-600 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+        </svg>
+        <div class="ml-3">
+          <p class="text-sm text-blue-800">
+            <strong>Note:</strong> Changes to your profile are saved to a database and will need to be reviewed before appearing on the live site. Contact support if you need assistance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  import { createClient } from '@supabase/supabase-js';
+
+  const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+  const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+  const form = document.getElementById('profile-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const successMessage = document.getElementById('success-message');
+  const errorMessage = document.getElementById('error-message');
+  const imageInput = document.getElementById('profile-image');
+  const imagePreview = document.getElementById('image-preview');
+  const imagePlaceholder = document.getElementById('image-placeholder');
+  const uploadProgress = document.getElementById('upload-progress');
+  const progressBar = document.getElementById('progress-bar');
+
+  let uploadedImageUrl = null;
+
+  // Image preview on file select
+  imageInput.addEventListener('change', (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      // Validate file size (5MB max)
+      if (file.size > 5 * 1024 * 1024) {
+        errorMessage.textContent = 'Image must be less than 5MB';
+        errorMessage.classList.remove('hidden');
+        imageInput.value = '';
+        return;
+      }
+
+      // Show preview
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        imagePreview.src = e.target.result;
+        imagePreview.classList.remove('hidden');
+        imagePlaceholder.classList.add('hidden');
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Saving...';
+    successMessage.classList.add('hidden');
+    errorMessage.classList.add('hidden');
+
+    try {
+      // Upload image first if selected
+      const imageFile = imageInput.files?.[0];
+      if (imageFile) {
+        uploadProgress.classList.remove('hidden');
+        progressBar.style.width = '30%';
+
+        // Get current user session
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) {
+          throw new Error('Not authenticated');
+        }
+
+        const userId = session.user.id;
+        const fileExt = imageFile.name.split('.').pop();
+        const fileName = `${userId}/${Date.now()}.${fileExt}`;
+
+        progressBar.style.width = '60%';
+
+        const { data: uploadData, error: uploadError } = await supabase.storage
+          .from('profile-images')
+          .upload(fileName, imageFile, {
+            cacheControl: '3600',
+            upsert: false
+          });
+
+        if (uploadError) {
+          throw new Error(`Image upload failed: ${uploadError.message}`);
+        }
+
+        progressBar.style.width = '90%';
+
+        // Get public URL
+        const { data: { publicUrl } } = supabase.storage
+          .from('profile-images')
+          .getPublicUrl(fileName);
+
+        uploadedImageUrl = publicUrl;
+        progressBar.style.width = '100%';
+      }
+
+      // Prepare form data
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      // Remove the file from data object
+      delete data.profile_image;
+
+      // Add uploaded image URL if available
+      if (uploadedImageUrl) {
+        data.profile_image_url = uploadedImageUrl;
+      }
+
+      const response = await fetch('/api/profile/update', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to save changes');
+      }
+
+      successMessage.textContent = 'Profile updated successfully! Your changes will be reviewed before going live.';
+      successMessage.classList.remove('hidden');
+      uploadProgress.classList.add('hidden');
+
+      // Scroll to top to show success message
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (error) {
+      errorMessage.textContent = error.message;
+      errorMessage.classList.remove('hidden');
+      uploadProgress.classList.add('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Save Changes';
+      progressBar.style.width = '0%';
+    }
+  });
+</script>
