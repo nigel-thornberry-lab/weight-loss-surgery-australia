@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { getCanonicalFromAstroUrl } from '../utils/canonical';
 
 interface Props {
   title: string;
@@ -10,7 +11,8 @@ interface Props {
 }
 
 const { title, description, canonicalUrl, image, type = 'website' } = Astro.props;
-const currentUrl = canonicalUrl || Astro.url.href;
+// Use provided canonical URL or generate from Astro URL with proper normalization
+const currentUrl = canonicalUrl || getCanonicalFromAstroUrl(Astro.url);
 const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
 ---
 

@@ -1,0 +1,149 @@
+# .cursorignore
+# Exclude historical documentation and implementation summaries from AI indexing
+# This improves AI output quality by reducing noise in semantic search
+
+# ============================================================================
+# Implementation Summaries & Completion Reports
+# ============================================================================
+*-COMPLETE.md
+*-SUMMARY.md
+*-FIXES-COMPLETE.md
+*-CHANGES-COMPLETE.md
+*-IMPLEMENTATION-COMPLETE.md
+*-DEPLOYMENT-COMPLETE.md
+*-SETUP-COMPLETE.md
+*-OPTIMIZATION-COMPLETE.md
+*-ENHANCEMENT-COMPLETE.md
+*-PHASE-*-COMPLETE.md
+*-BATCH-*-COMPLETE.md
+
+# ============================================================================
+# Audit Reports & Reviews
+# ============================================================================
+*-AUDIT.md
+*-REVIEW.md
+*-REVIEWS.md
+*-ANALYSIS.md
+*-REPORT.md
+*-CORRECTIONS.md
+*-FIXES-APPLIED.md
+*-VERIFICATION.md
+
+# ============================================================================
+# Historical Email Sequence Documentation
+# ============================================================================
+EMAIL-SEQUENCE-*.md
+REVISED-EMAIL-*.md
+COMPLETE-EMAIL-*.md
+drip-mcp-server/email-sequences/*.md
+!EMAIL-0[1-7]-*.md
+!EMAIL-*-TEMPLATE.md
+
+# ============================================================================
+# Batch Processing & Status Files
+# ============================================================================
+BATCH-*.md
+*-STATUS.md
+*-PROGRESS.md
+*-QUEUE.md
+
+# ============================================================================
+# Research Data & Historical Analysis
+# ============================================================================
+*-RESEARCH.md
+*-DATA.md
+*-INSIGHTS.md
+*-OPPORTUNITIES-*.md
+*-REANALYSIS.md
+
+# ============================================================================
+# One-Time Setup & Deployment Docs
+# ============================================================================
+*-DEPLOYMENT-*.md
+*-DEPLOYMENT.md
+*-VERIFICATION-CHECKLIST.md
+*-WALKTHROUGH.md
+
+# ============================================================================
+# Article & Content Completion Reports
+# ============================================================================
+ARTICLE-*-COMPLETE.md
+ARTICLE-*-FINAL-*.md
+ARTICLE-*-EXECUTIVE-*.md
+DEPLOYMENT-ARTICLE-*.md
+
+# ============================================================================
+# Suburb/Location Completion Reports
+# ============================================================================
+*-SUBURBS-*.md
+*-PAGE-COMPLETE.md
+*-ENHANCEMENT-COMPLETE.md
+ALL-*-ENHANCED.md
+
+# ============================================================================
+# Surgeon Profile Completion Reports
+# ============================================================================
+*-PROFILE-ENHANCEMENT-*.md
+*-NAME-CLEANUP-*.md
+*-GENERATION-SUMMARY.md
+
+# ============================================================================
+# Competitive Analysis & Strategy Revisions
+# ============================================================================
+SEO_COMPETITIVE_ANALYSIS_*.md
+*-COMPETITIVE-ANALYSIS-*.md
+*-REVISED.md
+*-REVISED-PRIORITIES.md
+
+# ============================================================================
+# Keep Active Documentation (Exceptions)
+# ============================================================================
+!README.md
+!QUICK-START.md
+!QUICK-START-*.md
+!*-QUICK-START.md
+!*-GUIDE.md
+!*-SETUP.md
+!*-ROADMAP.md
+!*-BLUEPRINT.md
+!*-PRD.md
+!*-PLAN.md
+!*-STRATEGY.md
+!MASTER-*.md
+!CONTENT-STRATEGY-*.md
+!BRAND-TONE-GUIDE.md
+!COPYWRITING-FRAMEWORK-*.md
+
+# ============================================================================
+# Keep Active Email Templates
+# ============================================================================
+!EMAIL-0[1-7]-*.md
+
+# ============================================================================
+# Keep Active Setup Guides
+# ============================================================================
+!*-SETUP-GUIDE.md
+!*-SETUP-WALKTHROUGH.md
+!*-IMPLEMENTATION-GUIDE.md
+!*-DEPLOYMENT-GUIDE.md
+
+# ============================================================================
+# Other Non-Code Files to Exclude
+# ============================================================================
+*.log
+*.backup
+*.backup-*
+build*.log
+photo-extraction.log
+
+# ============================================================================
+# Data Files (if not actively used in code)
+# ============================================================================
+*.csv
+!data/**/*.csv
+surgeon-*.json
+batch-*.json
+place-id-mapping.json
+enhanced-data-progress.json
+surgeon-processing-queue.json
+
