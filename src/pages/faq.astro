@@ -4,7 +4,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ContentFreshness from '../components/ContentFreshness.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 
-const pageUrl = "https://weight-loss-surgery-australia.vercel.app/faq";
 
 const faqCategories = [
 	{
@@ -596,7 +595,7 @@ const meta = {
 };
 ---
 
-<BaseLayout title={meta.title} description={meta.description} canonicalUrl={pageUrl}>
+<BaseLayout title={meta.title} description={meta.description}>
 
 	<!-- Hero with Breadcrumbs -->
 	<section class="bg-gradient-to-br from-blue-50 to-white pt-6 pb-12">
