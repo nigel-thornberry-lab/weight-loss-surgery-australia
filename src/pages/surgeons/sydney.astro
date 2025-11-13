@@ -52,7 +52,7 @@ const description = `Find experienced bariatric surgeons across Sydney and NSW. 
       <p class="text-xl text-gray-600 mb-6">
         {sydneySurgeons.length} experienced weight loss surgery specialists across {cities.length} locations in Sydney and NSW
       </p>
-      <div class="flex flex-wrap gap-3">
+      <div class="flex flex-wrap gap-3 mb-6">
         <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
           🏥 {cities.length} Locations
         </span>
@@ -62,6 +62,16 @@ const description = `Find experienced bariatric surgeons across Sydney and NSW. 
         <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
           ✓ All Procedures Available
         </span>
+      </div>
+      
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="/surgeons/compare" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold transition text-center">
+          🔍 Compare Surgeons
+        </a>
+        <a href="/how-to-choose-weight-loss-surgeon" class="bg-white hover:bg-gray-50 border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-bold transition text-center">
+          How to Choose a Surgeon
+        </a>
       </div>
     </div>
   </section>

@@ -110,12 +110,12 @@ const description = `Top-rated bariatric surgeon in ${surgeon.city} (${surgeon.r
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalOrganization",
-  "@id": "https://weightlosssurgery.com.au/#organization",
+  "@id": "https://bariatricsurgeryhub.com/#organization",
   "name": "Weight Loss Surgery Australia",
-  "url": "https://weightlosssurgery.com.au",
+  "url": "https://bariatricsurgeryhub.com",
   "logo": {
     "@type": "ImageObject",
-    "url": "https://weightlosssurgery.com.au/logo.png"
+    "url": "https://bariatricsurgeryhub.com/logo.png"
   },
   "description": "Australia's leading directory of qualified bariatric surgeons"
 };
@@ -127,12 +127,12 @@ const physicianSchema = {
   "name": cleanName,
   "image": surgeon.surgeon_photo ? {
     "@type": "ImageObject",
-    "url": `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}`,
+    "url": `https://bariatricsurgeryhub.com${surgeon.surgeon_photo.replace('/public/', '/')}`,
     "width": "800",
     "height": "1000",
     "caption": `${cleanName} - Bariatric Surgeon in ${surgeon.city}, ${surgeon.state}`,
     "description": `Professional photo of ${cleanName}, expert bariatric surgeon specializing in weight loss surgery`
-  } : "https://weightlosssurgery.com.au/default-surgeon.jpg",
+  } : "https://bariatricsurgeryhub.com/default-surgeon.jpg",
   "url": canonicalUrl,
   "telephone": surgeon.phone,
   "address": {
@@ -210,7 +210,7 @@ const medicalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": `${cleanName} - Bariatric Surgery Practice`,
-  "image": surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined,
+  "image": surgeon.surgeon_photo ? `https://bariatricsurgeryhub.com${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined,
   "telephone": surgeon.phone,
   "url": surgeon.website,
   "address": {
@@ -253,19 +253,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://weightlosssurgery.com.au"
+      "item": "https://bariatricsurgeryhub.com"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Surgeons",
-      "item": "https://weightlosssurgery.com.au/surgeons"
+      "item": "https://bariatricsurgeryhub.com/surgeons"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": surgeon.city,
-      "item": `https://weightlosssurgery.com.au/surgeons/${citySlug}`
+      "item": `https://bariatricsurgeryhub.com/surgeons/${citySlug}`
     },
     {
       "@type": "ListItem",
@@ -281,7 +281,7 @@ const breadcrumbSchema = {
   title={title} 
   description={description} 
   canonicalUrl={canonicalUrl}
-  image={surgeon.surgeon_photo ? `https://weightlosssurgery.com.au${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined}
+  image={surgeon.surgeon_photo ? `https://bariatricsurgeryhub.com${surgeon.surgeon_photo.replace('/public/', '/')}` : undefined}
   type="profile"
 >
   <!-- Enhanced Schema.org Structured Data - Captures 100% of SERP Features -->

@@ -1,0 +1,95 @@
+---
+/**
+ * Add to Comparison Button Component
+ * 
+ * Button to add a surgeon to the comparison tool from profile pages.
+ * Uses localStorage to persist the comparison state.
+ */
+
+interface Props {
+  surgeon: {
+    slug: string;
+    surgeon_name?: string;
+    business_name?: string;
+    city?: string;
+    state?: string;
+  };
+  variant?: 'default' | 'compact';
+}
+
+const { surgeon, variant = 'default' } = Astro.props;
+const displayName = surgeon.surgeon_name || surgeon.business_name || 'Surgeon';
+const comparisonUrl = `/surgeons/compare?surgeons=${surgeon.slug}`;
+---
+
+<div class="add-to-comparison-wrapper">
+  <a
+    href={comparisonUrl}
+    class={`add-to-comparison-btn inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${variant === 'compact' ? 'text-sm px-3 py-1.5' : ''}`}
+    data-surgeon-slug={surgeon.slug}
+    aria-label={`Add ${displayName} to comparison`}
+    onclick={`
+      (function() {
+        const slug = '${surgeon.slug}';
+        const comparisonKey = 'surgeon-comparison';
+
+        // Get current comparison from localStorage
+        let comparison = [];
+        try {
+          const stored = localStorage.getItem(comparisonKey);
+          if (stored) {
+            comparison = JSON.parse(stored);
+          }
+        } catch (e) {
+          console.error('Error reading comparison from localStorage:', e);
+        }
+
+        // Add surgeon if not already in comparison (max 3)
+        if (!comparison.includes(slug) && comparison.length < 3) {
+          comparison.push(slug);
+          localStorage.setItem(comparisonKey, JSON.stringify(comparison));
+
+          // Show notification
+          const notification = document.createElement('div');
+          notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2';
+          notification.innerHTML = \`
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span>Added to comparison (\${comparison.length}/3)</span>
+          \`;
+          document.body.appendChild(notification);
+          setTimeout(() => notification.remove(), 3000);
+        } else if (comparison.includes(slug)) {
+          // Already in comparison
+          const notification = document.createElement('div');
+          notification.className = 'fixed top-4 right-4 bg-blue-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+          notification.textContent = 'Already in comparison';
+          document.body.appendChild(notification);
+          setTimeout(() => notification.remove(), 2000);
+        } else {
+          // Max reached
+          const notification = document.createElement('div');
+          notification.className = 'fixed top-4 right-4 bg-amber-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+          notification.textContent = 'Maximum 3 surgeons can be compared';
+          document.body.appendChild(notification);
+          setTimeout(() => notification.remove(), 3000);
+        }
+      })();
+      return false;
+    `}
+  >
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+    </svg>
+    <span>Add to Comparison</span>
+  </a>
+</div>
+
+<style>
+  .add-to-comparison-btn:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+</style>
+

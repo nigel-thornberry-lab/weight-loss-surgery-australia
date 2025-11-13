@@ -1,0 +1,759 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllSurgeons, getSurgeonBySlug, searchSurgeons, getAvailableCities, getAvailableProcedures, getDisplayName, getProcedureList } from '../../data/surgeons';
+import ComparisonTable from '../../components/surgeons/ComparisonTable.astro';
+import { getComparisonSummary, validateSurgeonsForComparison } from '../../data/surgeon-comparison-data';
+import { categorizeSurgeon } from '../../data/surgeon-match-data';
+import type { Surgeon } from '../../data/surgeons';
+
+const meta = {
+  title: 'Compare Weight Loss Surgeons Side-by-Side | Free Comparison Tool',
+  description: 'Compare 2-3 bariatric surgeons side-by-side. Compare qualifications, experience, procedures, pricing, hospital affiliations, and more. Make an informed decision.',
+  keywords: ['compare weight loss surgeons', 'how to choose weight loss surgeon', 'bariatric surgeon comparison', 'weight loss surgeon comparison tool']
+};
+
+const pageUrl = "https://bariatricsurgeryhub.com/surgeons/compare";
+
+// Get URL parameters for pre-selected surgeons
+const url = Astro.url;
+const surgeonSlugs = url.searchParams.get('surgeons')?.split(',').filter(Boolean) || [];
+
+// Load surgeons from slugs
+let selectedSurgeons: Surgeon[] = [];
+if (surgeonSlugs.length > 0) {
+  selectedSurgeons = surgeonSlugs
+    .map(slug => getSurgeonBySlug(slug.trim()))
+    .filter((s): s is Surgeon => s !== null)
+    .slice(0, 3); // Max 3 surgeons
+}
+
+// Get all surgeons for search/selection
+const allSurgeons = getAllSurgeons();
+const cities = getAvailableCities();
+const procedures = getAvailableProcedures();
+
+// Schema markup
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Surgeon Comparison Tool",
+  "description": "Interactive tool to compare bariatric surgeons side-by-side",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "AUD"
+  },
+  "url": pageUrl
+};
+
+// Get comparison summary if surgeons are selected
+let comparisonSummary = null;
+if (selectedSurgeons.length >= 2) {
+  const validation = validateSurgeonsForComparison(selectedSurgeons);
+  if (validation.valid) {
+    comparisonSummary = getComparisonSummary(selectedSurgeons);
+  }
+}
+---
+
+<BaseLayout
+  title={meta.title}
+  description={meta.description}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-12 md:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          Compare Weight Loss Surgeons Side-by-Side
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
+          Make an informed decision by comparing qualifications, experience, procedures, pricing, hospital affiliations, and more.
+        </p>
+        
+        <!-- Trust Signals -->
+        <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-600 mb-8">
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="font-medium">Evidence-Based</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+            </svg>
+            <span class="font-medium">AHPRA-Compliant</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+            </svg>
+            <span class="font-medium">Free Tool</span>
+          </div>
+        </div>
+
+        <!-- Medical Disclaimer -->
+        <div class="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-4 mb-8 max-w-3xl mx-auto">
+          <p class="text-sm text-gray-700">
+            <strong>Medical Disclaimer:</strong> This comparison tool is for educational purposes only and is not a replacement for professional medical advice. Only a qualified, AHPRA-registered bariatric surgeon can determine if weight loss surgery is appropriate for you and recommend a specific procedure based on your individual medical assessment.
+          </p>
+        </div>
+      </div>
+
+      <!-- Surgeon Selection Interface -->
+      <div class="bg-white rounded-2xl shadow-xl p-4 md:p-6 lg:p-8 mb-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Select Surgeons to Compare</h2>
+        
+        <!-- Selected Surgeons Preview -->
+        {selectedSurgeons.length > 0 && (
+          <div class="mb-8 p-4 bg-blue-50 rounded-lg border-2 border-blue-200">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="font-bold text-gray-900">
+                Selected for Comparison ({selectedSurgeons.length}/3)
+              </h3>
+              {selectedSurgeons.length >= 2 && (
+                <a 
+                  href="#comparison-results" 
+                  class="text-blue-600 hover:text-blue-800 font-semibold text-sm"
+                >
+                  View Comparison ↓
+                </a>
+              )}
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {selectedSurgeons.map((surgeon) => (
+                <div class="bg-white rounded-lg p-4 border-2 border-blue-400 shadow-sm">
+                  <div class="flex justify-between items-start mb-2">
+                    <div class="flex-1 min-w-0">
+                      <h3 class="font-bold text-gray-900 truncate">{getDisplayName(surgeon)}</h3>
+                      <p class="text-sm text-gray-600">{surgeon.city}, {surgeon.state}</p>
+                    </div>
+                    <button 
+                      class="text-red-500 hover:text-red-700 flex-shrink-0 ml-2 p-1"
+                      onclick={`removeSurgeon('${surgeon.slug}')`}
+                      aria-label={`Remove ${getDisplayName(surgeon)} from comparison`}
+                    >
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                      </svg>
+                    </button>
+                  </div>
+                  {surgeon.rating > 0 && (
+                    <p class="text-sm text-gray-600">⭐ {surgeon.rating.toFixed(1)} ({surgeon.review_count} reviews)</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Quick Filters -->
+        <div class="mb-6">
+          <div class="flex flex-wrap gap-3 mb-4">
+            <button 
+              id="filter-all"
+              class="filter-btn active px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold text-sm transition"
+              onclick="filterSurgeons('all')"
+            >
+              All Surgeons
+            </button>
+            <button 
+              id="filter-sydney"
+              class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm transition hover:bg-gray-300"
+              onclick="filterSurgeons('sydney')"
+            >
+              Sydney
+            </button>
+            <button 
+              id="filter-melbourne"
+              class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm transition hover:bg-gray-300"
+              onclick="filterSurgeons('melbourne')"
+            >
+              Melbourne
+            </button>
+            <button 
+              id="filter-top-rated"
+              class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg font-semibold text-sm transition hover:bg-gray-300"
+              onclick="filterSurgeons('top-rated')"
+            >
+              Top Rated (4.5+)
+            </button>
+          </div>
+
+          <!-- Search Bar (Secondary) -->
+          <div class="mb-4">
+            <input
+              type="text"
+              id="surgeon-search"
+              placeholder="Quick search by name or city..."
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"
+              autocomplete="off"
+              aria-label="Search for surgeons by name"
+            />
+          </div>
+        </div>
+
+        <!-- Surgeon Count Display -->
+        {(() => {
+          const filteredSurgeons = allSurgeons.filter(s => {
+            const name = (s.surgeon_name || s.business_name || '').toLowerCase();
+            return !name.includes('test');
+          });
+          const nswCount = filteredSurgeons.filter(s => s.state === 'NSW').length;
+          const vicCount = filteredSurgeons.filter(s => s.state === 'Victoria').length;
+          return (
+            <div class="mb-4 text-sm text-gray-600">
+              <p class="font-semibold">Showing {filteredSurgeons.length} surgeons total</p>
+              <p class="text-xs mt-1">NSW: {nswCount} surgeons | Victoria: {vicCount} surgeons</p>
+            </div>
+          );
+        })()}
+
+        <!-- Surgeon Cards Grid -->
+        <div id="surgeons-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {allSurgeons
+            .filter(s => {
+              // Filter out test surgeons only
+              const name = (s.surgeon_name || s.business_name || '').toLowerCase();
+              return !name.includes('test');
+            })
+            .sort((a, b) => {
+              // Sort by rating first (highest first), then by review count, then by experience
+              if (b.rating !== a.rating) return b.rating - a.rating;
+              if (b.review_count !== a.review_count) return b.review_count - a.review_count;
+              return b.years_experience - a.years_experience;
+            })
+            .map((surgeon) => {
+              const isSelected = selectedSurgeons.some(s => s.slug === surgeon.slug);
+              return (
+                <div 
+                  class={`surgeon-card bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all border-2 ${isSelected ? 'border-green-500 ring-2 ring-green-200' : 'border-gray-200'}`}
+                  data-surgeon-slug={surgeon.slug}
+                  data-city={surgeon.city?.toLowerCase() || ''}
+                  data-state={surgeon.state?.toLowerCase() || ''}
+                  data-rating={surgeon.rating}
+                >
+                  <div class="relative">
+                    {surgeon.surgeon_photo ? (
+                      <img 
+                        src={surgeon.surgeon_photo} 
+                        alt={getDisplayName(surgeon)}
+                        class="w-full h-48 object-cover"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div class="w-full h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center">
+                        <svg class="w-20 h-20 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                      </div>
+                    )}
+                    {isSelected && (
+                      <div class="absolute top-2 right-2 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Selected
+                      </div>
+                    )}
+                    {surgeon.rating >= 4.5 && (
+                      <div class="absolute top-2 left-2 bg-yellow-400 text-gray-900 px-2 py-1 rounded text-xs font-bold">
+                        ⭐ Top Rated
+                      </div>
+                    )}
+                    {/* Patient-Centered Badges */}
+                    {(() => {
+                      const categories = categorizeSurgeon(surgeon);
+                      if (categories.includes('Comprehensive Support')) {
+                        return (
+                          <div class="absolute bottom-2 left-2 bg-green-600 text-white px-2 py-1 rounded text-xs font-bold">🏥 Full Team</div>
+                        );
+                      }
+                      if (categories.includes('Long-Term Follow-Up')) {
+                        return (
+                          <div class="absolute bottom-2 left-2 bg-purple-600 text-white px-2 py-1 rounded text-xs font-bold">📅 Long-Term Care</div>
+                        );
+                      }
+                      if (categories.includes('Free Consultation')) {
+                        return (
+                          <div class="absolute bottom-2 left-2 bg-blue-600 text-white px-2 py-1 rounded text-xs font-bold">💰 Free Consult</div>
+                        );
+                      }
+                      if (categories.includes('Telehealth Available')) {
+                        return (
+                          <div class="absolute bottom-2 left-2 bg-teal-600 text-white px-2 py-1 rounded text-xs font-bold">💻 Telehealth</div>
+                        );
+                      }
+                      return null;
+                    })()}
+                  </div>
+                  
+                  <div class="p-5">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">{getDisplayName(surgeon)}</h3>
+                    
+                    <div class="flex items-center gap-4 text-sm text-gray-600 mb-3">
+                      {surgeon.rating > 0 && (
+                        <span class="flex items-center gap-1">
+                          <span class="text-yellow-500">⭐</span>
+                          <span class="font-semibold">{surgeon.rating.toFixed(1)}</span>
+                          <span>({surgeon.review_count})</span>
+                        </span>
+                      )}
+                      <span>{surgeon.years_experience}+ years</span>
+                    </div>
+                    
+                    <p class="text-sm text-gray-600 mb-3 flex items-center gap-1">
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                      </svg>
+                      {surgeon.city}, {surgeon.state}
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-3">
+                      {getProcedureList(surgeon.procedures).slice(0, 2).map(proc => (
+                        <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">
+                          {proc.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* Patient-Centered Highlights */}
+                    <div class="mb-4 space-y-1">
+                      {surgeon.enhanced_data?.team?.has_dietitian && surgeon.enhanced_data?.team?.has_psychologist && (
+                        <p class="text-xs text-green-700">✓ Dietitian & Psychologist on team</p>
+                      )}
+                      {surgeon.enhanced_data?.team?.has_dietitian && !surgeon.enhanced_data?.team?.has_psychologist && (
+                        <p class="text-xs text-green-700">✓ Dietitian support</p>
+                      )}
+                      {surgeon.enhanced_data?.services?.post_op_program && (
+                        <p class="text-xs text-blue-700">✓ Post-op support program</p>
+                      )}
+                      {surgeon.enhanced_data?.services?.telehealth && (
+                        <p class="text-xs text-teal-700">✓ Telehealth available</p>
+                      )}
+                      {surgeon.enhanced_data?.pricing?.consultation && surgeon.enhanced_data.pricing.consultation.toLowerCase().includes('free') && (
+                        <p class="text-xs text-purple-700">✓ Free consultation</p>
+                      )}
+                    </div>
+
+                    <div class="flex gap-2">
+                      {!isSelected ? (
+                        <button
+                          onclick={`addSurgeon('${surgeon.slug}')`}
+                          class="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold text-sm transition"
+                          disabled={selectedSurgeons.length >= 3}
+                        >
+                          {selectedSurgeons.length >= 3 ? 'Max 3 Selected' : '+ Add to Compare'}
+                        </button>
+                      ) : (
+                        <button
+                          onclick={`removeSurgeon('${surgeon.slug}')`}
+                          class="flex-1 bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg font-semibold text-sm transition"
+                        >
+                          Remove
+                        </button>
+                      )}
+                      <a
+                        href={`/surgeons/${surgeon.city.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/${surgeon.slug}`}
+                        class="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg font-semibold text-sm transition"
+                      >
+                        View
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
+
+        <p class="text-sm text-gray-500 mt-6 text-center">
+          <strong>Tip:</strong> Click "Add to Compare" on any surgeon card above. You can compare 2-3 surgeons at once.
+        </p>
+      </div>
+
+      <!-- Comparison Table (shown when 2+ surgeons selected) -->
+      {selectedSurgeons.length >= 2 && (
+        <div id="comparison-results" class="bg-white rounded-2xl shadow-xl p-4 md:p-6 lg:p-8 mb-8 scroll-mt-8">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4 sm:mb-0">Comparison Results</h2>
+            <div class="flex flex-wrap gap-3">
+              <button
+                id="btn-share"
+                class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition"
+              >
+                🔗 Share Comparison
+              </button>
+              <button
+                id="btn-print"
+                class="px-4 py-2 bg-white hover:bg-gray-50 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold transition"
+              >
+                🖨️ Print/PDF
+              </button>
+              <button
+                onclick="clearComparison()"
+                class="px-4 py-2 bg-white hover:bg-gray-50 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold transition"
+              >
+                Clear
+              </button>
+            </div>
+          </div>
+
+          {comparisonSummary && (
+            <div class="bg-blue-50 rounded-lg p-4 mb-6">
+              <h3 class="font-bold text-gray-900 mb-2">Quick Summary</h3>
+              <div class="grid md:grid-cols-3 gap-4 text-sm">
+                <div>
+                  <span class="font-medium">Average Rating:</span> ⭐ {comparisonSummary.avgRating.toFixed(1)}
+                </div>
+                <div>
+                  <span class="font-medium">Average Experience:</span> {comparisonSummary.avgExperience.toFixed(1)} years
+                </div>
+                <div>
+                  <span class="font-medium">Average Reviews:</span> {comparisonSummary.avgReviews}
+                </div>
+              </div>
+            </div>
+          )}
+
+          <ComparisonTable surgeons={selectedSurgeons} highlightDifferences={true} />
+
+          <!-- Book Consultations -->
+          <div class="mt-8 pt-8 border-t border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Ready to Book a Consultation?</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {selectedSurgeons.map((surgeon) => (
+                <a
+                  href={`/surgeons/${surgeon.city.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/${surgeon.slug}`}
+                  class="block p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition text-center"
+                  aria-label={`View profile and book consultation with ${getDisplayName(surgeon)}`}
+                >
+                  <div class="font-semibold text-gray-900 break-words">{getDisplayName(surgeon)}</div>
+                  <div class="text-sm text-gray-600 mt-1">View Profile & Book</div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      <!-- Educational Content -->
+      <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">How to Use This Tool</h2>
+        
+        <div class="prose max-w-none">
+          <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Step 1: Select Surgeons</h3>
+          <p class="text-gray-700 mb-4">
+            Use the search bar above to find surgeons by name, or filter by city or procedure. Click on a surgeon from the results to add them to your comparison. You can compare 2-3 surgeons at once.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Step 2: Review the Comparison</h3>
+          <p class="text-gray-700 mb-4">
+            Once you've selected 2 or more surgeons, a detailed comparison table will appear showing their qualifications, experience, procedures, locations, pricing, and more. Rows highlighted in yellow indicate differences between surgeons.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Step 3: What to Look For</h3>
+          
+          <div class="bg-blue-50 rounded-lg p-6 mb-4">
+            <h4 class="font-bold text-gray-900 mb-3">What Matters Most to Patients:</h4>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="font-semibold text-gray-900 mb-2">🏥 Support Team</p>
+                <p class="text-gray-700">Look for surgeons with dietitians, psychologists, and nurses. This comprehensive support significantly improves outcomes.</p>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 mb-2">📅 Long-Term Follow-Up</p>
+                <p class="text-gray-700">Weight loss surgery is a lifelong journey. Surgeons who offer ongoing follow-up care help ensure long-term success.</p>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 mb-2">💰 Transparent Pricing</p>
+                <p class="text-gray-700">Surgeons who provide clear pricing upfront help you plan financially and avoid surprises.</p>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-900 mb-2">💬 Communication Style</p>
+                <p class="text-gray-700">During consultations, assess if the surgeon explains things clearly and makes you feel comfortable.</p>
+              </div>
+            </div>
+          </div>
+
+          <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+            <li><strong>Qualifications:</strong> Look for FRACS (Fellow of the Royal Australasian College of Surgeons) and ANZMOSS membership</li>
+            <li><strong>Experience:</strong> Consider years of experience and number of procedures performed</li>
+            <li><strong>Procedures Offered:</strong> Ensure the surgeon offers the procedure you're considering</li>
+            <li><strong>Location:</strong> Consider accessibility and travel requirements</li>
+            <li><strong>Team Support:</strong> Look for multidisciplinary teams with dietitians and psychologists</li>
+            <li><strong>Programs:</strong> Check for pre-op and post-op support programs</li>
+            <li><strong>Pricing:</strong> Compare consultation fees and procedure costs (contact for accurate quotes)</li>
+          </ul>
+
+          <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Step 4: Book Consultations</h3>
+          <p class="text-gray-700 mb-4">
+            After comparing, book consultations with surgeons you're interested in. A consultation is an important way to determine which surgeon is right for you. Most surgeons offer free initial consultations.
+          </p>
+
+          <h3 class="text-xl font-bold text-gray-900 mt-6 mb-3">Questions to Ask During Consultation</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2 mb-4">
+            <li>How many procedures of this type have you performed?</li>
+            <li>What are your complication rates?</li>
+            <li>What is your follow-up care program?</li>
+            <li>Do you have a multidisciplinary team?</li>
+            <li>What are the total costs including hospital fees?</li>
+            <li>What is the expected recovery timeline?</li>
+            <li>What are the potential risks and complications?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Surgeon data for client-side search
+  let allSurgeonsData: any[] = [];
+  
+  // Helper function
+  function getDisplayName(surgeon: any): string {
+    return surgeon.surgeon_name || surgeon.business_name || 'Unknown Surgeon';
+  }
+  
+  // State management
+  const state = {
+    selectedSurgeons: JSON.parse(localStorage.getItem('surgeon-comparison') || '[]'),
+    get allSurgeons() { return allSurgeonsData; },
+    set allSurgeons(value) { allSurgeonsData = value; },
+  };
+  
+  // Make state globally accessible
+  (window as any).state = state;
+  
+  // Function definitions (must be outside DOMContentLoaded for onclick handlers)
+  function filterSurgeons(filter: string) {
+    // Update active button
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.classList.remove('active', 'bg-blue-600', 'text-white');
+      btn.classList.add('bg-gray-200', 'text-gray-700');
+    });
+    
+    const btn = document.getElementById(`filter-${filter}`);
+    if (btn) {
+      btn.classList.add('active', 'bg-blue-600', 'text-white');
+      btn.classList.remove('bg-gray-200', 'text-gray-700');
+    }
+    
+    const searchInput = document.getElementById('surgeon-search') as HTMLInputElement;
+    filterSurgeonCards(searchInput?.value || '');
+  }
+
+  function filterSurgeonCards(query: string = '') {
+    const cards = document.querySelectorAll('.surgeon-card');
+    const activeFilter = document.querySelector('.filter-btn.active')?.id || 'filter-all';
+    
+    cards.forEach((card: Element) => {
+      const cardElement = card as HTMLElement;
+      const slug = cardElement.dataset.surgeonSlug || '';
+      const city = cardElement.dataset.city || '';
+      const name = cardElement.querySelector('h3')?.textContent?.toLowerCase() || '';
+      
+      let matchesFilter = true;
+      let matchesSearch = true;
+      
+      // Apply filter
+      const cardState = (cardElement.dataset.state || '').toLowerCase();
+      if (activeFilter === 'filter-sydney') {
+        // Sydney: city contains "sydney" OR state is NSW (covers all NSW suburbs)
+        matchesFilter = city.includes('sydney') || cardState === 'nsw';
+      } else if (activeFilter === 'filter-melbourne') {
+        // Melbourne: city contains "melbourne" OR state is Victoria (covers all VIC suburbs)
+        matchesFilter = city.includes('melbourne') || cardState === 'victoria';
+      } else if (activeFilter === 'filter-top-rated') {
+        const rating = parseFloat(cardElement.dataset.rating || '0');
+        matchesFilter = rating >= 4.5;
+      }
+      
+      // Apply search
+      if (query.length > 0) {
+        matchesSearch = name.includes(query) || city.includes(query) || slug.includes(query);
+      }
+      
+      if (matchesFilter && matchesSearch) {
+        cardElement.style.display = 'block';
+      } else {
+        cardElement.style.display = 'none';
+      }
+    });
+  }
+
+  function addSurgeon(slug: string) {
+    const surgeon = state.allSurgeons.find((s: any) => s.slug === slug);
+    if (!surgeon) {
+      console.error('Surgeon not found:', slug);
+      return;
+    }
+
+    let comparison = [...state.selectedSurgeons];
+    
+    if (comparison.includes(slug)) {
+      alert('This surgeon is already in your comparison');
+      return;
+    }
+
+    if (comparison.length >= 3) {
+      alert('You can compare a maximum of 3 surgeons');
+      return;
+    }
+
+    comparison.push(slug);
+    state.selectedSurgeons = comparison;
+    localStorage.setItem('surgeon-comparison', JSON.stringify(comparison));
+    
+    // Update URL
+    updateURL();
+    
+    // Reload page to show comparison
+    window.location.reload();
+  }
+
+  function removeSurgeon(slug: string) {
+    let comparison = state.selectedSurgeons.filter((s: string) => s !== slug);
+    state.selectedSurgeons = comparison;
+    localStorage.setItem('surgeon-comparison', JSON.stringify(comparison));
+    
+    // Update URL
+    updateURL();
+    
+    // Reload page
+    window.location.reload();
+  }
+
+  function clearComparison() {
+    if (confirm('Clear all surgeons from comparison?')) {
+      state.selectedSurgeons = [];
+      localStorage.removeItem('surgeon-comparison');
+      updateURL();
+      window.location.reload();
+    }
+  }
+
+  function updateURL() {
+    const slugs = state.selectedSurgeons.join(',');
+    const newURL = slugs 
+      ? `/surgeons/compare?surgeons=${slugs}`
+      : '/surgeons/compare';
+    window.history.pushState({}, '', newURL);
+  }
+
+  // Make functions global immediately
+  (window as any).addSurgeon = addSurgeon;
+  (window as any).removeSurgeon = removeSurgeon;
+  (window as any).clearComparison = clearComparison;
+  (window as any).filterSurgeons = filterSurgeons;
+
+  // Initialize
+  document.addEventListener('DOMContentLoaded', () => {
+    // Load surgeon data
+    const surgeonsDataScript = document.getElementById('surgeons-data') as HTMLScriptElement;
+    if (surgeonsDataScript) {
+      allSurgeonsData = JSON.parse(surgeonsDataScript.textContent || '[]');
+    }
+    
+    setupSearch();
+    setupFilters();
+    loadSurgeonsFromURL();
+    setupActionButtons();
+  });
+
+  function setupSearch() {
+    const searchInput = document.getElementById('surgeon-search');
+    const surgeonsGrid = document.getElementById('surgeons-grid');
+    
+    if (!searchInput || !surgeonsGrid) return;
+
+    searchInput.addEventListener('input', (e) => {
+      const query = (e.target as HTMLInputElement).value.toLowerCase().trim();
+      filterSurgeonCards(query);
+    });
+  }
+
+  function setupFilters() {
+    // Filter buttons are handled by filterSurgeons function
+  }
+
+  function loadSurgeonsFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const slugs = urlParams.get('surgeons')?.split(',').filter(Boolean) || [];
+    
+    if (slugs.length > 0 && state.allSurgeons.length > 0) {
+      slugs.forEach(slug => {
+        const surgeon = state.allSurgeons.find((s: any) => s.slug === slug.trim());
+        if (surgeon && !state.selectedSurgeons.includes(slug.trim())) {
+          state.selectedSurgeons.push(slug.trim());
+          localStorage.setItem('surgeon-comparison', JSON.stringify(state.selectedSurgeons));
+        }
+      });
+    }
+  }
+
+  function setupActionButtons() {
+    // Share button
+    document.getElementById('btn-share')?.addEventListener('click', async () => {
+      const url = window.location.href;
+      try {
+        await navigator.clipboard.writeText(url);
+        alert('Comparison link copied to clipboard!');
+      } catch (err) {
+        prompt('Copy this link:', url);
+      }
+    });
+
+    // Print button
+    document.getElementById('btn-print')?.addEventListener('click', () => {
+      window.print();
+    });
+  }
+
+  // Functions are made global in DOMContentLoaded to ensure they're available
+</script>
+
+<script define:vars={{ allSurgeons }}>
+  // Pass surgeon data to client-side script
+  document.addEventListener('DOMContentLoaded', () => {
+    const existingScript = document.getElementById('surgeons-data');
+    if (existingScript) {
+      existingScript.remove();
+    }
+    const script = document.createElement('script');
+    script.id = 'surgeons-data';
+    script.type = 'application/json';
+    script.textContent = JSON.stringify(allSurgeons);
+    document.head.appendChild(script);
+    
+    // Update state with actual surgeon data
+    if (typeof (window as any).state !== 'undefined') {
+      (window as any).state.allSurgeons = allSurgeons;
+    }
+  });
+</script>
+
+<style>
+  @media print {
+    .no-print {
+      display: none !important;
+    }
+    
+    body {
+      background: white;
+    }
+    
+    .bg-gradient-to-br,
+    .bg-blue-50,
+    .bg-amber-50 {
+      background: white !important;
+    }
+  }
+</style>
+

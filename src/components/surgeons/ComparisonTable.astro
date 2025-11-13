@@ -1,0 +1,144 @@
+---
+/**
+ * Comparison Table Component
+ * 
+ * Displays a side-by-side comparison of 2-3 surgeons with expandable categories
+ * and visual indicators for differences.
+ */
+
+import type { Surgeon } from '../../data/surgeons';
+import { 
+  getComparisonCategories, 
+  getAllComparisonValues,
+  type ComparisonValue 
+} from '../../data/surgeon-comparison-data';
+import { getDisplayName } from '../../data/surgeons';
+
+interface Props {
+  surgeons: Surgeon[];
+  highlightDifferences?: boolean;
+}
+
+const { surgeons, highlightDifferences = true } = Astro.props;
+
+if (!surgeons || surgeons.length < 2) {
+  return null;
+}
+
+const categories = getComparisonCategories();
+const allComparisons = getAllComparisonValues(surgeons);
+---
+
+<div class="comparison-table-container">
+  <!-- Comparison Table -->
+  <div class="overflow-x-auto -mx-4 sm:mx-0">
+    <div class="inline-block min-w-full align-middle">
+      <table class="w-full border-collapse bg-white rounded-lg shadow-lg">
+        <!-- Header Row -->
+        <thead class="bg-gray-50 sticky top-0 z-10">
+          <tr>
+            <th class="px-3 py-3 sm:px-4 sm:py-4 text-left font-bold text-gray-900 border-b-2 border-gray-200 min-w-[150px] sm:min-w-[200px]">
+              <span class="text-sm sm:text-base">Comparison Criteria</span>
+            </th>
+            {surgeons.map((surgeon) => (
+              <th class="px-3 py-3 sm:px-4 sm:py-4 text-center font-bold text-gray-900 border-b-2 border-gray-200 min-w-[200px] sm:min-w-[250px]">
+                <div class="flex flex-col items-center">
+                  <div class="font-semibold text-base sm:text-lg mb-1 break-words">
+                    {getDisplayName(surgeon)}
+                  </div>
+                  {surgeon.city && (
+                    <div class="text-xs sm:text-sm text-gray-600 font-normal">
+                      {surgeon.city}, {surgeon.state}
+                    </div>
+                  )}
+                  {surgeon.rating > 0 && (
+                    <div class="text-xs sm:text-sm text-gray-600 font-normal mt-1">
+                      ⭐ {surgeon.rating.toFixed(1)} ({surgeon.review_count} reviews)
+                    </div>
+                  )}
+                </div>
+              </th>
+            ))}
+          </tr>
+        </thead>
+      
+      <!-- Body -->
+      <tbody>
+        {categories.map((category) => {
+          const categoryComparisons = allComparisons.filter(
+            c => c.field.category === category.title
+          );
+          
+          if (categoryComparisons.length === 0) return null;
+          
+          return (
+            <>
+              {/* Category Header */}
+              <tr class="bg-blue-50 border-t-2 border-gray-200">
+                <td 
+                  colspan={surgeons.length + 1}
+                  class="px-3 py-2 sm:px-4 sm:py-3 font-bold text-gray-900"
+                >
+                  <div class="flex items-center gap-2">
+                    {category.icon && <span class="text-lg sm:text-xl">{category.icon}</span>}
+                    <span class="text-sm sm:text-base">{category.title}</span>
+                  </div>
+                </td>
+              </tr>
+              
+              {/* Category Fields */}
+              {categoryComparisons.map((comparison) => {
+                const hasDiff = highlightDifferences && comparison.hasDifferences;
+                
+                return (
+                  <tr class={`border-b border-gray-100 hover:bg-gray-50 transition ${hasDiff ? 'bg-yellow-50' : ''}`}>
+                    <td class="px-3 py-2 sm:px-4 sm:py-3 font-medium text-gray-700 align-top text-sm sm:text-base">
+                      {comparison.field.label}
+                    </td>
+                    {comparison.values.map((item) => (
+                      <td class={`px-3 py-2 sm:px-4 sm:py-3 text-gray-700 align-top text-sm sm:text-base ${hasDiff ? 'font-semibold' : ''}`}>
+                        <div class="whitespace-normal break-words">
+                          {item.formatted}
+                        </div>
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+            </>
+          );
+        })}
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Differences Indicator -->
+  {highlightDifferences && (
+    <div class="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+      <p class="text-sm text-gray-700">
+        <strong>Note:</strong> Rows highlighted in yellow indicate differences between the surgeons.
+      </p>
+    </div>
+  )}
+</div>
+
+<style>
+  @media print {
+    .comparison-table-container {
+      page-break-inside: avoid;
+    }
+    
+    thead {
+      display: table-header-group;
+    }
+    
+    tbody {
+      display: table-row-group;
+    }
+    
+    tr {
+      page-break-inside: avoid;
+    }
+  }
+</style>
+

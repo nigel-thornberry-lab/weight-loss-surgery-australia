@@ -1,0 +1,225 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAllSurgeons } from '../data/surgeons';
+import { matchQuestions, getMatchedSurgeons, categorizeSurgeon, type PatientProfile } from '../data/surgeon-match-data';
+import { getDisplayName } from '../data/surgeons';
+
+const meta = {
+  title: 'Find Your Perfect Bariatric Surgeon Match | Weight Loss Surgery Australia',
+  description: 'Answer a few questions to find bariatric surgeons in Australia that match your priorities, needs, and preferences. Get personalized recommendations based on support needs, location, budget, and more.',
+  canonicalUrl: 'https://bariatricsurgeryhub.com/surgeon-match',
+};
+
+const allSurgeons = getAllSurgeons();
+---
+
+<BaseLayout 
+  title={meta.title}
+  description={meta.description}
+  canonicalUrl={meta.canonicalUrl}
+>
+  <main class="min-h-screen bg-gray-50 py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Hero Section -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Find Your Perfect Surgeon Match
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Answer a few questions about your priorities and needs, and we'll match you with surgeons who are the best fit for you.
+        </p>
+        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-4 max-w-2xl mx-auto">
+          <p class="text-sm text-gray-700">
+            <strong>How it works:</strong> We'll ask about your support needs, location preferences, budget, and medical situation. Based on your answers, we'll show you surgeons who match your priorities.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quiz Container -->
+      <div id="match-quiz" class="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+        <div id="quiz-progress" class="mb-6">
+          <div class="flex justify-between text-sm text-gray-600 mb-2">
+            <span>Question <span id="current-question">1</span> of <span id="total-questions">{matchQuestions.length}</span></span>
+            <span id="progress-percent">0%</span>
+          </div>
+          <div class="w-full bg-gray-200 rounded-full h-2">
+            <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <div id="quiz-questions">
+          {matchQuestions.map((question, index) => (
+            <div 
+              class={`question-step ${index === 0 ? 'active' : 'hidden'}`}
+              data-question-id={question.id}
+            >
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">{question.question}</h2>
+              <div class="space-y-3">
+                {question.options.map((option) => (
+                  <label class="block p-4 border-2 border-gray-200 rounded-lg cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-all">
+                    <input
+                      type={question.type === 'multiple' ? 'checkbox' : 'radio'}
+                      name={question.id}
+                      value={option.id}
+                      class="mr-3"
+                      data-question-id={question.id}
+                    />
+                    <span class="text-gray-700">{option.label}</span>
+                  </label>
+                ))}
+              </div>
+              <div class="mt-6 flex justify-between">
+                {index > 0 && (
+                  <button
+                    onclick="previousQuestion()"
+                    class="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg font-semibold transition"
+                  >
+                    ← Previous
+                  </button>
+                )}
+                <div class="flex-1"></div>
+                <button
+                  onclick="nextQuestion()"
+                  class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition"
+                  disabled={index === 0}
+                >
+                  {index === matchQuestions.length - 1 ? 'See My Matches →' : 'Next →'}
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Results Container (Hidden Initially) -->
+      <div id="match-results" class="hidden">
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Your Surgeon Matches</h2>
+          <p class="text-gray-600 mb-8">
+            Based on your answers, here are surgeons who best match your priorities and needs. Click "Compare" to see side-by-side comparisons.
+          </p>
+          
+          <div id="matches-list" class="space-y-6">
+            <!-- Matches will be inserted here -->
+          </div>
+
+          <div class="mt-8 pt-8 border-t border-gray-200">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Next Steps</h3>
+            <ol class="list-decimal list-inside space-y-2 text-gray-700">
+              <li>Review your matches and read their full profiles</li>
+              <li>Use the comparison tool to compare 2-3 surgeons side-by-side</li>
+              <li>Book consultations with surgeons you're interested in</li>
+              <li>Ask questions about their approach, support programs, and pricing</li>
+              <li>Choose the surgeon who feels like the best fit for you</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <!-- Medical Disclaimer -->
+      <div class="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-4 max-w-3xl mx-auto">
+        <p class="text-sm text-gray-700">
+          <strong>Medical Disclaimer:</strong> This matching tool is for educational purposes only and is not a replacement for professional medical advice. Only a qualified, AHPRA-registered bariatric surgeon can determine if weight loss surgery is appropriate for you and recommend a specific procedure based on your individual medical assessment.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <script is:inline>
+    let currentQuestionIndex = 0;
+    const answers = {};
+
+    function updateProgress() {
+      const progress = ((currentQuestionIndex + 1) / {matchQuestions.length}) * 100;
+      const progressBar = document.getElementById('progress-bar');
+      const currentQ = document.getElementById('current-question');
+      const progressPercent = document.getElementById('progress-percent');
+
+      if (progressBar) progressBar.style.width = progress + '%';
+      if (currentQ) currentQ.textContent = String(currentQuestionIndex + 1);
+      if (progressPercent) progressPercent.textContent = Math.round(progress) + '%';
+    }
+
+    function showQuestion(index) {
+      document.querySelectorAll('.question-step').forEach((step, i) => {
+        if (i === index) {
+          step.classList.remove('hidden');
+          step.classList.add('active');
+        } else {
+          step.classList.add('hidden');
+          step.classList.remove('active');
+        }
+      });
+      updateProgress();
+    }
+
+    function nextQuestion() {
+      const currentQuestion = document.querySelector('.question-step.active');
+      const questionId = currentQuestion?.getAttribute('data-question-id');
+      const checked = currentQuestion?.querySelectorAll('input:checked');
+
+      if (checked && checked.length > 0) {
+        answers[questionId] = Array.from(checked).map(el => el.value);
+      }
+
+      if (currentQuestionIndex < {matchQuestions.length} - 1) {
+        currentQuestionIndex++;
+        showQuestion(currentQuestionIndex);
+      } else {
+        showResults();
+      }
+    }
+
+    function previousQuestion() {
+      if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        showQuestion(currentQuestionIndex);
+      }
+    }
+
+    function showResults() {
+      const matchQuiz = document.getElementById('match-quiz');
+      const matchResults = document.getElementById('match-results');
+      const matchesList = document.getElementById('matches-list');
+
+      if (matchQuiz) matchQuiz.classList.add('hidden');
+      if (matchResults) matchResults.classList.remove('hidden');
+
+      if (matchesList) {
+        matchesList.innerHTML = `
+          <div class="bg-blue-50 rounded-lg p-6 text-center">
+            <p class="text-gray-700 mb-4">
+              Based on your preferences, we recommend using our comparison tool to find surgeons that match your needs.
+            </p>
+            <a
+              href="/surgeons/compare"
+              class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition"
+            >
+              Compare Surgeons →
+            </a>
+          </div>
+        `;
+      }
+    }
+
+    // Make functions global for onclick handlers
+    window.nextQuestion = nextQuestion;
+    window.previousQuestion = previousQuestion;
+
+    // Initialize event listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => {
+        input.addEventListener('change', () => {
+          const currentQuestion = document.querySelector('.question-step.active');
+          const checked = currentQuestion?.querySelectorAll('input:checked');
+          const nextBtn = currentQuestion?.querySelector('button[onclick="nextQuestion()"]');
+
+          if (nextBtn) {
+            nextBtn.disabled = !checked || checked.length === 0;
+          }
+        });
+      });
+    });
+  </script>
+</BaseLayout>
+
