@@ -1,0 +1,1263 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import AuthorityCitations from '../components/AuthorityCitations.astro';
+import RegistryStats from '../components/RegistryStats.astro';
+import ClinicalGuidelines from '../components/ClinicalGuidelines.astro';
+import SurgeonCTA from '../components/SurgeonCTA.astro';
+import ContentFreshness from '../components/ContentFreshness.astro';
+
+const meta = {
+  title: 'Which Weight Loss Surgery Is Right for Me? Complete 2025 Guide',
+  description: 'Take our free quiz to find your ideal procedure. Compare gastric sleeve, bypass, band & more. Expert guidance, costs, recovery times & outcomes.',
+  keywords: ['which weight loss surgery is right for me', 'weight loss surgery quiz', 'which bariatric surgery is best for me', 'am I a candidate for weight loss surgery']
+};
+
+const pageUrl = "https://weightlosssurgery.com.au/which-weight-loss-surgery-is-right-for-me";
+
+// Schema markup
+const schemaMarkup = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": `${pageUrl}#article`,
+      "headline": meta.title,
+      "description": meta.description,
+      "author": {
+        "@type": "Organization",
+        "name": "Weight Loss Surgery Australia"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Weight Loss Surgery Australia"
+      },
+      "datePublished": "2025-01-15",
+      "dateModified": "2025-01-15",
+      "inLanguage": "en-AU"
+    },
+    {
+      "@type": "MedicalWebPage",
+      "@id": `${pageUrl}#webpage`,
+      "url": pageUrl,
+      "name": meta.title,
+      "description": meta.description,
+      "specialty": {
+        "@type": "MedicalSpecialty",
+        "name": "Bariatric Surgery"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "name": "Procedure Selector Quiz",
+      "url": "https://weightlosssurgery.com.au/procedure-selector-quiz",
+      "applicationCategory": "HealthApplication"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://weightlosssurgery.com.au"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Which Weight Loss Surgery Is Right for Me?",
+          "item": pageUrl
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know which procedure is right for me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best procedure depends on multiple factors: your BMI, existing health conditions (especially diabetes or reflux), weight loss goals, recovery time availability, budget, and personal preferences. Take our free quiz to get personalized recommendations, then discuss your results with a qualified bariatric surgeon during consultation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is gastric sleeve or bypass better?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Neither is universally better—each has advantages. Gastric sleeve: simpler surgery, faster recovery, good for BMI 35-45, may worsen reflux. Gastric bypass: higher weight loss, best for diabetes (80-90% remission), improves reflux, longer recovery. If you have type 2 diabetes or significant reflux, bypass is typically recommended."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I have type 2 diabetes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gastric bypass is considered the gold standard for type 2 diabetes, with 80-90% remission rates. Duodenal switch also has excellent diabetes outcomes (85-90% remission). Gastric sleeve helps too (60-70% remission) but bypass is typically preferred for diabetes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I have reflux/GORD. Which procedure should I choose?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gastric bypass is typically recommended for reflux. It usually improves or resolves GORD in 90% of cases. In contrast, gastric sleeve may worsen existing reflux in some patients. If you have significant reflux, your surgeon will likely recommend bypass over sleeve."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the difference between gastric sleeve and gastric bypass?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Gastric sleeve removes 80% of stomach, is restrictive only, simpler surgery, 60-70% excess weight loss, faster recovery (6 weeks), may worsen reflux. Gastric bypass creates small pouch and reroutes intestine, is restrictive and malabsorptive, more complex, 70-80% excess weight loss, longer recovery (8-12 weeks), improves reflux, best for diabetes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I have a very high BMI (50+)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For BMI 50+ (super obesity), gastric bypass or duodenal switch are typically recommended because they offer the highest weight loss potential (70-80% excess weight). Duodenal switch has the highest weight loss but is more complex. Bypass is also excellent for super obesity and is more commonly performed."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(schemaMarkup)} />
+
+  <main class="min-h-screen bg-gray-50">
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-50 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <Breadcrumbs items={[
+          { name: "Home", url: "/" },
+          { name: "Which Weight Loss Surgery Is Right for Me?", url: "/which-weight-loss-surgery-is-right-for-me" }
+        ]} />
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-4">
+            Complete Decision Guide 2025
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Which Weight Loss Surgery Is Right for Me?
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Find your ideal procedure in 5 minutes with our evidence-based quiz. Compare gastric sleeve, bypass, band, and more with expert guidance tailored to your situation.
+          </p>
+          
+          <!-- Trust Signals -->
+          <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-600 mb-8">
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="font-medium">Evidence-Based Recommendations</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+              </svg>
+              <span class="font-medium">Free, No Obligation Tool</span>
+            </div>
+            <div class="flex items-center">
+              <svg class="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span class="font-medium">Based on Australian Clinical Guidelines</span>
+            </div>
+          </div>
+
+          <!-- Primary CTA -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a href="/procedure-selector-quiz" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-center text-lg font-semibold shadow-lg">
+              Take Free Procedure Selector Quiz
+            </a>
+            <a href="#understanding-options" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-center text-lg font-semibold">
+              Read Complete Guide
+            </a>
+          </div>
+
+          <!-- Content Freshness -->
+          <ContentFreshness />
+        </div>
+      </div>
+    </section>
+
+    <!-- Understanding Your Options -->
+    <section id="understanding-options" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+            Understanding Your Options
+          </h2>
+          <p class="text-lg text-gray-700 mb-8 text-center">
+            There is no one-size-fits-all solution. The right procedure depends on your BMI, health conditions, weight loss goals, lifestyle, and personal preferences. Here's an overview of the five main bariatric procedures available in Australia.
+          </p>
+
+          <!-- Quick Comparison Table -->
+          <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-12">
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th class="px-6 py-4 text-left font-bold text-gray-900">Procedure</th>
+                    <th class="px-6 py-4 text-left font-bold text-gray-900">Weight Loss</th>
+                    <th class="px-6 py-4 text-left font-bold text-gray-900">Recovery</th>
+                    <th class="px-6 py-4 text-left font-bold text-gray-900">Cost Range</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr>
+                    <td class="px-6 py-4 font-semibold text-gray-900">Gastric Sleeve</td>
+                    <td class="px-6 py-4 text-gray-700">60-70% excess weight</td>
+                    <td class="px-6 py-4 text-gray-700">6 weeks</td>
+                    <td class="px-6 py-4 text-gray-700">$15,000 - $25,000</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="px-6 py-4 font-semibold text-gray-900">Gastric Bypass</td>
+                    <td class="px-6 py-4 text-gray-700">70-80% excess weight</td>
+                    <td class="px-6 py-4 text-gray-700">8-12 weeks</td>
+                    <td class="px-6 py-4 text-gray-700">$18,000 - $30,000</td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 font-semibold text-gray-900">Mini Gastric Bypass</td>
+                    <td class="px-6 py-4 text-gray-700">65-75% excess weight</td>
+                    <td class="px-6 py-4 text-gray-700">6-8 weeks</td>
+                    <td class="px-6 py-4 text-gray-700">$16,000 - $27,000</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="px-6 py-4 font-semibold text-gray-900">Gastric Band</td>
+                    <td class="px-6 py-4 text-gray-700">40-50% excess weight</td>
+                    <td class="px-6 py-4 text-gray-700">1-2 weeks</td>
+                    <td class="px-6 py-4 text-gray-700">$12,000 - $20,000</td>
+                  </tr>
+                  <tr>
+                    <td class="px-6 py-4 font-semibold text-gray-900">Duodenal Switch</td>
+                    <td class="px-6 py-4 text-gray-700">70-80% excess weight</td>
+                    <td class="px-6 py-4 text-gray-700">8+ weeks</td>
+                    <td class="px-6 py-4 text-gray-700">$25,000 - $40,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <p class="text-gray-600 mb-8">
+            <strong>Important:</strong> These are general estimates. Actual outcomes vary based on individual factors including adherence to dietary guidelines, exercise, and lifestyle changes. Final procedure selection must be made in consultation with a qualified, AHPRA-registered bariatric surgeon following a comprehensive medical assessment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Is a Candidate -->
+    <section id="who-is-candidate" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+            Who Is a Candidate for Weight Loss Surgery?
+          </h2>
+          <p class="text-lg text-gray-700 mb-8">
+            Medicare Australia and private health insurers have specific eligibility criteria for bariatric surgery. Understanding these requirements helps you determine if surgery may be an option for you.
+          </p>
+
+          <!-- Medicare Eligibility -->
+          <div class="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-6 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Medicare Eligibility Criteria</h3>
+            <p class="text-gray-700 mb-4">
+              To qualify for Medicare rebates (MBS Items 31569, 31572, 31575, 31581), you must meet one of the following criteria:
+            </p>
+            <ul class="space-y-3 text-gray-700 list-disc list-inside mb-4">
+              <li><strong>BMI 35-39.9</strong> with at least one obesity-related health condition (type 2 diabetes, sleep apnoea, high blood pressure, GORD, PCOS, joint problems, or heart disease)</li>
+              <li><strong>BMI 40 or higher</strong> (with or without health conditions)</li>
+              <li>Previous unsuccessful attempts at non-surgical weight loss (documented)</li>
+              <li>Age 18-65 (exceptions possible with medical justification)</li>
+              <li>Psychological assessment clearance</li>
+              <li>Commitment to lifelong dietary and lifestyle changes</li>
+            </ul>
+            <p class="text-sm text-gray-600">
+              <strong>Note:</strong> These are general criteria. Your surgeon and multidisciplinary team will conduct a comprehensive assessment to determine if surgery is appropriate for your individual situation.
+            </p>
+          </div>
+
+          <!-- Health Conditions That Improve -->
+          <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Health Conditions That Often Improve</h3>
+            <p class="text-gray-700 mb-4">
+              Weight loss surgery can lead to significant improvement or remission of several obesity-related conditions:
+            </p>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <div>
+                    <strong class="text-gray-900">Type 2 Diabetes</strong>
+                    <p class="text-sm text-gray-600">60-90% remission rate depending on procedure</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <div>
+                    <strong class="text-gray-900">Sleep Apnoea</strong>
+                    <p class="text-sm text-gray-600">85% improvement or resolution</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <div>
+                    <strong class="text-gray-900">High Blood Pressure</strong>
+                    <p class="text-sm text-gray-600">60-70% normalization</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <div>
+                    <strong class="text-gray-900">GORD/Reflux</strong>
+                    <p class="text-sm text-gray-600">70-90% improvement (bypass typically better than sleeve)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <div>
+                    <strong class="text-gray-900">PCOS</strong>
+                    <p class="text-sm text-gray-600">Symptom improvement, improved fertility</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <div>
+                    <strong class="text-gray-900">Joint Problems</strong>
+                    <p class="text-sm text-gray-600">80% report reduced pain</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <div>
+                    <strong class="text-gray-900">Heart Disease Risk</strong>
+                    <p class="text-sm text-gray-600">Reduced cardiovascular risk factors</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <span class="text-green-600 mr-2">✓</span>
+                  <div>
+                    <strong class="text-gray-900">Mental Health</strong>
+                    <p class="text-sm text-gray-600">Improved mood, self-esteem, quality of life</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 mt-4">
+              <strong>Important:</strong> Individual results vary. Improvement depends on procedure type, adherence to post-surgical protocols, and individual health factors. These statistics are based on Australian & New Zealand Bariatric Surgery Registry data.
+            </p>
+          </div>
+
+          <!-- Age Considerations -->
+          <div class="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-6 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Age Considerations</h3>
+            <p class="text-gray-700 mb-3">
+              While Medicare typically covers ages 18-65, exceptions may be made:
+            </p>
+            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+              <li><strong>Under 18:</strong> Rarely performed, requires exceptional circumstances and extensive multidisciplinary team assessment</li>
+              <li><strong>Over 65:</strong> Possible if health benefits outweigh risks, assessed on case-by-case basis</li>
+              <li><strong>18-65:</strong> Standard age range for bariatric surgery in Australia</li>
+            </ul>
+          </div>
+
+          <!-- Previous Surgery History -->
+          <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Previous Surgery History</h3>
+            <p class="text-gray-700 mb-4">
+              If you've had previous bariatric surgery, revision procedures may be an option:
+            </p>
+            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+              <li><strong>Gastric Band:</strong> Can be removed and converted to sleeve or bypass</li>
+              <li><strong>Gastric Sleeve:</strong> May be revised to bypass if weight regain or complications occur</li>
+              <li><strong>Previous Stomach Surgery:</strong> May affect procedure options; requires surgeon assessment</li>
+            </ul>
+            <p class="text-sm text-gray-600 mt-4">
+              Revision surgery has different considerations and risks. Your surgeon will assess whether revision is appropriate for your situation.
+            </p>
+          </div>
+
+          <!-- AHPRA Compliance Note -->
+          <div class="bg-gray-100 border border-gray-300 rounded-lg p-4">
+            <p class="text-sm text-gray-700">
+              <strong>Medical Disclaimer:</strong> This information is general in nature and does not constitute medical advice. Suitability and outcomes vary and must be assessed by a qualified health professional. Only an AHPRA-registered bariatric surgeon can determine if you are a suitable candidate for weight loss surgery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Choose: Key Decision Factors -->
+    <section id="decision-factors" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+            How to Choose: Key Decision Factors
+          </h2>
+          <p class="text-lg text-gray-700 mb-8 text-center">
+            Selecting the right procedure involves considering multiple factors. Here are the key elements that influence which surgery may be most suitable for you.
+          </p>
+
+          <!-- Decision Factors Grid -->
+          <div class="space-y-8">
+            <!-- BMI and Excess Weight -->
+            <div class="bg-blue-50 rounded-xl p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">1. BMI and Excess Weight</h3>
+              <p class="text-gray-700 mb-4">
+                Your Body Mass Index (BMI) is a primary factor in procedure selection:
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside mb-4">
+                <li><strong>BMI 30-35:</strong> May be eligible with health conditions. Gastric band or sleeve may be considered.</li>
+                <li><strong>BMI 35-40:</strong> Ideal range for most procedures. Sleeve and bypass are commonly recommended.</li>
+                <li><strong>BMI 40-45:</strong> Excellent candidates. Sleeve, bypass, or mini bypass are strong options.</li>
+                <li><strong>BMI 45-50:</strong> Higher BMI range. Bypass or duodenal switch may offer better outcomes.</li>
+                <li><strong>BMI 50+:</strong> Super obesity. Bypass or duodenal switch typically recommended for maximum weight loss.</li>
+              </ul>
+              <p class="text-sm text-gray-600">
+                <strong>Note:</strong> BMI is one factor among many. Your surgeon will consider your overall health profile.
+              </p>
+            </div>
+
+            <!-- Health Conditions -->
+            <div class="bg-green-50 rounded-xl p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Health Conditions</h3>
+              <p class="text-gray-700 mb-4">
+                Existing health conditions significantly influence procedure choice:
+              </p>
+              <div class="space-y-3">
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-900 mb-2">Type 2 Diabetes</h4>
+                  <p class="text-gray-700 text-sm mb-2">
+                    <strong>Best for:</strong> Gastric bypass (80-90% remission rate) or duodenal switch (85-90% remission)
+                  </p>
+                  <p class="text-gray-600 text-xs">
+                    Bypass has the highest diabetes remission rate due to its effect on gut hormones. Sleeve also helps (60-70% remission) but bypass is considered the gold standard for diabetes.
+                  </p>
+                </div>
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-900 mb-2">GORD/Reflux</h4>
+                  <p class="text-gray-700 text-sm mb-2">
+                    <strong>Best for:</strong> Gastric bypass (typically improves reflux)
+                  </p>
+                  <p class="text-gray-600 text-xs">
+                    <strong>Important:</strong> Gastric sleeve may worsen existing reflux. If you have significant GORD, bypass is usually recommended over sleeve.
+                  </p>
+                </div>
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-900 mb-2">Sleep Apnoea</h4>
+                  <p class="text-gray-700 text-sm">
+                    All procedures help, but bypass and sleeve show the highest improvement rates (85% resolution).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Weight Loss Goals -->
+            <div class="bg-purple-50 rounded-xl p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Weight Loss Goals</h3>
+              <p class="text-gray-700 mb-4">
+                Your target weight loss percentage influences procedure selection:
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                <li><strong>Moderate (40-50% excess weight):</strong> Gastric band may be sufficient</li>
+                <li><strong>Significant (60-70% excess weight):</strong> Gastric sleeve is ideal</li>
+                <li><strong>Maximum (70-80% excess weight):</strong> Gastric bypass or duodenal switch</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-4">
+                <strong>Reality check:</strong> Individual results vary. These are average ranges based on registry data. Your actual weight loss depends on adherence to dietary and lifestyle changes.
+              </p>
+            </div>
+
+            <!-- Lifestyle and Activity Level -->
+            <div class="bg-yellow-50 rounded-xl p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">4. Lifestyle and Activity Level</h3>
+              <p class="text-gray-700 mb-4">
+                Your daily activities and work requirements affect recovery considerations:
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                <li><strong>Desk job:</strong> Can return to work in 2-3 weeks (sleeve) or 3-4 weeks (bypass)</li>
+                <li><strong>Physical work:</strong> May need 4-6 weeks off. Sleeve has faster recovery.</li>
+                <li><strong>Very active lifestyle:</strong> Consider recovery time. Band has shortest recovery (1 week).</li>
+                <li><strong>Travel for surgery:</strong> Factor in recovery away from home. Sleeve or band may be easier.</li>
+              </ul>
+            </div>
+
+            <!-- Recovery Time Preferences -->
+            <div class="bg-indigo-50 rounded-xl p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">5. Recovery Time Tolerance</h3>
+              <p class="text-gray-700 mb-4">
+                How much time can you take off work and daily activities?
+              </p>
+              <div class="space-y-3">
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-900 mb-2">1 week or less</h4>
+                  <p class="text-gray-700 text-sm">Gastric band has the shortest recovery time</p>
+                </div>
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-900 mb-2">2-3 weeks</h4>
+                  <p class="text-gray-700 text-sm">Gastric sleeve typically fits this timeline</p>
+                </div>
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-900 mb-2">4-6 weeks</h4>
+                  <p class="text-gray-700 text-sm">Gastric bypass or mini bypass are options</p>
+                </div>
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-900 mb-2">6+ weeks (flexible)</h4>
+                  <p class="text-gray-700 text-sm">Duodenal switch requires longest recovery but highest weight loss</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Budget and Insurance -->
+            <div class="bg-pink-50 rounded-xl p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">6. Budget and Insurance</h3>
+              <p class="text-gray-700 mb-4">
+                Financial considerations play a role in procedure selection:
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside mb-4">
+                <li><strong>With private health insurance (Gold level):</strong> Out-of-pocket typically $5,000-$12,000 for most procedures</li>
+                <li><strong>Self-funded:</strong> Gastric band ($12,000-$20,000) is most affordable, followed by sleeve ($15,000-$25,000)</li>
+                <li><strong>Payment plans available:</strong> Most surgeons offer interest-free payment plans</li>
+                <li><strong>Superannuation access:</strong> May be possible on compassionate grounds (ATO approval required)</li>
+              </ul>
+              <p class="text-sm text-gray-600">
+                <a href="/cost-calculator" class="text-blue-600 hover:text-blue-700 font-medium">Use our cost calculator →</a> to get personalized estimates based on your situation.
+              </p>
+            </div>
+
+            <!-- Risk Tolerance -->
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">7. Risk Tolerance and Preferences</h3>
+              <p class="text-gray-700 mb-4">
+                Your comfort level with permanent changes affects procedure choice:
+              </p>
+              <div class="space-y-3">
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-900 mb-2">Prefer Reversible Options</h4>
+                  <p class="text-gray-700 text-sm">Gastric band is the only reversible procedure. Can be removed if needed.</p>
+                </div>
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-900 mb-2">Comfortable with Permanent Changes</h4>
+                  <p class="text-gray-700 text-sm">Sleeve, bypass, and duodenal switch are permanent but highly effective.</p>
+                </div>
+                <div class="bg-white rounded-lg p-4">
+                  <h4 class="font-bold text-gray-900 mb-2">Want Most Effective Option</h4>
+                  <p class="text-gray-700 text-sm">Bypass or duodenal switch offer highest weight loss but require lifelong vitamin compliance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-blue-50 border-l-4 border-blue-600 rounded-lg p-6">
+            <p class="text-gray-700">
+              <strong>Remember:</strong> These factors work together. Your surgeon will help you weigh all considerations to find the best fit for your individual situation. There's no single "best" procedure—only the best procedure for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Procedure Comparison Deep Dive -->
+    <section id="procedure-comparison" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+            Procedure Comparison Deep Dive
+          </h2>
+          <p class="text-lg text-gray-700 mb-8 text-center">
+            Detailed information about each procedure to help you understand what makes each one unique.
+          </p>
+
+          <!-- Gastric Sleeve -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900">Gastric Sleeve</h3>
+              <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Gastric sleeve (sleeve gastrectomy) removes approximately 80% of the stomach, creating a banana-shaped sleeve. It's Australia's most commonly performed bariatric procedure.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 mb-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Who It's Best For:</h4>
+                <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>BMI 35-45</li>
+                  <li>First-time bariatric surgery</li>
+                  <li>Want simpler procedure</li>
+                  <li>Faster recovery needed</li>
+                  <li>No significant reflux issues</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Expected Outcomes:</h4>
+                <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>60-70% excess weight loss</li>
+                  <li>Sleep apnoea improvement (85%)</li>
+                  <li>High blood pressure reduction (60%)</li>
+                  <li>Type 2 diabetes remission (60-70%)</li>
+                  <li>Joint pain relief (80%)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-4 mb-4">
+              <h4 class="font-bold text-gray-900 mb-2">Important Considerations:</h4>
+              <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                <li>Permanent - cannot be reversed</li>
+                <li>May worsen existing reflux/GORD</li>
+                <li>Lower weight loss than bypass for very high BMI</li>
+                <li>5-10% may need revision surgery</li>
+              </ul>
+            </div>
+            <a href="/procedures/gastric-sleeve" class="text-blue-600 hover:text-blue-700 font-medium">
+              Learn more about gastric sleeve →
+            </a>
+          </div>
+
+          <!-- Gastric Bypass -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-gray-900">Gastric Bypass</h3>
+              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Gold Standard</span>
+            </div>
+            <p class="text-gray-700 mb-4">
+              Gastric bypass (Roux-en-Y) creates a small stomach pouch and reroutes the small intestine. It's considered the gold standard for diabetes remission and maximum weight loss.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 mb-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Who It's Best For:</h4>
+                <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>Type 2 diabetes</li>
+                  <li>GORD/reflux</li>
+                  <li>BMI 45+</li>
+                  <li>Maximum weight loss goals</li>
+                  <li>Previous sleeve needing revision</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Expected Outcomes:</h4>
+                <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>70-80% excess weight loss</li>
+                  <li>Type 2 diabetes remission (80-90%)</li>
+                  <li>GORD/reflux improvement (90%)</li>
+                  <li>Sleep apnoea resolution (85%)</li>
+                  <li>Lower revision rate (3-5%)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-4 mb-4">
+              <h4 class="font-bold text-gray-900 mb-2">Important Considerations:</h4>
+              <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                <li>More complex surgery</li>
+                <li>Longer recovery (4-6 weeks)</li>
+                <li>Higher risk of nutritional deficiencies</li>
+                <li>Requires lifelong vitamin supplements</li>
+                <li>Dumping syndrome possible</li>
+                <li>More expensive than sleeve</li>
+              </ul>
+            </div>
+            <a href="/procedures/gastric-bypass" class="text-blue-600 hover:text-blue-700 font-medium">
+              Learn more about gastric bypass →
+            </a>
+          </div>
+
+          <!-- Mini Gastric Bypass -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Mini Gastric Bypass</h3>
+            <p class="text-gray-700 mb-4">
+              A simpler version of traditional bypass with a single loop connection instead of the Roux-en-Y configuration.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 mb-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Who It's Best For:</h4>
+                <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>Want bypass benefits with simpler surgery</li>
+                  <li>BMI 40-50</li>
+                  <li>Type 2 diabetes</li>
+                  <li>Faster recovery than bypass preferred</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Expected Outcomes:</h4>
+                <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>65-75% excess weight loss</li>
+                  <li>Type 2 diabetes remission (75-85%)</li>
+                  <li>GORD improvement</li>
+                  <li>Faster recovery than traditional bypass</li>
+                </ul>
+              </div>
+            </div>
+            <a href="/procedures/mini-gastric-bypass" class="text-blue-600 hover:text-blue-700 font-medium">
+              Learn more about mini gastric bypass →
+            </a>
+          </div>
+
+          <!-- Gastric Band -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Gastric Band</h3>
+            <p class="text-gray-700 mb-4">
+              An adjustable silicone band placed around the upper stomach. It's the only reversible bariatric procedure.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 mb-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Who It's Best For:</h4>
+                <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>Want reversible option</li>
+                  <li>Lower BMI (30-40)</li>
+                  <li>Moderate weight loss goals</li>
+                  <li>Very short recovery needed</li>
+                  <li>Budget-conscious</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Expected Outcomes:</h4>
+                <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>40-50% excess weight loss</li>
+                  <li>Sleep apnoea improvement (60%)</li>
+                  <li>Blood pressure reduction (50%)</li>
+                  <li>Shortest recovery (1 week)</li>
+                  <li>Lowest cost</li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-4 mb-4">
+              <h4 class="font-bold text-gray-900 mb-2">Important Considerations:</h4>
+              <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                <li>Lowest weight loss of all procedures</li>
+                <li>Highest revision rate (40-60%)</li>
+                <li>Requires regular adjustments</li>
+                <li>Foreign object in body</li>
+                <li>Less effective than other procedures</li>
+              </ul>
+            </div>
+            <a href="/procedures/gastric-band" class="text-blue-600 hover:text-blue-700 font-medium">
+              Learn more about gastric band →
+            </a>
+          </div>
+
+          <!-- Duodenal Switch -->
+          <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Duodenal Switch</h3>
+            <p class="text-gray-700 mb-4">
+              The most complex procedure combining sleeve gastrectomy with intestinal bypass. Offers the highest weight loss potential.
+            </p>
+            <div class="grid md:grid-cols-2 gap-6 mb-4">
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Who It's Best For:</h4>
+                <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>BMI 50+</li>
+                  <li>Super obesity</li>
+                  <li>Maximum weight loss critical</li>
+                  <li>Can commit to strict vitamin regimen</li>
+                  <li>Flexible recovery time</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2">Expected Outcomes:</h4>
+                <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                  <li>70-80% excess weight loss</li>
+                  <li>Type 2 diabetes remission (85-90%)</li>
+                  <li>Lowest revision rate (2-4%)</li>
+                  <li>Most effective for super obesity</li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg-amber-50 border-l-4 border-amber-500 rounded-lg p-4 mb-4">
+              <h4 class="font-bold text-gray-900 mb-2">Important Considerations:</h4>
+              <ul class="space-y-1 text-gray-700 text-sm list-disc list-inside">
+                <li>Most complex surgery</li>
+                <li>Longest recovery (6+ weeks)</li>
+                <li>Highest risk of nutritional deficiencies</li>
+                <li>Most expensive</li>
+                <li>Requires strict vitamin compliance</li>
+                <li>Less commonly performed</li>
+              </ul>
+            </div>
+            <a href="/procedures/duodenal-switch" class="text-blue-600 hover:text-blue-700 font-medium">
+              Learn more about duodenal switch →
+            </a>
+          </div>
+
+          <div class="bg-blue-50 border-l-4 border-blue-600 rounded-lg p-6">
+            <p class="text-gray-700">
+              <strong>Remember:</strong> Suitability depends on clinical assessment. Your surgeon will evaluate your individual situation, health conditions, and goals to recommend the most appropriate procedure. No procedure is universally "better"—only better suited to your specific needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Quiz Embed -->
+    <section id="quiz-embed" class="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Find Your Ideal Procedure in 5 Minutes
+          </h2>
+          <p class="text-xl mb-8 text-blue-100">
+            Our evidence-based quiz analyzes your BMI, health conditions, goals, and lifestyle to provide personalized procedure recommendations with match percentages.
+          </p>
+          <div class="bg-white/10 backdrop-blur rounded-2xl p-8 mb-8">
+            <div class="space-y-4 text-left">
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <h3 class="font-bold text-lg mb-1">Personalized Recommendations</h3>
+                  <p class="text-blue-100 text-sm">Get procedure recommendations based on your specific situation, not generic advice</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <h3 class="font-bold text-lg mb-1">Evidence-Based Scoring</h3>
+                  <p class="text-blue-100 text-sm">Algorithm based on Australian clinical guidelines and registry data</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-green-300 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <h3 class="font-bold text-lg mb-1">Complete Results Report</h3>
+                  <p class="text-blue-100 text-sm">Receive detailed pros/cons, expected outcomes, cost estimates, and next steps</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="/procedure-selector-quiz" class="inline-block bg-white hover:bg-gray-100 text-blue-600 px-10 py-5 rounded-lg font-bold text-lg transition shadow-2xl">
+            Start Free Quiz Now →
+          </a>
+          <p class="text-blue-100 text-sm mt-4">
+            🔒 No email required. No spam. No calls. Just your personalized results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Questions -->
+    <section id="faqs" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+            Common Questions About Choosing Weight Loss Surgery
+          </h2>
+          
+          <div class="space-y-6">
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">How do I know which procedure is right for me?</h3>
+              <p class="text-gray-700 mb-3">
+                The best procedure depends on multiple factors: your BMI, existing health conditions (especially diabetes or reflux), weight loss goals, recovery time availability, budget, and personal preferences. There's no one-size-fits-all answer.
+              </p>
+              <p class="text-gray-700">
+                <strong>Our recommendation:</strong> Take our <a href="/procedure-selector-quiz" class="text-blue-600 hover:text-blue-700 font-medium">free quiz</a> to get personalized recommendations, then discuss your results with a qualified bariatric surgeon during consultation.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Is gastric sleeve or bypass better?</h3>
+              <p class="text-gray-700 mb-3">
+                Neither is universally "better"—each has advantages depending on your situation:
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside mb-3">
+                <li><strong>Gastric sleeve:</strong> Simpler surgery, faster recovery, good for BMI 35-45, may worsen reflux</li>
+                <li><strong>Gastric bypass:</strong> Higher weight loss, best for diabetes (80-90% remission), improves reflux, longer recovery</li>
+              </ul>
+              <p class="text-gray-700">
+                If you have type 2 diabetes or significant reflux, bypass is typically recommended. If you want faster recovery and simpler surgery, sleeve may be better. <a href="/compare/gastric-sleeve-vs-gastric-bypass" class="text-blue-600 hover:text-blue-700 font-medium">Compare them in detail →</a>
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Can I choose my procedure, or does the surgeon decide?</h3>
+              <p class="text-gray-700">
+                It's a collaborative decision. You can express preferences, but your surgeon will recommend based on your medical assessment, health conditions, and clinical guidelines. For example, if you have severe reflux, your surgeon will likely recommend bypass over sleeve regardless of your initial preference. The final decision is made together after thorough discussion of risks, benefits, and expected outcomes.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">What if I have type 2 diabetes?</h3>
+              <p class="text-gray-700 mb-3">
+                Gastric bypass is considered the gold standard for type 2 diabetes, with 80-90% remission rates. Duodenal switch also has excellent diabetes outcomes (85-90% remission). Gastric sleeve helps too (60-70% remission) but bypass is typically preferred for diabetes.
+              </p>
+              <p class="text-gray-700">
+                The bypass procedure affects gut hormones (like GLP-1) that improve blood sugar control, often leading to diabetes remission even before significant weight loss occurs.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">I have reflux/GORD. Which procedure should I choose?</h3>
+              <p class="text-gray-700 mb-3">
+                <strong>Gastric bypass is typically recommended for reflux.</strong> It usually improves or resolves GORD in 90% of cases. In contrast, gastric sleeve may worsen existing reflux in some patients.
+              </p>
+              <p class="text-gray-700">
+                If you have significant reflux, your surgeon will likely recommend bypass over sleeve, even if sleeve seems appealing for other reasons. This is a medical decision based on your health needs.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">What's the difference between gastric sleeve and gastric bypass?</h3>
+              <p class="text-gray-700 mb-3">
+                <strong>Gastric sleeve:</strong> Removes 80% of stomach, restrictive only, simpler surgery, 60-70% excess weight loss, faster recovery (6 weeks), may worsen reflux.
+              </p>
+              <p class="text-gray-700 mb-3">
+                <strong>Gastric bypass:</strong> Creates small pouch + reroutes intestine, restrictive + malabsorptive, more complex, 70-80% excess weight loss, longer recovery (8-12 weeks), improves reflux, best for diabetes.
+              </p>
+              <p class="text-gray-700">
+                <a href="/compare/gastric-sleeve-vs-gastric-bypass" class="text-blue-600 hover:text-blue-700 font-medium">See detailed comparison →</a>
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Is gastric band still performed?</h3>
+              <p class="text-gray-700 mb-3">
+                Yes, but less commonly than in the past. Gastric band is still performed, especially for:
+              </p>
+              <ul class="space-y-1 text-gray-700 list-disc list-inside mb-3">
+                <li>Patients who want a reversible option</li>
+                <li>Lower BMI (30-40) with moderate weight loss goals</li>
+                <li>Very short recovery time needed</li>
+                <li>Budget-conscious patients</li>
+              </ul>
+              <p class="text-gray-700">
+                However, sleeve and bypass have become more popular due to higher weight loss and lower revision rates. Band has a 40-60% revision rate, while sleeve and bypass have much lower revision rates (3-10%).
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">What if I have a very high BMI (50+)?</h3>
+              <p class="text-gray-700 mb-3">
+                For BMI 50+ (super obesity), gastric bypass or duodenal switch are typically recommended because they offer the highest weight loss potential (70-80% excess weight).
+              </p>
+              <p class="text-gray-700">
+                Duodenal switch has the highest weight loss but is more complex and requires strict vitamin compliance. Bypass is also excellent for super obesity and is more commonly performed. Your surgeon will help determine which is best for your situation.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Can I change my mind after choosing a procedure?</h3>
+              <p class="text-gray-700">
+                Yes, you can change your mind before surgery. However, once surgery is performed, most procedures (except band) are permanent. If you're uncertain, take time to research, ask questions, and get second opinions. This is a major decision—it's okay to take time to feel confident.
+              </p>
+            </div>
+
+            <div class="bg-gray-50 rounded-xl p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-3">What if I've had previous bariatric surgery?</h3>
+              <p class="text-gray-700 mb-3">
+                Revision surgery is possible:
+              </p>
+              <ul class="space-y-1 text-gray-700 list-disc list-inside mb-3">
+                <li><strong>Gastric band:</strong> Can be removed and converted to sleeve or bypass</li>
+                <li><strong>Gastric sleeve:</strong> Can be revised to bypass if weight regain or complications occur</li>
+                <li><strong>Previous stomach surgery:</strong> May affect options; requires surgeon assessment</li>
+              </ul>
+              <p class="text-gray-700">
+                Revision surgery has different considerations and risks. Your surgeon will assess whether revision is appropriate and which procedure would be best.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-8 text-center">
+            <p class="text-gray-700 mb-4">
+              Still have questions? Browse our <a href="/faq" class="text-blue-600 hover:text-blue-700 font-medium">complete FAQ section</a> or <a href="/surgeons" class="text-blue-600 hover:text-blue-700 font-medium">find a surgeon</a> to discuss your options.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost Considerations -->
+    <section id="cost-considerations" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+            Cost Considerations
+          </h2>
+          <p class="text-lg text-gray-700 mb-8 text-center">
+            Understanding the costs helps you plan financially. Costs vary by procedure, location, surgeon, and insurance coverage.
+          </p>
+
+          <div class="bg-white rounded-2xl shadow-lg p-8 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Procedure Cost Ranges (Self-Funded)</h3>
+            <div class="space-y-4">
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h4 class="font-bold text-gray-900">Gastric Band</h4>
+                <p class="text-gray-700">$12,000 - $20,000 (most affordable)</p>
+              </div>
+              <div class="border-l-4 border-green-500 pl-4">
+                <h4 class="font-bold text-gray-900">Gastric Sleeve</h4>
+                <p class="text-gray-700">$15,000 - $25,000 (most popular)</p>
+              </div>
+              <div class="border-l-4 border-purple-500 pl-4">
+                <h4 class="font-bold text-gray-900">Mini Gastric Bypass</h4>
+                <p class="text-gray-700">$16,000 - $27,000</p>
+              </div>
+              <div class="border-l-4 border-indigo-500 pl-4">
+                <h4 class="font-bold text-gray-900">Gastric Bypass</h4>
+                <p class="text-gray-700">$18,000 - $30,000</p>
+              </div>
+              <div class="border-l-4 border-red-500 pl-4">
+                <h4 class="font-bold text-gray-900">Duodenal Switch</h4>
+                <p class="text-gray-700">$25,000 - $40,000 (most expensive)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-blue-50 rounded-xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">With Private Health Insurance</h3>
+            <p class="text-gray-700 mb-4">
+              If you have private health insurance with appropriate hospital cover (typically Gold level or higher):
+            </p>
+            <ul class="space-y-2 text-gray-700 list-disc list-inside mb-4">
+              <li>Out-of-pocket costs typically range from <strong>$5,000 to $12,000</strong></li>
+              <li>Insurance covers hospital costs, surgeon fees, and anaesthetist fees (subject to gap payments)</li>
+              <li>A 12-month waiting period applies for bariatric surgery</li>
+              <li>Medicare rebates are available for eligible patients (approximately $1,500)</li>
+            </ul>
+            <p class="text-sm text-gray-600">
+              <strong>Note:</strong> Actual out-of-pocket costs vary by insurer, policy level, surgeon fees, and hospital choice. Contact your insurer for specific coverage details.
+            </p>
+          </div>
+
+          <div class="bg-green-50 rounded-xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Financing Options</h3>
+            <div class="space-y-3 text-gray-700">
+              <div>
+                <h4 class="font-bold mb-2">Payment Plans</h4>
+                <p class="text-sm">Many surgeons offer interest-free payment plans, allowing you to pay over 6-12 months.</p>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Superannuation Access</h4>
+                <p class="text-sm">May be possible on compassionate grounds through the ATO. Requires medical evidence and ATO approval. Consult a financial advisor.</p>
+              </div>
+              <div>
+                <h4 class="font-bold mb-2">Medical Loans</h4>
+                <p class="text-sm">Specialized medical finance companies offer loans for surgery. Compare interest rates and terms carefully.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Ongoing Costs to Consider</h3>
+            <p class="text-gray-700 mb-4">
+              Beyond the initial surgery, factor in ongoing expenses:
+            </p>
+            <ul class="space-y-2 text-gray-700 list-disc list-inside">
+              <li><strong>Vitamins and supplements:</strong> $300-$900 per year (lifelong requirement)</li>
+              <li><strong>Dietitian consultations:</strong> $150-$600 per year</li>
+              <li><strong>Surgeon follow-ups:</strong> $100-$400 per year</li>
+              <li><strong>Blood tests:</strong> $50-$150 per year</li>
+              <li><strong>Protein supplements:</strong> $200-$400 per year</li>
+            </ul>
+            <p class="text-sm text-gray-600 mt-4">
+              <a href="/cost-calculator" class="text-blue-600 hover:text-blue-700 font-medium">Use our detailed cost calculator →</a> to get personalized cost estimates based on your procedure, location, and insurance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What to Expect: The Decision Process -->
+    <section id="decision-process" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
+            What to Expect: The Decision Process
+          </h2>
+          <p class="text-lg text-gray-700 mb-8 text-center">
+            Understanding the steps involved in choosing and preparing for weight loss surgery helps you feel more confident and prepared.
+          </p>
+
+          <div class="space-y-8">
+            <div class="bg-blue-50 rounded-xl p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4">1</span>
+                <h3 class="text-2xl font-bold text-gray-900">Research and Self-Assessment</h3>
+              </div>
+              <p class="text-gray-700 mb-3">
+                Start by educating yourself about procedures, eligibility criteria, and what to expect. Use tools like our <a href="/procedure-selector-quiz" class="text-blue-600 hover:text-blue-700 font-medium">procedure selector quiz</a> to get initial recommendations.
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                <li>Calculate your BMI</li>
+                <li>Identify your health conditions</li>
+                <li>Consider your weight loss goals</li>
+                <li>Assess your recovery time availability</li>
+                <li>Review your budget and insurance coverage</li>
+              </ul>
+            </div>
+
+            <div class="bg-green-50 rounded-xl p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4">2</span>
+                <h3 class="text-2xl font-bold text-gray-900">Consultation with Bariatric Surgeon</h3>
+              </div>
+              <p class="text-gray-700 mb-3">
+                Schedule consultations with 2-3 qualified, AHPRA-registered bariatric surgeons. During consultation:
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                <li>Surgeon reviews your medical history and health conditions</li>
+                <li>Discusses procedure options and recommendations</li>
+                <li>Explains risks, benefits, and expected outcomes</li>
+                <li>Answers your questions</li>
+                <li>Provides cost estimates</li>
+              </ul>
+              <p class="text-sm text-gray-600 mt-4">
+                <a href="/surgeons" class="text-blue-600 hover:text-blue-700 font-medium">Find qualified surgeons in your area →</a>
+              </p>
+            </div>
+
+            <div class="bg-purple-50 rounded-xl p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-purple-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4">3</span>
+                <h3 class="text-2xl font-bold text-gray-900">Multidisciplinary Team Assessment</h3>
+              </div>
+              <p class="text-gray-700 mb-3">
+                Before surgery approval, you'll meet with a multidisciplinary team:
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                <li><strong>Dietitian:</strong> Assesses nutritional knowledge, provides education</li>
+                <li><strong>Psychologist:</strong> Evaluates mental health, readiness, and support systems</li>
+                <li><strong>Exercise physiologist/physiotherapist:</strong> Assesses physical activity capacity</li>
+                <li><strong>Other specialists:</strong> As needed (cardiologist, endocrinologist, etc.)</li>
+              </ul>
+              <p class="text-gray-700 mt-3">
+                This comprehensive assessment ensures you're prepared for surgery and have the support needed for long-term success.
+              </p>
+            </div>
+
+            <div class="bg-yellow-50 rounded-xl p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-yellow-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4">4</span>
+                <h3 class="text-2xl font-bold text-gray-900">Pre-Operative Preparation</h3>
+              </div>
+              <p class="text-gray-700 mb-3">
+                Once approved, you'll begin pre-operative preparation:
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                <li>Pre-operative diet (typically 2 weeks before surgery)</li>
+                <li>Medical clearances and tests</li>
+                <li>Lifestyle modifications</li>
+                <li>Education sessions</li>
+                <li>Arranging time off work and support during recovery</li>
+              </ul>
+            </div>
+
+            <div class="bg-indigo-50 rounded-xl p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4">5</span>
+                <h3 class="text-2xl font-bold text-gray-900">Surgery and Recovery</h3>
+              </div>
+              <p class="text-gray-700 mb-3">
+                Surgery is typically performed laparoscopically (keyhole). Recovery timeline varies by procedure:
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                <li><strong>Hospital stay:</strong> 1-3 nights depending on procedure</li>
+                <li><strong>Return to work:</strong> 2-6 weeks depending on job type</li>
+                <li><strong>Full recovery:</strong> 6-12 weeks depending on procedure</li>
+                <li><strong>Diet progression:</strong> Liquid → pureed → soft → solid foods over 6-8 weeks</li>
+              </ul>
+            </div>
+
+            <div class="bg-pink-50 rounded-xl p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-pink-600 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg mr-4">6</span>
+                <h3 class="text-2xl font-bold text-gray-900">Long-Term Follow-Up</h3>
+              </div>
+              <p class="text-gray-700 mb-3">
+                Successful weight loss surgery requires lifelong commitment:
+              </p>
+              <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                <li>Regular follow-up appointments (1 week, 6 weeks, 3 months, 6 months, 12 months, then annually)</li>
+                <li>Lifelong vitamin and mineral supplementation</li>
+                <li>Dietary modifications and portion control</li>
+                <li>Regular physical activity</li>
+                <li>Blood work monitoring</li>
+                <li>Support group participation (recommended)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8 bg-blue-50 border-l-4 border-blue-600 rounded-lg p-6">
+            <p class="text-gray-700">
+              <strong>Remember:</strong> This is a journey, not a destination. Weight loss surgery is a tool that helps you lose weight, but long-term success depends on your commitment to lifestyle changes, dietary modifications, and regular follow-up care.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registry Stats -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <RegistryStats />
+      </div>
+    </section>
+
+    <!-- Authority Citations -->
+    <section class="py-12 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AuthorityCitations />
+      </div>
+    </section>
+
+    <!-- Clinical Guidelines -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <ClinicalGuidelines />
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-16 bg-gradient-to-br from-blue-600 to-purple-600">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            Ready to Find Your Ideal Procedure?
+          </h2>
+          <p class="text-xl mb-8 text-blue-100">
+            Take our free 5-minute quiz to get personalized procedure recommendations based on your unique situation.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/procedure-selector-quiz" class="bg-white hover:bg-gray-100 text-blue-600 px-10 py-5 rounded-lg font-bold text-lg transition shadow-2xl">
+              Start Free Quiz
+            </a>
+            <a href="/surgeons" class="bg-white/10 hover:bg-white/20 backdrop-blur border-2 border-white text-white px-10 py-5 rounded-lg font-bold text-lg transition">
+              Browse Surgeons
+            </a>
+          </div>
+          <p class="text-blue-100 text-sm mt-6">
+            Or explore our <a href="/cost-calculator" class="text-white underline font-medium">cost calculator</a> to understand financial planning
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Surgeon CTA -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SurgeonCTA 
+          headline="Find a Qualified Bariatric Surgeon"
+          description="Browse our directory of AHPRA-registered bariatric surgeons. Compare experience, specialties, and locations to find the right surgeon for your procedure."
+        />
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>
+

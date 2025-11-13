@@ -48,9 +48,9 @@ const meta = seoMeta.sleeveVsBypass;
 						<a href="#comparison-table" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-center text-lg font-semibold">
 							View Comparison Table
 						</a>
-						<a href="#quiz" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-center text-lg font-semibold">
-							Take Our Quiz
-						</a>
+					<a href="/procedure-selector-quiz" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-center text-lg font-semibold">
+						Take Our Quiz
+					</a>
 					</div>
 				</div>
 			</div>
@@ -620,8 +620,16 @@ const meta = seoMeta.sleeveVsBypass;
 			<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 				<h2 class="text-3xl md:text-4xl font-bold mb-6">Which Procedure is Right for You?</h2>
 				<p class="text-xl text-purple-100 mb-8">
-					Take our 2-minute personalised quiz to discover which weight loss surgery best matches your goals, health conditions, and lifestyle.
+					Take our free 5-minute personalised quiz to discover which weight loss surgery best matches your goals, health conditions, and lifestyle.
 				</p>
+				<div class="mb-8">
+					<a href="/procedure-selector-quiz" class="inline-block bg-white text-purple-600 px-8 py-4 rounded-lg hover:bg-purple-50 transition text-lg font-bold shadow-lg mr-4">
+						Take Free Quiz Now
+					</a>
+					<a href="/which-weight-loss-surgery-is-right-for-me" class="inline-block bg-white/10 hover:bg-white/20 backdrop-blur border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg transition">
+						Read Complete Guide
+					</a>
+				</div>
 
 				<div class="bg-white rounded-2xl p-8 text-left mb-8">
 					<h3 class="text-xl font-bold text-gray-900 mb-6">Quick Recommendation Guide</h3>
@@ -892,6 +900,16 @@ const meta = seoMeta.sleeveVsBypass;
 					title="Continue Your Research"
 					links={[
 						{
+							title: "Procedure Selector Quiz",
+							href: "/procedure-selector-quiz",
+							description: "Get personalized procedure recommendations in 5 minutes"
+						},
+						{
+							title: "Which Weight Loss Surgery Is Right for Me?",
+							href: "/which-weight-loss-surgery-is-right-for-me",
+							description: "Complete guide to choosing the right procedure"
+						},
+						{
 							title: "Gastric Sleeve Surgery Guide",
 							href: "/procedures/gastric-sleeve",
 							description: "Complete guide to gastric sleeve: costs, recovery, results"
@@ -903,12 +921,12 @@ const meta = seoMeta.sleeveVsBypass;
 						},
 						{
 							title: "Cost Calculator",
-							href: "/costs/gastric-sleeve-cost-australia",
+							href: "/cost-calculator",
 							description: "Calculate your personalised surgery cost in 60 seconds"
 						},
 						{
 							title: "Find Surgeons Near You",
-							href: "/locations/sydney",
+							href: "/surgeons",
 							description: "AHPRA-registered bariatric surgeons across Australia"
 						}
 					]}
