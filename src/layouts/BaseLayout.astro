@@ -39,8 +39,8 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
     <link rel="preload" href="https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Optimized Font Loading with display=swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet" /></noscript>
     
     <!-- Favicons for all browsers and devices -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -293,6 +293,9 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
               <div class="absolute left-0 mt-1 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div class="py-2 px-1">
                   <a href="/surgeons" class="block px-3 py-2 text-sm text-blue-600 font-semibold hover:bg-blue-50 rounded-md transition-colors">Find My Surgeon</a>
+                  <a href="/surgeons/compare" class="block mx-1 mb-2 px-3 py-2.5 text-white bg-green-600 hover:bg-green-700 font-semibold rounded-lg text-center text-sm transition-all shadow-sm hover:shadow-md">
+                    🔍 Compare Surgeons
+                  </a>
                   <div class="border-t border-gray-100 my-1"></div>
                   <a href="/surgeons/sydney" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Sydney Surgeons</a>
                   <a href="/surgeons/melbourne" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Melbourne Surgeons</a>
@@ -379,9 +382,13 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
                   <a href="/procedure-selector-quiz" class="block mx-1 mb-2 px-3 py-2.5 text-white bg-blue-600 hover:bg-blue-700 font-semibold rounded-lg text-center text-sm transition-all shadow-sm hover:shadow-md">
                     🎯 Procedure Selector Quiz
                   </a>
+                  <a href="/surgeons/compare" class="block mx-1 mb-2 px-3 py-2.5 text-white bg-green-600 hover:bg-green-700 font-semibold rounded-lg text-center text-sm transition-all shadow-sm hover:shadow-md">
+                    🔍 Compare Surgeons
+                  </a>
                   <a href="/superannuation-guide" class="block px-3 py-2 text-sm text-purple-600 font-semibold hover:bg-purple-50 rounded-md transition-colors">💰 Using Your Super</a>
                   <div class="border-t border-gray-100 my-1"></div>
                   <a href="/which-weight-loss-surgery-is-right-for-me" class="block px-3 py-2 text-sm text-blue-600 font-semibold hover:bg-blue-50 rounded-md transition-colors">Which Surgery Is Right for Me?</a>
+                  <a href="/how-to-choose-weight-loss-surgeon" class="block px-3 py-2 text-sm text-blue-600 font-semibold hover:bg-blue-50 rounded-md transition-colors">How to Choose a Surgeon</a>
                   <a href="/faq" class="block px-3 py-2 text-sm text-blue-600 font-semibold hover:bg-blue-50 rounded-md transition-colors">FAQ</a>
                   <a href="/bmi-calculator" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">BMI Calculator</a>
                   <a href="/cost-calculator" class="block px-3 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors">Cost Calculator</a>
@@ -438,9 +445,9 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
             <div class="border-b border-gray-200 pb-2">
               <a href="/surgeons" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-semibold">Surgeons</a>
               <div class="ml-4 space-y-1">
+                <a href="/surgeons/compare" class="block px-3 py-2 text-white bg-green-600 hover:bg-green-700 font-semibold rounded-md text-center my-1">🔍 Compare Surgeons</a>
                 <a href="/surgeons/sydney" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Sydney Surgeons</a>
                 <a href="/surgeons/melbourne" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Melbourne Surgeons</a>
-                <a href="/surgeons/compare" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Compare Surgeons</a>
               </div>
             </div>
             <div class="border-b border-gray-200 pb-2">
@@ -480,9 +487,11 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
               <a href="/faq" class="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-semibold">Resources</a>
               <div class="ml-4 space-y-1">
                 <a href="/procedure-selector-quiz" class="block px-3 py-2 text-white bg-blue-600 hover:bg-blue-700 font-semibold rounded-md text-center">🎯 Procedure Selector Quiz</a>
+                <a href="/surgeons/compare" class="block px-3 py-2 text-white bg-green-600 hover:bg-green-700 font-semibold rounded-md text-center my-1">🔍 Compare Surgeons</a>
                 <a href="/superannuation-guide" class="block px-3 py-2 text-purple-600 font-semibold hover:bg-purple-50 rounded-md">💰 Using Your Super</a>
                 <div class="border-t border-gray-200 my-2"></div>
                 <a href="/which-weight-loss-surgery-is-right-for-me" class="block px-3 py-2 text-blue-600 font-semibold hover:bg-blue-50 rounded-md">Which Surgery Is Right for Me?</a>
+                <a href="/how-to-choose-weight-loss-surgeon" class="block px-3 py-2 text-blue-600 font-semibold hover:bg-blue-50 rounded-md">How to Choose a Surgeon</a>
                 <a href="/faq" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">FAQ</a>
                 <a href="/bmi-calculator" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">BMI Calculator</a>
                 <a href="/cost-calculator" class="block px-3 py-2 text-gray-600 hover:bg-blue-50 hover:text-blue-600">Cost Calculator</a>
@@ -524,9 +533,9 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
             <h3 class="font-bold text-lg mb-4 text-gray-800">Surgeons</h3>
             <ul class="space-y-2 text-gray-700">
               <li><a href="/surgeons" class="hover:text-gray-900">Find My Surgeon</a></li>
+              <li><a href="/surgeons/compare" class="text-green-700 font-semibold hover:text-gray-900">🔍 Compare Surgeons</a></li>
               <li><a href="/surgeons/sydney" class="hover:text-gray-900">Sydney Surgeons</a></li>
               <li><a href="/surgeons/melbourne" class="hover:text-gray-900">Melbourne Surgeons</a></li>
-              <li><a href="/surgeons/compare" class="hover:text-gray-900">Compare Surgeons</a></li>
             </ul>
           </div>
           <div>
@@ -562,7 +571,9 @@ const ogImage = image || 'https://bariatricsurgeryhub.com/og-image.jpg';
             <h3 class="font-bold text-lg mb-4 text-gray-800">Resources</h3>
             <ul class="space-y-2 text-gray-700">
               <li><a href="/procedure-selector-quiz" class="text-blue-700 font-semibold hover:text-gray-900">🎯 Procedure Selector Quiz</a></li>
+              <li><a href="/surgeons/compare" class="text-green-700 font-semibold hover:text-gray-900">🔍 Compare Surgeons</a></li>
               <li><a href="/which-weight-loss-surgery-is-right-for-me" class="text-blue-700 font-semibold hover:text-gray-900">Which Surgery Is Right for Me?</a></li>
+              <li><a href="/how-to-choose-weight-loss-surgeon" class="text-blue-700 font-semibold hover:text-gray-900">How to Choose a Surgeon</a></li>
               <li><a href="/blog" class="hover:text-gray-900">Blog & Articles</a></li>
               <li><a href="/blog/gastric-sleeve-recovery-week-by-week" class="hover:text-gray-900">Recovery Guide</a></li>
               <li><a href="/blog/gastric-sleeve-cost-australia-2025" class="hover:text-gray-900">Cost Information</a></li>
