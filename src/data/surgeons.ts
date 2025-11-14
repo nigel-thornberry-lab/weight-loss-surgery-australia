@@ -518,6 +518,23 @@ export function generateSlug(name: string): string {
     .replace(/^-|-$/g, '');        // Trim hyphens
 }
 
+/**
+ * Generate city slug for URL paths (matches script generation logic)
+ * @param city - City name
+ * @returns URL-safe city slug
+ * @example generateCitySlug('Baulkham Hills') // 'baulkham-hills'
+ */
+export function generateCitySlug(city: string): string {
+  if (!city) return '';
+  
+  return city
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '') // Remove special chars (keeps spaces and hyphens)
+    .replace(/\s+/g, '-')          // Spaces to hyphens
+    .replace(/-+/g, '-')           // Multiple hyphens to single
+    .replace(/^-|-$/g, '');        // Trim hyphens
+}
+
 // ============================================================================
 // PUBLIC API - ADVANCED QUERIES
 // ============================================================================

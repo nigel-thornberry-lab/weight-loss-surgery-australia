@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getAllSurgeons, getSurgeonBySlug, searchSurgeons, getAvailableCities, getAvailableProcedures, getDisplayName, getProcedureList } from '../../data/surgeons';
+import { getAllSurgeons, getSurgeonBySlug, searchSurgeons, getAvailableCities, getAvailableProcedures, getDisplayName, getProcedureList, generateCitySlug } from '../../data/surgeons';
 import ComparisonTable from '../../components/surgeons/ComparisonTable.astro';
 import { getComparisonSummary, validateSurgeonsForComparison } from '../../data/surgeon-comparison-data';
 import { categorizeSurgeon } from '../../data/surgeon-match-data';
@@ -360,7 +360,7 @@ if (selectedSurgeons.length >= 2) {
                         </button>
                       )}
                       <a
-                        href={`/surgeons/${surgeon.city.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/${surgeon.slug}`}
+                        href={`/surgeons/${generateCitySlug(surgeon.city)}/${surgeon.slug}`}
                         class="px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded-lg font-semibold text-sm transition"
                       >
                         View
@@ -429,7 +429,7 @@ if (selectedSurgeons.length >= 2) {
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {selectedSurgeons.map((surgeon) => (
                 <a
-                  href={`/surgeons/${surgeon.city.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/${surgeon.slug}`}
+                  href={`/surgeons/${generateCitySlug(surgeon.city)}/${surgeon.slug}`}
                   class="block p-4 bg-blue-50 hover:bg-blue-100 rounded-lg transition text-center"
                   aria-label={`View profile and book consultation with ${getDisplayName(surgeon)}`}
                 >
