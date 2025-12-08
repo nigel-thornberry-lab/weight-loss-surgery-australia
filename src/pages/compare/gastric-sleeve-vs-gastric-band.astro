@@ -1,0 +1,543 @@
+---
+import '../../styles/global.css';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ContentFreshness from '../../components/ContentFreshness.astro';
+
+const meta = {
+  title: "Gastric Sleeve vs Gastric Band Australia 2025 | Complete Comparison",
+  description: "Compare gastric sleeve vs gastric band surgery in Australia. Weight loss results (60-70% vs 40-50%), costs, recovery, risks, and why 95% of surgeons now recommend sleeve over band.",
+  keywords: ["gastric sleeve vs gastric band", "lap band vs sleeve", "gastric band vs sleeve Australia", "weight loss surgery comparison"]
+};
+
+const pageUrl = "https://weightlosssurgery.com.au/compare/gastric-sleeve-vs-gastric-band";
+
+// FAQ data
+const faqs = [
+  {
+    q: "Why do most surgeons no longer recommend gastric band?",
+    a: "Gastric band has fallen out of favour due to high revision rates (30-50% within 10 years), lower weight loss results (40-50% vs 60-70%), frequent complications requiring additional surgery, and the need for ongoing adjustments. Most Australian surgeons now recommend gastric sleeve as the first-line procedure."
+  },
+  {
+    q: "Is gastric band cheaper than gastric sleeve?",
+    a: "Initially yes - gastric band costs $12,000-$18,000 vs sleeve at $15,000-$25,000. However, when you factor in ongoing adjustments ($200-$400 each), potential revision surgery, and lower weight loss results, sleeve often provides better long-term value."
+  },
+  {
+    q: "Can I convert my gastric band to a gastric sleeve?",
+    a: "Yes, band-to-sleeve conversion is a common revision surgery. It can often be done in a single operation, though some surgeons prefer a two-stage approach. Costs range from $15,000-$25,000 depending on complexity."
+  },
+  {
+    q: "Is gastric band reversible while sleeve is not?",
+    a: "Yes, gastric band is technically reversible - the band can be removed. However, most patients who have their band removed regain weight. Gastric sleeve is permanent as 70-80% of the stomach is removed and cannot be reattached."
+  },
+  {
+    q: "Which procedure has better long-term weight loss?",
+    a: "Gastric sleeve has significantly better long-term results. Studies show sleeve patients maintain 60-70% excess weight loss at 5 years, while band patients typically maintain only 40-50%, with many experiencing weight regain."
+  },
+  {
+    q: "Is gastric band safer than gastric sleeve?",
+    a: "Gastric band has a lower initial complication rate (1-2% vs 2-3%), but higher long-term complication rates due to band slippage, erosion, and port problems. Sleeve has a slightly higher initial risk but fewer long-term issues."
+  },
+  {
+    q: "Why is gastric band still offered?",
+    a: "Some surgeons still offer gastric band for specific cases: patients who absolutely cannot accept permanent stomach removal, those with very high anaesthetic risk, or patients who want a reversible option. However, these cases are rare."
+  },
+  {
+    q: "What happens if my gastric band fails?",
+    a: "If your band fails (inadequate weight loss, slippage, erosion), options include: band adjustment, band removal, or conversion to gastric sleeve or bypass. Discuss conversion options with your surgeon to determine the most appropriate approach for your situation."
+  }
+];
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <!-- Schema Markup -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Gastric Sleeve vs Gastric Band: Complete Comparison Guide",
+    "description": meta.description,
+    "datePublished": "2025-01-15",
+    "dateModified": "2025-12-07",
+    "author": {
+      "@type": "Organization",
+      "name": "Weight Loss Surgery Australia"
+    }
+  })} />
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  })} />
+
+  <main class="min-h-screen bg-gray-50">
+
+    <!-- Breadcrumbs -->
+    <section class="bg-gray-50 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <Breadcrumbs items={[
+          { name: "Compare", url: "/compare" },
+          { name: "Gastric Sleeve vs Gastric Band", url: "/compare/gastric-sleeve-vs-gastric-band" }
+        ]} />
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50 py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-block px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold mb-4">
+            Complete Comparison Guide
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Gastric Sleeve vs Gastric Band
+          </h1>
+          <p class="text-xl text-gray-600 mb-6">
+            Compare Australia's two weight loss surgery options. See why 95% of bariatric surgeons now recommend gastric sleeve over gastric band, with side-by-side data on weight loss, costs, risks, and long-term outcomes.
+          </p>
+          <ContentFreshness 
+            datePublished="2025-01-15"
+            dateModified="2025-12-07"
+          />
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <a href="#comparison-table" class="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition text-center text-lg font-semibold">
+              View Comparison Table
+            </a>
+            <a href="/cost-calculator" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition text-center text-lg font-semibold">
+              Calculate Your Cost
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Verdict -->
+    <section class="py-8 bg-yellow-50 border-y border-yellow-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-start">
+          <div class="flex-shrink-0 mr-4">
+            <span class="text-4xl">⚠️</span>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-yellow-900 mb-2">Important Context</h2>
+            <p class="text-yellow-800">
+              <strong>Gastric band has largely fallen out of favour in Australia.</strong> Most bariatric surgeons no longer recommend it as a first-line treatment due to high revision rates and lower long-term weight loss. However, understanding the comparison helps patients make informed decisions, especially those considering band-to-sleeve conversion.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Summary -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Quick Comparison Summary</h2>
+          
+          <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <!-- Gastric Sleeve Summary -->
+            <div class="bg-blue-50 rounded-2xl p-8 border-2 border-blue-200">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-gray-900">Gastric Sleeve</h3>
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">Recommended</span>
+              </div>
+              <div class="space-y-3 text-gray-700">
+                <div class="flex justify-between">
+                  <span class="font-semibold">Weight Loss:</span>
+                  <span class="text-green-700 font-semibold">60-70% excess weight</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold">Cost:</span>
+                  <span>$15,000 - $25,000</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold">Surgery Time:</span>
+                  <span>1-2 hours</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold">Hospital Stay:</span>
+                  <span>1-2 nights</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold">Recovery:</span>
+                  <span>4-6 weeks</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold">Revision Rate:</span>
+                  <span class="text-green-700 font-semibold">5-10% (10 years)</span>
+                </div>
+              </div>
+              <div class="mt-6 pt-6 border-t border-blue-300">
+                <p class="text-sm text-gray-700 font-semibold mb-2">✅ Advantages:</p>
+                <ul class="space-y-1 text-sm text-gray-600">
+                  <li>• Significantly better weight loss</li>
+                  <li>• No foreign device in body</li>
+                  <li>• No ongoing adjustments</li>
+                  <li>• Lower long-term revision rate</li>
+                  <li>• Reduces hunger hormone (ghrelin)</li>
+                </ul>
+              </div>
+              <a href="/procedures/gastric-sleeve" class="mt-6 block w-full bg-blue-600 text-white text-center py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+                Learn More About Sleeve
+              </a>
+            </div>
+
+            <!-- Gastric Band Summary -->
+            <div class="bg-orange-50 rounded-2xl p-8 border-2 border-orange-200">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-2xl font-bold text-gray-900">Gastric Band</h3>
+                <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">Declining Use</span>
+              </div>
+              <div class="space-y-3 text-gray-700">
+                <div class="flex justify-between">
+                  <span class="font-semibold">Weight Loss:</span>
+                  <span class="text-orange-700 font-semibold">40-50% excess weight</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold">Cost:</span>
+                  <span>$12,000 - $18,000</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold">Surgery Time:</span>
+                  <span>45-60 minutes</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold">Hospital Stay:</span>
+                  <span>Day surgery or 1 night</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold">Recovery:</span>
+                  <span>1-2 weeks</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold">Revision Rate:</span>
+                  <span class="text-red-700 font-semibold">30-50% (10 years)</span>
+                </div>
+              </div>
+              <div class="mt-6 pt-6 border-t border-orange-300">
+                <p class="text-sm text-gray-700 font-semibold mb-2">⚠️ Considerations:</p>
+                <ul class="space-y-1 text-sm text-gray-600">
+                  <li>• Lower weight loss results</li>
+                  <li>• High long-term revision rate</li>
+                  <li>• Requires ongoing adjustments</li>
+                  <li>• Band slippage/erosion risk</li>
+                  <li>• Reversible (but regain common)</li>
+                </ul>
+              </div>
+              <a href="/procedures/gastric-band" class="mt-6 block w-full bg-orange-500 text-white text-center py-3 rounded-lg hover:bg-orange-600 transition font-semibold">
+                Learn More About Band
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Comparison Table -->
+    <section id="comparison-table" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Detailed Comparison Table</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full bg-white rounded-xl shadow-lg overflow-hidden">
+            <thead>
+              <tr class="bg-gray-100">
+                <th class="px-6 py-4 text-left text-sm font-bold text-gray-900">Factor</th>
+                <th class="px-6 py-4 text-center text-sm font-bold text-blue-700 bg-blue-50">Gastric Sleeve</th>
+                <th class="px-6 py-4 text-center text-sm font-bold text-orange-700 bg-orange-50">Gastric Band</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="px-6 py-4 font-semibold text-gray-900">How It Works</td>
+                <td class="px-6 py-4 text-center text-gray-700">Removes 70-80% of stomach, creates banana-shaped pouch</td>
+                <td class="px-6 py-4 text-center text-gray-700">Adjustable silicone band placed around upper stomach</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-gray-900">Average Weight Loss</td>
+                <td class="px-6 py-4 text-center text-green-700 font-semibold bg-green-50">60-70% excess weight</td>
+                <td class="px-6 py-4 text-center text-orange-700 bg-orange-50">40-50% excess weight</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-semibold text-gray-900">5-Year Weight Maintenance</td>
+                <td class="px-6 py-4 text-center text-green-700 font-semibold bg-green-50">60-65% maintain</td>
+                <td class="px-6 py-4 text-center text-orange-700 bg-orange-50">40-45% maintain</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-gray-900">Cost (Australia)</td>
+                <td class="px-6 py-4 text-center text-gray-700">$15,000 - $25,000</td>
+                <td class="px-6 py-4 text-center text-gray-700">$12,000 - $18,000 + adjustments</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-semibold text-gray-900">Out-of-Pocket (with insurance)</td>
+                <td class="px-6 py-4 text-center text-gray-700">$5,000 - $10,000</td>
+                <td class="px-6 py-4 text-center text-gray-700">$4,000 - $8,000 + adjustments</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-gray-900">Surgery Duration</td>
+                <td class="px-6 py-4 text-center text-gray-700">1-2 hours</td>
+                <td class="px-6 py-4 text-center text-green-700 bg-green-50">45-60 minutes</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-semibold text-gray-900">Hospital Stay</td>
+                <td class="px-6 py-4 text-center text-gray-700">1-2 nights</td>
+                <td class="px-6 py-4 text-center text-green-700 bg-green-50">Day surgery or 1 night</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-gray-900">Return to Work</td>
+                <td class="px-6 py-4 text-center text-gray-700">2-4 weeks</td>
+                <td class="px-6 py-4 text-center text-green-700 bg-green-50">1-2 weeks</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-semibold text-gray-900">Reversible?</td>
+                <td class="px-6 py-4 text-center text-orange-700 bg-orange-50">No - permanent</td>
+                <td class="px-6 py-4 text-center text-green-700 bg-green-50">Yes - can be removed</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-gray-900">Ongoing Adjustments</td>
+                <td class="px-6 py-4 text-center text-green-700 bg-green-50">None required</td>
+                <td class="px-6 py-4 text-center text-orange-700 bg-orange-50">Multiple per year ($200-$400 each)</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-semibold text-gray-900">Foreign Device</td>
+                <td class="px-6 py-4 text-center text-green-700 bg-green-50">No</td>
+                <td class="px-6 py-4 text-center text-orange-700 bg-orange-50">Yes - silicone band + port</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-gray-900">10-Year Revision Rate</td>
+                <td class="px-6 py-4 text-center text-green-700 font-semibold bg-green-50">5-10%</td>
+                <td class="px-6 py-4 text-center text-red-700 font-semibold bg-red-50">30-50%</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-semibold text-gray-900">Diabetes Remission</td>
+                <td class="px-6 py-4 text-center text-green-700 font-semibold bg-green-50">60-70%</td>
+                <td class="px-6 py-4 text-center text-orange-700 bg-orange-50">40-50%</td>
+              </tr>
+              <tr class="bg-gray-50">
+                <td class="px-6 py-4 font-semibold text-gray-900">Hunger Reduction</td>
+                <td class="px-6 py-4 text-center text-green-700 bg-green-50">Significant (ghrelin reduced)</td>
+                <td class="px-6 py-4 text-center text-orange-700 bg-orange-50">Minimal (restriction only)</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-semibold text-gray-900">Surgeon Recommendation</td>
+                <td class="px-6 py-4 text-center text-green-700 font-semibold bg-green-50">95%+ recommend</td>
+                <td class="px-6 py-4 text-center text-red-700 bg-red-50">Rarely recommended</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Sleeve is Preferred -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Why Gastric Sleeve is Now Preferred</h2>
+        
+        <div class="space-y-6">
+          <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">1. Higher Average Weight Loss</h3>
+            <p class="text-gray-700">
+              Gastric sleeve patients lose 60-70% of their excess weight compared to 40-50% with gastric band. This difference is significant—for someone with 50kg to lose, that's an extra 10-15kg of weight loss with sleeve.
+            </p>
+          </div>
+
+          <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">2. Hormonal Benefits</h3>
+            <p class="text-gray-700">
+              Gastric sleeve removes the part of the stomach that produces ghrelin (the "hunger hormone"), reducing appetite significantly. Gastric band only restricts food intake without affecting hunger hormones, making it harder to maintain weight loss.
+            </p>
+          </div>
+
+          <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">3. Lower Long-Term Complications</h3>
+            <p class="text-gray-700">
+              While gastric band has a shorter initial surgery, the 10-year revision rate is 30-50% due to band slippage, erosion, port problems, and inadequate weight loss. Sleeve's 5-10% revision rate is significantly lower.
+            </p>
+          </div>
+
+          <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">4. No Ongoing Adjustments</h3>
+            <p class="text-gray-700">
+              Gastric band requires regular adjustments (fills) to maintain restriction—typically 4-6 in the first year, then ongoing. Each adjustment costs $200-$400 and requires a clinic visit. Sleeve requires no adjustments.
+            </p>
+          </div>
+
+          <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-600">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">5. Better Diabetes Outcomes</h3>
+            <p class="text-gray-700">
+              Gastric sleeve achieves type 2 diabetes remission in 60-70% of patients compared to 40-50% with gastric band. The metabolic changes from sleeve surgery provide benefits beyond simple calorie restriction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- When Band Might Be Considered -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">When Gastric Band Might Still Be Considered</h2>
+        
+        <p class="text-lg text-gray-700 mb-6">
+          While gastric sleeve is now the standard recommendation, there are rare situations where gastric band may still be discussed:
+        </p>
+
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="text-orange-500 mr-3 mt-1">•</span>
+              <div>
+                <p class="font-semibold text-gray-900">Patients who absolutely cannot accept permanent stomach removal</p>
+                <p class="text-sm text-gray-600">Some patients have strong personal or cultural reasons to avoid irreversible procedures</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-orange-500 mr-3 mt-1">•</span>
+              <div>
+                <p class="font-semibold text-gray-900">Very high anaesthetic risk patients</p>
+                <p class="text-sm text-gray-600">The shorter surgery time may be beneficial for patients with significant cardiac or respiratory conditions</p>
+              </div>
+            </li>
+            <li class="flex items-start">
+              <span class="text-orange-500 mr-3 mt-1">•</span>
+              <div>
+                <p class="font-semibold text-gray-900">Patients who want a "trial" before committing to permanent surgery</p>
+                <p class="text-sm text-gray-600">Though this is generally not recommended as outcomes are better with sleeve</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
+          <p class="text-yellow-900">
+            <strong>Important:</strong> If a surgeon recommends gastric band as a first-line treatment without discussing the above considerations, seek a second opinion. Most experienced bariatric surgeons will recommend sleeve or bypass for the majority of patients.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Band to Sleeve Conversion -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Already Have a Gastric Band?</h2>
+        
+        <p class="text-lg text-gray-700 mb-6">
+          If you have an existing gastric band that isn't providing adequate weight loss, or you're experiencing complications, band-to-sleeve conversion is a well-established option.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-green-50 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">✅ Good Candidates for Conversion</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Inadequate weight loss with band</li>
+              <li>• Weight regain after initial success</li>
+              <li>• Band slippage or erosion</li>
+              <li>• Frequent vomiting or reflux</li>
+              <li>• Port or tubing problems</li>
+              <li>• Desire for better long-term results</li>
+            </ul>
+          </div>
+
+          <div class="bg-blue-50 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">📋 Conversion Process</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Consultation with bariatric surgeon</li>
+              <li>• Assessment of current band status</li>
+              <li>• May be single or two-stage surgery</li>
+              <li>• Similar recovery to primary sleeve</li>
+              <li>• Cost: $15,000-$25,000</li>
+              <li>• Insurance may cover if medically necessary</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="/surgeons" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition">
+            Find Surgeons Who Perform Conversions →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+        
+        <div class="space-y-4">
+          {faqs.map(faq => (
+            <details class="bg-white rounded-lg p-6 shadow-sm group">
+              <summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+                {faq.q}
+                <svg class="w-5 h-5 text-gray-500 transform group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </summary>
+              <div class="mt-4 text-gray-700 leading-relaxed">
+                {faq.a}
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Comparisons -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Related Comparisons</h2>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="/compare/gastric-sleeve-vs-gastric-bypass" class="bg-blue-50 rounded-xl p-6 hover:shadow-lg transition group">
+            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600">Gastric Sleeve vs Gastric Bypass</h3>
+            <p class="text-gray-600 text-sm mb-4">Compare Australia's two most popular weight loss surgeries side-by-side.</p>
+            <span class="text-blue-600 font-semibold">Read Comparison →</span>
+          </a>
+
+          <a href="/compare/surgery-vs-medication" class="bg-purple-50 rounded-xl p-6 hover:shadow-lg transition group">
+            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600">Surgery vs Medication (Ozempic)</h3>
+            <p class="text-gray-600 text-sm mb-4">Compare weight loss surgery to GLP-1 medications like Ozempic and Wegovy.</p>
+            <span class="text-purple-600 font-semibold">Read Comparison →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 bg-blue-600">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">Ready to Take the Next Step?</h2>
+        <p class="text-xl text-blue-100 mb-8">
+          Find qualified bariatric surgeons who can discuss your options and recommend the most appropriate procedure for your situation.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/surgeons" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition">
+            Find Surgeons Near Me
+          </a>
+          <a href="/cost-calculator" class="bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition border border-blue-500">
+            Calculate My Cost
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="py-6 bg-gray-100">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="text-sm text-gray-600 text-center">
+          <strong>Disclaimer:</strong> This information is general in nature and does not constitute medical advice. Individual suitability for procedures varies and must be assessed by a qualified health professional. Outcomes and risks vary between patients. Consult with a bariatric surgeon to discuss your specific situation.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</BaseLayout>
+

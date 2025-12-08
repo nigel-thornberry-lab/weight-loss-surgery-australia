@@ -1,0 +1,678 @@
+---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+
+const meta = {
+  title: "Which Weight Loss Surgery Is Right For Me? | Free Quiz",
+  description: "Take our free 2-minute quiz to explore which weight loss surgery options may suit your BMI, health conditions, and lifestyle goals. Get guidance for your consultation.",
+  keywords: ["which weight loss surgery is right for me", "bariatric surgery quiz", "weight loss surgery options", "weight loss surgery comparison"]
+};
+
+// Quiz questions data
+const questions = [
+  {
+    id: 1,
+    question: "What is your current BMI (Body Mass Index)?",
+    helper: "Not sure? Use our BMI calculator",
+    helperLink: "/bmi-calculator",
+    options: [
+      { text: "Under 30", scores: { MED: 3 } },
+      { text: "30-35", scores: { MED: 2, ESG: 2, GS: 1 } },
+      { text: "35-40", scores: { GS: 3, GB: 2, ESG: 1 } },
+      { text: "40-50", scores: { GS: 3, GB: 3 } },
+      { text: "Over 50", scores: { GB: 3, GS: 2 } }
+    ]
+  },
+  {
+    id: 2,
+    question: "Do you have any of these weight-related health conditions?",
+    multiSelect: true,
+    options: [
+      { text: "Type 2 Diabetes", scores: { GB: 3, GS: 2 } },
+      { text: "Severe Reflux/GERD", scores: { GB: 3, GS: -2 }, flag: "gerd_warning" },
+      { text: "Sleep Apnoea", scores: { GS: 2, GB: 2 } },
+      { text: "High Blood Pressure", scores: { GS: 2, GB: 2 } },
+      { text: "Joint Problems", scores: { GS: 2, GB: 2 } },
+      { text: "None of the above", scores: { GS: 1, MED: 1 } }
+    ]
+  },
+  {
+    id: 3,
+    question: "How would you describe your weight loss history?",
+    options: [
+      { text: "First time trying to lose significant weight", scores: { MED: 2, ESG: 2 } },
+      { text: "Tried diets, lost some weight but regained", scores: { GS: 2, GB: 1 } },
+      { text: "Multiple serious attempts, always regain", scores: { GS: 3, GB: 2 } },
+      { text: "Previous weight loss surgery that failed", scores: { GB: 3 }, flag: "revision_case" }
+    ]
+  },
+  {
+    id: 4,
+    question: "Which describes your typical eating patterns?",
+    options: [
+      { text: "I eat large portions at meals", scores: { GS: 3, GB: 2 } },
+      { text: "I graze/snack throughout the day", scores: { GB: 3, GS: 1 } },
+      { text: "I eat high-fat/high-calorie foods", scores: { GB: 3, GS: 2 } },
+      { text: "I have sweet cravings/emotional eating", scores: { GB: 2, GS: 2 } },
+      { text: "Mix of the above", scores: { GS: 2, GB: 2 } }
+    ]
+  },
+  {
+    id: 5,
+    question: "How do you feel about taking medication long-term?",
+    options: [
+      { text: "I'd prefer to avoid surgery if medication works", scores: { MED: 3 } },
+      { text: "I'd consider medication as a first step", scores: { MED: 2, ESG: 1 } },
+      { text: "I want a permanent solution, not ongoing medication", scores: { GS: 3, GB: 2 } },
+      { text: "I'm already on Ozempic/similar and it's not enough", scores: { GS: 3, GB: 2 } }
+    ]
+  },
+  {
+    id: 6,
+    question: "How do you feel about surgical procedures?",
+    options: [
+      { text: "I want to avoid surgery completely", scores: { MED: 3, ESG: 2 } },
+      { text: "I'd prefer the least invasive option", scores: { ESG: 3, GS: 1 } },
+      { text: "I'm comfortable with surgery if outcomes are better", scores: { GS: 3, GB: 3 } },
+      { text: "I want the most effective option regardless", scores: { GB: 3, GS: 2 } }
+    ]
+  },
+  {
+    id: 7,
+    question: "How much time can you take off work for recovery?",
+    options: [
+      { text: "Less than 1 week", scores: { MED: 3, ESG: 2 } },
+      { text: "1-2 weeks", scores: { ESG: 2, GS: 1 } },
+      { text: "2-4 weeks", scores: { GS: 3, GB: 2 } },
+      { text: "4+ weeks if needed", scores: { GB: 3, GS: 2 } }
+    ]
+  },
+  {
+    id: 8,
+    question: "What's most important to you in the long term?",
+    options: [
+      { text: "Maximum weight loss, even with lifestyle changes", scores: { GB: 3, GS: 2 } },
+      { text: "Good weight loss with fewer dietary restrictions", scores: { GS: 3 } },
+      { text: "Reversibility - I want the option to undo it", scores: { ESG: 2, MED: 2 } },
+      { text: "Resolving diabetes/health conditions", scores: { GB: 3, GS: 2 } },
+      { text: "Minimal ongoing maintenance", scores: { GS: 3, GB: 1 } }
+    ]
+  }
+];
+
+// Procedure info for results
+const procedures = {
+  GS: {
+    name: "Gastric Sleeve",
+    fullName: "Gastric Sleeve (Sleeve Gastrectomy)",
+    description: "Removes 70-80% of the stomach, creating a banana-shaped pouch. Most popular procedure in Australia.",
+    weightLoss: "60-70% excess weight",
+    recovery: "2-4 weeks",
+    link: "/procedures/gastric-sleeve",
+    color: "blue"
+  },
+  GB: {
+    name: "Gastric Bypass",
+    fullName: "Gastric Bypass (Roux-en-Y)",
+    description: "Creates a small stomach pouch and reroutes the intestines. Often considered for patients with type 2 diabetes.",
+    weightLoss: "70-80% excess weight",
+    recovery: "3-6 weeks",
+    link: "/procedures/gastric-bypass",
+    color: "purple"
+  },
+  MED: {
+    name: "Weight Loss Medication",
+    fullName: "GLP-1 Medications (Ozempic, Wegovy)",
+    description: "Injectable medications that reduce appetite. Non-surgical option for those who qualify.",
+    weightLoss: "15-20% total weight",
+    recovery: "None",
+    link: "/medications",
+    color: "green"
+  },
+  ESG: {
+    name: "Endoscopic Sleeve",
+    fullName: "Endoscopic Sleeve Gastroplasty",
+    description: "Non-surgical procedure that reduces stomach size using an endoscope. Less invasive option.",
+    weightLoss: "15-20% total weight",
+    recovery: "1-2 days",
+    link: "/procedures/endoscopic-sleeve",
+    color: "teal"
+  }
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <!-- Schema Markup -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Quiz",
+    "name": "Which Weight Loss Surgery Is Right For Me?",
+    "description": meta.description,
+    "educationalLevel": "General",
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "Obesity"
+    }
+  })} />
+
+  <main class="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-orange-50">
+
+    <!-- Breadcrumbs -->
+    <section class="bg-white/50 border-b border-gray-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <Breadcrumbs items={[
+          { name: "Which Surgery Is Right For Me?", url: "/which-surgery-is-right-for-me" }
+        ]} />
+      </div>
+    </section>
+
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+      <!-- Quiz Container -->
+      <div id="quiz-container">
+
+        <!-- Intro Screen -->
+        <div id="quiz-intro" class="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
+          <div class="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold mb-6">
+            Free 2-Minute Quiz
+          </div>
+          
+          <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Which Weight Loss Surgery Is Right For Me?
+          </h1>
+          
+          <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
+            Answer 8 simple questions to explore which weight loss procedure options may suit your health, lifestyle, and goals.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div class="flex items-center justify-center text-gray-600">
+              <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Takes 2-3 minutes
+            </div>
+            <div class="flex items-center justify-center text-gray-600">
+              <svg class="w-5 h-5 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              Your answers are private
+            </div>
+            <div class="flex items-center justify-center text-gray-600">
+              <svg class="w-5 h-5 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+              Personalized results
+            </div>
+          </div>
+
+          <button 
+            id="start-quiz-btn"
+            class="bg-blue-600 text-white px-10 py-4 rounded-xl text-lg font-semibold hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+          >
+            Start Quiz →
+          </button>
+
+          <div class="mt-8 pt-8 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              ⚠️ <strong>Disclaimer:</strong> This quiz provides general guidance only and is not medical advice. 
+              Individual suitability for procedures must be assessed by a qualified health professional.
+            </p>
+          </div>
+        </div>
+
+        <!-- Question Screen (hidden initially) -->
+        <div id="quiz-questions" class="hidden">
+          <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+            <!-- Progress Bar -->
+            <div class="mb-8">
+              <div class="flex justify-between text-sm text-gray-600 mb-2">
+                <span>Question <span id="current-q">1</span> of 8</span>
+                <span id="progress-percent">12%</span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-2">
+                <div id="progress-bar" class="bg-blue-600 h-2 rounded-full transition-all duration-300" style="width: 12.5%"></div>
+              </div>
+            </div>
+
+            <!-- Question Content -->
+            <div id="question-content">
+              <h2 id="question-text" class="text-xl md:text-2xl font-bold text-gray-900 mb-2"></h2>
+              <p id="question-helper" class="text-gray-600 mb-6 hidden">
+                <a href="" id="helper-link" class="text-blue-600 hover:underline"></a>
+              </p>
+              
+              <div id="options-container" class="space-y-3">
+                <!-- Options will be inserted here -->
+              </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex justify-between mt-8 pt-6 border-t border-gray-200">
+              <button 
+                id="back-btn"
+                class="px-6 py-3 text-gray-600 hover:text-gray-900 font-medium disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+                disabled
+              >
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Back
+              </button>
+              <button 
+                id="next-btn"
+                class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+                disabled
+              >
+                Next
+                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Results Screen (hidden initially) -->
+        <div id="quiz-results" class="hidden">
+          <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+            <div class="text-center mb-8">
+              <div class="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold mb-4">
+                🎉 Quiz Complete
+              </div>
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Your Personalized Results</h2>
+              <p class="text-gray-600">Based on your answers, here are your procedure matches:</p>
+            </div>
+
+            <!-- Results Container -->
+            <div id="results-container" class="space-y-4 mb-8">
+              <!-- Results will be inserted here -->
+            </div>
+
+            <!-- Warnings (if any) -->
+            <div id="warnings-container" class="hidden mb-8">
+              <!-- Warnings will be inserted here -->
+            </div>
+
+            <!-- Lead Capture -->
+            <div class="bg-blue-50 rounded-xl p-6 mb-8">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">📧 Get Your Full Report</h3>
+              <p class="text-gray-600 mb-4">Enter your email to receive:</p>
+              <ul class="text-sm text-gray-600 mb-6 space-y-1">
+                <li>✓ Detailed procedure comparison PDF</li>
+                <li>✓ Cost estimates for your area</li>
+                <li>✓ List of qualified surgeons near you</li>
+              </ul>
+              <form id="lead-form" class="space-y-3">
+                <input 
+                  type="email" 
+                  id="lead-email"
+                  placeholder="Your email address" 
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+                <input 
+                  type="text" 
+                  id="lead-name"
+                  placeholder="Your first name" 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+                <input 
+                  type="text" 
+                  id="lead-postcode"
+                  placeholder="Your postcode" 
+                  pattern="[0-9]{4}"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+                <button 
+                  type="submit"
+                  class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+                >
+                  Send My Free Report
+                </button>
+              </form>
+              <p class="text-xs text-gray-500 mt-3 text-center">
+                We respect your privacy. Unsubscribe anytime.
+              </p>
+            </div>
+
+            <!-- Alternative CTA -->
+            <div class="text-center">
+              <p class="text-gray-600 mb-4">Or continue without email:</p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/surgeons" class="bg-white border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+                  Find Surgeons Near Me →
+                </a>
+                <a href="/cost-calculator" class="bg-white border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition">
+                  Calculate My Cost
+                </a>
+              </div>
+            </div>
+
+            <!-- Restart -->
+            <div class="text-center mt-8 pt-6 border-t border-gray-200">
+              <button id="restart-btn" class="text-gray-500 hover:text-gray-700 text-sm">
+                ↻ Take Quiz Again
+              </button>
+            </div>
+          </div>
+
+          <!-- Disclaimer -->
+          <div class="mt-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+            <p class="text-sm text-yellow-900">
+              <strong>Important:</strong> These results are based on general guidelines and your self-reported answers. 
+              They do not constitute medical advice. Individual suitability for any weight loss procedure must be 
+              assessed by a qualified bariatric surgeon who can review your complete medical history.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Quiz Logic Script -->
+  <script define:vars={{ questions, procedures }}>
+    // Quiz state
+    let currentQuestion = 0;
+    let answers = [];
+    let scores = { GS: 0, GB: 0, MED: 0, ESG: 0 };
+    let flags = [];
+
+    // DOM elements
+    const introScreen = document.getElementById('quiz-intro');
+    const questionsScreen = document.getElementById('quiz-questions');
+    const resultsScreen = document.getElementById('quiz-results');
+    const startBtn = document.getElementById('start-quiz-btn');
+    const backBtn = document.getElementById('back-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const restartBtn = document.getElementById('restart-btn');
+    const progressBar = document.getElementById('progress-bar');
+    const progressPercent = document.getElementById('progress-percent');
+    const currentQSpan = document.getElementById('current-q');
+    const questionText = document.getElementById('question-text');
+    const questionHelper = document.getElementById('question-helper');
+    const helperLink = document.getElementById('helper-link');
+    const optionsContainer = document.getElementById('options-container');
+    const resultsContainer = document.getElementById('results-container');
+    const warningsContainer = document.getElementById('warnings-container');
+    const leadForm = document.getElementById('lead-form');
+
+    // Start quiz
+    startBtn.addEventListener('click', () => {
+      introScreen.classList.add('hidden');
+      questionsScreen.classList.remove('hidden');
+      showQuestion(0);
+      
+      // Analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'quiz_start', { quiz_name: 'procedure_selector' });
+      }
+    });
+
+    // Show question
+    function showQuestion(index) {
+      const q = questions[index];
+      currentQuestion = index;
+      
+      // Update progress
+      const progress = ((index + 1) / questions.length) * 100;
+      progressBar.style.width = `${progress}%`;
+      progressPercent.textContent = `${Math.round(progress)}%`;
+      currentQSpan.textContent = index + 1;
+      
+      // Update question text
+      questionText.textContent = q.question;
+      
+      // Show helper if exists
+      if (q.helper && q.helperLink) {
+        questionHelper.classList.remove('hidden');
+        helperLink.textContent = q.helper;
+        helperLink.href = q.helperLink;
+      } else {
+        questionHelper.classList.add('hidden');
+      }
+      
+      // Generate options
+      optionsContainer.innerHTML = '';
+      q.options.forEach((option, i) => {
+        const isSelected = answers[index]?.includes(i);
+        const optionEl = document.createElement('button');
+        optionEl.className = `w-full text-left p-4 rounded-lg border-2 transition ${
+          isSelected 
+            ? 'border-blue-600 bg-blue-50' 
+            : 'border-gray-200 hover:border-blue-300 hover:bg-gray-50'
+        }`;
+        optionEl.innerHTML = `
+          <div class="flex items-center">
+            <div class="w-6 h-6 rounded-full border-2 mr-3 flex items-center justify-center ${
+              isSelected ? 'border-blue-600 bg-blue-600' : 'border-gray-300'
+            }">
+              ${isSelected ? '<svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>' : ''}
+            </div>
+            <span class="text-gray-900">${option.text}</span>
+          </div>
+        `;
+        
+        optionEl.addEventListener('click', () => selectOption(index, i, q.multiSelect));
+        optionsContainer.appendChild(optionEl);
+      });
+      
+      // Update navigation
+      backBtn.disabled = index === 0;
+      nextBtn.disabled = !answers[index] || answers[index].length === 0;
+      nextBtn.textContent = index === questions.length - 1 ? 'See Results' : 'Next';
+      
+      // Analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'quiz_question', { question_number: index + 1 });
+      }
+    }
+
+    // Select option
+    function selectOption(qIndex, optionIndex, multiSelect) {
+      if (multiSelect) {
+        if (!answers[qIndex]) answers[qIndex] = [];
+        const idx = answers[qIndex].indexOf(optionIndex);
+        if (idx > -1) {
+          answers[qIndex].splice(idx, 1);
+        } else {
+          // If selecting "None of the above", clear other selections
+          if (questions[qIndex].options[optionIndex].text.toLowerCase().includes('none')) {
+            answers[qIndex] = [optionIndex];
+          } else {
+            // Remove "None of the above" if selecting other options
+            answers[qIndex] = answers[qIndex].filter(i => 
+              !questions[qIndex].options[i].text.toLowerCase().includes('none')
+            );
+            answers[qIndex].push(optionIndex);
+          }
+        }
+      } else {
+        answers[qIndex] = [optionIndex];
+      }
+      
+      showQuestion(qIndex);
+    }
+
+    // Back button
+    backBtn.addEventListener('click', () => {
+      if (currentQuestion > 0) {
+        showQuestion(currentQuestion - 1);
+      }
+    });
+
+    // Next button
+    nextBtn.addEventListener('click', () => {
+      if (currentQuestion < questions.length - 1) {
+        showQuestion(currentQuestion + 1);
+      } else {
+        calculateResults();
+      }
+    });
+
+    // Calculate results
+    function calculateResults() {
+      // Reset scores
+      scores = { GS: 0, GB: 0, MED: 0, ESG: 0 };
+      flags = [];
+      
+      // Calculate scores from answers
+      answers.forEach((selectedOptions, qIndex) => {
+        if (selectedOptions) {
+          selectedOptions.forEach(optIndex => {
+            const option = questions[qIndex].options[optIndex];
+            if (option.scores) {
+              Object.entries(option.scores).forEach(([proc, points]) => {
+                if (scores[proc] !== undefined) {
+                  scores[proc] += points;
+                }
+              });
+            }
+            if (option.flag) {
+              flags.push(option.flag);
+            }
+          });
+        }
+      });
+      
+      // Calculate max possible score
+      const maxScore = 24; // Approximate max from all positive scores
+      
+      // Sort procedures by score
+      const sortedResults = Object.entries(scores)
+        .map(([code, score]) => ({
+          code,
+          score,
+          percentage: Math.min(100, Math.round((score / maxScore) * 100)),
+          ...procedures[code]
+        }))
+        .sort((a, b) => b.score - a.score)
+        .filter(r => r.score > 0);
+      
+      // Show results
+      showResults(sortedResults);
+      
+      // Analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'quiz_complete', { 
+          top_result: sortedResults[0]?.code,
+          top_score: sortedResults[0]?.percentage
+        });
+      }
+    }
+
+    // Show results
+    function showResults(results) {
+      questionsScreen.classList.add('hidden');
+      resultsScreen.classList.remove('hidden');
+      
+      resultsContainer.innerHTML = '';
+      
+      results.slice(0, 3).forEach((result, index) => {
+        const rank = index === 0 ? '🥇 #1 MATCH' : index === 1 ? '🥈 #2 MATCH' : '🥉 #3 MATCH';
+        const colorClasses = {
+          blue: 'border-blue-500 bg-blue-50',
+          purple: 'border-purple-500 bg-purple-50',
+          green: 'border-green-500 bg-green-50',
+          teal: 'border-teal-500 bg-teal-50'
+        };
+        
+        const card = document.createElement('div');
+        card.className = `border-2 rounded-xl p-6 ${colorClasses[result.color] || 'border-gray-300 bg-gray-50'}`;
+        card.innerHTML = `
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-sm font-bold ${index === 0 ? 'text-yellow-600' : 'text-gray-600'}">${rank}</span>
+            <span class="text-sm font-semibold text-gray-600">${result.percentage}% Match</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">${result.fullName}</h3>
+          <p class="text-gray-600 text-sm mb-4">${result.description}</p>
+          <div class="flex flex-wrap gap-4 text-sm mb-4">
+            <div>
+              <span class="text-gray-500">Weight Loss:</span>
+              <span class="font-semibold text-gray-900">${result.weightLoss}</span>
+            </div>
+            <div>
+              <span class="text-gray-500">Recovery:</span>
+              <span class="font-semibold text-gray-900">${result.recovery}</span>
+            </div>
+          </div>
+          <a href="${result.link}" class="text-blue-600 font-semibold hover:underline">
+            Learn More About ${result.name} →
+          </a>
+        `;
+        resultsContainer.appendChild(card);
+      });
+      
+      // Show warnings if any
+      if (flags.length > 0) {
+        warningsContainer.classList.remove('hidden');
+        warningsContainer.innerHTML = '';
+        
+        if (flags.includes('gerd_warning')) {
+          warningsContainer.innerHTML += `
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded mb-4">
+              <p class="text-yellow-900">
+                <strong>Note:</strong> You indicated you have severe reflux/GERD. Gastric sleeve may worsen reflux in some patients. 
+                Discuss this with your surgeon - gastric bypass is often recommended for patients with significant reflux.
+              </p>
+            </div>
+          `;
+        }
+        
+        if (flags.includes('revision_case')) {
+          warningsContainer.innerHTML += `
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded mb-4">
+              <p class="text-blue-900">
+                <strong>Revision Surgery:</strong> You indicated a previous weight loss surgery. Revision procedures have different 
+                considerations. We recommend consulting with a surgeon experienced in revision bariatric surgery.
+              </p>
+            </div>
+          `;
+        }
+      }
+    }
+
+    // Lead form submission
+    leadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const email = document.getElementById('lead-email').value;
+      const name = document.getElementById('lead-name').value;
+      const postcode = document.getElementById('lead-postcode').value;
+      
+      // Analytics
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'quiz_lead_capture', { 
+          email_provided: true,
+          postcode: postcode
+        });
+      }
+      
+      // Show success message
+      leadForm.innerHTML = `
+        <div class="text-center py-4">
+          <div class="text-4xl mb-3">✅</div>
+          <p class="text-lg font-semibold text-gray-900">Thank you!</p>
+          <p class="text-gray-600">Your personalized report will be sent to ${email}</p>
+        </div>
+      `;
+      
+      // TODO: Integrate with actual email/CRM system
+      console.log('Lead captured:', { email, name, postcode, scores, flags });
+    });
+
+    // Restart quiz
+    restartBtn.addEventListener('click', () => {
+      currentQuestion = 0;
+      answers = [];
+      scores = { GS: 0, GB: 0, MED: 0, ESG: 0 };
+      flags = [];
+      
+      resultsScreen.classList.add('hidden');
+      introScreen.classList.remove('hidden');
+    });
+  </script>
+</BaseLayout>
+

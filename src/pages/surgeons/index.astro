@@ -1,271 +1,361 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 const cities = [
-  {
-    "name": "Kogarah",
-    "slug": "kogarah",
-    "count": 9
-  },
-  {
-    "name": "Richmond",
-    "slug": "richmond",
-    "count": 4
-  },
-  {
-    "name": "Campbelltown",
-    "slug": "campbelltown",
-    "count": 4
-  },
-  {
-    "name": "Liverpool",
-    "slug": "liverpool",
-    "count": 4
-  },
-  {
-    "name": "Camperdown",
-    "slug": "camperdown",
-    "count": 3
-  },
-  {
-    "name": "East Melbourne",
-    "slug": "east-melbourne",
-    "count": 3
-  },
-  {
-    "name": "Bundoora",
-    "slug": "bundoora",
-    "count": 3
-  },
-  {
-    "name": "Newtown",
-    "slug": "newtown",
-    "count": 3
-  },
-  {
-    "name": "Bella Vista",
-    "slug": "bella-vista",
-    "count": 3
-  },
-  {
-    "name": "Bulleen",
-    "slug": "bulleen",
-    "count": 2
-  },
-  {
-    "name": "Randwick",
-    "slug": "randwick",
-    "count": 2
-  },
-  {
-    "name": "Penrith",
-    "slug": "penrith",
-    "count": 2
-  },
-  {
-    "name": "Glen Waverley",
-    "slug": "glen-waverley",
-    "count": 2
-  },
-  {
-    "name": "Wantirna",
-    "slug": "wantirna",
-    "count": 2
-  },
-  {
-    "name": "Potts Point",
-    "slug": "potts-point",
-    "count": 2
-  },
-  {
-    "name": "Norwest",
-    "slug": "norwest",
-    "count": 2
-  },
-  {
-    "name": "Frenchs Forest",
-    "slug": "frenchs-forest",
-    "count": 2
-  },
-  {
-    "name": "Box Hill",
-    "slug": "box-hill",
-    "count": 2
-  },
-  {
-    "name": "Darlinghurst",
-    "slug": "darlinghurst",
-    "count": 2
-  },
-  {
-    "name": "Frankston",
-    "slug": "frankston",
-    "count": 2
-  },
-  {
-    "name": "Berwick",
-    "slug": "berwick",
-    "count": 2
-  },
-  {
-    "name": "Wahroonga",
-    "slug": "wahroonga",
-    "count": 1
-  },
-  {
-    "name": "Kingswood",
-    "slug": "kingswood",
-    "count": 1
-  },
-  {
-    "name": "Hurstville",
-    "slug": "hurstville",
-    "count": 1
-  },
-  {
-    "name": "Gregory Hills",
-    "slug": "gregory-hills",
-    "count": 1
-  },
-  {
-    "name": "Wetherill Park",
-    "slug": "wetherill-park",
-    "count": 1
-  },
-  {
-    "name": "Coburg",
-    "slug": "coburg",
-    "count": 1
-  },
-  {
-    "name": "Langwarrin",
-    "slug": "langwarrin",
-    "count": 1
-  },
-  {
-    "name": "Baulkham Hills",
-    "slug": "baulkham-hills",
-    "count": 1
-  },
-  {
-    "name": "Werribee",
-    "slug": "werribee",
-    "count": 1
-  },
-  {
-    "name": "Westmead",
-    "slug": "westmead",
-    "count": 1
-  },
-  {
-    "name": "Brighton",
-    "slug": "brighton",
-    "count": 1
-  },
-  {
-    "name": "Concord",
-    "slug": "concord",
-    "count": 1
-  },
-  {
-    "name": "Double Bay",
-    "slug": "double-bay",
-    "count": 1
-  },
-  {
-    "name": "Smithfield",
-    "slug": "smithfield",
-    "count": 1
-  },
-  {
-    "name": "Gledswood Hills",
-    "slug": "gledswood-hills",
-    "count": 1
-  },
-  {
-    "name": "Miranda",
-    "slug": "miranda",
-    "count": 1
-  },
-  {
-    "name": "Dandenong",
-    "slug": "dandenong",
-    "count": 1
-  },
-  {
-    "name": "Five Dock",
-    "slug": "five-dock",
-    "count": 1
-  },
-  {
-    "name": "Mount Waverley",
-    "slug": "mount-waverley",
-    "count": 1
-  },
-  {
-    "name": "Ascot Vale",
-    "slug": "ascot-vale",
-    "count": 1
-  },
-  {
-    "name": "Malvern",
-    "slug": "malvern",
-    "count": 1
-  },
-  {
-    "name": "Essendon",
-    "slug": "essendon",
-    "count": 1
-  },
-  {
-    "name": "Surrey Hills",
-    "slug": "surrey-hills",
-    "count": 1
-  },
-  {
-    "name": "Lindfield",
-    "slug": "lindfield",
-    "count": 1
-  }
+  { "name": "Kogarah", "slug": "kogarah", "count": 9 },
+  { "name": "Richmond", "slug": "richmond", "count": 4 },
+  { "name": "Campbelltown", "slug": "campbelltown", "count": 4 },
+  { "name": "Liverpool", "slug": "liverpool", "count": 4 },
+  { "name": "Camperdown", "slug": "camperdown", "count": 3 },
+  { "name": "East Melbourne", "slug": "east-melbourne", "count": 3 },
+  { "name": "Bundoora", "slug": "bundoora", "count": 3 },
+  { "name": "Newtown", "slug": "newtown", "count": 3 },
+  { "name": "Bella Vista", "slug": "bella-vista", "count": 3 },
+  { "name": "Bulleen", "slug": "bulleen", "count": 2 },
+  { "name": "Randwick", "slug": "randwick", "count": 2 },
+  { "name": "Penrith", "slug": "penrith", "count": 2 },
+  { "name": "Glen Waverley", "slug": "glen-waverley", "count": 2 },
+  { "name": "Wantirna", "slug": "wantirna", "count": 2 },
+  { "name": "Potts Point", "slug": "potts-point", "count": 2 },
+  { "name": "Norwest", "slug": "norwest", "count": 2 },
+  { "name": "Frenchs Forest", "slug": "frenchs-forest", "count": 2 },
+  { "name": "Box Hill", "slug": "box-hill", "count": 2 },
+  { "name": "Darlinghurst", "slug": "darlinghurst", "count": 2 },
+  { "name": "Frankston", "slug": "frankston", "count": 2 },
+  { "name": "Berwick", "slug": "berwick", "count": 2 },
+  { "name": "Wahroonga", "slug": "wahroonga", "count": 1 },
+  { "name": "Kingswood", "slug": "kingswood", "count": 1 },
+  { "name": "Hurstville", "slug": "hurstville", "count": 1 },
+  { "name": "Gregory Hills", "slug": "gregory-hills", "count": 1 },
+  { "name": "Wetherill Park", "slug": "wetherill-park", "count": 1 },
+  { "name": "Coburg", "slug": "coburg", "count": 1 },
+  { "name": "Langwarrin", "slug": "langwarrin", "count": 1 },
+  { "name": "Baulkham Hills", "slug": "baulkham-hills", "count": 1 },
+  { "name": "Werribee", "slug": "werribee", "count": 1 },
+  { "name": "Westmead", "slug": "westmead", "count": 1 },
+  { "name": "Brighton", "slug": "brighton", "count": 1 },
+  { "name": "Concord", "slug": "concord", "count": 1 },
+  { "name": "Double Bay", "slug": "double-bay", "count": 1 },
+  { "name": "Smithfield", "slug": "smithfield", "count": 1 },
+  { "name": "Gledswood Hills", "slug": "gledswood-hills", "count": 1 },
+  { "name": "Miranda", "slug": "miranda", "count": 1 },
+  { "name": "Dandenong", "slug": "dandenong", "count": 1 },
+  { "name": "Five Dock", "slug": "five-dock", "count": 1 },
+  { "name": "Mount Waverley", "slug": "mount-waverley", "count": 1 },
+  { "name": "Ascot Vale", "slug": "ascot-vale", "count": 1 },
+  { "name": "Malvern", "slug": "malvern", "count": 1 },
+  { "name": "Essendon", "slug": "essendon", "count": 1 },
+  { "name": "Surrey Hills", "slug": "surrey-hills", "count": 1 },
+  { "name": "Lindfield", "slug": "lindfield", "count": 1 }
 ];
 
-const title = "Find Bariatric Surgeons in Australia | Weight Loss Surgery Specialists";
-const description = "Browse experienced bariatric surgeons across Australia. Compare qualifications, reviews, and procedures for gastric sleeve, bypass, and band surgery.";
+// Calculate totals
+const totalSurgeons = cities.reduce((sum, city) => sum + city.count, 0);
+const sydneyCities = cities.filter(c => ['Kogarah', 'Campbelltown', 'Liverpool', 'Camperdown', 'Newtown', 'Bella Vista', 'Randwick', 'Penrith', 'Potts Point', 'Norwest', 'Frenchs Forest', 'Darlinghurst', 'Wahroonga', 'Kingswood', 'Hurstville', 'Gregory Hills', 'Wetherill Park', 'Baulkham Hills', 'Westmead', 'Concord', 'Double Bay', 'Smithfield', 'Gledswood Hills', 'Miranda', 'Five Dock', 'Lindfield'].includes(c.name));
+const melbourneCities = cities.filter(c => ['Richmond', 'East Melbourne', 'Bundoora', 'Bulleen', 'Glen Waverley', 'Wantirna', 'Box Hill', 'Frankston', 'Berwick', 'Coburg', 'Langwarrin', 'Werribee', 'Brighton', 'Dandenong', 'Mount Waverley', 'Ascot Vale', 'Malvern', 'Essendon', 'Surrey Hills'].includes(c.name));
+
+const title = "Compare Weight Loss Surgeons Australia 2025 | Find & Compare Bariatric Surgeons";
+const description = "Compare 80+ qualified weight loss surgeons across Sydney and Melbourne. View credentials, procedures, locations, and find the right bariatric surgeon for you.";
+const pageUrl = "https://weightlosssurgery.com.au/surgeons";
+
+// FAQ data for schema and display
+const faqs = [
+  {
+    q: "What qualifications should a weight loss surgeon have in Australia?",
+    a: "Look for FRACS (Fellow of the Royal Australasian College of Surgeons) qualification, current AHPRA registration, and specific training in bariatric surgery. Membership in OSSANZ (Obesity Surgery Society of Australia and New Zealand) indicates additional specialisation."
+  },
+  {
+    q: "How do I compare weight loss surgeons?",
+    a: "Compare surgeons based on: years of experience, number of procedures performed, types of procedures offered (sleeve, bypass, band), hospital affiliations, location convenience, consultation approach, and post-operative support programs. Our directory provides this information for each surgeon."
+  },
+  {
+    q: "How many weight loss surgeries should a surgeon have performed?",
+    a: "Look for surgeons who perform at least 50-100 bariatric procedures per year. Higher volume typically correlates with better outcomes and lower complication rates. Ask about their specific experience with your chosen procedure."
+  },
+  {
+    q: "Should I get a second opinion before weight loss surgery?",
+    a: "Yes, consulting 2-3 surgeons is recommended. This helps you compare approaches, costs, and find the best fit for your needs. There's no obligation to choose the first surgeon you meet."
+  },
+  {
+    q: "What questions should I ask a weight loss surgeon?",
+    a: "Key questions include: How many of this procedure have you performed? What is your complication rate? What post-operative support do you provide? What are the total costs including hospital and anaesthetist fees? How do you handle emergencies?"
+  },
+  {
+    q: "How much does a consultation with a weight loss surgeon cost?",
+    a: "Initial consultations typically range from $150-$400, though some surgeons offer free consultations. Medicare rebates may apply with a GP referral. Ask about consultation fees when booking."
+  }
+];
 ---
 
 <BaseLayout title={title} description={description}>
-  <section class="bg-gradient-to-br from-blue-50 to-white py-16">
+  <!-- Schema Markup -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "name": "Compare Weight Loss Surgeons Australia",
+    "description": description,
+    "url": pageUrl,
+    "mainEntity": {
+      "@type": "ItemList",
+      "name": "Weight Loss Surgeons Directory",
+      "numberOfItems": totalSurgeons,
+      "itemListElement": cities.slice(0, 10).map((city, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": `Weight Loss Surgeons in ${city.name}`,
+        "url": `${pageUrl}/${city.slug}`
+      }))
+    }
+  })} />
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  })} />
+
+  <!-- Breadcrumbs -->
+  <section class="bg-gradient-to-br from-blue-50 to-white pt-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-8 items-center mb-12">
+      <Breadcrumbs items={[
+        { name: "Surgeons", url: "/surgeons" }
+      ]} />
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-50 to-white pb-12 pt-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
         <div class="lg:col-span-7">
           <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Find My Bariatric Surgeon
+            Compare Weight Loss Surgeons in Australia
           </h1>
-          <p class="text-xl text-gray-600 mb-8">
-            Browse experienced weight loss surgery specialists by location
+          <p class="text-xl text-gray-600 mb-6">
+            Browse {totalSurgeons}+ qualified bariatric surgeons across Sydney and Melbourne. Compare credentials, experience, and find the right surgeon for your weight loss journey.
           </p>
+          
+          <!-- Quick Stats -->
+          <div class="flex flex-wrap gap-4 mb-8">
+            <div class="bg-white rounded-lg px-4 py-3 shadow-sm border border-gray-100">
+              <span class="text-2xl font-bold text-blue-600">{totalSurgeons}+</span>
+              <span class="text-gray-600 ml-2">Surgeons</span>
+            </div>
+            <div class="bg-white rounded-lg px-4 py-3 shadow-sm border border-gray-100">
+              <span class="text-2xl font-bold text-blue-600">{cities.length}</span>
+              <span class="text-gray-600 ml-2">Locations</span>
+            </div>
+            <div class="bg-white rounded-lg px-4 py-3 shadow-sm border border-gray-100">
+              <span class="text-2xl font-bold text-blue-600">FRACS</span>
+              <span class="text-gray-600 ml-2">Verified</span>
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="flex flex-wrap gap-4">
+            <a href="/surgeons/sydney" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+              Sydney Surgeons →
+            </a>
+            <a href="/surgeons/melbourne" class="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition">
+              Melbourne Surgeons →
+            </a>
+          </div>
         </div>
         <div class="hidden lg:block lg:col-span-5">
           <img 
             src="/images/surgeon.webp" 
-            alt="Professional group of Australian bariatric surgeons in medical setting"
+            alt="Qualified Australian bariatric surgeons ready to help with weight loss surgery"
             class="w-full h-[400px] object-cover rounded-2xl shadow-2xl"
             loading="eager"
           />
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- How to Choose Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">How to Choose a Weight Loss Surgeon</h2>
+        
+        <p class="text-lg text-gray-700 mb-6">
+          Choosing the right weight loss surgeon is one of the most important decisions in your bariatric surgery journey. The surgeon you select will not only perform your procedure but also guide your recovery and long-term success.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-blue-50 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">✅ Essential Credentials</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>FRACS qualification</strong> - Fellow of Royal Australasian College of Surgeons</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>AHPRA registration</strong> - Current and in good standing</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>Bariatric specialisation</strong> - Specific training in weight loss surgery</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>Hospital privileges</strong> - Accredited private hospital affiliations</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-purple-50 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-3">🔍 What to Compare</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>Experience</strong> - Years practicing, procedures performed</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>Procedures offered</strong> - Sleeve, bypass, band, revision</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>Post-op support</strong> - Dietitian, follow-up program</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-5 h-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span><strong>Location & convenience</strong> - Hospital access, consultation availability</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Helpful Tools -->
+        <div class="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 border border-green-200">
+          <h3 class="text-xl font-bold text-gray-900 mb-4">📋 Helpful Tools for Your Decision</h3>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <a href="/surgeon-selection-checklist" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition text-center">
+              <div class="text-2xl mb-2">✅</div>
+              <p class="font-semibold text-gray-900">Surgeon Checklist</p>
+              <p class="text-sm text-gray-600">15-point evaluation</p>
+            </a>
+            <a href="/am-i-ready" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition text-center">
+              <div class="text-2xl mb-2">🤔</div>
+              <p class="font-semibold text-gray-900">Am I Ready?</p>
+              <p class="text-sm text-gray-600">Readiness assessment</p>
+            </a>
+            <a href="/cost-calculator" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition text-center">
+              <div class="text-2xl mb-2">💰</div>
+              <p class="font-semibold text-gray-900">Cost Calculator</p>
+              <p class="text-sm text-gray-600">Estimate your costs</p>
+            </a>
+            <a href="/compare" class="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition text-center">
+              <div class="text-2xl mb-2">⚖️</div>
+              <p class="font-semibold text-gray-900">Compare Procedures</p>
+              <p class="text-sm text-gray-600">Sleeve vs bypass</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Directory -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Browse Surgeons by Location</h2>
       
-      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
+      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
         {cities.map((city) => (
           <a 
             href={`/surgeons/${city.slug}`}
-            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 text-center"
+            class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow p-6 text-center group"
           >
-            <h2 class="text-xl font-bold text-gray-900 mb-2">{city.name}</h2>
+            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition">{city.name}</h3>
             <p class="text-gray-600">{city.count} {city.count === 1 ? 'surgeon' : 'surgeons'}</p>
           </a>
         ))}
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+      
+      <div class="space-y-4">
+        {faqs.map(faq => (
+          <details class="bg-gray-50 rounded-lg p-6 group">
+            <summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+              {faq.q}
+              <svg class="w-5 h-5 text-gray-500 transform group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <div class="mt-4 text-gray-700 leading-relaxed">
+              {faq.a}
+            </div>
+          </details>
+        ))}
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/faq" class="text-blue-600 font-semibold hover:text-blue-700">
+          View All 100+ FAQ →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-12 bg-blue-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to Find Your Surgeon?</h2>
+      <p class="text-xl text-blue-100 mb-8">
+        Use our free tools to prepare for your consultation and make an informed decision.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/surgeon-selection-checklist" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition">
+          Get Surgeon Checklist
+        </a>
+        <a href="/contact" class="bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition border border-blue-500">
+          Request Consultation Help
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="py-6 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-sm text-gray-600 text-center">
+        <strong>Disclaimer:</strong> This information is general in nature and does not constitute medical advice. Surgeon listings are for informational purposes only and do not constitute endorsement. Verify all credentials independently through AHPRA and consult with qualified healthcare professionals for personalised advice.
+      </p>
     </div>
   </section>
 </BaseLayout>

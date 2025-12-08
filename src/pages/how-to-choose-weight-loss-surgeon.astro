@@ -1,0 +1,718 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import ContentFreshness from '../components/ContentFreshness.astro';
+
+const meta = {
+  title: "How to Choose a Weight Loss Surgeon in Australia | Complete Guide 2025",
+  description: "Learn how to choose the right weight loss surgeon in Australia. Essential qualifications, questions to ask, red flags to avoid, and a step-by-step selection process.",
+  keywords: ["how to choose weight loss surgeon", "weight loss surgeon qualifications", "bariatric surgeon questions", "find weight loss surgeon Australia"]
+};
+
+const pageUrl = "https://weightlosssurgery.com.au/how-to-choose-weight-loss-surgeon";
+
+// FAQ data
+const faqs = [
+  {
+    q: "What is the most important qualification for a weight loss surgeon?",
+    a: "FRACS (Fellow of the Royal Australasian College of Surgeons) is essential. This qualification requires 10+ years of training and demonstrates the surgeon has met rigorous Australian standards. Additionally, look for specific bariatric surgery training and AHPRA registration."
+  },
+  {
+    q: "How many surgeries should my surgeon have performed?",
+    a: "Look for surgeons who perform at least 50-100 bariatric procedures per year. Higher volume surgeons typically have better outcomes and lower complication rates. For your specific procedure, ask how many they've performed in total and in the past 12 months."
+  },
+  {
+    q: "Should I consult multiple surgeons before deciding?",
+    a: "Yes, consulting 2-3 surgeons is recommended. This allows you to compare approaches, communication styles, costs, and post-operative support programs. There's no obligation to choose the first surgeon you meet."
+  },
+  {
+    q: "What's the difference between a bariatric surgeon and a general surgeon?",
+    a: "A bariatric surgeon has completed additional training specifically in weight loss surgery procedures and typically performs these surgeries as their primary focus. General surgeons may perform bariatric surgery occasionally but without the same specialisation and volume."
+  },
+  {
+    q: "How important is post-operative support?",
+    a: "Critical. Long-term success depends heavily on post-op support including dietitian access, follow-up appointments, support groups, and emergency protocols. Ask about the surgeon's complete support program before deciding."
+  },
+  {
+    q: "Can I verify a surgeon's credentials myself?",
+    a: "Yes. Check AHPRA registration at ahpra.gov.au, FRACS status at surgeons.org, and OSSANZ membership at ossanz.com.au. These are public databases you can search by name."
+  },
+  {
+    q: "What if I don't feel comfortable with a surgeon?",
+    a: "Trust your instincts. If you feel rushed, dismissed, or uncomfortable, seek another opinion. A good surgeon-patient relationship is important for your journey. You're making a significant decision and deserve to feel confident."
+  },
+  {
+    q: "Does location matter when choosing a surgeon?",
+    a: "Yes. You'll need multiple appointments before and after surgery. Choose a surgeon whose hospital and consulting rooms are reasonably accessible. However, don't compromise on qualifications just for convenience."
+  }
+];
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <!-- Schema Markup -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Choose a Weight Loss Surgeon in Australia",
+    "description": meta.description,
+    "datePublished": "2025-01-15",
+    "dateModified": "2025-12-07",
+    "author": {
+      "@type": "Organization",
+      "name": "Weight Loss Surgery Australia"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Weight Loss Surgery Australia",
+      "url": "https://weightlosssurgery.com.au"
+    }
+  })} />
+
+  <!-- HowTo Schema -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Choose a Weight Loss Surgeon",
+    "description": "A step-by-step guide to selecting the right bariatric surgeon in Australia",
+    "totalTime": "P14D",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Verify Essential Credentials",
+        "text": "Check AHPRA registration, FRACS qualification, and bariatric surgery specialisation"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Research Experience and Volume",
+        "text": "Look for surgeons performing 50-100+ procedures per year with specific experience in your chosen procedure"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Book Consultations with 2-3 Surgeons",
+        "text": "Meet multiple surgeons to compare approaches, communication styles, and costs"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Ask Critical Questions",
+        "text": "Ask about complication rates, post-op support, emergency protocols, and total costs"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Evaluate Post-Operative Support",
+        "text": "Assess dietitian access, follow-up schedule, support groups, and long-term care programs"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Make Your Decision",
+        "text": "Choose the surgeon who meets your needs for qualifications, experience, support, and rapport"
+      }
+    ]
+  })} />
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json" is:inline set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  })} />
+
+  <!-- Breadcrumbs -->
+  <section class="bg-gradient-to-br from-blue-50 to-white pt-6">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Breadcrumbs items={[
+        { name: "Surgeons", url: "/surgeons" },
+        { name: "How to Choose", url: "/how-to-choose-weight-loss-surgeon" }
+      ]} />
+    </div>
+  </section>
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-blue-50 to-white pb-12 pt-6">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        How to Choose a Weight Loss Surgeon in Australia
+      </h1>
+      <p class="text-xl text-gray-600 mb-6">
+        Your complete guide to finding and evaluating bariatric surgeons. Learn what qualifications matter, what questions to ask, and how to make a confident decision.
+      </p>
+      <ContentFreshness 
+        datePublished="2025-01-15"
+        dateModified="2025-12-07"
+      />
+
+      <!-- Quick Navigation -->
+      <div class="bg-white rounded-xl shadow-md p-6 mt-8">
+        <h2 class="font-bold text-gray-900 mb-4">In This Guide:</h2>
+        <ul class="grid md:grid-cols-2 gap-2 text-sm">
+          <li><a href="#credentials" class="text-blue-600 hover:text-blue-700">→ Essential Credentials to Verify</a></li>
+          <li><a href="#experience" class="text-blue-600 hover:text-blue-700">→ Evaluating Experience & Volume</a></li>
+          <li><a href="#questions" class="text-blue-600 hover:text-blue-700">→ Questions to Ask Your Surgeon</a></li>
+          <li><a href="#red-flags" class="text-blue-600 hover:text-blue-700">→ Red Flags to Watch For</a></li>
+          <li><a href="#post-op" class="text-blue-600 hover:text-blue-700">→ Post-Operative Support</a></li>
+          <li><a href="#costs" class="text-blue-600 hover:text-blue-700">→ Understanding Costs</a></li>
+          <li><a href="#checklist" class="text-blue-600 hover:text-blue-700">→ Your Selection Checklist</a></li>
+          <li><a href="#faq" class="text-blue-600 hover:text-blue-700">→ Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why This Matters -->
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Choosing the Right Surgeon Matters</h2>
+      
+      <p class="text-lg text-gray-700 mb-6">
+        Weight loss surgery is a significant medical procedure with lifelong implications. The surgeon you choose will not only perform your operation but also guide your preparation, recovery, and long-term success. Making an informed choice is important for your safety and long-term results.
+      </p>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+        <p class="text-yellow-900">
+          <strong>Important:</strong> This guide provides general information to help you evaluate surgeons. It does not constitute medical advice or endorsement of specific practitioners. Always verify credentials independently and consult with qualified healthcare professionals for personalised guidance.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-blue-50 rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">👨‍⚕️</div>
+          <h3 class="font-bold text-gray-900 mb-2">Surgeon Skill</h3>
+          <p class="text-sm text-gray-600">Technical expertise directly impacts surgical outcomes and complication rates</p>
+        </div>
+        <div class="bg-purple-50 rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">🤝</div>
+          <h3 class="font-bold text-gray-900 mb-2">Support Team</h3>
+          <p class="text-sm text-gray-600">Dietitians, psychologists, and nurses play crucial roles in your success</p>
+        </div>
+        <div class="bg-green-50 rounded-xl p-6 text-center">
+          <div class="text-4xl mb-3">📅</div>
+          <h3 class="font-bold text-gray-900 mb-2">Long-term Care</h3>
+          <p class="text-sm text-gray-600">Follow-up support for years after surgery supports long-term management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Essential Credentials -->
+  <section id="credentials" class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Essential Credentials to Verify</h2>
+      
+      <p class="text-lg text-gray-700 mb-8">
+        Before considering any surgeon, verify these essential qualifications. These credentials indicate your surgeon has completed rigorous training and meets Australian medical standards.
+      </p>
+
+      <div class="space-y-6">
+        <!-- AHPRA -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">AHPRA Registration</h3>
+              <p class="text-gray-700 mb-3">
+                The Australian Health Practitioner Regulation Agency (AHPRA) registers all medical practitioners in Australia. Every surgeon must have current registration to practice legally.
+              </p>
+              <p class="text-sm text-gray-600 mb-3">
+                <strong>How to verify:</strong> Search the surgeon's name at <a href="https://www.ahpra.gov.au/Registration/Registers-of-Practitioners.aspx" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700">ahpra.gov.au</a>. Confirm their registration is current and check for any conditions or restrictions.
+              </p>
+              <div class="bg-green-50 rounded-lg p-3">
+                <p class="text-sm text-green-800"><strong>✓ Look for:</strong> "Registered" status with no conditions affecting their surgical practice</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FRACS -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">FRACS Qualification</h3>
+              <p class="text-gray-700 mb-3">
+                Fellow of the Royal Australasian College of Surgeons (FRACS) indicates completion of extensive surgical training. This qualification requires a minimum of 10 years of medical education and training.
+              </p>
+              <p class="text-sm text-gray-600 mb-3">
+                <strong>How to verify:</strong> Search at <a href="https://www.surgeons.org/find-a-surgeon" target="_blank" rel="noopener" class="text-blue-600 hover:text-blue-700">surgeons.org/find-a-surgeon</a>
+              </p>
+              <div class="bg-green-50 rounded-lg p-3">
+                <p class="text-sm text-green-800"><strong>✓ Look for:</strong> FRACS in General Surgery or Upper GI Surgery</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bariatric Specialisation -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Bariatric Surgery Specialisation</h3>
+              <p class="text-gray-700 mb-3">
+                Look for surgeons who have completed additional training specifically in bariatric (weight loss) surgery and who perform these procedures as a significant part of their practice.
+              </p>
+              <p class="text-sm text-gray-600 mb-3">
+                <strong>Key indicators:</strong> OSSANZ membership (Obesity Surgery Society of Australia and New Zealand), fellowship training in bariatric surgery, or practice focused primarily on weight loss procedures.
+              </p>
+              <div class="bg-green-50 rounded-lg p-3">
+                <p class="text-sm text-green-800"><strong>✓ Look for:</strong> OSSANZ membership, dedicated bariatric practice, fellowship training</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hospital Privileges -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Hospital Privileges</h3>
+              <p class="text-gray-700 mb-3">
+                Your surgeon should have operating privileges at an accredited private hospital with appropriate facilities for bariatric surgery, including ICU access and experienced nursing staff.
+              </p>
+              <p class="text-sm text-gray-600 mb-3">
+                <strong>Why it matters:</strong> Hospitals grant privileges based on their own credentialing process, providing an additional layer of verification. Accredited hospitals also have emergency protocols and equipment for managing complications.
+              </p>
+              <div class="bg-green-50 rounded-lg p-3">
+                <p class="text-sm text-green-800"><strong>✓ Look for:</strong> Privileges at accredited private hospitals with bariatric surgery programs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Volume -->
+  <section id="experience" class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Evaluating Experience & Volume</h2>
+      
+      <p class="text-lg text-gray-700 mb-8">
+        Research consistently shows that surgical outcomes improve with surgeon experience. Higher volume surgeons typically have lower complication rates and better patient outcomes.
+      </p>
+
+      <div class="bg-blue-50 rounded-xl p-6 mb-8">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">What to Ask About Experience</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="bg-white rounded-lg p-4">
+            <p class="font-semibold text-gray-900 mb-2">Total Procedures</p>
+            <p class="text-sm text-gray-600">"How many [specific procedure] surgeries have you performed in total?"</p>
+            <p class="text-sm text-green-700 mt-2">✓ Good answer: 500+ total for your specific procedure</p>
+          </div>
+          <div class="bg-white rounded-lg p-4">
+            <p class="font-semibold text-gray-900 mb-2">Annual Volume</p>
+            <p class="text-sm text-gray-600">"How many bariatric procedures do you perform per year?"</p>
+            <p class="text-sm text-green-700 mt-2">✓ Good answer: 50-100+ procedures annually</p>
+          </div>
+          <div class="bg-white rounded-lg p-4">
+            <p class="font-semibold text-gray-900 mb-2">Years of Practice</p>
+            <p class="text-sm text-gray-600">"How long have you been performing bariatric surgery?"</p>
+            <p class="text-sm text-green-700 mt-2">✓ Good answer: 5+ years of dedicated practice</p>
+          </div>
+          <div class="bg-white rounded-lg p-4">
+            <p class="font-semibold text-gray-900 mb-2">Revision Experience</p>
+            <p class="text-sm text-gray-600">"Do you perform revision surgeries?"</p>
+            <p class="text-sm text-green-700 mt-2">✓ Good answer: Yes, including revisions from other surgeons</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg">
+        <h3 class="font-bold text-yellow-900 mb-2">Why Volume Matters</h3>
+        <p class="text-yellow-800">
+          Studies show that surgeons performing 50+ bariatric procedures annually have significantly lower complication rates than those performing fewer. However, volume alone isn't everything—also consider the surgeon's outcomes data, support team, and your personal rapport.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Questions to Ask -->
+  <section id="questions" class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Critical Questions to Ask Your Surgeon</h2>
+      
+      <p class="text-lg text-gray-700 mb-8">
+        Your consultation is your opportunity to evaluate the surgeon. Experienced, confident surgeons will answer these questions openly. Evasive or defensive responses are a red flag.
+      </p>
+
+      <div class="space-y-6">
+        <!-- Question 1 -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-3">❓ "What is your complication rate?"</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-green-50 rounded-lg p-4">
+              <p class="text-sm font-semibold text-green-800 mb-2">✓ Good Answer</p>
+              <p class="text-sm text-green-700">Provides specific percentages, compares to national averages, discusses how complications are managed</p>
+            </div>
+            <div class="bg-red-50 rounded-lg p-4">
+              <p class="text-sm font-semibold text-red-800 mb-2">🚩 Red Flag</p>
+              <p class="text-sm text-red-700">"I don't track that" or "I've never had any complications" (statistically impossible at high volume)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-3">❓ "What's included in your fee and what's extra?"</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-green-50 rounded-lg p-4">
+              <p class="text-sm font-semibold text-green-800 mb-2">✓ Good Answer</p>
+              <p class="text-sm text-green-700">Provides itemised breakdown of surgeon fee, hospital costs, anaesthetist fee, and post-op inclusions</p>
+            </div>
+            <div class="bg-red-50 rounded-lg p-4">
+              <p class="text-sm font-semibold text-red-800 mb-2">🚩 Red Flag</p>
+              <p class="text-sm text-red-700">Vague about costs, can't provide written quote, or surprises appear after booking</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-3">❓ "What post-operative support do you provide?"</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-green-50 rounded-lg p-4">
+              <p class="text-sm font-semibold text-green-800 mb-2">✓ Good Answer</p>
+              <p class="text-sm text-green-700">Describes follow-up schedule, dietitian access, support groups, and long-term monitoring program</p>
+            </div>
+            <div class="bg-red-50 rounded-lg p-4">
+              <p class="text-sm font-semibold text-red-800 mb-2">🚩 Red Flag</p>
+              <p class="text-sm text-red-700">"Just call the hospital" or minimal follow-up offered, no dietitian support</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-3">❓ "How do you handle emergencies after hours?"</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-green-50 rounded-lg p-4">
+              <p class="text-sm font-semibold text-green-800 mb-2">✓ Good Answer</p>
+              <p class="text-sm text-green-700">Clear protocol, direct contact number, hospital backup arrangements, colleague coverage</p>
+            </div>
+            <div class="bg-red-50 rounded-lg p-4">
+              <p class="text-sm font-semibold text-red-800 mb-2">🚩 Red Flag</p>
+              <p class="text-sm text-red-700">"Go to emergency" with no direct contact or unclear emergency protocols</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-3">❓ "Why do you recommend [procedure] for me?"</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="bg-green-50 rounded-lg p-4">
+              <p class="text-sm font-semibold text-green-800 mb-2">✓ Good Answer</p>
+              <p class="text-sm text-green-700">Explains reasoning based on your BMI, health conditions, goals, and discusses alternatives</p>
+            </div>
+            <div class="bg-red-50 rounded-lg p-4">
+              <p class="text-sm font-semibold text-red-800 mb-2">🚩 Red Flag</p>
+              <p class="text-sm text-red-700">Pushes one procedure without considering your individual situation or discussing options</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <a href="/surgeon-selection-checklist" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition">
+          Get Our Complete 15-Point Checklist →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Red Flags -->
+  <section id="red-flags" class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Red Flags to Watch For</h2>
+      
+      <p class="text-lg text-gray-700 mb-8">
+        These warning signs suggest you should seek another opinion. Trust your instincts—if something feels wrong, it probably is.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+          <h3 class="font-bold text-red-900 mb-4">🚩 Credential Concerns</h3>
+          <ul class="space-y-2 text-red-800">
+            <li>• Not FRACS qualified</li>
+            <li>• Can't verify AHPRA registration</li>
+            <li>• Operates at non-accredited facilities</li>
+            <li>• Won't share qualifications</li>
+          </ul>
+        </div>
+
+        <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+          <h3 class="font-bold text-red-900 mb-4">🚩 Communication Issues</h3>
+          <ul class="space-y-2 text-red-800">
+            <li>• Dismisses your questions or concerns</li>
+            <li>• Pressures you to book immediately</li>
+            <li>• Minimises risks or guarantees outcomes</li>
+            <li>• Consultation feels rushed</li>
+          </ul>
+        </div>
+
+        <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+          <h3 class="font-bold text-red-900 mb-4">🚩 Transparency Problems</h3>
+          <ul class="space-y-2 text-red-800">
+            <li>• Won't provide written cost breakdown</li>
+            <li>• Evasive about complication rates</li>
+            <li>• Hidden fees appear after booking</li>
+            <li>• Unclear about what's included</li>
+          </ul>
+        </div>
+
+        <div class="bg-red-50 rounded-xl p-6 border border-red-200">
+          <h3 class="font-bold text-red-900 mb-4">🚩 Support Gaps</h3>
+          <ul class="space-y-2 text-red-800">
+            <li>• No dietitian or multidisciplinary team</li>
+            <li>• Minimal follow-up program</li>
+            <li>• No clear emergency protocol</li>
+            <li>• "One and done" approach</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Post-Op Support -->
+  <section id="post-op" class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Evaluating Post-Operative Support</h2>
+      
+      <p class="text-lg text-gray-700 mb-8">
+        Long-term success depends heavily on post-operative support. A comprehensive program should include multiple healthcare professionals and ongoing monitoring.
+      </p>
+
+      <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">What Good Post-Op Support Looks Like</h3>
+        
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <span class="text-green-600 font-bold">1</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Regular Follow-Up Schedule</p>
+              <p class="text-gray-600 text-sm">Appointments at 2 weeks, 6 weeks, 3 months, 6 months, 12 months, then annually</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <span class="text-green-600 font-bold">2</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Dietitian Access</p>
+              <p class="text-gray-600 text-sm">Dedicated bariatric dietitian for meal planning, troubleshooting, and nutritional guidance</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <span class="text-green-600 font-bold">3</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Support Groups</p>
+              <p class="text-gray-600 text-sm">Regular group meetings with other patients for peer support and shared experiences</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <span class="text-green-600 font-bold">4</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Blood Test Monitoring</p>
+              <p class="text-gray-600 text-sm">Regular blood tests to check vitamin levels and nutritional status</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+              <span class="text-green-600 font-bold">5</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900">Emergency Access</p>
+              <p class="text-gray-600 text-sm">Clear protocol for urgent concerns, direct contact number for after-hours issues</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Costs -->
+  <section id="costs" class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Understanding Costs</h2>
+      
+      <p class="text-lg text-gray-700 mb-8">
+        Surgery costs vary significantly between surgeons and locations. Get a complete breakdown before making your decision.
+      </p>
+
+      <div class="bg-blue-50 rounded-xl p-6 mb-8">
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Typical Cost Components</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          <div>
+            <p class="font-semibold text-gray-900 mb-2">Surgeon Fee</p>
+            <p class="text-gray-600 text-sm">$8,000-$12,000 (varies by surgeon and procedure)</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-2">Hospital Fee</p>
+            <p class="text-gray-600 text-sm">$5,000-$10,000 (1-2 night stay, theatre, nursing)</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-2">Anaesthetist Fee</p>
+            <p class="text-gray-600 text-sm">$2,000-$3,000</p>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-2">Pre-Op Tests</p>
+            <p class="text-gray-600 text-sm">$500-$1,500 (blood tests, sleep study, etc.)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+        <p class="text-yellow-900">
+          <strong>Important:</strong> The cheapest option isn't always the right choice. Consider the total package including experience, post-operative support, and included follow-up care. Understand what's included in the quoted price.
+        </p>
+      </div>
+
+      <div class="text-center">
+        <a href="/cost-calculator" class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition">
+          Calculate Your Personalised Cost →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checklist Summary -->
+  <section id="checklist" class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Your Surgeon Selection Checklist</h2>
+      
+      <div class="bg-white rounded-xl shadow-md p-6 mb-8">
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-4 text-blue-600" disabled>
+            <span class="text-gray-700">Verified AHPRA registration (ahpra.gov.au)</span>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-4 text-blue-600" disabled>
+            <span class="text-gray-700">Confirmed FRACS qualification (surgeons.org)</span>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-4 text-blue-600" disabled>
+            <span class="text-gray-700">Bariatric surgery specialisation confirmed</span>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-4 text-blue-600" disabled>
+            <span class="text-gray-700">Performs 50+ procedures annually</span>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-4 text-blue-600" disabled>
+            <span class="text-gray-700">Operates at accredited private hospital</span>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-4 text-blue-600" disabled>
+            <span class="text-gray-700">Provided written cost breakdown</span>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-4 text-blue-600" disabled>
+            <span class="text-gray-700">Discussed complication rates openly</span>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-4 text-blue-600" disabled>
+            <span class="text-gray-700">Comprehensive post-op support program</span>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-4 text-blue-600" disabled>
+            <span class="text-gray-700">Clear emergency contact protocol</span>
+          </div>
+          <div class="flex items-center">
+            <input type="checkbox" class="w-5 h-5 mr-4 text-blue-600" disabled>
+            <span class="text-gray-700">Felt comfortable and not rushed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="/surgeon-selection-checklist" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition">
+          Get Full 15-Point Checklist + PDF Download →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+      
+      <div class="space-y-4">
+        {faqs.map(faq => (
+          <details class="bg-gray-50 rounded-lg p-6 group">
+            <summary class="font-semibold text-lg text-gray-900 cursor-pointer list-none flex items-center justify-between">
+              {faq.q}
+              <svg class="w-5 h-5 text-gray-500 transform group-open:rotate-180 transition-transform flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </summary>
+            <div class="mt-4 text-gray-700 leading-relaxed">
+              {faq.a}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-12 bg-blue-600">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-white mb-4">Ready to Find Your Surgeon?</h2>
+      <p class="text-xl text-blue-100 mb-8">
+        Browse our directory of qualified bariatric surgeons across Sydney and Melbourne.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/surgeons" class="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition">
+          Browse Surgeons Directory
+        </a>
+        <a href="/surgeon-selection-checklist" class="bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-800 transition border border-blue-500">
+          Get Surgeon Checklist
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disclaimer -->
+  <section class="py-6 bg-gray-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-sm text-gray-600 text-center">
+        <strong>Disclaimer:</strong> This information is general in nature and does not constitute medical advice. It is intended to help you evaluate surgeons but does not endorse specific practitioners. Verify all credentials independently through official sources (AHPRA, RACS, OSSANZ). Suitability for surgery must be assessed by a qualified health professional. Individual circumstances vary significantly.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
